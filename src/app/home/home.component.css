@@ -1111,11 +1111,6 @@ a {
   font-family: 'Roboto', sans-serif;
 }
 
-@media (max-width: 767.98px) {
-  .banner-slider .banner-item img {
-    height: 210px;
-  }
-}
 .speciality-item {
   cursor: pointer;
   transition: background-color 0.3s ease;

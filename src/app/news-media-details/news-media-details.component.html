@@ -1,0 +1,114 @@
+<app-header></app-header>
+<section class="bg_light_blue">
+  <div class="container">
+    <div class="row py-4">
+      <div class="col-lg-8 col-md-12 mb-4" *ngIf="getting_media_object">
+        <section>
+          <h4 class="fw-medium meadia_title">{{ getting_media_object?.title }}</h4>
+          <div class="pb-4 mobile_view">
+            <img [src]="getting_media_object.image" alt="blog" style="width:665px"
+              class="blog_image img-fluid mb-2 mb-4" />
+            <span [innerHTML]="getting_media_object?.published_by"></span>
+            <h4 [innerHTML]="getting_media_object?.address"></h4>
+          </div>
+          <ng-container *ngFor="let desc of getting_media_object?.description">
+            <h3 [innerHTML]="desc.heading" [ngClass]="{'blue_heading': desc?.heading_blue}"></h3>
+            <p class="text-muted mobile_view_text description_text" *ngFor="let para of desc.content"
+              [innerHtml]="para"></p>
+          </ng-container>
+          <div *ngIf="safeVideoUrl as url">
+            <p>Safe URL: {{ url }}</p>
+            <iframe width="560" height="500" [src]="url" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+            </iframe>
+          </div>
+          <ng-container *ngFor="let desc of getting_media_object?.faqs">
+            <h3 [innerHTML]="desc.quetion" [ngClass]="{'blue_heading': desc?.heading_blue}"></h3>
+            <p class="text-muted mobile_view_text description_text" *ngFor="let para of desc.answer" [innerHtml]="para">
+            </p>
+          </ng-container>
+          <ng-container *ngIf="getting_media_object.list">
+            <ul *ngFor="let list of getting_media_object.list">
+              <li [innerHTML]="list"></li>
+            </ul>
+          </ng-container>
+          <ng-container *ngIf="getting_media_object?.subsections">
+            <div *ngFor="let subsec of getting_media_object.subsections">
+              <h6 [innerHTML]="subsec.sub_heading" [ngClass]="{'blue_heading': subsec?.heading_blue}"></h6>
+              <p class="text-muted mobile_view_text description_text" *ngFor="let para of subsec.detailed_desc"
+                [innerHtml]="para"></p>
+              <ng-container *ngIf="subsec?.list">
+                <ul *ngFor="let list of subsec.list">
+                  <li [innerHTML]="list"></li>
+                </ul>
+              </ng-container>
+            </div>
+          </ng-container>
+          <ng-container *ngIf="!getting_media_object?.side_by_side_imgs">
+            <div class="img-container gap-3 d-flex flex-column">
+              <ng-container *ngFor="let img of getting_media_object?.relevant_images">
+                <img class="blog_image" [src]="img" alt="Pain area" />
+              </ng-container>
+            </div>
+          </ng-container>
+          <ng-container *ngIf="getting_media_object?.side_by_side_imgs">
+            <div class="pain-image-grid">
+              <ng-container *ngFor="let img of getting_media_object?.relevant_images">
+                <div class="pain-image-item">
+                  <img class="blog_image" [src]="img" alt="Pain area" />
+                </div>
+              </ng-container>
+            </div>
+          </ng-container>
+        </section>
+
+        <section class="related-posts-wrapper py-4">
+          <div class="container">
+            <h3 class="widget-title mb-4 fw-bold blue_heading">Related News</h3>
+            <div class="row g-4">
+              <!-- Post 1 -->
+              <ng-container *ngFor="let other_news of getting_media_object?.related_news">
+                <div class="col-md-6 col-lg-6">
+                  <div class="d-flex">
+                    <div class="flex-shrink-0"
+                      style="width: 100px; height: 100px; background: url({{other_news.img}}) center center / cover no-repeat;">
+                    </div>
+                    <div class="ms-3 d-flex flex-column justify-content-center">
+                      <h6 class="mb-1">{{other_news.title}}</h6>
+                      <a (click)="getNewsDetails(other_news.title);"
+                        class="text-primary text-decoration-underline small">READ MORE</a>
+                    </div>
+                  </div>
+                </div>
+              </ng-container>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div class="col-lg-4 col-md-12">
+        <h5 class="bg_blue text-white rounded-top-4 py-2 text-center m-0 fw-medium" style="font-size:25px">Recent Posts
+        </h5>
+        <div class="br_gray bg_whie rounded-bottom-4">
+          <div class="auto_scroll card border_remove rounded-bottom-4 recent-card cursor-pointer py-3 px-3 gap-3"
+            height="100px">
+            <ng-container *ngFor="let media of news_details; let i = index">
+              <div class="col-12 d-flex flex-column justify-content-center" (click)="newCardsSwap(media,i)">
+                <img [src]="media.image" class="rounded news-image" width="100%" height="120px" alt="News Image"
+                  style="object-fit: cover;">
+                <div class="d-flex flex-column py-2 bg-white">
+                  <p class="pt-2 border_top fw-medium m-0" style="font-size:15px">{{media.title}}</p>
+                  <address class="fw-medium m-0 py-2" style="font-size:10px">{{media.short_desc}}</address>
+                  <label class="fw-medium" style="font-size:13px;text-decoration:underline">{{media.date}}</label>
+                  <label class="fw-medium" style="font-size:13px;text-decoration:underline">Read More</label>
+                </div>
+              </div>
+            </ng-container>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<app-footer></app-footer>

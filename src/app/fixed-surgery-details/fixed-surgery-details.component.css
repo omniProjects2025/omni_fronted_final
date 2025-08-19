@@ -1,0 +1,277 @@
+/* .banner {
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+} */
+
+.border_strip {
+  border: 3px solid #70bf45;
+}
+
+.custom-strip {
+  border-bottom-left-radius: 10px;
+  border-top-right-radius: 10px;
+  box-shadow: 0 6px 12px -2px rgb(15, 157, 204), 0 4px 8px -4px #70bf45;
+}
+
+.button-box {
+  background: linear-gradient(to right, #70bf45, rgb(15, 157, 204));
+  border-radius: 30px;
+  padding: 10px 20px;
+  transition: transform 0.2s ease;
+  min-height: 60px;
+  width: 70%;
+}
+
+.button-box:hover {
+  transform: scale(1.03);
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: white;
+  padding: 5px;
+}
+
+/* Font size responsiveness */
+.responsive-text {
+  font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+  .responsive-text {
+    font-size: 0.95rem;
+  }
+
+  .button-box {
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    width: 82%;
+  }
+
+  .icon {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.more_package_txt {
+  color: rgba(0, 143, 213, 1);
+  font-weight: 700;
+  font-family: 'Roboto';
+  font-size: 25px;
+}
+
+.hr_line {
+  position: relative;
+  top: -37px;
+  width: 82%;
+  left: 16%;
+  color: rgba(102, 102, 102, 1);
+}
+
+@media (max-width: 576px) {
+  .hr_line {
+    display: none;
+  }
+}
+
+@media (min-width: 577px) and (max-width: 991px) {
+  .hr_line {
+    width: 90%;
+    left: 5%;
+  }
+}
+
+@media (max-width: 1280px) and (min-width: 1024px) {
+  .hr_line {
+    width: 85%;
+    left: 24%;
+    display: block;
+  }
+}
+
+.br_gray {
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.replace_txt {
+  color: rgba(0, 143, 213, 1);
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 45px;
+}
+
+@media (max-width: 768px) {
+  .replace_txt {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 576px) {
+  .replace_txt {
+    font-size: 18px;
+  }
+}
+
+.bg_primary {
+  background-color: rgba(0, 143, 213, 1);
+}
+
+.border_package {
+  border: 1.5px solid rgba(130, 130, 130, 1);
+  border-radius: 10px;
+}
+
+.package-cost-box {
+  position: relative;
+  max-width: 100%;
+}
+
+.package_bg_green {
+  background-color: #8BC34A;
+  font-family: 'Roboto';
+  color: rgba(0, 0, 0, 1);
+  padding: 7px 38px !important;
+  font-weight: 600;
+}
+
+.content-box {
+  background-color: #f9fafa;
+  font-size: 1.2rem;
+  color: rgba(0, 0, 0, 1);
+  font-weight: 500;
+}
+
+.pac_border {
+  background: linear-gradient(#fff, #fff) padding-box,
+    linear-gradient(to right, #039BE5, #8BC34A) border-box;
+  border: 3px solid transparent;
+  border-radius: 10px;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+@media (max-width: 576px) {
+  .content-box {
+    flex-direction: column;
+    text-align: center;
+    gap: 5px;
+  }
+}
+
+.surgery_answer {
+  text-align: justify;
+}
+
+.custom-card {
+  border-radius: 15px;
+  background-color: rgba(0, 143, 213, 0.05);
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.5);
+
+}
+
+.card-title {
+  color: rgba(0, 143, 213, 1);
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.card-text {
+  font-size: 10px;
+  font-weight: 300;
+  color: rgba(130, 130, 130, 1);
+}
+
+.slide_images {
+  width: 189px;
+  height: 130px;
+}
+
+@media (max-width: 767.98px) {
+  .slide_images {
+    width: auto !important;
+    height: auto !important;
+    padding: 15px 15px !important;
+    margin-top: 2px;
+  }
+}
+
+.btn_view_bg {
+  background-color: rgba(0, 143, 213, 1);
+  color: rgba(255, 255, 255, 1);
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.custom-input {
+  border: none;
+  border-bottom: 1.5px solid rgba(130, 130, 130, 1);
+  border-radius: 0;
+  font-size: 16px;
+  padding-left: 0;
+  padding-right: 0;
+  box-shadow: none;
+}
+
+.book_txt_primary {
+  color: rgba(0, 143, 213, 1);
+  font-weight: 500;
+  font-size: 25px;
+}
+
+.custom-submit-btn {
+  border: 2px solid rgba(102, 102, 102, 1);
+  border-radius: 0.75rem;
+  background-color: white;
+  color: #333;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.custom-submit-btn:hover {
+  background-color: #f0f0f0;
+}
+
+.consult_button {
+  background-color: #8BC34A;
+  color: rgba(255, 255, 255, 1);
+  border-radius: 10px;
+  padding: 8px 60px;
+  /* position: relative; */
+  z-index: 1;
+  margin-left: 40px;
+}
+
+.expert {
+  font-weight: 500;
+  font-size: 12px;
+}
+
+.cont_num {
+  font-weight: 900;
+  font-size: 20px;
+}
+
+/* Overlapping Image Style */
+.overlap-img {
+  position: absolute;
+  top: -14px;
+  left: -5px;
+  z-index: 2;
+}
+
+/* Container must be relative for absolute positioning */
+.consult-wrapper {
+  position: relative;
+  display: inline-block;
+}

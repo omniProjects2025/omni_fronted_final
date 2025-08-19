@@ -1,0 +1,68 @@
+<app-header></app-header>
+<section class="bg-white">
+  <div class="container-fluid p-0">
+    <div class="banner">
+      <img src="assets/images/fixed_surgery_package.jpg" class="img-fluid w-100" alt="Fixed Surgery Banner" />
+    </div>
+    <div class="text-center text-black mt-2">
+      <h2><strong>Fixed Surgery Package</strong></h2>
+      <p class="mt-2 text-center mx-5">
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+        standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+        a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+        remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+        Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
+        of Lorem Ipsum.
+      </p>
+    </div>
+    <div class="container py-3">
+      <div class="location-scroll-wrapper">
+        <div class="location-scroll d-flex">
+          <button *ngFor="let location of locations"
+            class="btn rounded-pill px-4 py-1 fw-semibold border me-2 mb-2 location-btn"
+            [ngClass]="selected === location ? 'selected_bg text-white' : 'bg-white text-black'"
+            (click)="selectLocation(location)">
+            {{ location }}
+          </button>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container">
+      <div class="row g-3 pb-5">
+        <div class="col-lg-6 col-md-6 col-sm-12" *ngFor="let pkg of packages">
+          <div class="card bg_card shadow-sm custom_shadow border-0 rounded-4 overflow-hidden h-100">
+            <div class="row g-0 h-100">
+              <!-- Left Image -->
+              <div class="col-md-5 p-3 d-flex">
+                <img [src]="pkg.img" class="img-fluid w-100 h-100 object-fit-cover rounded-3" alt="Package Image" />
+              </div>
+
+              <!-- Right Text -->
+              <div class="col-md-7 p-3 d-flex flex-column justify-content-between">
+                <div>
+                  <h5 class="text_primary fw-bold">{{ pkg.package_name}}</h5>
+                  <p class="text-muted small" style="font-family: 'PT Sans', sans-serif;">
+                    {{ pkg.desc }}
+                  </p>
+                </div>
+                <div class="d-flex justify-content-between flex-wrap">
+                  <h5 class="mb-md-0" style="color: rgba(0, 0, 0, 1); font-size: 30px; font-weight: 900;">
+                    {{ pkg.price }}
+                  </h5>
+                  <button class="btn btn_primary btn-sm px-3 py-2 mt-3" (click)="viewPackageDetails(pkg)">
+                    View Package
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+<app-footer></app-footer>

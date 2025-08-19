@@ -1,0 +1,111 @@
+<app-header></app-header>
+<header class="p-0">
+  <img src="assets/health_checkup/health_checkup.jpg" class=" w-100 d-none d-md-block" alt="Lungs Image" height="">
+  <img src="assets/health_checkup/health_checkup_mobile.jpg" class=" w-100 d-block d-md-none" alt="Lungs Image" height="">
+</header>
+<div class="container">
+  <div class="py-3">
+    <div class="d-flex no_gap  gap-3 justify-content-start">
+      <button *ngFor="let location of locations"
+        class="btn rounded-pill px-4 py-1 fw-semibold border me-2 mb-2 white_space_nowrap"
+        [ngClass]="selected === location ? 'selected_bg text-white' : 'bg-white text-black'"
+        (click)="selectLocation(location)">
+        {{ location }}
+      </button>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4 col-sm-6 col-12" *ngFor="let checkup of displayedPackages; index as i">
+      <div class="card">
+        <div class="row">
+          <div class="">
+            <img [src]="checkup.image" class="" alt="checkup" height="232px" width="100%">
+          </div>
+          <h5 class="ms-4 mt-2 dep_text">{{ checkup['package_title'] | titlecase }}</h5>
+          <div class='d-flex align-items-center justify-content-start ms-4'>
+            <span class="old-price" style="font-weight: 300 !important;">₹{{ checkup['oldPrice'] }}/-</span>
+            <span class="new-price ms-2">₹{{ checkup['newPrice'] }}/-</span>
+          </div>
+          <div class="m-0 pb-2">
+            <div class="ms-4">
+              <p class="discount p-0">{{ getDiscount(checkup['oldPrice'], checkup['newPrice']) }}</p>
+            </div>
+            <div class="ms-3">
+              <button class="btn view_button ms-3 w_dth px-0" (click)="viewPackageDetails(checkup)">View
+                Details</button>
+              <button class="btn view_button w_dth px-0" (click)="bookAppointment(checkup['id'], checkup['title'])">Book
+                an
+                Appointment</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Bootstrap Modal -->
+  <div class="modal fade custom-backdrop" id="appointmentModal" data-bs-backdrop="static" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title w-100 text-center">Book an Appointment</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <form [formGroup]="appointmentForm">
+            <div class="mb-3">
+              <label class="form-label">Package Type</label>
+              <input type="text" class="form-control" formControlName="speciality" readonly>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Name</label>
+              <input type="text" class="form-control" formControlName="name">
+              <div *ngIf="appointmentForm.get('name')?.invalid && appointmentForm.get('name')?.touched"
+                class="text-danger">
+                Name is required.
+              </div>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Email</label>
+              <input type="email" class="form-control" formControlName="email">
+              <div *ngIf="appointmentForm.get('email')?.invalid && appointmentForm.get('email')?.touched"
+                class="text-danger">
+                Enter a valid email.
+              </div>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Mobile Number</label>
+              <input type="text" class="form-control" formControlName="mobile">
+              <div *ngIf="appointmentForm.get('mobile')?.invalid && appointmentForm.get('mobile')?.touched"
+                class="text-danger">
+                Enter a valid 10-digit mobile number.
+              </div>
+            </div>
+            <div class="d-flex justify-content-center" (click)="submitPackageForm()">
+              <button type="submit" class="btn btn-success w-50">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="mx-5 text-justify">
+  <h5 class="quetion_txt">What is Lorem Ipsum?</h5>
+  <p class="answer_txt">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+    when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+    It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially
+    unchanged.
+    It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+    and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+  <h5>What is Lorem Ipsum?</h5>
+  <p class="text-justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+    when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+    It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially
+    unchanged.
+    It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+    and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+</div>
+<app-footer></app-footer>

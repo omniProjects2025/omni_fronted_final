@@ -1,0 +1,322 @@
+<app-header></app-header>
+<ng-container *ngIf="selected_team==1">
+  <div class="container-fluid my-5">
+    <div class="row g-4 align-items-start bg-white p-4 rounded-4 shadow-sm ms-lg-5">
+  <div class="col-lg-5 d-flex justify-content-center justify-content-lg-start">
+    <img src="assets/about_us/omni_growth.svg" 
+         alt="Growth Over The Years"
+         class="img-fluid rounded-3" 
+         style="max-height: 400px; height: auto;">
+  </div>
+
+  <div class="col-lg-7">
+    <div class="bg-white p-3">
+      <h5 class="badge bg_primary text-white py-2 px-3 rounded-pill mb-3" style="font-size: 22px;">
+        About OMNI Hospitals
+      </h5>
+      <p style="text-align: justify; font-size: 18px;">
+        Omni Hospitals is a multi-specialty healthcare provider aimed at delivering the best patient care and
+        innovative medical solutions. Omni Hospitals is a unit of Incor Group. Omni began its journey in 2010 at
+        Kothapet. Over the last 15 years, it expanded its wings into 6 branches across 2 states, Telangana & Andhra
+        Pradesh. In Hyderabad, we have branches in Kothapet, Kukatpally, and Nampally. In Andhra Pradesh, Kurnool and
+        Vizag. It also offers Women & Childcare services through Giggles, which is located in Kukatpally & Vizag. Omni
+        Hospitals is a leading multi-super specialty healthcare provider with world-class medical services across a
+        wide range of specialties. Omni Hospitals has a team of 500 doctors and more than 1,000-bed capacity with
+        2000+ employees to provide exceptional care and support to patients.
+      </p>
+    </div>
+  </div>
+</div>
+
+  </div>
+
+  <div class="container-fluid my-5">
+    <div class="row g-4 align-items-center p-4 rounded-4">
+      <div class="col-lg-9">
+        <div class="container my-4">
+          <div class="mb-3 d-flex align-items-center gap-3 flex-wrap">
+            <span *ngFor="let chr of about_chairman; index as i" class="badge px-3 py-2 rounded-pill" [ngClass]="{
+            'bg_primary text-white': selectedIndex === i,
+            'bg-light text-dark border': selectedIndex !== i
+          }" style="cursor: pointer; font-size: 22px;" (click)="selectChairman(i)">
+              {{ chr.title }}
+            </span>
+          </div>
+
+          <div *ngIf="selectedIndex === 0">
+            <p class="mb-2" style="text-align: justify; font-size: 18px;">
+              Welcome to Omni Hospitals, where our dedication to patient care, innovation, and excellence defines our
+              mission. At Omni, we believe that healthcare is a partnership built on trust, compassion, and quality, and
+              we are honored to serve our communities with these guiding principles.
+            </p>
+            <p class="mb-2" style="text-align: justify; font-size: 18px;">
+              Throughout our journey, we have focused on delivering healthcare that not only meets but exceeds
+              expectations, adapting to the evolving needs of our patients. With specialized services ranging from
+              comprehensive maternal and pediatric care at Giggles to advanced medical and surgical treatments, our
+              facilities are designed to provide comprehensive, world-class care for individuals and families at every
+              stage of life. Our team of skilled professionals and state-of-the-art infrastructure ensure a seamless,
+              supportive experience from consultation to recovery.
+            </p>
+            <p class="mb-2" style="text-align: justify; font-size: 18px;">
+              Thank you for choosing Omni Hospitals as your trusted healthcare provider. We are here to serve you and
+              your
+              loved ones with a commitment to excellence, every step of the way.
+            </p>
+          </div>
+
+          <div *ngIf="selectedIndex === 1">
+            <p class="mb-2" style="text-align: justify; font-size: 18px;">
+              Mr. Surya is a seasoned entrepreneur with over 20 years of experience spanning healthcare, IT, real
+              estate,
+              insurance, and entertainment. His career reflects a commitment to innovation and excellence across
+              industries. In the early 2000s, Mr. Surya co-founded Harej Solutions, a trailblazer in mobile gaming
+              software, which was acquired by JAMDAT Mobile (USA) in 2004. His background in engineering, with a BE from
+              JMIT, Kuvempu University in Karnataka, underpins his passion for leveraging technology and operational
+              expertise to drive impactful ventures.
+            </p>
+            <p class="" style="text-align: justify; font-size: 18px;">
+              With Omni Hospitals, Mr. Surya has focused on building a healthcare network known for its patient-centered
+              approach, cutting-edge technology, and commitment to making quality healthcare accessible to communities.
+              His leadership continues to inspire a culture of innovation and dedication to healthcare excellence.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 text-center d-flex justify-content-start text-lg-start flex-column">
+        <div class="position-relative d-inline-block" style="max-width: 280px;">
+          <img src="assets/about_us/suryanarayana_chairman.svg" alt="Chairman"
+            class="img-fluid rounded-circle border border-3" style="z-index: 2; position: relative; width: 100%;" />
+
+          <img src="assets/about_us/right_circle_chairman.svg" alt="Circle Background"
+            class="position-absolute top-50 left_74 translate-middle" style="width: 80%; z-index: 1;" />
+        </div>
+
+        <h6 class="mt-4 mb-1 fw-semibold" style="color: #6ABD45; font-size: 18px;">
+          Suryanarayana Reddy Pulagam
+        </h6>
+
+        <p class="text-muted mb-0" style="font-size: 14px;">
+          Chairman & Managing Director Incor Group
+        </p>
+      </div>
+    </div>
+    <img class="mb-5" src="assets/about_us/rectangle.jpg" alt="">
+    <div class="row my-5">
+      <div class="col-lg-3 d-flex justify-content-lg-end align-items-lg-end align-items-center justify-content-center flex-column text-center mb-4 mb-lg-0">
+        <div class="position-relative d-inline-block" style="max-width: 280px;">
+          <img src="assets/about_us/ceo.png" alt="CEO" class="img-fluid rounded-circle border border-3"
+            style="z-index: 2; position: relative; width: 100%;" />
+          <img src="assets/about_us/left_circle.svg" alt="Circle Background"
+            class="position-absolute top-50 right_74 translate-middle" style="width: 80%; z-index: 1;" />
+        </div>
+      </div>
+      <div class="col-lg-9 text-lg-start d-flex flex-column align-items-start">
+        <p class="mb-2" style="text-align: justify; font-size: 18px;">
+          Dr. Durgesh Shiva is a seasoned healthcare professional with over 20 years of vast experience in spanning
+          operations, strategic planning, and business growth in leading healthcare institutions. An alumnus of Santosh
+          Medical College Delhi, he furthered his expertise in an healthcare and management at the Symbiosis Institute
+          of
+          Management Studies Pune and IHMR Jaipur.
+        </p>
+        <p class="mb-2" style="text-align: justify; font-size: 18px;">
+          Before joining Omni Hospitals, Dr. Durgesh Shiva held the Senior leadership roles at Medicover Hospitals
+          Hyderabad, where he served as Director for Telangana and Karnataka state operations. He also held the key
+          positions at Krishna Shalby Hospital, BAPS Group of Hospitals and Sahyadri Ram Krishna Hospital. His expertise
+          in profit and loss management, consultant recruitment and operational excellence has positioned him as a
+          trusted
+          leader in the healthcare sector, dedicated to improve the patient outcomes and expanding an access to the
+          quality care.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid my-5">
+    <div class="d-flex justify-content-center align-items-center gap-3 bg-light rounded p-2">
+      <h2 *ngFor="let leader of managementteam" class="mb-0 px-3 py-1 rounded"
+        [ngClass]="selected_team == leader.id?'team_select':''" style="cursor: pointer;"
+        (click)="selectedTeam(leader.id)">
+        {{ leader.label }}
+      </h2>
+    </div>
+
+    <div class="owl-carousel owl-theme px-3 py-4" style="background-color: #008FD5;" #boardCarousel>
+      <div class="item" *ngFor="let member of boardMembers">
+        <div class="card text-center shadow-sm border-0 overflow-hidden rounded-4 team-card">
+          <img [src]="member.image" class="img-fluid team-img" alt="{{ member.name }}">
+          <div class="card-body py-3">
+            <h5 class="text-primary fw-semibold mb-1">{{ member.name }}</h5>
+            <span class="text-muted">(Medical Director)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid py-5" style="background-color: #F7FBFD;">
+    <div class="row g-4">
+      <!-- Column 1: Title + Description -->
+      <div class="col-lg-4 d-flex flex-column align-items-center">
+        <h2 class="fw-bold clinical_txt mb-3">
+          Delivering Compassionate Care <br> with Clinical Excellence
+        </h2>
+        <p class="text-secondary ms-lg-5">
+          At OMNI Hospitals, we go beyond treatment, we ensure every patient receives the highest standard of care
+          backed by advanced technology and expert professionals. Our commitment to transparency, quality, and safety
+          makes us a preferred healthcare partner across Andhra Pradesh and Telangana.
+        </p>
+      </div>
+
+      <!-- Column 2: Bullet Points -->
+      <div class="col-lg-4 d-flex flex-column align-items-center">
+        <ul class="list-unstyled text-dark lh-lg mb-0">
+          <li>• Infection free environment</li>
+          <li>• Qualified nursing staff</li>
+          <li>• Cutting-edge technology</li>
+          <li>• Transparent billing</li>
+          <li>• State-of-the-art infrastructure</li>
+          <li>• Highly experienced doctors</li>
+          <li>• Trained emergency management team</li>
+        </ul>
+      </div>
+
+      <!-- Column 3: Image -->
+      <div class="col-lg-4 text-center">
+        <img src="assets/about_us/delivering_compassionate_care.svg" alt="Compassionate Care" class="img-fluid"
+          style="max-width: 90%;">
+      </div>
+    </div>
+  </div>
+
+  <section class="pb-3 px-0 mx-2">
+    <ul class="nav d-md-none tabs_scroll border-none" id="mobileTab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="vision-tab" data-bs-toggle="tab" data-bs-target="#vision" type="button"
+          role="tab" aria-controls="vision" aria-selected="true">
+          <div
+            class="d-flex gap-2 justify-content-start text-white bg_ltgreen mobile_left_box text-center py-2 ps-2 align-items-center">
+            <img class="mobile_eye_wh" src="assets/about_us/best_class_treatment.png" alt="">
+          </div>
+        </button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="mission-tab" data-bs-toggle="tab" data-bs-target="#mission" type="button"
+          role="tab" aria-controls="mission" aria-selected="false">
+          <div
+            class="d-flex gap-2 justify-content-start text-white bg_ltgreen mobile_left_box text-center py-2 ps-2 align-items-center">
+            <img class="mobile_eye_wh" src="assets/about_us/our_mission.png" alt="">
+          </div>
+        </button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="values-tab" data-bs-toggle="tab" data-bs-target="#values" type="button" role="tab"
+          aria-controls="values" aria-selected="false">
+          <div
+            class="d-flex gap-2 justify-content-start text-white bg_ltgreen mobile_left_box text-center py-2 ps-2 align-items-center">
+            <img class="mobile_eye_wh" src="assets/about_us/compassion.png" alt="">
+          </div>
+        </button>
+      </li>
+    </ul>
+
+    <div class="tab-content d-md-none p-3 bg_gray" id="mobileTabContent">
+      <div class="tab-pane fade show active " id="vision" role="tabpanel" aria-labelledby="vision-tab">
+        <p class="vision_fz">To build a healthcare institution that provides the best-in-class treatment at the most
+          affordable price, with empathy and compassion.</p>
+      </div>
+      <div class="tab-pane fade" id="mission" role="tabpanel" aria-labelledby="mission-tab">
+        <p class="vision_fz">Our mission is to provide patient-centered, accessible, and affordable healthcare across
+          all specialties. We are committed to continuously improving clinical outcomes through the use of advanced
+          medical technology and the expertise of highly skilled professionals. By upholding the highest standards of
+          ethics, transparency, and quality in every aspect of care, we strive to build trust and deliver excellence. We
+          also aim to create a healing environment that respects each patient’s dignity and promotes comfort, recovery,
+          and overall well-being.</p>
+      </div>
+      <div class="tab-pane fade" id="values" role="tabpanel" aria-labelledby="values-tab">
+        <p class="vision_fz"> Compassion - <span>I treat everyone with kindness, respect & dignity-the way i want to be
+            treated.</span></p>
+        <p class="vision_fz">Integrity - <span>I adhere to the highest standard of professional conduct & ethical
+            behavior.</span></p>
+        <p class="vision_fz">Collaboration- <span>I deal with diversity with an open-mind and value the
+            contributions of all who are
+            working together to achieve our common goals.</span></p>
+      </div>
+    </div>
+
+    <div class="d-none d-md-flex flex-column " style="background-color: #f2f9fd;">
+      <div class="d-flex bg_gray" style="border-top-left-radius: 20px; border-bottom-left-radius: 20px;">
+        <div
+          class="d-flex gap-2 justify-content-start text-white bg_ltgreen left-box text-center py-4 px-5 align-items-center">
+          <img class="eye_wh" src="assets/about_us/best_class_treatment.png" alt="Our Vision" width="60" height="60">
+        </div>
+        <div class="right-box p-3 d-flex align-items-center">
+          <p class="m-0 vision_fz">
+            To build a healthcare institution that provides the best-in-class treatment at the most affordable price,
+            with empathy and compassion.
+          </p>
+        </div>
+      </div>
+
+      <div class="d-flex bg_gray my-4" style="border-top-left-radius: 20px; border-bottom-left-radius: 20px;">
+        <div
+          class="d-flex gap-2 justify-content-start text-white bg_ltgreen left-box text-center py-1 px-5 align-items-center">
+          <img class="eye_wh" src="assets/about_us/our_mission.png" alt="Our Mission" width="60" height="60">
+        </div>
+        <div class="right-box p-3 d-flex align-items-center">
+          <p class="m-0 vision_fz">
+            Our mission is to provide patient-centered, accessible, and affordable healthcare across all specialties. We
+            are committed to continuously improving clinical outcomes through the use of advanced medical technology and
+            the expertise of highly skilled professionals. By upholding the highest standards of ethics, transparency,
+            and quality in every aspect of care, we strive to build trust and deliver excellence. We also aim to create
+            a healing environment that respects each patient’s dignity and promotes comfort, recovery, and overall
+            well-being.
+          </p>
+        </div>
+      </div>
+
+      <div class="d-flex mb-2 bg_gray" style="border-top-left-radius: 20px; border-bottom-left-radius: 20px;">
+        <div
+          class="d-flex gap-2 justify-content-start text-white bg_ltgreen left-box text-center py-1 px-5 align-items-center">
+          <img class="eye_wh" src="assets/about_us/compassion.png" alt="Values" width="60" height="60">
+        </div>
+        <div class="right-box p-3 d-block align-items-center">
+          <p class="m-0 vision_fz">
+            Compassion - <span>I treat everyone with kindness, respect & dignity-the way i want to be treated.</span>
+          </p>
+          <p class="m-0 vision_fz">Integrity - <span>I adhere to the highest standard of professional conduct & ethical
+              behavior.</span></p>
+          <p class="m-0 vision_fz">Collaboration- <span>I deal with diversity with an open-mind and value the
+              contributions of all who are
+              working together to achieve our common goals.</span></p>
+        </div>
+      </div>
+    </div>
+
+  </section>
+</ng-container>
+<ng-container *ngIf="selected_team==2">
+  <div class="container py-5 overflow_hidden" >
+    <div class="row align-items-center mb-5" *ngFor="let leader of leadershipTeam; let i = index">
+      <div class="col-md-3 mb-3 mb-md-0" [ngClass]="{'order-md-2': i % 2 !== 0}">
+        <div class="profile-img-container position-relative mx-auto">
+          <img src="assets/about_us/{{i % 2 == 0 ? 'left_circle.svg' : 'right_circle_chairman.svg'}}"
+            class="half-circle-bg {{i % 2 == 0 ? 'half_circle_img_right': 'half_circle_img_left' }}" alt="Background ring">
+          <img [src]="leader.img" alt="{{ leader.name }}" class="img-fluid rounded-circle shadow profile-img">
+        </div>
+      </div>
+      <div class="col-md-9" [ngClass]="{'order-md-1': i % 2 !== 0}">
+        <div class="text-center" [ngClass]="i % 2 == 0 ? 'text-md-start' : 'text-md-end'">
+          <h5 class="text_success fw-bold mb-0">{{ leader.name }}</h5>
+          <p class="dep_text fw-semibold mb-2">{{ leader.designation }}</p>
+          <img src="assets/about_us/{{i % 2 == 0 ? 'right_trans.svg' : 'left_trans.svg'}}" alt="leadership border">
+        </div>
+        <p class="text-dark" style="font-family: 'Lato', sans-serif;">{{ leader.description }}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="text-center mb-2">
+    <button class="text-white py-2 px-3" style="border:none; border-radius:8px; background-color: #008FD5;" (click)="resetSelectedTeam()">Go to Back</button>
+  </div>
+</ng-container>
+<app-footer></app-footer>

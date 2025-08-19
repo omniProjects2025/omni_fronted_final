@@ -1,0 +1,340 @@
+<app-header></app-header>
+<div *ngIf="selectedCategoryBlogs.length === 0">
+  <p>No blogs available for this category.</p>
+</div>
+
+
+
+<section class="bg-white">
+  <h1 class="text-center m-0  pt-5">{{blog_title}}</h1>
+  <div class="row">
+    <div class="col-12 col-md-8 col-lg-9">
+      <section *ngFor="let blog of selectedCategoryBlogs">
+        <!-- About Start -->
+        <div class="py-2 bg-white px-3">
+          <div class="py-4">
+            <div class="row m-0">
+              <div class="col-lg-12 wow fadeInRight" data-wow-delay="0.2s">
+                <div class="position-relative h-100">
+                  <img
+                    src="https://www.shutterstock.com/image-photo/doctor-using-computer-document-management-260nw-2280390393.jpg"
+                    class="img-fluid w-100 h-100" style="object-fit: cover;" alt="">
+                </div>
+              </div>
+              <div class="col-lg-12 wow fadeInLeft" data-wow-delay="0.2s">
+                <div class="h-100">
+                  <h1 class="display-4 mb-4 head_one">{{blog.blog_heading}}</h1>
+                  <p class="mb-4">{{blog.blog_description}}</p>
+                  <div class="text-dark mb-4">
+                    <ng-container *ngFor="let feature of blog.blog_points">
+                      <p class="fs-5"><span class="fa fa-check text_green me-2"></span> {{feature}}</p>
+                    </ng-container>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <!-- About End -->
+        <section class="second_heading_color">
+          <div class="container">
+            <div class="d-flex flex-column mx-auto text-center pb-3 wow fadeInUp justify-content-center"
+              data-wow-delay="0.2s">
+              <h1 class="display-4 pb-2 sub_head pt-1">{{blog.blog_topic_heading}}</h1>
+              <p class="mb-0" style="text-align: justify;">{{blog.blog_topic_description}}
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Projects Start -->
+        <div class="container-fluid projects bg-light py-2">
+          <div class="container py-2">
+            <div class="row g-5">
+              <div class="col-lg-5 wow fadeInLeft" data-wow-delay="0.2s">
+                <div>
+                  <h1 class="display-4 mb-2 pro_head">{{blog.sub_heading_3}}</h1>
+                  <p class="mb-3">{{blog.sub_heading_3_desc}}</p>
+                  <ul class="nav">
+                    <li class="nav-item bg-white mb-3 w-100">
+                      <a class="d-flex align-items-center h4 mb-0 p-3 active text-decoration-none" data-bs-toggle="pill"
+                        href="#ProjectsTab-1">
+                        <span class="procedure_head">What is Lorem Ipsum</span>
+                      </a>
+                    </li>
+                    <li class="nav-item bg-white mb-3 w-100">
+                      <a class="d-flex align-items-center h4 mb-0 p-3 text-decoration-none" data-bs-toggle="pill"
+                        href="#ProjectsTab-2">
+                        <span class="procedure_head">Why do we use it</span>
+                      </a>
+                    </li>
+                    <li class="nav-item bg-white mb-3 w-100">
+                      <a class="d-flex align-items-center h4 mb-0 p-3 text-decoration-none" data-bs-toggle="pill"
+                        href="#ProjectsTab-3">
+                        <span class="procedure_head">Lorem Ipsum</span>
+                      </a>
+                    </li>
+                    <li class="nav-item bg-white mb-3 w-100">
+                      <a class="d-flex align-items-center h4 mb-0 p-3 text-decoration-none" data-bs-toggle="pill"
+                        href="#ProjectsTab-4">
+                        <span class="procedure_head">Where can I get some</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-7 wow fadeInRight" data-wow-delay="0.2s">
+                <div class="tab-content">
+                  <div id="ProjectsTab-1" class="tab-pane fade show p-0 active">
+                    <div class="projects-item">
+                      <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSr8Id-1S2q9HqDFMcOS_cZ60Wa_qKO5Yf4LaZycGYflfOsjx8bu2M9Pd5KJ-GPyIACqHg&usqp=CAU"
+                        class="img-fluid w-100" alt="">
+                      <div class="projects-content bg-white p-4">
+                        <h4 class="mb-3">What is Lorem Ipsum</h4>
+                        <p class="mb-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur, quo? Enim
+                          facere,
+                          praesentium voluptatem vero officiis libero fuga rem autem amet recusandae voluptates, dolorem
+                          quo
+                          magni. Corporis eveniet consequuntur accusantium.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div id="ProjectsTab-2" class="tab-pane fade show p-0">
+                    <div class="projects-item">
+                      <img
+                        src="https://www.usertesting.com/sites/default/files/usertestingv3/styles/blog_guide_hero/public/2023-09/center-of-excellence.jpg.jpg?itok=yVFi0Jxr"
+                        class="img-fluid w-100" alt="">
+                      <div class="projects-content bg-white p-4">
+                        <h4 class="mb-3">Why do we use it</h4>
+                        <p class="mb-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur, quo? Enim
+                          facere,
+                          praesentium voluptatem vero officiis libero fuga rem autem amet recusandae voluptates, dolorem
+                          quo
+                          magni. Corporis eveniet consequuntur accusantium.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div id="ProjectsTab-3" class="tab-pane fade show p-0">
+                    <div class="projects-item">
+                      <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMYa_BoUaTtB6-NuHQt1jzrYwifsS5Nqo4JgYQTXFsTIDYkCiNCljuey3MmEbRrhtfuI8&usqp=CAU"
+                        class="img-fluid w-100" alt="">
+                      <div class="projects-content bg-white p-4">
+                        <h4 class="mb-3">Lorem Ipsum</h4>
+                        <p class="mb-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur, quo? Enim
+                          facere,
+                          praesentium voluptatem vero officiis libero fuga rem autem amet recusandae voluptates, dolorem
+                          quo
+                          magni. Corporis eveniet consequuntur accusantium.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div id="ProjectsTab-4" class="tab-pane fade show p-0">
+                    <div class="projects-item">
+                      <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEvI4vt3wAWeVToVlXpGC9xn1J8YdlUw4CmQ&s"
+                        class="img-fluid w-100" alt="">
+                      <div class="projects-content bg-white p-4">
+                        <h4 class="mb-4">Where can I get some</h4>
+                        <p class="mb-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur, quo? Enim
+                          facere,
+                          praesentium voluptatem vero officiis libero fuga rem autem amet recusandae voluptates, dolorem
+                          quo
+                          magni. Corporis eveniet consequuntur accusantium.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Projects End -->
+
+
+
+        <div class="container py-4 bg-white">
+          <h2 class="h4 mb-3">Best Hospital for Pediatric Seizures</h2>
+          <p class="">
+            When looking for the best hospital to treat pediatric seizures, several key factors should be considered.
+            Access to specialized pediatric neurology services, including experienced neurologists and
+            epileptologists,
+            is essential for accurate diagnosis and treatment planning. Advanced diagnostic facilities such as EEG,
+            MRI,
+            and other imaging technologies play a critical role in identifying the underlying causes of seizures.
+            Comprehensive treatment options, including medication management, dietary therapies, and surgical
+            interventions,
+            ensure a tailored approach for each child. Additionally, supportive care services like counseling,
+            educational assistance, and rehabilitation are vital for the child’s overall development and long-term
+            well-being.
+          </p>
+        </div>
+
+        <div class="container py-4 bg-white">
+          <div class="row border_strip custom-strip py-3 mx-2 align-items-center text-center">
+            <div class="col-12 col-md-6 mb-3 mb-md-0">
+              <div class="d-flex justify-content-center justify-content-lg-start">
+                <div
+                  class="d-flex align-items-center justify-content-center justify-content-lg-start button-box ms-lg-5">
+                  <img src="assets/icons/call_bttn_nav.svg" alt="Consult Icon" class="icon me-2" />
+                  <span class="fw-bold responsive-text">Consult with our Experts</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6">
+              <div class="d-flex justify-content-center justify-content-lg-end">
+                <div class="d-flex align-items-center button-box me-lg-5">
+                  <img src="assets/icons/book_an_appointment_nav.svg" alt="Appointment Icon" class="icon me-2" />
+                  <span class="fw-bold responsive-text">Book an Appointment</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+        <!-- Banner End -->
+        <section class="second_heading_color">
+          <div class="container">
+            <div class="d-flex flex-column mx-auto text-start pb-3 wow fadeInUp justify-content-start"
+              data-wow-delay="0.2s">
+              <h1 class="display-4 pb-2 canclusion_txt ms-lg-2">Conclusion</h1>
+              <p class="mb-0 ms-lg-3" style="text-align: justify; ">{{blog.conclusion}}
+              </p>
+            </div>
+          </div>
+        </section>
+        <!-- FAQ Start -->
+        <div class="container-fluid faq-section bg-light">
+          <div class="container py-4">
+            <div class="row">
+              <h4 class="text_primary">Some Important FAQ's</h4>
+              <div class="wow fadeInRight" data-wow-delay="0.4s">
+                <div class="h-100">
+                  <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                          Q: How Do I Sing Up For Your Electricity Services?
+                        </button>
+                      </h2>
+                      <div id="collapseOne" class="accordion-collapse collapse show active" aria-labelledby="headingOne"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          A: Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative
+                          approaches to corporate strategy foster collaborative thinking to further the overall value
+                          proposition.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                          Q: What Types Of Electricity Plans Do You Offer?
+                        </button>
+                      </h2>
+                      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          A: Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative
+                          approaches to corporate strategy foster collaborative thinking to further the overall value
+                          proposition.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                          Q: What Are Your Billing And Payment Options?
+                        </button>
+                      </h2>
+                      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          A: Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative
+                          approaches to corporate strategy foster collaborative thinking to further the overall value
+                          proposition.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                          Q: How Can I Track My Energy Usage With Your Services?
+                        </button>
+                      </h2>
+                      <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          A: Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative
+                          approaches to corporate strategy foster collaborative thinking to further the overall value
+                          proposition.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- FAQ End -->
+
+        <div class="bg-white">
+          <h4 class="more_package_txt pb-2 pt-3 ms-lg-3">More Blogs</h4>
+          <div class="px-4 owl-carousel owl-theme my-2">
+            <div class="item" *ngFor="let pkg of surgeryPackages; let i = index" (click)="swapBlog(i)">
+              <div class="card custom-card border-0 shadow-sm cursor-pointer">
+                <div class="row g-0 align-items-stretch">
+                  <div class="col-md-5 d-flex align-items-center">
+                    <img [src]="pkg.images?.[0] || 'assets/images/fixed_surgery_dummy_image.svg'"
+                      class="slide_images p-2 pe-0 ps-0" alt="Blog Image"
+                      style="border-top-left-radius: 0.5rem; border-bottom-left-radius: 0.5rem;">
+                  </div>
+                  <div class="col-md-7">
+                    <div class="card-body d-flex flex-column justify-content-between h-100">
+                      <div>
+                        <h5 class="card-title mb-2">{{ pkg.blog_title }}</h5>
+                        <p class="card-text mb-3">
+                          {{ pkg.blog_description || 'No description available' }}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+    <div class="col-12 col-md-4 col-lg-3">
+      <div class="sidebar m-0">
+        <h4 class="sidebar-title">Choose Categories</h4>
+        <div class="category-container">
+          <ul class="category-list">
+            <li *ngFor="let category of allCategories" [class.active]="category.name === selectedCategory"
+              (click)="selectCategory(category.name)" class="category-item">
+              <span>{{ category.name | titlecase }}</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<app-footer></app-footer>

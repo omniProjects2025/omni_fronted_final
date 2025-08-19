@@ -1,0 +1,2255 @@
+{
+     "blogs": [
+   
+  {
+    "image": "assets/blogs_main/gi_bleeding_.jpg",
+    "category_name": "Gastroenterology",
+    "title": "Managing Gastrointestinal Bleeding: Surgical & Non-Surgical Approaches",
+    "description": "Gastrointestinal (GI) bleeding is a serious medical condition that can occur anywhere along the digestive tract, from the mouth to the anus. It can be caused by a wide range of conditions, from peptic ulcers to cancers, and may manifest as either upper GI bleeding (bleeding from the esophagus, stomach, or duodenum) or lower GI",
+    "date": "April 30, 2025",
+    "link": "2-page"
+  },
+  {
+    "image": "assets/blogs_main/pancreatic_surgery.jpg",
+    "category_name": "Gastroenterology",
+    "title": "Pancreatic Surgery for Chronic Pancreatitis: A Step-by-Step Guide",
+    "description": "Chronic pancreatitis is a long-term inflammation of the pancreas that can cause severe pain, digestive problems, and complications such as diabetes and malnutrition. When medications and lifestyle changes fail to provide relief, pancreatic surgery becomes a necessary option to alleviate symptoms and improve the patient’s quality of life. This comprehensive guide will walk you through",
+    "date": "April 25, 2025",
+    "link": "2-page"
+  },
+  {
+    "image": "assets/blogs_main/healthy_eating habits_prevent_diarrhoea.jpg",
+    "category_name": "Gastroenterology",
+    "title": "Healthy Eating Habits to Prevent Diarrhoea",
+    "description": "Diarrhoea is a common issue experienced by people of all age groups. In most cases, it can bring an individual a lot of discomfort and inconvenience. At the same time, if not well handled in other circumstances, it results in different health challenges, such as dehydration. Whether you have diarrhoea due to allergic reactions or",
+    "date": "August 13, 2024",
+    "link": "6-page"
+  },
+  {
+    "image": "assets/blogs_main/common_causes_stomach_infections_monsoon.jpg",
+    "category_name": "Gastroenterology",
+    "title": "Common Causes of Stomach Infections in Monsoon",
+    "description": "Monsoons cool things down but also bring in various health-related issues, including stomach infections. Stomach infections during this season are quite common, owing to the ideal condition of humidity that helps bacteria, viruses, and parasites grow. Your chances of catching more viruses, bacteria, and other infections are twice as high in monsoons than in other",
+    "date": "August 9, 2024",
+    "link": "6-page"
+  },
+  {
+    "image": "assets/blogs_main/hepatitis_min.jpg",
+    "category_name": "Gastroenterology",
+    "title": "Raising Awareness on World Hepatitis Day 2024: Fighting Hepatitis Together",
+    "description": "World Hepatitis Day is celebrated on 28th July every year to create awareness among people against a group of infectious diseases: Hepatitis A, B, C, D, and E. This day creates awareness about these diseases, the need for an early diagnosis, the need for treatment, and prevention. The theme for World Hepatitis Day 2024 is",
+    "date": "July 26, 2024",
+    "link": "6-page"
+  },
+  {
+    "image": "assets/blogs_main/world_liver_day.jpg",
+    "category_name": "Gastroenterology",
+    "title": "World Liver Day 2024: Key Facts about Liver Health",
+    "description": "World Liver Day Overview World Liver Day 2024 is celebrated on April 19 annually to spread awareness about the various diseases of the liver. This day is celebrated annually to bring together communities, medical professionals, and lawmakers to address the growing cases of liver diseases worldwide and promote preventive measures for liver diseases. This year’s",
+    "date": "April 12, 2024",
+    "link": "9-page"
+  },
+  {
+    "image": "assets/blogs_main/antacids_effectiveness.jpg",
+    "category_name": "Gastroenterology",
+    "title": "Are Antacids Effective in Relieving Acidity and Gas?",
+    "description": "Millions of people worldwide experience the pain and distress that comes with common gastrointestinal problems, including acidity and gas. Antacids are a popular means of treating these medical problems, providing relief from symptoms such as heartburn, indigestion, and bloating. However, do antacids actually work to reduce gas and acidity? It’s essential to investigate antacids’ components,",
+    "date": "April 9, 2024",
+    "link": "9-page"
+  },
+  {
+    "image": "assets/blogs_main/budget_cost_saving_options.jpg",
+    "category_name": "Gastroenterology",
+    "title": "Endoscopy on a Budget: Affordable Options and Cost-Saving Strategies for Your Procedure",
+    "description": "Introduction Several medical procedures can come with substantial financial implications for many, and an endoscopy is no different. Endoscopy is a widely used diagnostic and therapeutic procedure employed by healthcare providers to visualise various internal structures in the body, as well as for the treatment of a wide range of conditions.  While endoscopic procedures are",
+    "date": "February 23, 2024",
+    "link": "11-page"
+  },
+  {
+    "image": "assets/blogs_main/unhealthy_gut_signs.jpg",
+    "category_name": "Gastroenterology",
+    "title": "Improve Gut Health: Recognise the Signs of an Unhealthy Gut",
+    "description": "Our gut is essential for maintaining overall body health by promoting nutrition absorption from food, but we often ignore the cries for help from our gut. Millions of people suffer from gut-related problems such as irritable bowel syndrome (IBS) and gastroesophageal reflux disease (GERD). Gut health can be influenced by a number of factors, ranging",
+    "date": "November 1, 2023",
+    "link": "13-page"
+  },
+  {
+    "image": "assets/blogs_main/tips_improve_your_digestion_during_the_winter.jpg",
+    "category_name": "Gastroenterology",
+    "title": "Tips To Improve Your Digestion In The Winters",
+    "description": "The winter season relieves long summers and presents us with fantastic, pleasant weather. As the winter settles in, we need to stay indoors and snuggle up and enjoy the comfort of our blankets. It is the best time to enjoy winter dishes, but our metabolism slows down in winter. Our bodies, being continuously exposed to",
+    "date": "February 2, 2023",
+    "link": "16-page"
+  },
+  {
+    "image": "assets/blogs_main/hepatitis_awareness.jpg",
+    "category_name": "Gastroenterology",
+    "title": "Stay Aware Because “Hepatitis Can’t Wait!",
+    "description": "Hepatitis is a liver infection that causes inflammation. It is caused by a viral infection, but there can be multiple reasons for the same disease, hepatitis can be caused by drugs, narcotics, poisons, or alcohol are examples of these. Autoimmune hepatitis is a condition in which your body produces antibodies that attack your liver tissue.",
+    "date": "July 26, 2021",
+    "link": "21-page"
+  },
+  {
+    "image": "assets/blogs_main/crohns_disease.jpg",
+    "category_name": "Gastroenterology",
+    "title": "Know more about Crohn’s Disease",
+    "description": "Know more about Crohn’s Disease Crohn’s disease is a type of inflammatory bowel disease. It mostly occurs in the small intestine and the colon. It can affect any part of your gastrointestinal (GI) tract, from your mouth to your anal canal. Symptoms of Crohn’s Disease Long-lasting diarrhea Weight loss Fever Belly pain and tenderness Rectal",
+    "date": "December 29, 2020",
+    "link": "22-page"
+  },
+  {
+    "image": "assets/blogs_main/improve_gut_health_covid.jpg",
+    "category_name": "Gastroenterology",
+    "title": "Improve Gut Health During COVID-19",
+    "description": "The COVID-19 pandemic has put us to face a lot of challenges both socially and in respect to health. We have been experiencing an extraordinary challenge from the novel coronavirus pandemic. Healthcare systems and governments all over the world have been fighting against COVID-19 and there is still a massive surge in the number of",
+    "date": "October 7, 2020",
+    "link": "27-page"
+  },
+  {
+    "image": "assets/blogs_main/the_science_behind.jpg",
+    "category_name": "Neurology",
+    "title": "The Science Behind Sleep and Brain Health",
+    "description": "Sleep is not just time for the body to rest, it is actually a vital aspect of brain health. When considering the multitude of areas sleep impacts: memory, cognitive functioning, emotional regulation, and brain functioning in general; it is not surprising sleep is so closely related to brain health. When you sleep well, your brain",
+    "date": "January 20, 2025",
+    "link": "1-page"
+  },
+  {
+    "image": "assets/blogs_main/neurology_specialists_hyderabad.jpg",
+    "category_name": "Neurology",
+    "title": "Best Neurology Specialists in Hyderabad for Specialized Treatment",
+    "description": "The human nervous system is an incredible network that controls and coordinates the body’s functions. It consists of the brain, spinal cord, and nerves, which work together to regulate movement, sensation, cognition, and emotions. When something goes wrong in this system, it can lead to serious neurological disorders, affecting not only physical health but also",
+    "date": "February 3, 2025",
+    "link": "3-page"
+  },
+  {
+    "image": "assets/blogs_main/headache_types_causes_treatment.jpg",
+    "category_name": "Neurology",
+    "title": "Different Types of Headaches, Their Causes, and Effective Treatments",
+    "description": "What are the Types of Headaches? Headaches are nearly universal complaints, affecting millions of people around the world. A number of factors can cause headaches, which range in intensity from minor to severe. While the majority of headaches are only an inconvenience, others may indicate a serious illness. Having a headache sometimes is normal. Normally,",
+    "date": "November 7, 2024",
+    "link": "4-page"
+  },
+  {
+    "image": "assets/blogs_main/parkinsons_treatment_progress.jpg",
+    "category_name": "Neurology",
+    "title": "Neurology Progress in the Diagnosis and Treatment of Parkinson's Disease",
+    "description": "Parkinson’s disease is a degenerative condition that mostly affects the neurological system and has a significant impact on movement. It frequently starts out slowly, gets worse over time, and can cause symptoms including stiffness, tremors, and delayed movement. Even though the exact aetiology of this medical condition is still unknown, we know that it arises",
+    "date": "October 23, 2024",
+    "link": "4-page"
+  },
+  {
+    "image": "assets/blogs_main/key_factors_stroke_recovery_time.jpg",
+    "category_name": "Neurology",
+    "title": "Key Factors that are Responsible for Your Healing Time in Stroke Recovery",
+    "description": "Stroke Recovery: Stroke rehabilitation is a program comprising different treatments aimed at helping one relearn what they have lost because of the stroke. The early beginning of the process significantly increases the possibility of regaining the brain and body functions affected by stroke. Factors that can determine your time of healing and restoring normal function",
+    "date": "August 23, 2024",
+    "link": "5-page"
+  },
+  {
+    "image": "assets/blogs_main/world_brain_day.jpg",
+    "category_name": "Neurology",
+    "title": "Advancements in Neuroscience: World Brain Day 2024 and Research Highlights",
+    "description": "Neurological disorders represent a significant health challenge today, spanning across continents. With hundreds of millions of people affected and millions of lives claimed every year, the burden of neurological disorders borne by people cannot be overstated. However, advances in medical science promise a new horizon of neurological care that aims to target existing neurological disorders",
+    "date": "July 15, 2024",
+    "link": "7-page"
+  },
+  {
+    "image": "assets/blogs_main/acute_stroke_cause.jpg",
+    "category_name": "Neurology",
+    "title": "What is the Most Common Cause of Acute Stroke?",
+    "description": "When a blood vessel in the brain bursts or the blood flow to a specific part of the brain is suddenly disrupted, this marks the onset of an acute stroke. As a result of this disruption in blood flow, brain cells die due to lack of oxygen and nutrients. Early recognition of stroke is essential",
+    "date": "May 31, 2024",
+    "link": "7-page"
+  },
+  {
+    "image": "assets/blogs_main/epilepsy_surgery_treatment_success_rate_cost.jpg",
+    "category_name": "Neurology",
+    "title": "Epilepsy Surgery Types: Treatment, Success Rate, & Cost in India",
+    "description": "Surgery for epilepsy involves excising a part of the brain where seizures are most common. The best candidates for epilepsy surgery are those whose seizures consistently happen in one area of the brain. If at least two anti-seizure medications have failed to reduce seizures, it may be a possibility. With epilepsy surgery, seizures can be",
+    "date": "May 27, 2024",
+    "link": "7-page"
+  },
+  {
+    "image": "assets/blogs_main/role_of_er_brain_stroke.jpg",
+    "category_name": "Neurology",
+    "title": "The Role of ER in Brain Stroke",
+    "description": "Emergency Response (ER): Timely medical intervention is crucial for saving lives in cases of emergency conditions, such as an accident, heart attack, or brain stroke. However, the biggest challenge posed in such situations is understanding the type of emergency and reaching out to a hospital that is well-equipped with emergency medical facilities for tending to",
+    "date": "March 25, 2024",
+    "link": "9-page"
+  },
+  {
+    "image": "assets/blogs_main/neurological_disorders.jpg",
+    "category_name": "Neurology",
+    "title": "Everything You Need to Know About Neurological Disorders",
+    "description": "The human brain is quite extraordinary. Its astounding functions, which are composed of very intricate systems, have even surprised scientists and doctors. However, this intricate organ is as prone as any other organ to damage, and various factors can lead to disruptions in its normal functioning. Neurological disorders, a broad category encompassing a range of",
+    "date": "February 16, 2024",
+    "link": "11-page"
+  },
+  {
+    "image": "assets/blogs_main/migraine_headache_relief.jpg",
+    "category_name": "Neurology",
+    "title": "Migraines: Simple Steps to Head Off the Pain",
+    "description": "A migraine can be incredibly painful and may cause the affected individual serious agony. It starts with a pulsating pain deep within your head. It may feel as though your brain is throbbing with every heartbeat. This pain further extends from the area behind one eye to the other. Simultaneously, a feeling of nausea starts",
+    "date": "November 18, 2023",
+    "link": "13-page"
+  },
+  {
+    "image": "assets/blogs_main/dementia_alzheimers.jpg",
+    "category_name": "Neurology",
+    "title": "Dementia & Alzheimer’s – 10 Early Signs and Symptoms",
+    "description": "Catching dementia early and promptly starting treatment can significantly slow its progression, helping preserve cognitive abilities longer. Witnessing a loved one’s mental decline is undoubtedly difficult, but the early and middle stages still present opportunities for better outcomes through patience and compassion. In this article, we’ll explore subtle signs of dementia to monitor and when",
+    "date": "November 8, 2023",
+    "link": "13-page"
+  },
+  {
+    "image": "assets/blogs_main/busting_myths_around_skincare.jpg",
+    "category_name": "Neurology",
+    "title": "Stroke Signs, Prevention & Awareness",
+    "description": "When the blood supply to the brain is disrupted and decreased, then brain stroke occurs. When the blood supply to some part of your brain is interrupted, then someone experiences a stroke. This happens primarily when clots or other obstructions block the flow of blood to the brain Types of Strokes: Ischemic Stroke – This",
+    "date": "November 15, 2021",
+    "link": "21-page"
+  },
+  {
+    "image": "assets/blogs_main/women_epilepsy_pregnancy.jpg",
+    "category_name": "Neurology",
+    "title": "Women with Epilepsy & Pregnancy",
+    "description": "Epilepsy throughout pregnancy raises concern, but most women who have epilepsy deliver healthy babies though they need special care during pregnancy.  Here is an excerpt from an interview by Dr G Pavan Kumar Reddy, Consultant Neurologist at OMNI Hospitals, Kurnool on women with epilepsy and pregnancy and its management.   Woman is known to be",
+    "date": "December 5, 2020",
+    "link": "24-page"
+  },
+  {
+    "image": "assets/blogs_main/epilepsy_seizures.jpg",
+    "category_name": "Neurology",
+    "title": "Know about Epilepsy (Seizures)",
+    "description": "Epilepsy is a neurological disorder in which a nerve cell activity is disturbed leading to a seizure or periods of unusual behaviour and sometimes loss of awareness. Epilepsy is the fourth common neurological disorder in the world. Both males or females can suffer from epilepsy irrespective of ethnicity or age. Anyone including children can develop",
+    "date": "November 21, 2020",
+    "link": "26-page"
+  },
+  {
+    "image": "assets/blogs_main/know_about_migraine.jpg",
+    "category_name": "Neurology",
+    "title": "ALL YOU NEED TO KNOW ABOUT MIGRAINE",
+    "description": "What is Migraine?  A migraine is a type of headache which is accompanied by nausea, vomiting and sensitivity to light. Migraines can last from 4 hours to 3 days and sometimes longer than that. In most people migraine headaches are common between ages 10 and 40.  What are causes of migraine?  The exact cause of",
+    "date": "September 15, 2020",
+    "link": "27-page"
+  },
+  {
+    "image": "assets/blogs_main/headaches_causes_treatment.jpg",
+    "category_name": "Neurology",
+    "title": "Headaches - Causes and Treatment",
+    "description": "What are the Reasons for Headaches? Headaches are a very common health problem that most people come across in their day-to-day lives due to severe stress. There are several reasons behind causing a headache frequently. When people get a headache due to stress, it can be cured by taking some rest for an adequate amount",
+    "date": "February 19, 2020",
+    "link": "29-page"
+  },
+  {
+    "image": "assets/blogs_main/neurological_issues_urban_lifestyle.jpg",
+    "category_name": "Neurology",
+    "title": "Neurological issues that arise due to leading an urban lifestyle",
+    "description": "The term “neurological disorder” applies to any condition that is caused by a dysfunction in part of the brain or nervous system, resulting in physical and/or psychological symptoms. All neurological disorders involve the brain, spinal column or nerves. Symptoms depend on where damage occurs. Areas that control movement, communication, vision, hearing or thinking can be",
+    "date": "September 10, 2019",
+    "link": "31-page"
+  },
+  {
+    "image": "assets/blogs_main/total_knee_replacement_banner_blog.jpg",
+    "category_name": "Orthopedics",
+    "title": "How Total Knee Replacement Surgery Improves Quality of Life",
+    "description": "Constant knee pain can make daily life feel like a struggle. Every day tasks like walking, climbing stairs, or even just standing for a while can become difficult. For many people, total knee replacement surgery is life-changing, they often say it gives them their life back. In this blog, we’ll break down how total knee",
+    "date": "June 4, 2025",
+    "link": "1-page"
+  },
+  {
+    "image": "assets/blogs_main/total_knee.jpg",
+    "category_name": "Orthopedics",
+    "title": "Total Knee Replacement: A Step-by-step Guide to the Procedure & Recovery",
+    "description": "Knee issues can have a profound effect on daily living and comfort, whether it’s caused by Arthritis, injury or the natural wear and tear that comes with aging, chronic knee pain can limit mobility, making even everyday activities like walking, climbing stairs or getting out of a chair incredibly difficult. When non-surgical treatments no longer",
+    "date": "February 21, 2025",
+    "link": "2-page"
+  },
+  {
+    "image": "assets/blogs_main/spinal_fusion_surgery.jpg",
+    "category_name": "Orthopedics",
+    "title": "A Step-by-Step Guide to Spinal Fusion Surgery: What to Expect Before, During & After",
+    "description": "Spinal fusion surgery is a procedure aimed at joining two or more vertebrae in the spine, ultimately  preventing movement between them. It is commonly recommended for patients suffering from severe  back pain due to conditions such as degenerative disc disease, facet arthropathy, slippage of one vertebra  over the other, scoliosis, spinal fractures or herniated discs.",
+    "date": "February 18, 2025",
+    "link": "2-page"
+  },
+  {
+    "image": "assets/blogs_main/orthopedic_vizag.jpg",
+    "category_name": "Orthopedics",
+    "title": "Best Orthopedic Surgeon in Vizag: Your Ultimate Guide to Expert Care",
+    "description": "Introduction : Orthopedic health is essential for maintaining mobility, flexibility, and an active lifestyle. Whether you’re experiencing joint pain, fractures, arthritis, or sports injuries, consulting the best orthopedic surgeon in Vizag can help you regain strength and improve your quality of life. Vizag (Visakhapatnam) is home to some of the most renowned orthopedic specialists and",
+    "date": "February 7, 2025",
+    "link": "3-page"
+  },
+  {
+    "image": "assets/blogs_main/orthopedic_care_vizag.jpg",
+    "category_name": "Orthopedics",
+    "title": "Advanced Orthopedic Care in Vizag: Joint Replacements and Sports Injury Treatments at OMNI RK Hospital.",
+    "description": "Orthopedic Care in Vizag Joint pain or a sports injury can disrupt your daily routine and hinder your quality of life. At OMNI RK Hospital in Vizag, our expert orthopedic surgeons are dedicated to providing comprehensive care to help you regain mobility and live pain-free. From advanced joint replacement surgeries to specialized sports injury treatments,",
+    "date": "January 7, 2025",
+    "link": "3-page"
+  },
+  {
+    "image": "assets/blogs_main/world_spine_day.jpg",
+    "category_name": "Orthopedics",
+    "title": "World Spine Day 2024: How to Prevent Back Pain Through Lifestyle Changes",
+    "description": "World Spine Day 2024 Overview: World Spine Day is celebrated on 16 October every year to raise awareness of the importance of healthy spines. The primary objective of this worldwide campaign is to educate people about how they can maintain and improve their spines’ health. For World Spine Day 2024, the theme is “Support Your",
+    "date": "October 16, 2024",
+    "link": "5-page"
+  },
+  {
+    "image": "assets/blogs_main/minimally_invasive_spine_surgery.jpg",
+    "category_name": "Orthopedics",
+    "title": "Insights into Common Minimally Invasive Spine Surgery Procedures",
+    "description": "Most spinal disorders can be treated non-surgically, with only a few requiring surgical intervention. In the realm of surgery, advancements worldwide focus on maximizing benefits while minimizing collateral damage. In this regard, minimally invasive spine surgery emerges as the preferred approach. One of the first questions patients often ask is, “Doctor, how long will the",
+    "date": "October 14, 2024",
+    "link": "5-page"
+  },
+  {
+    "image": "assets/blogs_main/treatments_ankle_ligament_injuries.jpg",
+    "category_name": "Orthopedics",
+    "title": "Effective Orthopaedic Treatments for Ankle Ligament Injuries",
+    "description": "Overview of Sprained Ankle Ankle ligament injuries, such as a torn ligament, are common among people of all ages. These injuries can significantly impact physical activity, often leading to missed opportunities for athletes to participate in tournaments. A sprained ankle occurs when you twist or roll your ankle more awkwardly than its ordinary course of",
+    "date": "August 27, 2024",
+    "link": "5-page"
+  },
+  {
+    "image": "assets/blogs_main/expert_insights_preventing_injuries.jpg",
+    "category_name": "Orthopedics",
+    "title": "National Bone and Joint Day 2024: Expert Insights on Preventing Injuries",
+    "description": "National Bone and Joint Day is observed on 4th August every year in India. This is a nationwide health campaign initiated by the Indian Orthopaedic Association (IOA) in 2021 to highlight the importance of strong bones and joints in people of all ages. The day is celebrated to raise awareness about the necessity of preserving",
+    "date": "August 2, 2024",
+    "link": "6-page"
+  },
+  {
+    "image": "assets/blogs_main/common_sports_injuries.jpg",
+    "category_name": "Orthopedics",
+    "title": "Common Sports Injuries and How to Avoid Them",
+    "description": "Sports have always been important in encouraging people to be physically active, mentally healthy, and socially connected. Whether you’re a professional athlete or simply someone who enjoys an active lifestyle, sports injuries can be a significant setback. The term “sports injury” describes the many types of injuries that are often sustained when engaging in sports",
+    "date": "November 15, 2023",
+    "link": "13-page"
+  },
+  {
+    "image": "assets/blogs_main/joint_pain_winter_tips.jpg",
+    "category_name": "Orthopedics",
+    "title": "5 Ways to Reduce Joint Pain and Stiffness this Winter Season",
+    "description": "Introduction on Joint Pains The winter season brings good health to most people, but it can be particularly challenging for those with arthritis and chronic joint pain. Stiffness and pain in the joints can be caused by various factors, yet more people tend to complain about reduced mobility, joint pain, and stiffness during the winter.",
+    "date": "October 25, 2023",
+    "link": "13-page"
+  },
+  {
+    "image": "assets/blogs_main/joint_replacement.jpg",
+    "category_name": "Orthopedics",
+    "title": "How Joint Replacement Can Transform Your Daily Activities?",
+    "description": "With the increase in old age, people experience joint injuries which are due to conditions like arthritis, fractures, and joint abnormalities. These conditions might cause hindrances in the quality of life of the patient. Thus, doctors suggest and perform joint replacement surgery. Metals, ceramics, or robust plastics can be used to make the artificial joint",
+    "date": "September 26, 2023",
+    "link": "14-page"
+  },
+  {
+    "image": "assets/blogs_main/prevent_sports_injuries.jpg",
+    "category_name": "Orthopedics",
+    "title": "8 Ways to Prevent Sports Injuries",
+    "description": "Sports injuries are becoming increasingly common and account for many injuries in children and adolescents. With more active children participating in sports and various kinds of activities, parents need to provide them with the right protective gear and minimise the occurrence of injuries as much as possible. While minor cuts and scratches are inevitable, the",
+    "date": "August 28, 2023",
+    "link": "14-page"
+  },
+  {
+    "image": "assets/blogs_main/spine_back_pain_treatment.jpg",
+    "category_name": "Orthopedics",
+    "title": "A Pain in the Back: When to Seek Medical Help for Spine Issues",
+    "description": "Lower back pain is a highly prevalent condition. At some point in their lives, most individuals have experienced back pain. It remains an ongoing issue for many people and is the leading cause of work absences and disability globally. Back pain can manifest in various ways, from mild discomfort lasting a few days to excruciating",
+    "date": "August 21, 2023",
+    "link": "14-page"
+  },
+  {
+    "image": "assets/blogs_main/maintaining_healthy_spine_tips_strong.jpg",
+    "category_name": "Orthopedics",
+    "title": "Maintaining a Healthy Spine: Tips for a Strong and Flexible Back",
+    "description": "Introduction of healthy spine A healthy spine posture is crucial for controlling the body’s vital functions. It provides structural support and maintains an upright posture, enabling us to move and protect the spinal cord and nerve roots. This, in turn, helps us perform everyday tasks with ease. Additionally, the spine plays a crucial role in",
+    "date": "August 14, 2023",
+    "link": "15-page"
+  },
+  {
+    "image": "assets/blogs_main/tennis_elbow_symptoms_treatment.jpg",
+    "category_name": "Orthopedics",
+    "title": "Tennis Elbow And Its Symptoms And Treatment",
+    "description": "What is a Tennis Elbow?  Tennis elbow or medically known as lateral epicondylitis, is a repetitive strain injury that impacts the outside of the elbow, specifically, the tendons that attach to the lateral epicondyle of the humerus bone. It is characterized by pain and a bony bump on the outside of the elbow, and soreness",
+    "date": "May 2, 2023",
+    "link": "15-page"
+  },
+  {
+    "image": "assets/blogs_main/know_about_shoulder_impingement.jpeg",
+    "category_name": "Orthopedics",
+    "title": "All You Need To Know About Shoulder Impingement",
+    "description": "Shoulder impingement is usually a reason for shoulder pain. A rotator cuff connects the upper arm bone and shoulder along with tendons. The acromion, present at the top of the shoulder, is where the rotator cuff is. If there is a shoulder impingement, your rotator cuff will snag or rub on the acromion. The area",
+    "date": "April 17, 2023",
+    "link": "16-page"
+  },
+  {
+    "image": "assets/blogs_main/all_u_need_know_about_shoulder_dislocation.jpg",
+    "category_name": "Orthopedics",
+    "title": "All You Need To Know About Shoulder Dislocation",
+    "description": "Known as the most mobile joint in the human body, the shoulder joint is characterized by a ball-and-socket mechanism where the head of the humerus bone fits into the glenoid cavity of the scapula. The shoulder’s ball-and-socket structure allows it to rotate in multiple directions, making it highly mobile. Though it’s attached to muscles, tendons,",
+    "date": "April 13, 2023",
+    "link": "16-page"
+  },
+  {
+    "image": "assets/blogs_main/robotic_surgeries_hip_knee_replacement.jpg",
+    "category_name": "Orthopedics",
+    "title": "What are Robotic Surgeries? How are they used for Hip and Knee replacement?",
+    "description": "Robotic Surgeries: The field of medicine is ever-evolving with advancements that were not even imaginable. The latest research & development in medical science aims to increase the success rates of complex procedures and ease things for patients. Robotic surgery or Robot-Assisted Surgery (RAS) is one such procedure that aims to perform complex surgeries with great",
+    "date": "January 11, 2023",
+    "link": "16-page"
+  },
+  {
+    "image": "assets/blogs_main/sports_injuries_treatments.jpg",
+    "category_name": "Orthopedics",
+    "title": "Sports Injuries & Treatments",
+    "description": "Sports could be played as an individual activity for fitness and fun or even as an athletic skill. Either way, sports are vital in various aspects of life. Sports activities have various benefits ranging from health to a healthy competitive culture amongst various geographical regions. Amidst sports comes along an inevitable part which is injuries.",
+    "date": "November 15, 2022",
+    "link": "17-page"
+  },
+  {
+    "image": "assets/blogs_main/orthopaedic_trauma.jpg",
+    "category_name": "Orthopedics",
+    "title": "Treatment & Management of Orthopaedic Trauma",
+    "description": "Trauma to the orthopaedic system refers to any serious injury to the bones, joints, and/or soft tissues caused by an external force. A car accident or fall, for instance, can cause these types of injuries, but not always. Besides trauma, overuse can also result in tibial stress fractures, which are reportedly caused by running long",
+    "date": "January 19, 2022",
+    "link": "20-page"
+  },
+  {
+    "image": "assets/blogs_main/knee_replacement.jpg",
+    "category_name": "Orthopedics",
+    "title": "Importance of Joint Replacement",
+    "description": "A joint replacement surgery relieves pain and restores near-normal range of motion and function in the affected joint. It involves removing the damaged cartilage and bone at the end of long bones and replacing them with an artificial metal joint. Hip, knee, and shoulder replacements are the most common among joint replacement surgeries. However, fingers,",
+    "date": "January 4, 2022",
+    "link": "20-page"
+  },
+  {
+    "image": "assets/blogs_main/spine_health_workfromhome.jpg",
+    "category_name": "Orthopedics",
+    "title": "Spine Health: How to take care of your spine while working from home",
+    "description": "Spine Problem Causes: Affected backs and spine problems are often the results of poor ergonomics and comfort zones when working from home. Sedentary lifestyles and poor sitting posture are among the leading sub-factors. Backaches during WFH are most often caused by staying physically inactive. The long-term effects of sitting or lying down with no exercise",
+    "date": "October 21, 2021",
+    "link": "21-page"
+  },
+  {
+    "image": "assets/blogs_main/common_sports_injuries_prevention.jpg",
+    "category_name": "Orthopedics",
+    "title": "Common Sports Injuries: Symptoms, Prevention & Treatment",
+    "description": "Sports are a fun alternative to keep ourselves fit & active. But it’s equally important to be aware of some of the sports injuries that can strike while playing a sport. Depending on how intense the injury is, we can treat some minor injuries at home while others require physical therapy and surgery. However, staying",
+    "date": "July 26, 2021",
+    "link": "22-page"
+  },
+  {
+    "image": "assets/blogs_main/winter_healthy_bones.jpg",
+    "category_name": "Orthopedics",
+    "title": "Winter and Healthy Bones",
+    "description": "Winter Bone Health Problems Our bone health is important to keep the body active and fit. The physical activity of people contracts during the winter season. Some common bone issues during winter are stiff muscles and joint pain are common problems faced during the winter season. Many people face these problems during this time of",
+    "date": "December 30, 2020",
+    "link": "22-page"
+  },
+  {
+    "image": "assets/blogs_main/healthy_spine.jpg",
+    "category_name": "Orthopedics",
+    "title": "Healthy Spine and a Strong Back",
+    "description": "The spine consists of 26 bones called vertebrae, which protect and support the spinal cord and nerves. A number of conditions and injuries can affect the spine, which can damage the vertebrae, cause pain, and limit mobility. Numerous conditions can affect the spine anywhere from the neck to the lower back. Some of the many",
+    "date": "December 11, 2020",
+    "link": "23-page"
+  },
+  {
+    "image": "assets/blogs_main/arthroscopy_blog.jpg",
+    "category_name": "Orthopedics",
+    "title": "Know more about Arthroscopy",
+    "description": "Arthroscopy is studying inside of a joint with a small size telescope with rod-lens system. It allows minimally invasive surgical treatment of joint problems. Over the last three decades like in other fields of medicine, minimally invasive surgery is done to solve joint problems and it has become a very popular treatment modality. Injuries of",
+    "date": "November 3, 2020",
+    "link": "26-page"
+  },
+  {
+    "image": "assets/blogs_main/non_union_long_bone_fractures.jpg",
+    "category_name": "Orthopedics",
+    "title": "An Insight Into Non-Union of Adult Long Bone Fractures",
+    "description": "Long bone fractures are the commonly encountered cases in orthopaedic practice. The working age groups (25-55 years) are the most affected and unless fracture heals (union) optimally restoring the normal function patients may have significant disability. Fractures when treated either by nonsurgical or surgical methods sometimes end up in non-union (bone does not heal). The",
+    "date": "September 29, 2020",
+    "link": "27-page"
+  },
+  {
+    "image": "assets/blogs_main/metastatic_pathological_fractures.jpg",
+    "category_name": "Orthopedics",
+    "title": "ROLE OF ORTHOPAEDICS IN METASTATIC PATHOLOGICAL FRACTURES",
+    "description": "Advancements in oncological and medical therapies mean that the life expectancy of the patients with Metastatic Bone Disease (MBD) is usually measured in years. Complications of Metastatic Bone Disease (MBD) can affect the patient’s quality of life, so making careful assessment and appropriate management of those patients is essential.  The roles of orthopaedic and spinal",
+    "date": "September 22, 2020",
+    "link": "27-page"
+  },
+  {
+    "image": "assets/blogs_main/hip_replacement_knee-replacement_surgery.jpg",
+    "category_name": "Orthopedics",
+    "title": "Hip Replacement and Knee Replacement Surgery",
+    "description": "Hip Joint and Knee Joint pain is one of the serious problems that usually affect aged and adult people. We witness this problem in just less number of children and young folks. However, if the knee and hit joint pain are too severe, there are few medications and other treatment options that help relieving the",
+    "date": "January 16, 2020",
+    "link": "30-page"
+  },
+  {
+    "image": "assets/blogs_main/metastatic_bone_tumors.jpg",
+    "category_name": "Orthopedics",
+    "title": "A scientific session on ‘Dealing with Metastatic bone tumors & its pain management’ being conducted by Dr. Kishore B. Reddy.",
+    "description": "Dr. Kishore B. Reddy conducted a scientific session on ‘Dealing with Metastatic bone tumors & its pain management’ on 4th August, 2018 at Hotel Green Park, Ameerpet,Hyderabad.",
+    "date": "October 22, 2019",
+    "link": "31-page"
+  },
+  {
+    "image": "assets/blogs_main/bone_tumours_symptoms_treatment.jpg",
+    "category_name": "Orthopedics",
+    "title": "Bone Tumours - Symptoms & Treatment",
+    "description": "What is a Bone Tumour? When the cells start to grow indefinitely in an abnormal pattern they form a lump of tissues. When these lumps form in your bone, it is known as bone tumors. Bone tumors are of two types: Benign and Malignant. Generally, there are 6 types of Benign Tumours: Osteochondromas Nonossifying fibroma",
+    "date": "May 24, 2018",
+    "link": "33-page"
+  },
+  {
+    "image": "assets/blogs_main/joint_replacement_surgery_hip_knee.jpg",
+    "category_name": "Orthopedics",
+    "title": "Joint Replacement Surgery – Hip & Knee",
+    "description": "By Dr. Udai Prakash Dr.Udai Prakash is a consultant orthopedic and joint replacement surgeon at Udai Clinic Orthopedic Centre,Hyderabad.He holds",
+    "date": "November 24, 2015",
+    "link": "35-page"
+  },
+  {
+    "image": "assets/blogs_main/oh_my_back.jpg",
+    "category_name": "Orthopedics",
+    "title": "Oh My Back!",
+    "description": "By Dr. Raghava Dutt Mulukutla Dr.Raghava Dutt Mulukutla is a consultant orthopaedic and spine surgeon at Udai Omni Hospital, Hyderabad.He",
+    "date": "November 24, 2015",
+    "link": "35-page"
+  },
+  {
+    "image": "assets/blogs_main/total_compartmental.jpg",
+    "category_name": "Orthopedics",
+    "title": "Total Knee Replacement versus Partial Knee Replacement",
+    "description": "If you have been recommended a knee replacement then you may be a candidate for a partial (unicompartmental) knee replacement.You",
+    "date": "February 1, 2014",
+    "link": "36-page"
+  },
+  {
+    "image": "assets/blogs_main/new_covid_variant.jpg",
+    "category_name": "Pulmonology",
+    "title": "New COVID Variants: What You Need to Know Now",
+    "description": "The COVID-19 virus continues to generate variants and change considerably. The amount of overall risk to public health remains in a manageable place due to individuals who are immune due to vaccination, immunity due to infection, or reports of non-mastering signals. It is necessary to remain cognizant of the current variant and its symptoms for",
+    "date": "May 29, 2025",
+    "link": "1-page"
+  },
+  {
+    "image": "assets/blogs_main/impact_air_pollution_on.jpg",
+    "category_name": "Pulmonology",
+    "title": "The Impact of Air Pollution on Lung Health",
+    "description": "Air pollution isn’t just an environmental concern, it’s a serious threat to your health, especially your lungs. As the air we breathe becomes increasingly contaminated with harmful particles and gases, the risks to our respiratory system continue to rise. Understanding the effects of air pollution on lung health is essential for prevention, early detection, and",
+    "date": "May 27, 2025",
+    "link": "1-page"
+  },
+  {
+    "image": "assets/blogs_main/pulmonologist_hyderabad.jpg",
+    "category_name": "Pulmonology",
+    "title": "Top Pulmonologists in Hyderabad: Your Guide to the Best Lung Specialists",
+    "description": "Pulmonology is a specialized branch of medicine that focuses on diagnosing and treating diseases related to the respiratory system, including the lungs and airways. If you are experiencing persistent respiratory issues such as asthma, chronic cough, COPD, or lung infections, seeking expert medical attention from a top pulmonologist is crucial. Hyderabad, being a hub of",
+    "date": "February 12, 2025",
+    "link": "3-page"
+  },
+  {
+    "image": "assets/blogs_main/hmpv_symptoms_treatment.jpg",
+    "category_name": "Pulmonology",
+    "title": "Human Metapneumovirus (HMPV): Symptoms, Treatment, and Impact on Adults and Children",
+    "description": "Human Metapneumovirus (HMPV) symptoms , part of the Pneumoviridae family, is a respiratory virus responsible for illnesses ranging from mild colds to severe lung infections like pneumonia and bronchiolitis. Despite being less recognized than influenza or Respiratory Syncytial Virus (RSV), HMPV respiratory virus is a significant contributor to respiratory illnesses globally, particularly during winter and",
+    "date": "January 10, 2025",
+    "link": "3-page"
+  },
+  {
+    "image": "assets/blogs_main/acute_respiratory_failure.jpg",
+    "category_name": "Pulmonology",
+    "title": "The Impact of Acute Respiratory Failure on Lung Health",
+    "description": "Acute respiratory failure is a serious health condition that makes breathing difficult. It happens when the lungs can’t bring enough oxygen into the blood or eliminate enough carbon dioxide. This can harm organs and requires immediate medical care. It might happen suddenly or through ongoing breathing issues, often called acute and chronic respiratory failure.  What",
+    "date": "June 13, 2024",
+    "link": "7-page"
+  },
+  {
+    "image": "assets/blogs_main/tuberculosis_tb_treatment.jpg",
+    "category_name": "Pulmonology",
+    "title": "Tuberculosis TB: Symptoms, Causes, & Treatment",
+    "description": "Tuberculosis (TB) is an infectious disease caused by the bacterium Mycobacterium tuberculosis. These bacteria primarily target the lungs and other body parts. The disease traces back thousands of years and has caused havoc across continents, leading to widespread morbidity and mortality. Though there are major medical advancements and efforts to combat the disease, tuberculosis (TB)",
+    "date": "March 19, 2024",
+    "link": "10-page"
+  },
+  {
+    "image": "assets/blogs_main/tuberculosis_tb_treatment.jpg",
+    "category_name": "Pulmonology",
+    "title": "Bronchoscopy: Procedure, Benefits, Risk & Recovery",
+    "description": "Introduction Getting a clear view inside the lungs is important for doctors to catch and treat problems early. One way they do this is through a medical test called a bronchoscopy. Let’s discuss what this procedure involves.   Bronchoscopy – What is it? A bronchoscopy involves carefully inserting a long, thin tube equipped with a",
+    "date": "March 15, 2024",
+    "link": "10-page"
+  },
+  {
+    "image": "assets/blogs_main/lung_health_check_ups.jpg",
+    "category_name": "Pulmonology",
+    "title": "The Importance of Lung Health Check-ups",
+    "description": "Maintaining good health involves a holistic approach that encompasses various aspects of well-being, among which lung health stands as a crucial pillar. Our lungs, often overlooked in routine health evaluations, play a pivotal role in our overall vitality. Although most individuals don’t consider their lung health until a problem starts to show symptoms, it’s crucial",
+    "date": "January 8, 2024",
+    "link": "12-page"
+  },
+  {
+    "image": "assets/blogs_main/pneumonia_causes_symptoms.jpg",
+    "category_name": "Pulmonology",
+    "title": "Pneumonia: Causes, Symptoms, and Treatment",
+    "description": "Pneumonia Overview Pneumonia is a serious lung infection that affects people across age groups. Being well-informed can help people seek timely care when required and also take preventive measures. Therefore, we have provided a comprehensive guide to pneumonia by exploring its causes, risk factors, types, symptoms, diagnosis, and treatment options.  What is Pneumonia? Pneumonia is",
+    "date": "January 5, 2024",
+    "link": "12-page"
+  },
+  {
+    "image": "assets/blogs_main/chronic_obstructive_pulmonary_disease_awareness.jpg",
+    "category_name": "Pulmonology",
+    "title": "Chronic Obstructive Pulmonary Disease (COPD) Awareness",
+    "description": "Chronic obstructive pulmonary disease (COPD) is an umbrella term for a group of lung conditions, including emphysema, non reversible asthma, chronic bronchitis and certain types of bronchiectasis. These conditions can occur in combination. According to research conducted by the World Health Organization COPD affects a varying percentage of adults ranging from 4% to 20%. The",
+    "date": "January 3, 2024",
+    "link": "12-page"
+  },
+  {
+    "image": "assets/blogs_main/bronchitis_types_differences.jpg",
+    "category_name": "Pulmonology",
+    "title": "Understanding Acute vs. Chronic Bronchitis: What You Need to Know",
+    "description": "Introduction Bronchitis is caused by an infection in the bronchial tube lining, which carries air to and from the lungs. People with bronchitis usually cough up thick and discoloured mucus. It is often developed from a cold or respiratory infection. There are two types of bronchitis: acute and chronic bronchitis. Acute bronchitis is common, whereas",
+    "date": "July 25, 2023",
+    "link": "15-page"
+  },
+  {
+    "image": "assets/blogs_main/impact_smoking_body_tips_how_quit.jpg",
+    "category_name": "Pulmonology",
+    "title": "Impact Of Smoking On The Body And Tips On How To Quit",
+    "description": "Tobacco has been around for centuries, yet we only recently learned about the health impact of smoking. Smokers usually die 10 years sooner than non-smokers. By deciding to stop smoking, you can improve your health and life expectancy. Experts have known that impact of smoking causes lung cancer and tobacco hurts your health in a",
+    "date": "June 24, 2022",
+    "link": "18-page"
+  },
+  {
+    "image": "assets/blogs_main/summer_pulmonology.jpg",
+    "category_name": "Pulmonology",
+    "title": "Most Common Pulmonology Issues in Summers",
+    "description": "Many people suffer from lung and respiratory problems in the summer. They suffer from lung problems in summer due to dry weather, high temperatures, and excess humidity. The most common pulmonology issues in summer include bronchitis, asthma, chronic obstructive pulmonary diseases, and emphysema. The heat of the sun or high temperatures can affect the airways",
+    "date": "June 24, 2022",
+    "link": "18-page"
+  },
+  {
+    "image": "assets/blogs_main/asthma.jpg",
+    "category_name": "Pulmonology",
+    "title": "All About Asthma",
+    "description": "Asthma is a chronic lung disease that affects children & adults. This disease affects your airways, which transport air to and from your lungs. The airways in your lungs can become inflamed and narrowed if you have asthma. It may cause wheezing, coughing, and tightness in the chest. A flare-up or asthma attack occurs when",
+    "date": "March 1, 2022",
+    "link": "19-page"
+  },
+  {
+    "image": "assets/blogs_main/winter_pulmonology.jpg",
+    "category_name": "Pulmonology",
+    "title": "Pulmonology & Treatment of Winter Related Diseases",
+    "description": "Common Winter Ailments As winter approaches, the cold & flu season follows. As the weather gets colder, respiratory illnesses become more prevalent. Viral transmission is easier when people spend most of their time indoors or in closed spaces. Cold, dry air reduces our immunity. In winter, health care is especially important for everyone. Despite all",
+    "date": "January 6, 2022",
+    "link": "20-page"
+  },
+  {
+    "image": "assets/blogs_main/about_influenza.jpg",
+    "category_name": "Pulmonology",
+    "title": "Know more about Influenza",
+    "description": "Influenza is a viral infection which affects a person’s respiratory system — nose, throat and lungs. Influenza is commonly called the flu. The viruses spread from person-to-person by droplets coughed or sneezed in the air or through direct contact. People at higher risk of developing flu complications include: Young children under age 5 Adults older",
+    "date": "December 15, 2020",
+    "link": "23-page"
+  },
+  {
+    "image": "assets/blogs_main/smoking_covid_ninteen.jpg",
+    "category_name": "Pulmonology",
+    "title": "Smoking & COVID-19",
+    "description": "As COVID-19 continues to progress, questions are arising about the relationship between smoking and the virus, particularly if continuing to smoke makes you more likely to get COVID-19.   Are people who smoke at more risk from COVID-19? Yes, if you smoke and get the COVID-19 virus, you increase your risk of developing more severe",
+    "date": "December 14, 2020",
+    "link": "23-page"
+  },
+  {
+    "image": "assets/blogs_main/copd_covid.jpg",
+    "category_name": "Pulmonology",
+    "title": "Know more about COPD & COVID-19",
+    "description": "Chronic obstructive pulmonary disease (COPD) is a chronic lung disease which obstructs airflow from the  lungs. Emphysema and chronic bronchitis are the most common conditions that contribute to  COPD. COPD increases the risk associated with COVID-19, affecting the respiratory system and damaging  the lungs.   COPD Symptoms:  Fever  Fatigue  Cough  Expectoration  Shortness of breath   COPD Risk",
+    "date": "November 18, 2020",
+    "link": "26-page"
+  },
+  {
+    "image": "assets/blogs_main/indoor_air_pollution.jpg",
+    "category_name": "Pulmonology",
+    "title": "What are the causes and effects of Indoor Air Pollution?",
+    "description": "According to a recent survey conducted by WHO, indoor air pollution has affected and killed more than 4.3 million people every year. Indoor Air Pollution refers to the physical, chemical, and biological characteristics of air in the indoor environment within a home, building, or an institution or commercial facility. The problems can be subtle and",
+    "date": "July 9, 2019",
+    "link": "32-page"
+  },
+  {
+    "image": "assets/blogs_main/asthma_myths_facts.jpg",
+    "category_name": "Pulmonology",
+    "title": "7 Common Myths and Facts of Asthma",
+    "description": "Myth: Asthma is present only when you face trouble in breathing. Fact: Asthma is a disease that is difficult to identify. Even without visible symptoms, there is a chance of underlying inflammation in the airways of people with asthma. Asthma exists even when symptoms are not visible. Asthma needs to be controlled by regularly consuming",
+    "date": "December 13, 2018",
+    "link": "32-page"
+  },
+  {
+    "image": "assets/blogs_main/heart_health.jpg",
+    "category_name": "Cardiology",
+    "title": "Understanding the Impact of High Blood Pressure on Heart Health",
+    "description": "Hypertension is often called a “silent killer” because you often will not have a physical experience that makes you aware of having high blood pressure. But just because you do not feel anything at the moment, does not mean this hypertensive process is not out there destroying you and your body, and your heart. We",
+    "date": "May 16, 2025",
+    "link": "1-page"
+  },
+  {
+    "image": "assets/blogs_main/Stress-and-Heart-Health.jpg",
+    "category_name": "Cardiology",
+    "title": "Stress and Heart Health: Understanding the Connection and How to Manage It",
+    "description": "Stress is a common part of normal life, it is something that you cannot inherently remove from your daily life. Chronic stress can affect your body and specifically your heart. By understanding your heart, stress and how it applies to your heart health, as well as identifying ways to measure and manage stress, we hope",
+    "date": "May 13, 2025",
+    "link": "1-page"
+  },
+  {
+    "image": "assets/blogs_main/advanced_heart_treatment.jpg",
+    "category_name": "Cardiology",
+    "title": "Get Advanced Heart Treatment from the Best Cardiologist in Vizag",
+    "description": "A Cardiology is a doctor who focuses on treating conditions affecting the heart and blood vessels. Cardiologists address any issues relating to the heart and assist in maintaining its health. They diagnose cardiac issues, treat them, and, if necessary, perform surgery to manage them. They also provide cardiac care and work to avoid cardiovascular problems.",
+    "date": "November 21, 2024",
+    "link": "4-page"
+  },
+  {
+    "image": "assets/blogs_main/world_heart_day.jpg",
+    "category_name": "Cardiology",
+    "title": "World Heart Day 2024: Expert Insights on Heart Health",
+    "description": "Cardiovascular diseases have been one of the leading causes of death in the past few decades. World Heart Day is a global movement that aims to create awareness about cardiovascular diseases and promote the importance of adopting a healthy and heart-friendly lifestyle. It’s a worldwide campaign, and millions participate annually in raising heart health awareness.",
+    "date": "September 25, 2024",
+    "link": "5-page"
+  },
+  {
+    "image": "assets/blogs_main/understanding_cardiac_emergencies.jpg",
+    "category_name": "Cardiology",
+    "title": "Understanding Cardiac Emergencies: Symptoms and Types",
+    "description": "Our heart is a valuable organ, but do we really take proper care of it? As a result, cardiac emergencies have become common. Many dangerous conditions that might suddenly put a person’s life at risk are classified as cardiac crises. Heart attacks and sudden cardiac arrest are among the most severe and critical situations that",
+    "date": "September 20, 2024",
+    "link": "5-page"
+  },
+  {
+    "image": "assets/blogs_main/living_with_ardiac_pacemaker.jpg",
+    "category_name": "Cardiology",
+    "title": "Living with a Cardiac Pacemaker: Tips for a Healthy Lifestyle",
+    "description": "A pacemaker is an implantable device to regulate the heart’s rhythm. Its primary function is to ensure the correctness or to correct cardiac arrhythmia. Pacemaker procedures can be lifesaving, especially for patients with cardiac problems or patients with heart failure. After the cardiac pacemaker is inserted in your body, a normal beat of the heart",
+    "date": "September 12, 2024",
+    "link": "5-page"
+  },
+  {
+    "image": "assets/blogs_main/treadmill_testing_helps_diagnose_heart_conditions.jpg",
+    "category_name": "Cardiology",
+    "title": "Treadmill Testing: How It Helps Diagnose Heart Conditions",
+    "description": "Heart health is of great importance. A treadmill Test (TMT), also known as a stress test,  is one of the most effective methods to assess cardiac activity and the presence of any heart-related problems. It involves walking or running on the treadmill. A treadmill test for the heart is used to find out how well the",
+    "date": "July 18, 2024",
+    "link": "6-page"
+  },
+  {
+    "image": "assets/blogs_main/cardiac_catheterization_benefits.jpg",
+    "category_name": "Cardiology",
+    "title": "Benefits of Cardiac Catheterization: Insights from Our Medical Team",
+    "description": "Myocardial infarction, or heart attack, is a potentially life-threatening medical condition that must be dealt with immediately to avoid significant consequences or even death. Cardiac catheterization, as a diagnostic and therapeutic measure, is usually advised for patients with symptoms of a heart attack or other heart conditions. The test gives information regarding the condition of",
+    "date": "July 5, 2024",
+    "link": "7-page"
+  },
+  {
+    "image": "assets/blogs_main/pacemaker_surgeon_selection.jpg",
+    "category_name": "Cardiology",
+    "title": "Choosing the Right Surgeon for Pacemaker Implantation Surgery",
+    "description": "It is critical to ensure optimal cardiac health and to choose the best surgeon for pacemaker placement surgery. A pacemaker is a medical device that is implanted to keep the heart beating in a consistent and safe rhythm. Pacemakers can be used to treat a range of medical disorders, including bradycardia, heart failure, and hypertrophic",
+    "date": "May 6, 2024",
+    "link": "8-page"
+  },
+  {
+    "image": "assets/blogs_main/cardiac_arrest_treatment.jpg",
+    "category_name": "Cardiology",
+    "title": "Cardiac Arrest: Causes, Symptoms & Treatment Options",
+    "description": "Cardiac arrest refers to a sudden, unexpected loss of hearing function. Although it can be lethal, getting treatment as soon as possible can improve your prognosis.  Electrical impulses regulate the rhythm of the heartbeat. The heartbeat becomes irregular when the pattern of these impulses changes – also known as arrhythmia – whose intensity and severity",
+    "date": "March 22, 2024",
+    "link": "9-page"
+  },
+  {
+    "image": "assets/blogs_main/hypertension_awareness_blog.jpg",
+    "category_name": "Cardiology",
+    "title": "Hypertension: The Silent Killer - Unveiling the Dangers and Protecting Your Health",
+    "description": "Overview Hypertension, or high blood pressure, is often called a “silent killer” because there are no obvious symptoms of this condition that may indicate that something is wrong. Thus, it may go unnoticed. When blood flows through the arteries, it puts some pressure against the walls of the arteries. Such pressure can fluctuate throughout the",
+    "date": "February 20, 2024",
+    "link": ""
+  },
+  {
+    "image": "assets/blogs_main/stress_heart_disease.jpg",
+    "category_name": "Cardiology",
+    "title": "How Does Stress Contribute To Heart Disease Risk?",
+    "description": "Feeling stressed? It’s your body’s normal response to challenging situations. When stressed, your brain makes hormones like cortisol and adrenaline. Cortisol provides energy by releasing sugar into your blood, and adrenaline prepares you for ‘fight or flight’ by revving up your heart rate, breathing, and blood flow, preparing you to handle and cope with the",
+    "date": "November 4, 2023",
+    "link": "13-page"
+  },
+  {
+    "image": "assets/blogs_main/heart_disease_prevention_tips.jpg",
+    "category_name": "Cardiology",
+    "title": "8 Things You Can Do to Prevent Heart Disease and Stroke",
+    "description": "The main causes of death globally are heart disease, heart attacks, and strokes. However, there is also good news: cardiovascular disease can be prevented in about 80% of instances. While certain risk factors, such as family history, gender, or age, cannot be changed, there are several approaches to minimise one’s risk of heart disease. By",
+    "date": "October 10, 2023",
+    "link": "14-page"
+  },
+  {
+    "image": "assets/blogs_main/raise_low_blood_pressure_naturally.jpg",
+    "category_name": "Cardiology",
+    "title": "Raise Low Blood Pressure Naturally Through Diet",
+    "description": "Low blood pressure, often known as hypotension, is defined as a blood pressure measurement less than 90/60 mm Hg. This medical condition affects a large number of individuals, especially as they get older. Low blood pressure can be triggered by a number of causes, including adverse reactions to medications and medical conditions such as diabetes.",
+    "date": "October 3, 2023",
+    "link": "14-page"
+  },
+  {
+    "image": "assets/blogs_main/hypertension_causes_symptoms.jpg",
+    "category_name": "Cardiology",
+    "title": "High Blood Pressure (Hypertension) - Symptoms & Causes",
+    "description": "Introduction Hypertension is a condition of high blood pressure that affects the arteries of the body, where the blood flowing in the blood vessels exerts pressure on the walls of the arteries. This causes the heart to work extra hard to pump blood due to the consistent pressure on the arterial walls. Consequently, this deteriorates",
+    "date": "September 20, 2023",
+    "link": "14-page"
+  },
+  {
+    "image": "assets/blogs_main/heart_attack_warning_signs.jpg",
+    "category_name": "Cardiology",
+    "title": "Recognizing the Warning Signs: Symptoms of a Heart Attack",
+    "description": "Introduction  When the blood flow to the heart is reduced or blocked, the blockage is usually caused due to fat buildup, cholesterol, and other factors. These buildups or deposits are called plaque, and the process of plaque buildup is called atherosclerosis. Sometimes, the plaque can form a clot that blocks or reduces the blood flow,",
+    "date": "August 15, 2023",
+    "link": "15-page"
+  },
+  {
+    "image": "assets/blogs_main/heart_disease_just_heart_attack.jpg",
+    "category_name": "Cardiology",
+    "title": "Heart Disease More Than Heart Attacks",
+    "description": "There are many heart diseases with unique symptoms, treatments, and procedures. Although heart attacks is the most common known heart disease or condition, it is important to know the various heart diseases and their symptoms so as to stay vigilant and cautious. For some kind of heart diseases, simple lifestyle changes and proper medication helps",
+    "date": "November 6, 2022",
+    "link": "17-page"
+  },
+  {
+    "image": "assets/blogs_main/heart_problems_diagnosis_treatment.jpg",
+    "category_name": "Cardiology",
+    "title": "Heart Problems, Diagnosis & Treatment",
+    "description": "A condition that affects the heart’s structure or function is considered heart disease. People often refer to heart disease as one condition. Heart disease, however, is an umbrella term for several conditions. Let’s understand different heart diseases: Coronary artery disease What: More than 10 million people are diagnosed with Coronary artery every year in India.",
+    "date": "February 9, 2022",
+    "link": "19-page"
+  },
+  {
+    "image": "assets/blogs_main/cardiac_arrest_young.jpg",
+    "category_name": "Cardiology",
+    "title": "Cardiac arrest in Youngsters – Causes & Prevention",
+    "description": "Cardiac Arrest Heart defects or other heart abnormalities that are overlooked or undiscovered often cause sudden death in people younger than 35. Usually, sudden deaths like these occur while performing physical activity, such as playing sports. Males die more often than females because of SCA. Many elementary, high school, and college athletes take part without",
+    "date": "December 1, 2021",
+    "link": "20-page"
+  },
+  {
+    "image": "assets/blogs_main/blood_pressure.jpg",
+    "category_name": "Cardiology",
+    "title": "Know More about Blood Pressure",
+    "description": "What is Blood Pressure? Blood pressure is simply the physical pressure of blood in the blood vessels. Arteries carry blood from your heart to other parts of your body. What do the blood pressure numbers mean? Blood pressure is measured using two numbers. The first number is called Systolic blood pressure, which measures the pressure",
+    "date": "December 23, 2020",
+    "link": "22-page"
+  },
+  {
+    "image": "assets/blogs_main/abt_heart_disease.jpg",
+    "category_name": "Cardiology",
+    "title": "Everything You Need to Know About Heart Disease",
+    "description": "As you are all well aware, across the globe and exclusively in our Indian Subcontinent, cardiovascular disorders in the form of Heart attack (AMI) & Heart Failure(HF) are burgeoning by several folds of deaths in human kingdom is related to either Acute MI, that means out of 10 deaths, 6 deaths are related to cardiovascular",
+    "date": "November 28, 2020",
+    "link": "25-page"
+  },
+  {
+    "image": "assets/blogs_main/heart_failure.jpg",
+    "category_name": "Cardiology",
+    "title": "Heart Failure",
+    "description": "The function of the heart is to take deoxygenated blood in and pump out the oxygenated blood to the rest of the organs. In the case of heart failure, the heart fails to pump the amount of blood that it normally pumps. Certain conditions like hypertension or narrowed coronary arteries due to cholesterol deposition weaken",
+    "date": "November 26, 2020",
+    "link": "25-page"
+  },
+  {
+    "image": "assets/blogs_main/cardiac_bypass_surgery.jpg",
+    "category_name": "Cardiology",
+    "title": "A case report on Minimal Invasive Cardiac Bypass Surgery",
+    "description": "Cardiac bypass surgery is one of the most invasive and major surgical procedures. Following an open cardiac bypass surgery, the time taken for wound healing and patient getting back to work ranges between 6-8 weeks. A minimal invasive approach to this major surgery has opened the doors for faster recovery and smaller wound without the",
+    "date": "November 20, 2020",
+    "link": "26-page"
+  },
+  {
+    "image": "assets/blogs_main/sudden_cardiac_arrest.jpg",
+    "category_name": "Cardiology",
+    "title": "Case Of Sudden Cardiac Arrest – The Golden Hour",
+    "description": "A 49 year old female patient was brought to the ER on 23rd January 2020 at 11:00pm by her sons on a 2 wheeler in an unresponsive state. According to her attendant she complained of sudden onset difﬁculty in breathing/chest discomfort at home around 10:00pm after which she collapsed and was unresponsive. She was apparently",
+    "date": "March 3, 2020",
+    "link": "29-page"
+  },
+  {
+    "image": "assets/blogs_main/cardiovascular_risk_factors.jpg",
+    "category_name": "Cardiology",
+    "title": "Cardiovascular Risk Factors",
+    "description": "Cardiovascular diseases have become highly common in most of the people due to the lifestyle changes in the current era. People in this generation are more prone to cardiovascular diseases because of their improper habits, obesity, lack of exercises and more. There are several reasons for the cause of cardiovascular diseases. Some of the heart-related",
+    "date": "January 20, 2020",
+    "link": "30-page"
+  },
+  {
+    "image": "assets/blogs_main/how_keep_your_heart_healthy.jpg",
+    "category_name": "Cardiology",
+    "title": "How To Keep Your Heart Healthy",
+    "description": "A healthy heart is central to overall good health. Embracing a healthy lifestyle at any age can prevent heart disease and lower your risk for a heart attack or stroke. You are never too old or too young to begin taking care of your heart. True, the younger you begin making healthy choices, the longer",
+    "date": "September 24, 2019",
+    "link": "31-page"
+  },
+  {
+    "image": "assets/blogs_main/summer_heat.jpg",
+    "category_name": "General Medicine",
+    "title": "The Management of Chronic Illness During Summer Heat",
+    "description": "Summer is typically viewed as the season of rest, relaxation, and enjoyment of the great outdoors. However, those with chronic conditions may find that rising temperatures present specific challenges. Managing chronic illness during the heat of the summer takes some extra care and attention. Heat and illness can be a tricky balance, hot weather can",
+    "date": "May 9, 2025",
+    "link": "1-page"
+  },
+  {
+    "image": "assets/blogs_main/diabetes_heart_health.jpg",
+    "category_name": "General Medicine",
+    "title": "Managing Diabetes to Reverse and Prevent Heart Disease: Essential Tips for Protecting Your Heart",
+    "description": "Managing Diabetes and Heart Health Diabetes is a chronic condition that affects millions globally, with its impact extending far beyond blood sugar control. One of the most significant risks associated with diabetes is the increased likelihood of heart disease. People with diabetes are at a higher risk of developing cardiovascular problems, such as heart attacks",
+    "date": "January 10, 2025",
+    "link": "3-page"
+  },
+  {
+    "image": "assets/blogs_main/heat_stroke_summer.jpg",
+    "category_name": "General Medicine",
+    "title": "Heat Stroke Precautions: Tips to Avoid Dehydration in Summer",
+    "description": "With rising temperatures soaring higher than 40°C in some places around India, it becomes imperative for everyone to stay cool, alert and hydrated this summer to avoid heat-related illnesses, such as dehydration, heat exhaustion, and heat stroke/summer stroke. Several heat wave warnings sweeping across the country have arisen, cautioning people to keep themselves safe during",
+    "date": "May 2, 2024",
+    "link": "8-page"
+  },
+  {
+    "image": "assets/blogs_main/neurology_brain_health.jpg",
+    "category_name": "General Medicine",
+    "title": "Neurology: Latest Findings in Brain Health",
+    "description": "Brain Health Overview The human brain is an intricate structure that constitutes billions of neurons, which still stuns scientists with its flexibility and sophistication. The neurological development of recent years has changed the field markedly, making the discovery of cognitive and brain health functions possible. From advances in comprehending neuroplasticity to revealing the processes behind",
+    "date": "April 26, 2024",
+    "link": "8-page"
+  },
+  {
+    "image": "assets/blogs_main/varicose_vein_treatment.jpg",
+    "category_name": "General Medicine",
+    "title": "Say Goodbye to Varicose Veins with Our Effective Treatment Procedure",
+    "description": "Varicose veins can be more than simply a cosmetic concern; if not addressed, they can bring discomfort and health problems. They may lead to discomfort, pain, and insecurity for people who have them. Although some people may seek Varicose vein treatment for cosmetic purposes, it’s important to realize that ignoring varicose veins can have major",
+    "date": "April 19, 2024",
+    "link": "9-page"
+  },
+  {
+    "image": "assets/blogs_main/world_health_day_lifestyle.jpg",
+    "category_name": "General Medicine",
+    "title": "World Health Day 2024: Healthy Lifestyle & Awareness",
+    "description": "In the global effort to promote better lives and increase awareness around significant health concerns, World Health Day 2024 will mark yet another momentous milestone. This day, which falls on April 7th every year, is a powerful reminder of putting our health and well-being first in all aspects of life. World Health Day emphasises the",
+    "date": "April 1, 2024",
+    "link": "9-page"
+  },
+  {
+    "image": "assets/blogs_main/haemophilia.jpg",
+    "category_name": "General Medicine",
+    "title": "Know more about Haemophilia",
+    "description": "What is Haemophilia? Hemophilia is an inherited bleeding disorder in which a person lacks certain proteins called “clotting factors” and the blood doesn’t clot properly. This leads to excessive bleeding.   What causes it? The protein matter that serves as clotting factors help to keep the body in a state of equilibrium. Clotting factors facilitate",
+    "date": "December 12, 2020",
+    "link": "23-page"
+  },
+  {
+    "image": "assets/blogs_main/thalassemia.jpg",
+    "category_name": "General Medicine",
+    "title": "Know more about Thalassemia",
+    "description": "Thalassemia is a genetic blood disorder in which the body makes an abnormal type of haemoglobin. Haemoglobin is the protein molecule in red blood cells that carries oxygen. This disorder results in destruction of red blood cells and not producing enough haemoglobin, which makes them dependent on the blood transfusion.   Symptoms Facial bone deformities",
+    "date": "December 12, 2020",
+    "link": "23-page"
+  },
+  {
+    "image": "assets/blogs_main/bodypain_syndrome.jpg",
+    "category_name": "General Medicine",
+    "title": "Approach to  body pain syndrome",
+    "description": "In fact, complaining of body pain in day to day practice is common, it is mostly seen in women aged above 50 years. These patients are habituated to take pain killers and other modes of treatment. But even though it is difficult to pinpoint the reasons for Muscular skeletal pain, the doctor should have a",
+    "date": "November 24, 2020",
+    "link": "25-page"
+  },
+  {
+    "image": "assets/blogs_main/dizziness_and_vertigo.jpg",
+    "category_name": "General Medicine",
+    "title": "Dizziness and Vertigo",
+    "description": "In general, the most common causes of dizziness are activities everyone experiences, at least as children, namely running around in circles or riding carnival attractions that spin, loop or twist. These movements cause an asymmetry in the signals that stem from the vestibular system–a sensory system situated on each side of the head in the",
+    "date": "June 4, 2020",
+    "link": "28-page"
+  },
+  {
+    "image": "assets/blogs_main/viral_fever.jpg",
+    "category_name": "General Medicine",
+    "title": "Types of Viral Fever - Causes & Treatments",
+    "description": "A viral infection that is produced and caused by climate change and other environmental exposures leads to viral fever during the monsoon season. Your body’s natural temperature increases when you have the flu, a cold, and viral fever. Viral infection also results in viral fever, which is another condition that is not a disease. Viral",
+    "date": "November 1, 2022",
+    "link": "18-page"
+  },
+  {
+    "image": "assets/blogs_main/nurseaa.jpg",
+    "category_name": "General Medicine",
+    "title": "Nurses are playing a vital role in this pandemic - as always",
+    "description": "The profession’s contribution to improve the people’s health during times of crisis dates back to the days of Florence Nightingale.   Nurses have been the stars for this pandemic across the globe for their exemplary courage, dedication and perseverance. The views on nursing and nurses are based on the personal experiences with nurses. The experience",
+    "date": "December 8, 2020",
+    "link": "24-page"
+  },
+  {
+    "image": "assets/blogs_main/common_summer_skin_problems.jpg",
+    "category_name": "Dermatology",
+    "title": "Common Summer Skin Problems and How to Prevent Them",
+    "description": "When the temperature rises, so do the chances of developing skin issues. Summer skin problems are common and can range from mild irritation to more serious reactions that require medical attention. With the combination of heat, sweat, and sun exposure, your skin can be especially vulnerable during the warmer months. Here are some common summer",
+    "date": "May 7, 2025",
+    "link": "2-page"
+  },
+  {
+    "image": "assets/blogs_main/winter_skin_hair_care.jpg",
+    "category_name": "Dermatology",
+    "title": "Winter Skin & Hair Care Guide",
+    "description": "Who doesn’t love warm cosy winter days? That love for snuggling in a warm blanket with a book and coffee on chilling winter nights. But our hair and skin often take the brunt of the winter season. Winters can sometimes wreak havoc on our hair and leave the skin dry and itchy. From dandruff to",
+    "date": "December 23, 2022",
+    "link": "17-page"
+  },
+  {
+    "image": "assets/blogs_main/healthy_hair_tips.jpg",
+    "category_name": "Dermatology",
+    "title": "Dos And Don’ts For Healthy Hair",
+    "description": "When you meet someone for the first time, you notice their hair at the first instance. Having nice and shiny hair leaves a good impression, so it’s important to take care of it properly. In addition, good hair care plays an important role in maintaining a healthy head of hair and decreasing the risk of",
+    "date": "November 22, 2021",
+    "link": "20-page"
+  },
+  {
+    "image": "assets/blogs_main/busting_myths_around_mkincare.jpg",
+    "category_name": "Dermatology",
+    "title": "Dermatology: Busting Myths Around Skincare",
+    "description": "The desire for a clear complexion is universal. However, it’s probably more about your ability to distinguish between fact and fiction than how diligently you follow a cleansing regimen or how much money you spend. Most of the skincare advice out there is just not true, and some myths can even harm your skin. Here’s",
+    "date": "November 10, 2021",
+    "link": "21-page"
+  },
+  {
+    "image": "assets/blogs_main/ageing_wrinkles.jpg",
+    "category_name": "Dermatology",
+    "title": "Ageing and Wrinkles are only an option Now!",
+    "description": "Lots of people have under eye wrinkles. They are a natural part of the ageing process and are harmless. When people get older, the skin loses its ability to renew itself. The skin in the area under the eyes is particularly susceptible to the ageing process because it is thin. As a result, it is",
+    "date": "December 16, 2020",
+    "link": "23-page"
+  },
+  {
+    "image": "assets/blogs_main/holi_skin_protection.jpg",
+    "category_name": "Dermatology",
+    "title": "Protect the Skin",
+    "description": "It is very important to protect your kids’ skin from toxic colors. Before sending them off to play, apply a generous amount of petroleum jelly or coconut oil on their skin. This will help in washing off the colours easily, post playing.",
+    "date": "March 1, 2018",
+    "link": "33-page"
+  },
+  {
+    "image": "assets/blogs_main/step_by_step_chronic_kidney_disease.jpeg",
+    "category_name": "Nephrology",
+    "title": "Step-by-Step Guide to Managing Chronic Kidney Disease (CKD)",
+    "description": "Chronic Kidney Disease (CKD) is a progressive condition where the kidneys gradually lose their ability to function over time. It affects millions of people worldwide and if left unmanaged, CKD can lead to kidney failure, requiring dialysis or a kidney transplant. Early detection and effective management can slow the progression of CKD, improve quality of",
+    "date": "March 3, 2025",
+    "link": "2-page"
+  },
+  {
+    "image": "assets/blogs_main/causes_kidney_stones.jpg",
+    "category_name": "Nephrology",
+    "title": "Top 5 Causes of Kidney Stones in Young Adults and How to Prevent Them",
+    "description": "Kidney stones are hard deposits made up of minerals that form in the kidneys. They can lead to intense pain and suffering, particularly for young people. To resolve this condition, one needs to know how these stones form, their symptoms, and what one can do to treat these stones. Causes of Kidney Stones in Young",
+    "date": "December 6, 2024",
+    "link": "4-page"
+  },
+  {
+    "image": "assets/blogs_main/kidney_health_foods.jpg",
+    "category_name": "Nephrology",
+    "title": "Foods For Good Kidney Health",
+    "description": "Introduction of Kidney Health: If you have kidney disease, you may need to adopt a specific nutritional plan to preserve kidney health as much as possible. A renal diet typically limits sodium, phosphorus, and potassium consumption. This regimen cannot heal your kidneys but may support their capacity. When the kidneys fail to function properly, waste,",
+    "date": "March 11, 2024",
+    "link": "10-page"
+  },
+  {
+    "image": "assets/blogs_main/dark_yellow_urine_causes.jpg",
+    "category_name": "Nephrology",
+    "title": "Dark Yellow Urine Causes",
+    "description": "Dark Yellow Urine: Urine is usually a pale yellow colour, indicating you are well-hydrated. However, sometimes urine can become darker in colour for various reasons. Very dark yellow urine can signify potential health issues that need medical attention.  Let’s explore what factors make urine dark, associated symptoms, how it is diagnosed & treated, prevention methods,",
+    "date": "March 1, 2024",
+    "link": "10-page"
+  },
+  {
+    "image": "assets/blogs_main/health_risks_dehydration_summers.jpg",
+    "category_name": "Nephrology",
+    "title": "The Health Risks of Dehydration in Summer",
+    "description": "Summertime heat waves will hurt our health. One of the most frequent ailments to which a person may be susceptible during the summer season is dehydration. It’s crucial to stay hydrated whilst the temperature rises and to drink lots of water. Dehydration occurs when our body loses more fluids than it can take in, and",
+    "date": "February 27, 2024",
+    "link": "10-page"
+  },
+  {
+    "image": "assets/blogs_main/hemodialysis_vs_peritoneal_dialysis.jpg",
+    "category_name": "Nephrology",
+    "title": "Comparing Hemodialysis and Peritoneal Dialysis: A Comprehensive Guide",
+    "description": "Dialysis is an incredible medical intervention that helps people with impaired kidney function. As the kidneys play a pivotal role in filtering waste and excess fluids from the blood, any dysfunction can lead to a buildup of toxins, posing a serious threat to overall health. Dialysis, a process replicating the kidney’s essential functions, becomes imperative",
+    "date": "February 13, 2024",
+    "link": "11-page"
+  },
+  {
+    "image": "assets/blogs_main/kidney_stone.jpg",
+    "category_name": "Nephrology",
+    "title": "Most Advanced and Effective Kidney Stones Treatment",
+    "description": "Leading the Way: Advanced and High-quality Kidney Stones Treatment Kidney stones, or “Nephrolithiasis” as it is medically known, are the solid minerals and salts that form in the kidneys. It can often lead to a disruption of the normal functioning processes of the body’s urinary system, which may be very painful and might pose many",
+    "date": "January 31, 2024",
+    "link": "11-page"
+  },
+  {
+    "image": "assets/blogs_main/nutrition_during_dialysis.jpg",
+    "category_name": "Nephrology",
+    "title": "Nutrition During Dialysis",
+    "description": "When the kidneys fail to operate normally, dialysis is used to eliminate waste materials and excess fluid from the blood. In the event of permanent kidney failure, often known as end stage renal disease, hemodialysis or in common terms called dialysis, a procedure where an external machine functions as a replacement for a kidney (ESRD)",
+    "date": "October 17, 2022",
+    "link": "18-page"
+  },
+  {
+    "image": "assets/blogs_main/kidney_diabetes.jpg",
+    "category_name": "Nephrology",
+    "title": "Taking Care of Your Kidneys in the Global Capital of Diabetes",
+    "description": "India is cited as Global Capital of Diabetes owing to the astounding ﬁgure of 70 million diabetics. World Health Organisation estimates that this ﬁgure will increase by almost 45% to 101 million by 2030. The sedentary lifestyle of the corporate employees in a cubicle with easy access to food that is canned and beverages which",
+    "date": "March 3, 2020",
+    "link": "29-page"
+  },
+  {
+    "image": "assets/blogs_main/common_kidney_diseases_symptoms_causes_treatment.jpg",
+    "category_name": "Nephrology",
+    "title": "Common Kidney Diseases – Symptoms, Causes and Treatment",
+    "description": "Kidneys are a pair of organs that have the size of a human fist located on the lower side of the body at the bottom of the rib cage. The two kidneys are placed on each side of the spine. Kidneys are the significant organs in a body that helps maintain a healthy body. They",
+    "date": "January 20, 2020",
+    "link": "30-page"
+  },
+  {
+    "image": "assets/blogs_main/chronic_kidney_disease_uddanam.jpg",
+    "category_name": "Nephrology",
+    "title": "Chronic kidney disease in Uddanam (Nephropathy)",
+    "description": "Uddanam is a green, cosy and beautiful village situated in the northern coastal regions of Andhra Pradesh. However, the village is in news due to a peculiar disease that inhabits the lives of the people of Uddanam. The mystery disease is CKDu – Chronic Kidney Disease of the Unknown Etiology which surfaces despite having no",
+    "date": "October 23, 2018",
+    "link": "33-page"
+  },
+  {
+    "image": "assets/blogs_main/common_myths_facts_about_kidney_transplant.jpg",
+    "category_name": "Nephrology",
+    "title": "6 Common Myths and Facts About Kidney Transplant",
+    "description": "The function of a kidney is to remove waste from the bloodstream. When the kidneys fail to perform this function, the waste starts getting accumulated in the body. Over a period, the accumulation of waste leads to kidney failure and ultimately death. A kidney transplant is one of the most effective treatments to avoid total",
+    "date": "September 28, 2018",
+    "link": "33-page"
+  },
+  {
+    "image": "assets/blogs_main/abscess_drainage_surgery.jpg",
+    "category_name": "General Surgery",
+    "title": "Abscess Drainage Surgery: A Step-by-Step Procedure & Recovery",
+    "description": "An abscess is a painful collection of pus that can form anywhere in the body as a result of infection. When the abscess does not heal on its own, or if it grows larger and causes discomfort or complications, abscess drainage surgery may be necessary. This procedure is designed to relieve pain, prevent the infection",
+    "date": "February 24, 2025",
+    "link": "2-page"
+  },
+  {
+    "image": "assets/blogs_main/hernia_symptoms_treatment.jpg",
+    "category_name": "General Surgery",
+    "title": "What is Hernia?: Know Symptoms, Causes, Surgery, & Recovery Time",
+    "description": "Hernia has become a very typical medical anomaly among people. It can usually be detected with ease as it is mass protruding and causes sharp pain. It might look like an odd bulge, sometimes occurring without any symptoms in the beginning but with discomfort or pain later. Most of the time, hernias may eventually require",
+    "date": "May 20, 2024",
+    "link": "8-page"
+  },
+  {
+    "image": "assets/blogs_main/lap_appendicectomy.jpg",
+    "category_name": "General Surgery",
+    "title": "Safe and Effective: Lap Appendicectomy for Swift Recovery",
+    "description": "Appendicectomy Overview  Appendicectomy: Appendicitis is an inflammatory condition of the appendix. It has become a fairly common disease that most people are familiar with. With a fast-progressing disease like appendicitis, time is of the essence; delaying intervention for appendicitis may even lead to death.  Advancements in research and technology have allowed surgeons to move from",
+    "date": "May 14, 2024",
+    "link": "8-page"
+  },
+  {
+    "image": "assets/blogs_main/laparoscopic_gallstones.jpg",
+    "category_name": "General Surgery",
+    "title": "Laparoscopic Surgery for Gallstones: Quick and Easy Recovery",
+    "description": "Overview The gallbladder is a small, hollow organ that stores bile for digesting fat in the small intestine. Gallbladder removal is a commonly performed surgical procedure for treating various gallbladder diseases. It is possible to live a healthy life after having the gallbladder removed.  With advancements in clinical technology, minimally invasive procedures of treatment have",
+    "date": "May 10, 2024",
+    "link": "8-page"
+  },
+  {
+    "image": "assets/blogs_main/laser_piles_treatment.jpg",
+    "category_name": "General Surgery",
+    "title": "Laser Piles Treatment: 10 Reasons Why you Should Opt for Surgery",
+    "description": "Piles, medically known as haemorrhoids, is a common condition that affects thousands of individuals worldwide and can seriously impact one’s quality of life. Although piles may not threaten life, they should be handled to reduce pain and suffering and the possibility of consequences. Changing particular foods and taking over-the-counter pain relievers are the standard methods",
+    "date": "April 22, 2024",
+    "link": "8-page"
+  },
+  {
+    "image": "assets/blogs_main/managing_chronic_hemorrhoids.jpg",
+    "category_name": "General Surgery",
+    "title": "Managing Chronic Hemorrhoids",
+    "description": "One of the most common illnesses across the globe is ‘Hemorrhoids’. Also known as ‘Piles’ across general people, similar to that of ‘varicose veins’. Hemorrhoids are an illness of the rectum-anus area. It is a condition where the internal veins of the rectum get swollen and the skin surrounding the anus. In this condition, one",
+    "date": "November 22, 2022",
+    "link": "17-page"
+  },
+  {
+    "image": "assets/blogs_main/daycare_surgery.jpg",
+    "category_name": "General Surgery",
+    "title": "Everything You Need to Know About Daycare Surgeries",
+    "description": "In the highly advanced technological epoch, Daycare Surgery has been gaining massive momentum. It has brought a revolution in the medical sector. Daycare surgery is a type of ambulatory surgery wherein a patient undergoes surgery and can be discharged on the same day of surgery. Usually, patients with minor diseases undergo daycare surgeries. In the",
+    "date": "January 29, 2020",
+    "link": "29-page"
+  },
+  {
+    "image": "assets/blogs_main/piles_fistula_fissures_treatment.jpg",
+    "category_name": "General Surgery",
+    "title": "Piles, Fistula and Fissures – Symptoms and Treatment Methods",
+    "description": "Piles, Fistula and Fissures Piles are one of the most common problems that people experience. Some also face severe problems with fissures and fistula. People with piles of fistula and fissures often visit the Surgical Department for treatment. Another term for Piles is Haemorrhoids. Piles are the enlarged veins in the anal canal comprising blood",
+    "date": "January 8, 2020",
+    "link": "30-page"
+  },
+    {
+  "image": "assets/blogs_main/causes_symptoms_hernia.jpg",
+  "category_name": "General Surgery",
+  "title": "Hernia - Facts, Symptoms and Treatment",
+  "description": "Generally, people think that a hernia is a groin swelling or swelling at the umbilicus, but actually, a hernia is a balloon-like swelling. It is a muscular defect that is projected through a weak point in the skin like in the abdominal wall or at the area of the groin. Here is an excerpt from",
+  "date": "July 9, 2019",
+  "link": "32-page"
+},
+    {
+  "image": "assets/blogs_main/best_treatment_for_files.jpg",
+  "category_name": "Surgical Gastroenterology",
+  "title": "Best Treatment for Piles Surgery: A Complete Guidance",
+  "description": "Piles are swollen and inflamed blood vessels in the anal or rectal area, which can result in various symptoms, including pain, itching, and bleeding. While mild cases can often be managed with lifestyle changes and medication, severe cases may require surgical intervention. If you’re looking for the best treatment for piles surgery, this comprehensive guide",
+  "date": "February 14, 2025",
+  "link": "2-page"
+},
+    {
+  "image": "assets/blogs_main/surgical_gastroenterology_know_gallbladder_gallstones.jpg",
+  "category_name": "Surgical Gastroenterology",
+  "title": "Surgical Gastroenterology- Know more about Gallbladder and Gallstones",
+  "description": "The gallbladder is an organ that is part of the human biliary system, which is involved with the production, storage and transportation of bile. Bile is a yellowish-brown fluid produced by the liver and used to break up and digest fatty foods in the small intestine. As gallbladder is a storage organ, there is a",
+  "date": "August 9, 2019",
+  "link": "31-page"
+},
+    {
+  "image": "assets/blogs_main/pediatric_neonatal_seizures.jpg",
+  "category_name": "Pediatrics",
+  "title": "Expert Care for Pediatric Seizures & Neonatal Seizures at Omni RK Hospitals",
+  "description": "Seizures in children and newborns are critical health concerns that demand prompt and specialized medical attention. At Omni RK Hospitals, we offer comprehensive care for pediatric and neonatal seizures, ensuring your child receives the best possible treatment. Understanding Pediatric Seizures Pediatric seizures are sudden, uncontrolled electrical disturbances in the brain, leading to various symptoms such",
+  "date": "January 2, 2025",
+  "link": "3-page"
+},
+  {
+    "image": "assets/blogs_main/down_syndrome_scaled.jpg",
+    "category_name": "Pediatrics",
+    "title": "Down Syndrome: Myths & Facts",
+    "description": "Down syndrome occurs when extra genetic material from chromosome 21 results from abnormal cell division. People with Down syndrome have a distinctive facial appearance, intellectual disability, and developmental delays. Thyroid disorders and heart disorders may be associated with the condition. The management of Down syndrome involves early intervention programs with a team of therapists and",
+    "date": "October 27, 2021",
+    "link": "21-page"
+  },
+  {
+    "image": "assets/blogs_main/acute_gastroenteritis_children.jpg",
+    "category_name": "Pediatrics",
+    "title": "KNOW MORE ABOUT ACUTE GASTROENTERITIS IN CHILDREN",
+    "description": "The most common problem faced by children is acute gastroenteritis or diarrhoea which means kids will have vomiting and loose motions. First I would like to emphasise on the severity of this disease. In developing countries like India this is one of the leading causes of morbidity and mortality in children under 5 years of",
+    "date": "October 23, 2020",
+    "link": "26-page"
+  },
+  {
+    "image": "assets/blogs_main/preventive_steps_treat_children_with_ADHD.jpg",
+    "category_name": "Pediatrics",
+    "title": "Attention Deficit Hyperactivity Disorder – Preventive Steps to Treat Children with ADHD",
+    "description": "Attention deficit hyperactivity disorder is commonly referred to as a mental health disorder in children. In short, it is called ADHD. Mostly, ADHD affects children and teenagers. Sometimes, this disorder might continue even in adulthood. Children with ADHD are often hyperactive and cannot control their impulsive behaviors. Such kids have extreme trouble focusing on a",
+    "date": "January 8, 2020",
+    "link": "30-page"
+  },
+  {
+    "image": "assets/blogs_main/epilepsy_children.jpg",
+    "category_name": "Pediatrics",
+    "title": "Epilepsy in Children and Ways to Manage it",
+    "description": "Epilepsy is the fourth most common neurological disorder in the world, causing chronic and unpredictable seizures. It can affect people of all ages, even children. A child is diagnosed with epilepsy when they have at least two unprovoked seizures that were not caused by a known reversible medical condition. During a seizure, brain cells either",
+    "date": "December 5, 2018",
+    "link": "32-page"
+  },
+  {
+    "image": "assets/blogs_main/hyperactive_child.jpg",
+    "category_name": "Pediatrics",
+    "title": "Your Child’s Hyper Activeness could be a sign of ADHD",
+    "description": "Everyone can be restless, disruptive, impulsive and talkative, but when your child finds these traits difficult to control and it starts to interfere with their daily life, the cause may be Attention Deficit Hyperactivity Disorder or ADHD. This is a neuro-developmental psychiatric disorder with symptoms that often continue into adulthood. The symptoms usually appear before",
+    "date": "July 3, 2018",
+    "link": "33-page"
+  },
+  {
+    "image": "assets/blogs_main/baby_awake.jpg",
+    "category_name": "Pediatrics",
+    "title": "It is okay if your Baby is Wide Awake at Night",
+    "description": "Are you a working parent who has to juggle between office presentations in the morning and feeding your baby in the middle of the night? Your craving for a good night’s sleep is completely valid and we understand that. Unfortunately, your baby can’t comprehend that by being wide awake at night, he/she is keeping you",
+    "date": "May 18, 2018",
+    "link": "33-page"
+  },
+  {
+    "image": "assets/blogs_main/holi_sunglasses.jpg",
+    "category_name": "Pediatrics",
+    "title": "Wear Sunglasses",
+    "description": "It is advisable for kids to wear sunglasses, so the harmful colors don’t cause irritation and damage their eyes. Along with this, make sure your child is dressed appropriately by wearing full-sleeved clothes and long pants to keep their skin from harm.",
+    "date": "March 1, 2018",
+    "link": "33-page"
+  },
+  {
+    "image": "assets/blogs_main/holi_stranger_danger.jpg",
+    "category_name": "Pediatrics",
+    "title": "Stranger Danger",
+    "description": "Holi is fun only when played in a large crowd. However, the event can often turn boisterous and not very well known people may also join the crowd. It is crucial to keep a close eye on your child and ensure that they are playing at a safe distance from you.",
+    "date": "March 1, 2018",
+    "link": "33-page"
+  },
+  {
+    "image": "assets/blogs_main/holi_animal_cruelty.jpg",
+    "category_name": "Pediatrics",
+    "title": "Say No to Animal Cruelty",
+    "description": "Make sure your kids do not spray or sprinkle colors on animals, as they can cause serious health hazards to them. In case the animals inhale the coloured powder, it may lead to an infection, cause allergies or irritation.",
+    "date": "March 1, 2018",
+    "link": "33-page"
+  },
+  {
+    "image": "assets/blogs_main/holi_water_balloons.jpg",
+    "category_name": "Pediatrics",
+    "title": "Avoid Water Balloons",
+    "description": "While absolutely fun to play with, water balloons an be extremely dangerous if thrown on kids. They can cause skin, eye and ear injuries. Instead, encourage them to use pichkaaris.",
+    "date": "March 1, 2018",
+    "link": "33-page"
+  },
+   {
+    "image": "assets/blogs_main/keyhole_surgery_newborns.jpg",
+    "category_name": "Pediatrics",
+    "title": "Keyhole surgery in newborns",
+    "description": "Laparoscopic surgery is a minimally invasive procedure that involves small keyhole incisions made on the stomach resulting in shorter recovery time, reduced chance of early and late potential complications and improved cosmetic results in comparison to the traditional open surgery approach. Here is an excerpt from a video interview of Dr M. Srinivasa Rao, Chief",
+    "date": "August 8, 2019",
+    "link": "31-page"
+  },
+  {
+    "image": "assets/blogs_main/laproscopic_nephrectomy_done.jpg",
+    "category_name": "Pediatrics",
+    "title": "Laproscopic Nephrectomy Done to 11 yr Old Girl",
+    "description": "",
+    "date": "",
+    "link": "-page"
+  },
+    {
+    "image": "assets/blogs_main/when_see_urologist.jpg",
+    "category_name": "Urology",
+    "title": "When to See a Urologist: Consult Best Urologist in Kukatpally",
+    "description": "How Do You Know That You Need to Consult a Urologist? With age, an individual’s health needs change, and the risks posed by specific health issues increase. People should routinely consult a doctor after they turn 40, as they are at higher risk for certain health conditions that were less likely when they were younger.",
+    "date": "November 25, 2024",
+    "link": "4-page"
+  },
+  {
+    "image": "assets/blogs_main/common_urology_conditions_symptoms_treatment.jpg",
+    "category_name": "Urology",
+    "title": "Identifying Common Urology Conditions, Their Symptoms, and Treatment Methods",
+    "description": "In order to regulate, guide, and eliminate waste from our pee, our urinary system works extremely hard. This system consists of several moving parts, such as your bladder, ureters, urethra, and even kidneys. Just like any other organs within our bodies, the urinary system could experience various diseases. These conditions or disorders are commonly known",
+    "date": "November 14, 2024",
+    "link": "4-page"
+  },
+    {
+    "image": "assets/blogs_main/hydration_uti_prevention.jpg",
+    "category_name": "Urology",
+    "title": "Hydration and UTI Prevention: The Importance of Drinking Enough Water",
+    "description": "Introduction Drinking water and staying hydrated imparts numerous benefits including preventing urinary tract infections (UTIs). Women are more prone to UTIs than men due to a number of reasons. UTIs are treatable but preventing them is always better.  Understanding Urinary Tract Infections (UTIs) Urinary tract infections or UTIs are characterized by infections developing in any",
+    "date": "August 8, 2023",
+    "link": "15-page"
+  },
+  {
+    "image": "assets/blogs_main/might_living_with_kidney_stones.jpg",
+    "category_name": "Urology",
+    "title": "Signs That You Might Be Living With Kidney Stones",
+    "description": "Kidney stones are as small as a grain of sand, but they pack a powerful punch. You feel completely fine one minute and the next thing you know, you’re doubled over in agony, desperately trying to find the strength to get to the ER. The ureteropelvic junction is a kind of funnel where urine exits",
+    "date": "November 29, 2022",
+    "link": "17-page"
+  },
+  {
+    "image": "assets/blogs_main/pinktober_breast_cancer_awareness.jpg",
+    "category_name": "Oncology",
+    "title": "The Impact of Pinktober: A Historical Overview of Breast Cancer Awareness",
+    "description": "Breast Cancer Awareness Month plays a vital role in raising awareness and providing support for women’s breast health. Its impact can be summarised in the following key areas: Global Awareness: What began in the US has grown into a worldwide campaign. Countries participate in Pinktober with unique variations, including international events and lighting famous monuments",
+    "date": "October 28, 2024",
+    "link": "4-page"
+  },
+  {
+    "image": "assets/blogs_main/world_lymphoma_awareness_day.jpg",
+    "category_name": "Oncology",
+    "title": "World Lymphoma Awareness Day 2024: Its Impact on Improving Patient Outcomes",
+    "description": "Cancer organizations across the globe observe the World’s Lymphoma Awareness Day on the 15th of September to let the world know about one of the most advanced forms of cancer that is linked with the Lymphatic system. It is a day dedicated to patient advocacy, raising healthcare awareness about the importance of early diagnosis, exploring",
+    "date": "September 15, 2024",
+    "link": "5-page"
+  },
+  {
+    "image": "assets/blogs_main/lung_cancer_day.jpg",
+    "category_name": "Oncology",
+    "title": "Important Facts to Know on Lung Cancer Day 2024",
+    "description": "Introduction Lung cancer remains the leading cause of cancer-related deaths worldwide. Therefore, it is very important to raise awareness around it. World Lung Cancer Day is observed on the first of August every year, and its main aim is to spread awareness about lung cancer, how it can be prevented, and the importance of an",
+    "date": "August 1, 2024",
+    "link": "6-page"
+  },
+  {
+    "image": "assets/blogs_main/world_cancer_day.jpg",
+    "category_name": "Oncology",
+    "title": "World Cancer Day",
+    "description": "Introduction World Cancer Day celebrated every year on February 4th, is a significant day that unites people from across the globe in their collective efforts to battle cancer and spread awareness around it. This day serves to educate on preventative actions and also helps in building a sense of unity in overcoming one of the",
+    "date": "February 3, 2024",
+    "link": "11-page"
+  },
+  {
+    "image": "assets/blogs_main/breast_cancer_lifestyle_tips.jpg",
+    "category_name": "Oncology",
+    "title": "8 Lifestyle Changes to Help Reduce Breast Cancer Risk",
+    "description": "Breast Cancer is the second most common cause of cancer-related mortality in women. The diagnosis has a profound impact on the patient’s life and those around them as well. An increasing amount of evidence indicates that lifestyle decisions can significantly reduce the chance of developing breast cancer, even considering hereditary and environmental variables that can",
+    "date": "October 28, 2023",
+    "link": "13-page"
+  },
+  {
+    "image": "assets/blogs_main/cancer_an_endemic.jpg",
+    "category_name": "Oncology",
+    "title": "Cancer An Endemic",
+    "description": "Do you ever wonder why so many people are being diagnosed with cancer despite significant advances in cancer research, prevention, and treatment made by science? The latest cancer report from the Indian Council of Medical Research (ICMR) and the National Centre for Disease Informatics and Research (NCDIR), Bengaluru, confirms the sharp increase in cancer cases",
+    "date": "November 6, 2022",
+    "link": "18-page"
+  },
+  {
+    "image": "assets/blogs_main/positivity_breast_cancer.jpg",
+    "category_name": "Oncology",
+    "title": "5 Reasons Why Positivity is Essential During Breast Cancer Treatment",
+    "description": "It is one thing to try to think positively while things are going well in our lives, and quite another to try to think positively when our lives have been impacted by a catastrophic illness. Breast Cancer, for example, can cause an entire household to feel depressed. It can be a tough time not just",
+    "date": "October 26, 2022",
+    "link": "18-page"
+  },
+  {
+    "image": "assets/blogs_main/cancer_myths_facts.jpg",
+    "category_name": "Oncology",
+    "title": "Cancer Myths & Facts",
+    "description": "Most people are terrified of hearing the word “Cancer”. How well do you know the disease? There are over 200 conditions referred to as cancer. The disease occurs when cells multiply and mutate uncontrollably without normal cell death mechanisms in place. It is common for malignant cells to spread to other parts of the body",
+    "date": "February 7, 2022",
+    "link": "19-page"
+  },
+  {
+    "image": "assets/blogs_main/breast_cancer_awareness.jpg",
+    "category_name": "Oncology",
+    "title": "Breast Cancer: All You Need To Know",
+    "description": "Oncologists refer to breast cancer as cancer that starts in the breast. It occurs when the cells that form in the breast grow out of control. X-ray images of lumps found on a breast can be signs of breast cancer. While women are more likely to develop breast cancer, men can also develop this disease.",
+    "date": "October 7, 2021",
+    "link": "21-page"
+  },
+    {
+    "image": "assets/blogs_main/brain_tumours.jpg",
+    "category_name": "Neurosurgery",
+    "title": "Early Warning Signs of Brain Tumours and Treatment Importance",
+    "description": "Brain tumours are severe medical conditions that can affect anybody at any stage of life. Primary brain tumours begin their growth in the brain. Cancer can also spread directly to the brain from other areas of the body; these are commonly referred to as secondary brain tumours or metastatic brain tumours. Therefore, it is essential",
+    "date": "August 20, 2024",
+    "link": "6-page"
+  },
+  {
+    "image": "assets/blogs_main/comprehensive_overview_min.jpg",
+    "category_name": "ENT",
+    "title": "Which Procedure for Snoring is Right for You?",
+    "description": "Snoring is often associated with sleeping or deep slumber, and may not seem like a problem to many people. But it can become troublesome for those sleeping around the one snoring. Aside from this inconvenience to a good night’s sleep, it obstructs airflow through the nose and mouth. This obstruction is what leads to vibration",
+    "date": "July 22, 2024",
+    "link": "6-page"
+  },
+  {
+    "image": "assets/blogs_main/hearing_loss_types_causes.jpg",
+    "category_name": "ENT",
+    "title": "Hearing Loss: Types, Causes, Symptoms & Treatment",
+    "description": "One of our most vital senses is hearing, which helps us successfully communicate with each other, interact with the environment and perceive all sorts of sounds. It is also true that the quality of life of a person may be notably affected when their hearing ability worsens. Hearing impairment affects millions of people all around",
+    "date": "March 2, 2024",
+    "link": "10-page"
+  },
+  {
+    "image": "assets/blogs_main/sinusitis_symptoms_causes_treatment.jpg",
+    "category_name": "ENT",
+    "title": "Sinusitis: Symptoms, Causes & Treatment",
+    "description": "Sinusitis Introduction Sinusitis are air-filled spaces in the forehead, nose, and cheeks, which can get inflamed. As a result of inflammation, affected individuals experience facial pain or localised pain depending on the area that is stuffed, a stuffy or runny nose, and even fever or other symptoms. This inflammation is medically known as sinusitis.  Symptoms",
+    "date": "January 29, 2024",
+    "link": "11-page"
+  },
+  {
+    "image": "assets/blogs_main/adenoids_treatment.jpg",
+    "category_name": "ENT",
+    "title": "Understanding Adenoids — Its Causes, Symptoms, and Treatment",
+    "description": "What are Adenoids? Adenoids are glands located just behind the nasal passage which form a part of the body’s immune system. These are a patch of tissues which, along with the tonsils, form a part of the lymphatic system. Together, they work to clear away infections and keep the balance of body fluids. They also",
+    "date": "September 30, 2023",
+    "link": "14-page"
+  },
+  {
+    "image": "assets/blogs_main/chronic_sinusitis_causes_symptoms_treatment.jpg",
+    "category_name": "ENT",
+    "title": "Understanding Chronic Sinusitis: Causes, Symptoms, and Treatment Options",
+    "description": "I. Introduction Chronic sinusitis occurs when the sinuses, which are the areas within your nose and head, remain inflamed and swollen for a duration of three months or longer. This widespread disorder disrupts the natural drainage of mucus, leading to nasal congestion. You may experience swollen or irritated eyes and find it challenging to breathe",
+    "date": "July 14, 2023",
+    "link": "15-page"
+  },
+  {
+    "image": "assets/blogs_main/hearing_problems_in_children.jpg",
+    "category_name": "ENT",
+    "title": "Hearing Problems in Children",
+    "description": "Normal hearing is initially needed to understand spoken language and then, later, to produce clear speech. But many children develop hearing difficulties at birth or during infancy and the toddler years which result in consequences like speech and language difficulty, social and societal problems etc. Hence, if your child experiences hearing loss during infancy and",
+    "date": "March 19, 2020",
+    "link": "28-page"
+  },
+    {
+    "image": "assets/blogs_main/post_c_section_back_pain.jpg",
+    "category_name": "Gynecology",
+    "title": "Post-C-Section Recovery: When to Worry About Back Pain",
+    "description": "Post C-section: After delivering your baby, you’d probably feel elated and overwhelmed holding your little bundle of joy. If you have given birth via cesarean section or C-section, you’re also undergoing recovery from a major abdominal surgery while dealing with postpartum issues, like mood swings, postpartum bleeding, and swollen breasts. Back pain is among the",
+    "date": "July 1, 2024",
+    "link": "7-page"
+  },
+  {
+    "image": "assets/blogs_main/womens_health_awareness.jpg",
+    "category_name": "Gynecology",
+    "title": "Women’s Health Awareness",
+    "description": "Introduction of Women’s Health There has been a growing concern over women’s health in recent times, as lifestyle changes have led to an increase in women’s health issues. Adopting prevention strategies like early diagnosis and timely treatment is the key to healthy and happy lives.  Therefore, let’s explore the major women’s health concerns faced by",
+    "date": "March 7, 2024",
+    "link": "10-page"
+  },
+  {
+    "image": "assets/blogs_main/cervical_cancer.jpg",
+    "category_name": "Gynecology",
+    "title": "Cervical Cancer: Causes, Symptoms & Treatment",
+    "description": "All you need to know about Cervical Cancer A Comprehensive Guide to Cervical Cancer Care What Every Woman Should Know About Cervical Cancer: Causes, Symptoms & Treatment. The reproductive health of women is incredibly vital to their overall well-being. Yet several women keep these issues affecting their reproductive health shrouded in secrecy, misinformation, and stigma.",
+    "date": "January 19, 2024",
+    "link": "12-page"
+  },
+  {
+    "image": "assets/blogs_main/endometriosis_fertility.jpg",
+    "category_name": "Gynecology",
+    "title": "Endometriosis – Its Role in Female Fertility",
+    "description": "Endometriosis is defined as the presence of endometrial-like tissue (glands and stroma) lining inside the uterus grows outside the uterus, which induces a chronic inflammatory reaction, scar tissue, and adhesions that may distort a woman’s pelvic anatomy. Endometriosis is generally found in young women, but the occurrence of endometriosis is not related to ethnic or",
+    "date": "December 4, 2020",
+    "link": "24-page"
+  },
+  {
+    "image": "assets/blogs_main/laparoscopic_surgery.jpg",
+    "category_name": "Gynecology",
+    "title": "Everything you need to know about Laparoscopic Surgery",
+    "description": "Laparoscopic surgery Laparoscopy surgery is a ‘minimally invasive surgery’ which incurs small incisions, usually not more than ½ inch. It uses a long and slender device called a laparoscope which is inserted into the abdomen through a small incision. A camera attached to it allows the obstetrician–gynaecologist (ob-gyn) to view the abdominal and pelvic organs",
+    "date": "November 19, 2020",
+    "link": "26-page"
+  },
+  {
+    "image": "assets/blogs_main/managing_pregnancy_during_coronavirus_disease.jpg",
+    "category_name": "Gynecology",
+    "title": "Managing Pregnancy during the Coronavirus Disease by Dr MNV Pallavi",
+    "description": "Pregnancy is a unique time full of excitement and anticipation. But for expectant mothers going through the outbreak of the coronavirus disease (COVID-19), worry, fear and uncertainty are shadowing this special time. Here is an excerpt by Dr MNV Pallavi, Chief Gynaecologist, Dept. of Gynaecology, Giggles by OMNI RK. Is it safe to continue prenatal check-ups?",
+    "date": "May 27, 2020",
+    "link": "28-page"
+  },
+  {
+    "image": "assets/blogs_main/pcos_how_can_treated.jpg",
+    "category_name": "Gynecology",
+    "title": "PCOS Symptoms, Causes, and Treatment",
+    "description": "PCOS Symptoms, and Causes: Polycystic Ovarian Syndrome (PCOS) is an endocrine disorder affecting approximately 1 in 10 women. Symptoms vary from woman to woman making a PCOS diagnosis difficult. Less than 50% of all women with PCOS are correctly diagnosed. According to a recent study, it can take more than two years to receive a",
+    "date": "March 13, 2020",
+    "link": "29-page"
+  },
+  {
+    "image": "assets/blogs_main/heavy_menstrual_bleeding.jpg",
+    "category_name": "Gynecology",
+    "title": "Heavy Menstrual Bleeding",
+    "description": "Heavy Menstrual Bleeding refers to heavier blood flows during menstrual periods. The medical term for heavy menstrual bleeding is Menorrhagia. Due to prolonged menstrual periods in women, it interrupts normal activities on a day-to-day basis. The bleeding could be prolonged to 7 days or more than that in some of them. The normal blood flow",
+    "date": "January 8, 2020",
+    "link": "30-page"
+  },
+    {
+  "image": "assets/blogs_main/whipple_surgery.jpg",
+  "category_name": "Surgical Oncology",
+  "title": "Whipple Surgery Explained: Purpose, Risks, and Treatment Process",
+  "description": "Pancreatic cancer, chronic (long-term) pancreatitis, Cholangiocarcinoma (a cancer of the bile duct), and other related medical conditions require a most common type of surgery called Whipple procedure (or Pancreaticoduodenectomy). To remove several gastrointestinal tract organs that are frequently implicated in the spread of pancreatic cancer, including the small intestine, gallbladder, and occasionally the stomach, multiple",
+  "date": "May 24, 2024",
+  "link": "8-page"
+},
+
+      {
+    "image": "assets/blogs_main/mental_health_awareness.jpg",
+    "category_name": "Psychiatry",
+    "title": "Mental Health Awareness",
+    "description": "What is Mental Health Awareness? Mental health awareness refers to efforts focused on building collective understanding regarding emotional, psychological, and social well-being in human beings. It involves disseminating helpful information to dispel myths and stereotypes surrounding mental health conditions. The goal is to create more compassionate, supportive communities for those managing mental health concerns. Ideally,",
+    "date": "December 22, 2023",
+    "link": "12-page"
+  },
+  {
+    "image": "assets/blogs_main/stress_anxiety.jpg",
+    "category_name": "Psychiatry",
+    "title": "Tips for Stress and Anxiety Management",
+    "description": "Stress and Anxiety: The coronavirus pandemic has disrupted life. Stress and anxiety due to the disease, are currently at an all-time high. A lot of people have had to return to their workplace recently after a prolonged period of lockdown. Having to adjust to this ‘new normal’ is bound to be anxiety-provoking. Some of the",
+    "date": "December 21, 2020",
+    "link": "22-page"
+  },
+  {
+    "image": "assets/blogs_main/causes_depression_treatment.jpg",
+    "category_name": "Psychiatry",
+    "title": "Depression- How is it caused and how can it be treated?",
+    "description": "Depression is not just a feeling of unhappiness or being a bit fed up for a few days – which is common and totally normal. Those who are suffering from depression can suffer from an immense feeling of sadness that can last for weeks and maybe even months. Everyone is different and the condition can",
+    "date": "November 15, 2019",
+    "link": "31-page"
+  },
+    {
+  "image": "assets/blogs_main/infection_control_icu.jpg",
+  "category_name": "Critical Care",
+  "title": "Infection Control in the ICU",
+  "description": "The care of critically ill patients in the Intensive Care Unit (ICU) is the most basic and mandatory feature of modern healthcare   Risk factors Patients in ICU are at risk for nosocomial infection and are related to the host characteristics and pre-existing active pathological conditions like agammaglobulinemia, immunosuppressive therapy or steroid usage, trauma, Chronic",
+  "date": "December 9, 2020",
+  "link": "24-page"
+},
+    {
+    "image": "assets/blogs_main/airway_management_covid.jpg",
+    "category_name": "Anaesthesiology",
+    "title": "Airway Management and Infection Control in Known or Suspected COVID-19 – An Anaesthesiologist Perspective",
+    "description": "Introduction Incidence of novel coronavirus disease 2019 (COVID-19 or nCoV) among healthcare professionals especially among clinicians involved in anaesthesia and critical care is on rise during aerosol-generating procedures i.e. endotracheal intubation and extubation, bag-mask and jet ventilation, non invasive ventilation, oxygen administration through a high-flow nasal cannula or nebulisation, tracheostomy, open suctioning of airways, procedures",
+    "date": "December 3, 2020",
+    "link": "24-page"
+  },
+  {
+    "image": "assets/blogs_main/importance_anaesthesiologist.jpg",
+    "category_name": "Anaesthesiology",
+    "title": "Importance of an Anaesthesiologist",
+    "description": "The first successful demonstration of general anaesthesia was done in Massachusetts General Hospital, USA, on 16th October 1846. Hyderabad has contributed significantly for the development of anaesthesia in the world. Dr Rupa Bai Furdoonji was the first lady anaesthetist of the world from the present Sultan Bazaar Hospital, Hyderabad in the years 1889-1917. The great",
+    "date": "November 30, 2020",
+    "link": "25-page"
+  },
+   {
+  "image": "assets/blogs_main/jaundice_newborn.jpg",
+  "category_name": "Neonatology",
+  "title": "JAUNDICE IN NEW BORN BABIES – Frequently Asked Questions By Parents",
+  "description": "Jaundice is a yellow discoloration of a newborn baby’s skin and eyes. Jaundice in newborn babies is a common condition and occurs because the baby’s blood contains an excess of bilirubin a yellow pigment of destroyed red blood cells. Why newborn babies develop jaundice? Jaundice usually occurs in almost all newborn babies on the day",
+  "date": "November 9, 2020",
+  "link": "26-page"
+},
+    
+    {
+  "image": "assets/blogs_main/orthognathic_surgery.jpg",
+  "category_name": "Maxillofacial Surgery",
+  "title": "ORTHOGNATHIC SURGERY: CHANGING FACES AND BRIGHTENING SMILES",
+  "description": "Most people live with the facial deformity/asymmetry,  which they want to change to avoid the social stigma of going around in the society. Hiding the smile either due to  deficient or protruding maxilla/mandible or both making  them look unaesthetic.  One solution is to go for orthognathic surgery which can  change their facial profile and look",
+  "date": "October 19, 2020",
+  "link": "27-page"
+},
+  {
+  "image": "assets/blogs_main/how_stay_positive_productive_during_lockdown.jpg",
+  "category_name": "Psychology",
+  "title": "How to stay positive and productive during the lockdown",
+  "description": "Trying to cope with the outbreak of Coronavirus has had huge impacts on all groups of people worldwide. For students, it is a tricky time to readjust to completing university work from home, watching lectures online and being uncertain about exams. For working professionals, it has been finding an ideal workspace to work from home",
+  "date": "May 27, 2020",
+  "link": "28-page"
+},
+    {
+  "image": "assets/blogs_main/preventive_dentistry.jpg",
+  "category_name": "Dentistry",
+  "title": "Preventive & Oral Hygiene Measures in Dentistry",
+  "description": "Dental care has become highly important in the current era due to lifestyle changes. Preventive dentistry is the daily practice of taking the best care for teeth so as to maintain healthy teeth. With proper maintenance, one can evade enamel wear, tooth decay, avoid cavities and other dental problems. Some of the major forms of",
+  "date": "January 30, 2020",
+  "link": "29-page"
+},
+    {
+  "image": "assets/blogs_main/best_treatment_for_files.jpg",
+  "category_name": "Surgical Gastroenterology",
+  "title": "Best Treatment for Piles Surgery: A Complete Guidance",
+  "description": "Piles are swollen and inflamed blood vessels in the anal or rectal area, which can result in various symptoms, including pain, itching, and bleeding. While mild cases can often be managed with lifestyle changes and medication, severe cases may require surgical intervention. If you’re looking for the best treatment for piles surgery, this comprehensive guide",
+  "date": "February 14, 2025",
+  "link": "2-page"
+},
+  {
+    "image": "assets/blogs_main/automatic_hand_sanitiser.jpg",
+    "category_name": "Others",
+    "title": "Automatic Hand Sanitiser",
+    "description": "In the light of the recent COVID-19 pandemic, I hope everyone is safe and healthy. Taking care of yourself and your dear one’s through necessary precautions is very important. Among these precautionary measures, compulsory usage of face mask along with hand sanitisation, regular hand washing, plays an important role, especially when you are visiting a",
+    "date": "November 27, 2020",
+    "link": "25-page"
+  },
+  {
+    "image": "assets/blogs_main/slow_yoga_toning.jpg",
+    "category_name": "Others",
+    "title": "How does a slow-paced workout like yoga tone the body?",
+    "description": "There is a yoga style for everyone out there and how you feel during and after practice is very important. But, how good is a slow-paced workout to tone the body in comparison to hitting the gym? This is a very personal choice. However, from an anatomical perspective, while a workout at the gym will",
+    "date": "November 26, 2020",
+    "link": "25-page"
+  },
+  {
+    "image": "assets/blogs_main/management_diet_during_covid.jpg",
+    "category_name": "Others",
+    "title": "MANAGEMENT OF DIET DURING COVID-19 PANDEMIC",
+    "description": "Ideas to help your family maintain a nutritious diet The Coronavirus disease (COVID-19) is causing many changes in the daily lives of people around the world, but some things can be done to maintain a healthy lifestyle in these difficult times by taking a proper diet during COVID19 pandemic. It is difficult to follow any",
+    "date": "October 12, 2020",
+    "link": "27-page"
+  },
+  {
+    "image": "assets/blogs_main/learning_life_skills_during_lockdown.jpg",
+    "category_name": "Others",
+    "title": "Learning Life Skills During Lockdown",
+    "description": "We all know the importance of physical exercise, but it’s also important to keep your mind active. This lockdown is not for your mind. When stuck at home as a result of the coronavirus outbreak, there are chances are people are looking out for something to do.",
+    "date": "June 8, 2020",
+    "link": "28-page"
+  },
+  {
+    "image": "assets/blogs_main/icu_inside_panic.jpg",
+    "category_name": "Others",
+    "title": "Inside an Intensive Care Unit (ICU)",
+    "description": "Since their widespread introduction more than half a century ago, Intensive Care Units (ICUs) have become an integral part of the healthcare system.  An Intensive Care Unit (ICU), also known as an Intensive Therapy Unit or Intensive Treatment Unit (ITU) or Critical Care Unit (CCU), is a special department of a hospital or health care",
+    "date": "March 31, 2020",
+    "link": "28-page"
+  },
+  {
+    "image": "assets/blogs_main/importance_people_process_technology.jpg",
+    "category_name": "Others",
+    "title": "Importance of People, Process and Technology (PPT) Framework in EMR Implementation",
+    "description": "Based on the experience in last two decades, I came to know that top class technology stack may not be required to achieve the organisational goals to automate their business processes to scale-up the customer satisfaction, customer delight, provider and patient experiences. On the other hand, most of the digital transformation projects fail miserably as",
+    "date": "January 24, 2020",
+    "link": "30-page"
+  },
+  {
+    "image": "assets/blogs_main/healthcare_technology.jpg",
+    "category_name": "Others",
+    "title": "Healthcare Technology 2025",
+    "description": "Healthcare technology in India and APAC, as in worldwide, is reaching an inflection point where it is poised to disrupt an industry that has stubbornly avoided getting disrupted. As old industries like retailing, books, music and television have been disrupted, the healthcare industry is facing its moment where technology driven disruption is at its doors.",
+    "date": "January 24, 2020",
+    "link": "30-page"
+  },
+  {
+    "image": "assets/blogs_main/omni_kukatpally_hospital.jpg",
+    "category_name": "Others",
+    "title": "The Neighbourhood Hospital – Treating patients with compassion",
+    "description": "OMNI Hospitals, Kukatpally has gained support from patients in the Kukatpally and surrounding areas which has made it the hospital of choice in the neighbourhood. It is also one of the few fully NABH accredited hospital in the area, thus ensuring better patient care and safety. Read the full article here",
+    "date": "November 13, 2019",
+    "link": "31-page"
+  },
+  {
+    "image": "assets/blogs_main/body_pain_syndrome_blog.jpg",
+    "category_name": "Others",
+    "title": "Body Pain Syndrome: Causes and Management",
+    "description": "Pain is an undesirable sensation in the body which is triggered by our brain. Pain experienced by each individual varies in frequency and severity. Complaints regarding body pain are very common, especially in women aged above 50 years. Many of them are habituated to taking pain killers and other modes of treatment. However, it is",
+    "date": "April 26, 2019",
+    "link": "32-page"
+  },
+  {
+    "image": "assets/blogs_main/vivekananda_health_talk.jpg",
+    "category_name": "Others",
+    "title": "WHAT IS SPONDYLOLISTHESIS?",
+    "description": "in conversation with Dr Raghava Dutt Mulukutla, Orthopedic Surgeon and Chief of spine surgery Q. Doctor I am suffering from back and leg pain and I am told that my vertebra has slipped forward. A. You are suffering from a condition called spondylolisthesis. Here one of the vertebra slips forwards over the vertebra below. Q. […]",
+    "date": "January 1, 2017",
+    "link": "34-page"
+  },
+  {
+    "image": "assets/blogs_main/health_talk__vivekananda_recreation_club.jpg",
+    "category_name": "Others",
+    "title": "Health talk at Vivekananda Recreation Club",
+    "description": "Health talk By Dr.Ragi Prasad on Knee Pains & Management. Around 80 people attended the event.The post Health talk at Vivekananda Recreation club appeared first on OMNI Hospitals Kukatpally.",
+    "date": "June 26, 2016",
+    "link": "34-page"
+  },
+  {
+    "image": "assets/blogs_main/health_camp_kukatpally.jpg",
+    "category_name": "Others",
+    "title": "Health Camp conducted in Kukatpally",
+    "description": "Health camp conducted by Omni Hospitals in Kukatpa",
+    "date": "June 13, 2016",
+    "link": "34-page"
+  },
+  {
+    "image": "assets/blogs_main/health_camp_vivek_nagar.jpg",
+    "category_name": "Others",
+    "title": "Health Camp at Vivek Nagar Community Hall",
+    "description": "Health camp conducted by Omni Hospitals in Vivek nagar Community Hall on 12th June 2016.",
+    "date": "June 13, 2016",
+    "link": "34-page"
+  },
+  {
+    "image": "assets/blogs_main/partial_knee_replacement_testimonial.jpg",
+    "category_name": "Others",
+    "title": "Mrs Christabel Monteiro after Partial Knee Replacement Surgery",
+    "description": "",
+    "date": "May 27, 2016",
+    "link": "35-page"
+  },
+  {
+    "image": "assets/blogs_main/recurrent_fibro_sarcoma_surgery.jpg",
+    "category_name": "Others",
+    "title": "OMNI Kukatpally operates on Recurrent Fibro Sarcoma",
+    "description": "Husain is an young patient aged around 22 years has come to us with a Recurrent Fibro Sarcoma with Fungating Mass Right Knee.  He has been operated in an hospital in his country.  There was a reccurrence of the tumour for which he has been operated in a good corporate hospital in Hyderabad. ",
+    "date": "April 15, 2016",
+    "link": "35-page"
+  },
+  {
+    "image": "assets/blogs_main/computer_assisted_surgery_launch.jpg",
+    "category_name": "Others",
+    "title": "Computer Assisted Surgery Launch",
+    "description": "A computer assisted total knee and hip replacement surgery was launched in OMNI RK on Sunday, March 20, 2016.<br>The post Computer assisted surgery launch appeared first on OMNI RK Super Specialty Hospital.",
+    "date": "March 22, 2016",
+    "link": "35-page"
+  },
+  {
+    "image": "assets/blogs_main/spine_problems_treated_at_udai_omni.jpg",
+    "category_name": "Others",
+    "title": "Spine Problems Treated at Udai Omni.",
+    "description": "",
+    "date": "",
+    "link": "-page"
+  },
+  {
+    "image": "assets/blogs_main/cme_kurnool_ima.jpeg",
+    "category_name": "Others",
+    "title": "Dr Udai Prakash at the Intermediate Instructional Course on Total Hip Replacement, Oct 2015",
+    "description": "Tips for a healthy back by Dr Raghava Mulukutla Advice on ‘What a person needs to do to maintain a",
+    "date": "November 24, 2015",
+    "link": "35-page"
+  },
+  {
+    "image": "assets/blogs_main/cme_omni_hospitals_kurnool_ima.jpg",
+    "category_name": "Others",
+    "title": "CME Held at OMNI Hospitals Kurnool by IMA",
+    "description": "The post CME Held at OMNI Hospitals Kurnool by IMA appeared first on OMNI Hospitals Kurnool .",
+    "date": "June 27, 2015",
+    "link": "36-page"
+  },
+  {
+    "image": "assets/blogs_main/young_adults_raghava_dutt.jpg",
+    "category_name": "Others",
+    "title": "Dr Raghava Dutt addresses various issues related to relieving back pain in children and young adults.",
+    "description": "",
+    "date": "March 24, 2015",
+    "link": "36-page"
+  },
+  {
+    "image": "assets/blogs_main/ten_ways_get_rid_your_back_ache.jpg",
+    "category_name": "Others",
+    "title": "10 Ways to Get Rid of Your Back Ache",
+    "description": "By Dr. Raghava Dutt Mulukutla, Consultant Orthopedic and Spine Surgeon.He holds an experience of over 32 years, his expertise includes",
+    "date": "February 17, 2015",
+    "link": "36-page"
+  },
+  {
+    "image": "assets/blogs_main/knee_joint_pains_remedies.jpg",
+    "category_name": "Others",
+    "title": "Dr. Udai Prakash of UDAI OMNI talks about Knee Joint Pains and Remedies – 1",
+    "description": "",
+    "date": "November 28, 2014",
+    "link": "36-page"
+  },
+  {
+    "image": "assets/blogs_main/high_blood_pressure_awareness.jpg",
+    "category_name": "Others",
+    "title": "Dr. M.H.K. Rajeev talks about High Blood Pressure and Awareness",
+    "description": "Dr. M.H.K. Rajeev of OMNI RK hospital talks about the awareness and measures to be taken for High Blood Pressure. This news appeared in the Sakshi regional edition.",
+    "date": "August 20, 2014",
+    "link": "36-page"
+  },
+  {
+    "image": "assets/blogs_main/omni_rk_session_brahmapur_cme.jpg",
+    "category_name": "Others",
+    "title": "OMNI RK Session at Brahmapur CME",
+    "description": "The post OMNI RK Session at Brahmapur CME appeared first on OMNI RK Super Specialty Hospital.",
+    "date": "August 20, 2014",
+    "link": "36-page"
+  },
+    {
+      "image": "assets/blogs_main/prenatal_care.jpg",
+      "category_name": "Others",
+      "title": "The Importance of Prenatal Care: How Regular Check-Ups Benefit You and Your Baby - for Vizag",
+      "description": "Prenatal Care in Vizag Pregnancy is an incredible phase of life, brimming with excitement, curiosity, and love. However, it’s also a time that calls for careful attention to health and well-being. Ensuring both you and your baby are in the best possible health throughout this journey is crucial, and that’s where regular Best parental care",
+      "date": "February 10, 2025",
+      "link": ""
+    },
+    {
+      "image": "assets/blogs_main/flu_prevention_guide.jpg",
+      "category_name": "Others",
+      "title": "How to Prevent the Flu After Exposure",
+      "description": "The flu is also known as INFLUENZA, and it is a contagious respiratory illness caused by influenza viruses. It can easily spread from one person to another, especially in crowded areas. It has the potential to be fatal and cause hospital stays, complications including pneumonia, and even death. In case you have been exposed to",
+      "date": "October 25, 2024",
+      "link": "4-page"
+    },
+    {
+      "image": "assets/blogs_main/world_malaria_day.jpg",
+      "category_name": "Others",
+      "title": "World Malaria Day 2024: Global Initiatives for Malaria Eradication",
+      "description": "Every year on April 25th, the world observes World Malaria Day to mark the critical nature of the ongoing fight against one of the most fatal and oldest diseases. Once more, in 2024, people will be focusing on this global health problem and considering the work that needs to be done to combat malaria and",
+      "date": "April 15, 2024",
+      "link": "9-page"
+    },
+{
+  "image": "assets/blogs_main/tropical_malaria.jpg",
+  "category_name": "Others",
+  "title": "Tropical Malaria: Early Signs & Effective Treatments",
+  "description": "Overview Malaria is an infectious disease caused by a parasitic infection that is spread to humans through the bite of infected mosquitos. It is manifested by fever along with chills & rigours. Malaria can be prevented by taking a malaria vaccine and proper precautions to avoid getting bit by a mosquito. Timely malaria tropical disease",
+  "date": "June 26, 2024",
+  "link": "7-page"
+},
+{
+  "image": "assets/blogs_main/monsoon_diseases.jpg",
+  "category_name": "Others",
+  "title": "Preventing Monsoon Diseases: Tips for a Healthy Rainy Season",
+  "description": "Monsoon Diseases Overview With its cool weather and soothing showers, the monsoon season provides much-needed respite from the extreme temperatures of summer. However, this season, characterised by heavy rainfall and increased humidity, also brings many health challenges. Infections are more common during this season because the warm, humid climate is ideal for the growth of",
+  "date": "June 17, 2024",
+  "link": "7-page"
+},
+{
+  "image": "assets/blogs_main/covid_variant.jpg",
+  "category_name": "Others",
+  "title": "Precautions, Symptoms, and Treatment for the New Covid Variant JN.1",
+  "description": "New Covid JN.1 Variant: Precautions, Symptoms, and Treatment Covid JN.1 Variant Symptoms, Treatment and Precautions: All you need to know. A Comprehensive Guide to Precautions, Symptoms, & Treatment for the New Covid JN.1 Variant Introduction of JN.1 Variant The emergence of new variants of the coronavirus continues to pose challenges in the ongoing battle against",
+  "date": "January 24, 2024",
+  "link": "12-page"
+},
+{
+  "image": "assets/blogs_main/essential_healthy_lifestyle.jpg",
+  "category_name": "Others",
+  "title": "Typhoid Prevention: Essential Tips for a Healthy Lifestyle",
+  "description": "Introduction of Typhoid: Typhoid is a bacterial infection caused by the bacterium Salmonella typhi, in which affected patients experience fever. Other symptoms of typhoid in adults may include diarrhea, weakness, headaches, and other symptoms. Typhoid may occur due to eating contaminated food containing the Salmonella bacteria, causing food poisoning. The bacterial infection may affect many",
+  "date": "July 21, 2023",
+  "link": "15-page"
+},
+{
+  "image": "assets/blogs_main/omicron_prevention.jpg",
+  "category_name": "Others",
+  "title": "Understanding OMICRON: Preventive Measures",
+  "description": "With the discovery of the OMICRON variant, COVID-19 has been rapidly spreading around the world, including in India. The increased number of cases of OMICRON, despite its milder symptoms than Delta, has sparked fears over the third wave of Coronavirus. As the OMICRON strain is relatively new and little information about it exists, there is",
+  "date": "January 19, 2022",
+  "link": "20-page"
+},
+{
+  "image": "assets/blogs_main/second_wave_covid.jpg",
+  "category_name": "Others",
+  "title": "All You Need to Know About the Second Wave of COVID-19",
+  "description": "Second wave of COVID-19 It’s referred to a serious increase in the number of cases that occurs after the original surge has been stopped in a particular area. Pandemics are mainly caused by the new pathogens that the vast majority of humans have no immune protection against. That’s what causes global outbreaks. After few months,",
+  "date": "December 7, 2020",
+  "link": "24-page"
+},
+{
+  "image": "assets/blogs_main/people_with_HIV_AIDS.jpg",
+  "category_name": "Others",
+  "title": "COVID-19 & People with HIV/AIDS",
+  "description": "This year’s World AIDS Day is dominated by the global attention towards COVID-19. HIV/AIDS has been a pandemic since the early 1980s and is far from over. 32·7 million people have died from AIDS-related illnesses. The global response to HIV/ AIDS is an example of what can be done and achieved when countries and people",
+  "date": "December 1, 2020",
+  "link": "24-page"
+},
+{
+  "image": "assets/blogs_main/stay_safe_monsoon.jpg",
+  "category_name": "Others",
+  "title": "Stay Safe and Healthy This Monsoon",
+  "description": "Monsoon brings lots of excitement, natural beauty, cool breeze and greenery all around us. It also increases the humidity in temperature which raises the chances of infection. Suffering from viral fever cold and cough is quite common. For that, we have to take precautions in this rainy season to avoid diseases related to respiratory infections,",
+  "date": "July 9, 2020",
+  "link": "27-page"
+},
+{
+  "image": "assets/blogs_main/panic_blog_image.jpg",
+  "category_name": "Others",
+  "title": "Do Not Panic",
+  "description": "The Coronavirus infection which started in China at the beginning of this year then spread worldwide to be labelled as a Pandemic by WHO has created terrible panic in the public — both lay public and more so in the educated. Coronavirus infection is likely to kill thousands of people directly but will kill lakhs of people indirectly because of the panic situation we have created for ourselves.",
+  "date": "April 1, 2020",
+  "link": "28-page"
+},
+{
+  "image": "assets/blogs_main/coronavirus_info.jpg",
+  "category_name": "Others",
+  "title": "Everything you need to know about Coronavirus",
+  "description": "Q. What is 2019 Novel Coronavirus (2019-nCoV)? A. 2019 Novel Coronavirus (2019-nCoV) is a respiratory virus that causes illness ranging from the common cold to severe diseases. Q. What are the symptoms? Respiratory problems Fever and cough Shortness of breath Runny nose Headache Q. How does it spread? A. It is generally spread from an infected",
+  "date": "March 3, 2020",
+  "link": "29-page"
+},
+{
+  "image": "assets/blogs_main/dengue_causes_symptoms_treatment_precautions.jpg",
+  "category_name": "Others",
+  "title": "Dengue – Causes, Symptoms, Treatment and Precautions",
+  "description": "Dengue fever is an infectious tropical disease caused by the dengue virus. With rapid urbanization and global travel leading to drastic demographic changes, dengue fever has become a threat to almost 40% of the world’s population i.e. over 2.5 billion people. Dengue in India has dramatically expanded over the last few decades. It is estimated",
+  "date": "March 14, 2019",
+  "link": "32-page"
+},
+{
+  "image": "assets/blogs_main/vascular_surgery.jpg",
+  "category_name": "Others",
+  "title": "What is Vascular Surgery? Early Detection and Treatment Options",
+  "description": "Introduction Vascular surgery refers to a particular subset of surgical procedures that focus on treating conditions and disorders related to the blood vessels in the body. It is an intricate surgery that targets the arteries, veins, and lymphatic vessels to restore blood flow and function, thus enhancing the patient’s quality of life. Vascular surgery may",
+  "date": "April 5, 2024",
+  "link": "9-page"
+},
+{
+  "image": "assets/blogs_main/know_about_varicose_veins.jpg",
+  "category_name": "Others",
+  "title": "What You Must Know About Varicose Veins",
+  "description": "Varicose veins are a common vascular condition that affects between 30 and 50% of adults. They are caused by faulty valves in superficial veins. It’s not surprising that there are so many questions and concerns about the subject. Varicose veins can appear anywhere on the body, but they are most commonly found in the legs.",
+  "date": "December 5, 2022",
+  "link": "17-page"
+},
+{
+  "image": "assets/blogs_main/pad_symptoms_causes_treatment.jpg",
+  "category_name": "Others",
+  "title": "Peripheral Artery Disease (PAD): Symptoms, Causes and Treatment",
+  "description": "Peripheral arterial disease (PAD) is a slow, progressive, and sometimes life-threatening vascular disease that is caused by narrowing or blockage of the arteries in the peripheral circulation of the arteries in the limbs. A buildup of plaque in the blood vessels can obstruct blood flow to the limbs, leading to a number of health issues,",
+  "date": "April 22, 2022",
+  "link": "19-page"
+},
+{
+  "image": "assets/blogs_main/obesity_symptoms_causes.jpg",
+  "category_name": "Others",
+  "title": "Obesity – Symptoms & Causes",
+  "description": "Obesity Overview Obesity is a common condition characterized by excessive body mass. It is often a long-term or chronic health condition that progresses over time. Having excessive body fat may deteriorate health greatly and increase the risk of many health conditions, including high blood sugar and pressure, heart diseases, etc. It is possible to improve",
+  "date": "March 4, 2024",
+  "link": "10-page"
+},
+{
+  "image": "assets/blogs_main/thyroid_what_types_causes_symptoms.jpg",
+  "category_name": "Others",
+  "title": "Thyroid: What it is, Types, Causes & Symptoms",
+  "description": "Introduction The thyroid gland is an essential endocrine gland in the body that produces and secretes hormones responsible for many crucial functions in the body, particularly the metabolism and energy utilisation aspects. Having more or less than the normal amount of thyroid hormones can disrupt such processes in the body, leading to appearance of adverse",
+  "date": "January 17, 2024",
+  "link": "12-page"
+},
+{
+  "image": "assets/blogs_main/diabetes_info.jpg",
+  "category_name": "Others",
+  "title": "Diabetes: Everything you need to know",
+  "description": "Diabetes is a chronic metabolic disorder which affects how your body turns food into energy. Most of the food we eat is broken down into sugar also known as glucose and is released into your bloodstream. When the blood sugar goes up, it signals the pancreas to release insulin. Insulin acts as a key to",
+  "date": "November 15, 2021",
+  "link": "21-page"
+},
+{
+  "image": "assets/blogs_main/diabetic_foot_care.jpg",
+  "category_name": "Others",
+  "title": "Diabetic Foot Care",
+  "description": "Foot and lower leg ulcers are one of the many problems caused by poorly controlled diabetes. Ulcers that do not heal can lead to amputations of toes, parts of the foot, or the lower leg. Diabetes damages blood vessels throughout the body.",
+  "date": "May 4, 2020",
+  "link": "28-page"
+},
+{
+  "image": "assets/blogs_main/importance_regular_checkups.jpg",
+  "category_name": "Others",
+  "title": "The Importance of Regular Health Check-ups",
+  "description": "In this fast-moving world, it is normal to be caught up in the whirlwind of life and forget about health. However, regular health checkups are important in maintaining good health and preventing potential health issues early enough. This blog delves into the significance of standard medical examinations, individuals who require them, what these examinations involve,",
+  "date": "February 6, 2024",
+  "link": "11-page"
+},
+{
+  "image": "assets/blogs_main/stress_its_impact_health.jpg",
+  "category_name": "Others",
+  "title": "Stress And It’s Impact on Health",
+  "description": "In simple terms, stress is the feeling of a physical,  psychological and emotional strain which can be induced by over focusing on constant thoughts or over various circumstances.",
+  "date": "",
+  "link": "-page"
+},
+{
+  "image": "assets/blogs_main/obesity_health_risks.jpg",
+  "category_name": "Others",
+  "title": "Obesity Health Risks: Things to Know",
+  "description": "Obesity Health Risks Different factors contribute to obesity, such as genetics and behavior. There are many behaviors, including physical activity, inactivity, dietary habits, medication use, and others. Food marketing and promotion are other factors contributing to the food and physical activity environment. The adverse mental health outcomes and reduced quality of life associated with obesity",
+  "date": "December 1, 2021",
+  "link": "20-page"
+},
+{
+  "image": "assets/blogs_main/telemedici_new_leap.jpg",
+  "category_name": "Others",
+  "title": "TELEMEDICINE – NEW LEAP IN HEALTHCARE",
+  "description": "Impact of Telemedicine:  The healthcare industry mostly functions on physical interaction with a doctor-checking the pulse, using a stethoscope and diagnoses for the possible signs and symptoms. Now, such practices are largely suspended due to the coronavirus pandemic. The COVID-19 outbreak has created numerous challenges on traditional healthcare. Due to worldwide lockdown, people have not",
+  "date": "November 22, 2020",
+  "link": "26-page"
+},
+{
+  "image": "assets/blogs_main/healthy_living_nutrition.jpg",
+  "category_name": "Others",
+  "title": "Healthy Living and Nutrition",
+  "description": "Introduction of Healthy Lifestyle: Living a healthy life remains essential for everyone who seeks a high quality of life. Eating right, being active, and managing stress positively affect our health. We can significantly minimise the risks for various chronic diseases, keep fit, feel fresher and live longer if we are smart about our choices and",
+  "date": "December 20, 2023",
+  "link": "12-page"
+},
+{
+  "image": "assets/blogs_main/all_you_need_know_about.jpg",
+  "category_name": "Others",
+  "title": "All You Need To Know About H3N2 Virus",
+  "description": "India is currently grappling with a new health crisis as cases of prolonged sickness, and cough has surged across the country, even though COVID-19 and related illnesses have largely subsided. These incidences are connected to the H3N2 virus, based on the information provided by the Indian Council of Medical research. The H3N2 is an influenza",
+  "date": "March 29, 2023",
+  "link": "16-page"
+},
+{
+  "image": "assets/blogs_main/how_much_water_do_you_need.jpg",
+  "category_name": "Others",
+  "title": "How Much Water (fluid) Does Your Body Actually Need",
+  "description": "Lack of water (fluid) consumption can lead to dehydration. You must consume a lot of water (fluid) each day through drinks and food if you want to avoid dehydration. However, how much water (fluid) you should consume each day is a topic of discussion. This varies on an individual basis. What is right for you",
+  "date": "January 27, 2023",
+  "link": "16-page"
+},
+{
+  "image": "assets/blogs_main/winter_health_issues_watch_out.jpg",
+  "category_name": "Others",
+  "title": "Winter Health Issues to Watch Out For",
+  "description": "From the oppressive summer humidity, the cool, fresh winter air might be a pleasant change. However, if you don’t pay enough attention, the winter cold can have a disastrous impact on your general health issues. People experience health issues throughout the winter months because of climatic change. A sudden change in temperature can cause health",
+  "date": "January 16, 2023",
+  "link": "16-page"
+},
+{
+  "image": "assets/blogs_main/location_your_headache_telling.jpg",
+  "category_name": "Others",
+  "title": "What Is The Location Of Your Headache Telling You?",
+  "description": "Headaches: An estimated 50-75 percent of individuals have suffered some kind of headache in the last year, making it a highly common ailment. To identify the type of headache you have experienced, and the available treatments, the location of your head pain might be a crucial indicator. Many individuals suffer from chronic headaches, which are",
+  "date": "December 23, 2022",
+  "link": "17-page"
+},
+{
+  "image": "assets/blogs_main/summer_ailments.jpg",
+  "category_name": "Others",
+  "title": "Summer Ailments",
+  "description": "Summers are the time when people enjoy holidays with family and friends. There are many other fun activities to enjoy in summer such as swimming, eating ice cream, drinking cold drinks, shakes, etc. Thus, there are so many beautiful things to see and enjoy but there are disadvantages too. Summers bring a lot of health",
+  "date": "June 22, 2022",
+  "link": "19-page"
+},
+{
+  "image": "assets/blogs_main/summer_superfoods.jpg",
+  "category_name": "Others",
+  "title": "Summer Superfoods",
+  "description": "Summer Season is a time when we have plenty of things to enjoy and special foods to eat. Despite being a happy season for most people, it can get really sweltering hot. It can be a contributor to your bad health, if you are not being careful in what to eat. In this article, we",
+  "date": "June 13, 2022",
+  "link": "19-page"
+},
+{
+  "image": "assets/blogs_main/choose_hospital_finance.jpg",
+  "category_name": "Others",
+  "title": "Criteria on How to Choose a Hospital Based on Your Needs & How to Manage Your Finances",
+  "description": "Choosing the best health care facility or best hospital in Hyderabad to receive medical treatment is a common concern. Patients frequently complain when the services provided do not correspond to the amount of money spent. The worst-case scenario is when the sickness is not cured but continues progressing. Closer healthcare is undeniably the preferred option",
+  "date": "June 9, 2022",
+  "link": "19-page"
+},
+{
+  "image": "assets/blogs_main/prevent_winter_allergies.jpg",
+  "category_name": "Others",
+  "title": "Simple Tips to Prevent Common Allergies in Winter",
+  "description": "A big problem with winter allergies is that cold-weather lifestyles can turn a simple allergic reaction into something worse. It may not be possible to get rid of winter allergies entirely, but you can reduce exposure to allergens, at least in your own surroundings. Here are some simple tips to keep winter allergies at bay.",
+  "date": "December 17, 2020",
+  "link": "23-page"
+},
+{
+  "image": "assets/blogs_main/cricket_dehydration.jpg",
+  "category_name": "Others",
+  "title": "5 Ways In Which Your Favourite Cricket Players Are Beating Dehydration!",
+  "description": "IPL is in full swing and while you cheer your favourite team, have you ever wondered how do they manage to perform in this summer heat? Well, here are 5 ways in which your favourite cricket players are beating dehydration! 1. Cricket players monitor their body weights during the matches – Monitoring body weight allows",
+  "date": "May 3, 2017",
+  "link": "33-page"
+},
+{
+  "image": "assets/blogs_main/rheumatoid_arthritis.jpg",
+  "category_name": "Others",
+  "title": "Rheumatoid Arthritis: Symptoms, Diagnosis, and Treatment",
+  "description": "Rheumatoid Arthritis (RA) is a complex and debilitating autoimmune disease that affects millions of people worldwide. The main characteristic of rheumatoid arthritis is the body’s immune system accidentally attacking healthy cells, leading to inflammation (painful swelling) in the areas of the body affected. This chronic inflammatory condition can result in severe joint damage, pain, and",
+  "date": "November 11, 2023",
+  "link": "13-page"
+},
+{
+  "image": "assets/blogs_main/signs_symptoms_copper_deficiency.jpg",
+  "category_name": "Others",
+  "title": "9 Signs and Symptoms of Copper Deficiency",
+  "description": "Copper is an important mineral that promotes skeletal health, as well as nerve and bone function. However, a shortage of copper content in the human body can lead to severe discomfort and health issues. Copper plays a crucial role in the production of haemoglobin and red blood cells, in addition to aiding the efficient utilisation",
+  "date": "September 23, 2023",
+  "link": "14-page"
+},
+{
+  "image": "assets/blogs_main/diet_for_dengue.jpg",
+  "category_name": "Others",
+  "title": "Diet for Dengue",
+  "description": "Dengue fever is a mosquito-borne tropical disease caused by the dengue virus. Symptoms typically begin three to fourteen days after infection. These may include a high fever, headache, vomiting, muscle and joint pains, and a characteristic skin rash. Recovery takes two to seven days. In a small proportion of cases, the disease develops into a",
+  "date": "September 21, 2021",
+  "link": "21-page"
+},
+{
+  "image": "assets/blogs_main/diabetic_foot_infections.jpg",
+  "category_name": "Others",
+  "title": "Diabetic Foot Infections: Causes, Symptoms, and Treatment",
+  "description": "Introduction People with diabetes often experience problems in their legs and arms, particularly in their feet, which can lead to symptoms such as numbness and poor blood circulation. In such cases, it can be difficult to notice cuts, sores, and blisters. If left untreated, these wounds can quickly become infected, resulting in complications and possibly",
+  "date": "July 31, 2023",
+  "link": "15-page"
+},
+{
+  "image": "assets/blogs_main/impact_diabetes_covid.jpg",
+  "category_name": "Others",
+  "title": "IMPACT OF COVID-19 ON DIABETES",
+  "description": "Why is diabetes a major concern in COVID-19 times? Diabetes is a major concern in COVID-19 patients because of these potential reasons  Ongoing inflammation in the lungs (1 – 6 levels) is associated with increased insulin resistance As per some reports due to pancreatic damage some patients become de novo diabetic  Due to steroids used",
+  "date": "September 8, 2020",
+  "link": "27-page"
+},
+{
+  "image": "assets/blogs_main/framework_diabetes_symptoms_causes_treatment.jpg",
+  "category_name": "Others",
+  "title": "Diabetes – Symptoms and Causes, Complications and Treatment",
+  "description": "In the current epoch, Diabetes has become the most common health problem in the maximum number of people globally. Diabetes is actually caused when blood glucose or blood sugar levels in the body increase. Due to increased sugar levels in the blood, most of the people get Diabetes. However, there are different types of Diabetes.",
+  "date": "January 29, 2020",
+  "link": "30-page"
+},
+{
+  "image": "assets/blogs_main/affordplan_swasth_launch.jpg",
+  "category_name": "Others",
+  "title": "OMNI Hospitals, Vizag partners with Affordplan Swasth Card To Give Their Patients A Seamless Payment Method And A Host Of Reward Benefits",
+  "description": "Omni Hospitals, Vizag, & Giggles by OMNI RK along with Honorable Minister for Industries, Infrastructure, Investment & Commerce, Information Technology for  Government of Andhra Pradesh launched an excellent payment option for medical expenses in emergencies to patients as well as their families in partnership with Affordplan Swasth. The Affordplan Swasth card will be accessible at",
+  "date": "January 30, 2023",
+  "link": "16-page"
+},
+{
+  "image": "assets/blogs_main/essential_get_regular_health_checks.jpg",
+  "category_name": "Others",
+  "title": "Why It Is Essential To Get Regular Health Checks In Your 30s",
+  "description": "Regular Health Checks: We generally take utmost care of our belongings which are vital in our daily lives—for instance, a vehicle. We make sure it goes through timely maintenance and service checks so that it stays in mint condition and does not break down all of a sudden. If not it could break down to",
+  "date": "October 19, 2022",
+  "link": "18-page"
+},
+{
+  "image": "assets/blogs_main/preventive_senior_care.jpg",
+  "category_name": "Others",
+  "title": "Importance of Preventative Medicine and Healthy Living for Senior Citizens",
+  "description": "Prevention is always better than a cure for health! Every day, hundreds of people die from illnesses that could have been treated if they were diagnosed earlier. Preventative medicine plays a crucial role here. Medicine that focuses on the prevention of disease is known as preventative medicine or prophylaxis. This refers to preventing a disease",
+  "date": "December 22, 2021",
+  "link": "20-page"
+},
+{
+  "image": "assets/blogs_main/telemedicine_digitization.jpg",
+  "category_name": "Others",
+  "title": "Creating Better Patient Experiences With Anytime Anywhere Telemedicine and Error Free, Paper Free Digitization",
+  "description": "OMNI Hospitals is tapping into the miracle of technology to usher a new age of assurance, convenient and trust for patients. When we are down with illness especially during pandemic times, there is a heightened sense of helplessness. For one thing, we aren’t sure if it is safe to visit a hospital or care /",
+  "date": "March 25, 2021",
+  "link": "22-page"
+},
+{
+  "image": "assets/blogs_main/winter_diet_tips.jpg",
+  "category_name": "Others",
+  "title": "Winter Diet: Tips to Stay Warm Naturally During Winters",
+  "description": "Winter is here. It’s the time to think about the foods that will keep us warm. These foods are particularly useful for those who cannot cope with low temperatures very well, or those who may have low immunity.   Dry Fruits It’s wise to choose, healthy fat like dry fruits such as date and anjeer",
+  "date": "December 19, 2020",
+  "link": "22-page"
+},
+{
+  "image": "assets/blogs_main/weight_loss.jpg",
+  "category_name": "Others",
+  "title": "Weight Loss",
+  "description": "Weight loss has become a major concern among the maximum folks across different parts of the world. There is a gradual increase in health awareness among most people in the current era due to the increase in health issues. Obesity has become a fundamental issue for several people as it causes many health problems like",
+  "date": "February 19, 2020",
+  "link": "29-page"
+},
+{
+  "image": "assets/blogs_main/healthy_eating.jpg",
+  "category_name": "Others",
+  "title": "Healthy Eating in the New Year",
+  "description": "Dr Deepa Agarwal, Nutritionist/ Dietician at Udai Omni Hospital It is that optimistic time of the year when many of us resolve to improve our lot in life by practicing some form of better behaviour. While time management, exercise, spending more time with family are on plenty of lists, many New Year’s resolutions deal with […]",
+  "date": "January 2, 2017",
+  "link": "33-page"
+},
+{
+  "image": "assets/blogs_main/hr_healthcare.jpg",
+  "category_name": "Others",
+  "title": "Importance of Human Resources in Healthcare Industry",
+  "description": "Human resource managers in the healthcare industry are responsible for various issues like employee retention, legal matters and recruitment of staff. Like natural resources, HR in the healthcare sector is deeply buried. These resources are not found on the surface; instead, hospitals have to look for them. Medical facilities have to create situations where their",
+  "date": "December 18, 2020",
+  "link": "23-page"
+},
+{
+  "image": "assets/blogs_main/emr_Implementation_adoption_barriers.jpg",
+  "category_name": "Others",
+  "title": "EMR – Implementation and Adoption Barriers",
+  "description": "The Government officials are mandated to ensure that every healthcare institution should have Electronic Medical Record (EMR) systems in place. Despite many benefits of the modern-day tool, many clinical users & healthcare providers are apprehensive to implement EMR.  Whilst EMRs possess many useful features to help streamline the healthcare processes, some people find the entire system overly complex",
+  "date": "November 29, 2020",
+  "link": "25-page"
+},
+{
+  "image": "assets/blogs_main/working_together_prevent_suicide.jpg",
+  "category_name": "Others",
+  "title": "Working Together to Prevent Suicide",
+  "description": "At least once in a week, we tend to hear this word. Let it be a famous celebrity or a poor farmer, this word creates some amount of eagerness and anxiety in most of us. Every year suicide is among the top 20 leading causes of death globally. One suicide happens every 40 seconds worldwide. For",
+  "date": "December 2, 2020",
+  "link": "24-page"
+}
+  ]
+}

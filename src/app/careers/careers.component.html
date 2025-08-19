@@ -1,0 +1,201 @@
+<app-header></app-header>
+<section class="bg_lgt_blue">
+  <section class="banner">
+    <img src="assets/images/careers_at_omni.jpg" alt="Omni Banner" class="img-fluid w-100 d-none d-md-block"
+      style="object-fit: cover;">
+    <img src="assets/images/careers_at_omni_mobile.jpg" alt="Omni Banner" class="img-fluid w-100 d-block d-md-none"
+      style="object-fit: cover;">
+  </section>
+
+
+  <section class="discover py-3 text-center">
+    <h2 class="position-relative d-inline-block"><img class="me-1" src="assets/health_checkup/dots_left.svg"
+        alt="">Join a Team That Cares Professionally and Personally<img class="ms-1"
+        src="assets/health_checkup/dots_right.svg" alt=""></h2>
+    <p class="px-3" style="text-align: justify;">As one of the leading multispeciality hospitals, we offer a supportive
+      and progressive work
+      environment where every team member can thrive. Whether you’re beginning your journey in healthcare or looking to
+      advance your skills, we provide the tools, training, and encouragement you need to grow both professionally and
+      personally.</p>
+  </section>
+
+  <section class="bg-white ">
+    <div class="container pt-5 pb-2 careers-at-omni text-center">
+      <h2 class="position-relative d-inline-block px-3"><img class="me-1" src="assets/health_checkup/dots_left.svg"
+          alt="">Careers at Omni<img class="ms-1" src="assets/health_checkup/dots_right.svg" alt=""></h2>
+      <div class="row pt-4">
+        <div class="col-md-4" *ngFor="let career of careers">
+          <img src="assets/images/{{career.image}}" class="img-fluid mb-3" alt="{{career.title}}">
+          <h5>{{ career.title }}</h5>
+          <p>{{ career.description }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tab Buttons -->
+  <div class="w-100 overflow-auto">
+    <div class="d-flex flex-nowrap justify-content-center gap-2 mb-3 px-2 py-3" style="min-width: max-content;">
+      <button class="btn br_dark rounded-4 px-4 py-2 flex-shrink-0 fs-6 fs-md-5" [ngClass]="{
+          'btn_primary text-white': currentTab === 'openings',
+          'br_dark': currentTab !== 'openings'
+        }" (click)="switchTab('openings')">
+        Current Openings
+      </button>
+
+      <button class="btn br_dark rounded-4 px-4 py-2 flex-shrink-0 fs-6 fs-md-5" [ngClass]="{
+          'btn_primary text-white': currentTab === 'joiners',
+          'br_dark': currentTab !== 'joiners'
+        }" (click)="switchTab('joiners')">
+        Doctors Join Us
+      </button>
+
+      <button class="btn br_dark rounded-4 px-4 py-2 flex-shrink-0 fs-6 fs-md-5" [ngClass]="{
+          'btn_primary text-white': currentTab === 'apply',
+          'br_dark': currentTab !== 'apply'
+        }" (click)="switchTab('apply')">
+        Apply Online
+      </button>
+    </div>
+  </div>
+
+
+  <!-- Openings -->
+  <section class="container pb-4">
+    <div *ngIf="currentTab === 'openings'">
+      <div class="row row-cols-1 row-cols-md-4 g-4">
+        <div *ngFor="let job of jobList" [ngClass]="{'opacity-25': !isJobActive(job)}">
+          <div class="card h-100 border rounded-4 shadow-sm p-2">
+            <div class="card-body">
+              <h5 class="fw-medium ps-2" style="color:#008FD5;font-size:15px">{{job.title}}</h5>
+              <!-- <p>{{job.location}} | {{job.department}}</p> -->
+              <p class="m-0 ps-2" style="font-size:13px;font-weight:300">{{job.location}}</p>
+              <div class="border_gray my-3"></div>
+              <p class="m-0" style="font-size:10px;font-weight:300">Required Experience: <strong>2-4
+                  years</strong> </p>
+              <p class="" style="font-size:10px;font-weight:300">Posted On: <strong>{{job.postedDate}}
+                </strong> | End Date: <strong>{{job.lastDate}}</strong> </p>
+              <div class="border_gray my-3"></div>
+              <p style="font-weight: 300;font-size:10px;"> <strong>Required Skills:</strong> Communication |
+                Convincing People </p>
+              <div class="d-flex justify-content-center gap-3">
+                <button class="btn btn_job_primary btn-sm px-4 rounded-5 pt-1 pb-1"
+                  (click)="shareJob(job)">Share</button>
+                <button class="btn btn_job_primary btn-sm px-4 rounded-5 pt-1 pb-1"
+                  [disabled]="!isJobActive(job)">Apply</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Joiners -->
+  <section class="container">
+    <div *ngIf="currentTab === 'joiners'" class="">
+      <h5 style="font-size:30px; font-weight: 800;">Doctors Joiners</h5>
+      <p style="font-weight:300; font-size:15px">We welcome dedicated and skilled medical professionals who are
+        passionate about delivering excellence in patient care.
+        As a doctor joining our team, you'll be part of a collaborative environment that values clinical expertise,
+        ethical practice, and continuous learning. We offer opportunities across various specialties, supported by
+        advanced infrastructure and a strong referral network empowering you to grow your practice while making a
+        meaningful impact.</p>
+      <p>Contact HR team:</p>
+      <ul class="m-0 pb-4">
+        <li style="color:#828282"><strong>Vikshitha V - <a class="text-decoration-none" href="tel:+919876543210"
+              style="color:#828282; ">+91 9876543210</a>, </strong> <strong>Email: <a
+              href="mailto:doctors@omnihospitals.in" class="text-decoration-none"
+              style="color:#828282">{{emil}}</a></strong></li>
+        <li style="color:#828282"><strong>Vikshitha V - <a class="text-decoration-none" href="tel:+919876543210"
+              style="color:#828282">+91 9876543210</a>, </strong> <strong>Email: <a
+              href="mailto:doctors@omnihospitals.in" class="text-decoration-none"
+              style="color:#828282">{{emil}}</a></strong></li>
+        <li style="color:#828282"><strong>Vikshitha V - <a class="text-decoration-none" href="tel:+919876543210"
+              style="color:#828282">+91 9876543210</a>, </strong> <strong>Email: <a
+              href="mailto:doctors@omnihospitals.in" class="text-decoration-none"
+              style="color:#828282">{{emil}}</a></strong></li>
+        <li style="color:#828282"><strong>Vikshitha V - <a class="text-decoration-none" href="tel:+919876543210"
+              style="color:#828282">+91 9876543210</a>, </strong> <strong>Email: <a
+              href="mailto:doctors@omnihospitals.in" class="text-decoration-none"
+              style="color:#828282">{{emil}}</a></strong></li>
+
+      </ul>
+    </div>
+  </section>
+
+  <!-- Apply Form -->
+  <!-- careers.component.html -->
+  <div class="pb-4 mx-2" *ngIf="currentTab === 'apply'">
+    <form [formGroup]="applyForm" (ngSubmit)="onSubmit()"
+      class="apply-form-container mx-auto p-4 border rounded-4 shadow-sm form_border bg-white">
+
+      <!-- First Name -->
+      <div class="mb-3">
+        <label class="form-label text-secondary">First Name*</label>
+        <input type="text" class="form-control"
+          [ngClass]="{'is-invalid': applyForm.get('firstName')?.invalid && applyForm.get('firstName')?.touched}"
+          formControlName="firstName">
+        <div *ngIf="applyForm.get('firstName')?.invalid && applyForm.get('firstName')?.touched" class="text-danger">
+          Required
+        </div>
+      </div>
+
+      <!-- Last Name -->
+      <div class="mb-3">
+        <label class="form-label text-secondary">Last Name</label>
+        <input type="text" class="form-control" formControlName="lastName">
+      </div>
+
+      <!-- Phone -->
+      <div class="mb-3">
+        <label class="form-label text-secondary">Phone Number*</label>
+        <input type="tel" class="form-control"
+          [ngClass]="{'is-invalid': applyForm.get('phone')?.invalid && applyForm.get('phone')?.touched}"
+          formControlName="phone">
+        <div *ngIf="applyForm.get('phone')?.invalid && applyForm.get('phone')?.touched" class="text-danger">
+          Required
+        </div>
+      </div>
+
+      <!-- Email -->
+      <div class="mb-3">
+        <label class="form-label text-secondary">Email ID*</label>
+        <input type="email" class="form-control"
+          [ngClass]="{'is-invalid': applyForm.get('email')?.invalid && applyForm.get('email')?.touched}"
+          formControlName="email">
+        <div *ngIf="applyForm.get('email')?.invalid && applyForm.get('email')?.touched" class="text-danger">
+          Valid Email Required
+        </div>
+      </div>
+
+      <!-- Position -->
+      <div class="mb-3">
+        <label class="form-label text-secondary">Position Applying For*</label>
+        <input type="text" class="form-control"
+          [ngClass]="{'is-invalid': applyForm.get('position')?.invalid && applyForm.get('position')?.touched}"
+          formControlName="position">
+        <div *ngIf="applyForm.get('position')?.invalid && applyForm.get('position')?.touched" class="text-danger">
+          Required
+        </div>
+      </div>
+
+      <!-- File Upload -->
+      <div class="mb-4 d-flex">
+        <label class="form-label text-secondary d-block me-2 pt-1">Attachment file*</label>
+        <input type="file" class="form-control visually-hidden" id="customFile" (change)="onFileChange($event)">
+        <label for="customFile" class="btn btn-outline-secondary choose_file_btn text-black py-1 w-50">
+          Choose File
+        </label>
+      </div>
+
+      <!-- Submit Button -->
+      <div class="text-center">
+        <button type="submit" class="btn btn-outline-secondary choose_file_btn text-black py-1" style="width: 30%;"
+          [disabled]="applyForm.invalid">Apply</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<app-footer></app-footer>

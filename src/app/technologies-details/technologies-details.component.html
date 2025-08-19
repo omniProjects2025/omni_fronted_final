@@ -1,0 +1,57 @@
+<app-header></app-header>
+<section class="bg-white">
+  <div class="container">
+    <ng-container *ngIf="gettingTechnologies">
+      <div class="row pt-5">
+        <!-- Left Card Section -->
+        <div class="col-lg-7 col-md-12 mb-4">
+          <div class="card">
+            <img [src]="gettingTechnologies.image" class="border_rad" alt="Medical Image">
+            <div class="card-body">
+              <h4 class="titile_txt">{{ gettingTechnologies.title }}</h4>
+              <p class="description_font">{{ gettingTechnologies.description }}</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Enquiry Form -->
+        <div class="col-lg-5 col-md-12 d-flex flex-column align-items-center">
+          <div class="text-center w-100 mt-5">
+            <h5 class="text-black fw-bold text-center position-relative d-flex align-items-center justify-content-center">
+              <span class="border-line me-2"></span> ENQUIRY <span class="border-line ms-2"></span>
+            </h5>
+          </div>
+
+          <form class="card p-4 form-card w-100">
+            <div class="mb-3 position-relative">
+              <input type="text" class="form-control floating-input" placeholder=" " required>
+              <label class="floating-label">Full Name</label>
+            </div>
+            <div class="mb-3 position-relative">
+              <input type="tel" class="form-control floating-input" placeholder=" " required>
+              <label class="floating-label">Phone Number</label>
+            </div>
+            <div class="mb-3 position-relative">
+              <input type="email" class="form-control floating-input" placeholder=" " required>
+              <label class="floating-label">Email ID</label>
+            </div>
+            <div class="mb-3 position-relative">
+              <input type="text" class="form-control floating-input" [value]="gettingTechnologies.title" readonly>
+            </div>
+            <div class="mb-3 position-relative">
+              <select class="form-select floating-input" required>
+                <option value="" disabled selected>Select Location</option>
+                <option *ngFor="let location of locations" [value]="location.id">{{ location.name }}</option>
+              </select>
+            </div>
+          </form>
+
+          <div class="text-center w-100 my-4">
+            <button type="submit" class="btn btn-outline-dark px-5 py-1 submit-btn">Submit</button>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</section>
+<app-footer></app-footer>

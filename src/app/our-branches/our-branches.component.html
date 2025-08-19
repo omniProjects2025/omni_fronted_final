@@ -1,0 +1,176 @@
+<app-header></app-header>
+<section class="bg_color">
+  <div class="container-fluid mt-4">
+    <!-- Hospital Info -->
+    <div class="row g-4">
+      <div class="col-lg-12">
+        <div class="card p-3 shadow-sm">
+          <div class="row">
+            <div class="col-md-4">
+              <img
+                src="assets/locations/{{getting_location=='Kukatpally'?'omni_hospital_image.svg':getting_location=='Kothapet'?'kothapet_branch.svg':getting_location=='UDAI OMNI - Nampally'?'udai_omni_branch.svg':getting_location=='Vizag'?'vizag_branch.svg':getting_location=='Giggles Vizag'?'giggles_branch.svg':'kurnool_branch.svg'}}"
+                alt="Omni Kukatpally" class="img-fluid rounded">
+            </div>
+            <div class="col-md-8">
+              <h5 class="text-primary fw-bold mt-lg-4">{{getting_location}}</h5>
+              <p class="small text-muted" *ngIf="getting_location=='Kothapet'">
+                Located in the heart of Hyderabad, OMNI Hospitals, Kothapet is a trusted multi-specialty healthcare
+                destination offering comprehensive medical services under one roof. With a commitment to compassionate
+                care and clinical excellence, this branch is equipped with advanced infrastructure and highly
+                experienced specialists across departments.
+              </p>
+              <p class="small text-muted" *ngIf="getting_location=='Kothapet'">
+                Whether it’s routine health concerns or complex treatments, OMNI Hospitals, Kothapet ensures
+                personalized attention and quality care, making it a preferred choice for families in the region.
+              </p>
+              <p class="small text-muted" *ngIf="getting_location=='Giggles Vizag'">
+                Giggles by OMNI is a dedicated mother & child hospital in Visakhapatnam, designed to provide world-class
+                maternity, gynecology, neonatal, pediatric, and fertility services. With expert obstetricians,
+                neonatologists, and a warm, family-friendly environment, Giggles ensures comprehensive care for mothers
+                and newborns. The facility combines clinical excellence with compassionate support for every stage of
+                motherhood.
+              </p>
+              <p class="small text-muted" *ngIf="getting_location=='Kurnool'">
+                OMNI Hospitals Kurnool serves as a critical healthcare provider for the Rayalaseema region. This
+                multi-specialty unit offers high-quality medical services across departments like General Medicine,
+                Pediatrics, Surgery, Orthopedics, and more. With a patient-first approach and modern medical facilities,
+                OMNI Kurnool is committed to delivering affordable and reliable care to the local community.
+              </p>
+              <p class="small text-muted" *ngIf="getting_location=='UDAI OMNI - Nampally'">
+                Udai OMNI Hospital in Nampally, Hyderabad, is a renowned center for Orthopedics, Joint Replacement,
+                Spine Surgery, and Trauma Care. With a legacy of excellence, this unit is led by some of the most
+                respected orthopedic surgeons in South India. It is known for delivering advanced surgical outcomes
+                using minimally invasive techniques and personalized rehabilitation programs.
+              </p>
+              <p class="small text-muted" *ngIf="getting_location=='Vizag'">
+                OMNI RK Multi Specialty Hospital is a state-of-the-art facility offering advanced tertiary care across
+                major specialties. Backed by experienced consultants and cutting-edge infrastructure, it has become a
+                trusted destination for specialized treatments and surgical procedures. With a strong focus on patient
+                satisfaction, OMNI RK is committed to accessible and ethical healthcare delivery.
+              </p>
+              <p class="small text-muted" *ngIf="getting_location=='Kukatpally'">
+                OMNI Hospitals, Kukatpally is a leading multi-specialty hospital. known for its excellence in patient
+                care and clinical expertise. With NABH accreditation and a team of renowned doctors, this unit offers
+                advanced diagnostic and treatment facilities across specialties like Cardiology, Neurology,
+                Gastroenterology, Orthopedics, and more. Conveniently located and supported by a dedicated staff, OMNI
+                Kukatpally continues to set new benchmarks in quality healthcare for the region.
+              </p>
+              <div class="col-md-3 p-0 m-0" (click)="openDirections(getting_location)"
+                *ngIf="(getting_location != 'Vizag' || '')">
+                <button class="direction_btn"><img class="" src="assets/locations/location_icon.svg" alt="">Get
+                  Direction</button>
+              </div>
+              <div class="row mt-3  mx-1" *ngIf="(getting_location == 'Vizag' || '')">
+                <div class="sub_branches">
+                  <div class="row justify-content-start text-start align-items-end">
+                    <div class="col-md-3 p-0 m-0 pb-4" (click)="openDirections(getting_location)">
+                      <button class="direction_btn"><img class="" src="assets/locations/location_icon.svg" alt="">Get
+                        Direction</button>
+                    </div>
+                    <div class="col-md-5 col-lg-5 mb-4 mb-md-0">
+                      <div class="p-4 border_sub rounded-4 d-flex justify-content-center">
+                        <div>
+                          <img class="img_card" src="assets/locations/omni_vishakapatnam_circle_image.svg"
+                            alt="OMNI Hospitals Visakhapatnam" />
+                        </div>
+                        <div class="line mt-2 ms-2 me-2"></div>
+                        <div class="">
+                          <a href="https://giggles.co.in/vizag/" target="_blank">
+                            <img class="img_card" src="assets/locations/women_child_circle_image.svg"
+                              alt="Giggles Women & Children’s Hospital" />
+                          </a>
+                        </div>
+                        <div class="line mt-2 ms-2 me-2"></div>
+                        <div>
+                          <img class="img_card" src="assets/locations/fertility_circle_image.svg"
+                            alt="Giggles Fertility Center" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Specialties -->
+    <div class="row mt-4">
+      <div class="col-md-3 mb-4">
+        <div class="card p-3 shadow-sm">
+          <h6 class="fw-bold text-center">SPECIALTIES</h6>
+          <hr />
+          <form>
+            <div *ngFor="let dept of departments">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="specialty" [value]="dept"
+                  (change)="setSelected(dept)" [checked]="selectedDepartment === dept" />
+                <label class="form-check-label">{{ dept }}</label>
+              </div>
+            </div>
+            <button class="btn btn-secondary btn-sm mt-3 w-100" type="button"
+              (click)="selectedDepartment = null">Reset</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Doctors -->
+      <div class="col-md-9">
+        <div class="doctor-list-container">
+          <div *ngFor="let doc of filteredDoctors()" class="card mb-3 shadow-sm p-3">
+            <div class="doctor-card mb-3 p-3 shadow-sm">
+              <div class="row g-0 align-items-center">
+                <!-- Doctor Image -->
+                <div class="col-md-2 text-center" (click)="goToDoctorDetails()">
+                  <img [src]="doc.image" class="doctor-img" alt="Doctor Image" />
+                </div>
+
+                <!-- Doctor Info -->
+                <div class="col-md-7">
+                  <div class="ms-3" (click)="goToDoctorDetails()">
+                    <h5 class="fw-bold">{{ doc.name }}</h5>
+                    <p class="mb-1 small text-muted">
+                      M.S. (Gen. Surgery), DNB (Surgical Gastro), FMAS, <br />
+                      Advanced Laparoscopic & Bariatric Surgeon, GI Oncology & Liver Transplant Surgeon
+                    </p>
+                    <p class="fw-semibold mb-0">Surgical Gastroenterologist</p>
+                  </div>
+                </div>
+
+                <!-- Right Side Icons and Button -->
+                <div class="col-md-3 text-md-end mt-3 mt-md-0">
+                  <div class="d-flex align-items-center mb-2">
+                    <img class="ms-2 me-3" src="assets/our_doctors/experience.svg" alt="">
+                    <span class="txt">{{ doc.experience }}</span>
+                  </div>
+                  <div class="d-flex align-items-center mb-2">
+                    <img class="ms-2 me-3" src="assets/our_doctors/clock.svg" alt="">
+                    <span class="txt">{{ doc.timings }}</span>
+                  </div>
+                  <div class="d-flex align-items-center mb-3">
+                    <img class="ms-2 me-3" src="assets/our_doctors/location.svg" alt="">
+                    <span class="txt">{{ doc.location }}</span>
+                  </div>
+                  <div class="d-flex align-items-center justify-content-start mb-3" (click)="goToBookAppointment()">
+                    <button class="btn rounded-pill px-3 py-2 btn-sm book_btn">
+                      Book an Appointment
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <ng-template #noDoctors>
+          <div class="alert alert-warning">No doctors available for selected department.</div>
+        </ng-template>
+      </div>
+    </div>
+  </div>
+</section>
+<app-footer></app-footer>

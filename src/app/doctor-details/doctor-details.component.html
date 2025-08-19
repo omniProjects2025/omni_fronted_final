@@ -1,0 +1,114 @@
+<app-header></app-header>
+<div class="" *ngFor="let doctor of doctors, index as i">
+  <section style="background-color: rgba(0, 143, 213, 0.05);">
+    <div class="py-5">
+      <div class="row align-items-center">
+        <div class="col-12 col-md-4 text-center mb-4 mb-md-0">
+          <img [src]="doctor['profile']" alt="Doctor Photo" class="" width="375px">
+        </div>
+        <div class="col-12 col-md-8 text-center text-md-start text-lg-start px-2 px-md-0 px-lg-0">
+          <h2 class="doctor_title">{{doctor['name']}}</h2>
+          <span class="mb-1 doctor_details text-center text-md-start text-lg-start px-2 px-md-0 px-lg-0 p-0 m-0">
+            <div *ngFor="let qual of doctor['qualification']">
+              {{ qual }}
+            </div>
+          </span>
+          <p class="fw-bold mt-2 doctor_department">{{doctor['depertment']}}</p>
+          <button class="book_btn" (click)="goToBookAppointment()">Book an Appointment</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section class="bg-white">
+    <div class="container-fluid">
+      <div class="row g-4 mx-4 pb-4 pt-3">
+        <div class="col-lg-8">
+          <div class="card p-4" style="box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);">
+            <div>
+              <h5 class="section-title mt-4"><img class="me-2" src="assets/our_doctors/area_of_expertise.png" alt=""
+                  width="60px" height="69px">Area
+                of Expertise</h5>
+              <div>
+                <span>
+                  <div *ngFor="let item of doctor['area_expertise']">
+                    {{ item }}
+                  </div>
+                </span>
+              </div>
+            </div>
+            <hr style="border: 2px solid #000 !important">
+            <h5 class="section-title mt-4"><img class="me-2" src="assets/our_doctors/education_new.png" alt=""
+                width="60px" height="69px">Education
+            </h5>
+            <span>
+              <div *ngFor="let item of doctor['education']">
+                {{item}}
+              </div>
+            </span>
+
+            <hr style="border: 2px solid #000 !important">
+
+            <h5 class="section-title">Bio</h5>
+            <span class="">
+              <div *ngFor="let item of doctor['bio']">
+                {{item}}
+              </div>
+              <!-- {{doctor['bio']}} -->
+            </span>
+          </div>
+        </div>
+
+        <!-- Experience, Specialization, Fellowship Section -->
+        <div class="col-12 col-md-6 col-lg-4 ">
+          <div class="d-flex flex-column gap-4">
+
+            <div class="card p-4 mx-4" style="box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);">
+              <div class="d-flex align-items-center gap-2 mb-3">
+                <img src="assets/our_doctors/experience_new.png" alt="Experience Icon" class="img-fluid" width="43px"
+                  height="50px">
+                <h6 class="mb-0 head">Experience: <span class="desc">{{doctor['experience']}}</span></h6>
+              </div>
+              <hr style="border: 2px solid #000 !important">
+              <div class="d-flex align-items-center gap-2 mb-3">
+                <img src="assets/our_doctors/specialization_new.png" alt="Specialization Icon" class="img-fluid"
+                  width="45px" height="50px">
+                <h6 class="mb-0 head">Specialization: <br> <span class="desc">{{doctor['specialization']}}</span></h6>
+              </div>
+              <hr style="border: 2px solid #000 !important" *ngIf="doctor['awards'] != ''">
+              <div *ngIf="doctor['awards'] != ''">
+                <div class="d-flex align-items-center gap-2 mb-2">
+                  <img src="assets/our_doctors/awards_new.png" alt="Award Icon" class="img-fluid" width="48px"
+                    height="50px">
+                  <h6 class="mb-0 head">Awards:</h6>
+                </div>
+                <span class="mb-0 about-text mt-2 small">
+                  <div *ngFor="let award of doctor['awards']">
+                    {{ award }}
+                  </div>
+                </span>
+              </div>
+              <hr style="border: 2px solid #000 !important" *ngIf="doctor['fellowships'] != ''">
+              <div *ngIf="doctor['fellowships'] != ''">
+                <div class="d-flex align-items-center gap-2 mb-2">
+                  <img src="assets/our_doctors/fellowship_new.png" alt="Award Icon" class="img-fluid" width="45px"
+                    height="50px">
+                  <h6 class="mb-0 head">Fellowships</h6>
+                </div>
+                <span class="mb-0 about-text mt-2 small">
+                  <div *ngFor="let fellowship of doctor['fellowships']">
+                    {{ fellowship }}
+                  </div>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<app-footer></app-footer>

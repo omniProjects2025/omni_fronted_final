@@ -1,0 +1,74 @@
+.video-container {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    background: #000;
+    width: 190px;
+    /* Ensuring the container size */
+    height: 140px;
+    /* Ensuring the container size */
+}
+
+.thumbnail {
+    cursor: pointer;
+    width: 100%;
+    /* Ensure the thumbnail fills the container */
+    height: 100%;
+    /* Ensure the thumbnail fills the container */
+    object-fit: cover;
+    /* Ensure aspect ratio is maintained */
+}
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    background-color: black;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    z-index: 2;
+    cursor: pointer;
+}
+
+.play-button::before {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    border-left: 20px solid white;
+    border-top: 12px solid transparent;
+    border-bottom: 12px solid transparent;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+@media (min-width: 768px) and (max-width: 1280px) {
+  .video-container {
+    width: 134px !important;
+    height: 107px !important;
+  }
+
+  .video-container img.thumbnail {
+    width: 134px !important;
+    height: 107px !important;
+  }
+
+  /* Optional: resize play button if needed */
+  .video-container .play-button {
+    width: 40px; /* Adjust size as needed */
+    height: 40px;
+  }
+}

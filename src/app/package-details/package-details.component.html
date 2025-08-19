@@ -1,0 +1,187 @@
+<app-header></app-header>
+<div class="container-fluid my-4" *ngIf="selectedPackage">
+
+  <ng-container>
+    <section class="" style="border: 1px solid rgba(130, 130, 130, 1); border-radius: 30px;" *ngIf="selectedPackage">
+      <div class="py-4 pe-lg-5 mb-lg-5">
+        <div class="row align-items-start">
+          <!-- Image -->
+          <div class="col-lg-6 mb-4 mb-lg-0 text-center">
+            <img class="img_border img-fluid" [src]="selectedPackage.image" alt="Health Check-up Package" />
+          </div>
+
+          <!-- Details -->
+          <div class="col-lg-6">
+            <h1 class="package_title">{{ selectedPackage['package_title'] }}</h1>
+            <h5 class="package_price">{{ selectedPackage['newPrice'] }}</h5>
+
+            <form (ngSubmit)="submitPackageForm()" #packageForm="ngForm">
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label for="name">Full Name*</label>
+                  <input type="text" class="form-control" name="fullName" [(ngModel)]="packageData.fullName" required>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="email">Email ID*</label>
+                  <input type="email" class="form-control" name="emailId" [(ngModel)]="packageData.emailId" required>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="phone">Phone Number*</label>
+                  <input type="tel" class="form-control" name="phoneNumber" [(ngModel)]="packageData.phoneNumber"
+                    required>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="date">Appointment Date</label>
+                  <input type="date" class="form-control" name="appointmentDate"
+                    [(ngModel)]="packageData.appointmentDate">
+                </div>
+              </div>
+              <div class="text-center pt-3">
+                <button type="submit" class="sub_btn">Submit</button>
+              </div>
+            </form>
+          </div>
+
+          <!-- </div> -->
+        </div>
+      </div>
+
+      <div class="px-5">
+        <div class="my-4 px-3">
+          <div class="position-relative p-4 custom-box-shadow"
+            style="border: 1px solid rgba(130, 130, 130, 1); border-radius: 30px;">
+            <div class="ms-lg-3 package-label px-4 py-2 position-absolute top-0 start-1 translate-middle-y">
+              Package Includes
+            </div>
+            <ul class="mb-0 ps-3 pt-3">
+              <li *ngFor="let detail of selectedPackage.package_details">{{ detail }}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <section class="px-4">
+        <ng-container *ngIf="selectedPackage.faqs">
+          <div *ngFor="let ques of selectedPackage.faqs">
+            <h4 class="faqs_quetions">{{ques['quetion']}}</h4>
+            <p class="faqs_answer">
+              {{ques['answer']}}
+            </p>
+          </div>
+        </ng-container>
+      </section>
+    </section>
+
+    <section *ngIf="carouselPackages.length">
+      <h4 class="more_package_txt pb-2 pt-3 ms-lg-3">For More Packages</h4>
+      <hr class="hr_line">
+      <div class="owl-carousel owl-theme mt-4 px-3">
+        <div class="item" *ngFor="let package of carouselPackages">
+          <div class="card border_lg_blue rounded-4 shadow-sm h-100">
+            <img [src]="package.image" alt="Package Image" class="card-img-top rounded-top-4" />
+            <div class="card-body text-start">
+              <h6 class="package_title">{{ package.package_title }}</h6>
+              <div class="d-flex m-0 p-0">
+                <p class="orginal_price mt-2 p-0 m-0"><del>{{ package.oldPrice }}/-</del></p>
+                <p class="discount_price ms-2 p-0 m-0">{{ package.newPrice }}/-</p>
+              </div>
+              <span class="badge badge_bg mb-2">{{ package.discount + '%' }} Off</span>
+              <div class="d-flex justify-content-center gap-2 mt-2">
+                <button class="view_book_btn" (click)="onPackageCardClick(package)">View Details</button>
+                <button class="view_book_btn" (click)="bookAppointment(selectedPackageId, package.package_title)">
+                  Book an Appointment
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- map section starts from Here -->
+    <section class="pt-4">
+      <ng-container *ngIf="selected_map_location === 'Kukatpally'">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3805.4656864742747!2d78.4083654749371!3d17.485269683418686!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb91bc5cdb9fbd%3A0xb96e1ba3797d9253!2sOMNI%20Hospitals%2C%20Kukatpally!5e0!3m2!1sen!2sin!4v1745125466022!5m2!1sen!2sin"
+          width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </ng-container>
+      <ng-container *ngIf="selected_map_location === 'Kothapet'">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.897405275579!2d78.538822!3d17.368669099999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb98e93eec1a2f%3A0x9dc9016e4c959f7d!2sOMNI%20Hospitals!5e0!3m2!1sen!2sin!4v1745143614525!5m2!1sen!2sin"
+          width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </ng-container>
+      <ng-container *ngIf="selected_map_location === 'Nampally'">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.3095579905453!2d78.47241199999999!3d17.3969257!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9762f7471823%3A0xcd02eae5dae78501!2sUdai%20Omni%20Hospital%20-%20Orthopedics%20%7C%20Multispeciality%20%7C%20Trauma!5e0!3m2!1sen!2sin!4v1745143719927!5m2!1sen!2sin"
+          width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </ng-container>
+      <ng-container *ngIf="selected_map_location === 'Vizag'">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3800.5565941356035!2d83.3111361!3d17.7183946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a394315b6aa6577%3A0x3699aded6ece84dd!2sOMNI%20RK%20Multi%20Specialty%20Hospital!5e0!3m2!1sen!2sin!4v1745143810828!5m2!1sen!2sin"
+          width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </ng-container>
+      <ng-container *ngIf="selected_map_location === 'Kurnool'">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3838.6279176861376!2d78.0415378!3d15.823561600000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb5ddf5391420ef%3A0x5751521ca97efcd8!2sOMNI%20Hospitals%20Kurnool!5e0!3m2!1sen!2sin!4v1745143913149!5m2!1sen!2sin"
+          width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </ng-container>
+      <ng-container *ngIf="selected_map_location === 'giggles'">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3800.5600994057054!2d83.3110427!3d17.7182292!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a39438ce00efc2f%3A0x14fd5f338cbade20!2sGiggles%20by%20Omni%20RK!5e0!3m2!1sen!2sin!4v1745144024428!5m2!1sen!2sin"
+          width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </ng-container>
+    </section>
+    <!-- map section end Here -->
+  </ng-container>
+
+ <div class="modal fade custom-backdrop" id="appointmentModal" data-bs-backdrop="static" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title w-100 text-center">Book an Appointment</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="appointmentForm" (ngSubmit)="submitPackageForm()">
+          <div class="mb-3">
+            <label class="form-label">Package Type</label>
+            <input type="text" class="form-control" formControlName="packageType" readonly>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Name</label>
+            <input type="text" class="form-control" formControlName="name">
+            <div *ngIf="appointmentForm.get('name')?.invalid && appointmentForm.get('name')?.touched" class="text-danger">
+              Name is required.
+            </div>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Email</label>
+            <input type="email" class="form-control" formControlName="email">
+            <div *ngIf="appointmentForm.get('email')?.invalid && appointmentForm.get('email')?.touched" class="text-danger">
+              Enter a valid email.
+            </div>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Mobile Number</label>
+            <input type="text" class="form-control" formControlName="mobile">
+            <div *ngIf="appointmentForm.get('mobile')?.invalid && appointmentForm.get('mobile')?.touched" class="text-danger">
+              Enter a valid 10-digit mobile number.
+            </div>
+          </div>
+          <div class="d-flex justify-content-center">
+            <button type="submit" class="btn btn-success w-50" [disabled]="appointmentForm.invalid">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+<app-footer></app-footer>

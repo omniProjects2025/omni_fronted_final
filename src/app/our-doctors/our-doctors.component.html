@@ -1,0 +1,148 @@
+<app-header></app-header>
+<div *ngIf="isLoading" class="loader-container">
+    <div class="spinner-border text-primary" role="status">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+</div>
+<section class="bg-white py-3" *ngIf="!isLoading">
+    <div class="title-container">
+        <div class="line line-left"></div>
+        <span class="title_text">OUR DOCTORS</span>
+        <div class="line line-right"></div>
+    </div>
+
+    <div class="container pb-2">
+        <div class="row mx-1">
+            <!-- Left Column: Doctors List -->
+            <div class="col-lg-8 col-12 mb-4">
+                <div *ngIf="doctors.length === 0" class="text-center py-5 text-muted fw-medium">
+                    No doctors found. Try adjusting your filters.
+                </div>
+
+                <div *ngFor="let details of doctors; index as i" class="row border-start border-end pt-2" [ngClass]="{
+          'border-top border_top_radius pt-4': i === 0,
+          'border-bottom border_bottom_radius': i === doctors.length - 1
+        }">
+                    <!-- Doctor Image -->
+                    <div class="col-md-3 col-12 d-flex align-items-center justify-content-center mb-3 mb-md-0"
+                        (click)="goToDoctorDetails(details['doctor_name'])">
+                        <img [src]="details['profile'] ? details['profile'] : 'assets/our_doctors/doctor_dummy_image.svg'"
+                            [alt]="details['doctor_name'] || 'Doctor Profile Image'" class="img-fluid rounded-circle"
+                            width="140" height="140">
+                    </div>
+
+                    <!-- Doctor Name & Details -->
+                    <div class="col-md-6 col-12 text-center text-md-start"
+                        (click)="goToDoctorDetails(details['doctor_name'])">
+                        <h2 class="fs-5 fw-bold">{{details['doctor_name']}}</h2>
+                        <div class="mb-0">
+                            <div *ngFor="let qual of details['qualification']">
+                                {{ qual }}
+                            </div>
+                        </div>
+                        <h5 class="fw_normal mt-2">{{details['doctor_designation']}}</h5>
+                    </div>
+
+                    <!-- Doctor Info: Experience, Location, Button -->
+                    <div class="col-md-3 col-12 mt-3 mt-md-1">
+                        <div class="d-flex flex-wrap justify-content-center justify-content-md-start gap-2">
+                            <div class="d-flex align-items-center gap-2" *ngIf="details['experience']">
+                                <img src="assets/our_doctors/experience.svg" alt="" width="18">
+                                <span class="fw-medium">{{details['experience']}}</span>
+                            </div>
+                            <div class="d-flex align-items-center gap-2">
+                                <img src="assets/our_doctors/location.svg" alt="" width="18">
+                                <span class="fw-medium">{{details['doctor_location']}}</span>
+                            </div>
+                        </div>
+                        <div class="my-3 text-center text-md-start">
+                            <button class="button_radius py-2 px-4 w-md-auto" (click)="goToBookAppointment()">
+                                Book Appointment
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Horizontal Line -->
+                    <hr *ngIf="details['id'] != 5" class="d-flex justify-content-center w-100 mx-auto"
+                        style="max-width: 94%;">
+                </div>
+            </div>
+
+            <!-- Right Column: Filters & Appointment Info -->
+            <div class="col-lg-4">
+                <!-- Search & Filters -->
+                <div class="border rounded py-4 px-1 mb-4">
+                    <div class="p-2">
+                        <img src="assets/our_doctors/search_icon.svg" alt="">
+                        <input class="border_none" type="text" placeholder="Search by Doctor" [(ngModel)]="searchTerm"
+                            (input)="applyFilters()">
+                        <hr class="m-2">
+                    </div>
+                    <div class="text-center px-3">
+                        <select class="form-select mb-3" [(ngModel)]="selectedLocation" (change)="onLocationChange()">
+                            <option value="">All Locations</option>
+                            <option *ngFor="let loc of locations" [value]="loc">{{ loc }}</option>
+                        </select>
+
+                        <select class="form-select mb-3" [(ngModel)]="selectedSpeciality" (change)="applyFilters()">
+                            <option value="">All Specialties</option>
+                            <option *ngFor="let s of specialities" [value]="s">{{ s }}</option>
+                        </select>
+
+                    </div>
+                </div>
+
+                <!-- Appointment Info -->
+                <div class="py-5">
+                    <div class="appointment-card border">
+                        <div class="border-bottom p-0">
+                            <h5 class="text-center font_style">BOOK AN APPOINTMENT ONLINE</h5>
+                        </div>
+                        <div class="px-3 py-2">
+                            <p class="text-center text-muted txt_justify py-2">
+                                Book an appointment and consult the best doctor in Hyderabad. Choose among the several
+                                specialties,
+                                super specialties, internationally trained doctors, and surgeons to talk to an
+                                experienced consultant at
+                                a time convenient to you.
+                            </p>
+                            <p class="text-center fw_normal">Booking appointment with your doctor was never better.</p>
+                            <p class="text-center text-muted">
+                                Our doctors are spread across multidisciplinary medical specialties. All you need to do
+                                is:
+                            </p>
+
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="me-3">
+                                    <img src="assets/our_doctors/choos_doctor.png" alt="">
+                                </div>
+                                <div>
+                                    <h6 class="text-primary fw-bold">STEP 01</h6>
+                                    <p class="mb-0"><strong>Choose a Doctor</strong> from the Specialty Department</p>
+                                </div>
+                            </div>
+
+                            <div class="d-flex align-items-center mb-3 mt-4">
+                                <div class="me-3">
+                                    <img src="assets/our_doctors/book_appointment_icon.svg" alt="">
+                                </div>
+                                <div>
+                                    <h6 class="text-primary fw-bold">STEP 02</h6>
+                                    <p class="mb-0"><strong>Time slots to visit the doctor</strong> at Time Convenient
+                                        to You</p>
+                                </div>
+                            </div>
+
+                            <p class="text-center text-muted">
+                                And you are all set. We will send a confirmation regarding your appointment with the
+                                doctor at Omni Hospitals.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<app-footer></app-footer>

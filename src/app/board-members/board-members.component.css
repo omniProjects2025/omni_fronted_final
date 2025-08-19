@@ -1,0 +1,30 @@
+
+.bg_lgt_blue{
+    background-color: #f1f9ff;
+}
+.doctor-profile-container {
+    background-color: white;
+    border: 1px solid #dee2e6;
+    border-radius: 1rem;
+  }
+  
+  .doctor-img {
+    max-width: 250px;
+    border: 3px solid #00aaff;
+    border-radius: 0.75rem;
+  }
+  
+  .custom-hr {
+    width: clamp(150px, 55vw, 380px);
+    border: 1px solid #ccc;
+    margin-left: 0;
+  }
+  .text_justify{
+    text-align: justify;
+  }
+  .text_lgt_green{
+    color: rgba(140, 198, 63, 1);
+  }
+  .text_lgt_blue{
+    color: rgba(0, 143, 213, 1);
+  }

@@ -1,0 +1,141 @@
+<app-header></app-header>
+<section class="bg-white pb-5">
+  <div class="">
+    <img src="assets/images/feedback_dummy_banner_image.svg" class="img-fluid w-100" alt="Fixed Surgery Banner" />
+  </div>
+  <section class="">
+    <section class="discover pt-5 text-center">
+      <h2 class="position-relative d-inline-block px-3 feed_txt"><img class="me-1"
+          src="assets/health_checkup/dots_left.svg" alt="">Feedback Form<img class="ms-1"
+          src="assets/health_checkup/dots_right.svg" alt=""></h2>
+      <p class="mx-5 text_justify px-lg-5">Thank you for choosing OMNI Hospitals for your healthcare needs. We are
+        committed to providing quality care and an excellent patient experience. As part of our continuous effort to
+        improve, we welcome your valuable feedback. We kindly request you to take a few moments to fill out the feedback
+        form below. Your insights help us understand what we’re doing well and where we can do better. Every comment is
+        carefully reviewed, and actionable suggestions will be considered for implementation, subject to practical
+        feasibility. Your voice helps us serve you better. Thank you for your support.</p>
+    </section>
+    <hr class="mx-4" style="border: 2px solid #828282;">
+    <form [formGroup]="feedbackForm" (ngSubmit)="onSubmit()" class="mx-4 p-4">
+      <div class="row g-3">
+        <!-- Name -->
+        <div class="col-md-6">
+          <label class="form-label">Name*</label>
+          <input type="text" class="form-control" formControlName="name">
+          <div *ngIf="submitted && f['name'].invalid" class="text-danger small">Name is required.</div>
+        </div>
+
+        <!-- Are You The Patient -->
+        <div class="col-md-6">
+          <label class="form-label d-block">Are You The Patient*</label>
+          <div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" formControlName="isPatient" value="yes">
+              <label class="form-check-label">Yes</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" formControlName="isPatient" value="no">
+              <label class="form-check-label">No</label>
+            </div>
+          </div>
+          <div *ngIf="submitted && f['isPatient'].invalid" class="text-danger small">Please select an option.</div>
+        </div>
+
+        <!-- Patient ID -->
+        <div class="col-md-6">
+          <label class="form-label">Patient ID*</label>
+          <input type="text" class="form-control" formControlName="patientId">
+          <div *ngIf="submitted && f['patientId'].invalid" class="text-danger small">Patient ID is required.</div>
+        </div>
+
+        <!-- Patient Address -->
+        <div class="col-md-6">
+          <label class="form-label">Patient Address*</label>
+          <input type="text" class="form-control" formControlName="patientAddress">
+          <div *ngIf="submitted && f['patientAddress'].invalid" class="text-danger small">Address is required.</div>
+        </div>
+
+        <!-- Phone -->
+        <div class="col-md-6">
+          <label class="form-label">Phone Number*</label>
+          <div class="input-group">
+            <span class="input-group-text">+91</span>
+            <input type="text" class="form-control" formControlName="phone">
+          </div>
+          <div *ngIf="submitted && f['phone'].invalid" class="text-danger small">
+            <div *ngIf="f['phone'].errors?.['required']">Phone is required.</div>
+            <div *ngIf="f['phone'].errors?.['pattern']">Invalid phone number.</div>
+          </div>
+        </div>
+
+        <!-- Email -->
+        <div class="col-md-6">
+          <label class="form-label">Email ID</label>
+          <input type="email" class="form-control" formControlName="email">
+          <div *ngIf="submitted && f['email'].invalid && f['email'].value" class="text-danger small">
+            <div *ngIf="f['email'].errors?.['email']">Invalid email format.</div>
+          </div>
+        </div>
+
+
+        <!-- Location -->
+        <div class="col-md-6">
+          <label class="form-label">Location*</label>
+          <input type="text" class="form-control" formControlName="location">
+          <div *ngIf="submitted && f['location'].invalid" class="text-danger small">Location is required.</div>
+        </div>
+
+        <!-- Department -->
+        <div class="col-md-6">
+          <label class="form-label">Department*</label>
+          <select class="form-select" formControlName="department">
+            <option value="">Select</option>
+            <option *ngFor="let dept of filteredDepartments" [value]="dept">{{ dept }}</option>
+          </select>
+          <div *ngIf="submitted && f['department'].invalid" class="text-danger small">Department is required.</div>
+        </div>
+
+        <!-- Doctor Name -->
+        <div class="col-md-6">
+          <label class="form-label">Doctor Name</label>
+          <input type="text" class="form-control" formControlName="doctorName">
+        </div>
+
+
+        <!-- Rating -->
+        <div class="col-md-6 d-flex align-items-center pt-lg-4">
+          <label class="form-label me-3 mb-0">Rate Your Experience*</label>
+          <ng-container *ngFor="let star of stars; let i = index">
+            <i class="bi" [ngClass]="{
+         'bi-star-fill text-warning': i < f['rating'].value,
+         'bi-star': i >= f['rating'].value
+       }" (click)="setRating(i + 1)" style="cursor: pointer; font-size: 1.5rem; margin-right: 6px;"></i>
+          </ng-container>
+        </div>
+        <div *ngIf="submitted && f['rating'].invalid" class="text-danger small mt-1">
+          Rating is required.
+        </div>
+
+
+
+
+
+        <!-- Comments -->
+        <div class="col-12">
+          <label class="form-label">Suggestions (or) Comments</label>
+          <textarea class="form-control" formControlName="feedback" rows="4"></textarea>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="col-12 text-center">
+          <button type="submit" class="btn btn-outline-dark padding_hor">Submit</button>
+        </div>
+
+      </div>
+    </form>
+
+
+  </section>
+</section>
+
+<app-footer></app-footer>

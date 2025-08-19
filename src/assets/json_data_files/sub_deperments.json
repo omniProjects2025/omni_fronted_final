@@ -1,0 +1,203 @@
+[
+    {
+        "locationId": 1,
+        "locationName": "",
+        "speciality": "cardiology",
+        "subdepartments": [
+            {
+                "department": "Heart Failure",
+                "heading": "Heart Failur Symptoms, Diagnosis, and Treatment",
+                "desc": [
+                    "The function of the heart is to take deoxygenated blood in and pump out the oxygenated blood to the rest of the organs. In the case of heart failure, the heart fails to pump the amount of blood that it normally pumps. Certain conditions like hypertension or narrowed coronary arteries due to cholesterol deposition weaken the heart walls over a period due to which the blood is not pumped efficiently.",
+                    "The conditions that cause heart failure are not all reversible. However, treatments are provided to improve the signs and symptoms of heart failure."
+                ],
+                "subheading": "Heart failure is usually related to other condition or disease that may include the following:",
+                "keypoints": [
+                    "1. Coronary artery diseases: This is a condition in which the coronary arteries are narrowed or get blocked",
+                    "2. Congenital heart defect: A defect that is present from birth can affect walls of the heart",
+                    "3. Heart attack: When a heart attack occurs, the blood supply to the heart is stopped which may lead to heart failure",
+                    "4. Cardiomyopathy: This is a condition in which the heart muscles weaken due to reasons like infections, drug or alcohol abuse, genetic issues.",
+                    "5. Other conditions: Other medical conditions like high blood pressure, diabetes, kidney disease, thyroid problems, heart valve disease may lead to heart failure."
+                ],
+                "para": "Lifestyle changes like weight management, exercising and avoiding alcohol and drug abuse are vital in avoiding heart failure.",
+                "procedure": [
+                    {
+                        "subheading": "Symptoms of Heart failure:",
+                        "subpara": "Heart failure can be a chronic (ongoing) or acute (sudden) condition. The symptoms of heart failure include:",
+                        "sub_key_points": [
+                            "1. Shortness of breath on exertion followed by shortness of breath even at rest",
+                            "2. Paroxysmal nocturnal dyspnoea or PND, i.e., shortness of breath and coughing that usually occurs in the night",
+                            "3. Easy fatigue and tiredness",
+                            "4. Pedal oedema i.e., accumulation of fluid in the feet or lower legs that increases in the evening time",
+                            "5. Intermittent chest pain",
+                            "6. Increased frequency of urination at night",
+                            "7. Stomach pain",
+                            "8. Loss of appetite",
+                            "9. Indigestion",
+                            "10. Dry cough",
+                            "11. Giddiness"
+                        ],
+                        "conclusion": ""
+                    },
+                    {
+                        "subheading": "Diagnosis of Heart failure:",
+                        "subpara": "A number of clinical symptoms and lab investigations help in the diagnosis of heart failure. The clinical signs of heart failure are:",
+                        "sub_key_points": [
+                            "1. Tachycardia: abnormal rapid heart rate.",
+                            "2. Pulse murmur(Alternate pulse is weak)",
+                            "3. Pedal oedema",
+                            "4. Cold periphery",
+                            "5. Cardiomegaly: an enlarged heart that may lead to abnormal heart rhythms",
+                            "6. S3",
+                            "7. Constrictive defect"
+                        ],
+                        "conclusion": ""
+                    },
+                    {
+                        "subheading": "Further lab investigations suggested are:",
+                        "subpara": "",
+                        "sub_key_points": [
+                            "1. 2D Echo: to investigate the left ventricle function, pulmonary arterial hypertension (high blood pressure of lungs) and inferior vena cava plethora (lack of collapsibility)",
+                            "2. Blood tests: Haemoglobin (to check for anaemia), elevated B-type natriuretic peptide (BNP) or N-terminal pro-b-type natriuretic (NT pro-BNP) to detect, diagnose or evaluate the severity of heart failure.",
+                            "3. ECG (Electrocardiogram): To give an idea about conduction defect and changes due to a heart attack.",
+                            "4 .Chest X-ray: To view the condition of the heart and lungs."
+                        ],
+                        "conclusion": "2D echo provides details about the size of heart chambers, pumping function of the heart, any leakage of valves, lung pressure and presence of fluid. Other tests suggested are CT Scan, MRI, Coronary angiogram, Myocardial biopsy and stress test."
+                    },
+                    {
+                        "subheading": "Treatment of Heart failure:",
+                        "subpara": "After the diagnosis of heart failure at a cardiology hospital in Hyderabad, various non-pharmacological and pharmacological measures are suggested to the patient. A change in lifestyle is recommended, including weight management, exercises that do not cause physical strain, drug and alcohol abstinence, reduction in salt intake, and restrictions on fluid intake. Other methods of treatment include:",
+                        "sub_key_points": [
+                            "1. Medication: Medicines like diuretics help attain frequent urination, so that fluid is not retained in the body are suggested. Medications to improve the heart pumping function and reduction of load on the heart are prescribed by cardiologists.",
+                            "2. Surgery: Depending on your medical history and current status, surgeries are performed to improve the heart pumping function. Coronary bypass surgery and heart valve replacement or repair are the types of surgery performed. With various trial and encouraging results, heart transplants are also a preferred method of treatment"
+                        ],
+                        "conclusion": "Implantable devices: Implantable cardioverter-defibrillators (ICDs) help in providing a direct shock treatment through pacemaker, whenever an abnormal rhythm is detected. Cardiac resynchronisation therapy(CRT-P/D) is used in which by programming a pacing device, the heart is stimulated mechanically to establish the synchronisation of heart-pumping functions."
+                    }
+                ]
+            },
+            {
+                "department": "Angiogram",
+                "heading": "Coronary Angiogram",
+                "desc": [
+                    "The heart’s arterial blood vessels can be obstructed due to cholesterol accumulation which is termed as Coronary Artery Disease. To help diagnose this, a procedure named Angiography is performed where an X-ray is done to scan for any blockages during blood circulation in the heart. The imaging results from this angiography are known as a Coronary Angiogram. This method is also known as cardiac catheterization."
+                ],
+                "subheading": "How Does Coronary Angiogram Work ",
+                "keypoints": [],
+                "para": "For an angiogram, the doctor would inject a safe human type of dye through a catheter in the blood vessels of the heart. This dye when it flows through the bloodstream and comes in contact with the blood vessels, it is clearly visible through an X-ray machine. This set of images(angiogram) helps the doctor to analyze the severity of the coronary artery disease.",
+                "procedure": [
+                    {
+                        "subheading": "When and Why It is Done",
+                        "subpara": "The doctor would prescribe undergoing an angiogram under the conditions when a patient experiences the following scenarios:",
+                        "sub_key_points": [
+                            "Angina, which is commonly known as severe pain in the chest.",
+                            "Abnormal results when undergoing various heart examinations.",
+                            "Unexplained pinching pain mainly in focus areas of the jaw, neck, shoulder, and arm.",
+                            " Injury in the chest due to any accidents.",
+                            " Congenital Heart Defects (CHDs) i.e having a defect in the heart since birth.",
+                            " Symptoms of coronary artery disease."
+                        ],
+                        "conclusion": ""
+                    },
+                    {
+                        "subheading": "TIME DURATION ",
+                        "subpara": "The process of angiogram would generally take about 30 minutes to an hour. The procedure might extend depending upon the condition of the patient and the requirement of placement of a stent.",
+                        "sub_key_points": [],
+                        "conclusion": ""
+                    },
+                    {
+                        "subheading": "POST PROCEDURE",
+                        "subpara": "After the whole process the patient will be kept in observation for a few hours and based upon the observation’s reports the patient would be discharged within the same day or the next day. Then a follow up appointment of a timely period is scheduled by the doctor. Apart from that a healthy lifestyle is suggested with a decent amount of exercise and quitting any forms of intoxications such as alcohol, tobacco consumption or smoking, respectively.",
+                        "sub_key_points": [],
+                        "conclusion": ""
+                    }
+                ]
+            },
+            {
+                "department": "Angioplasty",
+                "heading": "",
+                "desc": [
+                    ""
+                ],
+                "subheading": "",
+                "keypoints": [],
+                "para": "",
+                "procedure": [
+                    {
+                        "subheading": "",
+                        "subpara": "",
+                        "sub_key_points": [],
+                        "conclusion": ""
+                    },
+                    {
+                        "subheading": "",
+                        "subpara": "",
+                        "sub_key_points": [],
+                        "conclusion": ""
+                    },
+                    {
+                        "subheading": "",
+                        "subpara": "",
+                        "sub_key_points": [],
+                        "conclusion": ""
+                    },
+                    {
+                        "subheading": "",
+                        "subpara": "",
+                        "sub_key_points": [],
+                        "conclusion": ""
+                    }
+                ]
+            },
+            {
+                "department": "Pacemaker",
+                "heading": "",
+                "desc": [
+                    ""
+                ],
+                "subheading": "",
+                "keypoints": [],
+                "para": "",
+                "procedure": [
+                    {
+                        "subheading": "",
+                        "subpara": "",
+                        "sub_key_points": [],
+                        "conclusion": ""
+                    },
+                    {
+                        "subheading": "",
+                        "subpara": "",
+                        "sub_key_points": [],
+                        "conclusion": ""
+                    },
+                    {
+                        "subheading": "",
+                        "subpara": "",
+                        "sub_key_points": [],
+                        "conclusion": ""
+                    },
+                    {
+                        "subheading": "",
+                        "subpara": "",
+                        "sub_key_points": [],
+                        "conclusion": ""
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "locationId": 2,
+        "locationName": "San Francisco",
+        "subdepartments": [
+            {
+                "subdepartmentId": 21,
+                "subdepartmentName": "Sales"
+            },
+            {
+                "subdepartmentId": 22,
+                "subdepartmentName": "Support"
+            }
+        ]
+    }
+]

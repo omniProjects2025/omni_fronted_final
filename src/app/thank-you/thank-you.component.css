@@ -1,0 +1,32 @@
+.thank {
+    color: rgba(0, 143, 213, 1);
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 80px;
+}
+
+.you {
+    color: rgba(140, 198, 63, 1);
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 80px;
+}
+
+.btn_bg {
+    background-color: rgba(0, 143, 213, 1);
+    color: rgba(255, 255, 255, 1);
+    border-radius: 5px;
+    padding: 8px 80px;
+    border: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.p_txt {
+    color: rgba(0, 0, 0, 1);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    text-align: justify !important;
+}

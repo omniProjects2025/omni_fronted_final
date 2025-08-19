@@ -1,0 +1,161 @@
+<app-header></app-header>
+<section class="bg_white">
+  <div class="banner-image">
+    <img src="assets/images/get_touch_with_us.jpg" alt="Banner Image" class="d-none d-md-block">
+    <img src="assets/images/get_touch_with_us_mobile.jpg" alt="Banner Image" class="d-block d-md-none">
+  </div>
+  <div class="">
+    <div class="contact-container">
+      <h2 class="pt-2"><span class="blue">Get In Touch</span> <span class="green"> With Us</span></h2>
+      <p class="description mx-2">
+        We’re here to support you every step of the way in your healthcare journey. Whether you need to book an
+        appointment, explore our range of medical services, check insurance-related information, or provide feedback,
+        our dedicated team is always ready to assist you. At OMNI Hospitals, we believe that prompt communication and
+        compassionate support are essential parts of quality care. You can reach out to us by phone, email, or by
+        visiting the nearest hospital branch. Our staff is trained to guide you through your queries with clarity and
+        care, ensuring a smooth and stress-free experience. Your health, comfort, and satisfaction are important to us
+        and we’re just a call or message away, ready to help you with the attention and service you deserve.
+      </p>
+
+      <div class="contact-details py-3 my-2">
+        <div class="item">
+          <img src="assets/images/call.svg" width="50px" alt="Phone" />
+          <span class="px-2">888 0101 000</span>
+        </div>
+        <img src="assets/images/vertical_line.svg" alt="">
+        <div class="item">
+          <img class="ms-2" src="assets/images/message.svg" width="50px" alt="Email" />
+          <span class="px-2">abc@omnihospitals.in</span>
+        </div>
+      </div>
+
+      <div class="container-fluid my-5">
+        <div class="contact-form-wrapper p-4">
+          <div class="contact-header">
+            <h5 style="font-weight: 500; font-family: 'Roboto', sans-serif;">Contact Us</h5>
+          </div>
+          <form>
+            <div class="row g-3">
+              <div class="col-md-4">
+                <label for="fullName" class="form-label d-flex justify-content-start form_label">Full Name*</label>
+                <input type="text" class="form-control" id="fullName" placeholder="Enter full name">
+              </div>
+              <div class="col-md-4">
+                <label for="email" class="form-label d-flex justify-content-start form_label">Email ID</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter email">
+              </div>
+              <div class="col-md-4">
+                <label for="phone" class="form-label d-flex justify-content-start form_label">Phone Number*</label>
+                <div class="input-group">
+                  <span class="input-group-text" style="border: 1px solid #000;">+91</span>
+                  <input type="tel" class="form-control" id="phone" placeholder="Enter number">
+                </div>
+              </div>
+              <div class="col-12">
+                <label for="feedback" class="form-label d-flex justify-content-start form_label">Type Your Message
+                  Here</label>
+                <textarea class="form-control" id="feedback" rows="4" placeholder=""></textarea>
+              </div>
+              <div class="col-12 text-center">
+                <button type="submit" class="btn sub_btn">Submit</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="dropdown-wrapper">
+        <div class="top-border"></div>
+        <div class="dropdowns">
+          <select (change)="onStateChange($event)">
+            <!-- <option>Select the State</option> -->
+            <option value="">Select the State</option>
+            <option *ngFor="let state of states" [value]="state">{{ state }}</option>
+          </select>
+
+          <select (change)="onLocationChange($event)" [disabled]="!locations.length">
+            <!-- <option>Select the Location</option> -->
+            <option value="">Select the Location</option>
+            <option *ngFor="let loc of locations" [value]="loc.key">{{ loc.name }}</option>
+          </select>
+        </div>
+      </div>
+
+
+    </div>
+
+    <!-- contact.component.html -->
+    <div class="pb-5">
+      <div class="row">
+        <div class="col-md-6">
+          <!-- Cards -->
+          <div class="card mb-3 mx-2" *ngFor="let location of filteredBranches"
+            style="border-radius: 10px; border: 2px solid rgba(130, 130, 130, 1);">
+            <div class="card-body py-2 px-3">
+              <div class="row g-2">
+                <!-- Image Column -->
+                <div class="col-12 col-sm-4 text-center">
+                  <img src="assets/locations/{{location['img']}}" alt="Location" class="img-fluid location-image">
+                </div>
+
+                <!-- Text + Button Column -->
+                <div class="col-12 col-sm-8">
+                  <h6 class="text_blue mb-1 mt-2">{{ location.name }}</h6>
+                  <p class="mb-1 small" style="color: rgba(130, 130, 130, 1); font-weight: 300; font-family: 'roboto';">
+                    {{ location.address }}</p>
+                  <p class="text_blue mb-2 small">{{ location.phone }}</p>
+                  <button class="btn btn-sm float-end"
+                    style="font-size: 12px; padding: 4px 8px; background-color: rgba(0, 143, 213, 1); color: rgba(255, 255, 255, 1);"
+                    (click)="selectBranch(location)">
+                    View Map
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <h3>Nearest OMNI Hospital:</h3>
+          <ng-container *ngIf="nearestBranch['key'] === 'kukatpally'">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3805.4656864742747!2d78.4083654749371!3d17.485269683418686!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb91bc5cdb9fbd%3A0xb96e1ba3797d9253!2sOMNI%20Hospitals%2C%20Kukatpally!5e0!3m2!1sen!2sin!4v1745125466022!5m2!1sen!2sin"
+              width="680" height="950" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </ng-container>
+          <ng-container *ngIf="nearestBranch['key'] === 'kothapet'">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.897405275579!2d78.538822!3d17.368669099999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb98e93eec1a2f%3A0x9dc9016e4c959f7d!2sOMNI%20Hospitals!5e0!3m2!1sen!2sin!4v1745143614525!5m2!1sen!2sin"
+              width="680" height="950" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </ng-container>
+          <ng-container *ngIf="nearestBranch['key'] === 'udai'">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.3095579905453!2d78.47241199999999!3d17.3969257!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9762f7471823%3A0xcd02eae5dae78501!2sUdai%20Omni%20Hospital%20-%20Orthopedics%20%7C%20Multispeciality%20%7C%20Trauma!5e0!3m2!1sen!2sin!4v1745143719927!5m2!1sen!2sin"
+              width="680" height="950" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </ng-container>
+          <ng-container *ngIf="nearestBranch['key'] == 'vizag'">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3800.5565941356035!2d83.3111361!3d17.7183946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a394315b6aa6577%3A0x3699aded6ece84dd!2sOMNI%20RK%20Multi%20Specialty%20Hospital!5e0!3m2!1sen!2sin!4v1745143810828!5m2!1sen!2sin"
+              width="680" height="950" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </ng-container>
+          <ng-container *ngIf="nearestBranch['key'] === 'kurnool'">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3838.6279176861376!2d78.0415378!3d15.823561600000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb5ddf5391420ef%3A0x5751521ca97efcd8!2sOMNI%20Hospitals%20Kurnool!5e0!3m2!1sen!2sin!4v1745143913149!5m2!1sen!2sin"
+              width="680" height="950" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </ng-container>
+          <ng-container *ngIf="nearestBranch['key'] === 'giggles'">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3800.5600994057054!2d83.3110427!3d17.7182292!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a39438ce00efc2f%3A0x14fd5f338cbade20!2sGiggles%20by%20Omni%20RK!5e0!3m2!1sen!2sin!4v1745144024428!5m2!1sen!2sin"
+              width="680" height="950" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </ng-container>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<app-footer></app-footer>

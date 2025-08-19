@@ -1,0 +1,58 @@
+{
+    "Kothapet": [
+      { "name": "Knee Replacement Surgery", "price": "1,49,000/-", "img": "assets/images/fixed_surgery_dummy_image.svg", "desc": "fixed_surgical_paclagesLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a" },
+      { "name": "Hip Replacement Surgery", "price": "1,89,000/-", "img": "assets/images/fixed_surgery_dummy_image.svg", "desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a" },
+      { "name": "Appendix Removal", "price": "79,000/-", "img": "assets/images/fixed_surgery_dummy_image.svg", "desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a" },
+      { "name": "Hernia Surgery", "price": "89,000/-", "img": "assets/images/fixed_surgery_dummy_image.svg", "desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a" },
+      { "name": "Gallbladder Removal", "price": "99,000/-", "img": "assets/images/fixed_surgery_dummy_image.svg", "desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a" },
+      { "name": "Cataract Surgery", "price": "25,000/-", "img": "assets/images/fixed_surgery_dummy_image.svg", "desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a" },
+      { "name": "LASIK Eye Surgery", "price": "45,000/-", "img": "assets/images/fixed_surgery_dummy_image.svg", "desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a" },
+      { "name": "Tonsillectomy", "price": "65,000/-", "img": "assets/images/fixed_surgery_dummy_image.svg", "desc": "Removes inflamed or infected tonsils." },
+      { "name": "Thyroid Surgery", "price": "1,05,000/-", "img": "assets/images/fixed_surgery_dummy_image.svg", "desc": "Removes part or all of the thyroid gland." }
+    ],
+    "Kukatpally": [
+      { "name": "Spine Surgery", "price": "2,20,000/-", "img": "assets/images/fixed_surgery_dummy_image.svg", "desc": "Treats spinal disorders and relieves back pain." },
+      { "name": "Varicose Vein Surgery", "price": "69,000/-", "img": "assets/images/fixed_surgery_dummy_image.svg", "desc": "Closes or removes enlarged varicose veins." },
+      { "name": "Breast Lump Removal", "price": "85,000/-", "img": "assets/images/fixed_surgery_dummy_image.svg", "desc": "Removes abnormal breast lumps or masses." },
+      { "name": "Fissure Surgery", "price": "49,000/-", "img": "assets/images/fixed_surgery_dummy_image.svg", "desc": "Heals painful anal fissures surgically." },
+      { "name": "Piles Surgery", "price": "55,000/-", "img": "assets/images/fixed_surgery_dummy_image.svg", "desc": "Removes or reduces hemorrhoids." },
+      { "name": "Circumcision", "price": "22,000/-", "img": "assets/images/fixed_surgery_dummy_image.svg", "desc": "Surgical removal of foreskin from the penis." },
+      { "name": "Sinus Surgery", "price": "60,000/-", "img": "assets/images/fixed_surgery_dummy_image.svg", "desc": "Opens sinus pathways to improve breathing." },
+      { "name": "Ear Surgery", "price": "40,000/-", "img": "assets/images/fixed_surgery_dummy_image.svg", "desc": "Corrects hearing or cosmetic ear issues." },
+      { "name": "Skin Grafting", "price": "70,000/-", "img": "assets/images/fixed_surgery_dummy_image.svg", "desc": "Replaces damaged skin with healthy tissue." }
+    ],
+    "Nampally": [
+      { "name": "C-Section Delivery", "price": "95,000/-", "img": "assets/images/fixed_surgery_dummy_image.svg", "desc": "Surgical delivery of a baby through the abdomen." },
+      { "name": "Hysterectomy", "price": "1,30,000/-", "img": "assets/images/fixed_surgery_dummy_image.svg", "desc": "Removes the uterus to treat various conditions." },
+      { "name": "Laparoscopy", "price": "88,000/-", "img": "assets/images/fixed_surgery_dummy_image.svg", "desc": "Minimally invasive diagnostic and surgical procedure." },
+      { "name": "Myomectomy", "price": "1,10,000/-", "img": "assets/images/fixed_surgery_dummy_image.svg", "desc": "Removes uterine fibroids." },
+      { "name": "PCOD Surgery", "price": "98,000/-", "img": "assets/images/fixed_surgery_dummy_image.svg", "desc": "Treats ovarian cysts and PCOD issues." },
+      { "name": "D&C Procedure", "price": "30,000/-", "img": "assets/images/fixed_surgery_dummy_image.svg", "desc": "Removes uterine lining tissue." },
+      { "name": "Tubectomy", "price": "35,000/-", "img": "assets/images/fixed_surgery_dummy_image.svg", "desc": "Permanent birth control procedure." },
+      { "name": "Ovarian Cyst Removal", "price": "90,000/-", "img": "assets/images/fixed_surgery_dummy_image.svg", "desc": "Removes cysts from ovaries." },
+      { "name": "Endometriosis Surgery", "price": "1,15,000/-", "img": "assets/images/fixed_surgery_dummy_image.svg", "desc": "Treats painful endometrial tissue growth." }
+    ],
+    "Vizag": [
+      { "name": "Fracture Repair", "price": "75,000/-", "img": "assets/images/fixed_surgery_dummy_image.svg", "desc": "Fixes broken bones using surgical techniques." },
+      { "name": "ACL Reconstruction", "price": "1,45,000/-", "img": "assets/images/fixed_surgery_dummy_image.svg", "desc": "Replaces torn anterior cruciate ligament." },
+      { "name": "Rotator Cuff Surgery", "price": "1,35,000/-", "img": "assets/images/fixed_surgery_dummy_image.svg", "desc": "Repairs torn shoulder muscles and tendons." },
+      { "name": "Meniscus Surgery", "price": "80,000/-", "img": "assets/images/fixed_surgery_dummy_image.svg", "desc": "Repairs or removes damaged knee cartilage." },
+      { "name": "Joint Arthroscopy", "price": "92,000/-", "img": "assets/images/fixed_surgery_dummy_image.svg", "desc": "Minimally invasive joint evaluation and treatment." },
+      { "name": "Shoulder Dislocation", "price": "78,000/-", "img": "assets/images/fixed_surgery_dummy_image.svg", "desc": "Stabilizes and realigns dislocated shoulder." },
+      { "name": "Plantar Fasciitis Surgery", "price": "58,000/-", "img": "assets/images/fixed_surgery_dummy_image.svg", "desc": "Relieves heel pain due to plantar fasciitis." },
+      { "name": "Bunion Surgery", "price": "66,000/-", "img": "assets/images/fixed_surgery_dummy_image.svg", "desc": "Corrects bunion deformities in feet." },
+      { "name": "Hand Surgery", "price": "82,000/-", "img": "assets/images/fixed_surgery_dummy_image.svg", "desc": "Repairs hand injuries or deformities." }
+    ],
+    "Kurnool": [
+      { "name": "Fistula Surgery", "price": "59,000/-", "img": "assets/images/fixed_surgery_dummy_image.svg", "desc": "Treats abnormal anal fistula tracts." },
+      { "name": "Anal Polyp Removal", "price": "43,000/-", "img": "assets/images/fixed_surgery_dummy_image.svg", "desc": "Removes benign polyps from the anal canal." },
+      { "name": "Cholecystectomy", "price": "99,000/-", "img": "assets/images/fixed_surgery_dummy_image.svg", "desc": "Removes gallbladder due to stones or infection." },
+      { "name": "Diabetic Foot Surgery", "price": "85,000/-", "img": "assets/images/fixed_surgery_dummy_image.svg", "desc": "Treats infections and ulcers in diabetic feet." },
+      { "name": "Hydrocele Surgery", "price": "42,000/-", "img": "assets/images/fixed_surgery_dummy_image.svg", "desc": "Treats swelling in the scrotum." },
+      { "name": "Varicocele Surgery", "price": "48,000/-", "img": "assets/images/fixed_surgery_dummy_image.svg", "desc": "Repairs enlarged scrotal veins." },
+      { "name": "ENT Endoscopy", "price": "28,000/-", "img": "assets/images/fixed_surgery_dummy_image.svg", "desc": "Examines ear, nose, and throat structures." },
+      { "name": "Septoplasty", "price": "55,000/-", "img": "assets/images/fixed_surgery_dummy_image.svg", "desc": "Corrects deviated nasal septum." },
+      { "name": "Nasal Polyp Surgery", "price": "63,000/-", "img": "assets/images/fixed_surgery_dummy_image.svg", "desc": "Removes obstructive nasal polyps." }
+    ]
+  }
+  

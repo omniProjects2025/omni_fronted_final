@@ -1,0 +1,159 @@
+p {
+  color: #333;
+}
+
+.bg_primary {
+  background-color: #0391D4;
+}
+
+.text_success {
+  color: #8CC63F;
+}
+
+.owl-carousel .item {
+  padding: 10px;
+  cursor: grab;
+}
+
+.owl-carousel .owl-stage {
+  transition-timing-function: ease-in-out !important;
+}
+
+.owl-carousel .item {
+  padding: 8px;
+  cursor: grab;
+}
+
+.team-card {
+  width: 100%;
+  max-width: 250px;
+  margin: auto;
+  border-radius: 12px;
+  background-color: #ffffff;
+}
+
+.team-img {
+  height: 220px;
+  object-fit: cover;
+  border-bottom: 1px solid #eee;
+}
+
+.owl-carousel .owl-stage {
+  transition-timing-function: ease-in-out !important;
+}
+
+.card-body h5 {
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.card-body span {
+  font-size: 14px;
+  color: #666;
+}
+
+.tabs_scroll {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+}
+
+.bg_ltgreen {
+  background-color: #008FD5;
+  border-radius: 20px;
+}
+
+.mobile_left_box {
+  width: 110px;
+}
+
+.mobile_eye_wh {
+  width: 30px;
+  height: 30px;
+}
+
+.bg_gray {
+  background-color: #fafafa;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.clinical_txt {
+  color: #0291D4;
+}
+
+#mobileTab .nav-link.active .mobile_left_box {
+  background-color: #008FD5 !important;
+}
+
+.team_select {
+  background-color: #D9D9D9;
+}
+
+.profile-img-wrapper {
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.profile-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.text_success {
+  color: #8FC64E;
+  font-size: 28px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: semibold;
+
+}
+
+.dep_text {
+  color: #008FD5;
+  font-family: 'Lato', sans-serif;
+  font-size: 22px;
+  font-weight: 500;
+}
+.profile-img-container {
+  width: 230px;
+  height: 230px;
+  position: relative;
+}
+
+.half-circle-bg {
+  position: absolute;
+  top: 0;
+  width: 230px;
+  height: 230px;
+  z-index: 1;
+}
+.half_circle_img_left{
+  left:25px
+}
+.half_circle_img_right{
+  right:55px
+}
+.overflow_hidden {
+  overflow: hidden;
+}
+.profile-img {
+  width: 160px;
+  height: 160px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  z-index: 2;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0,0,0,0.15);
+}
+.left_74{
+  left: 96% !important;
+}
+.right_74{
+  right: 15% !important;
+}
+

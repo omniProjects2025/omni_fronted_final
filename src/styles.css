@@ -1,0 +1,25 @@
+/* You can add global styles to this file, and also import other style files */
+/* * {
+    box-sizing: border-box;
+    overflow-x: hidden;
+} */
+
+.main-wrapper {
+    overflow-x: hidden !important;
+  }
+
+  @media (max-width: 768px) {
+    .section_title {
+        font-size: 20px !important;
+        font-family: 'roboto';
+        color: #000000 !important;
+        font-weight: 500 !important;
+    }
+  }
+  .section_title{
+    font-size: 30px;
+    font-family: 'roboto'; 
+    color: #000000;
+    font-weight: 500;
+  }
+  

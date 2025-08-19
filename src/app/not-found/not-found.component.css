@@ -1,0 +1,133 @@
+/* Container and wrapper */
+.not-found-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #fff;
+  text-align: center;
+}
+
+/* Content box */
+.not-found-content {
+  max-width: 480px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 40px 30px;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+}
+
+/* Animated SVG icon */
+.not-found-icon {
+  width: 120px;
+  height: 120px;
+  margin-bottom: 25px;
+  animation: rotate 10s linear infinite;
+  stroke-dasharray: 1256; /* circumference of circle (approx) */
+  stroke-dashoffset: 1256;
+  animation-name: dash, rotate;
+  animation-duration: 2s, 10s;
+  animation-timing-function: ease-in-out, linear;
+  animation-iteration-count: 1, infinite;
+  animation-fill-mode: forwards;
+}
+
+.circle {
+  stroke: #ffffffcc;
+}
+
+.cross {
+  stroke: #ff6b6b;
+  stroke-opacity: 0;
+  animation: fadeInStroke 2s ease-in-out forwards 2s;
+}
+
+/* Keyframes */
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes dash {
+  0% {
+    stroke-dashoffset: 1256;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes fadeInStroke {
+  to {
+    stroke-opacity: 1;
+  }
+}
+
+/* Error code */
+.error-code {
+  font-size: 8rem;
+  font-weight: 900;
+  letter-spacing: 12px;
+  margin-bottom: 20px;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
+  user-select: none;
+}
+
+/* Error message */
+.error-message {
+  font-size: 1.3rem;
+  margin-bottom: 30px;
+  font-weight: 500;
+  line-height: 1.4;
+  color: #e0e0e0;
+}
+
+/* Button styles */
+.btn-go-home {
+  display: inline-block;
+  background: #ff6b6b;
+  color: white;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 14px 36px;
+  border-radius: 30px;
+  box-shadow: 0 6px 12px rgba(255, 107, 107, 0.4);
+  transition: background-color 0.3s ease, transform 0.25s ease, box-shadow 0.3s ease;
+  user-select: none;
+}
+
+.btn-go-home:hover,
+.btn-go-home:focus {
+  background-color: #ff3b3b;
+  box-shadow: 0 9px 20px rgba(255, 59, 59, 0.6);
+  transform: translateY(-3px);
+  outline: none;
+}
+
+.btn-go-home:active {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(255, 59, 59, 0.4);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .error-code {
+    font-size: 5rem;
+    letter-spacing: 6px;
+  }
+
+  .not-found-content {
+    padding: 30px 15px;
+  }
+
+  .btn-go-home {
+    padding: 12px 28px;
+    font-size: 1rem;
+  }
+}

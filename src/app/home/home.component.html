@@ -1,0 +1,502 @@
+<app-header></app-header>
+<header class="container-fluid p-0 position-relative bg-white">
+  <div class="owl-carousel banner-slider owl-theme position-relative m-0" style="margin: 0px !important;">
+    <div class="banner-item position-relative">
+      <img src="assets/images/Not Sure About Surgery-01.jpg" class="w-100 d-none d-md-block" alt="Banner 1">
+            <img src="assets/images/not_sure_about_surgery_mobile.jpg" class="d-block d-md-none" alt="Banner 1">
+    </div>
+    <div class="banner-item position-relative">
+      <img src="assets/images/ambulance_banner_white.jpg" class=" img-fluid d-none d-md-block" alt="Banner 2">
+            <img src="assets/images/ambulance_banner_white_mobile.jpg" class="d-block d-md-none" alt="Banner 2">
+    </div>
+    <div class="banner-item position-relative">
+      <img src="assets/images/best_multispeciality.jpg" class="img-fluid d-none d-md-block" alt="Banner Desktop" />
+      <img src="assets/images/best_multispeciality_mobile.jpg" class="d-block d-md-none"
+        alt="Banner Mobile" />
+    </div>
+
+  </div>
+</header>
+
+
+<!-- section two strips code starts from here -->
+<section class="text-center pt-4 bg-white">
+  <ng-container>
+    <div class="container">
+      <div class="row g-3 justify-content-center">
+        <div class="col-6 col-md-2" data-bs-toggle="modal" data-bs-target="#locationModal" style="cursor: pointer;">
+          <img class="img-fluid rounded shadow-sm" src="assets/icons/our_locations.svg" alt="Locations" />
+        </div>
+        <div class="col-6 col-md-2" data-bs-toggle="modal" data-bs-target="#appointmentModal" style="cursor: pointer;">
+          <img class="img-fluid rounded shadow-sm" src="assets/icons/book_an_appointment_new_home_logo.svg"
+            alt="Appointment" />
+        </div>
+        <div class="col-6 col-md-2" (click)="openSecondOpinion()" style="cursor: pointer;">
+          <img class="img-fluid rounded shadow-sm" src="assets/icons/Images_Second_Opinion.svg" alt="Second Opinion" />
+        </div>
+        <div class="col-6 col-md-2" (click)="healthCheckup()" style="cursor: pointer;">
+          <img class="img-fluid rounded shadow-sm" src="assets/icons/Images_Health_Checkup.svg" alt="Health Checkup" />
+        </div>
+        <div class="col-6 col-md-2" (click)="goToFixedSurgical()" style="cursor: pointer;">
+          <img class="img-fluid rounded shadow-sm" src="assets/icons/Images_Fixed_Surgical_Packges.svg"
+            alt="Surgical Packages" />
+        </div>
+      </div>
+    </div>
+  </ng-container>
+</section>
+
+<div class="d-flex speciality-container px-2 justify-content-center mt-4"
+  style="overflow-x: auto; white-space: nowrap; -webkit-overflow-scrolling: touch;">
+  <div *ngFor="let spe of specialities; index as i" (click)="ourSpecialities(i)"
+    class="speciality-item px-3 py-2 flex-shrink-0" [ngClass]="i === activeIndex ? 'active' : 'text_gray'">
+    <span>{{ spe.spe_name }}</span>
+  </div>
+</div>
+
+<section class="bg_lgt_blue">
+  <!--************** Start Form Here OUR SPECIALITIES -->
+  <div class="py-1" *ngIf="activeIndex === 0">
+    <div class="container py-2">
+      <div class="row gx-4 gy-4 justify-content-center">
+        <div class="col-6 col-lg-3 h-100" *ngFor="let item of our_specialities; let i = index"
+          [ngClass]="{ 'mx-auto': i === 12 }">
+          <div class="specialty-card d-flex flex-column flex-lg-row align-items-center p-3 h-100"
+            (click)="goToDetails(item.dep_name)">
+            <img [src]="item.img" [alt]="item.dep_name" class="img-fluid specialty-icon mb-2 mb-lg-0 me-lg-3" />
+            <h6 class="specialty-title text-center text-lg-start">{{ item.dep_name }}</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+  <!--************** Start End Here OUR SPECIALITIES -->
+
+  <div class="" *ngIf="activeIndex==1">
+    <div class="carousel-container pt-1 pb-5">
+      <div class="carousel" [style.transform]="getTransform()">
+        <div class="carousel-slide" *ngFor="let dep of depertments">
+          <div class="text-center specialities-container">
+            <div class="title-container py-3">
+              <div class="line line-left"></div>
+              <span class="title_text">KEY SURGERIES</span>
+              <div class="line line-right"></div>
+            </div>
+            <div class="row align-items-center g-0 pt-4">
+              <!-- IMAGE SECTION -->
+              <div class="col-md-3 ms-md-4 col-12 d-flex justify-content-center mb-3 mb-md-0 img_left_margin">
+                <img class="border_radius" width="310" height="310" [src]="dep['img']" alt="surgery-image">
+              </div>
+
+              <!-- TEXT SECTION -->
+              <div class="col-md-8 col-12 ps-md-3 key_tab spac_mobile">
+                <h1 class="head_text text-start mt-md-0 mt-2">{{ dep['d_name'] }}</h1>
+                <p class="key_surgeries">
+                  {{ dep['d_description'] }}
+                  <span class="p-0 m-0" *ngIf="showmoreactive_one">
+                    It aims to provide high-quality treatment with cutting-edge technology and experienced doctors.
+                  </span>
+                  <button (click)="ReadMore()" class="btn btn-link text_lgt_primary fw-bold p-0">
+                    {{ showmoreactive_one ? 'Read Less <<' : 'Read More >>' }} </button>
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="carousel-buttons px-3">
+        <img class="me-1" src="assets/images/{{index!=0?'back_black.svg':'back_gray.svg'}}" alt=""
+          (click)="index!=0?updateCarousel('prev'):''">
+        <img class="ms-1"
+          src="assets/images/{{index === depertments.length - 1?'farward_gray.svg':'farward_black.svg'}}" alt=""
+          (click)="index==depertments.length-1?'':updateCarousel('next')">
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- Technologies code end here -->
+</section>
+<!-- WHY CHOOSE OMNI SECTION -->
+<div class="why-choose-container my-5 mx-md-4 p-md-4 mx-lg-4 p-lg-4 rounded-4">
+  <div class="row g-4 align-items-center px-lg-4 px-2">
+    <!-- Left Image -->
+    <div class="col-lg-5 text-center text-lg-start">
+      <img src="assets/images/why_choosi_omni.jpg" alt="Why Choose Omni Hospitals"
+        class="img-fluid rounded-md-5 rounded-lg-5 w-100 h-100 object-fit-cover" style="max-height: 400px;">
+    </div>
+
+    <!-- Right Content -->
+    <div class="col-lg-7">
+      <h5 class="section-title px-4 py-2 d-inline-block fw-bold mb-3" style="border-radius: 28px;">
+        WHY CHOOSE OMNI HOSPITALS?
+      </h5>
+
+      <p class="text-dark fs-6 lh-lg"
+        [ngStyle]="{ 'max-height': showFullText ? 'none' : '6.2em', 'overflow': showFullText ? 'visible' : 'hidden' }">
+        {{ fullText }}
+      </p>
+
+      <a href="javascript:void(0)" (click)="showFullText = !showFullText"
+        class="btn btn-sm px-3 py-1 fw-semibold rounded-pill text-dark read-more-btn">
+        {{ showFullText ? 'Show Less <<' : 'Read More >>' }} </a>
+
+          <!-- Stats Strip -->
+          <div class="stats-strip mt-4 d-flex flex-wrap justify-content-between align-items-center gap-1">
+            <div *ngFor="let item of why_choose_omni; let i = index"
+              class="stat-box d-flex align-items-center justify-content-center flex-fill text-center" [ngClass]="{
+      'justify-content-start': i == 0,
+      'justify-content-end': i == why_choose_omni.length - 1
+    }">
+              <div class="inner-box d-flex align-items-center gap-2">
+                <img [src]="item.img" [alt]="item.title" width="80" height="80">
+                <div class="text-start">
+                  <h5 class="mb-0 fw-bold text_primary">{{ item.value }}</h5>
+                  <small class="text-dark fw-medium">{{ item.title }}</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+    </div>
+  </div>
+</div>
+
+<section>
+  <div class="title-container mb-3 mt-1">
+    <h1 class="px-5 py-1"
+      style="font-size:30px; font-family: 'roboto'; color: #ffff; font-weight: 500; background-color: #008FD5; border-radius: 27px;">
+      Technologies</h1>
+  </div>
+  <div class="swiper-wrapper-container position-relative pb-4">
+    <img src="assets/images/back_black.svg" class="custom-arrow left-arrow ms-5" [class.disabled]="!canSlidePrev"
+      (click)="swiperPrev()" />
+
+    <img src="assets/images/farward_black.svg" class="custom-arrow right-arrow me-5" [class.disabled]="!canSlideNext"
+      (click)="swiperNext()" />
+
+    <swiper-container #swiperContainer class="custom-swiper" [attr.slides-per-view]="slidesPerView" space-between="20"
+      navigation="false" allow-touch-move="true" [attr.breakpoints]="breakpointsJson">
+      <swiper-slide *ngFor="let tech of technologies" class="tech-slide">
+        <img [src]="tech.img" [alt]="tech.label" class="img-fluid img_rad" />
+        <h3 class="tech-title text-center" style="color:#008FD5">{{ tech.label }}</h3>
+        <p class="tech-desc">{{ tech.short_desc }}</p>
+        <a class="text-center "><span class="read_btn px-3 py-2" (click)="onClickTechno(tech['label'])">Read More
+            >></span></a>
+      </swiper-slide>
+    </swiper-container>
+  </div>
+</section>
+
+
+<!-- Testimonial Section -->
+<section style="background: linear-gradient(0deg, #0F9DCC 0%, #008FD5 100%);
+">
+  <div class="py-3 wow fadeInUp mx-3" data-wow-delay="0.1s">
+    <div class="title-container mb-3 mt-1">
+      <h1 class="" style="font-size:30px; font-family: 'roboto'; color: #ffff; font-weight: 500;">Testimonials</h1>
+    </div>
+    <!-- Owl Carousel -->
+    <div class="row">
+      <div class="col-md-5 col-sm-12 col-xs-12">
+        <div class="owl-carousel" #owlCarousel>
+          <div *ngFor="let testimonial of testimonials; let idx = index" class="testimonial-item card ms-2">
+            <div class="row g-0">
+              <!-- Video on left -->
+              <div class="col-md-4 d-flex align-items-center justify-content-center">
+                <app-video-player [videoUrl]="testimonial.videoUrl" [thumbnailUrlId]="testimonial.thumbnailUrl"
+                  [(videoPlayed)]="testimonial.videoPlayed" (videoStarted)="onVideoPlay(idx)"
+                  (videoStopped)="onVideoPauseOrEnd(idx)">
+                </app-video-player>
+              </div>
+
+              <!-- Text on right -->
+              <div class="col-md-8  d-flex flex-column align-items-start p-3 position-relative">
+                <img class="position-absolute" style="width:29px;height:26px;right:0px;top:2px"
+                  src="assets/images/quote.svg" alt="">
+                <div class="d-flex flex-column ps-3">
+                  <h5 class="p-0 m-0" style="font-size: 15px;">{{ testimonial.name }}</h5>
+                  <p class="m-0 py-2" style="font-size: 12px; color: #828282;">{{ testimonial.text }}</p>
+                  <p class="m-0" style="font-size: 12px; color: #000;">{{ testimonial.date }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-md-7 col-sm-12 col-xs-12">
+        <div class="owl-carousel" #patientowlCarousel>
+          <div *ngFor="let testimonial of userTestimonials" class="testimonial_card card p-3 pb-0">
+            <div class="d-flex align-items-center mb-2">
+              <img [src]="testimonial.image" class="me-2 cicle_image" alt="User Image" style="object-fit: cover;">
+              <div class="d-flex justify-content-between w-100">
+                <div>
+                  <h6 class="mb-0 text_monial" style="font-weight: 600;">{{ testimonial.name }}</h6>
+                  <small class="text-muted">{{ testimonial.location }}</small>
+                </div>
+                <img src="assets/images/quote.svg" style="width:29px;height:26px">
+              </div>
+            </div>
+            <p class="mb-0 pb-0" style="font-size: 13px; color: #333;">{{ testimonial.text }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Testimonial Section End -->
+
+<!-- Blogs code start from here -->
+<section class="bg_blog container-fluid">
+  <div class="py-3 wow fadeInUp mx-3 cont" data-wow-delay="0.1s">
+    <div class="title-container mb-3 mt-1">
+      <h1 class="blog-title" style="font-size: 30px; font-family: 'roboto'; color: #0E9CCD; font-weight: 500;">
+        Blogs
+      </h1>
+    </div>
+
+    <!-- Owl Carousel -->
+    <div class="owl-carousel" #blogCarousel>
+      <div *ngFor="let blog of blogs; let idx = index" class="blog-item card p-2">
+        <img [src]="blog.image" class="blog-image img_rounded" alt="Blog Image">
+        <div class="blog-content pt-3 gap-1 d-flex flex-column">
+          <h5 class="blog-title p-0 m-0">{{ blog.title }}</h5>
+          <p class="blog-text p-0 m-0">{{ blog.description }}</p>
+          <p class="blog-date p-0 m-0">{{ blog.date }}</p>
+          <a class="blog-read-more m-0 px-3 py-1" (click)="goToBlogDetails(blog['title'])"
+            style="width: fit-content;color: #ffff !important; font-size: 10px; font-weight: 500; font-family: 'roboto'; background-color: #008FD5; border-radius: 25px;"><span>Read
+              More >></span></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pagination Dots -->
+    <div class="d-flex justify-content-center my-3">
+      <span *ngFor="let blog of blogs; let idx = index" (click)="goToBlogSlide(idx)" class="blog-dot"
+        [class.active]="idx === currentBlogIndex"></span>
+    </div>
+  </div>
+</section>
+<!-- Blogs code End here -->
+
+<!-- FAQ Section -->
+<section>
+  <div class="p-4 bg_blue position-relative mt-4">
+    <div class="title-container">
+      <div class=" mb-3 mt-1 text-center text-md-start position-absolute top_32">
+        <h1 class="faq-title px-3 px-md-5 py-2 mx-auto mx-md-0">
+          FREQUENTLY ASKED QUESTIONS
+        </h1>
+      </div>
+
+    </div>
+    <div *ngFor="let faq of faqs; let i = index" class="faq-item mb-3" [ngClass]="{'mt-4':i ==0}">
+      <div class="faq-header d-flex justify-content-between align-items-center px-3 py-3" (click)="toggleFaq(i)"
+        [ngClass]="{ 'opened': faq.expanded }" tabindex="0" role="button" [attr.aria-expanded]="faq.expanded">
+        <span class="faq-question fw-semibold">
+          {{ faq.question }}
+        </span>
+        <img [src]="faq.expanded ? 'assets/icons/minus.svg' : 'assets/icons/plus.svg'" alt="Toggle"
+          class="toggle-icon" />
+      </div>
+      <div class="faq-body px-3 pb-3" *ngIf="faq.expanded">
+        <div class="faq-answer" *ngIf="faq.answer">
+          {{ faq.answer }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="py-5" style="background-color: #f8fcff;">
+  <!-- Awards Section -->
+  <div class="text-center">
+    <h4 class="text-uppercase fw-bold text-white d-inline-block px-4 py-2 rounded-pill"
+      style="font-size:25px; font-family: 'roboto'; color: #ffff; font-weight: 500; background-color: #008FD5;">Awards
+    </h4>
+    <div class="row justify-content-center align-items-center mt-4 g-4">
+      <div class="col-6 col-sm-4 col-md-2 text-center" *ngFor="let award of awards">
+        <img [src]="award.img" alt="Award" class="img-fluid" />
+      </div>
+    </div>
+  </div>
+
+
+
+<!-- contact-form.component.html -->
+<div class="py-5 px-3 px-md-5">
+  <div class="row">
+    <h5 class="fw-bold mb-3 text-center">Have Questions Or Need Assistance?</h5>
+
+    <!-- Left Text -->
+    <h2 class="col-md-2 fw-bold lh-sm m-0 fs-4 text-center text-md-start">
+      WE'RE HERE FOR YOU, ANYTIME!
+    </h2>
+
+    <div class="col-md-10">
+      <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)" class="row g-3">
+
+        <!-- Name Field -->
+        <div class="col-12 col-md-4">
+          <input type="text"
+                 class="form-control"
+                 name="name"
+                 placeholder="Name*"
+                 [(ngModel)]="formData.name"
+                 required
+                 #name="ngModel">
+          <div *ngIf="name.invalid && name.touched" class="text-danger mt-1">
+            Name is required
+          </div>
+        </div>
+
+        <!-- Phone Field -->
+        <div class="col-12 col-md-4">
+          <input type="text"
+                 class="form-control"
+                 name="phone"
+                 placeholder="Phone Number*"
+                 [(ngModel)]="formData.phone"
+                 required
+                 #phone="ngModel">
+          <div *ngIf="phone.invalid && phone.touched" class="text-danger mt-1">
+            Phone number is required
+          </div>
+        </div>
+
+        <!-- Email Field -->
+        <div class="col-12 col-md-4">
+          <input type="email"
+                 class="form-control"
+                 name="email"
+                 placeholder="Email"
+                 [(ngModel)]="formData.email"
+                 email
+                 #email="ngModel">
+          <div *ngIf="email.invalid && email.touched" class="text-danger mt-1">
+            Enter a valid email
+          </div>
+        </div>
+
+        <!-- Submit button -->
+        <div class="col-12 text-center text-md-start">
+          <button type="submit"
+                  class="btn px-5 py-2 mt-3"
+                  style="background-color: #0291D5; color: white;">
+            Submit
+          </button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</div>
+
+
+</div>
+
+
+
+
+<div class="modal fade" id="locationModal" tabindex="-1" aria-labelledby="locationModalLabel" aria-hidden="true"
+  data-bs-backdrop="static">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="row pt-4">
+        <div class="col-md-11 col-11 col-sm-10 col-xs-10 d-flex align-items-center justify-content-center">
+          <div class="line line-left ms-5"></div>
+          <div class="">
+            <span class="title_text text-center px-2">Our Locations</span>
+          </div>
+          <div class="line line-right"></div>
+        </div>
+        <div class="col-md-1 col-1 d-flex col-sm-2 col-xs-2 align-items-center justify-content-start p-0 m-0">
+          <button class="" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+      </div>
+      <div class="modal-body">
+        <div class="container">
+          <div class="row g-3">
+            <div class="col-6 col-md-4" *ngFor="let details of locations_details; index as l"
+              (click)="routeToLocation(details['location_name'], details['img'])">
+              <div class="text-center">
+                <img src="assets/locations/{{details['img']}}" alt="Kothapet">
+                <p class="border_prop py-2" style="background-color: #008FD5 !important;">{{details['location_name']}}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade custom-modal" id="appointmentModal" tabindex="-1" aria-hidden="true" data-bs-backdrop="static">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="modal-title-container">
+          <div class="line line-left"></div>
+          <span class="px-2 book_text" style="color: #008FD5; font-family: 'roboto'; font-weight: 500;">BOOK AN
+            APPOINTMENT</span>
+          <div class="line line-right"></div>
+        </div>
+        <button type="button" class="btn-close btn_close" data-bs-dismiss="modal"></button>
+      </div>
+
+
+      <div class="form-container rounded">
+        <form>
+          <div class="d-flex flex-column">
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control" id="fullName" placeholder=" " required>
+              <label for="fullName" class="ps-0">Full Name</label>
+            </div>
+            <button type="submit" class="btn btn_outline_dark submit-btn">Submit</button>
+          </div>
+
+          <div class="form-floating mb-3">
+            <input type="tel" class="form-control" id="phoneNumber" placeholder=" " required>
+            <label for="phoneNumber" class="ps-0">Phone Number</label>
+          </div>
+
+          <div class="form-floating mb-3">
+            <input type="email" class="form-control" id="email" placeholder=" " required>
+            <label for="email" class="ps-0">Email ID</label>
+          </div>
+
+          <div class="mb-3 select-container">
+            <select class="form-control ps-0" id="location" (click)="locationToggle(1)">
+              <option value="" disabled selected>Location</option>
+              <option value="Hyderabad">Hyderabad</option>
+              <option value="Bangalore">Bangalore</option>
+              <option value="Mumbai">Mumbai</option>
+            </select>
+            <img src="assets/images/{{direction_icon?'down_icon.svg':'up_icon.svg'}}" class="select-icon"
+              id="location-icon">
+          </div>
+
+          <div class="select-container">
+            <select class="form-control ps-0" id="department" (click)="locationToggle(2)">
+              <option value="" disabled selected>Department</option>
+              <option value="Cardiology">Cardiology</option>
+              <option value="Neurology">Neurology</option>
+              <option value="Orthopedics">Orthopedics</option>
+            </select>
+            <img src="assets/images/{{depertment_icon?'down_icon.svg':'up_icon.svg'}}" class="select-icon"
+              id="location-icon">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-footer></app-footer>

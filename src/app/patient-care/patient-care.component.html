@@ -1,0 +1,49 @@
+<app-header></app-header>
+<!-- Hero Section -->
+<header class="hero-section" [ngStyle]="{'background-image': 'url(' + bannerImage + ')'}">
+  <div class="overlay"></div>
+  <div class="hero-content container text-center">
+    <h1><i class="fas fa-hospital-user"></i> Patient Care Guide</h1>
+    <p>Everything you need to know for your hospital journey</p>
+    <button class="btn btn-light btn-lg shadow" (click)="callNumber(mobileNumber)">
+      📱 Call Us: {{ mobileNumber }}
+    </button>
+  </div>
+</header>
+
+<!-- Main Content -->
+<main class="container my-5">
+  <div class="info-section" *ngFor="let sec of sections" [@fadeInUp]>
+    <div class="icon-box">
+      <i [class]="sec.icon"></i>
+    </div>
+    <div class="info-text">
+      <h2>{{ sec.title }}</h2>
+      <p *ngIf="sec.text">{{ sec.text }}</p>
+      <ul *ngIf="sec.list">
+        <li *ngFor="let item of sec.list">{{ item }}</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Contact -->
+  <section class="contact-section text-center" [@fadeInUp]>
+    <h2><i class="fas fa-phone-volume"></i> Need Assistance?</h2>
+    <p>We are available 24/7 to guide you.</p>
+    <div class="mt-4">
+      <button class="btn btn-danger mx-2" (click)="callNumber(phoneNumber)">
+        📞 {{ phoneNumber }}
+      </button>
+      <button class="btn btn-success mx-2" (click)="callNumber(mobileNumber)">
+        📱 {{ mobileNumber }}
+      </button>
+    </div>
+  </section>
+</main>
+
+<!-- Floating Call Button (Mobile) -->
+<a class="floating-call-btn" (click)="callNumber(mobileNumber)">
+  <i class="fas fa-phone-alt"></i>
+</a>
+
+<app-footer></app-footer>

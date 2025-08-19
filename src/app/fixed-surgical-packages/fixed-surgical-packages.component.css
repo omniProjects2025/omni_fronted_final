@@ -1,0 +1,59 @@
+/* .banner {
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+  
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  
+    .banner-text {
+      width: 90%;
+      max-width: 700px;
+      color: #fff;
+      text-shadow: 0 0 5px rgba(0,0,0,0.6);
+    }
+  } */
+  
+  .selected_bg{
+    background-color: #008FD5;
+    color: white !important;
+}
+.text_primary{
+    color:rgba(0, 143, 213, 1);
+}
+.btn_primary{
+  background-color: rgba(0, 143, 213, 1);
+  color: #fff;
+}
+.bg_card{
+  background-color:rgba(0, 143, 213, 0.05);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.location-scroll-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; /* Firefox */
+}
+.location-scroll-wrapper::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge */
+}
+.location-scroll {
+  flex-wrap: nowrap !important;
+}
+
+.location-btn {
+  white-space: nowrap;
+  font-size: 1rem; /* Default for large screens */
+}
+
+@media (max-width: 576px) {
+  .location-btn {
+    font-size: 0.85rem; /* Smaller font for mobile */
+  }
+}
+.custom_shadow {
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.5);
+}

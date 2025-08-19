@@ -1,0 +1,78 @@
+.bg_light_blue{
+    background-color:  #FFFFFF;
+  }
+  .bg_blue{
+    background-color: #008FD5;
+  }
+  .br_gray{
+    border:1px solid #008FD5;
+    padding: 14px;
+  }
+  .bg_white{
+    border-color: #FFFFFF;
+  }
+  .border_remove{
+    border:none !important;
+  }
+  .meadia_title{
+    font-size: 25px;
+  }
+  @media (max-width: 768px) {
+    .meadia_title{
+        font-size: 20px !important;
+        margin: 0px !important;
+      }
+      .mobile_view{
+        padding:0px !important;
+      }
+      .mobile_view_text{
+        font-size: 13px !important;
+      }
+  }
+  .description_text{
+      white-space: pre-wrap;
+  }
+    .auto_scroll {
+      height: 686px;
+      overflow: auto;
+    }
+   
+.pain-image-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 4 columns */
+  gap: 15px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.pain-image-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  object-fit: cover;
+}
+.blue_heading{
+    font-size: 24px;
+    color: #008ed9;
+}
+.img-container {
+  width: 100%;
+  /* no height restriction here */
+}
+
+.blog_image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+iframe {
+  max-width: 100%;
+  height: auto;
+}
+.ytp-info-panel-preview{
+  display: none !important;
+}
+::ng-deep .ytp-info-panel-preview {
+   display: none !important;
+}

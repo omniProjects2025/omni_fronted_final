@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover Effect</title>
+    <style>
+        .image-container {
+            position: relative;
+            display: inline-block;
+        }
+
+        .image-container img {
+            display: block;
+            width: 200px;
+            height: 200px;
+            filter: grayscale(100%); /* Gray image by default */
+            transition: filter 0.3s ease;
+        }
+
+        .image-container:hover img {
+            filter: grayscale(0%); /* Remove grayscale on hover */
+        }
+
+        .icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: blue;
+            color: white;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 5px;
+            display: none; /* Hide icon by default */
+        }
+
+        .image-container:hover .icon {
+            display: flex; /* Show icon on hover */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="image-container">
+        <img src="https://via.placeholder.com/200x200?text=Gray+Image" alt="Gray Image">
+        <div class="icon">🔵</div> <!-- Blue Block Icon -->
+    </div>
+
+</body>
+</html>

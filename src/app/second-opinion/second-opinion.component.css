@@ -1,0 +1,129 @@
+.opinion_head{
+    font-family: 'roboto';
+    font-size: 30px;
+    font-weight: 900;
+    color: #008FD5;
+}
+.head_text p{
+    text-align: justify;
+}
+.info-box {
+    text-align: left;
+}
+.counter {
+    font-weight: bold;
+    color: #008FD5;
+    font-size: 24px;
+}
+.counter_bg{
+    background-color: #008FD526;
+}
+.counter{
+    color: #008FD5;
+    font-weight: 900;
+    font-family: 'roboto';
+    font-size: 50px;
+}
+.par_counter{
+    margin-right: 33px;
+}
+.counter-label{
+    font-weight: 400;
+    font-family: 'roboto';
+    font-size: 20px;
+}
+.free_sec{
+    color: #000000;
+    font-weight: 500;
+    font-family: 'roboto';
+    font-size: 25px;
+}
+.form-container {
+    background: white;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    border: 1px solid #ccc;
+}
+.title {
+    text-align: center;
+    font-weight: bold;
+}
+.title span {
+    color: black;
+}
+.title::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 2px;
+    background-color: green;
+    margin-right: 5px;
+}
+.title::after {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 2px;
+    background-color: blue;
+    margin-left: 5px;
+}
+.form-control {
+    border: none;
+    border-bottom: 1px solid #ccc;
+    border-radius: 0;
+    box-shadow: none;
+}
+.form-control:focus {
+    outline: none;
+    box-shadow: none;
+    /* border-bottom: 2px solid #000; */
+}
+
+.btn-submit {
+    display: block;
+    /* width: 100%; */
+    border: 1px solid grey;
+    color: grey;
+    background-color: white;
+    margin-top: 10px;
+    padding: 5px 40px;
+    border-radius: 10px;
+}
+.btn-submit:hover {
+    background-color: #8CC63F;
+    color: white;
+    border: 1px solid #8CC63F;
+}
+.line {
+    width: 60px;
+    height: 3px;
+}
+
+.line-left {
+    background-color: #8CC63F;
+}
+
+.line-right {
+    background: #008FD5;
+}
+@media (max-width: 768px) {
+    .free_sec {
+      font-size: 20px;
+    }
+  }
+
+  .custom_select_btn {
+    appearance: none;           
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: 1px solid #828282;  
+    background-color: #fff;
+    padding: 10px 16px;
+    border-radius: 1.3rem;    
+    color: #828282;
+    font-weight: 500;
+    cursor: pointer;
+  }

@@ -1,0 +1,63 @@
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.text_justify {
+  text-align: justify;
+}
+
+.feed_txt {
+  color: rgba(0, 0, 0, 1);
+  font-family: 'roboto';
+  font-weight: 800;
+  font-size: 35px;
+}
+
+.is-invalid {
+  border-color: #dc3545 !important;
+}
+
+.text-danger {
+  color: #dc3545 !important;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+input[type='text'].form-control.text-center {
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+}
+input,
+select,
+textarea,
+.input-group-text,
+.form-control
+{
+  border: 1px solid #666666 !important;
+}
+.padding_hor{
+  padding-left: 5rem !important;
+  padding-right: 5rem !important;
+}
+
+.star-icon {
+  font-size: 1.6rem;
+  color: white;
+  border: 1px solid black;
+  border-radius: 4px;
+  padding: 2px;
+  margin-right: 4px;
+  cursor: pointer;
+}
+
+.star-icon.filled {
+  color: orange; /* Or use 'yellow' if preferred */
+  border-color: orange;
+}

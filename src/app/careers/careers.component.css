@@ -1,0 +1,58 @@
+.bg_lgt_blue{
+background-color: #f2f9fd;
+}
+  .border_gray{
+    border:1px solid #666666;
+  }
+  .card{
+    border:1px solid #666666 !important;
+  }
+  .form_border{
+    border:1px solid #000000 !important;
+    background-color: #FFFFFF !important;
+  }
+  .br_dark{
+    border:1px solid #000000 !important;
+    color:#666666;
+  }
+  .form-control {
+    all: unset; /* Reset all Bootstrap styles */
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    color: #000;
+    border: 1px solid #ccc; 
+    border-radius: 0.25rem;     
+    box-sizing: border-box;
+}
+.choose_file_btn:hover {
+  background-color: #008FD5 !important;
+  color: white !important;
+  border-color: #008FD5 !important;
+}
+.btn_primary{
+  background-color:rgba(0, 143, 213, 1)
+}
+
+.apply-form-container {
+  max-width: 500px;
+  background-color: #f9fdff;
+  box-sizing: border-box;
+}
+
+/* Remove outline on focus */
+input:focus,
+button:focus {
+  box-shadow: none !important;
+  outline: none !important;
+}
+.btn_job_primary:hover{
+  background-color:rgba(0, 143, 213, 1);
+  color: white;
+  border: 1px solid rgba(0, 143, 213, 1);
+}
+.btn_job_primary{
+  border: 1px solid rgba(102, 102, 102, 1);
+  color: rgba(102, 102, 102, 1);
+}

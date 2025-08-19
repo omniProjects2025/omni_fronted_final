@@ -1,0 +1,193 @@
+<app-header></app-header>
+<section class="bg-white">
+  <div class="text-center py-4">
+    <div class="d-flex justify-content-center mb-3">
+      <h2 class="position-relative d-inline-block px-3 h_txt">
+        <img class="me-1" src="assets/health_checkup/dots_left.svg" alt="">
+        Book An Appointment
+        <img class="ms-1" src="assets/health_checkup/dots_right.svg" alt="">
+      </h2>
+    </div>
+    <p class="des_book px-3 px-md-5">
+      Booking an appointment at OMNI Hospitals is simple, secure, and just a few clicks away. Whether you’re seeking
+      expert consultation, follow-up care, or a diagnostic service, our dedicated team ensures you receive timely and
+      personalized medical attention. Just fill out the form below with your details, and our team will get in touch
+      with you to confirm your appointment. You can also reach us by phone or visit your nearest OMNI Hospitals branch
+      for assistance. Your health and convenience are our top priorities, and we strive to make your healthcare journey
+      as smooth as possible. We’re here to support you every step of the way.
+    </p>
+  </div>
+
+  <div class="container-fluid px-3 px-md-5">
+    <div class="row align-items-start position-relative">
+
+      <button
+        class="btn bg_danger text-white emergency-btn d-flex flex-column justify-content-center align-items-center fw-bold"
+        style="line-height: 1.4;" (click)="showEmergencyModal = true" *ngIf="!showEmergencyModal">
+        <span *ngFor="let l of 'EMERGENCY'.split('')">{{ l }}</span>
+      </button>
+
+      <div class="col-lg-5 mb-4 mb-lg-0 text-center">
+        <img src="assets/our_doctors/book_an_appointment_image.svg" alt="Doctor" class="custom-appointment-image" />
+      </div>
+
+      <div class="col-lg-7 mx-auto">
+        <div class="d-flex justify-content-center">
+          <div class="position-relative border-1 p-4 appointment-form-container"
+            style="width:600px; border: 1px solid #000000; border-radius: 16px; background-color: #fff;">
+            <div class="position-absolute top-0 start-50 translate-middle-x bg-white px-4 center_align"
+              style="margin-top: -24px; border: 1px solid #000000; border-radius: 24px;">
+              <h5 class="m-0 text-center py-1 contact_txt">Contact Us</h5>
+            </div>
+
+            <form class="pt-4" (ngSubmit)="submitForm()" #form="ngForm">
+              <div class="mb-3">
+                <label class="form-label">Full Name*</label>
+                <input type="text" class="form-control" name="fullName" [(ngModel)]="formData.fullName" required />
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label">Phone Number*</label>
+                <div class="input-group">
+                  <span class="input-group-text">+91</span>
+                  <input type="tel" class="form-control" name="phoneNumber" [(ngModel)]="formData.phoneNumber"
+                    required />
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label">Email ID</label>
+                <input type="email" class="form-control" name="emailId" [(ngModel)]="formData.emailId" />
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label">Location*</label>
+                <select class="form-select" name="location" [(ngModel)]="formData.location" required>
+                  <option disabled selected>Select Location</option>
+                  <option>Hyderabad</option>
+                  <option>Vizag</option>
+                </select>
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label">Department</label>
+                <select class="form-select" name="department" [(ngModel)]="formData.department">
+                  <option disabled selected>Select Department</option>
+                  <option>Cardiology</option>
+                  <option>Orthopedics</option>
+                </select>
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label">Health Concern/Message</label>
+                <textarea rows="3" class="form-control" name="message" [(ngModel)]="formData.message"></textarea>
+              </div>
+
+              <div class="text-center">
+                <button type="submit" class="btn"
+                  style="background-color: #008cdb; color: #fff; border-radius: 12px; width: 181px;">
+                  Submit
+                </button>
+              </div>
+            </form>
+
+          </div>
+        </div>
+
+        <div class="d-flex align-items-center flex-wrap justify-content-center my-4 mx-lg-0 mx-md-0 mx-4">
+          <div class="consult-wrapper my-5 position-relative">
+            <img src="assets/icons/24by7_with_text.svg" alt="24/7 Support" class="overlap-img" />
+
+            <div class="consult_button text-center py-2">
+              <div class="cont_num">888 0101 000</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="position-fixed" *ngIf="showEmergencyModal" style="top: 30%; left: 0; z-index: 1056;">
+    <div class="bg_danger text-white p-3 rounded-end shadow d-flex" style="width: 350px;">
+      <div class="d-flex flex-column align-items-center pe-3" style="min-width: 30px;">
+        <span *ngFor="let l of 'EMERGENCY'.split('')" class="fw-bold" style="line-height: 1.4; font-size: 20px;">
+          {{ l }}
+        </span>
+      </div>
+
+      <div class="flex-grow-1 mt-3">
+        <div class="d-flex justify-content-between align-items-center mb-2">
+          <strong>Emergency Numbers</strong>
+          <button type="button" class="btn-close btn-close-white btn-sm" (click)="showEmergencyModal = false"></button>
+        </div>
+
+        <div *ngFor="let location of emergencyNumbers" class="d-flex justify-content-between mb-2"
+          style="padding-bottom: 2px;">
+          <div style="white-space: nowrap;">{{ location.place }}</div>
+          <div class="fw-bold text-end" style="white-space: nowrap;">{{ location.phone }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid" style="margin-bottom: 2px;">
+    <div class="row">
+      <div class="col-md-4 bg_success p-3 d-flex align-items-center justify-content-start gap-3">
+        <div class="d-flex align-items-center">
+          <img class="ms-1 me-2 ms-4" src="assets/icons/book_appointment_black_bg.svg" alt="">
+          <h6 class="mb-0 strip_book">Book An Appointment<br /><small class="small_para">888 0101 000</small></h6>
+        </div>
+      </div>
+      <div class="col-md-4 bg_primary p-3 d-flex align-items-center justify-content-start gap-3">
+        <div class="d-flex align-items-center" (click)="goToHealthPackages()">
+          <img class="ms-1 me-2 ms-4" src="assets/icons/book_appointment_white_bg.svg" alt="">
+          <h6 class="mb-0 strip_book p-0">Health Check Packages<br /><small class="small_para p-0">Simply Dummy Text Of
+              The Printing</small></h6>
+        </div>
+      </div>
+      <div class="col-md-4 bg_success p-3 d-flex align-items-center justify-content-start gap-3">
+        <div class="d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#branchesModal">
+          <img class="ms-1 me-2 ms-4" src="assets/icons/book_appointment_black_bg.svg" alt="">
+          <h6 class="mb-0 strip_loc">Our Locations<br /><small class="small_loc">Simply Dummy Text Of The
+              Printing</small></h6>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <ng-container>
+    <div class="modal fade" id="branchesModal" tabindex="-1" aria-labelledby="branchesModalLabel" aria-hidden="true"
+      data-bs-backdrop="static">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="row pt-4">
+            <div class="col-md-11 col-11 col-sm-10 col-xs-10 d-flex align-items-center justify-content-center">
+              <div class="line line-left ms-5"></div>
+              <div class="">
+                <span class="title_text text-center px-2">Our Branches</span>
+              </div>
+              <div class="line line-right"></div>
+            </div>
+            <div class="col-md-1 col-1 d-flex col-sm-2 col-xs-2 align-items-center justify-content-start p-0 m-0">
+              <button class="" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+          </div>
+          <div class="modal-body">
+            <div class="container">
+              <div class="row g-3">
+                <div class="col-6 col-md-4" *ngFor="let details of locations_details; index as l">
+                  <div class="text-center" (click)="routeToLocation(details['location_name'], details['img'])">
+                    <img src="assets/locations/{{details['img']}}" alt="Kothapet">
+                    <p class="border_prop py-2">{{details['location_name']}}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+</section>
+<app-footer></app-footer>

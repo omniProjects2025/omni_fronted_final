@@ -1,0 +1,93 @@
+<app-header></app-header>
+<header class="container-fluid p-0">
+    <img src="assets/images/why_should_consider_second_opinion.jpg" class=" w-100 d-none d-md-block" alt="Lungs Image"
+        height="">
+    <img src="assets/images/why_should_consider_second_opinion_mobile.jpg" class=" w-100 d-block d-md-none"
+        alt="Lungs Image" height="">
+</header>
+<section class="bg-white">
+    <div class="container">
+        <div class="row pt-3">
+            <div class="col-md-8 col-lg-8 col-sm-12 col-xs-12">
+                <div class="head_text">
+                    <h3 class="opinion_head">Why should you consider a second opinion?</h3>
+                    <p class="fw-medium" style="font-size: 15px">Getting a second opinion can make a big difference in
+                        your treatment journey, especially when dealing with a new, complex, or serious diagnosis. It
+                        gives you a chance to confirm your diagnosis, explore alternative treatments, and feel more
+                        confident in the path you choose. At OMNI Hospitals, our free online second opinion service
+                        connects you with senior consultants who review your case thoroughly. This added step can help
+                        avoid unnecessary procedures and ensure you’re on the most effective treatment path. To help us
+                        give you the most accurate advice, please share all relevant medical reports, including test
+                        results, surgery or discharge summaries, current medications, and treatment plans. Our
+                        specialists carefully assess each case with a multidisciplinary approach to provide clarity and
+                        reassurance. This service is exclusively available for online enquiries. Please complete the
+                        form to proceed.</p>
+                </div>
+                <div class="text-center mt-4 counter_bg py-3">
+                    <div class="row">
+                        <div class="col-md-6 col-12 mb-4" *ngFor="let counter of counters">
+                            <div class="info-box d-flex align-items-center flex-column flex-md-row text-center text-md-start"
+                                [ngClass]="{
+       'justify-content-md-start': counter.id === 2 || counter.id === 4,
+       'justify-content-md-center': counter.id !== 2 && counter.id !== 4,
+       'ms-md-4': counter['id']==3 && counter['id']==3,
+       'justify-content-center': true
+     }">
+
+                                <div class="icon-circle">
+                                    <img src="assets/images/{{counter.img}}" alt="{{ counter.label }}" width="142px"
+                                        height="142px">
+                                </div>
+                                <div class="text-left ms-3">
+                                    <h5 class="counter" [attr.data-target]="counter.target">{{ counter.value }}+</h5>
+                                    <span class="counter-label">{{ counter.label }}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 ">
+                <div class="d-flex align-items-center justify-content-center">
+                    <div class="line line-left"></div>
+                    <h3 class="free_sec text-center px-2">Free Second Opinion</h3>
+                    <div class="line line-right"></div>
+                </div>
+                <div class="ms-3">
+                    <form class="form-container py-4">
+                        <div class="">
+                            <input type="text" class="form-control p-0 pt-2 pb-2 mb-3" placeholder="Full Name">
+                        </div>
+                        <div class="">
+                            <input type="text" class="form-control p-0 pb-2 pt-4 mb-3" placeholder="Phone Number">
+                        </div>
+                        <div class="">
+                            <input type="text" class="form-control p-0 pb-2 pt-4 mb-3" placeholder="Email ID">
+                        </div>
+                        <div class="">
+                            <select class="form-control p-0 pb-2 pt-4 mb-3">
+                                <option selected disabled class="">Location</option>
+                                <option>Kukkatpally</option>
+                                <option>Kothapet</option>
+                                <option>Vizag</option>
+                                <option>Kurnool</option>
+                            </select>
+                        </div>
+                        <div class="">
+                            <select class="form-control p-0 pb-2 pt-4 mb-3">
+                                <option class="mx-2" selected disabled>Department</option>
+                                <option>Cardio</option>
+                                <option>Nephro</option>
+                                <img src="assets/images/up_icon.svg" alt="">
+                            </select>
+                        </div>
+                    </form>
+                    <div class="text-center my-4 d-flex align-items-center justify-content-center">
+                        <button type="submit" class="btn btn-submit">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<app-footer></app-footer>

@@ -1,0 +1,180 @@
+.doctor-card {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: white;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+}
+
+.doctor-card img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 5px solid #77c04b;
+    padding: 5px;
+}
+
+.doctor-details {
+    flex: 1;
+    margin-left: 20px;
+}
+
+.doctor-details h5 {
+    font-weight: bold;
+}
+
+.doctor-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #555;
+    font-size: 14px;
+}
+
+.search-box input,
+.search-box select,
+.search-box button {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.search-box {
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.info-box {
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-green {
+    background-color: #77c04b;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .doctor-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .doctor-details {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+}
+
+.button_radius {
+    border-radius: 50px;
+    outline: none;
+    border: 1px solid #008FD5;
+    color: #008FD5;
+    font-size: 14px;
+    background-color: white;
+}
+.button_radius:hover{
+    background-color: #8CC63F;
+    border-radius: 50px;
+    outline: none;
+    border: 1px solid #8CC63F;
+    color: white;
+}
+.line {
+    width: 60px;
+    height: 3px;
+}
+
+.line-left {
+    background-color: #8CC63F;
+}
+
+.line-right {
+    background: #008FD5;
+}
+
+.title-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+.title_text{
+    font-size: 25px;
+    font-family: 'roboto';
+    color: #000000;
+    font-weight: bold;
+}
+.border_top_radius{
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+.border_bottom_radius{
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+.border_none{
+ border: none;
+    outline: none;
+    padding: 0px 6px;
+    color: #828282;
+}
+.custom-dropdown {
+    border-radius: 30px;
+    padding: 5px 63px;
+    border: 1px solid #aaa;
+    color: #828282;
+}
+.custom-button {
+    border-radius: 30px;
+    padding: 5px 35px;
+    /* font-weight: bold; */
+}
+.appointment-card {
+    max-width: 500px;
+    margin: auto;
+    padding: 20px 0px;
+    border-radius: 10px;
+    /* box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); */
+    background-color: #fff;
+}
+.txt_justify{
+    text-align: justify;
+}
+
+.font_style{
+    font-weight: 500;
+    color: #666666;
+    font-family: 'roboto';
+}
+.fw_normal{
+    font-weight: 400;
+    font-size: 15px;
+    color: #000000;
+    font-family: 'roboto';
+
+}
+select.form-select {
+  position: relative;
+  z-index: 1;
+}
+.loader-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0;
+}
+
+.loader-image {
+  width: 60px; /* adjust size */
+  height: 60px;
+}

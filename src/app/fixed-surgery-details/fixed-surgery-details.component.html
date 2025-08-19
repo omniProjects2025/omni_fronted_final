@@ -1,0 +1,232 @@
+<app-header></app-header>
+<div class="banner">
+  <img src="assets/images/fixed_package_banner_detail_image.jpg" class="img-fluid w-100 d-none d-md-block" alt="Fixed Surgery Banner" />
+  <img src="assets/images/fixed_package_banner_image_mobile.jpg" class="img-fluid w-100 d-block d-md-none" alt="Fixed Surgery Banner" />
+</div>
+<section class="bg-white">
+
+  <div class="container-fluid pb-4">
+    <div class="row p-3 p-md-5">
+      <!-- Left Content Area -->
+      <div class="col-lg-8 mb-4 br_gray rounded-3 pt-3" style="padding: 0px 30px; text-align: justify;">
+        <h2 class="replace_txt">{{selectedPackage['package_name']}}</h2>
+
+        <!-- Responsive horizontal line under heading -->
+        <img src="assets/health_checkup/horizontal_line.svg" alt="" class="img-fluid" style="height: auto;">
+
+        <p class="text-muted mt-3" style="font-size: 1rem;">
+          {{selectedPackage['desc']}}
+        </p>
+        <div class="my-4">
+          <div class="text-start">
+            <div class="bg_primary text-white px-4 py-2 ms-1 ms-sm-1 ms-md-5 rounded-top d-inline-block fw-semibold">
+              Package Includes
+            </div>
+          </div>
+
+          <div class="border_package p-3">
+            <div class="d-flex flex-column flex-md-row justify-content-start align-items-start gap-3">
+              <!-- First column -->
+              <div>
+                <ul class="list-unstyled mb-0">
+                  <li *ngFor="let item of packageIncludesCol1">• {{ item }}</li>
+                </ul>
+              </div>
+              <!-- Vertical divider (minimal space) -->
+              <div class="vr d-none d-md-block" style="width: 3px; background: black; background-color: black;"></div>
+              <!-- Second column -->
+              <div>
+                <ul class="list-unstyled mb-0">
+                  <li *ngFor="let item of packageIncludesCol2">• {{ item }}</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Include in your component HTML -->
+        <div class="package-cost-box py-3">
+          <div class="text-start">
+            <div class="package_bg_green py-2 ms-1 ms-sm-1 ms-md-5 rounded-top d-inline-block fw-semibold">
+              Package Cost
+            </div>
+          </div>
+          <div class="d-flex justify-content-between align-items-center px-3 py-2 content-box pac_border">
+            <span class="fw-bold">Total Knee Replacement</span>
+            <span class="fw-bold">{{selectedPackage['price']}}</span>
+          </div>
+
+          <div class="text-center">
+            <img src="assets/fixed_surgery_packages/fixed_surgery_dummy_image.png" alt="Fixed Surgery Package"
+              class="img-fluid w-100 h-auto" style="max-width: 900px;">
+          </div>
+        </div>
+
+
+
+      </div>
+
+      <!-- Right Sidebar -->
+      <div class="col-lg-4">
+
+        <div class="d-flex align-items-center flex-wrap justify-content-center mt-4">
+          <div class="consult-wrapper">
+            <img src="assets/fixed_surgery_packages/24_7_circle_image.svg" alt="24/7 Support" class="overlap-img" />
+            <div class="consult_button text-center py-2">
+              <div class="expert">Consult our Experts</div>
+              <div class="cont_num">888 0101 000</div>
+            </div>
+          </div>
+        </div>
+
+
+        <h5 class="text-center book_txt_primary mt-5 mb-3">Book An Appointment</h5>
+        <div class="sticky-top ms-lg-2" style="top: 20px;">
+          <form [formGroup]="appointmentForm" (ngSubmit)="submitForm()">
+            <div class="bg-white rounded-4 shadow-sm p-4" style="border: 2px solid rgba(130, 130, 130, 1)">
+              <div class="mb-3">
+                <input type="text" class="form-control custom-input" formControlName="fullName"
+                  placeholder="Full Name" />
+              </div>
+              <div class="mb-3">
+                <input type="tel" class="form-control custom-input" formControlName="phoneNumber"
+                  placeholder="Phone Number" />
+              </div>
+              <div class="mb-3">
+                <input type="email" class="form-control custom-input" formControlName="email" placeholder="Email ID" />
+              </div>
+              <div class="mb-4">
+                <select class="form-select custom-input" formControlName="location">
+                  <option selected disabled value="">Location</option>
+                  <option>Kothapet</option>
+                  <option>Kukatpally</option>
+                  <option>Nampally</option>
+                  <option>Vizag</option>
+                  <option>Kurnool</option>
+                </select>
+              </div>
+            </div>
+            <div class="text-center mt-4">
+              <button type="submit" class="btn custom-submit-btn px-5 py-2">Submit</button>
+            </div>
+          </form>
+
+        </div>
+      </div>
+      <div class="row">
+        <div class="py-2 bg-white col-lg-8">
+          <div class="row border_strip custom-strip py-3 mx-2 align-items-center text-center">
+            <div class="col-12 col-md-6 mb-3 mb-md-0">
+              <div class="d-flex justify-content-center justify-content-lg-start">
+                <div
+                  class="d-flex align-items-center justify-content-center justify-content-lg-start button-box ms-lg-5">
+                  <img src="assets/icons/call_bttn_nav.svg" alt="Consult Icon" class="icon me-2" />
+                  <span class="fw-bold responsive-text text-white">Consult with our Experts</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6">
+              <div class="d-flex justify-content-center justify-content-lg-end">
+                <div class="d-flex align-items-center button-box me-lg-5">
+                  <img src="assets/icons/book_an_appointment_nav.svg" alt="Appointment Icon" class="icon me-2" />
+                  <span class="fw-bold responsive-text text-white">Book an Appointment</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Extra Info -->
+      <div class="row">
+        <div class="col-lg-8 mt-4">
+
+          <div *ngFor="let faq of selectedPackage?.faqs">
+            <h6 class="text-dark">{{ faq.fa_quetion }}</h6>
+            <p class="text-muted small surgery_answer">{{ faq.fa_answer }}</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+    <div class="">
+      <h4 class="more_package_txt pb-2 pt-3 ms-lg-3">For More Packages</h4>
+      <hr class="hr_line">
+      <!-- surgery-carousel.component.html -->
+      <div *ngIf="carouselVisible">
+        <div class="px-4 owl-carousel owl-theme mt-4">
+          <div class="item" *ngFor="let pkg of surgeryPackages">
+            <div class="card custom-card border-0 shadow-sm">
+              <div class="row g-0 align-items-stretch">
+                <!-- Image -->
+                <div class="col-md-5 d-flex align-items-center">
+                  <img [src]="pkg.img || 'assets/images/fixed_surgery_dummy_image.svg'"
+                    class="slide_images p-2 pe-0 ps-0" alt="Surgery Image"
+                    style="border-top-left-radius: 0.5rem; border-bottom-left-radius: 0.5rem;">
+                </div>
+
+                <!-- Content -->
+                <div class="col-md-7">
+                  <div class="card-body d-flex flex-column justify-content-between h-100">
+                    <div>
+                      <h5 class="card-title mb-2">{{ pkg.package_name }}</h5>
+                      <p class="card-text mb-3">{{ pkg.desc }}</p>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center mt-auto">
+                      <span class="fw-bold fs-5">{{ pkg.price }}</span>
+                      <a class="btn btn_view_bg btn-sm px-3 py-2" (click)="onPackageCardClick(pkg)">View Package</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- map section starts from Here -->
+<section class="">
+  <ng-container *ngIf="selected_map_location === 'kukatpally'">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3805.4656864742747!2d78.4083654749371!3d17.485269683418686!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb91bc5cdb9fbd%3A0xb96e1ba3797d9253!2sOMNI%20Hospitals%2C%20Kukatpally!5e0!3m2!1sen!2sin!4v1745125466022!5m2!1sen!2sin"
+      width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </ng-container>
+  <ng-container *ngIf="selected_map_location === 'kothapet'">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.897405275579!2d78.538822!3d17.368669099999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb98e93eec1a2f%3A0x9dc9016e4c959f7d!2sOMNI%20Hospitals!5e0!3m2!1sen!2sin!4v1745143614525!5m2!1sen!2sin"
+      width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </ng-container>
+  <ng-container *ngIf="selected_map_location === 'nampally'">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.3095579905453!2d78.47241199999999!3d17.3969257!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9762f7471823%3A0xcd02eae5dae78501!2sUdai%20Omni%20Hospital%20-%20Orthopedics%20%7C%20Multispeciality%20%7C%20Trauma!5e0!3m2!1sen!2sin!4v1745143719927!5m2!1sen!2sin"
+      width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </ng-container>
+  <ng-container *ngIf="selected_map_location === 'vizag'">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3800.5565941356035!2d83.3111361!3d17.7183946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a394315b6aa6577%3A0x3699aded6ece84dd!2sOMNI%20RK%20Multi%20Specialty%20Hospital!5e0!3m2!1sen!2sin!4v1745143810828!5m2!1sen!2sin"
+      width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </ng-container>
+  <ng-container *ngIf="selected_map_location === 'kurnool'">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3838.6279176861376!2d78.0415378!3d15.823561600000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb5ddf5391420ef%3A0x5751521ca97efcd8!2sOMNI%20Hospitals%20Kurnool!5e0!3m2!1sen!2sin!4v1745143913149!5m2!1sen!2sin"
+      width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </ng-container>
+  <ng-container *ngIf="selected_map_location === 'giggles'">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3800.5600994057054!2d83.3110427!3d17.7182292!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a39438ce00efc2f%3A0x14fd5f338cbade20!2sGiggles%20by%20Omni%20RK!5e0!3m2!1sen!2sin!4v1745144024428!5m2!1sen!2sin"
+      width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </ng-container>
+</section>
+<app-footer></app-footer>

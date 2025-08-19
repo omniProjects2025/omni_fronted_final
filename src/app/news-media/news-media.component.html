@@ -1,0 +1,75 @@
+<app-header></app-header>
+<section class="bg-white">
+  <div class="container py-5">
+    <div class="border p-5 px-0 rounded-4">
+      <h3 class="section_title p-0 text-center mb-4">
+        <span class="decor"></span>
+        News & Media
+        <span class="decor right"></span>
+      </h3>
+
+      <div class="d-flex gap-3 ps-lg-3 pb-5 justify-content-center justify-content-sm-start">
+        <button class="btn_style" [ngClass]="media_type==1 ? 'active_bg' : ''" (click)="showMedia(1)">News</button>
+        <button class="btn_style" [ngClass]="media_type==2 ? 'active_bg' : ''" (click)="showMedia(2)">Videos</button>
+      </div>
+
+
+      <!-- News Block -->
+      <ng-container *ngIf="media_type==1">
+        <div class="row px-lg-3">
+          <div class="col-md-4 col-sm-6 mb-4" *ngFor="let ne of allNews">
+            <div class="card h-100 shadow-sm rounded-4">
+              <!-- <img [src]="ne.image" class="card-img-top" alt="{{ ne.title }}"> -->
+              <img class="card-img-top" [src]="ne.image" alt="">
+              <div class="card-body" (click)="goToMediaDetails(ne)">
+                <h5 class="card-title">{{ ne.title }}</h5>
+                <p class="card-text text-muted clamp" *ngFor="let data of ne.short_desc">{{ data }}</p>
+                <p class="p-0 m-0">{{ ne.date }}</p>
+                <a class="fw-bold text-dark p-0 m-0">Read More »</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+
+      <!-- Videos Block -->
+      <ng-container *ngIf="media_type==2">
+        <div class="container py-4">
+          <div class="row g-4">
+            <div class="col-12 col-sm-6 col-lg-3" *ngFor="let testimonial of testimonials; let idx = index">
+              <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden position-relative">
+                <!-- Fixed-height video wrapper -->
+                <div class="video-wrapper">
+                  <!-- Thumbnail with Play Button -->
+                  <div *ngIf="!testimonial.videoPlayed" class="video-thumbnail" (click)="playVideo(idx)">
+                    <img [src]="'https://img.youtube.com/vi/' + testimonial.thumbnailUrl + '/hqdefault.jpg'"
+                      class="w-100 h-100 object-fit-cover" [alt]="testimonial.name" />
+                    <div class="play-button">▶</div>
+                  </div>
+
+                  <!-- YouTube Video Embed (Only when Played) -->
+                  <div *ngIf="testimonial.videoPlayed" class="video-iframe-container">
+                    <iframe class="w-100 h-100 border-0"
+                      [src]="sanitizer.bypassSecurityTrustResourceUrl(getUnmutedVideoUrl(testimonial.videoUrl))"
+                      allow="autoplay; encrypted-media" allowfullscreen>
+                    </iframe>
+                  </div>
+                </div>
+                <!-- Content -->
+                <div class="card-body">
+                  <h6 class="card-title mb-1">{{ testimonial.name }}</h6>
+                  <small class="text-muted">{{ testimonial.profession }}</small>
+                  <p class="card-text mt-2">{{ testimonial.text }}</p>
+                </div>
+                <div class="card-footer text-muted small">
+                  {{ testimonial.date }}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</section>
+<app-footer></app-footer>

@@ -1,0 +1,101 @@
+.profile-img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid #7FD018;
+  padding: 5px;
+}
+
+.card {
+  border-radius: 10px;
+}
+
+.section-title {
+  /* color: rgba(102, 102, 102, 1); */
+  font-weight: 700;
+  font-family: 'Roboto', sans-serif;
+  font-size: 25px;
+}
+
+.about-text {
+  /* text-align: justify; */
+  font-family: 'Roboto', sans-serif;
+  color: rgba(130, 130, 130, 1);
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.icon {
+  font-size: 1.5rem;
+  margin-right: 10px;
+  color: #7FD018;
+}
+
+.doctor_title {
+  font-size: 38px;
+  color: rgba(0, 0, 0, 1);
+  font-weight: 600;
+  font-family: 'Roboto', sans-serif;
+}
+
+.doctor_details {
+  max-width: 600px;
+  color: rgba(0, 0, 0, 1);
+  font-weight: 300;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+}
+
+.doctor_department {
+  color: rgba(0, 0, 0, 1);
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+/* .doctor_name {
+  font-size: 30px;
+  font-family: 'Roboto';
+  font-weight: 900;
+} */
+
+@media (max-width: 767.98px) {
+  .doctor_title {
+    font-size: 28px;
+  }
+
+  .doctor_details,
+  .doctor_name,
+  .doctor_department {
+    font-size: 18px !important;
+  }
+}
+
+.text_primary {
+  color: rgba(0, 143, 213, 1);
+}
+
+.head {
+  /* color: rgba(102, 102, 102, 1); */
+  font-weight: 700;
+  font-family: 'Roboto', sans-serif;
+  font-size: 25px;
+}
+
+.desc {
+  color: rgba(102, 102, 102, 1);
+  font-weight: 400;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+}
+.book_btn{
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  background-color: rgba(0, 143, 213, 1);
+  border-radius: 50px;
+  border: none;
+  padding: 10px 40px;
+}

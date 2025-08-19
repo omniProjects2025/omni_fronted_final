@@ -1,0 +1,98 @@
+<app-header></app-header>
+<section class="bg-white">
+    <section class="container py-5">
+        <div class="">
+            <ng-container *ngIf="selectedCategory">
+                <div class="col-xs-12 col-sm-8 col-md-8 article-content single-article-content">
+                    <div>
+                        <h1>{{ selectedCategory.title }}</h1>
+                        <img class="blog_image py-3" [src]="selectedCategory.img" alt="{{ selectedCategory.title }}" />
+                    </div>
+                    <ng-container *ngFor="let section of selectedCategory.sections">
+                        <div>
+                            <h2 *ngIf="section?.heading" [innerHTML]="section?.heading"></h2>
+                            <h3 class="pt-2" *ngIf="section?.subheading" [innerHTML]="section?.subheading"></h3>
+                            <p [innerHTML]="para" *ngFor="let para of section.paragraphs"></p>
+                            <img class="blog_image" [src]="section.img" alt="" *ngIf="section.img">
+                            <iframe *ngIf="section.video_src" width="500" height="281" [src]="section.video_src"
+                                frameborder="0" allowfullscreen>
+                            </iframe>
+                            <ng-container *ngFor="let subsec of section.subsections">
+                                <h3>{{subsec.subheading}}</h3>
+                                <h5 [innerHTML]="subsec.heading" *ngIf="subsec.heading"></h5>
+                                <p [innerHTML]="seb_para_desc" *ngFor="let seb_para_desc of subsec.subheading_desc"></p>
+                                <p [innerHTML]="para" *ngFor="let para of subsec.paragraphs"></p>
+
+
+                                <ul>
+                                    <li [innerHTML]="list" *ngFor="let list of subsec.list"></li>
+                                </ul>
+                                <img [src]="subsec.img" alt="" *ngIf="subsec.img">
+                                <p *ngFor="let subpara of subsec.subpara"><span [innerHtml]="subpara"></span></p>
+                            </ng-container>
+                            <!-- Hypertension: The Silent Killer – Unveiling the Dangers and Protecting Your Health -->
+                            <ng-container *ngIf="section.tablar_format">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th *ngFor="let header of section.tablar_format.headers">{{ header }}</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr *ngFor="let row of section.tablar_format.rows">
+                                            <td *ngFor="let cell of row">{{ cell }}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </ng-container>
+
+                            <ul [class.no-marker]="section?.dot_show_dot">
+                                <li [innerHTML]="list" *ngFor="let list of section.list"></li>
+                            </ul>
+                            <p *ngFor="let subpara of section.subpara"><span [innerHTML]="subpara"></span></p>
+                            <ng-container *ngIf="section?.side_by_side_img">
+                                <div class="pain-image-grid">
+                                    <ng-container *ngFor="let img_data of section?.side_by_side_img">
+                                        <div class="pain-image-item">
+                                            <img class="blog_image" [src]="img_data.img" alt="Pain area" />
+                                            <p *ngFor="let subpara of img_data.subpara"><span
+                                                    [innerHTML]="subpara"></span></p>
+
+                                        </div>
+                                    </ng-container>
+                                </div>
+                            </ng-container>
+                        </div>
+                    </ng-container>
+                    <section class="related-posts-wrapper py-4">
+                        <div class="container">
+                            <h3 class="widget-title mb-4 fw-bold blue_heading">Related Blogs</h3>
+                            <div class="row g-4">
+                                <!-- Post 1 -->
+                                <ng-container *ngFor="let relatedBlog of selectedCategory.related_blogs">
+                                    <div class="col-md-6 col-lg-6">
+                                        <div class="d-flex">
+                                            <div class="flex-shrink-0"
+                                                style="width: 100px; height: 100px; background: url({{relatedBlog.img}}) center center / cover no-repeat;">
+                                            </div>
+                                            <div class="ms-3 d-flex flex-column justify-content-center">
+                                                <h6 class="mb-1">{{relatedBlog.title}}</h6>
+                                                <a (click)="this.getBlogsDetails(relatedBlog['title']);"
+                                                    class="text-primary text-decoration-underline small">READ MORE</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </ng-container>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-4">
+                </div>
+            </ng-container>
+        </div>
+
+    </section>
+</section>
+
+<app-footer></app-footer>

@@ -19,9 +19,9 @@
                     No doctors found. Try adjusting your filters.
                 </div>
 
-                <div *ngFor="let details of doctors; index as i" class="row border-start border-end pt-2" [ngClass]="{
+                <div *ngFor="let details of visibleDoctors; index as i; trackBy: trackByDoctorId" class="row border-start border-end pt-2" [ngClass]="{
           'border-top border_top_radius pt-4': i === 0,
-          'border-bottom border_bottom_radius': i === doctors.length - 1
+          'border-bottom border_bottom_radius': i === visibleDoctors.length - 1
         }">
                     <!-- Doctor Image -->
                     <div class="col-md-3 col-12 d-flex align-items-center justify-content-center mb-3 mb-md-0"
@@ -66,6 +66,8 @@
                     <hr *ngIf="details['id'] != 5" class="d-flex justify-content-center w-100 mx-auto"
                         style="max-width: 94%;">
                 </div>
+                <!-- Infinite scroll sentinel -->
+                <div #loadMoreSentinel style="height: 1px; width: 100%"></div>
             </div>
 
             <!-- Right Column: Filters & Appointment Info -->

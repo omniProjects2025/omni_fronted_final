@@ -94,9 +94,9 @@ export class BookAnAppointmentComponent {
       { Attribute: "FirstName", Value: this.formData.fullName },
       { Attribute: "Phone", Value: this.formData.phoneNumber },
       { Attribute: "EmailAddress", Value: this.formData.emailId },
-      { Attribute: "mx_Location", Value: this.formData.location },
+      { Attribute: "mx_City", Value: this.formData.location },
       { Attribute: "mx_Department", Value: this.formData.department },
-      { Attribute: "mx_Message", Value: this.formData.message },
+      { Attribute: "Description", Value: this.formData.message },
       { Attribute: "Source", Value: "Website - Book An Appointment" }
     ];
 

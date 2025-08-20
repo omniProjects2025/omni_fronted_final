@@ -38,22 +38,18 @@
           <div class="row g-4">
             <div class="col-12 col-sm-6 col-lg-3" *ngFor="let testimonial of testimonials; let idx = index">
               <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden position-relative">
-                <!-- Fixed-height video wrapper -->
+                <!-- Video Player Component -->
                 <div class="video-wrapper">
-                  <!-- Thumbnail with Play Button -->
-                  <div *ngIf="!testimonial.videoPlayed" class="video-thumbnail" (click)="playVideo(idx)">
-                    <img [src]="'https://img.youtube.com/vi/' + testimonial.thumbnailUrl + '/hqdefault.jpg'"
-                      class="w-100 h-100 object-fit-cover" [alt]="testimonial.name" />
-                    <div class="play-button">▶</div>
-                  </div>
-
-                  <!-- YouTube Video Embed (Only when Played) -->
-                  <div *ngIf="testimonial.videoPlayed" class="video-iframe-container">
-                    <iframe class="w-100 h-100 border-0"
-                      [src]="sanitizer.bypassSecurityTrustResourceUrl(getUnmutedVideoUrl(testimonial.videoUrl))"
-                      allow="autoplay; encrypted-media" allowfullscreen>
-                    </iframe>
-                  </div>
+                  <app-video-player 
+                    [videoUrl]="testimonial.videoUrl" 
+                    [thumbnailUrlId]="testimonial.thumbnailUrl"
+                    [width]="300" 
+                    [height]="200"
+                    [aspectRatio]="'16/9'"
+                    [(videoPlayed)]="testimonial.videoPlayed" 
+                    (videoStarted)="onVideoPlay(idx)"
+                    (videoStopped)="onVideoPauseOrEnd(idx)">
+                  </app-video-player>
                 </div>
                 <!-- Content -->
                 <div class="card-body">

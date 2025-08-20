@@ -1,32 +1,5 @@
 import { NgModule } from '@angular/core';
-import { ExtraOptions, RouterModule, Routes } from '@angular/router';
-// import { OurDoctorsComponent } from './our-doctors/our-doctors.component';
-import { HomeComponent } from './home/home.component';
-import { SecondOpinionComponent } from './second-opinion/second-opinion.component';
-import { AboutUsComponent } from './about-us/about-us.component';
-import { HealthCheckupComponent } from './health-checkup/health-checkup.component';
-import { PackageDetailsComponent } from './package-details/package-details.component';
-import { OurSpecialitiesComponent } from './our-specialities/our-specialities.component';
-import { OurSpecialitiesDetailsComponent } from './our-specialities-details/our-specialities-details.component';
-import { TechnologiesComponent } from './technologies/technologies.component';
-import { NewsMediaComponent } from './news-media/news-media.component';
-import { BlogsComponent } from './blogs/blogs.component';
-import { TechnologiesDetailsComponent } from './technologies-details/technologies-details.component';
-import { OurBranchesComponent } from './our-branches/our-branches.component';
-import { CareersComponent } from './careers/careers.component';
-import { FeedbackComponent } from './feedback/feedback.component';
-import { BlogDetailsComponent } from './blog-details/blog-details.component';
-import { NewsMediaDetailsComponent } from './news-media-details/news-media-details.component';
-import { BookAnAppointmentComponent } from './book-an-appointment/book-an-appointment.component';
-// import { FixedSurgicalPackagesComponent } from './fixed-surgical-packages/fixed-surgical-packages.component';
-import { BoardMembersComponent } from './board-members/board-members.component';
-import { FixedSurgicalPackagesComponent } from './fixed-surgical-packages/fixed-surgical-packages.component';
-import { ContactUsComponent } from './contact-us/contact-us.component';
-import { DoctorDetailsComponent } from './doctor-details/doctor-details.component';
-import { ThankYouComponent } from './thank-you/thank-you.component';
-import { FixedSurgeryDetailsComponent } from './fixed-surgery-details/fixed-surgery-details.component';
-import { OurEmpanelmentComponent } from './our-empanelment/our-empanelment.component';
-// import { OurDoctorsModule } from './our-doctors/oour-doctors/our-doctors.module';
+import { ExtraOptions, PreloadAllModules, RouterModule, Routes } from '@angular/router';
 // const routes: Routes = [
 //   { path: '', redirectTo: 'home', pathMatch: 'full' },
 //   // { path: 'home', component: HomeComponent },
@@ -79,6 +52,8 @@ const routerOptions: ExtraOptions = {
   scrollPositionRestoration: 'enabled',
   anchorScrolling: 'enabled', 
   scrollOffset: [0, 0],
+  preloadingStrategy: PreloadAllModules,
+  initialNavigation: 'enabledBlocking'
 };
 
 @NgModule({

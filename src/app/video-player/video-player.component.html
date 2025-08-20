@@ -1,12 +1,19 @@
-<div class="video-container" (click)="playVideo()" [style.width.px]="190" [style.height.px]="140">
-    <!-- Thumbnail -->
-    <ng-container *ngIf="!videoPlayed">
-      <img class="thumbnail h-100" [style.width.px]="190" [style.height.px]=""
-        [src]="'https://img.youtube.com/vi/' + thumbnailUrlId + '/hqdefault.jpg'" />
-      <div class="play-button"></div>
-    </ng-container>
-  
-    <!-- YouTube player (inserted dynamically) -->
-    <div *ngIf="videoPlayed" [id]="'yt-player-' + thumbnailUrlId"></div>
-  </div>
+<div class="video-container" (click)="!videoPlayed && playVideo()" 
+     [style.width.px]="width" 
+     [style.height.px]="height"
+     [style.aspect-ratio]="aspectRatio">
+  <!-- Thumbnail -->
+  <ng-container *ngIf="!videoPlayed">
+    <img class="thumbnail" 
+         [src]="'https://img.youtube.com/vi/' + thumbnailUrlId + '/hqdefault.jpg'"
+         [alt]="'Video thumbnail for ' + thumbnailUrlId" />
+    <div class="play-button"></div>
+  </ng-container>
+
+  <!-- YouTube player (inserted dynamically) -->
+  <div *ngIf="videoPlayed" 
+       [id]="uniqueId"
+       #playerContainer
+       class="youtube-player-container"></div>
+</div>
   

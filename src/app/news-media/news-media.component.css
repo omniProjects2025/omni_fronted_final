@@ -44,62 +44,32 @@
     border: 1px solid #8CC63F;
   }
 
-  /* .video-thumbnail {
+  /* Video wrapper styles for responsive design */
+  .video-wrapper {
+    position: relative;
     width: 100%;
     height: 200px;
     overflow: hidden;
-    border-radius: 12px;
-    position: relative;
-    cursor: pointer;
-  
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 12px;
-    }
-  
-    .play-button {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      font-size: 3rem;
-      color: white;
-      background-color: rgba(0, 0, 0, 0.6);
-      border-radius: 50%;
-      width: 60px;
-      height: 60px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      pointer-events: none;
-    }
-  } */
-   .video-thumbnail, .video-iframe-container {
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-  
-  .video-thumbnail img {
-  object-fit: cover;
-  height: 100%;
-  width: 100%;
-}
+    border-radius: 8px 8px 0 0;
+  }
 
-.play-button {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 2rem;
-  color: white;
-  text-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
-  pointer-events: none;
-}
+  .video-wrapper app-video-player {
+    width: 100% !important;
+    height: 100% !important;
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .video-wrapper {
+      height: 180px;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .video-wrapper {
+      height: 160px;
+    }
+  }
   .ratio iframe {
     border-radius: 12px;
   }

@@ -31,7 +31,7 @@ export class HomeComponent {
   sanitizedVideoUrl!: SafeResourceUrl;
 
   private swiperInitialized = false;
-  activeCard = 0;
+  active_button = 0;
   title = 'Omni_project';
   activeIndex = 0;
   direction_icon: boolean = false;
@@ -489,7 +489,7 @@ export class HomeComponent {
     this.showmoreactive_one = !this.showmoreactive_one
   }
   ourSpecialities(index: any) {
-    this.activeIndex = index;
+    this.active_button = index;
   }
 
   animateCounter(element: HTMLElement, target: number) {
@@ -745,10 +745,19 @@ export class HomeComponent {
   }
 
   onVideoPlay(index: number): void {
+    // Stop carousel autoplay when video starts
     this.owlInstance.trigger('stop.owl.autoplay');
+    
+    // Stop all other videos when one starts playing
+    this.testimonials.forEach((testimonial, idx) => {
+      if (idx !== index) {
+        testimonial.videoPlayed = false;
+      }
+    });
   }
 
   onVideoPauseOrEnd(index: number): void {
+    // Resume carousel autoplay when video stops
     this.owlInstance.trigger('play.owl.autoplay', [3000]);
   }
 

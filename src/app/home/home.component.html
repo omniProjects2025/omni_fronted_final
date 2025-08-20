@@ -46,17 +46,17 @@
   </ng-container>
 </section>
 
-<div class="d-flex speciality-container px-2 justify-content-center mt-4"
+<div class="d-flex speciality-container px-2 gap-4 justify-content-center mt-4"
   style="overflow-x: auto; white-space: nowrap; -webkit-overflow-scrolling: touch;">
   <div *ngFor="let spe of specialities; index as i" (click)="ourSpecialities(i)"
-    class="speciality-item px-3 py-2 flex-shrink-0" [ngClass]="i === activeIndex ? 'active' : 'text_gray'">
+    class="speciality-item px-3 py-2" [ngClass]="i == active_button ? 'btn_active' : 'text_gray'">
     <span>{{ spe.spe_name }}</span>
   </div>
 </div>
 
 <section class="bg_lgt_blue">
   <!--************** Start Form Here OUR SPECIALITIES -->
-  <div class="py-1" *ngIf="activeIndex === 0">
+  <div class="py-1" *ngIf="active_button === 0">
     <div class="container py-2">
       <div class="row gx-4 gy-4 justify-content-center">
         <div class="col-6 col-lg-3 h-100" *ngFor="let item of our_specialities; let i = index"
@@ -74,9 +74,9 @@
   </div>
   <!--************** Start End Here OUR SPECIALITIES -->
 
-  <div class="" *ngIf="activeIndex==1">
+  <div class="" *ngIf="active_button==1">
     <div class="carousel-container pt-1 pb-5">
-      <div class="carousel" [style.transform]="getTransform()">
+      <div class="carousel">
         <div class="carousel-slide" *ngFor="let dep of depertments">
           <div class="text-center specialities-container">
             <div class="title-container py-3">
@@ -208,8 +208,14 @@
             <div class="row g-0">
               <!-- Video on left -->
               <div class="col-md-4 d-flex align-items-center justify-content-center">
-                <app-video-player [videoUrl]="testimonial.videoUrl" [thumbnailUrlId]="testimonial.thumbnailUrl"
-                  [(videoPlayed)]="testimonial.videoPlayed" (videoStarted)="onVideoPlay(idx)"
+                <app-video-player 
+                  [videoUrl]="testimonial.videoUrl" 
+                  [thumbnailUrlId]="testimonial.thumbnailUrl"
+                  [width]="200" 
+                  [height]="150"
+                  [aspectRatio]="'4/3'"
+                  [(videoPlayed)]="testimonial.videoPlayed" 
+                  (videoStarted)="onVideoPlay(idx)"
                   (videoStopped)="onVideoPauseOrEnd(idx)">
                 </app-video-player>
               </div>

@@ -384,6 +384,20 @@ export class NewsMediaComponent {
     });
   }
 
+  // Ensure only one video plays at a time when using app-video-player outputs
+  onVideoPlay(index: number): void {
+    if (!this.testimonials || !Array.isArray(this.testimonials)) return;
+    this.testimonials.forEach((item: any, idx: number) => {
+      if (idx !== index) {
+        item.videoPlayed = false;
+      }
+    });
+  }
+
+  onVideoPauseOrEnd(index: number): void {
+    // Hook for pause/end if needed (analytics/UI). Kept minimal by request.
+  }
+
   getUnmutedVideoUrl(url: string): string {
     return `${url}?autoplay=1&mute=0&modestbranding=1&rel=0&showinfo=0&enablejsapi=1`;
   }

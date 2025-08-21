@@ -64,7 +64,7 @@
   <section class="container pb-4">
     <div *ngIf="currentTab === 'openings'">
       <div class="row row-cols-1 row-cols-md-4 g-4">
-        <div *ngFor="let job of jobList" [ngClass]="{'opacity-25': !isJobActive(job)}">
+        <div *ngFor="let job of jobList" [id]="job.id" [ngClass]="{'opacity-25': !isJobActive(job)}">
           <div class="card h-100 border rounded-4 shadow-sm p-2">
             <div class="card-body">
               <h5 class="fw-medium ps-2" style="color:#008FD5;font-size:15px">{{job.title}}</h5>

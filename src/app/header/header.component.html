@@ -134,14 +134,14 @@
 
   <ul class="navbar-nav">
     <li class="nav-item" *ngFor="let item of navItems">
-      <a *ngIf="item.route" class="" [routerLink]="item.route" (click)="closeMobileMenu()">
+      <a *ngIf="item.route" class="nav-link" [routerLink]="item.route" (click)="closeMobileMenu()">
         <ng-container *ngIf="item.key === 'home'">
           Home
           <!-- <img src="assets/icons/home_page_btn.svg" class="me-1" alt="" width="25px" height="25px" /> -->
         </ng-container>
         {{ item.label }}
       </a>
-      <a *ngIf="!item.route && item.modalTarget" class="" [attr.data-bs-toggle]="'modal'"
+      <a *ngIf="!item.route && item.modalTarget" class="nav-link" [attr.data-bs-toggle]="'modal'"
         [attr.data-bs-target]="item.modalTarget" (click)="closeMobileMenu()">
         {{ item.label }}
       </a>

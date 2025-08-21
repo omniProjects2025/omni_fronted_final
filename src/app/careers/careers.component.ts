@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-careers',
@@ -22,19 +23,19 @@ export class CareersComponent {
   ];
 
   jobList = [
-    { title: 'IP Operations', location: 'Hyderabad', department: 'Operations', postedDate: '2025-09-01', lastDate: '2025-10-10' },
-    { title: 'Billing Executive', location: 'Vijayawada', department: 'Billing', postedDate: '2025-09-01', lastDate: '2025-10-12' },
-    { title: 'Pharmacist', location: 'Chennai', department: 'Pharmacy', postedDate: '2025-09-03', lastDate: '2025-09-08' },
-    { title: 'Nursing Supervisor', location: 'Vizag', department: 'Nursing', postedDate: '2025-09-01', lastDate: '2025-10-20' },
-    { title: 'Front Office Executive', location: 'Hyderabad', department: 'FO', postedDate: '2025-09-25', lastDate: '2025-11-05' },
-    { title: 'Radiologist', location: 'Vijayawada', department: 'Radiology', postedDate: '2025-09-02', lastDate: '2025-10-18' },
-    { title: 'HR Executive', location: 'Vizag', department: 'HR', postedDate: '2025-09-01', lastDate: '2025-10-11' },
-    { title: 'Lab Technician', location: 'Hyderabad', department: 'Lab', postedDate: '2025-09-05', lastDate: '2025-09-09' },
-    { title: 'Marketing Officer', location: 'Chennai', department: 'Marketing', postedDate: '2025-09-06', lastDate: '2025-11-30' },
-    { title: 'Housekeeping Staff', location: 'Vizag', department: 'Housekeeping', postedDate: '2025-09-20', lastDate: '2025-10-01' },
+    {id:1, title: 'IP Operations', location: 'Hyderabad', department: 'Operations', postedDate: '2025-09-01', lastDate: '2025-10-10' },
+    {id:2, title: 'Billing Executive', location: 'Vijayawada', department: 'Billing', postedDate: '2025-09-01', lastDate: '2025-10-12' },
+    {id:3, title: 'Pharmacist', location: 'Chennai', department: 'Pharmacy', postedDate: '2025-09-03', lastDate: '2025-09-08' },
+    {id:4, title: 'Nursing Supervisor', location: 'Vizag', department: 'Nursing', postedDate: '2025-09-01', lastDate: '2025-10-20' },
+    {id:5, title: 'Front Office Executive', location: 'Hyderabad', department: 'FO', postedDate: '2025-09-25', lastDate: '2025-11-05' },
+    {id:6, title: 'Radiologist', location: 'Vijayawada', department: 'Radiology', postedDate: '2025-09-02', lastDate: '2025-10-18' },
+    {id:7, title: 'HR Executive', location: 'Vizag', department: 'HR', postedDate: '2025-09-01', lastDate: '2025-10-11' },
+    {id:8, title: 'Lab Technician', location: 'Hyderabad', department: 'Lab', postedDate: '2025-09-05', lastDate: '2025-09-09' },
+    {id:9, title: 'Marketing Officer', location: 'Chennai', department: 'Marketing', postedDate: '2025-09-06', lastDate: '2025-11-30' },
+    {id:10, title: 'Housekeeping Staff', location: 'Vizag', department: 'Housekeeping', postedDate: '2025-09-20', lastDate: '2025-10-01' },
   ];
 
-  constructor(private fb: FormBuilder, private http: HttpClient) {
+  constructor(private fb: FormBuilder, private http: HttpClient, private route: ActivatedRoute) {
     this.applyForm = this.fb.group({
       firstName: ['', Validators.required],
       lastName: [''],
@@ -43,7 +44,9 @@ export class CareersComponent {
       position: ['', Validators.required]
     });
   }
-
+ngOnInit(){
+this.socialShare();
+}
   switchTab(tab: 'openings' | 'joiners' | 'apply') {
     this.currentTab = tab;
   }
@@ -53,18 +56,35 @@ export class CareersComponent {
   }
 
   shareJob(job: any) {
+    // Build a job-specific URL with query params so recipients land on the exact job
+    const url = `${window.location.origin}${window.location.pathname}?job=${encodeURIComponent(job.title)}&loc=${encodeURIComponent(job.location)}&dept=${encodeURIComponent(job.department)}`;
     const shareData = {
       title: job.title,
       text: `${job.title} - ${job.location} in ${job.department}`,
-      url: window.location.href
-    };
+      url
+    } as any;
     if (navigator.share) {
       navigator.share(shareData);
     } else {
-      alert('Share not supported on this browser.');
+      // Fallback: copy to clipboard
+      try {
+        navigator.clipboard.writeText(url);
+        alert('Link copied to clipboard');
+      } catch {
+        alert(url);
+      }
     }
   }
-
+socialShare(){
+  this.route.fragment.subscribe(fragment => {
+    if (fragment) {
+      setTimeout(() => {
+        const el = document.getElementById(fragment);
+        if (el) el.scrollIntoView({ behavior: 'smooth' });
+      }, 100);
+    }
+  });
+}
   // onSubmit() {
   //   if (this.applyForm.valid) {
   //     const formData = new FormData();

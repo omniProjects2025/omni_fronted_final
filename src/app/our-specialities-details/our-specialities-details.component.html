@@ -99,8 +99,227 @@
             </div>
           </div>
           <div class="card mt-4 p-4 border border-dark rounded-4 shadow-sm">
-            <h5 class="text-primary fw-bold">{{dep['name']}}</h5>
-            <p class="text-muted small">{{dep['package_info']}}</p>
+            <h5 class="text-primary fw-bold">{{ activeTitle || dep['name'] }}</h5>
+            <p class="text-muted small" *ngIf="activeContent; else depInfo">{{ activeContent }}</p>
+            <p class="text-muted small" *ngIf="getActiveSummary()">{{ getActiveSummary() }}</p>
+            <ng-template #depInfo>
+              <p class="text-muted small">{{dep['package_info']}}</p>
+            </ng-template>
+          </div>
+          <div class="card mt-4 p-3 border border-dark rounded-4 shadow-sm" *ngIf="subDepartments?.length">
+            <h6 class="fw-bold text-primary mb-2">Sub-departments</h6>
+            <ul class="list-unstyled mb-0">
+              <li *ngFor="let s of subDepartments" class="mb-1">
+                <a [routerLink]="['/specialities', currentDeptSlug , s.slug]">{{ s.title }}</a>
+              </li>
+            </ul>
+            <a *ngIf="activeWpUrl" [href]="activeWpUrl" target="_blank" rel="noopener" class="small mt-2 d-inline-block">View details on WordPress</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Our Departments Links (moved inside doctor column) -->
+    <div class="container py-4">
+      <div class="row justify-content-center">
+        <div class="col-lg-6 col-md-8 col-12">
+          <div class="card p-3 dept-card">
+            <h5 class="mb-3 fw-bold text-primary">Our Departments</h5>
+            <nav class="dept-nav">
+              <a [routerLink]="['/specialities','emergency-critical-care']" class="dept-link">Emergency &amp; Critical Care</a>
+
+              <details class="dept-group">
+                <summary class="dept-summary">Orthopaedics</summary>
+                <ul class="list-unstyled">
+                  <li><a [routerLink]="['/specialities','orthopaedics','knee-osteoarthritis']">Knee Osteoarthritis</a></li>
+                  <li><a [routerLink]="['/specialities','orthopaedics','sciatica']">Sciatica</a></li>
+                  <li><a [routerLink]="['/specialities','orthopaedics','arthritis-of-the-hip']">Arthritis of the hip</a></li>
+                  <li><a [routerLink]="['/specialities','orthopaedics','polytrauma']">Polytrauma</a></li>
+                  <li><a [routerLink]="['/specialities','orthopaedics','acl-reconstruction']">ACL Reconstruction</a></li>
+                  <li><a [routerLink]="['/specialities','orthopaedics','arthroscopy']">Arthroscopy</a></li>
+                  <li><a [routerLink]="['/specialities','orthopaedics','hip-replacement']">Hip Replacement</a></li>
+                  <li><a [routerLink]="['/specialities','orthopaedics','knee-replacement']">Knee Replacement</a></li>
+                  <li><a [routerLink]="['/specialities','orthopaedics','sports-injury']">Sports Injury</a></li>
+                  <li><a [routerLink]="['/specialities','orthopaedics','robotic-joint-replacement-surgeries']">Robotic Joint Replacement Surgeries</a></li>
+                  <li><a [routerLink]="['/specialities','orthopaedics','cuff-repair']">Cuff repair</a></li>
+                  <li><a [routerLink]="['/specialities','orthopaedics','bankarts-repair']">Bankarts repair</a></li>
+                  <li><a [routerLink]="['/specialities','orthopaedics','subacromial-decompression']">Subacromial decompression</a></li>
+                  <li><a [routerLink]="['/specialities','orthopaedics','bicep-tenotomy']">Bicep tenotomy</a></li>
+                  <li><a [routerLink]="['/specialities','orthopaedics','slap-repair']">SLAP repair</a></li>
+                  <li><a [routerLink]="['/specialities','orthopaedics','subacromial-decompression-adhesive-capsulitis']">Sub acromion decompression for adhesive capsulitis(frozen shoulder)</a></li>
+                  <li><a [routerLink]="['/specialities','orthopaedics','anterior-cruciate-ligament-acl']">Anterior Cruciate Ligament(ACL)</a></li>
+                  <li><a [routerLink]="['/specialities','orthopaedics','posterior-cruciate-ligament-pcl']">Posterior Cruciate Ligament(PCL)</a></li>
+                  <li><a [routerLink]="['/specialities','orthopaedics','medial-collateral-ligament-repair']">Medial Collateral Ligament Repair</a></li>
+                  <li><a [routerLink]="['/specialities','orthopaedics','lateral-collateral-ligament-repair']">Lateral Collateral Ligament Repair</a></li>
+                  <li><a [routerLink]="['/specialities','orthopaedics','posterior-lateral-corner-repair']">Posterior Lateral Corner Repair</a></li>
+                  <li><a [routerLink]="['/specialities','orthopaedics','meniscal-repair']">Meniscal Repair</a></li>
+                  <li><a [routerLink]="['/specialities','orthopaedics','meniscal-repair-vs-meniscectomy']">Meniscal Repair vs Meniscectomy</a></li>
+                  <li><a [routerLink]="['/specialities','orthopaedics','medial-patellofemoral-ligament-repair']">Medial Patellofemoral Ligament Repair</a></li>
+                  <li><a [routerLink]="['/specialities','orthopaedics','triceps-insertional-tendinitis']">Triceps Insertional Tendinitis</a></li>
+                  <li><a [routerLink]="['/specialities','orthopaedics','golfers-elbow']">Golfer Elbow</a></li>
+                </ul>
+              </details>
+
+              <details class="dept-group">
+                <summary class="dept-summary">Obstetrics &amp; Gynaecology</summary>
+                <ul class="list-unstyled">
+                  <li><a [routerLink]="['/specialities','obstetrics-gynaecology','ivf']">IVF</a></li>
+                  <li><a [routerLink]="['/specialities','obstetrics-gynaecology','high-risk-pregnancy']">High Risk Pregnancy</a></li>
+                  <li><a [routerLink]="['/specialities','obstetrics-gynaecology','hysterectomy']">Hysterectomy</a></li>
+                  <li><a [routerLink]="['/specialities','obstetrics-gynaecology','colporrhaphy']">Colporrhaphy</a></li>
+                  <li><a [routerLink]="['/specialities','obstetrics-gynaecology','ovarian-cysts']">Ovarian Cysts</a></li>
+                </ul>
+              </details>
+
+              <details class="dept-group">
+                <summary class="dept-summary">Physiotherapy</summary>
+                <ul class="list-unstyled">
+                  <li><a [routerLink]="['/our-specialities-details']" [queryParams]="{selected_speciality: 'Physiotherapy'}">Advanced Pain Relief Therapies</a></li>
+                  <li><a [routerLink]="['/our-specialities-details']" [queryParams]="{selected_speciality: 'Physiotherapy'}">Combination Therapy</a></li>
+                  <li><a [routerLink]="['/our-specialities-details']" [queryParams]="{selected_speciality: 'Physiotherapy'}">Cryotherapy</a></li>
+                  <li><a [routerLink]="['/our-specialities-details']" [queryParams]="{selected_speciality: 'Physiotherapy'}">Thermo Therapy</a></li>
+                  <li><a [routerLink]="['/our-specialities-details']" [queryParams]="{selected_speciality: 'Physiotherapy'}">Ultrasonic Therapy</a></li>
+                  <li><a [routerLink]="['/our-specialities-details']" [queryParams]="{selected_speciality: 'Physiotherapy'}">Laser Therapy</a></li>
+                  <li><a [routerLink]="['/our-specialities-details']" [queryParams]="{selected_speciality: 'Physiotherapy'}">Dry Kneedling</a></li>
+                  <li><a [routerLink]="['/our-specialities-details']" [queryParams]="{selected_speciality: 'Physiotherapy'}">Cupping Therapy</a></li>
+                  <li><a [routerLink]="['/our-specialities-details']" [queryParams]="{selected_speciality: 'Physiotherapy'}">Tapping Therapy</a></li>
+                  <li><a [routerLink]="['/our-specialities-details']" [queryParams]="{selected_speciality: 'Physiotherapy'}">Chiropractic</a></li>
+                  <li><a [routerLink]="['/our-specialities-details']" [queryParams]="{selected_speciality: 'Physiotherapy'}">Joint mobilization</a></li>
+                  <li><a [routerLink]="['/our-specialities-details']" [queryParams]="{selected_speciality: 'Physiotherapy'}">Soft tissue mobilization</a></li>
+                  <li><a [routerLink]="['/our-specialities-details']" [queryParams]="{selected_speciality: 'Physiotherapy'}">Stroke Rehabilitation</a></li>
+                  <li><a [routerLink]="['/our-specialities-details']" [queryParams]="{selected_speciality: 'Physiotherapy'}">Parkinson's Rehabilitation</a></li>
+                  <li><a [routerLink]="['/our-specialities-details']" [queryParams]="{selected_speciality: 'Physiotherapy'}">Spinal Cord injury Rehabilitation</a></li>
+                  <li><a [routerLink]="['/our-specialities-details']" [queryParams]="{selected_speciality: 'Physiotherapy'}">Gullion Berry Syndrome</a></li>
+                  <li><a [routerLink]="['/our-specialities-details']" [queryParams]="{selected_speciality: 'Physiotherapy'}">TBI- Traumatic Brain Injury</a></li>
+                  <li><a [routerLink]="['/our-specialities-details']" [queryParams]="{selected_speciality: 'Physiotherapy'}">Sports injury Rehabilitation</a></li>
+                  <li><a [routerLink]="['/our-specialities-details']" [queryParams]="{selected_speciality: 'Physiotherapy'}">Post Operation joint Rehabilitation</a></li>
+                  <li><a [routerLink]="['/our-specialities-details']" [queryParams]="{selected_speciality: 'Physiotherapy'}">Injury Prevention Traning</a></li>
+                  <li><a [routerLink]="['/our-specialities-details']" [queryParams]="{selected_speciality: 'Physiotherapy'}">Fitness and Weight management training</a></li>
+                  <li><a [routerLink]="['/our-specialities-details']" [queryParams]="{selected_speciality: 'Physiotherapy'}">Post CABG Rehabilitation</a></li>
+                  <li><a [routerLink]="['/our-specialities-details']" [queryParams]="{selected_speciality: 'Physiotherapy'}">Myocardial Infraction</a></li>
+                  <li><a [routerLink]="['/our-specialities-details']" [queryParams]="{selected_speciality: 'Physiotherapy'}">Post Heart Transplantation Rehab</a></li>
+                  <li><a [routerLink]="['/our-specialities-details']" [queryParams]="{selected_speciality: 'Physiotherapy'}">Post Heart failure Rehab</a></li>
+                  <li><a [routerLink]="['/our-specialities-details']" [queryParams]="{selected_speciality: 'Physiotherapy'}">Major Pulmonary Surgeries</a></li>
+                  <li><a [routerLink]="['/our-specialities-details']" [queryParams]="{selected_speciality: 'Physiotherapy'}">Development Delay</a></li>
+                  <li><a [routerLink]="['/our-specialities-details']" [queryParams]="{selected_speciality: 'Physiotherapy'}">Cerebral Palsy</a></li>
+                  <li><a [routerLink]="['/our-specialities-details']" [queryParams]="{selected_speciality: 'Physiotherapy'}">Injury Rehabilition</a></li>
+                  <li><a [routerLink]="['/our-specialities-details']" [queryParams]="{selected_speciality: 'Physiotherapy'}">Geriatric Rehabilition</a></li>
+                  <li><a [routerLink]="['/our-specialities-details']" [queryParams]="{selected_speciality: 'Physiotherapy'}">Musculo Skeletol Disorders</a></li>
+                  <li><a [routerLink]="['/our-specialities-details']" [queryParams]="{selected_speciality: 'Physiotherapy'}">Balance and Gait Tranining</a></li>
+                  <li><a [routerLink]="['/our-specialities-details']" [queryParams]="{selected_speciality: 'Physiotherapy'}">Posture Correction</a></li>
+                </ul>
+              </details>
+
+              <a [routerLink]="['/specialities','paediatrics']" class="dept-link">Paediatrics</a>
+              <a [routerLink]="['/specialities','neonatology']" class="dept-link">Neonatology</a>
+
+              <details class="dept-group">
+                <summary class="dept-summary">Cardiology</summary>
+                <ul class="list-unstyled">
+                  <li><a [routerLink]="['/specialities','cardiology','heart-failure']">Heart Failure</a></li>
+                  <li><a [routerLink]="['/specialities','cardiology','angiogram']">Angiogram</a></li>
+                  <li><a [routerLink]="['/specialities','cardiology','angioplasty']">Angioplasty</a></li>
+                  <li><a [routerLink]="['/specialities','cardiology','pacemaker']">Pacemaker</a></li>
+                </ul>
+              </details>
+
+              <details class="dept-group">
+                <summary class="dept-summary">Pulmonology</summary>
+                <ul class="list-unstyled">
+                  <li><a [routerLink]="['/specialities','pulmonology','asthma']">Asthma</a></li>
+                  <li><a [routerLink]="['/specialities','pulmonology','pneumonia']">Pneumonia</a></li>
+                  <li><a [routerLink]="['/specialities','pulmonology','snoring']">Snoring</a></li>
+                  <li><a [routerLink]="['/specialities','pulmonology','sleep-apnea-treatment']">Sleep Apnea Treatment</a></li>
+                  <li><a [routerLink]="['/specialities','pulmonology','respiratory-treatment']">Respiratory Treatment</a></li>
+                </ul>
+              </details>
+
+              <a [routerLink]="['/specialities','vascular-surgery']" class="dept-link">Vascular Surgery</a>
+
+              <details class="dept-group">
+                <summary class="dept-summary">Gastroenterology</summary>
+                <ul class="list-unstyled">
+                  <li><a [routerLink]="['/specialities','gastroenterology','appendectomy']">Appendectomy</a></li>
+                  <li><a [routerLink]="['/specialities','gastroenterology','cholecystectomy']">Cholecystectomy</a></li>
+                  <li><a [routerLink]="['/specialities','gastroenterology','whipple-procedure']">Whipple Procedure</a></li>
+                  <li><a [routerLink]="['/specialities','gastroenterology','polypectomy']">Polypectomy</a></li>
+                  <li><a [routerLink]="['/specialities','gastroenterology','hernia-repair-surgery']">Hernia Repair Surgery</a></li>
+                  <li><a [routerLink]="['/specialities','gastroenterology','esophagectomy']">Esophagectomy</a></li>
+                  <li><a [routerLink]="['/specialities','gastroenterology','bariatric-surgery']">Bariatric Surgery</a></li>
+                </ul>
+              </details>
+
+              <details class="dept-group">
+                <summary class="dept-summary">Nephrology</summary>
+                <ul class="list-unstyled">
+                  <li><a [routerLink]="['/specialities','nephrology','chronic-kidney-disease']">Chronic Kidney Disease</a></li>
+                  <li><a [routerLink]="['/specialities','nephrology','dialysis']">Dialysis</a></li>
+                  <li><a [routerLink]="['/specialities','nephrology','kidney-transplants']">Kidney Transplants</a></li>
+                  <li><a [routerLink]="['/specialities','nephrology','kidney-stones']">Kidney stones</a></li>
+                </ul>
+              </details>
+
+              <details class="dept-group">
+                <summary class="dept-summary">Urology</summary>
+                <ul class="list-unstyled">
+                  <li><a [routerLink]="['/specialities','urology']">Urology</a></li>
+                  <li><a [routerLink]="['/specialities','urology','urinary-incontinence']">Urinary Incontinence</a></li>
+                </ul>
+              </details>
+
+              <details class="dept-group">
+                <summary class="dept-summary">Neurology</summary>
+                <ul class="list-unstyled">
+                  <li><a [routerLink]="['/specialities','neurology','epilepsy-seizures']">Epilepsy</a></li>
+                  <li><a [routerLink]="['/specialities','neurology','neuroplastic-surgery']">Neuroplastic surgery</a></li>
+                  <li><a [routerLink]="['/specialities','neurology','stroke']">Stroke</a></li>
+                  <li><a [routerLink]="['/specialities','neurology','migraine']">Migraine</a></li>
+                  <li><a [routerLink]="['/specialities','neurology','parkinsons']">Parkinsons</a></li>
+                  <li><a [routerLink]="['/specialities','neurology','alzheimers']">Alzheimers</a></li>
+                  <li><a [routerLink]="['/specialities','neurology','multiple-sclerosis']">Multiple sclerosis</a></li>
+                </ul>
+              </details>
+
+              <details class="dept-group">
+                <summary class="dept-summary">General Surgery</summary>
+                <ul class="list-unstyled">
+                  <li><a [routerLink]="['/specialities','general-surgery','anal-fistula-open']">Anal Fistula Open</a></li>
+                  <li><a [routerLink]="['/specialities','general-surgery','cleft-lip-and-palette']">Cleft Lip and Palette</a></li>
+                </ul>
+              </details>
+
+              <details class="dept-group">
+                <summary class="dept-summary">Spine Surgery</summary>
+                <ul class="list-unstyled">
+                  <li><a [routerLink]="['/specialities','spine-surgery','discectomy']">Disectomy</a></li>
+                  <li><a [routerLink]="['/specialities','spine-surgery','spinal-fusion-lumbar']">Spinal Fusion- Lumber</a></li>
+                  <li><a [routerLink]="['/specialities','spine-surgery','spinal-fusion-thoracic']">Spinal Fusion- Thoraic</a></li>
+                </ul>
+              </details>
+
+              <details class="dept-group">
+                <summary class="dept-summary">ENT</summary>
+                <ul class="list-unstyled">
+                  <li><a [routerLink]="['/our-specialities-details']" [queryParams]="{selected_speciality: 'ENT'}">ENT</a></li>
+                  <li><a [routerLink]="['/our-specialities-details']" [queryParams]="{selected_speciality: 'ENT'}">Cochlear Implant</a></li>
+                  <li><a [routerLink]="['/our-specialities-details']" [queryParams]="{selected_speciality: 'ENT'}">Adenoidectomy</a></li>
+                  <li><a [routerLink]="['/our-specialities-details']" [queryParams]="{selected_speciality: 'ENT'}">Microscopic Ear Surgery</a></li>
+                  <li><a [routerLink]="['/our-specialities-details']" [queryParams]="{selected_speciality: 'ENT'}">Rhinoplasty</a></li>
+                  <li><a [routerLink]="['/our-specialities-details']" [queryParams]="{selected_speciality: 'ENT'}">Speech Therapy</a></li>
+                  <li><a [routerLink]="['/our-specialities-details']" [queryParams]="{selected_speciality: 'ENT'}">Tonsillectomy</a></li>
+                  <li><a [routerLink]="['/our-specialities-details']" [queryParams]="{selected_speciality: 'ENT'}">Surgery For Snoring</a></li>
+                </ul>
+              </details>
+
+              <a [routerLink]="['/specialities','general-medicine']" class="dept-link">Internal General Medicine</a>
+              <a [routerLink]="['/specialities','diabetes-endocrinology']" class="dept-link">Diabetes and Endocrinology</a>
+              <a [routerLink]="['/specialities','dermatology']" class="dept-link">Dermatology</a>
+              <a [routerLink]="['/specialities','cosmetology']" class="dept-link">Cosmetology</a>
+              <a [routerLink]="['/specialities','maxillofacial-surgery']" class="dept-link">Maxillofacial Surgery</a>
+              <a [routerLink]="['/specialities','psychiatry']" class="dept-link">Psychiatry</a>
+              <a [routerLink]="['/specialities','neurosurgery']" class="dept-link">Neuro Surgery</a>
+              <a [routerLink]="['/specialities','oncology']" class="dept-link">Oncology</a>
+            </nav>
           </div>
         </div>
       </div>

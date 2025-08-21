@@ -1,6 +1,7 @@
 <div class="video-container" (click)="!videoPlayed && playVideo()" 
-     [style.width.px]="width" 
-     [style.height.px]="height"
+     [style.width.px]="aspectRatio ? null : width" 
+     [style.width.%]="aspectRatio ? 100 : null"
+     [style.height.px]="aspectRatio ? null : height"
      [style.aspect-ratio]="aspectRatio">
   <!-- Thumbnail -->
   <ng-container *ngIf="!videoPlayed">

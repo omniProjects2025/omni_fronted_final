@@ -32,6 +32,7 @@ export class HomeComponent {
 
   private swiperInitialized = false;
   active_button = 0;
+  isMobile = false;
   title = 'Omni_project';
   activeIndex = 0;
   direction_icon: boolean = false;
@@ -601,6 +602,7 @@ export class HomeComponent {
   }
   updateSlidesPerView(): void {
     const screenWidth = window.innerWidth;
+    this.isMobile = screenWidth < 768;
     if (screenWidth < 768) {
       this.slidesPerView = 1;
     } else if (screenWidth >= 768 && screenWidth < 1024) {
@@ -805,12 +807,52 @@ export class HomeComponent {
   }
 
   onSubmit(form: any) {
-    if (form.valid) {
-      console.log('Form Submitted:', this.formData);
-    } else {
-      Object.keys(form.controls).forEach(field => {
-        form.controls[field].markAsTouched();
-      });
+    if (!form.valid) {
+      Object.keys(form.controls).forEach((field: string) => form.controls[field].markAsTouched());
+      return;
     }
+
+    const lastSubmission = localStorage.getItem('homeContactLastSubmission');
+    if (lastSubmission) {
+      const { name, phone, time } = JSON.parse(lastSubmission);
+      const thirtyMinutes = 30 * 60 * 1000;
+      if (
+        name === (this.formData.name || '').trim() &&
+        phone === (this.formData.phone || '').trim() &&
+        Date.now() - time < thirtyMinutes
+      ) {
+        alert('You already submitted this enquiry within the last 30 minutes.');
+        return;
+      }
+    }
+
+    const payload = [
+      { Attribute: 'FirstName', Value: this.formData.name },
+      { Attribute: 'Phone', Value: this.formData.phone },
+      { Attribute: 'EmailAddress', Value: this.formData.email },
+      { Attribute: 'Source', Value: 'Website - Home Contact Form' }
+    ];
+
+    const accessKey = 'u$r56afea08b32d556818ad1a5f69f0e7f0';
+    const secretKey = '8d7f86d677dadaba209b4dead3cfcc4ab019031b';
+    const api_url_base = 'https://api-in21.leadsquared.com/v2/';
+    const url = `${api_url_base}LeadManagement.svc/Lead.Capture?accessKey=${accessKey}&secretKey=${secretKey}`;
+
+    this.http.post(url, payload, { headers: { 'Content-Type': 'application/json' } }).subscribe({
+      next: () => {
+        alert('Your enquiry has been submitted successfully!');
+        localStorage.setItem('homeContactLastSubmission', JSON.stringify({
+          name: (this.formData.name || '').trim(),
+          phone: (this.formData.phone || '').trim(),
+          time: Date.now()
+        }));
+        this.formData = { name: '', phone: '', email: '' } as any;
+        this.router.navigate(['/thank-you']);
+      },
+      error: (err) => {
+        console.error('LeadSquared Error:', err);
+        alert('There was a problem submitting your enquiry.');
+      }
+    });
   }
 }

@@ -229,3 +229,20 @@ button {
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
   }
+
+/* Our Departments responsive nav */
+.dept-card{border-radius:16px}
+.dept-nav{display:flex;flex-direction:column;gap:6px}
+.dept-link{padding:10px 12px;border:1px solid #e5e5e5;border-radius:10px;text-decoration:none;color:#333}
+.dept-link:hover{background:#f7f7f7}
+details.dept-group{border:1px solid #e5e5e5;border-radius:10px;padding:8px 12px}
+details.dept-group+details.dept-group{margin-top:6px}
+.dept-summary{cursor:pointer;font-weight:600;color:#008FD5;outline:none}
+.dept-group ul{margin:8px 0 0 0}
+.dept-group li{padding:6px 0}
+.dept-group a{text-decoration:none;color:#444}
+.dept-group a:hover{text-decoration:underline}
+
+@media (max-width: 576px){
+  .dept-link, details.dept-group{padding:10px}
+}

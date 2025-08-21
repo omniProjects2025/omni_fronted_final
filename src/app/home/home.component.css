@@ -396,6 +396,12 @@ h6 {
     border-radius: 1.8rem;
     overflow: hidden;
   }
+
+  /* Testimonial video and text blocks stack and fit nicely */
+  .testimonial-item .row { align-items: stretch; }
+  .testimonial-item app-video-player { width: 100% !important; }
+  .testimonial-item .col-md-4,
+  .testimonial-item .col-md-8 { width: 100%; }
 }
 
 .blog-item {

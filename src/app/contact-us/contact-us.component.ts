@@ -1,5 +1,7 @@
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+import { ActivatedRoute } from '@angular/router';
 import * as L from 'leaflet';
 @Component({
   selector: 'app-contact-us',
@@ -84,14 +86,13 @@ filteredBranches:any[] = [];
     }
   ]
 
-constructor(private sanitizer: DomSanitizer) {}
+constructor(private sanitizer: DomSanitizer, private route: ActivatedRoute,   private http: HttpClient) {}
 
 ngOnInit() {
  this.filteredBranches = [...this.BRANCH_LOCATIONS]; // show all by default
   this.locations = [];
   this.states = [...new Set(this.BRANCH_LOCATIONS.map((branch: any) => this.getStateFromAddress(branch.address)))] as string[];
 this.onNearestBranch()
-  
 }
 
 onNearestBranch(){
@@ -216,4 +217,73 @@ onLocationChange(event: Event) {
 
 }
 
+formData = {
+  name: '',
+  email: '',
+  phone: '',
+  message: ''
+};
+
+submitContactForm(form: any) {
+  // Full Name validation
+  if (!form.name || form.name.trim().length < 3) {
+    alert('Please enter a valid full name (at least 3 characters).');
+    return;
+  }
+
+  // Mobile Number validation
+  const phonePattern = /^[6-9]\d{9}$/;
+  if (!form.phone || !phonePattern.test(form.phone)) {
+    alert('Please enter a valid 10-digit mobile number starting with 6, 7, 8, or 9.');
+    return;
+  }
+
+  // Prevent duplicate submission for 30 minutes
+  const lastSubmission = localStorage.getItem('contactUsSubmission');
+  if (lastSubmission) {
+    const { name, phone, time } = JSON.parse(lastSubmission);
+    const thirtyMinutes = 30 * 60 * 1000;
+    const now = Date.now();
+
+    if (
+      name === form.name.trim() &&
+      phone === form.phone.trim() &&
+      now - time < thirtyMinutes
+    ) {
+      alert('You have already submitted a request with this name and phone number in the last 30 minutes.');
+      return;
+    }
+  }
+
+  const payload = [
+    { Attribute: "FirstName", Value: form.name },
+    { Attribute: "Phone", Value: form.phone },
+    { Attribute: "EmailAddress", Value: form.email },
+    { Attribute: "Description", Value: form.message },
+    { Attribute: "Source", Value: "Website - Contact Us" }
+  ];
+
+  const accessKey = 'u$r56afea08b32d556818ad1a5f69f0e7f0';
+  const secretKey = '8d7f86d677dadaba209b4dead3cfcc4ab019031b';
+  const api_url_base = 'https://api-in21.leadsquared.com/v2/';
+  const url = `${api_url_base}LeadManagement.svc/Lead.Capture?accessKey=${accessKey}&secretKey=${secretKey}`;
+
+  this.http.post(url, payload, { headers: { 'Content-Type': 'application/json' } })
+    .subscribe({
+      next: (res) => {
+        alert('Thank you! Your enquiry has been submitted.');
+        // Save last submission info for 30-minute check
+        localStorage.setItem('contactUsSubmission', JSON.stringify({
+          name: form.name.trim(),
+          phone: form.phone.trim(),
+          time: Date.now()
+        }));
+        this.formData = { name: '', email: '', phone: '', message: '' };
+      },
+      error: (err) => {
+        alert('Submission failed. Please try again.');
+        console.error(err);
+      }
+    });
+}
 }

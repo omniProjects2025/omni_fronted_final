@@ -8,6 +8,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./careers.component.css']
 })
 export class CareersComponent {
+  // private BASE_URL =  'http://localhost:3000';
+  private BASE_URL = 'https://omniservicebackend-vnyk.onrender.com';
   currentTab: 'openings' | 'joiners' | 'apply' = 'openings';
   today = new Date();
   applyForm: FormGroup;
@@ -63,29 +65,59 @@ export class CareersComponent {
     }
   }
 
-  onSubmit() {
-    if (this.applyForm.valid) {
-      const formData = new FormData();
-      formData.append('firstName', this.applyForm.get('firstName')?.value);
-      formData.append('lastName', this.applyForm.get('lastName')?.value);
-      formData.append('phone', this.applyForm.get('phone')?.value);
-      formData.append('email', this.applyForm.get('email')?.value);
-      formData.append('position', this.applyForm.get('position')?.value);
+  // onSubmit() {
+  //   if (this.applyForm.valid) {
+  //     const formData = new FormData();
+  //     formData.append('firstName', this.applyForm.get('firstName')?.value);
+  //     formData.append('lastName', this.applyForm.get('lastName')?.value);
+  //     formData.append('phone', this.applyForm.get('phone')?.value);
+  //     formData.append('email', this.applyForm.get('email')?.value);
+  //     formData.append('position', this.applyForm.get('position')?.value);
 
-      if (this.selectedFile) {
-        formData.append('resume', this.selectedFile, this.selectedFile.name);
-      }
+  //     if (this.selectedFile) {
+  //       formData.append('resume', this.selectedFile, this.selectedFile.name);
+  //     }
 
-      this.http.post('http://localhost:3000/send-email', formData).subscribe(
-        res => alert('Email sent successfully!'),
-        err => alert('Failed to send email.')
-      );
+  //     this.http.post('http://localhost:3000/send-email', formData).subscribe(
+  //       res => alert('Email sent successfully!'),
+  //       err => alert('Failed to send email.')
+  //     );
 
-      this.applyForm.reset();
-    } else {
-      this.applyForm.markAllAsTouched();
-    }
+  //     this.applyForm.reset();
+  //   } else {
+  //     this.applyForm.markAllAsTouched();
+  //   }
+  // }
+
+  onSubmit(): void {
+  if (this.applyForm.invalid) {
+    this.applyForm.markAllAsTouched();
+    return;
   }
+
+  const formData = new FormData();
+  formData.append('firstName', this.applyForm.get('firstName')!.value);
+  formData.append('lastName', this.applyForm.get('lastName')!.value);
+  formData.append('phone', this.applyForm.get('phone')!.value);
+  formData.append('email', this.applyForm.get('email')!.value);
+  formData.append('position', this.applyForm.get('position')!.value);
+
+  if (this.selectedFile) {
+    formData.append('resume', this.selectedFile, this.selectedFile.name);
+  }
+
+  this.http.post(`${this.BASE_URL}/send-email`, formData).subscribe({
+    next: () => {
+      alert('Email sent successfully!');
+      this.applyForm.reset();
+      this.selectedFile = null;
+    },
+    error: (err) => {
+      console.error('Mail submit error:', err);
+      alert('Failed to send email.');
+    }
+  });
+}
 
   onFileChange(event: any) {
     if (event.target.files.length > 0) {

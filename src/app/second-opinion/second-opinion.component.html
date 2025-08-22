@@ -54,19 +54,27 @@
                     <div class="line line-right"></div>
                 </div>
                 <div class="ms-3">
-                    <form class="form-container py-4">
+                    <form class="form-container py-4" #secondOpinionForm="ngForm">
                         <div class="">
-                            <input type="text" class="form-control p-0 pt-2 pb-2 mb-3" placeholder="Full Name">
+                            <input type="text" class="form-control p-0 pt-2 pb-2 mb-3" name="fullName"
+                                [(ngModel)]="secondOpinionData.fullName" [ngClass]="{'placeholder-red': showNameError}"
+                                minlength="3" placeholder="Full Name">
+                            <div *ngIf="showNameError && !secondOpinionData.fullName" class="text-danger small mt-1">Please enter your full name.</div>
                         </div>
                         <div class="">
-                            <input type="text" class="form-control p-0 pb-2 pt-4 mb-3" placeholder="Phone Number">
+                            <input type="text" class="form-control p-0 pb-2 pt-4 mb-3" name="phoneNumber"
+                                [(ngModel)]="secondOpinionData.phoneNumber" [ngClass]="{'placeholder-red': showPhoneError}"
+                                pattern="^[6-9]\d{9}$" placeholder="Phone Number">
+                            <div *ngIf="showPhoneError && !secondOpinionData.phoneNumber" class="text-danger small mt-1">Please enter a valid mobile number.</div>
                         </div>
                         <div class="">
-                            <input type="text" class="form-control p-0 pb-2 pt-4 mb-3" placeholder="Email ID">
+                            <input type="text" class="form-control p-0 pb-2 pt-4 mb-3" name="emailId"
+                                [(ngModel)]="secondOpinionData.emailId" placeholder="Email ID">
                         </div>
                         <div class="">
-                            <select class="form-control p-0 pb-2 pt-4 mb-3">
-                                <option selected disabled class="">Location</option>
+                            <select class="form-control p-0 pb-2 pt-4 mb-3" name="location"
+                                [(ngModel)]="secondOpinionData.location" required>
+                                <option selected disabled value="">Location</option>
                                 <option>Kukkatpally</option>
                                 <option>Kothapet</option>
                                 <option>Vizag</option>
@@ -74,15 +82,16 @@
                             </select>
                         </div>
                         <div class="">
-                            <select class="form-control p-0 pb-2 pt-4 mb-3">
-                                <option class="mx-2" selected disabled>Department</option>
+                            <select class="form-control p-0 pb-2 pt-4 mb-3" name="department"
+                                [(ngModel)]="secondOpinionData.department" required>
+                                <option selected disabled value="">Department</option>
                                 <option>Cardio</option>
                                 <option>Nephro</option>
-                                <img src="assets/images/up_icon.svg" alt="">
                             </select>
                         </div>
                     </form>
-                    <div class="text-center my-4 d-flex align-items-center justify-content-center">
+                    <div class="text-center my-4 d-flex align-items-center justify-content-center"
+                        (click)="submitSecondOpinion(secondOpinionData)">
                         <button type="submit" class="btn btn-submit">Submit</button>
                     </div>
                 </div>

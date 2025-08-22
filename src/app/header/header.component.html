@@ -97,7 +97,7 @@
         <li class="nav-item" *ngFor="let item of navItems" [class.dropdown]="item.children"
           [class.show]="hoveredItem === item.key" (mouseenter)="hoveredItem = item.key"
           (mouseleave)="hoveredItem = null">
-          <a *ngIf="item.route" class="nav-link" [routerLink]="item.route" routerLinkActive="active"
+          <a *ngIf="item.route && item.key !== 'bookAppointment'" class="nav-link" [routerLink]="item.route" routerLinkActive="active"
             [routerLinkActiveOptions]="{ exact: true }" (click)="setActive(item.key)">
             <ng-container *ngIf="item.key === 'home'">
               <img src="assets/icons/home_page_btn.svg" class="me-1" alt="" width="25px" height="25px" />

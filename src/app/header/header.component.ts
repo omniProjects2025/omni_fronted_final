@@ -68,6 +68,7 @@ export class HeaderComponent {
     { key: 'blogs', label: 'Blogs', route: "/blogs" },
     { key: 'careers', label: 'Careers', route: "/careers" },
     { key: 'contact', label: 'Contact us', route: "/contact-us" },
+    {key: 'bookAppointment', label:'Book an Appointment', route:'/book-an-appointment'}
   ];
 
   infoItems = [

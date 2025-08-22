@@ -1,3 +1,7 @@
+/* Red placeholder for invalid input */
+.placeholder-red::placeholder {
+    color: #dc3545 !important;
+}
 .opinion_head{
     font-family: 'roboto';
     font-size: 30px;

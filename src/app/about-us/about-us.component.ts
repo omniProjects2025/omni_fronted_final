@@ -65,7 +65,7 @@ export class AboutUsComponent {
     const board = $(this.boardCarousel.nativeElement);
     board.owlCarousel({
       loop: true,
-      margin: 20,
+      margin: 0, // Reduced from 8 to 2 for minimal spacing
       nav: false,
       dots: false,
       autoplay: true,

@@ -1,15 +1,15 @@
 <app-header></app-header>
 <ng-container *ngIf="selected_team==1">
   <div class="container-fluid my-5">
-    <div class="row g-4 align-items-start bg-white p-4 rounded-4 shadow-sm ms-lg-5">
+    <div class="row g-4 align-items-start bg-white p-4 rounded-4 shadow-sm">
   <div class="col-lg-5 d-flex justify-content-center justify-content-lg-start">
     <img src="assets/about_us/omni_growth.svg" 
          alt="Growth Over The Years"
          class="img-fluid rounded-3" 
-         style="max-height: 400px; height: auto;">
+         style="max-height: 400px; height: auto;padding-left: 30px;">
   </div>
 
-  <div class="col-lg-7">
+  <div class="col-lg-6">
     <div class="bg-white p-3">
       <h5 class="badge bg_primary text-white py-2 px-3 rounded-pill mb-3" style="font-size: 22px;">
         About OMNI Hospitals
@@ -31,9 +31,9 @@
   </div>
 
   <div class="container-fluid my-5">
-    <div class="row g-4 align-items-center p-4 rounded-4">
-      <div class="col-lg-9">
-        <div class="container my-4">
+    <div class="row g-4 align-items-start p-4 rounded-4">
+      <div class="col-lg-9 ">
+        <div class="container my-4 chairman-section flex-column ">
           <div class="mb-3 d-flex align-items-center gap-3 flex-wrap">
             <span *ngFor="let chr of about_chairman; index as i" class="badge px-3 py-2 rounded-pill" [ngClass]="{
             'bg_primary text-white': selectedIndex === i,
@@ -43,42 +43,41 @@
             </span>
           </div>
 
-          <div *ngIf="selectedIndex === 0">
-            <p class="mb-2" style="text-align: justify; font-size: 18px;">
-              Welcome to Omni Hospitals, where our dedication to patient care, innovation, and excellence defines our
-              mission. At Omni, we believe that healthcare is a partnership built on trust, compassion, and quality, and
-              we are honored to serve our communities with these guiding principles.
-            </p>
-            <p class="mb-2" style="text-align: justify; font-size: 18px;">
-              Throughout our journey, we have focused on delivering healthcare that not only meets but exceeds
-              expectations, adapting to the evolving needs of our patients. With specialized services ranging from
-              comprehensive maternal and pediatric care at Giggles to advanced medical and surgical treatments, our
-              facilities are designed to provide comprehensive, world-class care for individuals and families at every
-              stage of life. Our team of skilled professionals and state-of-the-art infrastructure ensure a seamless,
-              supportive experience from consultation to recovery.
-            </p>
-            <p class="mb-2" style="text-align: justify; font-size: 18px;">
-              Thank you for choosing Omni Hospitals as your trusted healthcare provider. We are here to serve you and
-              your
-              loved ones with a commitment to excellence, every step of the way.
-            </p>
-          </div>
+          <div class="chairman-content-wrapper">
+            <div *ngIf="selectedIndex === 0" class="chairman-content">
+              <p class="mb-2" style="text-align: justify; font-size: 18px;">
+                Welcome to Omni Hospitals, where our dedication to patient care, innovation, and excellence defines our
+                mission. At Omni, we believe that healthcare is a partnership built on trust, compassion, and quality, and
+                we are honored to serve our communities with these guiding principles.
+                <br/>
+                Throughout our journey, we have focused on delivering healthcare that not only meets but exceeds
+                expectations, adapting to the evolving needs of our patients. With specialized services ranging from
+                comprehensive maternal and pediatric care at Giggles to advanced medical and surgical treatments, our
+                facilities are designed to provide comprehensive, world-class care for individuals and families at every
+                stage of life. Our team of skilled professionals and state-of-the-art infrastructure ensure a seamless,
+                supportive experience from consultation to recovery.
+              <br>
+                Thank you for choosing Omni Hospitals as your trusted healthcare provider. We are here to serve you and
+                your
+                loved ones with a commitment to excellence, every step of the way.
+              </p>
+            </div>
 
-          <div *ngIf="selectedIndex === 1">
-            <p class="mb-2" style="text-align: justify; font-size: 18px;">
-              Mr. Surya is a seasoned entrepreneur with over 20 years of experience spanning healthcare, IT, real
-              estate,
-              insurance, and entertainment. His career reflects a commitment to innovation and excellence across
-              industries. In the early 2000s, Mr. Surya co-founded Harej Solutions, a trailblazer in mobile gaming
-              software, which was acquired by JAMDAT Mobile (USA) in 2004. His background in engineering, with a BE from
-              JMIT, Kuvempu University in Karnataka, underpins his passion for leveraging technology and operational
-              expertise to drive impactful ventures.
-            </p>
-            <p class="" style="text-align: justify; font-size: 18px;">
-              With Omni Hospitals, Mr. Surya has focused on building a healthcare network known for its patient-centered
-              approach, cutting-edge technology, and commitment to making quality healthcare accessible to communities.
-              His leadership continues to inspire a culture of innovation and dedication to healthcare excellence.
-            </p>
+            <div *ngIf="selectedIndex === 1" class="chairman-content">
+              <p class="mb-2" style="text-align: justify; font-size: 18px;">
+                Mr. Surya is a seasoned entrepreneur with over 20 years of experience spanning healthcare, IT, real
+                estate,
+                insurance, and entertainment. His career reflects a commitment to innovation and excellence across
+                industries. In the early 2000s, Mr. Surya co-founded Harej Solutions, a trailblazer in mobile gaming
+                software, which was acquired by JAMDAT Mobile (USA) in 2004. His background in engineering, with a BE from
+                JMIT, Kuvempu University in Karnataka, underpins his passion for leveraging technology and operational
+                expertise to drive impactful ventures.
+              <br>
+                With Omni Hospitals, Mr. Surya has focused on building a healthcare network known for its patient-centered
+                approach, cutting-edge technology, and commitment to making quality healthcare accessible to communities.
+                His leadership continues to inspire a culture of innovation and dedication to healthcare excellence.
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -111,15 +110,15 @@
             class="position-absolute top-50 right_74 translate-middle" style="width: 80%; z-index: 1;" />
         </div>
       </div>
-      <div class="col-lg-9 text-lg-start d-flex flex-column align-items-start">
-        <p class="mb-2" style="text-align: justify; font-size: 18px;">
+      <div class="col-lg-9 text-lg-start d-flex flex-column align-items-start ">
+        <p class="mb-2 text" style="text-align: justify; font-size: 18px;">
           Dr. Durgesh Shiva is a seasoned healthcare professional with over 20 years of vast experience in spanning
           operations, strategic planning, and business growth in leading healthcare institutions. An alumnus of Santosh
           Medical College Delhi, he furthered his expertise in an healthcare and management at the Symbiosis Institute
           of
           Management Studies Pune and IHMR Jaipur.
         </p>
-        <p class="mb-2" style="text-align: justify; font-size: 18px;">
+        <p class="mb-2 text" style="text-align: justify; font-size: 18px; ">
           Before joining Omni Hospitals, Dr. Durgesh Shiva held the Senior leadership roles at Medicover Hospitals
           Hyderabad, where he served as Director for Telangana and Karnataka state operations. He also held the key
           positions at Krishna Shalby Hospital, BAPS Group of Hospitals and Sahyadri Ram Krishna Hospital. His expertise
@@ -295,23 +294,26 @@
   </section>
 </ng-container>
 <ng-container *ngIf="selected_team==2">
-  <div class="container py-5 overflow_hidden" >
+  <div class=" py-5 overflow_hidden" >
+    
     <div class="row align-items-center mb-5" *ngFor="let leader of leadershipTeam; let i = index">
       <div class="col-md-3 mb-3 mb-md-0" [ngClass]="{'order-md-2': i % 2 !== 0}">
         <div class="profile-img-container position-relative mx-auto">
           <img src="assets/about_us/{{i % 2 == 0 ? 'left_circle.svg' : 'right_circle_chairman.svg'}}"
-            class="half-circle-bg {{i % 2 == 0 ? 'half_circle_img_right': 'half_circle_img_left' }}" alt="Background ring">
-          <img [src]="leader.img" alt="{{ leader.name }}" class="img-fluid rounded-circle shadow profile-img">
+            class="half-circle-bg {{i % 2 == 0 ? 'half_circle_img_right': 'half_circle_img_left' }}" style="width:450px; height: 450px;" alt="Background ring">
+          <img [src]="leader.img" alt="{{ leader.name }}" class="img-fluid rounded-circle shadow profile-img" style="width:240px; height:240px;">
         </div>
       </div>
-      <div class="col-md-9" [ngClass]="{'order-md-1': i % 2 !== 0}">
+      <div class="col-md-9 data" [ngClass]="{'order-md-1': i % 2 !== 0}">
         <div class="text-center" [ngClass]="i % 2 == 0 ? 'text-md-start' : 'text-md-end'">
           <h5 class="text_success fw-bold mb-0">{{ leader.name }}</h5>
           <p class="dep_text fw-semibold mb-2">{{ leader.designation }}</p>
           <img src="assets/about_us/{{i % 2 == 0 ? 'right_trans.svg' : 'left_trans.svg'}}" alt="leadership border">
+          <p class="text-dark" style="font-family: 'Lato', sans-serif;    ">{{ leader.description }}</p>
         </div>
-        <p class="text-dark" style="font-family: 'Lato', sans-serif;">{{ leader.description }}</p>
-      </div>
+        
+      
+    </div>
     </div>
   </div>
 

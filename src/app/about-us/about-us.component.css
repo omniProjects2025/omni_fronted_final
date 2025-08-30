@@ -11,7 +11,7 @@ p {
 }
 
 .owl-carousel .item {
-  padding: 10px;
+  padding: 0;
   cursor: grab;
 }
 
@@ -20,8 +20,10 @@ p {
 }
 
 .owl-carousel .item {
-  padding: 8px;
+  padding: 0;
+  margin: 0;
   cursor: grab;
+  width:150rem;
 }
 
 .team-card {
@@ -30,16 +32,31 @@ p {
   margin: auto;
   border-radius: 12px;
   background-color: #ffffff;
+  margin: 0; /* Removed margin to eliminate spacing */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.team-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Improve carousel spacing */
+.owl-carousel .owl-stage {
+  transition-timing-function: ease-in-out !important;
+  padding: 0; /* Removed padding to eliminate spacing */
+}
+.owl-item .item{
+  width: 105rem !important;
+  height: 90rem !important;
+}
+/* Ensure consistent card heights */
 .team-img {
   height: 220px;
   object-fit: cover;
   border-bottom: 1px solid #eee;
-}
-
-.owl-carousel .owl-stage {
-  transition-timing-function: ease-in-out !important;
+  width: 100%;
 }
 
 .card-body h5 {
@@ -153,10 +170,69 @@ p {
   border-radius: 50%;
   box-shadow: 0 0 10px rgba(0,0,0,0.15);
 }
+.profile-img,.data{
+  padding-top: 0 !important;
+  margin-top: 55px;
+}
 .left_74{
   left: 96% !important;
 }
 .right_74{
   right: 15% !important;
+}
+
+.text{
+  width:1000px
+}
+.col-lg-6{
+  width:56%
+}
+
+.my-5 {
+    /* margin-top:  !important; */
+    margin-bottom: 3.5rem !important;
+}
+
+    .col-lg-9 {
+        flex: 0 0 auto;
+        width: 75%;
+        padding-top: 0;
+        margin-bottom: 20px;
+    }
+/* Ensure the parent container aligns items vertically center */
+.chairman-section {
+  display: flex;
+  align-items: center;
+  min-height: 320px; /* Adjust as needed for your layout */
+}
+
+/* Keep the image wrapper centered and consistent */
+.profile-img-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px; /* Ensure consistent height */
+  margin: 0 auto;
+}
+
+/* Prevent image from shifting */
+.profile-img-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 230px;
+  
+}
+
+.text-md-start{
+  text-align: start !important;
+  margin-right: 20rem !important;
+  
+}
+.text-md-end{
+  text-align: end !important;
+  
+  margin-left: 20rem !important;
+  
 }
 

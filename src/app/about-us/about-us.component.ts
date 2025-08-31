@@ -61,11 +61,12 @@ export class AboutUsComponent {
     setTimeout(() => this.initBoardCarousel(), 0);
   }
 
+
   initBoardCarousel() {
     const board = $(this.boardCarousel.nativeElement);
     board.owlCarousel({
       loop: true,
-      margin: 0, // Reduced from 8 to 2 for minimal spacing
+      margin: 20,
       nav: false,
       dots: false,
       autoplay: true,

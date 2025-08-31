@@ -3,7 +3,7 @@
   <div class="container-fluid my-5">
     <div class="row g-4 align-items-start bg-white p-4 rounded-4 shadow-sm ms-lg-5">
   <div class="col-lg-5 d-flex justify-content-center justify-content-lg-start">
-    <img src="assets/about_uss/omni_growth.svg" 
+    <img src="assets/about_us/omni_growth.svg" 
          alt="Growth Over The Years"
          class="img-fluid rounded-3" 
          style="max-height: 400px; height: auto;">
@@ -297,14 +297,14 @@
 <ng-container *ngIf="selected_team==2">
   <div class="py-5 overflow_hidden" >
     <div class="row align-items-center mb-5" *ngFor="let leader of leadershipTeam; let i = index">
-      <div class="col-md-2 mb-2 mb-md-0 p-0" [ngClass]="{'order-md-2': i % 2 !== 0}">
+      <div class="col-md-3 mb-2 mb-md-0 p-0" [ngClass]="{'order-md-2': i % 2 !== 0}">
         <div class="profile-img-container position-relative mx-auto">
           <img src="assets/about_us/{{i % 2 == 0 ? 'left_circle.svg' : 'right_circle_chairman.svg'}}"
             class="half-circle-bg {{i % 2 == 0 ? 'half_circle_img_right_ls': 'half_circle_img_left_ls' }}" alt="Background ring">
           <img [src]="leader.img" alt="{{ leader.name }}" class="img-fluid rounded-circle shadow profile-img">
         </div>
       </div>
-      <div class="col-md-10" [ngClass]="{'order-md-1': i % 2 !== 0}">
+      <div class="col-md-9" [ngClass]="{'order-md-1': i % 2 !== 0}">
         <div class="text-center" [ngClass]="i % 2 == 0 ? 'text-md-start' : 'text-md-end'">
           <h5 class="text_success fw-bold mb-0">{{ leader.name }}</h5>
           <p class="dep_text fw-semibold mb-2">{{ leader.designation }}</p>

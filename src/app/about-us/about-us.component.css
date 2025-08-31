@@ -127,9 +127,9 @@ p {
 
 .half-circle-bg {
   position: absolute;
-  top: 0;
-  width: 230px;
-  height: 230px;
+  top: -20px;
+  width: 280px;
+  height: 280px;
   z-index: 1;
 }
 .half_circle_img_left{
@@ -151,8 +151,7 @@ p {
   overflow: hidden;
 }
 .profile-img {
-  width: 160px;
-  height: 160px;
+  width: 280px;
   position: absolute;
   top: 50%;
   left: 50%;

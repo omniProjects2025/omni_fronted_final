@@ -211,13 +211,14 @@ export class HomeComponent {
   hoveredCard = '';
 
   testimonials = [
+   
     {
       name: "Kanakamma",
       text: "Rapid Recovery After Total Knee Replacement (TKR) Surgery by Dr. Ranjith",
       date: "Jun 5, 2025",
       videoPlayed: false,
       thumbnailUrl: 'pSc6uKMEBo8',
-      videoUrl: "https://youtu.be/pSc6uKMEBo8?si=WWYcawWnMmSgiNHN"
+      videoUrl: "https://www.youtube.com/embed/pSc6uKMEBo8"
     },
     {
       name: "Vijaya Laxmi",
@@ -225,7 +226,7 @@ export class HomeComponent {
       date: "May 3, 2025",
       videoPlayed: false,
       thumbnailUrl: 'bxB3DoF2oYM',
-      videoUrl: "https://youtu.be/bxB3DoF2oYM?si=iBRTW5Sfxp1aEGrd"
+      videoUrl: "https://www.youtube.com/embed/bxB3DoF2oYM"
     },
     {
       name: "Koteshwar Rao",
@@ -233,7 +234,7 @@ export class HomeComponent {
       date: "Apr 15, 2025",
       videoPlayed: false,
       thumbnailUrl: 'dwNxv9xVl08',
-      videoUrl: "https://youtu.be/dwNxv9xVl08?si=X4qBKD_7aJfQKxQG"
+      videoUrl: "https://www.youtube.com/embed/dwNxv9xVl08"
     },
     {
       name: "Diva Prasad",
@@ -241,7 +242,7 @@ export class HomeComponent {
       date: "Apr 12, 2025",
       videoPlayed: false,
       thumbnailUrl: 'CM_y3X06Nkc',
-      videoUrl: " https://youtu.be/CM_y3X06Nkc?si=83cR8ryQYPfB8Qd-"
+      videoUrl: "https://www.youtube.com/embed/CM_y3X06Nkc"
     },
     {
       name: "Ranjith Kumar Yadav",
@@ -249,7 +250,7 @@ export class HomeComponent {
       date: "Oct 24, 2024",
       videoPlayed: false,
       thumbnailUrl: 'wuR_fkYqn2o',
-      videoUrl: " https://youtu.be/wuR_fkYqn2o?si=3eHUMIi5A-fc7Wkj"
+      videoUrl: "https://www.youtube.com/embed/wuR_fkYqn2o"
     }
   ];
 
@@ -414,6 +415,7 @@ export class HomeComponent {
     this.updateSlidesPerView();
     window.addEventListener('resize', this.updateSlidesPerView.bind(this));
     register();
+    
   }
 
   async onBackendIntigration() {
@@ -746,23 +748,11 @@ export class HomeComponent {
     });
   }
 
-  onVideoPlay(index: number): void {
-    // Stop carousel autoplay when video starts
-    this.owlInstance.trigger('stop.owl.autoplay');
-    
-    // Stop all other videos when one starts playing
-    this.testimonials.forEach((testimonial, idx) => {
-      if (idx !== index) {
-        testimonial.videoPlayed = false;
-      }
+  onVideoPlay(idx: number): void {
+    this.testimonials.forEach((item, i) => {
+      item.videoPlayed = i === idx; // only the clicked one plays
     });
   }
-
-  onVideoPauseOrEnd(index: number): void {
-    // Resume carousel autoplay when video stops
-    this.owlInstance.trigger('play.owl.autoplay', [3000]);
-  }
-
 
   routeToLocation(location: string, selected_image: string) {
     const modalElement = document.getElementById('locationModal');

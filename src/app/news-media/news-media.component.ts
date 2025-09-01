@@ -351,8 +351,8 @@ export class NewsMediaComponent {
     // }
   ];
 
-  playerWidth = window.innerWidth < 768 ? 320 : 640;
-  playerHeight = window.innerWidth < 768 ? 180 : 360;
+  // playerWidth = window.innerWidth < 768 ? 320 : 640;
+  // playerHeight = window.innerWidth < 768 ? 180 : 360;
 
   constructor(private http:HttpClient, private activated_route:ActivatedRoute,private router: Router, public sanitizer: DomSanitizer, private newsservice: NewsService) {
   }
@@ -378,15 +378,13 @@ export class NewsMediaComponent {
     });
   }
 
-  playVideo(index: number): void {
-    this.testimonials.forEach((item, idx) => {
-      item.videoPlayed = idx === index;
+  onVideoPlay(idx: number): void {
+    this.testimonials.forEach((item, i) => {
+      item.videoPlayed = i === idx; // only the clicked one plays
     });
   }
 
-  getUnmutedVideoUrl(url: string): string {
-    return `${url}?autoplay=1&mute=0&modestbranding=1&rel=0&showinfo=0&enablejsapi=1`;
-  }
+
 
   // getNewsDetails() {
   //   this.newsservice.getAllNews().subscribe((response: any) => {

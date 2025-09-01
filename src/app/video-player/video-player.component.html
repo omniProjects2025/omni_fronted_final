@@ -1,20 +1,27 @@
-<div class="video-container" (click)="!videoPlayed && playVideo()" 
-     [style.width.px]="aspectRatio ? null : width" 
-     [style.width.%]="aspectRatio ? 100 : null"
-     [style.height.px]="aspectRatio ? null : height"
-     [style.aspect-ratio]="aspectRatio">
-  <!-- Thumbnail -->
-  <ng-container *ngIf="!videoPlayed">
-    <img class="thumbnail" 
-         [src]="'https://img.youtube.com/vi/' + thumbnailUrlId + '/hqdefault.jpg'"
-         [alt]="'Video thumbnail for ' + thumbnailUrlId" />
-    <div class="play-button"></div>
-  </ng-container>
+<div class="video-wrapper">
+  <!-- Thumbnail with Play Button -->
+  <div *ngIf="!videoPlayed" class="video-thumbnail" (click)="playVideo()">
+    <img [src]="'https://img.youtube.com/vi/' + thumbnailUrl+ '/maxresdefault.jpg'"
+      class="w-100 h-100 object-fit-cover" [alt]="'Video thumbnail for ' + thumbnailUrl" />
+    <div class="play-button">▶</div>
+  </div>
 
-  <!-- YouTube player (inserted dynamically) -->
-  <div *ngIf="videoPlayed" 
-       [id]="uniqueId"
-       #playerContainer
-       class="youtube-player-container"></div>
+  <!-- YouTube Video Embed (Only when Played) -->
+  <div *ngIf="videoPlayed" class="video-iframe-container">
+    <iframe class="w-100 h-100 border-0"
+      [src]="getUnmutedVideoUrl(videoUrl)"
+      allow="autoplay; encrypted-media" allowfullscreen>
+    </iframe>
+  </div>
+<!-- 
+  <app-video-player 
+    [videoUrl]="testimonial.videoUrl" 
+    [thumbnailUrlId]="testimonial.thumbnailUrl"
+    [width]="300" 
+    [height]="200"
+    [aspectRatio]="'16/9'"
+    [(videoPlayed)]="testimonial.videoPlayed" 
+    (videoStarted)="onVideoPlay(idx)"
+    (videoStopped)="onVideoPauseOrEnd(idx)">
+  </app-video-player> -->
 </div>
-  

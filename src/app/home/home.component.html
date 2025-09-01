@@ -210,13 +210,13 @@
               <div class="col-md-4 d-flex align-items-center justify-content-center">
                 <app-video-player 
                   [videoUrl]="testimonial.videoUrl" 
-                  [thumbnailUrlId]="testimonial.thumbnailUrl"
+                  [thumbnailUrl]="testimonial.thumbnailUrl"
                   [width]="200" 
                   [height]="150"
                   [aspectRatio]="'4/3'"
                   [(videoPlayed)]="testimonial.videoPlayed" 
                   (videoStarted)="onVideoPlay(idx)"
-                  (videoStopped)="onVideoPauseOrEnd(idx)">
+                  >
                 </app-video-player>
               </div>
 

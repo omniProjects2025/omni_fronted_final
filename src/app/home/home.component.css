@@ -369,6 +369,8 @@ h6 {
   border-radius: 15px;
   overflow: hidden;
   transition: transform 0.3s ease-in-out;
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
 }
 
 .card {
@@ -379,6 +381,28 @@ h6 {
 
 .testimonial-item .row {
   height: 100%;
+}
+
+/* Ensure video player has proper dimensions in testimonials */
+.testimonial-item app-video-player {
+  width: 100% !important;
+  height: 150px !important;
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.testimonial-item app-video-player .video-wrapper {
+  height: 150px !important;
+  width: 100% !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.testimonial-item app-video-player .video-thumbnail,
+.testimonial-item app-video-player .video-iframe-container {
+  visibility: visible !important;
+  opacity: 1 !important;
 }
 
 .carousel-control-prev,
@@ -399,7 +423,7 @@ h6 {
 
   /* Testimonial video and text blocks stack and fit nicely */
   .testimonial-item .row { align-items: stretch; }
-  .testimonial-item app-video-player { width: 100% !important; }
+  .testimonial-item app-video-player { width: 100% !important; height: 150px !important; }
   .testimonial-item .col-md-4,
   .testimonial-item .col-md-8 { width: 100%; }
 }

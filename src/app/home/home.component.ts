@@ -1,4 +1,4 @@
-import { Component, ViewChild, ElementRef, Renderer2, HostListener, ChangeDetectorRef, SimpleChanges } from '@angular/core';
+import { Component, ViewChild, ElementRef, Renderer2, HostListener, ChangeDetectorRef, SimpleChanges, ChangeDetectionStrategy } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 import { register } from 'swiper/element/bundle';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
@@ -749,9 +749,22 @@ export class HomeComponent {
   }
 
   onVideoPlay(idx: number): void {
+    // Stop all videos first
     this.testimonials.forEach((item, i) => {
-      item.videoPlayed = i === idx; // only the clicked one plays
+      if (i !== idx) {
+        item.videoPlayed = false;
+      }
     });
+    
+    // Start only the selected video
+    this.testimonials[idx].videoPlayed = true;
+    
+    // Manually trigger change detection
+    this.cdr.detectChanges();
+  }
+
+  trackByTestimonial(index: number, testimonial: any): string {
+    return testimonial.name + testimonial.videoUrl;
   }
 
   routeToLocation(location: string, selected_image: string) {

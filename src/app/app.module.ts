@@ -27,7 +27,10 @@ import { TechnologiesDetailsComponent } from './technologies-details/technologie
 import { OurBranchesComponent } from './our-branches/our-branches.component';
 import { CareersComponent } from './careers/careers.component';
 import { FeedbackComponent } from './feedback/feedback.component';
+import { CustomRouteReuseStrategy } from './custom-route-reuse-strategy';
+import { RouteReuseStrategy } from '@angular/router';
 import { BlogDetailsComponent } from './blog-details/blog-details.component';
+import { VideoUrlPipe } from './video-url.pipe';
 import { NewsMediaDetailsComponent } from './news-media-details/news-media-details.component';
 import { BookAnAppointmentComponent } from './book-an-appointment/book-an-appointment.component';
 // import { FixedSurgicalPackagesComponent } from './fixed-surgical-packages/fixed-surgical-packages.component';
@@ -61,6 +64,7 @@ import { PatientCareComponent } from './patient-care/patient-care.component';
     BlogsComponent,
     VideoPlayerComponent,
     SafePipe,
+    VideoUrlPipe,
     TechnologiesDetailsComponent,
     OurBranchesComponent,
     CareersComponent,
@@ -91,7 +95,9 @@ import { PatientCareComponent } from './patient-care/patient-care.component';
     BrowserAnimationsModule,
     YouTubePlayerModule
   ],
-  providers: [],
+  providers: [
+    { provide: RouteReuseStrategy, useClass: CustomRouteReuseStrategy }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

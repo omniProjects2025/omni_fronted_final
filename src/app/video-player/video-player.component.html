@@ -2,26 +2,19 @@
   <!-- Thumbnail with Play Button -->
   <div *ngIf="!videoPlayed" class="video-thumbnail" (click)="playVideo()">
     <img [src]="'https://img.youtube.com/vi/' + thumbnailUrl+ '/maxresdefault.jpg'"
-      class="w-100 h-100 object-fit-cover" [alt]="'Video thumbnail for ' + thumbnailUrl" />
+      class="w-100 h-100 object-fit-cover" [alt]="'Video thumbnail for ' + thumbnailUrl" 
+      (error)="onImageError($event)" />
     <div class="play-button">▶</div>
   </div>
 
   <!-- YouTube Video Embed (Only when Played) -->
   <div *ngIf="videoPlayed" class="video-iframe-container">
-    <iframe class="w-100 h-100 border-0"
-      [src]="getUnmutedVideoUrl(videoUrl)"
-      allow="autoplay; encrypted-media" allowfullscreen>
+    <iframe #videoIframe
+      class="w-100 h-100 border-0"
+      [src]="videoUrl | videoUrl"
+      allow="autoplay; encrypted-media; fullscreen" 
+      allowfullscreen
+      (load)="onIframeLoad()">
     </iframe>
   </div>
-<!-- 
-  <app-video-player 
-    [videoUrl]="testimonial.videoUrl" 
-    [thumbnailUrlId]="testimonial.thumbnailUrl"
-    [width]="300" 
-    [height]="200"
-    [aspectRatio]="'16/9'"
-    [(videoPlayed)]="testimonial.videoPlayed" 
-    (videoStarted)="onVideoPlay(idx)"
-    (videoStopped)="onVideoPauseOrEnd(idx)">
-  </app-video-player> -->
 </div>

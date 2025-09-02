@@ -748,20 +748,18 @@ export class HomeComponent {
     });
   }
 
-  onVideoPlay(idx: number): void {
-    // Stop all videos first
-    this.testimonials.forEach((item, i) => {
-      if (i !== idx) {
-        item.videoPlayed = false;
-      }
-    });
-    
-    // Start only the selected video
-    this.testimonials[idx].videoPlayed = true;
-    
-    // Manually trigger change detection
-    this.cdr.detectChanges();
-  }
+onVideoPlay(idx: number): void {
+  this.testimonials.forEach((item, i) => {
+    if (i !== idx) {
+      item.videoPlayed = false;
+    }
+  });
+
+  // ✅ no need to set testimonials[idx].videoPlayed = true again,
+  // the child already emitted it
+  this.cdr.detectChanges();
+}
+
 
   trackByTestimonial(index: number, testimonial: any): string {
     return testimonial.name + testimonial.videoUrl;

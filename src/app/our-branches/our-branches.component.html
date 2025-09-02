@@ -124,19 +124,18 @@
             <div class="doctor-card mb-3 p-3 shadow-sm">
               <div class="row g-0 align-items-center">
                 <!-- Doctor Image -->
-                <div class="col-md-2 text-center" (click)="goToDoctorDetails()">
-                  <img [src]="doc.image" class="doctor-img" alt="Doctor Image" />
+                <div class="col-md-2 text-center" (click)="goToDoctorDetails(doc.name)">
+                  <img [src]="doc.profile" class="doctor-img" alt="Doctor Image" />
                 </div>
 
                 <!-- Doctor Info -->
                 <div class="col-md-7">
-                  <div class="ms-3" (click)="goToDoctorDetails()">
+                  <div class="ms-3" (click)="goToDoctorDetails(doc.name)">
                     <h5 class="fw-bold">{{ doc.name }}</h5>
                     <p class="mb-1 small text-muted">
-                      M.S. (Gen. Surgery), DNB (Surgical Gastro), FMAS, <br />
-                      Advanced Laparoscopic & Bariatric Surgeon, GI Oncology & Liver Transplant Surgeon
+                      {{doc.qualification}}
                     </p>
-                    <p class="fw-semibold mb-0">Surgical Gastroenterologist</p>
+                    <p class="fw-semibold mb-0">{{doc.depertment}}</p>
                   </div>
                 </div>
 
@@ -146,13 +145,13 @@
                     <img class="ms-2 me-3" src="assets/our_doctors/experience.svg" alt="">
                     <span class="txt">{{ doc.experience }}</span>
                   </div>
-                  <div class="d-flex align-items-center mb-2">
+                  <!-- <div class="d-flex align-items-center mb-2">
                     <img class="ms-2 me-3" src="assets/our_doctors/clock.svg" alt="">
                     <span class="txt">{{ doc.timings }}</span>
-                  </div>
+                  </div> -->
                   <div class="d-flex align-items-center mb-3">
                     <img class="ms-2 me-3" src="assets/our_doctors/location.svg" alt="">
-                    <span class="txt">{{ doc.location }}</span>
+                    <span class="txt">{{ doc.work_location }}</span>
                   </div>
                   <div class="d-flex align-items-center justify-content-start mb-3" (click)="goToBookAppointment()">
                     <button class="btn rounded-pill px-3 py-2 btn-sm book_btn">

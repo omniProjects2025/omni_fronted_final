@@ -8,7 +8,6 @@ import { Router } from '@angular/router';
 })
 export class FooterComponent {
   hoveredIcon:string = '';
-  test = ''
   email="info@omnihospitals.in"
 
   constructor(private router: Router){

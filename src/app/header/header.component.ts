@@ -32,13 +32,15 @@ export class HeaderComponent {
         { id: 'general-medicine', label: 'General Medicine', route: '/speciality/general-medicine' },
         { id: 'general-surgery', label: 'General Surgery', route: '/speciality/general-surgery' },
         { id: 'gastroenterology', label: 'Medical & Surgical Gastroenterology', route: '/speciality/gastroenterology' },
-        { id: 'nephrology-urology', label: 'Nephrology & Urology', route: '/speciality/nephrology-urology' },
+        { id: 'nephrology', label: 'Nephrology', route: '/speciality/nephrology' },
+        { id: 'neurology', label: 'Neurology', route: '/speciality/neurology' },
+        { id: 'Urology', label: 'Urology', route: '/speciality/Urology' },
         { id: 'obstetrics-gynaecology', label: 'Obstetrics & Gynaecology', route: '/speciality/obstetrics-gynaecology' },
         { id: 'orthopedic', label: 'Orthopedics', route: '/speciality/orthopedic' },
         { id: 'paediatrics', label: 'Paediatrics', route: '/speciality/paediatrics' },
         { id: 'psychiatry', label: 'Psychiatry', route: '/speciality/psychiatry' },
         { id: 'pulmonology', label: 'Pulmonology', route: '/speciality/pulmonology' },
-        { id: 'vascular-surgery', label: 'Vascular Surgery', route: '/speciality/vascular-surgery' }
+        { id: 'plastic-surgery', label: 'Plastic Surgery', route: '/speciality/plastic-surgery' },
       ]
     },
     {
@@ -172,7 +174,7 @@ export class HeaderComponent {
     }).catch(error => console.error('Navigation error:', error));
   }
 
-  onChildClick(key: string, id: string,label:string) {
+  onChildClick(key: string, id: string, label: string) {
     console.log('onChildClick called with key:', key, 'id:', id);
 
     if (key === 'about') {

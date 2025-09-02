@@ -155,3 +155,11 @@
   letter-spacing: 1px;
   padding: 5px 20px;
 }
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:active, a:focus, a:visited {
+  color: inherit;
+}

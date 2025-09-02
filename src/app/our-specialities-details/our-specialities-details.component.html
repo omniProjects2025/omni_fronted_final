@@ -69,17 +69,27 @@
             </form>
           </div>
         </div>
-        <ng-container *ngIf="selectedDepartment.sub_departments">
+        <ng-container *ngIf="selectedDepartment?.sub_departments">
           <section>
             <div class="row">
               <div class="col-lg-5 col-md-12">
-                <h5 *ngFor="let sub_dept of selectedDepartment.sub_departments"
-                  (click)="onSelectSubDept(sub_dept.name)">
-                  {{ sub_dept.name }}
-                </h5>
+                <ng-container *ngFor="let sub_dept of selectedDepartment.sub_departments">
+                  <h5 (click)="onSelectSubDept(sub_dept.name)">{{ sub_dept.name }}</h5>
+                </ng-container>
               </div>
 
               <div class="col-lg-7 col-md-12 d-flex flex-column align-items-start">
+                <ng-container *ngFor="let sub_dept of selectedDepartment.sub_departments">
+                  <ng-container  *ngFor="let sub_dept of sub_dept.details">
+                    <h5 [innerHTML]="sub_dept.title"></h5>
+                    <p [innerHTML]="sub_dept.description"></p>
+
+                    <ng-container *ngFor="let data of sub_dept.sections">
+                      <h6 [innerHTML]="data?.subtitle"></h6>
+                      <p [innerHTML]="data?.description"></p>
+                    </ng-container>
+                  </ng-container>
+                </ng-container>
                 <h5>{{subDepartmentData.name}}</h5>
                 <p [innerHTML]="subDepartmentData?.title"></p>
                 <p [innerHTML]="subDepartmentData?.subtitle"></p>

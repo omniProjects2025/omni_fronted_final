@@ -34,7 +34,7 @@ export class HeaderComponent {
         { id: 'gastroenterology', label: 'Medical & Surgical Gastroenterology', route: '/speciality/gastroenterology' },
         { id: 'nephrology-urology', label: 'Nephrology & Urology', route: '/speciality/nephrology-urology' },
         { id: 'obstetrics-gynaecology', label: 'Obstetrics & Gynaecology', route: '/speciality/obstetrics-gynaecology' },
-        { id: 'orthopedic', label: 'Orthopedic', route: '/speciality/orthopedic' },
+        { id: 'orthopedic', label: 'Orthopedics', route: '/speciality/orthopedic' },
         { id: 'paediatrics', label: 'Paediatrics', route: '/speciality/paediatrics' },
         { id: 'psychiatry', label: 'Psychiatry', route: '/speciality/psychiatry' },
         { id: 'pulmonology', label: 'Pulmonology', route: '/speciality/pulmonology' },
@@ -172,7 +172,7 @@ export class HeaderComponent {
     }).catch(error => console.error('Navigation error:', error));
   }
 
-  onChildClick(key: string, id: string) {
+  onChildClick(key: string, id: string,label:string) {
     console.log('onChildClick called with key:', key, 'id:', id);
 
     if (key === 'about') {
@@ -188,7 +188,7 @@ export class HeaderComponent {
     } else if (key === 'specialities') {
       this.router.navigate(['/our-specialities-details'], {
         queryParams: {
-          selected_speciality: id
+          selected_speciality: label
         }
       });
     }

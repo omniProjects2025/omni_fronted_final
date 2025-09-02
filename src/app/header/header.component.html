@@ -114,7 +114,7 @@
           <ul class="dropdown-menu p-3 mega-menu" *ngIf="item.children && hoveredItem === item.key">
             <div class="row">
               <div class="col-md-6" *ngFor="let child of item.children">
-                <a class="dropdown-item py-2 border-bottom" (click)="onChildClick(item.key, child.id)">
+                <a class="dropdown-item py-2 border-bottom" (click)="onChildClick(item.key, child.id,child.label)">
                   {{ child.label }}
                 </a>
               </div>

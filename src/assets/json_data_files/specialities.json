@@ -798,7 +798,7 @@
             ]
         },
         {
-            "name": "Neurology",
+            "name": "Nephrology & Urology",
             "short_description": "The Department of Neurology at OMNI Hospitals is one of the most advanced centers for brain, spinal cord, and nervous system care in Hyderabad and the state of Telangana",
             "img": "assets/our_specialities/nuerology.jpg",
             "details": [
@@ -958,7 +958,7 @@
             "sub_departments": []
         },
         {
-            "name": "Gastroenterology",
+            "name": "Medical & Surgical Gastroenterology",
             "short_description": "The Department of Gastroenterology at OMNI Hospitals provides comprehensive medical and surgical care for all digestive system, liver, pancreas, and biliary tract disorders…",
             "img": "assets/our_specialities/gastroenterology.jpg",
             "details": [

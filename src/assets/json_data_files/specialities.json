@@ -15,7 +15,7 @@
                     "sections": [
                         {
                             "subtitle": "Expertise in Cardiac & Thoracic Care",
-                            "heading":"Our specialists perform:",
+                            "heading": "Our specialists perform:",
                             "para": [
                                 "Adult & pediatric heart surgeries",
                                 "Bypass surgery & valve replacement",
@@ -800,7 +800,7 @@
         {
             "name": "Neurology",
             "short_description": "The Department of Neurology at OMNI Hospitals is one of the most advanced centers for brain, spinal cord, and nervous system care in Hyderabad and the state of Telangana",
-                  "img":"assets/our_specialities/nuerology.jpg",
+            "img": "assets/our_specialities/nuerology.jpg",
             "details": [
                 {
                     "title": "Best Neurology Hospital in Hyderabad",
@@ -841,6 +841,435 @@
                     "description": "At OMNI Hospitals, we combine cutting-edge neurology treatments with a patient-first approach, making us one of the best neurology hospitals in Hyderabad. Whether it’s stroke emergencies, epilepsy care, or chronic neurological disorders, our specialists are dedicated to restoring health and quality of life."
                 }
             ]
+        },
+        {
+            "name": "General Medicine",
+            "short_description": "The department of  general medicine at Omni Hospitals has the best team of top General surgeons and physicians in Hyderabad, with vast experience in treating all branches of internal medicine",
+            "img": "assets/our_specialities/general_medicine.jpg",
+            "details": [
+                {
+                    "description": "The department of general medicine at Omni Hospitals has the best team of top General surgeons and physicians in Hyderabad with vast experience in treating all branches of internal medicine and offers non-surgical primary healthcare services in areas of respiratory diseases, endocrinology, thyroid issues, infections, sudden changes in weight (weight gain or weight loss), and neurology etc. Our team is well-equipped with knowledge of advanced science and interdisciplinary diagnosis to cater to the needs of out-patient and in-patient services, and emergency care for patients with communicable and non-communicable diseases. "
+                },
+                {
+                    "title": "Expertise in General Medicine Care",
+                    "description": "Our specialists provide expert care for:",
+                    "list": [
+                        "Diabetes, hypertension & thyroid disorders",
+                        "Fever evaluation & infectious diseases",
+                        "Respiratory illnesses like asthma, bronchitis & pneumonia",
+                        "Gastrointestinal conditions such as acidity, gastritis & IBS",
+                        "Lifestyle-related health issues & obesity",
+                        "Autoimmune and metabolic disorders"
+                    ]
+                },
+                {
+                    "title": "Advanced Diagnostics & Treatments",
+                    "description": "We are equipped with modern medical facilities, including:",
+                    "list": [
+                        "Comprehensive blood investigations",
+                        "Advanced radiology & imaging",
+                        "ECG, 2D Echo, Holter monitoring",
+                        "Pulmonary function tests",
+                        "Preventive health check-up packages"
+                    ]
+                },
+                {
+                    "title": "Conditions We Treat",
+                    "list": [
+                        "Diabetes & metabolic disorders",
+                        "Hypertension & cardiovascular risk management",
+                        "Thyroid diseases",
+                        "Respiratory infections & chronic lung diseases",
+                        "Gastrointestinal disorders",
+                        "Autoimmune & multi-system diseases",
+                        "General infections & seasonal fevers"
+                    ]
+                },
+                {
+                    "description": "Looking for the best general medicine hospital in Hyderabad? Choose OMNI Hospitals for accurate diagnosis, holistic treatment, and compassionate patient care."
+                }
+            ]
+        },
+        {
+            "name": "General Surgery",
+            "short_description": "The Department of General Surgery at OMNI Hospitals is one of the leading centers for surgical care in Hyderabad, Telangana…",
+            "img": "assets/our_specialities/general_surgery.jpg",
+            "details": [
+                {
+                    "title": "Best General Surgery Hospital in Hyderabad",
+                    "description": "The Department of General Surgery at OMNI Hospitals is one of the leading centers for surgical care in Hyderabad, Telangana. With advanced infrastructure, modern operating theaters, and highly skilled surgeons, we specialize in diagnosing, treating, and managing a wide spectrum of surgical conditions with precision and compassion.\n\nOur team of expert general surgeons in Hyderabad is experienced in performing both emergency and elective surgeries, ensuring patient safety and faster recovery. We use minimally invasive techniques, including laparoscopic and robotic-assisted surgery, to reduce pain, shorten hospital stays, and improve surgical outcomes."
+                },
+                {
+                    "title": "Conditions & Surgeries We Treat",
+                    "description": "Our surgeons provide comprehensive surgical care for:",
+                    "sections": [
+                        {
+                            "subtitle": "General & Specialized Surgeries",
+                            "list": [
+                                "Appendicitis & Gallbladder Stones",
+                                "Hernias (Inguinal, Umbilical, Ventral, Incisional)",
+                                "Thyroid & Parathyroid Disorders",
+                                "Breast Surgery (Lumps, Cysts, Cancer Screening & Treatment)",
+                                "Varicose Veins & Vascular Conditions",
+                                "Piles, Fissures & Fistula (Proctology Care)",
+                                "Abdominal Trauma & Emergency Surgeries",
+                                "Gastrointestinal Surgeries (Stomach, Intestine, Colon, Liver, Pancreas)",
+                                "Skin & Soft Tissue Surgeries (Cysts, Lipomas, Abscesses, Tumors)"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "title": "Advanced Surgical Procedures",
+                    "description": "OMNI Hospitals offers expertise in:",
+                    "sections": [
+                        {
+                            "subtitle": "Minimally Invasive & Specialized Treatments",
+                            "list": [
+                                "Laparoscopic & Minimally Invasive Surgeries",
+                                "Laser Surgery for Piles, Fissures & Fistulas",
+                                "Endocrine Surgery (Thyroid, Adrenal, Parathyroid)",
+                                "Oncological Surgery (Cancer-related procedures)",
+                                "Trauma & Emergency Surgery"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "title": "Why Choose OMNI Hospitals for General Surgery?",
+                    "sections": [
+                        {
+                            "subtitle": "Our Advantages",
+                            "list": [
+                                "Skilled team of experienced general & laparoscopic surgeons",
+                                "Advanced diagnostic and imaging support",
+                                "Infection-controlled operation theaters",
+                                "24/7 emergency surgical care",
+                                "Patient-centered approach with comprehensive post-surgical follow-up"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "title": "Looking for the Best General Surgeon in Hyderabad?",
+                    "description": "At OMNI Hospitals, we are committed to delivering safe, advanced, and patient-friendly surgical care. Whether it’s a laparoscopic procedure, laser surgery, or emergency operation, our surgeons ensure the highest standards of treatment with compassion and precision."
+                }
+            ],
+            "sub_departments": []
+        },
+        {
+            "name": "Gastroenterology",
+            "short_description": "The Department of Gastroenterology at OMNI Hospitals provides comprehensive medical and surgical care for all digestive system, liver, pancreas, and biliary tract disorders…",
+            "img": "assets/our_specialities/gastroenterology.jpg",
+            "details": [
+                {
+                    "title": "Best Gastroenterology Hospital in Hyderabad – OMNI Hospitals",
+                    "description": "The Department of Gastroenterology at OMNI Hospitals provides comprehensive medical and surgical care for all digestive system, liver, pancreas, and biliary tract disorders. With highly experienced medical gastroenterologists, GI surgeons, and advanced facilities, we are recognized among the best gastroenterology hospitals in Hyderabad and Telangana."
+                },
+                {
+                    "title": "Medical Gastroenterology",
+                    "description": "Our team of expert medical gastroenterologists specializes in the prevention, diagnosis, and treatment of digestive and liver disorders.",
+                    "sections": [
+                        {
+                            "subtitle": "Conditions We Treat",
+                            "list": [
+                                "Acid reflux (GERD), gastritis, and peptic ulcers",
+                                "Inflammatory bowel disease (IBD), colitis, and IBS",
+                                "Hepatitis, cirrhosis, fatty liver disease, and jaundice",
+                                "Pancreatitis (acute and chronic)",
+                                "Gastrointestinal bleeding",
+                                "Constipation, diarrhea, abdominal pain, and bloating"
+                            ]
+                        },
+                        {
+                            "subtitle": "Advanced Medical Services",
+                            "list": [
+                                "Diagnostic and therapeutic endoscopy & colonoscopy",
+                                "ERCP (Endoscopic Retrograde Cholangiopancreatography) for bile and pancreatic duct disorders",
+                                "Endoscopic Ultrasound (EUS) and advanced therapeutic endoscopy",
+                                "Capsule endoscopy for small intestine evaluation",
+                                "Comprehensive liver function evaluation and biopsy"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "title": "Surgical Gastroenterology",
+                    "description": "Our surgical gastroenterology team provides advanced surgical treatments for complex digestive and hepatobiliary conditions.",
+                    "sections": [
+                        {
+                            "subtitle": "Conditions We Treat",
+                            "list": [
+                                "Gallstones and gallbladder diseases",
+                                "Gastrointestinal cancers (stomach, colon, liver, pancreas, esophagus)",
+                                "Large intestinal and rectal disorders",
+                                "Complex liver, pancreatic, and bile duct conditions",
+                                "Gastrointestinal obstruction and perforation"
+                            ]
+                        },
+                        {
+                            "subtitle": "Surgical Expertise",
+                            "list": [
+                                "Minimally invasive (laparoscopic) GI surgeries",
+                                "Hepatobiliary and pancreatic surgeries",
+                                "GI cancer surgeries with reconstructive expertise",
+                                "Colorectal surgeries for benign and malignant conditions",
+                                "Emergency GI surgeries for perforations, obstructions, and bleeding"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "title": "Why Choose OMNI Hospitals?",
+                    "sections": [
+                        {
+                            "subtitle": "Our Advantages",
+                            "list": [
+                                "Dedicated Medical & Surgical Gastroenterology units under one roof",
+                                "State-of-the-art endoscopy and minimally invasive surgery facilities",
+                                "24/7 emergency gastro care for bleeding, acute pain, or obstruction",
+                                "Team of experienced gastroenterologists, GI surgeons, dieticians, and critical care experts",
+                                "Patient-centered approach with personalized treatment plans"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "title": "Looking for the best gastroenterologist or GI surgeon in Hyderabad?",
+                    "description": "At OMNI Hospitals, patients receive world-class care in both medical and surgical gastroenterology, ensuring accurate diagnosis, advanced treatment, and long-term digestive health."
+                }
+            ],
+            "sub_departments": [
+                {
+                    "name": "Bariatric Surgery",
+                    "details": [
+                        {
+                            "title": "Bariatric Surgery",
+                            "description": "The primary goals of Bariatric surgery are to reduce food consumption by reducing intestinal and stomach absorption of nutrients. This is done by undergoing a surgery that helps change or limit the general form of the digestive process so that food is not absorbed and broken down as usual. Patients can lose weight and lower their risk of obesity-related health hazards or diseases by consuming fewer calories and nutrients."
+                        },
+                        {
+                            "title": "Who Should Undergo The Surgery?",
+                            "description": "In order to identify degrees of obesity and evaluate whether bariatric intervention is necessary, the body mass index (BMI), a measurement of height in proportion to weight, is utilized.\n\nYou would need to undergo bariatric surgery if,\n\nYou have a BMI of 40 or above (extreme obesity).\nYou have a major body fat-related health issue, such as type 2 diabetes, high blood pressure, or chronic sleep apnea, and your BMI anywhere between 35 and 39.9 (obesity). If your BMI is between 30 and 34 and you have major weight-related health issues, you could be eligible for some forms of weight-loss surgery."
+                        },
+                        {
+                            "title": "Types Of Bariatric Surgery",
+                            "description": "There are basically 4 forms of bariatric surgeries, which are as follows…",
+                            "sections": [
+                                {
+                                    "subtitle": "1. Roux-En-Y Gastric Bypass (roo-en-wy).RYGB",
+                                    "description": "The most popular technique for gastric bypass is this process. Usually, this operation cannot be reversed. It functions by limiting the quantity of food you can eat at one time and lowering nutritional absorption.\n\nYour stomach’s top is separated from the rest of it by an incision made by the surgeon. Only approximately an ounce of food may fit in the resultant pouch, which is roughly the size of a walnut. Your stomach can typically store three quarts of food. The small intestine is then partially sliced and sewn onto the pouch by the surgeon. Food reaches the middle portion of the small intestine without passing through much of your stomach or the initial part of your small intestine."
+                                },
+                                {
+                                    "subtitle": "2. Vertical Gastric Sleeve Surgery (VSG)",
+                                    "description": "With a sleeve gastrectomy, approximately 80% of the stomach is removed, leaving a protracted pouch that resembles a tube. There is less room for food in this smaller stomach. Additionally, it generates less ghrelin, a hormone that controls appetite, which may reduce your urge to eat. This treatment has benefits, including considerable weight reduction and no gut rerouting. Additionally, compared to most other surgeries, a sleeve gastrectomy needs a shorter hospital stay."
+                                },
+                                {
+                                    "subtitle": "3. Biliopancreatic Diversion with a Duodenal Switch (BPD-DS)",
+                                    "description": "In Duodenal switch with biliopancreatic diversion. In the first stage of this two-part treatment, a sleeve gastrectomy-like technique is carried out. Bypassing the bulk of the intestine, the second procedure (duodenal switch and biliopancreatic diversion) connects the terminal section of the intestine to the duodenum close to the stomach.\n\nThis procedure both restricts how much you may consume and decreases nutritional absorption. Although it is quite successful, there are more risks associated with it, such as starvation and vitamin deficiencies."
+                                },
+                                {
+                                    "subtitle": "4. Adjustable Gastric Banding (AGB)",
+                                    "description": "This is done through a process called Laparoscopy. A flexible band is wrapped around the top of the stomach by the surgeon. This results in a tiny stomach pouch. This implies that you’ll feel satisfied after consuming less food, aiding in weight loss.\n\nAdjusting the band is possible. This is accomplished by changing the amount of fluid in a balloon around the band. This is accomplished through a port inserted beneath the skin of your belly. Once the surgery is completed, a needle will be inserted into the port by the physician through the patient’s skin. The port is injected with fluid. The liquid enters the balloon through the tube, wraps around the band, and compresses the top of the stomach. At each clinic visit, a small quantity of fluid is often added, and your weight reduction will be monitored."
+                                }
+                            ]
+                        },
+                        {
+                            "title": "Post Surgery",
+                            "description": "After the completion of bariatric surgery, the patient will be kept only on a liquid diet for a few days until the digestive system, stomach, and small intestines can heal. Then moves on to extremely soft, pureed meals, and finally, ordinary foods. How much and what you can eat and drink may be subject to a variety of limitations or restrictions.\n\nIn the initial months following weight-loss surgery, patients will have to undergo routine medical examinations to track their health. The patient has to make sure to maintain a healthy lifestyle post-surgery for consistency in good health."
+                        },
+                        {
+                            "title": "Result",
+                            "description": "Excessive weight/fat leads to many ailments, which are interrelated; hence post post-surgery multiple results can be seen as the outcome of weight reduction. The patient is seen to recover from many underlying issues over time. The most common ones are as follows",
+                            "list": [
+                                "Heart problems",
+                                "Abnormal / Elevated blood pressure",
+                                "Diabetes type 2",
+                                "Obstructive Sleep Apnea (OSA)",
+                                "Non alcoholic steatohepatitis, often known as non alcoholic fatty liver disease (NAFLD) (NASH)",
+                                "Disease of the gastroesophageal reflux (GERD)"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Esophagectomy",
+                    "details": [
+                        {
+                            "title": "Esophagectomy",
+                            "description": "Esophagectomy is a surgical operation where the swallowing tube (esophagus) between your mouth and stomach is partially or completely removed and then rebuilt using tissue from another organ, typically the stomach."
+                        },
+                        {
+                            "title": "Why is Esophagectomy surgery done?",
+                            "description": "The primary surgical remedy for esophageal cancer is esophagectomy. Either the malignancy is eradicated or the symptoms are alleviated. If aggressive precancerous cells are present, esophagectomy is occasionally used to treat Barrett’s esophagus in addition to being a common therapy for advanced esophageal cancer. When other attempts to salvage the esophagus have failed, such as with end-stage achalasia or strictures, or after ingesting anything that harms the esophageal lining, an esophagectomy could be advised for noncancerous diseases."
+                        },
+                        {
+                            "title": "How is the surgery performed?",
+                            "description": "An incision is made in the neck, chest, or belly during an open esophagectomy, during which the surgeon removes all or part of the esophagus. In most cases. The esophagus is replaced with another organ, usually the stomach, although on occasion the small or large intestine may also be used to replace the esophagus.\n\nEsophagectomy may often be performed minimally invasively using laparoscopy, robot assistance, or a combination of these techniques. These operations, which are carried out through a series of tiny incisions when necessary, can be less painful and have a quicker recovery time than traditional surgery."
+                        },
+                        {
+                            "title": "Types Of Esophagectomy",
+                            "sections": [
+                                {
+                                    "subtitle": "McKeown Esophagectomy or Open Esophagectomy",
+                                    "description": "During an open esophagectomy, one or more significant incisions are made in the neck, chest, or belly and rebuild the gastrointestinal tract. A transthoracic esophagectomy, which involves making incisions in the chest and belly to remove the esophagus, is an option for the surgeon. Alternatively, the doctor might conduct a transhiatal esophagectomy, which involves making incisions in the neck and belly. Occasionally, a three-field esophagectomy is required, which involves making incisions in the neck, chest, and abdomen."
+                                },
+                                {
+                                    "subtitle": "Thoracoabdominal Esophagectomy",
+                                    "description": "In this process, on the left side, a single incision is created that extends from the chest to the belly, as well as a neck incision."
+                                },
+                                {
+                                    "subtitle": "Transhiatal Esophagectomy",
+                                    "description": "Cuts are made in the neck and belly, and the esophagus in between is severely dissected out (with the fingers)."
+                                },
+                                {
+                                    "subtitle": "Ivor Lewis Esophagectomy",
+                                    "description": "The right side of the chest has one incision, and the abdomen has another."
+                                },
+                                {
+                                    "subtitle": "Minimally Invasive Esophagectomy",
+                                    "description": "This method entails removing the esophagus by several tiny incisions in the chest or the belly (laparoscopically) (thoracoscopically). The thoracoscope and laparoscope are two long, slender, flexible tools used for chest and abdominal examination. In laparoscopic surgery, the surgeon makes small incisions and inserts tools and a camera-tipped device to examine and carry out the procedure without severing any muscles or breaking any ribs. This technique could be aided by a robot in some hospitals."
+                                }
+                            ]
+                        },
+                        {
+                            "title": "Post Surgery",
+                            "description": "No matter what kind of esophagectomy is performed, the patient is transported to the intensive care unit (ICU) for 24-48 hours following surgical esophagectomy. The epidural will be modified to provide the best possible pain relief when the patient is weaned off the ventilator and transitioned to tube feedings with the help of a jejunostomy tube (feeding tube), which is inserted as part of the procedure. As the patient regains the ability to swallow, this is utilized to deliver nutrients for up to 30 days following surgery.\n\nA nasogastric tube, a drain that enters via the nose, will also be present in the patient. This tube is necessary to maintain the stomach’s decompression so that the newly formed link between the esophagus and the stomach has a greater chance of healing."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Emergency Medicine & Critical Care",
+            "short_description": "The Department of Emergency Medicine & Critical Care at OMNI Hospitals provides round-the-clock, life-saving care for patients with medical, surgical, and trauma emergencies.",
+            "img": "assets/our_specialities/emergency_medicine_critical_care.jpg",
+            "details": [
+                {
+                    "title": "Best Emergency Medicine & Critical Care Hospital in Hyderabad – OMNI Hospitals",
+                    "description": "The Department of Emergency Medicine & Critical Care at OMNI Hospitals provides round-the-clock, life-saving care for patients with medical, surgical, and trauma emergencies. With a team of highly skilled emergency physicians, intensivists, nurses, and paramedics, we are recognized among the best emergency and critical care hospitals in Hyderabad and Telangana. Equipped with state-of-the-art technology, modern ICUs, and rapid response protocols, we ensure timely diagnosis, stabilization, and treatment for critically ill patients."
+                },
+                {
+                    "title": "Emergency Medicine Services",
+                    "description": "Our 24/7 Emergency Department is designed to handle all medical and surgical emergencies with speed and precision."
+                },
+                {
+                    "title": "Conditions Managed",
+                    "list": [
+                        "Heart attacks, cardiac arrest, and chest pain",
+                        "Stroke and neurological emergencies",
+                        "Respiratory distress and severe asthma attacks",
+                        "Accidents, fractures, and polytrauma",
+                        "Poisoning and drug overdose",
+                        "Seizures and sudden loss of consciousness",
+                        "Acute abdominal pain and gastrointestinal emergencies",
+                        "Severe infections and sepsis"
+                    ]
+                },
+                {
+                    "title": "Emergency Facilities",
+                    "list": [
+                        "Dedicated triage system for immediate assessment",
+                        "Advanced cardiac life support (ACLS) & basic life support (BLS) trained staff",
+                        "Emergency resuscitation and trauma bays",
+                        "24/7 availability of CT, MRI, X-ray, and laboratory services",
+                        "Ambulance and paramedic services with pre-hospital care"
+                    ]
+                },
+                {
+                    "title": "Critical Care Services",
+                    "description": "Our Intensive Care Units (ICUs) are equipped with advanced monitoring systems and life-support technologies to provide expert care for critically ill patients."
+                },
+                {
+                    "title": "Specialties of Critical Care",
+                    "list": [
+                        "Medical ICU (MICU)",
+                        "Surgical ICU (SICU)",
+                        "Cardiac ICU (CCU)",
+                        "Neuro ICU",
+                        "Pediatric & Neonatal ICU (PICU/NICU)"
+                    ]
+                },
+                {
+                    "title": "Expertise in Critical Care",
+                    "list": [
+                        "Management of sepsis and multi-organ failure",
+                        "Ventilator support and advanced airway management",
+                        "Post-operative critical care",
+                        "Hemodynamic monitoring and critical trauma management",
+                        "Dialysis and renal replacement therapies in the ICU",
+                        "Multi-disciplinary care involving cardiology, neurology, nephrology, and pulmonology"
+                    ]
+                },
+                {
+                    "title": "Why Choose OMNI Hospitals?",
+                    "list": [
+                        "24/7 emergency and trauma response team",
+                        "Advanced critical care units with life-saving equipment",
+                        "Team of experienced emergency physicians, intensivists, and critical care nurses",
+                        "Rapid diagnostics and integrated multi-specialty support",
+                        "Proven expertise in handling high-risk and complex emergencies",
+                        "Patient-centric approach with compassionate and continuous care"
+                    ]
+                },
+                {
+                    "title": "Looking for the Best Emergency & Critical Care Hospital in Hyderabad?",
+                    "description": "If you are searching for the best emergency hospital in Hyderabad or an advanced critical care hospital near you, OMNI Hospitals ensures timely intervention, expert treatment, and improved survival outcomes."
+                }
+            ],
+            "sub_departments": []
+        },
+        {
+            "name": "Nephrology",
+            "short_description": "The Department of Nephrology at OMNI Hospitals is recognized as one of the best kidney care centers in Hyderabad, Telangana.",
+            "img": "assets/our_specialities/nephrology.jpg",
+            "details": [
+                {
+                    "title": "Best Nephrology Hospital in Hyderabad – OMNI Hospitals",
+                    "description": "The Department of Nephrology at OMNI Hospitals is recognized as one of the best kidney care centers in Hyderabad, Telangana, offering advanced diagnosis and treatment for a wide range of kidney-related conditions. With a team of highly experienced nephrologists, dialysis specialists, and transplant experts, we are committed to delivering comprehensive care for patients with acute and chronic kidney diseases. Our state-of-the-art infrastructure includes modern dialysis units, advanced imaging, and intensive care facilities, making us a trusted kidney hospital in Hyderabad."
+                },
+                {
+                    "title": "Conditions We Treat",
+                    "description": "Our nephrology experts specialize in the management of:",
+                    "list": [
+                        "Acute kidney injury (AKI)",
+                        "Chronic kidney disease (CKD)",
+                        "End-stage renal disease (ESRD)",
+                        "Diabetic kidney disease (Diabetic nephropathy)",
+                        "Hypertensive nephropathy",
+                        "Glomerulonephritis",
+                        "Polycystic kidney disease (PKD)",
+                        "Kidney stones and urinary tract obstructions",
+                        "Electrolyte and acid-base disorders",
+                        "Pediatric kidney conditions"
+                    ]
+                },
+                {
+                    "title": "Nephrology Services at OMNI Hospitals",
+                    "description": "We provide a comprehensive range of medical and interventional nephrology services, including:",
+                    "list": [
+                        "Hemodialysis & Peritoneal Dialysis – 24/7 dialysis centers with advanced machines and infection control protocols",
+                        "Continuous Renal Replacement Therapy (CRRT) – for critically ill patients in the ICU",
+                        "Kidney Biopsy – for accurate diagnosis of complex renal disorders",
+                        "Plasmapheresis & Hemoperfusion – advanced blood purification therapies",
+                        "Renal Transplantation (Pre & Post Care) – evaluation, donor matching, transplant surgery support, and long-term follow-up care",
+                        "Hypertension & Diabetic Kidney Care – targeted management of high-risk patients"
+                    ]
+                },
+                {
+                    "title": "Why Choose OMNI Hospitals for Kidney Care?",
+                    "list": [
+                        "Expert team of nephrologists, urologists, and transplant surgeons",
+                        "24/7 dialysis units with specialized staff and an infection-free environment",
+                        "Advanced ICUs for critically ill renal patients",
+                        "Multidisciplinary approach involving endocrinology, cardiology, and critical care",
+                        "Patient-first care with individualized treatment plans"
+                    ]
+                },
+                {
+                    "description": "If you’re looking for the best nephrologist in Hyderabad or a trusted kidney hospital near you, OMNI Hospitals provides expert treatment, advanced facilities, and compassionate care to improve kidney health and overall quality of life."
+                }
+            ],
+            "sub_departments": []
         }
     ]
 }

@@ -26,7 +26,7 @@ export class HeaderComponent {
       key: 'specialities', label: 'Our Specialities', route: '/our-specialities',
       children: [
         { id: 'cardiology', label: 'Cardiology', route: '/speciality/cardiology' },
-        { id: 'dermatology', label: 'Dermatology', route: '/speciality/dermatology' },
+        // { id: 'dermatology', label: 'Dermatology', route: '/speciality/dermatology' },
         { id: 'emergency-medicine', label: 'Emergency Medicine & Critical Care', route: '/speciality/emergency-medicine' },
         { id: 'ent', label: 'ENT', route: '/speciality/ent' },
         { id: 'general-medicine', label: 'General Medicine', route: '/speciality/general-medicine' },
@@ -34,13 +34,13 @@ export class HeaderComponent {
         { id: 'gastroenterology', label: 'Medical & Surgical Gastroenterology', route: '/speciality/gastroenterology' },
         { id: 'nephrology', label: 'Nephrology', route: '/speciality/nephrology' },
         { id: 'neurology', label: 'Neurology', route: '/speciality/neurology' },
-        { id: 'Urology', label: 'Urology', route: '/speciality/Urology' },
+        // { id: 'Urology', label: 'Urology', route: '/speciality/Urology' },
         { id: 'obstetrics-gynaecology', label: 'Obstetrics & Gynaecology', route: '/speciality/obstetrics-gynaecology' },
         { id: 'orthopedic', label: 'Orthopedics', route: '/speciality/orthopedic' },
-        { id: 'paediatrics', label: 'Paediatrics', route: '/speciality/paediatrics' },
-        { id: 'psychiatry', label: 'Psychiatry', route: '/speciality/psychiatry' },
+        // { id: 'paediatrics', label: 'Paediatrics', route: '/speciality/paediatrics' },
+        // { id: 'psychiatry', label: 'Psychiatry', route: '/speciality/psychiatry' },
         { id: 'pulmonology', label: 'Pulmonology', route: '/speciality/pulmonology' },
-        { id: 'plastic-surgery', label: 'Plastic Surgery', route: '/speciality/plastic-surgery' },
+        // { id: 'plastic-surgery', label: 'Plastic Surgery', route: '/speciality/plastic-surgery' },
       ]
     },
     {

@@ -1,0 +1,846 @@
+{
+    "departments": [
+        {
+            "name": "Cardiology",
+            "short_description": "The Department of Cardiology at OMNI Hospitals is widely recognized as one of the best cardiology hospitals in Hyderabad…..",
+            "img": "assets/our_specialities/cardiology.jpg",
+            "details": [
+                {
+                    "title": "Best Cardiology Hospital",
+                    "description": "The Department of Cardiology at OMNI Hospitals is widely recognized as one of the best cardiology hospitals in Hyderabad, Telangana, and across India. Equipped with advanced cardiac care infrastructure and staffed by leading heart specialists, our hospital is committed to diagnosing, treating, and managing a wide range of heart and vascular conditions. Our expert cardiologists in Hyderabad specialize in the treatment of ischemic heart disease, valvular heart disease, high blood pressure (hypertension), cardiac arrhythmias, congenital heart defects, and vascular disorders. For patients experiencing cardiac emergencies such as heart attacks, chest pain, or heart failure, our Coronary Care Unit (CCU) offers 24/7 critical care and monitoring. OMNI Hospitals is among the most trusted heart hospitals in Hyderabad, providing both invasive and non-invasive cardiology services, including angioplasty, angiography, echocardiography, cardiac catheterization, and pacemaker implantation. Our state-of-the-art cardiac diagnostic tools ensure accurate assessment and timely intervention for all heart conditions. We take pride in being one of the top heart surgery hospitals in Hyderabad, offering comprehensive pre-operative and post-operative cardiac care. Our team is highly experienced in performing complex cardiac procedures with utmost precision, safety, and compassion. If you're searching for the best cardiologist in Hyderabad or a top-rated heart hospital in Telangana, OMNI Hospitals delivers clinical excellence with a patient-first approach. Experience advanced cardiovascular care with Your heart deserves nothing less."
+                },
+                {
+                    "title": "Best Cardiology & Cardiothoracic Hospital in Hyderabad – OMNI Hospitals",
+                    "description": "OMNI Hospitals is a leading heart hospital in Hyderabad and Telangana, offering expert care in cardiology and cardiothoracic surgery. With world-class infrastructure, advanced diagnostics, and a team of the best cardiologists and cardiac surgeons in Hyderabad, we treat a wide range of heart and lung conditions with precision and compassion.",
+                    "sections": [
+                        {
+                            "subtitle": "Expertise in Cardiac & Thoracic Care",
+                            "heading":"Our specialists perform:",
+                            "para": [
+                                "Adult & pediatric heart surgeries",
+                                "Bypass surgery & valve replacement",
+                                "Heart & lung transplants",
+                                "Aneurysm & congenital defect repair",
+                                "Thoracic & lung cancer surgeries"
+                            ]
+                        },
+                        {
+                            "subtitle": "Advanced Heart Treatments",
+                            "list": [
+                                "ECG, 2D Echo, TMT, Holter monitoring",
+                                "Angiogram, Angioplasty, Cardiac catheterization",
+                                "Pacemaker implantation, Valvuloplasty",
+                                "Electrophysiology & RF ablation"
+                            ]
+                        },
+                        {
+                            "subtitle": "Conditions Treated",
+                            "list": [
+                                "Coronary artery disease",
+                                "Heart failure & valve disorders",
+                                "Atrial fibrillation & congenital defects",
+                                "Lung diseases, GERD, and esophageal cancers"
+                            ]
+                        }
+                    ],
+                    "conclusion": "Looking for the best heart hospital in Hyderabad? Choose OMNI Hospitals for comprehensive, compassionate, and advanced cardiac care."
+                }
+            ],
+            "sub_departments": [
+                {
+                    "name": "Permanent Pacemaker Implantation (PPI)",
+                    "title": "Permanent Cardiac Pacemaker Implantation in Hyderabad",
+                    "subtitle": "Advanced Bradycardia & Heart Rhythm Treatment at OMNI Hospitals",
+                    "description": "At OMNI Hospitals, we offer expert care for permanent cardiac pacemaker implantation, a life-saving solution for patients diagnosed with Bradycardia (slow heart rate) or irregular heart rhythms such as Ventricular Dyssynchrony. Our team of top cardiologists in Hyderabad ensures safe and effective implantation using advanced cardiac technology.",
+                    "sections": [
+                        {
+                            "subtitle": "What Is a Permanent Pacemaker?",
+                            "description": "A pacemaker is a small, battery-operated electronic device implanted under the collarbone. It helps maintain a regular heart rhythm by sending electrical impulses to the heart when the heartbeat becomes too slow or irregular."
+                        },
+                        {
+                            "subtitle": "How Does a Pacemaker Work?",
+                            "list": [
+                                "The device consists of:",
+                                "A pulse generator (battery and electrical circuit)",
+                                "Leads (electrodes) placed in the heart chambers",
+                                "The pacemaker continuously monitors your heartbeat. When an abnormal rhythm is detected, it sends electrical signals to correct it ensuring efficient blood circulation and proper heart function."
+                            ]
+                        },
+                        {
+                            "subtitle": "Types of Cardiac Pacemakers",
+                            "list": [
+                                "<strong>Single-Chamber Pacemaker</strong> – Sends signals to one heart chamber (usually right atrium or ventricle).",
+                                "<strong>Dual-Chamber Pacemaker</strong> – Coordinates activity between the atrium and ventricle.",
+                                "<strong>Biventricular Pacemaker</strong> – Also known as Cardiac Resynchronization Therapy (CRT), used for heart failure patients to improve pumping efficiency."
+                            ]
+                        },
+                        {
+                            "subtitle": "Pacemaker Implantation Procedure at OMNI Hospitals",
+                            "list": [
+                                "<strong>Pre-procedure evaluation:</strong> Medical history, heart function tests, and imaging.",
+                                "<strong>Implantation:</strong> Performed under local anesthesia using a minimally invasive technique. A lead is guided through a vein to the heart, and the pacemaker is placed under the skin near the collarbone.",
+                                "<strong>Fluoroscopy:</strong> It ensures accurate lead placement.",
+                                "<strong>Post-procedure monitoring:</strong> Ensures heart rhythm stability before discharge."
+                            ]
+                        },
+                        {
+                            "subtitle": "Benefits of Pacemaker Implantation",
+                            "list": [
+                                "Restores normal heart rhythm",
+                                "Improves breathing and energy levels",
+                                "Reduces fatigue and dizziness",
+                                "Enhances quality of life for patients with slow or irregular heartbeats"
+                            ]
+                        }
+                    ],
+                    "conclusion": "At OMNI Hospitals, we use state-of-the-art cardiac facilities and a highly experienced heart team to provide the best pacemaker treatment in Hyderabad with excellent post-surgical care and long-term follow-up."
+                },
+                {
+                    "name": "Coronary Angioplasty",
+                    "title": "Advanced Heart Blockage Treatment in Hyderabad",
+                    "description": "Coronary Angioplasty, also known as Percutaneous Coronary Intervention (PCI), is a minimally invasive procedure used to open blocked or narrowed arteries of the heart. This procedure helps restore normal blood flow and prevent life-threatening complications such as heart attacks. During angioplasty, a stent is often placed at the site of the blockage to keep the artery open long-term. It’s commonly performed in patients diagnosed with coronary artery disease (CAD) or those who have experienced a cardiac event.",
+                    "sections": [
+                        {
+                            "subtitle": "Who Needs Coronary Angioplasty?",
+                            "list": [
+                                "Acute myocardial infarction (heart attack)",
+                                "Severe chest pain (Angina)",
+                                "Coronary artery blockages (Atherosclerosis)",
+                                "Abnormal stress test or angiogram results",
+                                "Reduced blood supply to the heart muscle",
+                                "Physician-recommended based on cardiac risk profile"
+                            ]
+                        },
+                        {
+                            "subtitle": "Angioplasty Procedure at OMNI Hospitals",
+                            "description": "The procedure is guided by prior diagnostic imaging like a Coronary Angiogram that detects arterial blockages. Under local anesthesia, a catheter is inserted through the groin or wrist and advanced toward the blocked coronary artery.\n\nUsing real-time fluoroscopic imaging, a tiny balloon at the tip of the catheter is inflated at the site of blockage, compressing the plaque against the arterial wall. A drug-eluting stent (DES) may be placed to ensure long-term patency and reduce the chance of re-narrowing."
+                        },
+                        {
+                            "subtitle": "Procedure Duration",
+                            "description": "Depending on the number and location of blockages, angioplasty can take 30 minutes to a few hours."
+                        },
+                        {
+                            "subtitle": "Post-Angioplasty Recovery and Care",
+                            "list": [
+                                "Adopt a heart-healthy lifestyle and low-fat diet",
+                                "Avoid smoking, alcohol, and tobacco",
+                                "Manage cholesterol (LDL/HDL) and blood pressure",
+                                "Follow doctor-prescribed cardiac rehab or exercise plan"
+                            ]
+                        },
+                        {
+                            "subtitle": "Recovery Time After Angioplasty",
+                            "list": [
+                                "Elective (planned) angioplasty: Return to work within 5–7 days",
+                                "Emergency angioplasty post-heart attack: Recovery can range from a few weeks to months, depending on cardiac function and overall health"
+                            ]
+                        },
+                        {
+                            "subtitle": "Why Choose OMNI Hospitals for Angioplasty in Hyderabad?",
+                            "list": [
+                                "Highly experienced interventional cardiologists",
+                                "Advanced cath lab facilities",
+                                "24/7 emergency cardiac care services",
+                                "Proven outcomes in heart blockage treatments"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Coronary Angiogram",
+                    "title": "Coronary Angiogram in Hyderabad",
+                    "subtitle": "Accurate Diagnosis of Coronary Artery Disease (CAD)",
+                    "description": "A Coronary Angiogram, also called Cardiac Catheterization, is a specialized diagnostic procedure used to detect blockages in the coronary arteries. This test helps identify Coronary Artery Disease (CAD) a condition where cholesterol, plaque, or fat deposits restrict blood flow to the heart, potentially leading to a heart attack.",
+                    "sections": [
+                        {
+                            "subtitle": "How a Coronary Angiogram Works",
+                            "description": "The procedure involves inserting a thin, flexible tube called a catheter into a blood vessel (usually through the wrist or groin). A contrast dye, safe for human use, is injected into the coronary arteries. As the dye flows through the heart's arteries, it becomes visible under real-time X-ray imaging (fluoroscopy).\n\nThe resulting series of images known as the angiogram help cardiologists assess the severity and location of arterial blockages, making it a critical step before procedures like angioplasty or stent placement."
+                        },
+                        {
+                            "subtitle": "When Is a Coronary Angiogram Recommended?",
+                            "list": [
+                                "Chest pain or angina (tightness, pressure, or burning)",
+                                "Abnormal ECG, stress test, or echocardiogram results",
+                                "Unexplained pain in the jaw, neck, shoulder, or arm",
+                                "Suspected coronary artery disease (CAD)",
+                                "Congenital heart defects (CHDs)",
+                                "History of chest trauma or injury",
+                                "Preoperative assessment before heart surgery"
+                            ]
+                        },
+                        {
+                            "subtitle": "Duration of the Procedure",
+                            "description": "A coronary angiogram typically takes 30 minutes to 1 hour. The duration may extend if angioplasty or stent placement is performed during the same session, depending on the patient's condition."
+                        },
+                        {
+                            "subtitle": "Post-Angiogram Care and Recovery",
+                            "description": "After the procedure, the patient is kept under observation for a few hours. Most patients are discharged the same day or within 24 hours. A follow-up appointment is scheduled to discuss the angiogram results and next steps in treatment.",
+                            "list": [
+                                "Adopting a heart-healthy lifestyle",
+                                "Quitting smoking, alcohol, and tobacco use",
+                                "Maintaining normal cholesterol and blood pressure",
+                                "Following a customized exercise plan prescribed by the cardiologist"
+                            ]
+                        },
+                        {
+                            "subtitle": "Why Choose OMNI Hospitals for Coronary Angiogram in Hyderabad?",
+                            "list": [
+                                "Best-in-class Cath Lab facilities",
+                                "Expert team of interventional cardiologists",
+                                "Quick and accurate diagnosis of heart blockages",
+                                "24x7 availability of emergency cardiac care"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Heart Failure Treatment in Hyderabad",
+                    "title": "Expert Care for Heart Failure Diagnosis, Symptoms & Management at OMNI Hospitals",
+                    "description": "Heart failure is a condition where the heart is unable to pump enough blood to meet the body’s needs. It often develops over time due to conditions like high blood pressure, coronary artery disease, or previous heart attacks, which weaken the heart muscle.\n\nAt OMNI Hospitals, our expert cardiology team in Hyderabad offers advanced diagnosis, effective treatment, and long-term management plans for patients with chronic or acute heart failure.",
+                    "sections": [
+                        {
+                            "subtitle": "Common Causes of Heart Failure",
+                            "list": [
+                                "Coronary Artery Disease (CAD) – narrowed or blocked arteries reduce blood supply to the heart.",
+                                "Congenital Heart Defects – structural issues present from birth.",
+                                "Heart Attack – damage from a past attack can impair heart function.",
+                                "Cardiomyopathy – weakened heart muscles due to infections, alcohol, genetics, or drug abuse.",
+                                "Other conditions – including hypertension, diabetes, kidney disease, thyroid disorders, and valve disease."
+                            ]
+                        },
+                        {
+                            "subtitle": "Heart Failure Symptoms to Watch For",
+                            "list": [
+                                "Shortness of breath (during activity or rest)",
+                                "Fatigue and weakness",
+                                "Swelling in feet or ankles (pedal edema)",
+                                "Nocturnal coughing or breathing difficulty (PND)",
+                                "Frequent urination at night",
+                                "Chest pain or pressure",
+                                "Loss of appetite, indigestion",
+                                "Dizziness or giddiness",
+                                "Persistent dry cough"
+                            ],
+                            "conclusion": "Early detection of these signs of heart failure is crucial for effective treatment."
+                        },
+                        {
+                            "subtitle": "Diagnosis of Heart Failure at OMNI Hospitals",
+                            "list": [
+                                "2D Echo – assesses heart pumping, valve function, and chamber size",
+                                "ECG (Electrocardiogram) – identifies rhythm abnormalities or heart attack history",
+                                "Chest X-ray – checks for heart enlargement and fluid in the lungs",
+                                "BNP / NT-proBNP Blood Test – indicates the presence and severity of heart failure",
+                                "Advanced tests – including CT scan, MRI, coronary angiogram, stress tests, and myocardial biopsy (if needed)"
+                            ]
+                        },
+                        {
+                            "subtitle": "Heart Failure Treatment Options in Hyderabad",
+                            "sections": [
+                                {
+                                    "subtitle": "Lifestyle Modifications",
+                                    "list": [
+                                        "Weight control, salt and fluid restriction",
+                                        "Cardiac rehabilitation and low-impact exercise",
+                                        "Complete avoidance of smoking, alcohol, and substance abuse"
+                                    ]
+                                },
+                                {
+                                    "subtitle": "Medications",
+                                    "list": [
+                                        "Diuretics to prevent fluid retention",
+                                        "ACE inhibitors, beta-blockers, and other heart medications to improve heart function"
+                                    ]
+                                },
+                                {
+                                    "subtitle": "Surgical Interventions",
+                                    "list": [
+                                        "Bypass surgery, valve repair or replacement",
+                                        "Heart transplant in end-stage heart failure cases"
+                                    ]
+                                },
+                                {
+                                    "subtitle": "Implantable Cardiac Devices",
+                                    "list": [
+                                        "ICDs (Implantable Cardioverter Defibrillators) to correct dangerous arrhythmias",
+                                        "CRT (Cardiac Resynchronization Therapy) for synchronizing heartbeats and improving pump function"
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "subtitle": "Why Choose OMNI Hospitals for Heart Failure Treatment in Hyderabad?",
+                            "list": [
+                                "Experienced cardiologists & heart failure specialists",
+                                "Advanced diagnostics and state-of-the-art cardiac care units",
+                                "Personalized treatment plans and rehabilitation support",
+                                "24x7 emergency cardiac care"
+                            ]
+                        }
+                    ],
+                    "conclusion": "Book an appointment today with a leading cardiologist in Hyderabad to get evaluated for heart failure symptoms or ongoing management support."
+                }
+            ]
+        },
+        {
+            "name": "ENT",
+            "short_description": "Discover the leading ENT care at Omni Hospitals in Hyderabad, backed by advanced technology and a compassionate team of ENT specialists.",
+            "img": "assets/our_specialities/ent.jpg",
+            "details": [
+                {
+                    "title": "Best ENT Hospital In Hyderabad",
+                    "description": "Discover the leading ENT care at Omni Hospitals in Hyderabad, backed by advanced technology and a compassionate team of ENT specialists. From everyday ENT issues to complex head and neck conditions, our department delivers comprehensive solutions under one roof."
+                },
+                {
+                    "title": "Conditions We Treat",
+                    "description": "Our experienced otolaryngologists provide expert care for a wide range of ENT problems, including:",
+                    "para": [
+                        "<strong>Ear Disorders:</strong> Hearing loss, ear infections, tinnitus, balance issues",
+                        "<strong>Nose & Sinus Conditions:</strong> Sinusitis, nasal blockage, allergy management, deviated septum",
+                        "<strong>Throat & Voice:</strong> Tonsillitis, voice disorders, swallowing difficulties, sleep apnea",
+                        "<strong>Head & Neck Health:</strong> Salivary gland conditions, facial trauma, thyroid and parathyroid disorders",
+                        "<strong>Pediatric ENT:</strong> Ear infections, adenoids, tonsil issues, congenital ENT anomalies",
+                        "<strong>Complex Surgical Care:</strong> Head & neck tumors, microsurgery, reconstructive ENT surgery"
+                    ]
+                },
+                {
+                    "title": "Advanced ENT Diagnostics & Treatments",
+                    "description": "<strong>With cutting-edge facilities at our core, Omni Hospitals offers:</strong>",
+                    "list": [
+                        "<strong>Diagnostic Excellence:</strong> Audiometry, nasal endoscopy, CT scans, endoscopic sinus evaluations",
+                        "<strong>Medical Therapy:</strong> Allergy injections, voice therapy, and medication for ENT infections",
+                        "<strong>Minimally Invasive Surgeries:</strong> Functional Endoscopic Sinus Surgery (FESS), septorhinoplasty, and more",
+                        "<strong>Precision Interventions:</strong> Laser proctology, micro-laryngeal surgery, reconstructive middle ear surgery",
+                        "<strong>Specialized Care:</strong> Cochlear implants, vertigo treatment, tinnitus management, and sleep disorder therapies"
+                    ]
+                },
+                {
+                    "title": "Our ENT Specialist",
+                    "description": "Dr. Payal Chitransi – She is one of the best ENT Doctors in Kukatpally, Hyderabad. Dr. Payal Chitransi is an expert in Surgery for Snoring, Functional Endoscopic Sinus Surgery – FESS, Sinus Surgery – FESS, Thyroid Disorder Treatment, and more."
+                },
+                {
+                    "title": "Why Choose Omni Hospitals’ ENT Services?",
+                    "list": [
+                        "Top-Rated ENT Specialists in Hyderabad with years of surgical and clinical expertise",
+                        "Modern, patient-centric infrastructure suited for both minor and complex ENT procedures",
+                        "Focused on comfort and outcomes. Minimally invasive procedures, rapid recovery, and compassionate care"
+                    ]
+                },
+                {
+                    "title": "Book Your Appointment",
+                    "description": "Regain your hearing, breathing, or voice clarity today. Schedule a consultation with the top ENT surgeons in Hyderabad, and take the first step toward lasting wellness."
+                }
+            ],
+            "sub_departments": [
+                {
+                    "id": "surgery-for-snoring",
+                    "name": "Surgery For Snoring",
+                    "description": "Snoring can be experienced by most people irrespective of the age group. Snoring occurs when the rear tissues of the throat relax and vibrate during the sleep cycle. The sound can range anywhere from a mild disturbance to extreme loud.",
+                    "sections": [
+                        {
+                            "list": [
+                                "Alter your eating habits and lose weight.",
+                                "Before heading to sleep, keep away from tranquillizers, sleeping drugs, and antihistamines.",
+                                "At least four hours before going to sleep, stay away from alcohol and big meals (or snacks).",
+                                "Keep a standard sleep schedule. Try to go to bed each night at about the same hour, for instance.",
+                                "Instead of sleeping on your back, try sleeping on your side, either left or right.",
+                                "Your bed’s head & the entire mattress should be at least four inches higher.",
+                                "Consider using nasal strips, which are thin, flexible bands that you place to the outside of your nose to keep your nasal passages open.",
+                                "When you sleep, use an oral appliance that supports your jaw in the appropriate position that allows the air to circulate."
+                            ]
+                        },
+                        {
+                            "subtitle": "Continuous Positive Airway Pressure (CPAP) :",
+                            "description": "As part of the continuous positive airway pressure (CPAP) therapy, you wear a mask over your mouth and/or nose while you sleep. The mask is coupled to a device that continuously dispenses air further into nostrils. To prevent breathing from being hampered, the pressure of air entering the nostrils aids in maintaining the airways openness. There are more PAP machines available, such as the BiPAP, which has dual air pressure levels, and the VPAP, which has variable air pressure levels.<br> Generally the doctor would prescribe for over the counter ways but upon trying most or all of the methods, the person may not react to non-invasive therapies like mouthpieces or oral appliances, hence the problem of snoring can be persistent or controlled only to a certain extent. In such cases, surgery for snoring is considered as the vital option. <br> To cure this permanently, there are various surgeries out of which the doctor would suggest one that’s most effective for the patient."
+                        },
+                        {
+                            "subtitle": "Pillar Procedure (Palatal Implant) : ",
+                            "description": "The pillar technique, also known as a palatal implant, is a quick operation used to cure mild symptoms of sleep apnea and snoring. It entails surgically inserting tiny polyester (plastic) rods within the mouth’s soft upper palate. This keeps the tissue stiffer and less inclined to shake and snore as a result."
+                        },
+                        {
+                            "subtitle": "Uvulopalatopharyngoplasty (UPPP) :",
+                            "description": "As a way to keep the airway more open, a portion of the soft tissues at the back and top of the neck are removed during the UPPP, a surgical procedure carried out under local anesthesia. This comprises portions of the palate and throat walls as well as the uvula, which hangs at the mouth of the throat."
+                        },
+                        {
+                            "subtitle": "Tonsillectomy and Adenoidectomy : ",
+                            "description": "In order to stop snoring, it may be medically advised to remove either the tonsils or adenoids or in some cases both."
+                        },
+                        {
+                            "subtitle": "Maxillomandibular Advancement (MMA) : ",
+                            "description": "MMA is a significant surgical operation that advances both the lower (mandibular) and upper (maxilla) jaws to help you breathe more easily. The airways will be much more open, which might lessen the likelihood of blockage and lessen the likelihood of snoring."
+                        },
+                        {
+                            "subtitle": "Hypoglossal Nerve Stimulation :",
+                            "description": "It is possible to maintain airways open and minimize snoring by stimulating the nerve that regulates the muscles in the upper airway. The hypoglossal nerve, which may be stimulated by a surgically implanted device. It turns on while sleeping and detects irregular breathing in the wearer."
+                        },
+                        {
+                            "subtitle": "Septoplasty and Turbinate Reduction : ",
+                            "description": "Sometimes snoring or obstructive sleep apnea (OSA) can be caused by a physical abnormality in the nose. A doctor would advise a septoplasty or even a turbinate reduction surgery in certain circumstances. The core of your nose’s tissues and bones are straightened during a septoplasty. The size of the tissue within your nose that helps to warm and moisten the air you breathe is reduced by a turbinate reduction."
+                        },
+                        {
+                            "subtitle": "Genioglossus Advancement :",
+                            "description": "The tongue muscle that connects to the lower jaw is pulled forward during the process of genioglossus advancement. The tongue becomes stiffer as a result and is less prone to relax when you sleep. This is done by making an incision with in the lower jaw around the tongue’s attachment point, and that bone will then be pulled forward to accomplish this. The bone is fastened to the lower jaw with a tiny screw or plate to keep it in place."
+                        },
+                        {
+                            "subtitle": "Hyoid Suspension : ",
+                            "description": "The surgeon pushes ahead the tongue’s base and the elastic throat tissue known as the epiglottis during hyoid suspension surgery. This aids in widening the throat’s breathing passage to open wide to a higher extent. Since the surgery does not affect the vocal cords, there is no change in the voice of the patient post surgery."
+                        },
+                        {
+                            "subtitle": "Midline Glossectomy and Lingualplasty :",
+                            "description": "In order to increase the size of the airway, the size of the tongue is made smaller, by a surgery performed called  midline glossectomy. The center and rear portion of the tongue are removed during one common midline glossectomy treatment. If necessary the surgeon could also trim the tonsils and remove a portion of the epiglottis."
+                        },
+                        {
+                            "subtitle": "Post Surgery Complications : ",
+                            "description": "Generally there could be no to few complications post surgery such as a sore throat, difficulty in swallowing or laughing, irritation in the throat and mild pain in the throat area. These are again nothing to be distressed about as the patient would recover from these discomforts anywhere in between few hours to few days. In case of any major discomfort it is suggested to consult a doctor."
+                        },
+                        {
+                            "subtitle": "Tonsillectomy",
+                            "description": "Tonsillectomy is the procedure performed to remove your tonsils, which are present in the rear of your throat. Although your body’s immune system depends on your tonsils, getting rid of them won’t make you more susceptible to illness."
+                        },
+                        {
+                            "subtitle": "Why are tonsils removed?",
+                            "description": "A tonsillectomy is performed for a variety of reasons. The two most frequent situations are when: <br> Your tonsils are making it harder for you to breathe when you’re asleep. This is frequently mistaken for snoring. <br> You frequently have throat infections (6 or more times per year), along with inflamed and enlarged tonsils (tonsillitis). <br>Even though it might appear like children only need to have their tonsils, adults may also benefit from this procedure."
+                        },
+                        {
+                            "subtitle": "How is it performed?",
+                            "description": "There are numerous procedures to do a tonsillectomy. You’ll be put to sleep during the procedure under general anesthetic. Typically, the procedure lasts 20 to 30 minutes. You won’t experience any discomfort as the doctor removes your tonsils. Although a partial tonsillectomy may be advantageous for some people, the tonsils are often entirely removed."
+                        },
+                        {
+                            "subtitle": "The surgical procedure that works best for the specific patient will be used. The most popular techniques for removing tonsils include:",
+                            "list": [
+                                "Electrocautery: The tonsils are removed using electrocautery, which also stops any bleeding while using heat to do so.",
+                                "Scalpel removal for cold knife (steel) dissection: The tonsils are taken out. After that, bleeding is halted using stitches or electrocautery (extreme heat).",
+                                "Harmonic scalpel: This technique simultaneously cuts and stops bleeding from the tonsils using ultrasonic vibrations.",
+                                "A carbon dioxide laser, microdebrider, and/or radiofrequency ablation techniques are further techniques."
+                            ]
+                        },
+                        {
+                            "title": "How much time does it take to recover?",
+                            "description": "Each person’s recovery from a tonsillectomy may vary: <br>Pain is typical and could worsen three to four days after surgery. This pain can persist up to two weeks and is frequently worse in the morning. To treat your pain, your doctor will create a drug regimen. <br>Where the tonsils were removed, there can be some discoloration. The discolouration will vanish within 3 to 4 weeks, after the area has fully recovered. <br> Following a tonsillectomy, you should expect to spend at least a week recovering at home and restrict your activities for two weeks. <br>After a tonsillectomy, bleeding is a possibility. In The Next ten days, the risk goes down."
+                        },
+                        {
+                            "title": "Dietary Precautions",
+                            "description": "Making sure you drink enough fluids after a tonsillectomy is essential for recovery. For about a week, soft or chilled foods are usually the easiest, but you can add things to your diet as long as you can tolerate them. Still, you should stay away from dishes with a lot of heat."
+                        }
+                    ]
+                },
+                {
+                    "id": "rhinoplasty",
+                    "name": "Rhinoplasty",
+                    "title": "Rhinoplasty",
+                    "description": "Changing the form of the nose through surgery is known as rhinoplasty (RIE-no-plas-tee). The purpose of rhinoplasty may be to alter the nose’s appearance, enhance breathing, or both. <br> The structure of the nose is composed primarily of cartilage at the bottom and bone at the top. Bone, cartilage, skin, or all three might be changed during rhinoplasty. Discuss the benefits of rhinoplasty and whether it is right for you with a surgeon. The surgeon will take into account your other facial characteristics, the skin on your nose, and the changes you want to make while planning a rhinoplasty. <br> Your nose’s size, shape, or proportions can be altered by rhinoplasty. It might be carried out to fix congenital defects, heal injury-related abnormalities, or ease breathing problems.",
+                    "sections": [
+                        {
+                            "title": "Risks",
+                            "list": [
+                                "As with any significant procedure, rhinoplasty has risks, including the following:",
+                                "Bleeding / Infection.",
+                                "A negative response to the anaesthetic.",
+                                "In addition, but not only, there are additional potential dangers associated with rhinoplasty.",
+                                "Breathing through your nose might become challenging..",
+                                "Numbness that lasts forever in and around your nose.",
+                                "the potential for a nose that looks uneven.",
+                                "persistent pain, discolouration, or edema.",
+                                "Scarring",
+                                "Septal perforation."
+                            ]
+                        },
+                        {
+                            "title": "Before undergoing Rhinoplasty",
+                            "description": "You must consult with your surgeon to establish whether rhinoplasty is likely to be successful for you before making an appointment. This gathering often consists of:",
+                            "list": [
+                                "Medical background: Your doctor will mostly inquire about your reasons for undergoing surgery and your objectives. Your doctor will also inquire about your medical background, including any operations, nasal obstructions, and drugs you may be taking. You might not be a candidate for rhinoplasty if you have a blood problem like haemophilia.",
+                                "Medical checkup: A thorough physical examination, including any necessary laboratory tests like blood testing, will be performed by your doctor. He or she will also check your nose’s interior and outside, as well as your facial features.",
+                                "Physical examination: Physical examination assists your doctor in determining what modifications are necessary and how physical characteristics, such as skin thickness or the durability of the cartilage at the tip of your nose, may affect the outcome. Determining how rhinoplasty will affect your ability to breathe depends on the results of the physical examination.",
+                                "Photographs: Your doctor’s office will take pictures of your nose from various perspectives. In order to demonstrate the types of outcomes that are possible, your surgeon may modify the photographs using computer software. These images will be used by your doctor for long-term evaluations, before-and-after comparisons, and surgical reference. Most significantly, the photographs provide a detailed discussion of the surgical objectives.",
+                                "Discussing your expectations: You should discuss your goals and expectations with your doctor. He or she will go over what rhinoplasty can and cannot do for you, as well as potential outcomes. It’s common to experience some self-consciousness when talking about your appearance, but it’s crucial that you are honest with your surgeon about your preferences and surgical goals.",
+                                "If you have a small chin, a surgeon might discuss chin augmentation surgery with you. This is due to the fact that a small chin will give the appearance of a larger nose. In some situations, chin surgery is not necessary, although it could help to better balance the facial profile."
+                            ]
+                        },
+                        {
+                            "title": "Medicine and Dietary Restrictions",
+                            "description": "For two weeks before and after surgery, refrain from taking any aspirin- or ibuprofen-containing drugs (Advil, Motrin IB, etc.). These drugs might make bleeding worse. Take just the meds that your surgeon has approved or prescribed. Also, stay away from over-the-counter vitamins and herbal medicines. <br> Stop smoking if you do. Smoking hinders the recovery from surgery and increases your risk of developing an infection. <br> Depending on how complicated your procedure is and what your surgeon chooses, rhinoplasty involves either local anaesthetic with sedation or full anaesthetic. Before having surgery, discuss with your doctor which type of anaesthetic is best for you. <br>Sedation and local anaesthesia: It only affects that region of your body. Your doctor sedates you by administering drugs through an intravenous (IV) line while also administering a pain-killing injection into your nasal tissues. You feel dazed but not asleep as a result. <br>General sedation: The anaesthesia is administered to you orally or through an IV line that is inserted into a vein in your hand, neck, or chest. <br> A small external cut (incision) will be made at the base of your nose, in the space between your nostrils, or within your nose for rhinoplasty. The bone and cartilage underneath your skin will probably be readjusted by your surgeon. <br> Depending on the amount that needs to be taken out or added, the structure of your nose, and the materials that are available, your surgeon can alter the form of your nasal bones or cartilage in a number of ways. The surgeon may utilise cartilage from your ear or from deeper into your nose to make minor adjustments. The surgeon may utilise implants, bone from other parts of your body, or cartilage from your rib for more significant alterations. After making these adjustments, the doctor closes the incisions in your nose and replaces the skin and tissue. <br> Changes to your nose’s structure, even the ones commonly measured in millimetres, can have a significant impact on how your nose appears. A skilled surgeon can typically provide outcomes that best fits. However, in certain instances, the small adjustments are insufficient, and you and your surgeon can opt to do a second surgery for more adjustments. If so, you will need to wait at least a year before having the follow-up surgery because your nose may change over that time."
+                        }
+                    ]
+                },
+                {
+                    "id": "speech-therapy",
+                    "name": "Speech Therapy",
+                    "title": "What happens during Speech Therapy?",
+                    "description": "Communication issues and speech abnormalities are evaluated and treated in speech therapy. Speech-language pathologists (SLPs), sometimes known as speech therapists, carry out this treatment. <br> Techniques from speech therapy are utilised to enhance communication. Depending on the type of speech or language issue, these could include articulation therapy, language intervention exercises, and others. <br>Speech disorders that appear in children or speech impairments in adults brought on by an illness or accident, such as a brain injury or stroke, may require speech therapy.",
+                    "sections": [
+                        {
+                            "title": "Why does one need Speech Therapy?",
+                            "list": [
+                                "Speech therapy is an effective treatment for many speech and language impairments.",
+                                "Problems of articulation: The inability to appropriately pronounce specific word sounds is referred to as an articulation disorder. This speech problem can cause a kid to omit, switch, distort, or add word sounds. Saying “thith” instead of “this” would be an illustration of word distortion.",
+                                "Fluency problems: Speaking with a disordered rhythm, pace, or fluency. Fluency issues include stuttering and cluttering. A person who stutters has difficulty producing sounds, and their speech may be halted, obstructed, or repeat a word in part. A person with cluttering frequently speaks quickly and combines words.",
+                                "Receptive dysfunction: Receptive language disorder affects a person’s ability to comprehend and process language. This may make you appear indifferent when someone is speaking, make it difficult for you to understand what someone is saying, or limit your vocabulary. A receptive language issue can be brought on by other language disorders, autism, hearing loss, and head trauma.",
+                                "Expressivity problems: Information conveyed or expressed poorly is a symptom of expressive language impairment. If you struggle to compose complete sentences—for example, by employing the wrong verb tense, you may have an expressive issue. It is connected to developmental disabilities like hearing loss and Down syndrome. Injuries to the head or a medical condition might also cause it.",
+                                "Impairments of cognitive and communication: Cognitive-communication disorder is characterised by communication difficulties brought on by damage to the area of the brain that governs thought. It may lead to memory problems, trouble solving problems, and difficulties speaking or listening. It may be brought on by biological issues, including aberrant brain growth, specific neurological diseases, a brain injury, or a stroke.",
+                                "Aphasia: The ability to talk and understand people is affected by this acquired communication problem. Also frequently impacted are a person’s reading and writing skills. Aphasia can be caused by a variety of different brain illnesses, but strokes are by far the most frequent cause.",
+                                "Dysarthria: This disorder is characterised by delayed or slurred speech because the muscles utilised for speech are weak or difficult to control."
+                            ]
+                        },
+                        {
+                            "title": "Therapy for children’s speech",
+                            "list": [
+                                "Depending on the speech impairment, your child’s speech treatment may take place in a classroom, small group, or one-on-one. Depending on the disease, age, and needs of your child, several exercises and activities are used in speech therapy. In children’s speech therapy, the SLP might:",
+                                "As part of language intervention, engage in conversation, play, and use of books, drawings, and other things to help promote language development.",
+                                "Model the appropriate syllables and sounds for the child’s age.",
+                                "Using the right games to show the kid how to create different noises.",
+                                "Give the child’s parent or caretaker tips and assignments on how to do speech therapy at home."
+                            ]
+                        },
+                        {
+                            "title": "Adult speech therapy:",
+                            "list": [
+                                "Adult speech therapy also starts with an evaluation to identify your needs and the most appropriate course of action. You can improve your speaking skills by using speech therapy activities for adults.",
+                                "If an injury or medical condition like Parkinson’s disease or oral cancer has produced swallowing difficulties, therapy may also involve retraining swallowing function."
+                            ]
+                        },
+                        {
+                            "title": "Exercises could include:",
+                            "list": [
+                                "Activities focused at problem-solving, memory, organisation, and other skills.",
+                                "Activities intended to enhance cognitive communication.",
+                                "Verbal strategies to enhance social interaction.",
+                                "Breathing drills to improve resonance.",
+                                "Oral muscle strengthening exercises."
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "microscopic-ear-surgery",
+                    "name": "Microscopic Ear Surgery",
+                    "title": "Microscopic Ear Surgery",
+                    "description": "Children frequently develop eardrum holes. This could occur as a result of an injury or an illness. Tympanic membrane perforation is another name for this condition. Your doctor might recommend microscopic ear surgery depending on your health. One such procedure is known as tympanoplasty. <br> The surgical procedure known as a tympanoplasty is used to replace the eardrum or the tiny bones in the middle ear. This surgical treatment aims to repair the perforation while simultaneously enhancing hearing.",
+                    "sections": [
+                        {
+                            "title": "What common signs and symptoms accompany perforated ears?",
+                            "list": [
+                                "An earache.",
+                                "Buzzing in the ear, whistling noises when blowing your nose or sneezing.",
+                                "Hearing loss or a decline in hearing.",
+                                "Infection or inflammation of the middle ear."
+                            ]
+                        },
+                        {
+                            "title": "When is the necessity for tympanoplasty?",
+                            "list": [
+                                "Your physician might advise Tympanoplasty is recommended when:",
+                                "Loss of hearing.",
+                                "Hearing Ringing.",
+                                "Vomiting brought on by vertigo or a spinning sensation from it."
+                            ]
+                        },
+                        {
+                            "title": "Exactly how is the diagnosis made?",
+                            "description": "The following techniques can be used for diagnosis:",
+                            "list": [
+                                "Audiogram: An audiogram is a test used in audiometry to determine how well the ears can hear. It is used to examine sound intensity and tone, balance problems, and other inner ear function-related difficulties. assessing the hearing loss’s history as well as any vertigo or other facial tremors.",
+                                "Otoscopy: Otoscopy is typically performed to examine the malleus, a tiny bone in the middle ear that resembles a hammer, and the mobility of the tympanic membrane.",
+                                "Fistula Test: This test is typically carried out if the patient has a history of fainting or has a small eardrum hole. <br> Standard blood tests. <br> Routine testing of the urine."
+                            ]
+                        },
+                        {
+                            "title": "Procedure",
+                            "description": "The patient is often given general anaesthesia during a tympanoplasty. After that, the doctor will insert an item called an ear speculum into the external ear canal. Next, the operating microscope is put in place. <br> The ear canal will then be cut, often behind the ear for significant perforations, by our surgeon. The ear is then carefully advanced to reveal the eardrum. To inspect the middle ear, the surgeon will elevate the eardrum. <br> If the eardrum has a hole, it is debrided so that the aberrant area can be removed. The eardrum hole is then filled with a piece of cut fascia from the temporalis muscle, which is located behind the ear. Fascia is the tissue that lies beneath the skin. The regular eardrum skin can develop over the hole created by this tissue, known as a graft. At this stage, the surgeon may occasionally repair the middle ear bones. <br> Within a few hours, the patient is able to go home. A modest painkiller and antibiotics may be recommended by the doctors. <br> How long does it take? <br> The entire process can be finished in 30 to 60 minutes. Serious instances can require more time."
+                        },
+                        {
+                            "title": "Risks associated with Tympanoplasty: What dangers exist?",
+                            "description": "In a few rare instances, there might be a few risk factors:",
+                            "list": [
+                                "Bleeding",
+                                "Hearing loss as a result of damage to the middle ear’s tiny bones is caused by facial nerve damage with a change in perception of taste.",
+                                "Infection",
+                                "Bleeding",
+                                "Breathing difficulties.",
+                                "Medication reactions.",
+                                "Nausea or vertigo.",
+                                "Probabilities that the eardrum perforation won’t heal fully.",
+                                "Hearing loss or hearing loss that gets worse."
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "General Medicine",
+            "short_description": "The department of  general medicine at Omni Hospitals has the best team of top General surgeons and physicians in Hyderabad, with vast experience in treating all branches of internal medicine",
+            "img": "assets/our_specialities/general_medicine.jpg",
+            "details": [
+                {
+                    "description": "The department of general medicine at Omni Hospitals has the best team of top General surgeons and physicians in Hyderabad with vast experience in treating all branches of internal medicine and offers non-surgical primary healthcare services in areas of respiratory diseases, endocrinology, thyroid issues, infections, sudden changes in weight (weight gain or weight loss), and neurology etc. Our team is well-equipped with knowledge of advanced science and interdisciplinary diagnosis to cater to the needs of out-patient and in-patient services, and emergency care for patients with communicable and non-communicable diseases. "
+                },
+                {
+                    "title": "Expertise in General Medicine Care",
+                    "description": "Our specialists provide expert care for:",
+                    "list": [
+                        "Diabetes, hypertension & thyroid disorders",
+                        "Fever evaluation & infectious diseases",
+                        "Respiratory illnesses like asthma, bronchitis & pneumonia",
+                        "Gastrointestinal conditions such as acidity, gastritis & IBS",
+                        "Lifestyle-related health issues & obesity",
+                        "Autoimmune and metabolic disorders"
+                    ]
+                },
+                {
+                    "title": "Advanced Diagnostics & Treatments",
+                    "description": "We are equipped with modern medical facilities, including:",
+                    "list": [
+                        "Comprehensive blood investigations",
+                        "Advanced radiology & imaging",
+                        "ECG, 2D Echo, Holter monitoring",
+                        "Pulmonary function tests",
+                        "Preventive health check-up packages"
+                    ]
+                },
+                {
+                    "title": "Conditions We Treat",
+                    "list": [
+                        "Diabetes & metabolic disorders",
+                        "Hypertension & cardiovascular risk management",
+                        "Thyroid diseases",
+                        "Respiratory infections & chronic lung diseases",
+                        "Gastrointestinal disorders",
+                        "Autoimmune & multi-system diseases",
+                        "General infections & seasonal fevers"
+                    ]
+                },
+                {
+                    "description": "Looking for the best general medicine hospital in Hyderabad? Choose OMNI Hospitals for accurate diagnosis, holistic treatment, and compassionate patient care."
+                }
+            ]
+        },
+        {
+            "name": "Orthopedics",
+            "short_description": "The Centre for Orthopedics offers the most comprehensive healthcare systems and virtually all of the finest, latest treatments, technologies, and services comparable to the best ones available today.",
+            "img": "assets/our_specialities/ortho.jpg",
+            "details": [
+                {
+                    "title": "Best Orthopedic Hospital in Hyderabad",
+                    "description": "The Centre for Orthopedics offers the most comprehensive healthcare systems and virtually all of the finest, latest treatments, technologies, and services comparable to the best ones available today. Our team comprises internationally reputed surgeons, medical and rehabilitative specialists, as well as occupational and physical therapists. The physiotherapy department supports our centre with highly qualified therapists and specialists."
+                },
+                {
+                    "title": "Consult the best orthopedic doctor",
+                    "description": "The Department of Orthopedics is dedicated to musculoskeletal conditions, performing more joint replacement procedures than any other hospital in the state. This experience, combined with the unique and comprehensive services available at OMNI, allows patients to enjoy the highest quality of care, from diagnosis and treatment to rehabilitation and wellness. Whether searching for a solution for inflammatory arthritis or osteoarthritis, autoimmune diseases, cartilage or ligament problems, revision surgery, minimally invasive surgery, partial joint replacement surgery, or total joint replacement surgery. OMNI provides patients with the latest treatment options, continuity of care, and a group of the most experienced surgeons and rheumatologists in the state."
+                },
+                {
+                    "title": "Orthopedic Diagnosis and Treatments",
+                    "description": "We provide diagnosis and treatment for the full spectrum of musculoskeletal diseases and injuries, from the simplest orthopedic cases to the most complex ones. We have a separate sub-department for each class of orthopedic problem areas and hence provide comprehensive orthopedic treatment all under one roof. <br> We are recognized regionally and nationally as a leader in patient care, education, and rehabilitation. With a great commitment to patient care and academic work, we offer quality and cost-effective round-the-clock services to patients from all walks of life."
+                }
+            ],
+            "sub_departments": [
+                {
+                    "name": "Knee Replacement Surgery",
+                    "title": "Knee Replacement Surgery",
+                    "description": "Knee replacement surgery, commonly referred to as knee arthroplasty, can help treat painful knee joints and restore their function. The damaged thigh bone, shinbone, and kneecap are cut during the treatment, and the injured bone and cartilage are replaced with an artificial joint (prosthesis) comprised of metal alloys, premium plastics, and polymers. <br> The knee’s range of motion, stability, and strength are evaluated by an orthopaedic surgeon to determine whether a knee replacement is the best option for an individual or not. Doctors use X-rays to assess the degree of damage. <br>Depending on your age, weight, amount of activity, knee size and shape, and general health, your doctor may recommend one of several knee replacement prostheses and surgical approaches. <br> Knee replacement surgery is generally performed to address extreme osteoarthritis-related pain. The majority of people who require knee replacement surgery struggle to walk, climb stairs, and get in and out of chairs. Some people may have knee pain even while they are not moving. <br> <b>Knee Replacement Success Rate:</b> The success rate of knee replacement surgery is high, with most patients experiencing significant pain relief and improved mobility.",
+                    "sections": [
+                        {
+                            "subtitle": "What Is a Permanent Pacemaker?",
+                            "description": "A pacemaker is a small, battery-operated electronic device implanted under the collarbone. It helps maintain a regular heart rhythm by sending electrical impulses to the heart when the heartbeat becomes too slow or irregular."
+                        },
+                        {
+                            "subtitle": "Risks of Knee Replacement Surgery:",
+                            "description": "Like any procedure, knee replacement surgery carries risks with it. The risks include:",
+                            "list": [
+                                "Infection",
+                                "Lungs or leg vein blood clots.",
+                                "Chest pain.",
+                                "Stroke",
+                                "Nerve damage."
+                            ]
+                        },
+                        {
+                            "subtitle": "Infection signs",
+                            "list": [
+                                "Higher than 100°F fever (37.8 °C)",
+                                "Chills shaking",
+                                "Redness, tenderness, swelling, and discomfort in the knee are getting worse.",
+                                "Surgery to remove the artificial components and medications to kill the bacteria are typically necessary for an infected knee replacement. A second surgery is performed to place a new knee after the infection has been treated.",
+                                "The failure of the prosthetic joint is an additional danger of knee replacement surgery. Even the toughest metal and plastic components become damaged with daily use. If you put stress on the joint with high-impact activities or excess weight, your risk of joint failure increases.",
+                                "You could be advised not to take specific drugs and nutritional supplements before surgery by your doctor or anesthesiologist. The day of your surgery, you’ll probably be told not to eat anything after midnight.",
+                                "Knee replacements typically reduce pain, increase mobility, and enhance overall quality of life for patients. Additionally, the majority of knee replacements should last longer than 15 years.",
+                                "You can often resume the majority of daily activities, including shopping and light house cleaning, three to six weeks after surgery. Around three weeks after surgery, you may be able to drive if you can bend your knee far enough to sit in a car, have sufficient muscular control to use the brakes and accelerator, and are not currently using painkillers.",
+                                "You can take part in a variety of low-impact activities after you’ve recovered, such as riding, walking, swimming, golfing, or tennis. However, you should stay away from activities with a higher impact, such as jogging, skiing, tennis, and sports involving contact or jumping.",
+                                "<b>Knee Replacement Success Rate:<b> With proper care and physical therapy, the success rate of knee replacement surgery is remarkable, offering long-term pain relief and enhanced mobility."
+                            ]
+                        },
+                        {
+                            "subtitle": "Process before  Knee Replacement Surgery:",
+                            "description": "Your doctor will walk you through the process and give you the chance to ask any questions you may have about it. <br> You will be required to sign a consent form giving the go-ahead for the procedure. If something on the form is unclear, thoroughly read it and then ask questions. <br> Before having the operation, your doctor will perform a thorough physical examination in addition to taking a thorough medical history. You can be subjected to diagnostic procedures like blood tests. <br> Inform your doctor if you have any sensitivity to or allergies to any drugs, latex, tape, or anaesthetics (local and general). <br> Inform your physician of all prescription, over-the-counter, and herbal supplements you are taking. <br> If you have a history of bleeding issues, are currently taking aspirin or other blood-clotting-related drugs, or any other medications, let your doctor know. You might have to stop using these medications before the operation. You should let your doctor know if you are pregnant or think you might be. <br> Eight hours of fasting will be required before the surgery, which will usually take place after midnight. <br> Before the surgery, you can be given a sedative to help you unwind. <br> A physical therapist may visit with you before surgery to talk about recovery. <br> After you leave the hospital, make arrangements for someone to assist you around the house for a week or two. <br> Your doctor might ask you to do something else unique to prepare, depending on your medical situation."
+                        },
+                        {
+                            "subtitle": "During the procedure",
+                            "list": [
+                                "Having a knee replacement necessitates a hospital stay. Depending on your situation and your doctor’s methods, the procedures could change.",
+                                "The majority of the time, knee replacement surgery is done while you are unconscious and under general anaesthesia. In advance, your anesthesiologist will go through this with you.."
+                            ]
+                        },
+                        {
+                            "subtitle": "In general, knee replacement surgery proceeds as follows:",
+                            "list": [
+                                "After being instructed to take off your clothes, you’ll be handed a gown to wear.",
+                                "Your arm or hand might be used to start an intravenous (IV) line.",
+                                "Your position on the surgical table will be determined.",
+                                "One option is to place a urinary catheter.",
+                                "At the surgery location, extra hair may be cut off if necessary.",
+                                "Throughout the procedure, the anesthesiologist will keep a close eye on your breathing, blood pressure, heart rate, and blood oxygen level.",
+                                "An antiseptic solution will be used to clean the skin surrounding the surgery site.",
+                                "The region around the knee will be cut by the physician.",
+                                "The damaged knee joint surfaces will be removed by the doctor, and the prosthesis will be used to resurface the knee joint, which is made up of the knee prosthetic. A cemented prosthesis is the most popular style of artificial knee replacement, as Uncemented prostheses are no longer often used. Using surgical cement, a prosthesis is glued to the bone. A porous surface on an uncemented prosthesis allows the bone to develop to affix to the prosthesis.",
+                                "The prosthesis typically consists of three parts: the patellar component, the femoral [thigh bone] component, and the tibial component, which resurfaces the top of the tibia, or shin bone (to resurface the bottom of the kneecap that rubs against the thigh bone).",
+                                "With surgical staples or stitches, the incision will be closed.",
+                                "To drain fluid from the wound, a drain may be inserted. It will be covered with a sterile bandage or dressing."
+                            ]
+                        },
+                        {
+                            "subtitle": "After the Procedure:",
+                            "list": [
+                                "You will be brought to the recovery area for observation following the procedure. You will be brought to your hospital room as soon as your breathing, blood pressure, and pulse have stabilised and you are awake. Having knee replacement surgery typically necessitates a few days of hospitalisation.",
+                                "After surgery, it’s crucial to start using the new joint. Soon after your surgery, a physical therapist will visit with you to discuss your activity needs. To start the physical therapy, a continuous passive motion (CPM) machine could be employed. While you are lying in bed, this machine rotates your replacement knee joint through its range of motion. Medication will be administered to manage your pain so you can exercise."
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Knee Osteoarthritis",
+                    "title": "Knee Osteoarthritis",
+                    "description": "Osteoarthritis is also commonly called wear-and-tear arthritis. In this condition, the cartilage between the joints is weakened. Due to the loss of cushioning, the bones rub against each other. This rubbing causes pain, swelling, stiffness, and decreased ability to move. <br> Though older people are more prone to osteoarthritis, even young people may acquire it.  The major causes of osteoarthritis are:",
+                    "sections": [
+                        {
+                            "list": [
+                                "Age: The cartilage loses its ability to heal with age; therefore, the chances of osteoarthritis rise.",
+                                "Weight: Excess weight exerts pressure on all joints and specifically on the knees.",
+                                "Genes: People who inherit abnormalities of bones are at higher risk of osteoarthritis.",
+                                "Gender: Women are more likely to develop arthritis than men",
+                                "Stress injuries: This could be an occupational hazard. If a person’s job involves constant physical activity, like sitting, standing, or squatting, they may be at risk of osteoarthritis due to constant pressure.",
+                                "Other reasons: People with excess iron, excessive growth hormone, or rheumatoid arthritis are at higher risk of osteoarthritis."
+                            ]
+                        },
+                        {
+                            "subtitle": "Symptoms of knee osteoarthritis:",
+                            "description": "The common symptoms of knee osteoarthritis are:",
+                            "list": [
+                                "Pain around the knee joint that increases during movement and reduces while resting",
+                                "Difficulty in sitting",
+                                "Difficulty in climbing stairs",
+                                "Swelling",
+                                "Creaking sounds when the knee moves"
+                            ]
+                        },
+                        {
+                            "subtitle": "Diagnosis of knee osteoarthritis:",
+                            "description": "A primary physical examination is conducted to diagnose osteoarthritis. The orthopaedic also conducts a detailed study of medical history to analyse the presence of symptoms or if it is a hereditary issue. For younger patients, an MRI (Magnetic Resonance Imaging) is conducted to check for soft tissue injury. The older patients are suggested to undergo an X-ray of the knee. <br>Blood tests are conducted to rule out other causes of arthritis, like rheumatoid arthritis. The joint fluid is drawn out of the affected knee to check for an infection or inflammation."
+                        },
+                        {
+                            "subtitle": "Treatment of knee osteoarthritis:",
+                            "description": "The orthopaedic specialist suggests a treatment plan that is a combination of the following things:",
+                            "list": [
+                                "Weight management: Loss of weight will reduce the pressure on the joints and thus relieve you of the symptoms.",
+                                "Exercise: Stretching exercises ensure that muscles around the knee are flexible, and strengthening exercises help in stabilising the joint.",
+                                "Medications: Your health-care provider will prescribe anti-inflammatory and pain-relieving medications.",
+                                "Alternative therapies: There are alternative therapies that exist for osteoarthritis, such as physical and occupational therapies. A physical therapist trains you to strengthen muscles and increase flexibility in joints. Occupational therapists train you to perform your daily activities with less pain.",
+                                "Surgeries: Arthroscopy, osteotomy, and arthroplasty surgeries are performed on patients suffering from knee osteoarthritis.",
+                                "Arthroscopy: Small incisions are made on the knee, and an arthroscope (small telescope) is inserted to view the joint. The surgeon can then operate on the bone to clean the joint or repair the damage.",
+                                "Osteotomy: This procedure is used to correct the alignment of the knee joint by altering the shape of the bones. This is not a permanent fix, and further surgery may be needed.",
+                                "Arthroplasty: It is also called joint replacement surgery. In this procedure, the knee joint is replaced with an artificial material like metal or plastic. This surgery replaces half or the entire part of your knee."
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Hip Replacement Surgery",
+                    "title": "Hip Replacement Surgery",
+                    "description": "Hip Replacement surgery is performed to remove or replace portions of the hip, specifically pelvis and thigh bone to reset the pain caused by hip stiffness or hip arthritis. The procedure is also recommended by doctors to treat abnormal growth of hip, any hip injuries, or broken hip, and related conditions.",
+                    "sections": [
+                        {
+                            "subtitle": "Consider a hip replacement if you experience any of the following signs of arthritis:",
+                            "list": [
+                                "Significant hip pain that won’t go away after taking medicine and is interfering with daily activities like working or sleeping.",
+                                "Hip stiffness that limits movement and makes walking difficult.",
+                                "The hip consists of a ball and socket joint, making up the hip. The femoral head is the ball that sits atop your femur (thighbone) and your pelvis contains the “acetabulum” which acts as a socket. Your leg can rotate, move forward, backward, and sideways, and also move when the ball in the socket moves.",
+                                "A healthy hip has cartilage covering the ball and socket to aid in their easy movement together. If the bones scrape against one another and become rough, it might be because the cartilage has become worn or injured. This condition, known as Osteoarthritis, is a disorder that limits hip motion and produces pain. Walking or even getting in and out of a chair can be uncomfortable when you have an arthritic hip. If hip arthritis has been identified, surgery might not be necessary. Physical therapy or nonsteroidal anti-inflammatory medicines (NSAIDs) may offer relief. But if these measures are ineffective in alleviating your problems, you should see an orthopaedic physician."
+                            ]
+                        },
+                        {
+                            "subtitle": "Types of Hip Surgeries:",
+                            "description": "Total hip replacement is the most popular type of hip replacement surgery (also called total hip arthroplasty). In this procedure, artificial implants are used to replace worn-out or damaged hip parts. The socket is changed out for a sturdy plastic cup that might usually consist of titanium metal casing. Your femoral head will be removed and changed out for a metal alloy or ceramic ball. A metal stem that is placed into the top of your femur is connected to the replacement ball.",
+                            "list": [
+                                "Total Hip replacement.",
+                                "Partial Hip Replacement.",
+                                "Hip Resurfacing.",
+                                "Swelling",
+                                "Creaking sounds when the knee moves"
+                            ]
+                        },
+                        {
+                            "subtitle": "Based on the specific age groups and the kind of lifestyle one leads, doctors suggest appropriate hip replacement surgeries:",
+                            "description": "Partial hip replacement: Partial hip replacement is performed for older patients who have restrictions. In this procedure, the surgeon shall replace only one side of the hip joint instead of total hip replacement. The femoral head is replaced and this procedure is advised generally to older group patients who are suffering with fractured hips. <br> Hip resurfacing: This procedure is performed for younger patients who lead an active lifestyle. In this procedure, the resurfacing of the femoral head and socket is done for faster recovery."
+                        },
+                        {
+                            "subtitle": "Surgical Methods for Hip Replacement:",
+                            "description": "For the purpose of completing a total hip replacement, there are two main surgical approaches:",
+                            "list": [
+                                "The backward or commonly called, posterior approach (more common).",
+                                "The upfront or commonly called anterior strategy ( mini-anterior approach or muscle-sparing hip replacement).",
+                                "The hip replacement surgeon will create an incision on either the front (anterior) or the back (posterior) of the hip to start the procedure. Within weeks of surgery, both methods provide pain relief as well as improvements in walking and movement."
+                            ]
+                        },
+                        {
+                            "subtitle": "Preparation for Hip Replacement Surgery:",
+                            "description": "Patients can take specific actions both before and after surgery to shorten recovery time and enhance outcomes. It’s crucial that you heed the advice given to you by your orthopaedic surgeon, the medical staff, and the rehabilitation therapist. To learn more about preoperative hip replacement details and patient education resources for joint replacement surgery, consult our Orthopaedic Surgeons."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Neurology",
+            "short_description": "The Department of Neurology at OMNI Hospitals is one of the most advanced centers for brain, spinal cord, and nervous system care in Hyderabad and the state of Telangana",
+                  "img":"assets/our_specialities/nuerology.jpg",
+            "details": [
+                {
+                    "title": "Best Neurology Hospital in Hyderabad",
+                    "description": "The Department of Neurology at OMNI Hospitals is one of the most advanced centers for brain, spinal cord, and nervous system care in Hyderabad and the state of Telangana. Our team of highly experienced neurologists specializes in the diagnosis, treatment, and management of a wide range of neurological conditions with precision and compassion."
+                },
+                {
+                    "title": "Conditions We Treat",
+                    "description": "At OMNI Hospitals, our neurologists provide expert care for:",
+                    "list": [
+                        "Stroke – Ischemic & hemorrhagic strokes, emergency stroke care, and rehabilitation",
+                        "Epilepsy & Seizure Disorders – Comprehensive epilepsy management and surgical evaluation",
+                        "Movement Disorders – Parkinson’s disease, tremors, dystonia, and other motor disorders",
+                        "Headache & Migraine Disorders – Specialized clinics for chronic headache management",
+                        "Dementia & Cognitive Decline – Alzheimer’s disease and age-related memory conditions",
+                        "Multiple Sclerosis & Autoimmune Neurology – Advanced therapies for MS and related conditions",
+                        "Peripheral Neuropathy & Nerve Disorders – Nerve injuries, neuropathic pain, and neuromuscular diseases",
+                        "Spinal Cord & Neuro-infections – Meningitis, encephalitis, and spinal cord diseases",
+                        "Pediatric Neurology – Epilepsy, developmental disorders, and childhood neurological conditions"
+                    ]
+                },
+                {
+                    "title": "Treatments & Services Offered",
+                    "description": "Our neurologists offer a wide spectrum of advanced diagnostic and therapeutic services, including:",
+                    "list": [
+                        "Stroke Care & Rehabilitation – Clot-busting therapy, neurocritical care, physiotherapy support",
+                        "Epilepsy Management – Video-EEG monitoring, medical therapy, epilepsy surgery evaluation",
+                        "Movement Disorder Treatments – Deep Brain Stimulation (DBS), Botulinum toxin therapy",
+                        "Headache & Migraine Clinics – Personalized treatment plans for chronic headaches",
+                        "Cognitive Disorder Care – Dementia evaluation and memory clinics",
+                        "Multiple Sclerosis & Autoimmune Disorder Care – Immunotherapies and disease-modifying treatments",
+                        "Neurodiagnostics – EEG, EMG, Nerve Conduction Studies, advanced neuroimaging",
+                        "Pediatric Neurology Services – Specialized care for children with neurological conditions",
+                        "Neuro Rehabilitation – Physiotherapy, occupational therapy, and speech therapy for recovery"
+                    ]
+                },
+                {
+                    "title": "Why Choose OMNI Hospitals for Neurology?",
+                    "description": "At OMNI Hospitals, we combine cutting-edge neurology treatments with a patient-first approach, making us one of the best neurology hospitals in Hyderabad. Whether it’s stroke emergencies, epilepsy care, or chronic neurological disorders, our specialists are dedicated to restoring health and quality of life."
+                }
+            ]
+        }
+    ]
+}

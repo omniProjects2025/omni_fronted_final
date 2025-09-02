@@ -39,6 +39,7 @@ const routes: Routes = [
   { path: 'package-details', component: PackageDetailsComponent },
   { path: 'our-specialities', component: OurSpecialitiesComponent },
   { path: 'our-specialities-details', component: OurSpecialitiesDetailsComponent },
+  { path: 'our-specialities-details/:department', component: OurSpecialitiesDetailsComponent },
   { path: 'technologies', component: TechnologiesComponent },
   { path: 'news-media', component: NewsMediaComponent },
   { path: 'blogs', component: BlogsComponent },

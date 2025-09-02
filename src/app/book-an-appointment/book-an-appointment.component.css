@@ -1,3 +1,536 @@
+/* Keyframe Motion Effects for Book Appointment Page */
+
+/* Entrance Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+  14% {
+    transform: scale(1.1);
+  }
+  28% {
+    transform: scale(1);
+  }
+  42% {
+    transform: scale(1.1);
+  }
+  70% {
+    transform: scale(1);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-5px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(5px);
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(0, 143, 213, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(0, 143, 213, 0.8), 0 0 30px rgba(0, 143, 213, 0.6);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes slideInFromBottom {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInFromTop {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes textReveal {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+    filter: blur(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+@keyframes formSlideIn {
+  from {
+    opacity: 0;
+    transform: translateX(100px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes emergencyPulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(225, 0, 0, 0.7);
+  }
+  70% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 10px rgba(225, 0, 0, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(225, 0, 0, 0);
+  }
+}
+
+@keyframes inputFocus {
+  0% {
+    transform: scale(1);
+    border-color: #666666;
+  }
+  50% {
+    transform: scale(1.02);
+    border-color: #008cdb;
+  }
+  100% {
+    transform: scale(1);
+    border-color: #008cdb;
+  }
+}
+
+@keyframes buttonPress {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes successGlow {
+  0% {
+    box-shadow: 0 0 5px rgba(140, 198, 63, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(140, 198, 63, 0.8), 0 0 30px rgba(140, 198, 63, 0.6);
+  }
+  100% {
+    box-shadow: 0 0 5px rgba(140, 198, 63, 0.5);
+  }
+}
+
+/* Animation Classes */
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.animate-slide-in-left {
+  animation: slideInLeft 0.8s ease-out forwards;
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 0.8s ease-out forwards;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.6s ease-out forwards;
+}
+
+.animate-bounce-in {
+  animation: bounceIn 0.8s ease-out forwards;
+}
+
+.animate-pulse {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.animate-heartbeat {
+  animation: heartbeat 1.5s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-shake {
+  animation: shake 0.5s ease-in-out;
+}
+
+.animate-glow {
+  animation: glow 2s ease-in-out infinite;
+}
+
+.animate-rotate {
+  animation: rotate 2s linear infinite;
+}
+
+.animate-slide-in-bottom {
+  animation: slideInFromBottom 0.8s ease-out forwards;
+}
+
+.animate-slide-in-top {
+  animation: slideInFromTop 0.8s ease-out forwards;
+}
+
+.animate-text-reveal {
+  animation: textReveal 1s ease-out forwards;
+}
+
+.animate-form-slide-in {
+  animation: formSlideIn 1s ease-out forwards;
+}
+
+.animate-emergency-pulse {
+  animation: emergencyPulse 2s infinite;
+}
+
+.animate-input-focus {
+  animation: inputFocus 0.3s ease-out forwards;
+}
+
+.animate-button-press {
+  animation: buttonPress 0.1s ease-out forwards;
+}
+
+.animate-success-glow {
+  animation: successGlow 2s ease-in-out infinite;
+}
+
+/* Staggered Animation Delays */
+.stagger-1 { animation-delay: 0.1s; }
+.stagger-2 { animation-delay: 0.2s; }
+.stagger-3 { animation-delay: 0.3s; }
+.stagger-4 { animation-delay: 0.4s; }
+.stagger-5 { animation-delay: 0.5s; }
+.stagger-6 { animation-delay: 0.6s; }
+
+/* Hover Effects */
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.hover-scale {
+  transition: transform 0.3s ease;
+}
+
+.hover-scale:hover {
+  transform: scale(1.05);
+}
+
+.hover-glow {
+  transition: box-shadow 0.3s ease;
+}
+
+.hover-glow:hover {
+  box-shadow: 0 0 20px rgba(0, 143, 213, 0.6);
+}
+
+.hover-rotate {
+  transition: transform 0.3s ease;
+}
+
+.hover-rotate:hover {
+  transform: rotate(5deg);
+}
+
+/* Form Input Animations */
+.form-control:focus {
+  animation: inputFocus 0.3s ease-out forwards;
+  transform: scale(1.02);
+  transition: all 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: #008cdb !important;
+  box-shadow: 0 0 0 0.2rem rgba(0, 140, 219, 0.25) !important;
+}
+
+/* Button Animations */
+.btn:active {
+  animation: buttonPress 0.1s ease-out forwards;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  transition: transform 0.2s ease;
+}
+
+/* Emergency Button Special Effects */
+.emergency-btn {
+  animation: emergencyPulse 2s infinite;
+  transition: all 0.3s ease;
+}
+
+.emergency-btn:hover {
+  transform: scale(1.1);
+  animation: none;
+}
+
+.emergency-btn span {
+  display: inline-block;
+  animation: float 2s ease-in-out infinite;
+}
+
+.emergency-btn span:nth-child(1) { animation-delay: 0s; }
+.emergency-btn span:nth-child(2) { animation-delay: 0.1s; }
+.emergency-btn span:nth-child(3) { animation-delay: 0.2s; }
+.emergency-btn span:nth-child(4) { animation-delay: 0.3s; }
+.emergency-btn span:nth-child(5) { animation-delay: 0.4s; }
+.emergency-btn span:nth-child(6) { animation-delay: 0.5s; }
+.emergency-btn span:nth-child(7) { animation-delay: 0.6s; }
+.emergency-btn span:nth-child(8) { animation-delay: 0.7s; }
+.emergency-btn span:nth-child(9) { animation-delay: 0.8s; }
+
+/* Doctor Image Animation */
+.custom-appointment-image {
+  animation: float 4s ease-in-out infinite;
+  transition: transform 0.3s ease;
+}
+
+.custom-appointment-image:hover {
+  transform: scale(1.05) rotate(2deg);
+}
+
+/* Form Container Animation */
+.appointment-form-container {
+  animation: formSlideIn 1s ease-out forwards;
+  transition: all 0.3s ease;
+}
+
+.appointment-form-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact Us Header Animation */
+.center_align {
+  animation: slideInFromTop 0.8s ease-out forwards;
+}
+
+/* Stats Strip Animations */
+.bg_success, .bg_primary {
+  transition: all 0.3s ease;
+  animation: slideInFromBottom 0.8s ease-out forwards;
+}
+
+.bg_success:hover, .bg_primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.bg_success:hover {
+  animation: successGlow 2s ease-in-out infinite;
+}
+
+/* Consultation Button Animation */
+.consult-wrapper {
+  animation: bounceIn 1s ease-out forwards;
+}
+
+.consult_button {
+  transition: all 0.3s ease;
+}
+
+.consult_button:hover {
+  transform: scale(1.05);
+  animation: pulse 1s ease-in-out infinite;
+}
+
+/* Modal Animations */
+.modal-content {
+  animation: scaleIn 0.3s ease-out forwards;
+}
+
+/* Location Cards Animation */
+.modal-body .col-6 {
+  animation: fadeInUp 0.6s ease-out forwards;
+  transition: all 0.3s ease;
+}
+
+.modal-body .col-6:nth-child(1) { animation-delay: 0.1s; }
+.modal-body .col-6:nth-child(2) { animation-delay: 0.2s; }
+.modal-body .col-6:nth-child(3) { animation-delay: 0.3s; }
+.modal-body .col-6:nth-child(4) { animation-delay: 0.4s; }
+.modal-body .col-6:nth-child(5) { animation-delay: 0.5s; }
+.modal-body .col-6:nth-child(6) { animation-delay: 0.6s; }
+
+.modal-body .col-6:hover {
+  transform: scale(1.05);
+  animation: shake 0.5s ease-in-out;
+}
+
+/* Page Load Animations */
+.page-load .h_txt {
+  animation: textReveal 1s ease-out forwards;
+}
+
+.page-load .des_book {
+  animation: fadeInUp 1s ease-out 0.3s both;
+}
+
+.page-load .custom-appointment-image {
+  animation: slideInLeft 1s ease-out 0.5s both;
+}
+
+.page-load .appointment-form-container {
+  animation: formSlideIn 1s ease-out 0.7s both;
+}
+
+.page-load .consult-wrapper {
+  animation: bounceIn 1s ease-out 0.9s both;
+}
+
+.page-load .bg_success,
+.page-load .bg_primary {
+  animation: slideInFromBottom 0.8s ease-out 1.1s both;
+}
+
+/* Responsive Animation Adjustments */
+@media (max-width: 768px) {
+  .animate-fade-in-up,
+  .animate-slide-in-left,
+  .animate-slide-in-right {
+    animation-duration: 0.6s;
+  }
+  
+  .emergency-btn {
+    animation: none;
+  }
+  
+  .custom-appointment-image {
+    animation: none;
+  }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
 .h_txt{
   color: #000000;
   font-weight: 800;

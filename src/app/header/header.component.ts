@@ -15,6 +15,7 @@ export class HeaderComponent {
   depertment_icon: boolean = false;
   activeTab = 'home';
 
+
   navItems = [
     { key: 'home', label: '', route: '/home' },
     {
@@ -24,20 +25,20 @@ export class HeaderComponent {
     {
       key: 'specialities', label: 'Our Specialities', route: '/our-specialities',
       children: [
-        { id: '', label: 'Cardiology', route: '/speciality/cardiology' },
-        { id: '', label: 'Dermatology', route: '/speciality/dermatology' },
-        { id: '', label: 'Emergency Medicine & Critical Care', route: '/speciality/emergency-medicine' },
-        { id: '', label: 'ENT', route: '/speciality/ent' },
-        { id: '', label: 'General Medicine', route: '/speciality/general-medicine' },
-        { id: '', label: 'General Surgery', route: '/speciality/general-surgery' },
-        { id: '', label: 'Medical & Surgical Gastroenterology', route: '/speciality/gastroenterology' },
-        { id: '', label: 'Nephrology & Urology', route: '/speciality/nephrology-urology' },
-        { id: '', label: 'Obstetrics & Gynaecology', route: '/speciality/obstetrics-gynaecology' },
-        { id: '', label: 'Orthopedic', route: '/speciality/orthopedic' },
-        { id: '', label: 'Paediatrics', route: '/speciality/paediatrics' },
-        { id: '', label: 'Psychiatry', route: '/speciality/psychiatry' },
-        { id: '', label: 'Pulmonology', route: '/speciality/pulmonology' },
-        { id: '', label: 'Vascular Surgery', route: '/speciality/vascular-surgery' }
+        { id: 'cardiology', label: 'Cardiology', route: '/speciality/cardiology' },
+        { id: 'dermatology', label: 'Dermatology', route: '/speciality/dermatology' },
+        { id: 'emergency-medicine', label: 'Emergency Medicine & Critical Care', route: '/speciality/emergency-medicine' },
+        { id: 'ent', label: 'ENT', route: '/speciality/ent' },
+        { id: 'general-medicine', label: 'General Medicine', route: '/speciality/general-medicine' },
+        { id: 'general-surgery', label: 'General Surgery', route: '/speciality/general-surgery' },
+        { id: 'gastroenterology', label: 'Medical & Surgical Gastroenterology', route: '/speciality/gastroenterology' },
+        { id: 'nephrology-urology', label: 'Nephrology & Urology', route: '/speciality/nephrology-urology' },
+        { id: 'obstetrics-gynaecology', label: 'Obstetrics & Gynaecology', route: '/speciality/obstetrics-gynaecology' },
+        { id: 'orthopedic', label: 'Orthopedic', route: '/speciality/orthopedic' },
+        { id: 'paediatrics', label: 'Paediatrics', route: '/speciality/paediatrics' },
+        { id: 'psychiatry', label: 'Psychiatry', route: '/speciality/psychiatry' },
+        { id: 'pulmonology', label: 'Pulmonology', route: '/speciality/pulmonology' },
+        { id: 'vascular-surgery', label: 'Vascular Surgery', route: '/speciality/vascular-surgery' }
       ]
     },
     {
@@ -68,7 +69,7 @@ export class HeaderComponent {
     { key: 'blogs', label: 'Blogs', route: "/blogs" },
     { key: 'careers', label: 'Careers', route: "/careers" },
     { key: 'contact', label: 'Contact us', route: "/contact-us" },
-    {key: 'bookAppointment', label:'Book an Appointment', route:'/book-an-appointment'}
+    { key: 'bookAppointment', label: 'Book an Appointment', route: '/book-an-appointment' }
   ];
 
   infoItems = [
@@ -172,6 +173,8 @@ export class HeaderComponent {
   }
 
   onChildClick(key: string, id: string) {
+    console.log('onChildClick called with key:', key, 'id:', id);
+
     if (key === 'about') {
       this.router.navigate(['/about-us'], { queryParams: { id: id } });
       this.setActiveSection(id);
@@ -182,8 +185,14 @@ export class HeaderComponent {
           // selected_image: img,
         }
       });
+    } else if (key === 'specialities') {
+      this.router.navigate(['/our-specialities-details'], {
+        queryParams: {
+          selected_speciality: id
+        }
+      });
     }
-    this.hoveredItem = null; // Always close the submenu after click
+    this.hoveredItem = null;
   }
   setActiveSection(sectionId: string) {
     console.log(sectionId);

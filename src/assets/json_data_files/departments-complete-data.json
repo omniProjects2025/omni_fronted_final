@@ -1,0 +1,301 @@
+{
+  "departments": [
+    {
+      "name": "Cardiology",
+      "slug": "cardiology",
+      "description": "The Department of Cardiology at OMNI Hospitals is ranked one of the best cardiology hospitals in Hyderabad, Telangana, and India. The Cardiac wing looks after cardiac emergencies and many forms of heart and blood vessel problems.",
+      "subDepartments": [
+        {
+          "title": "Heart Failure",
+          "slug": "heart-failure",
+          "heading": "Heart Failure Management",
+          "description": [
+            "Heart failure is a serious condition where the heart cannot pump enough blood to meet the body's needs. At Omni Hospitals, we provide comprehensive heart failure care using the latest diagnostic and treatment approaches.",
+            "Our cardiology team works closely with patients to develop personalized treatment plans that improve quality of life and reduce hospitalizations."
+          ],
+          "procedures": [
+            "Comprehensive cardiac evaluation and imaging",
+            "Medication optimization and management",
+            "Lifestyle modification counseling",
+            "Device therapy when indicated (pacemakers, defibrillators)",
+            "Regular monitoring and follow-up care"
+          ],
+          "points": "With proper management, many heart failure patients can lead active, fulfilling lives while managing their condition effectively."
+        },
+        {
+          "title": "Angiogram",
+          "slug": "angiogram",
+          "heading": "Coronary Angiogram",
+          "description": [
+            "Coronary angiography is a diagnostic procedure that uses X-ray imaging to see your heart's blood vessels. This test helps identify blockages or narrowing in the coronary arteries.",
+            "At Omni Hospitals, our cardiologists perform this procedure using state-of-the-art equipment to ensure accurate diagnosis and optimal patient care."
+          ],
+          "procedures": [
+            "Pre-procedure evaluation and preparation",
+            "Catheter insertion and coronary artery visualization",
+            "Real-time X-ray imaging of blood flow",
+            "Comprehensive analysis of coronary anatomy",
+            "Post-procedure care and monitoring"
+          ],
+          "points": "Coronary angiography is the gold standard for diagnosing coronary artery disease and helps determine the best treatment approach."
+        },
+        {
+          "title": "Angioplasty",
+          "slug": "angioplasty",
+          "heading": "Angioplasty",
+          "description": [
+            "Angioplasty is a procedure used to open narrowed or blocked coronary arteries and restore blood flow to the heart. This minimally invasive procedure can save lives and improve quality of life for patients with coronary artery disease.",
+            "At Omni Hospitals, our cardiologists perform angioplasty using the latest technology and techniques to ensure optimal outcomes."
+          ],
+          "procedures": [
+            "Coronary angiography to identify blockages",
+            "Balloon angioplasty to open narrowed arteries",
+            "Stent placement to maintain artery patency",
+            "Post-procedure monitoring and care",
+            "Cardiac rehabilitation and lifestyle counseling"
+          ],
+          "points": "Our cardiac team provides comprehensive care from diagnosis through recovery, helping patients return to active, healthy lives."
+        },
+        {
+          "title": "Pacemaker",
+          "slug": "pacemaker",
+          "heading": "Pacemaker Implantation",
+          "description": [
+            "A pacemaker is a small device that helps control abnormal heart rhythms. At Omni Hospitals, we perform pacemaker implantation using the latest technology and techniques.",
+            "Our cardiac team ensures safe and effective pacemaker placement with comprehensive follow-up care."
+          ],
+          "procedures": [
+            "Pre-procedure cardiac evaluation and testing",
+            "Pacemaker implantation under local anesthesia",
+            "Post-procedure monitoring and care",
+            "Pacemaker programming and optimization",
+            "Long-term follow-up and maintenance"
+          ],
+          "points": "Pacemaker implantation is a safe, effective procedure that can significantly improve quality of life for patients with certain heart rhythm disorders."
+        }
+      ]
+    },
+    {
+      "name": "Orthopaedics & Sports Medicine",
+      "slug": "orthopaedics",
+      "description": "The Centre for Orthopaedics offers the most comprehensive healthcare systems and virtually all of the finest, latest treatments, technologies, and services comparable to the best ones available today.",
+      "subDepartments": [
+        {
+          "title": "Knee Osteoarthritis",
+          "slug": "knee-osteoarthritis",
+          "heading": "Knee Osteoarthritis",
+          "description": [
+            "Knee osteoarthritis is a degenerative joint disease that affects millions of people worldwide. At Omni Hospitals, we provide comprehensive care for knee osteoarthritis using the latest diagnostic and treatment modalities.",
+            "Our team of experienced orthopedic specialists offers both conservative and surgical treatment options tailored to each patient's specific condition and lifestyle needs."
+          ],
+          "procedures": [
+            "Comprehensive knee joint assessment and imaging",
+            "Conservative treatment including physical therapy and medication management",
+            "Minimally invasive arthroscopic procedures",
+            "Partial and total knee replacement surgeries",
+            "Post-operative rehabilitation and recovery programs"
+          ],
+          "points": "Our multidisciplinary approach ensures optimal outcomes with personalized treatment plans and ongoing support throughout the recovery process."
+        },
+        {
+          "title": "ACL Reconstruction",
+          "slug": "acl-reconstruction",
+          "heading": "ACL Reconstruction",
+          "description": [
+            "ACL reconstruction is a surgical procedure to restore knee stability after an anterior cruciate ligament tear. This procedure is essential for athletes and active individuals to return to their previous level of activity.",
+            "Our orthopedic surgeons use advanced arthroscopic techniques and the latest graft options to ensure optimal outcomes and faster recovery."
+          ],
+          "procedures": [
+            "Comprehensive knee evaluation and imaging",
+            "Graft selection and preparation",
+            "Arthroscopic ACL reconstruction",
+            "Post-operative rehabilitation protocol",
+            "Return-to-sport progression program"
+          ],
+          "points": "ACL reconstruction at Omni Hospitals combines surgical expertise with comprehensive rehabilitation to restore full knee function and stability."
+        },
+        {
+          "title": "Hip Replacement",
+          "slug": "hip-replacement",
+          "heading": "Hip Replacement Surgery",
+          "description": [
+            "Hip replacement surgery is a procedure to replace a damaged hip joint with an artificial implant. This surgery can significantly improve mobility and reduce pain for patients with severe hip arthritis or injury.",
+            "Our orthopedic team offers both traditional and minimally invasive approaches, using the latest implant technology and surgical techniques."
+          ],
+          "procedures": [
+            "Pre-operative evaluation and planning",
+            "Hip replacement surgery with modern implants",
+            "Post-operative pain management",
+            "Physical therapy and rehabilitation",
+            "Long-term follow-up and care"
+          ],
+          "points": "Hip replacement surgery at Omni Hospitals provides lasting pain relief and improved mobility, helping patients return to active, independent lives."
+        }
+      ]
+    },
+    {
+      "name": "Physiotherapy",
+      "slug": "physiotherapy",
+      "description": "Our Physiotherapy department offers comprehensive rehabilitation services using advanced techniques and equipment to help patients recover from injuries and improve their quality of life.",
+      "subDepartments": [
+        {
+          "title": "Ultrasonic Therapy",
+          "slug": "ultrasonic-therapy",
+          "heading": "Ultrasonic Therapy",
+          "description": [
+            "Ultrasonic therapy is a non-invasive treatment that uses high-frequency sound waves to promote healing and reduce pain. This therapy is particularly effective for soft tissue injuries and chronic pain conditions.",
+            "At Omni Hospitals, our physiotherapy team uses advanced ultrasonic equipment to deliver precise, targeted treatment for various musculoskeletal conditions."
+          ],
+          "procedures": [
+            "Comprehensive assessment of the affected area",
+            "Ultrasonic wave application to target tissues",
+            "Real-time monitoring of treatment response",
+            "Combined therapy with other modalities when appropriate",
+            "Progress tracking and treatment plan adjustments"
+          ],
+          "points": "Ultrasonic therapy offers a safe, effective, and painless treatment option that can accelerate healing and provide long-lasting relief from various conditions."
+        },
+        {
+          "title": "Laser Therapy",
+          "slug": "laser-therapy",
+          "heading": "Laser Therapy",
+          "description": [
+            "Low-level laser therapy (LLLT) is a cutting-edge treatment that uses specific wavelengths of light to stimulate healing and reduce inflammation. This therapy is effective for various conditions including pain, inflammation, and tissue repair.",
+            "Our physiotherapy department is equipped with the latest laser therapy technology to provide optimal treatment outcomes."
+          ],
+          "procedures": [
+            "Detailed assessment and treatment planning",
+            "Precise laser application to affected areas",
+            "Treatment session monitoring and adjustment",
+            "Combined therapy protocols when beneficial",
+            "Regular progress evaluation and follow-up"
+          ],
+          "points": "Laser therapy provides a non-invasive, painless treatment option that can significantly improve healing times and reduce pain for various conditions."
+        },
+        {
+          "title": "Cryotherapy",
+          "slug": "cryotherapy",
+          "heading": "Cryotherapy",
+          "description": [
+            "Cryotherapy involves the application of cold to reduce pain, swelling, and muscle spasm. This therapy is particularly effective for acute injuries and post-operative recovery.",
+            "Our physiotherapy team uses advanced cryotherapy techniques to provide immediate relief and accelerate the healing process."
+          ],
+          "procedures": [
+            "Assessment of injury or condition severity",
+            "Application of cold therapy using appropriate methods",
+            "Monitoring of tissue response and temperature",
+            "Treatment duration optimization",
+            "Post-treatment care instructions"
+          ],
+          "points": "Cryotherapy is an essential component of acute injury management and can significantly reduce recovery time when applied correctly."
+        }
+      ]
+    },
+    {
+      "name": "Obstetrics & Gynaecology",
+      "slug": "obstetrics-gynaecology",
+      "description": "Our Obstetrics & Gynaecology department provides comprehensive care for women at every stage of life, from adolescence through pregnancy and menopause.",
+      "subDepartments": [
+        {
+          "title": "IVF",
+          "slug": "ivf",
+          "heading": "In Vitro Fertilization (IVF)",
+          "description": [
+            "IVF is a complex series of procedures used to help with fertility or prevent genetic problems and assist with the conception of a child. At Omni Hospitals, we offer state-of-the-art IVF treatment with high success rates.",
+            "Our fertility specialists use the latest technology and techniques to provide personalized care for couples struggling with infertility."
+          ],
+          "procedures": [
+            "Comprehensive fertility evaluation and testing",
+            "Ovarian stimulation and monitoring",
+            "Egg retrieval and sperm collection",
+            "Laboratory fertilization and embryo culture",
+            "Embryo transfer and pregnancy support"
+          ],
+          "points": "Our IVF program combines advanced technology with compassionate care to help couples achieve their dream of parenthood."
+        },
+        {
+          "title": "High Risk Pregnancy",
+          "slug": "high-risk-pregnancy",
+          "heading": "High Risk Pregnancy Care",
+          "description": [
+            "High-risk pregnancies require specialized care and monitoring to ensure the health and safety of both mother and baby. Our team of maternal-fetal medicine specialists provides comprehensive care for complex pregnancy situations.",
+            "We use advanced diagnostic tools and treatment protocols to manage various high-risk conditions effectively."
+          ],
+          "procedures": [
+            "Comprehensive prenatal evaluation and risk assessment",
+            "Specialized monitoring and diagnostic testing",
+            "Individualized treatment plans for specific conditions",
+            "Close collaboration with other specialists when needed",
+            "Postpartum care and follow-up"
+          ],
+          "points": "Our high-risk pregnancy program ensures optimal outcomes through expert care, advanced technology, and compassionate support."
+        }
+      ]
+    },
+    {
+      "name": "Pulmonology",
+      "slug": "pulmonology",
+      "description": "Our Pulmonology department specializes in the diagnosis and treatment of respiratory diseases and conditions affecting the lungs and respiratory system.",
+      "subDepartments": [
+        {
+          "title": "Asthma",
+          "slug": "asthma",
+          "heading": "Asthma Management",
+          "description": [
+            "Asthma is a chronic respiratory condition that affects the airways in the lungs. At Omni Hospitals, we provide comprehensive asthma care including diagnosis, treatment, and long-term management strategies.",
+            "Our pulmonologists work closely with patients to develop personalized treatment plans that control symptoms and prevent asthma attacks."
+          ],
+          "procedures": [
+            "Comprehensive pulmonary function testing",
+            "Allergy testing and environmental assessment",
+            "Medication management and inhaler training",
+            "Asthma action plan development",
+            "Regular monitoring and follow-up care"
+          ],
+          "points": "With proper management, most asthma patients can lead active, normal lives with minimal symptoms and few asthma attacks."
+        },
+        {
+          "title": "Sleep Apnea Treatment",
+          "slug": "sleep-apnea-treatment",
+          "heading": "Sleep Apnea Treatment",
+          "description": [
+            "Sleep apnea is a serious sleep disorder where breathing repeatedly stops and starts during sleep. Our sleep medicine specialists provide comprehensive evaluation and treatment for this condition.",
+            "We offer various treatment options including CPAP therapy, oral appliances, and surgical interventions when appropriate."
+          ],
+          "procedures": [
+            "Comprehensive sleep evaluation and testing",
+            "Sleep study (polysomnography) when indicated",
+            "Treatment option evaluation and selection",
+            "CPAP therapy setup and optimization",
+            "Long-term monitoring and follow-up care"
+          ],
+          "points": "Effective sleep apnea treatment can significantly improve sleep quality, daytime alertness, and overall health outcomes."
+        }
+      ]
+    },
+    {
+      "name": "Emergency & Critical Care",
+      "slug": "emergency-critical-care",
+      "description": "Our Emergency & Critical Care department provides 24/7 emergency medical services with state-of-the-art equipment and experienced medical professionals.",
+      "subDepartments": [
+        {
+          "title": "Emergency Medicine",
+          "slug": "emergency-medicine",
+          "heading": "Emergency Medicine",
+          "description": [
+            "Omni hospitals have advanced technology and equipment to aid Emergency care services in Hyderabad. As a trusted choice for healthcare in Hyderabad, Omni hospitals in Kukatpally, Kothapet, Vizag, and Kurnool have a state-of-art infrastructure with the best 24-hour emergency service and trauma care department in Telangana and Andhra Pradesh.",
+            "Our multi-specialty prowess allows us to perform cutting-edge procedures that are crucial in emergency care. We have the best cardiologists, trauma specialists, emergency care surgeons, and neurologists in Hyderabad on our team who hold international experience in treating emergency cases."
+          ],
+          "procedures": [
+            "Well-equipped Ambulances manned by trained personnel and the best emergency care experts of Telangana and Andhra Pradesh.",
+            "Seamless communication channels to monitor life-threatening emergencies and mobilize emergency response.",
+            "Mass Casualty Management.",
+            "Team of trauma surgeons working round the clock to cater to the needs of all medical and surgical emergencies, including Polytrauma",
+            "Qualified emergency medical technicians to provide round-the-clock services for any kind of medical situation."
+          ],
+          "points": "Recognized as a premier center for trauma and critical care, OMNI Hospital has experienced doctors, well-trained nurses, and qualified emergency medical technicians to provide round-the-clock services for any kind of medical situation."
+        }
+      ]
+    }
+  ]
+}

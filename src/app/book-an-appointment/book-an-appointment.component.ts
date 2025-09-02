@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 
 @Component({
@@ -7,9 +7,12 @@ import { NavigationEnd, Router } from '@angular/router';
   templateUrl: './book-an-appointment.component.html',
   styleUrls: ['./book-an-appointment.component.css']
 })
-export class BookAnAppointmentComponent {
+export class BookAnAppointmentComponent implements OnInit {
 
   showEmergencyModal = false;
+  animationStates: { [key: string]: string } = {};
+  formAnimationState = 'normal';
+  emergencyButtonState = 'normal';
 
   emergencyNumbers = [
     { place: 'Kothapet', phone: '040 - 25365895' },
@@ -57,13 +60,128 @@ export class BookAnAppointmentComponent {
     });
   }
 
-  toggleEmergencyModal() {
-    this.showEmergencyModal = !this.showEmergencyModal;
+  ngOnInit(): void {
+    this.initScrollAnimations();
+    this.startPageLoadAnimations();
   }
 
+  @HostListener('window:scroll', ['$event'])
+  onScroll(): void {
+    this.checkScrollAnimations();
+  }
+
+  initScrollAnimations(): void {
+    // Initialize animation states
+    this.animationStates = {
+      header: 'normal',
+      form: 'normal',
+      emergency: 'normal',
+      consultation: 'normal',
+      stats: 'normal'
+    };
+  }
+
+  startPageLoadAnimations(): void {
+    // Trigger page load animations with delays
+    setTimeout(() => {
+      this.animationStates['header'] = 'animated';
+    }, 100);
+
+    setTimeout(() => {
+      this.animationStates['form'] = 'animated';
+    }, 500);
+
+    setTimeout(() => {
+      this.animationStates['emergency'] = 'animated';
+    }, 700);
+
+    setTimeout(() => {
+      this.animationStates['consultation'] = 'animated';
+    }, 900);
+
+    setTimeout(() => {
+      this.animationStates['stats'] = 'animated';
+    }, 1100);
+  }
+
+  checkScrollAnimations(): void {
+    const scrollPosition = window.pageYOffset;
+    const windowHeight = window.innerHeight;
+
+    // Check if elements are in viewport and trigger animations
+    const elements = document.querySelectorAll('[data-animation]');
+    elements.forEach((element, index) => {
+      const rect = element.getBoundingClientRect();
+      const isInViewport = rect.top < windowHeight && rect.bottom > 0;
+
+      if (isInViewport) {
+        const animationType = element.getAttribute('data-animation');
+        if (animationType) {
+          this.triggerElementAnimation(element as HTMLElement, animationType, index);
+        }
+      }
+    });
+  }
+
+  triggerElementAnimation(element: HTMLElement, animationType: string, index: number): void {
+    const delay = index * 0.1; // Staggered animation delay
+    
+    setTimeout(() => {
+      switch (animationType) {
+        case 'fadeInUp':
+          element.style.animation = `fadeInUp 0.8s ease-out ${delay}s forwards`;
+          break;
+        case 'slideInLeft':
+          element.style.animation = `slideInLeft 0.8s ease-out ${delay}s forwards`;
+          break;
+        case 'scaleIn':
+          element.style.animation = `scaleIn 0.6s ease-out ${delay}s forwards`;
+          break;
+        default:
+          element.style.animation = `fadeInUp 0.8s ease-out ${delay}s forwards`;
+      }
+    }, delay * 1000);
+  }
+
+  onFormInputFocus(event: any): void {
+    this.formAnimationState = 'focused';
+    const target = event.target;
+    target.classList.add('animate-input-focus');
+  }
+
+  onFormInputBlur(event: any): void {
+    this.formAnimationState = 'normal';
+    const target = event.target;
+    target.classList.remove('animate-input-focus');
+  }
+
+  onEmergencyButtonClick(): void {
+    this.emergencyButtonState = 'clicked';
+    setTimeout(() => {
+      this.emergencyButtonState = 'normal';
+    }, 200);
+  }
+
+  onButtonPress(buttonType: string): void {
+    // Add button press animation
+    const button = document.querySelector(`[data-button="${buttonType}"]`) as HTMLElement;
+    if (button) {
+      button.classList.add('animate-button-press');
+      setTimeout(() => {
+        button.classList.remove('animate-button-press');
+      }, 100);
+    }
+  }
+
+  toggleEmergencyModal() {
+    this.showEmergencyModal = !this.showEmergencyModal;
+    if (this.showEmergencyModal) {
+      this.onEmergencyButtonClick();
+    }
+  }
 
   submitForm() {
-    // 1️⃣ Mandatory fields check
+    // Form validation and submission logic
     if (!this.formData.fullName.trim()) {
       alert('Full Name is required.');
       return;
@@ -73,7 +191,7 @@ export class BookAnAppointmentComponent {
       return;
     }
 
-    // 2️⃣ Prevent duplicate submission for 30 minutes
+    // Prevent duplicate submission for 30 minutes
     const lastSubmission = localStorage.getItem('lastSubmission');
     if (lastSubmission) {
       const { name, phone, time } = JSON.parse(lastSubmission);
@@ -135,9 +253,6 @@ export class BookAnAppointmentComponent {
         }
       });
   }
-
-
-
 
   goToHealthPackages() {
     this.router.navigate(['/health-checkup']).then(success => {

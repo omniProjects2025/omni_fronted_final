@@ -44,6 +44,7 @@ import { OurEmpanelmentComponent } from './our-empanelment/our-empanelment.compo
 import { BlogDetailsDataComponent } from './blog-details-data/blog-details-data.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { PatientCareComponent } from './patient-care/patient-care.component';
+import { NewlineToBrPipe } from './pipes/newline-to-br.pipe';
 
 @NgModule({
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
@@ -82,7 +83,8 @@ import { PatientCareComponent } from './patient-care/patient-care.component';
     FixedSurgeryDetailsComponent,
     OurEmpanelmentComponent,
     NotFoundComponent,
-    PatientCareComponent
+    PatientCareComponent,
+    NewlineToBrPipe
   ],
   imports: [
     BrowserModule,

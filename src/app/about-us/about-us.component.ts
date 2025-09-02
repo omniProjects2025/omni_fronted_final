@@ -47,13 +47,13 @@ export class AboutUsComponent {
     {
       name: 'Dr. Aloke Chandra Mullick',
       designation: 'Group Chief Growth Officer',
-      img: 'assets/about_us/ceo.png',
+      img: 'assets/about_us/alloc.svg',
       description: `Dr. Aloke Chandra is a seasoned healthcare leader with global experience. Dr. Aloke Mullick drives strategic growth and transformation at Omni Hospitals. Passionate about healthcare technology, he founded India’s first standalone EHR company and advises several HealthTech firms. A frequent international speaker and certified Heartfulness Meditation Trainer, he brings clarity, purpose, and innovation to everything he does.`
     },
     {
       name: 'Ankit Shah',
       designation: 'Group Chief Financial Officer',
-      img: 'assets/about_us/ceo.png',
+      img: 'assets/about_us/anki_shah.svg',
       description: `Mr. Shah is an accomplished finance and strategy leader with over 20 years of experience across healthcare, life sciences, biotech, and infrastructure. His expertise includes risk management, investment planning, and strategic business development. He has held leadership roles at Alexandria Real Estate Equities Inc. and Ernst & Young. A Chartered Accountant (ICAI), Mr. Shah leads Omni’s financial strategy and governance.`
     }
   ];

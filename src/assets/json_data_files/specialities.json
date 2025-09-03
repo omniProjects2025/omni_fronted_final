@@ -1222,7 +1222,7 @@
       {
         "name": "Obstetrics & Gynaecology",
         "short_description": "The Department of Nephrology at OMNI Hospitals is recognized as one of the best kidney care centers in Hyderabad, Telangana.",
-        "img": "",
+        "img": "assets/our_specialities/gynocology.jpg",
         "details":[
             {
                 "subtitle": "<br>Best Obstetrics and Gynecology Hospital in Hyderabad – OMNI Hospitals",
@@ -1280,6 +1280,219 @@
                 "description":"At OMNI Hospitals, Hyderabad, we take pride in being one of the most trusted names in maternity, obstetrics, and gynecology care. Whether you are planning for pregnancy, need expert care during childbirth, or require specialized treatment for women’s health conditions, our team is committed to your well-being. <br><br>If you’re searching for the best maternity hospital in Hyderabad or an experienced gynecologist near you, OMNI Hospitals ensures safe, advanced, and compassionate care every step of the way."
              }
         ]
+      },
+      
+        {
+          "name": "Pulmonology",
+          "short_description": "TThe Department of Pulmonology at OMNI Hospitals is recognized as one of the best centers for comprehensive lung and respiratory care in Hyderabad.",
+          "img": "assets/our_specialities/pulmonology.jpg",
+          "details":[
+            {
+              "subtitle":"<br> Best Pulmonology Hospital in Hyderabad – OMNI Hospitals",
+              "description":"The Department of Pulmonology at OMNI Hospitals is recognized as one of the best centers for comprehensive lung and respiratory care in Hyderabad. Our team of highly experienced pulmonologists, chest physicians, and respiratory therapists specializes in diagnosing, treating, and managing a wide range of acute and chronic lung diseases. With advanced diagnostic tools, modern infrastructure, and patient-centered care, we provide specialized treatment for respiratory conditions in adults and children."
+            },
+            {
+              "subtitle":"Conditions We Treat",
+              "description":"Our pulmonology experts manage a broad spectrum of respiratory disorders, including:",
+              "list":[
+                "Asthma & COPD (Chronic Obstructive Pulmonary Disease)",
+                "Pneumonia, Bronchitis, and Tuberculosis (TB)",
+                "Interstitial Lung Disease (ILD) & Pulmonary Fibrosis",
+                "Lung Cancer & Pleural Diseases",
+                "Sleep Disorders (Obstructive Sleep Apnea, Insomnia, Snoring issues)",
+                "Pulmonary Hypertension & Respiratory Failure",
+                "Allergies and Occupational Lung Diseases",
+                "COVID-19 & Post-COVID Pulmonary Complications"
+              ]
+            },
+            {
+              "subtitle":"Pulmonology Services & Treatments",
+              "description":"OMNI Hospitals offers advanced medical and interventional pulmonology services, including:",
+              "list":[
+                "Pulmonary Function Tests (PFT)",
+                "Sleep Studies & Sleep Apnea Management (Polysomnography, CPAP/BiPAP therapy)",
+                "Bronchoscopy (Diagnostic & Therapeutic)",
+                "Thoracoscopy & Pleural Procedures",
+                "Advanced Imaging & Lung Biopsy",
+                "Oxygen Therapy & Ventilator Support",
+                "Pulmonary Rehabilitation & Lifestyle Counseling",
+                "Critical care management for acute respiratory failure"
+              ]
+            },
+            {
+              "subtitle":"Why Choose OMNI Hospitals for Pulmonology?",
+              "list":[
+                "Expert team of top pulmonologists in Hyderabad",
+                "Advanced critical care and state-of-the-art respiratory ICUs",
+                "24/7 emergency care for respiratory distress and lung-related emergencies",
+                "Comprehensive management of both medical and surgical pulmonology cases",
+                "Patient-focused approach with accurate diagnosis and long-term care"
+              ]
+            },
+            {
+              "description":"At OMNI Hospitals, Hyderabad, we are committed to improving lung health through early diagnosis, advanced treatments, and compassionate care. Whether it is a simple allergy, chronic asthma, or complex lung disease, our pulmonology team ensures precise care for every patient. <br> <br> If you’re looking for the best pulmonology hospital in Hyderabad or need consultation with an experienced lung specialist near you, OMNI Hospitals provides trusted, comprehensive care for all respiratory conditions."
+            }
+          ],
+          "sub_departments": [
+            {
+              "name":"Pneumonia",
+              "sections":[
+                {
+                  "description":"During the process of breathing, the blood exchanges oxygen and carbon dioxide in the lungs. Tiny air sacs known as Alveoli are responsible for oxygen getting into the bloodstream and eventually to the tissues throughout the body. These air sacs in either of the lungs or in both the lungs can get enlarged and filled with pus or fluid, restricting the proper exchange of oxygen and carbon dioxide. This phenomenon is diagnosed as Pneumonia. <br> <br> This can occur due to bacterial infection, fungi, or viruses. Pneumonia can occur in various places, such as Hospitals, as the bacteria may be resistant to medical drugs, which could be lethal. <br><br> It could also occur from outside the hospitals, i.e, from the general environment. <br><br> Pneumonia is also observed in patients who were under a ventilator for a long duration of time for unknown reasons. <br>br> Patients are also diagnosed with pneumonia by the inhalation of microorganisms from edible items, drinks, and saliva when gone into the lungs one. This is known as Aspiration Pneumonia."
+                },
+                {
+                  "subtitle":"SYMPTOMS",
+                  "description":"There are various symptoms of Pneumonia, which are as follows:",
+                  "list":[
+                    "Difficulty in breathing.",
+                    "Fever.",
+                    "Chills.",
+                    "Severe cough with pus or phlegm.",
+                    "Discomfort in the chest while breathing or coughing.",
+                    "Fatigue.",
+                    "Loss of appetite.",
+                    "Nausea/ Vomiting.",
+                    "Headache."
+                  ]
+                },
+                {
+                  "description":"But this does not mean that everyone who is affected with pneumonia is aware of it. Yes, Walking pneumonia is a phenomenon where the symptoms are quite mild for the patient to be hospitalized. The symptoms are similar but in a milder form. Doctors generally call it ‘Atypical Pneumonia’."
+                },
+                {
+                  "subtitle":"IS PNEUMONIA CONTAGIOUS?",
+                  "description":"It is found that pneumonia caused due to bacteria and viruses are absolutely contagious. This can spread from one person to another in the form of tiny particles in the air as a result of coughing and sneezing, and also by coming in contact with surfaces and objects that the patient has sneezed or coughed upon. One can get infected with fungal pneumonia from the environment, but it is not known to be contagious."
+                },
+                {
+                  "subtitle":"DOES THE BACTERIA/VIRUS/FUNGI CAUSING PNEUMONIA ENLARGE THE ALVEOLI?",
+                  "description":"No, the alveoli or air sacs are enlarged by the body itself as a response by the immune system to the infection caused in the lungs. These alveoli get filled with mucus, pus, and other fluids when they get enlarged, which eventually causes difficulty in breathing."
+                },
+                {
+                  "subtitle":"TREATMENT",
+                  "description":"Once the diagnosis is done through various blood tests to know the infection-causing microorganism and also with the help of an X-Ray to identify the presence and the intensity of the infection, treatment is taken accordingly in respective ways, such as follows.",
+                  "list":[
+                    "Antibiotics are prescribed if pneumonia is caused due to any bacterial infection.",
+                    "Paracetamol and similar medications are prescribed to eradicate pyrexia & hyperpyrexia (high temperature) in patients.",
+                    "Syrups and medicines would also be prescribed to reduce the severity of cough, phlegm, and pus, if any.",
+                    "In cases where the patient feels discomfort in the chest, heartbeat either too high (Tachycardia) or too low (Bradycardia), any signs of kidney damage or substantial variations in blood pressure, and even if the patient is above 50-60 years of age, they may require hospitalization.",
+                    "Immediate hospitalization is also required in cases where the patient is an infant of 2 months of age or less. They might show symptoms like high temperature, lethargy, dehydration, and difficulty breathing."
+                  ]
+                },
+                {
+                  "subtitle":"PREVENTION",
+                  "description":"Pneumonia can be prevented by the following:",
+                  "list":[
+                    "Maintain a healthy lifestyle.",
+                    "Quit smoking for better lung immunity.",
+                    "Healthy diet.",
+                    "Maintaining hygiene.",
+                    "Taking a shot for influenza every year.",
+                    "There are various vaccines too, which prevent pneumoni,a such as pneumococcal polysaccharide vaccine (PPSV23) and pneumococcal conjugate vaccine (PCV 13), which fall under the category of Pneumococcal Vaccine.",
+                    "Vaccine for Haemophilus influenzae.",
+                    "Additional relevant vaccines that the doctor would prescribe."
+                  ]
+                }
+               
+              ]
+            },
+            {
+              "name":"Sleep Apnea Treatment",
+              "description":"Sleep Apnea is a condition in which breathing regularly stops and starts during sleep. You may have sleep apnea if you snore loudly and still feel exhausted after a full night’s sleep.",
+              "sections":[
+                {
+                  "subtitle":"These are the primary forms of sleep apnea:",
+                  "list":[
+                    "The more prevalent type of obstructive sleep apnea is which occurs when the throat muscles relax",
+                    "When your brain fails to properly communicate with the breathing muscles during sleep, central sleep apnea results.",
+                    "Occurring when a person has both central and obstructive sleep apnea, complex sleep apnea syndrome is often referred to as treatment-emergent central sleep apnea."
+                  ]
+                },
+                {
+                  "subtitle":"Symptoms",
+                  "description":"It can be challenging to distinguish between obstructive and central sleep apneas since their signs and symptoms sometimes coincide. Obstructive and central sleep apneas have several comparable indications and symptoms:",
+                  "list":[
+                    "Snoring loudly.",
+                    "Episodes where you stop breathing while sleeping, which another else might notice.",
+                    "During sleep, gasping for breath and wake up with a dry mouth.",
+                    "Daytime headache.",
+                    "Having trouble remaining asleep (insomnia).",
+                    "Excessive slumber during the day (hypersomnia).",
+                    "Inability to concentrate while awake.",
+                    "Irritability."
+                  ]
+                },
+                {
+                  "subtitle":"When to consult a Doctor:",
+                  "description":"Although loud snoring may be a sign of a potentially dangerous issue, not all people with sleep apnea snore. If you experience any sleep apnea symptoms, consult your doctor. Any sleep issue that makes you tired, sleepy, or irritated should be brought up with your doctor."
+                },
+                {
+                  "subtitle":"Obstructive sleep apnea:",
+                  "description":"When the muscles in the back of your throat relax, this happens. These muscles provide support for the tonsils, the soft palate, the uvula, the triangle tissue that hangs from the soft palate, the side walls of the throat, and the tongue. <br><br> Your airway narrows or shuts as you inhale when the muscles relax. If you aren’t getting enough air, it might cause your blood’s oxygen level to drop. Your brain awakens you temporarily from sleep when it detects that you are having trouble breathing so that you can reopen your airway. Usually, this revelation is so fleeting that you don’t recall it. <br><br>You could choke, snort, or gasp. This sequence can continue five to thirty times or more per hour, all night, making it difficult for you to get to the deep sleep stage."
+                },
+                {
+                  "subtitle":"Central sleep apnea:",
+                  "description":"When your brain is unable to send instructions to your breathing muscles, you get this less frequent type of sleep apnea. In other words, you briefly stop breathing without trying. Breathing difficulties or trouble falling or staying asleep could cause you to wake up."
+                },
+                {
+                  "subtitle":"Risk Factors",
+                  "description":"Anyone, even toddlers, can develop sleep apnea. However, a few things make you more vulnerable."
+                },
+                {
+                  "subtitle":"Obstructive sleep apnea",
+                  "description":"This type of sleep apnea is more likely to occur in those who:",
+                  "list":[
+                    "Extra weight",
+                    "Sleep apnea is considerably heightened by obesity.",
+                    "Your upper airway’s surrounding fat deposits may block your breathing.",
+                    "Neck measurement.",
+                    "Narrower airways may be present in those with thicker necks.",
+                    "A constricted airway, perhaps you were born with a narrow throat.",
+                    "Adenoids or tonsils can potentially expand and obstruct the airway, especially in young children.",
+                    "Men are two to three times more likely than women to suffer from sleep apnea. However, women who are overweight run a higher risk, and it seems that danger increases after menopause.",
+                    "Older persons are substantially more likely to experience sleep apnea.",
+                    "A family history of sleep apnea may make you more susceptible.",
+                    "Use of alcohol, tranquilisers, or sedatives can make obstructive sleep apnea worse by loosening the muscles in your throat.",
+                    "Obstructive sleep apnea is three times as common among smokers than it is in non-smokers. Smoking can make the upper airway more inflammatory and fluid-retained.",
+                    "Obstructive sleep apnea is more likely to occur in those who have trouble breathing via their nose, whether due to anatomical issues or allergies.",
+                    "Ailment conditions: Some of the factors that may raise the risk of obstructive sleep apnea include congestive heart failure, high blood pressure, type 2 diabetes, and Parkinson’s disease. Risk factors include having polycystic ovarian syndrome, hormonal issues, a history of stroke, and persistent lung conditions, including asthma."
+                  ]
+                },
+                {
+                  "subtitle":"Central sleep apnea",
+                  "description":"The following are risk factors for this type of sleep apnea:<br><br>",
+                  "list":[
+                    "Central sleep apnea is more common in middle-aged and older persons.",
+                    "Men are more likely than women to experience central sleep apnea.",
+                    "<b>Heart problems:</b> Congestive cardiac failure raises the danger.",
+                    "Central sleep apnea is made more likely by opioid drugs, especially long-acting ones like methadone.",
+                    "You are more likely to develop central sleep apnea or treatment-emergent central sleep apnea if you have had a stroke."
+                  ]
+                },
+                {
+                  "subtitle":"Complications",
+                  "description":"Possible complications include:",
+                  "list":[
+                    "Daytime drowsiness, Normal, restorative sleep is impossible due to the frequent awakenings brought on by sleep apnea, which increases the likelihood of extreme daytime sleepiness, weariness, and irritability.",
+                    "You can have trouble staying awake and find yourself nodding off when working, watching TV, or even while driving. Accidents in the workplace and on the road are more likely to occur in those with sleep apnea.",
+                    "You might also experience moodiness, irritability, or depression. Sleep apnea in children and teenagers may cause poor academic performance or behavioural issues.",
+                    "Heart issues or high blood pressure: Sleep apnea causes abrupt reductions in blood oxygen levels, which raise blood pressure and tax the cardiovascular system. High blood pressure is more likely to occur if you have obstructive sleep apnea (hypertension).",
+                    "Additionally, having obstructive sleep apnea may make you more susceptible to repeated heart attacks, strokes, and irregular heartbeats like atrial fibrillation. Multiple episodes of low blood oxygen (hypoxia or hypoxemia) in a person with heart disease might result in sudden death from an erratic heartbeat.",
+                    "<b>Diabetes type 2:</b> You run a higher risk of type 2 diabetes and insulin resistance if you have sleep apnea.",
+                    "<b>Syndrome metabolic:</b> A higher risk of heart disease is associated with this ailment, which includes high blood pressure, abnormal cholesterol levels, excessive blood sugar, and an enlarged waist circumference."
+                  ]
+                },
+                {
+                  "subtitle":"Complications after surgery and prescription drugs",
+                  "description":"Additionally, general anaesthesia and other drugs can increase the risk of obstructive sleep apnea. Due to their propensity for breathing issues, especially when under anaesthesia and lying on their backs, people with sleep apnea may be more likely to experience complications after major surgery.",
+                  "list":[
+                    "Inform your surgeon about your sleep apnea and current treatment regimen before the procedure.",
+                    "People who suffer from sleep apnea are more prone to abnormal liver function test findings and to have scarring in their livers (non alcoholic fatty liver disease)."
+                  ]
+                }
+              ]
+            }
+            
+
+          ]
       }
     ]
 }

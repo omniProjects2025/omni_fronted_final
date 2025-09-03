@@ -750,14 +750,9 @@ export class HomeComponent {
 
 onVideoPlay(idx: number): void {
   this.testimonials.forEach((item, i) => {
-    if (i !== idx) {
-      item.videoPlayed = false;
-    }
+    item.videoPlayed = i === idx;
   });
-
-  // ✅ no need to set testimonials[idx].videoPlayed = true again,
-  // the child already emitted it
-  this.cdr.detectChanges();
+  this.cdr.detectChanges(); // Force re-render
 }
 
 

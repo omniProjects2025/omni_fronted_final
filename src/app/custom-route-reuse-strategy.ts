@@ -3,11 +3,15 @@ import { RouteReuseStrategy, ActivatedRouteSnapshot, DetachedRouteHandle } from 
 export class CustomRouteReuseStrategy implements RouteReuseStrategy {
   private storedRoutes = new Map<string, DetachedRouteHandle>();
 
-  // Determines if the route should be stored
-  shouldDetach(route: ActivatedRouteSnapshot): boolean {
-    // Store the home route to prevent reinitialization
-    return route.routeConfig?.path === '';
+shouldDetach(route: ActivatedRouteSnapshot): boolean {
+  if (!route || !route.routeConfig || typeof route.routeConfig.path !== 'string') {
+    return false;
   }
+
+  return route.routeConfig.path === '';
+}
+
+
 
   // Stores the detached route
   store(route: ActivatedRouteSnapshot, handle: DetachedRouteHandle | null): void {

@@ -7,10 +7,24 @@ import { Router } from '@angular/router';
   styleUrls: ['./footer.component.css']
 })
 export class FooterComponent {
-  hoveredIcon:string = '';
-  email="info@omnihospitals.in"
-
-  constructor(private router: Router){
+  hoveredIcon: string = '';
+  email = "info@omnihospitals.in"
+  specialties: string[] = [
+    'Emergency Medicine & Critical Care',
+    'ENT',
+    'Medical & Surgical Gastroenterology',
+    'General Surgery',
+    'General Medicine',
+    'Nephrology',
+    'Neurology',
+    'Obstetrics & Gynaecology',
+    'Orthopedics',
+    'Plastic Surgery',
+    'Psychiatry',
+    'Dermatology',
+    'Pulmonology'
+  ];
+  constructor(private router: Router) {
 
   }
 
@@ -22,5 +36,13 @@ export class FooterComponent {
         console.log('Navigation failed');
       }
     }).catch(error => console.error('Navigation error:', error));
+  }
+
+  goToSPeciality(speciality: string) {
+    this.router.navigate(['/our-specialities-details'], {
+      queryParams: {
+        selected_speciality: speciality
+      }
+    });
   }
 } 

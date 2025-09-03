@@ -488,3 +488,14 @@ details.dept-group+details.dept-group{margin-top:6px}
     transform: scale(1);
   }
 }
+
+.active-subdept {
+  background-color: #0291D5;
+  color: white;
+  padding: 9px 0px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+h5 {
+  cursor: pointer;
+}

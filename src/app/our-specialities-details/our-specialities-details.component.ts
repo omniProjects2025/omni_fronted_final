@@ -11,8 +11,8 @@ import { data } from 'jquery';
 export class OurSpecialitiesDetailsComponent implements OnInit {
   // selectedSubDepartment: any = {};
   selectedDepartment: any = {};
-  subDepartmentData:any = {};
-  // selected_dep = '';
+  subDepartmentData: any = {};
+  selectedSubDept: string | null = null;
   departmentName = '';
 
   enquiry = { fullName: '', phoneNumber: '', emailId: '' };
@@ -35,11 +35,11 @@ export class OurSpecialitiesDetailsComponent implements OnInit {
 
   ngOnInit() {
     window.scrollTo(0, 0);
-   
+
     // 1) Grab the param first
     this.route.queryParams.subscribe(params => {
       this.departmentName = (params['selected_speciality'] || '').trim();
-       this.getAllSpecialities();
+      this.getAllSpecialities();
       console.log('departmentName', this.departmentName);
       // 2) Then load JSON (avoids race)
     });
@@ -50,16 +50,15 @@ export class OurSpecialitiesDetailsComponent implements OnInit {
     this.http.get<any>('assets/json_data_files/specialities.json')
       .subscribe({
         next: (data) => {
-this.selectedDepartment = (data.departments.filter((dept:any)=> this.departmentName.toLocaleLowerCase() == dept.name.toLocaleLowerCase()))[0]
-this.subDepartmentData = this.selectedDepartment.sub_departments[0];
-
-          console.log(this.selectedDepartment, 'data...');
-
+          this.selectedDepartment = (data.departments.filter((dept: any) => this.departmentName.toLocaleLowerCase() == dept.name.toLocaleLowerCase()))[0]
+          this.subDepartmentData = this.selectedDepartment.sub_departments[0];
+          this.selectedSubDept = this.subDepartmentData.name;
         },
         error: (err) => {
           console.error('Failed to load departments JSON:', err);
         }
       });
+      this.onSelectSubDept(this.subDepartmentData.name);
   }
 
   getDepartmentName(): string {
@@ -118,14 +117,14 @@ this.subDepartmentData = this.selectedDepartment.sub_departments[0];
   //   this.selected_dep = sub.id;        // ✅ highlight active sidebar
   //   this.departmentName = sub.name;
   // }
-onSelectSubDept(subdept_name: string) {
-  console.log(subdept_name);
+  onSelectSubDept(subdept_name: string) {
+    console.log(subdept_name);
+    this.selectedSubDept = subdept_name;
+    this.subDepartmentData = this.selectedDepartment.sub_departments.find(
+      (subdept: any) => subdept_name.toLocaleLowerCase() === subdept.name.toLocaleLowerCase()
+    );
 
-  this.subDepartmentData = this.selectedDepartment.sub_departments.find(
-    (subdept: any) => subdept_name.toLocaleLowerCase() === subdept.name.toLocaleLowerCase()
-  );
-
-  console.log(this.subDepartmentData);
-}
+    console.log(this.subDepartmentData);
+  }
 
 }

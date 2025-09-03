@@ -86,7 +86,7 @@
             <div class="row pt-4">
               <div class="col-lg-5 col-md-12">
                 <ng-container *ngFor="let sub_dept of selectedDepartment.sub_departments">
-                  <h5 (click)="onSelectSubDept(sub_dept.name)">{{ sub_dept.name }}</h5>
+                  <h5 class="ps-2" (click)="onSelectSubDept(sub_dept.name)" [ngClass]="{'active-subdept': selectedSubDept === sub_dept.name}">{{ sub_dept.name }}</h5>
                 </ng-container>
               </div>
 

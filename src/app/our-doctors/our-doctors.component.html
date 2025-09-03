@@ -19,7 +19,8 @@
                     No doctors found. Try adjusting your filters.
                 </div>
 
-                <div *ngFor="let details of visibleDoctors; index as i; trackBy: trackByDoctorId" class="row border-start border-end pt-2" [ngClass]="{
+                <div *ngFor="let details of visibleDoctors; index as i; trackBy: trackByDoctorId"
+                    class="row border-start border-end pt-2" [ngClass]="{
           'border-top border_top_radius pt-4': i === 0,
           'border-bottom border_bottom_radius': i === visibleDoctors.length - 1
         }">
@@ -56,7 +57,8 @@
                             </div>
                         </div>
                         <div class="my-3 text-center text-md-start">
-                            <button class="button_radius py-2 px-4 w-md-auto book-appointment-btn" (click)="goToBookAppointment()">
+                            <button class="button_radius py-2 px-4 w-md-auto book-appointment-btn"
+                                (click)="goToBookAppointment()">
                                 Book Appointment
                             </button>
                         </div>
@@ -101,18 +103,17 @@
                             <h5 class="text-center font_style">BOOK AN APPOINTMENT ONLINE</h5>
                         </div>
                         <div class="px-3 py-2">
-                            <p class="text-center text-muted txt_justify py-2">
-                                Book an appointment and consult the best doctor in Hyderabad. Choose among the several
-                                specialties,
-                                super specialties, internationally trained doctors, and surgeons to talk to an
-                                experienced consultant at
-                                a time convenient to you.
+                            <p class="text-center py-2 fw_normal">
+                                Book an appointment with the best doctors in Hyderabad at OMNI Hospitals. Whether you
+                                need a specialist, super specialist, or surgeon, OMNI Hospitals makes booking an
+                                appointment simple, quick, and patient-friendly.
                             </p>
-                            <p class="text-center fw_normal">Booking appointment with your doctor was never better.</p>
-                            <p class="text-center text-muted">
+                            <p class="text-center fw_normal">From general medicine to advanced super specialties, our doctors are here to care for every health need. All you need to do is:
+</p>
+                            <!-- <p class="text-center text-muted">
                                 Our doctors are spread across multidisciplinary medical specialties. All you need to do
                                 is:
-                            </p>
+                            </p> -->
 
                             <div class="d-flex align-items-center mb-3">
                                 <div class="me-3">

@@ -35,13 +35,13 @@ export class HeaderComponent implements OnDestroy {
         { id: 'gastroenterology', label: 'Medical & Surgical Gastroenterology', route: '/speciality/gastroenterology' },
         { id: 'nephrology', label: 'Nephrology', route: '/speciality/nephrology' },
         { id: 'neurology', label: 'Neurology', route: '/speciality/neurology' },
-        // { id: 'Urology', label: 'Urology', route: '/speciality/Urology' },
+        { id: 'dermatology', label: 'Dermatology', route: '/speciality/dermatology' },
         { id: 'obstetrics-gynaecology', label: 'Obstetrics & Gynaecology', route: '/speciality/obstetrics-gynaecology' },
         { id: 'orthopedic', label: 'Orthopedics', route: '/speciality/orthopedic' },
         // { id: 'paediatrics', label: 'Paediatrics', route: '/speciality/paediatrics' },
-        // { id: 'psychiatry', label: 'Psychiatry', route: '/speciality/psychiatry' },
+        { id: 'psychiatry', label: 'Psychiatry', route: '/speciality/psychiatry' },
         { id: 'pulmonology', label: 'Pulmonology', route: '/speciality/pulmonology' },
-        // { id: 'plastic-surgery', label: 'Plastic Surgery', route: '/speciality/plastic-surgery' },
+        { id: 'plastic-surgery', label: 'Plastic Surgery', route: '/speciality/plastic-surgery' },
       ]
     },
     {

@@ -1401,6 +1401,175 @@
             
 
           ]
+      },
+      {
+        "name":"dermatology",
+        "short_description":"The Department of Dermatology at OMNI Hospitals is recognized as one of the best skin hospitals in Hyderabad, Andhra Pradesh, and Telangana.",
+        "img": "assets/our_specialities/dermatology.jpg",
+        "details": [
+          {
+            "subtitle": "<br>Best Dermatology Hospital in Hyderabad – OMNI Hospitals",
+            "description": "The Department of Dermatology at OMNI Hospitals is recognized as one of the best skin hospitals in Hyderabad, Andhra Pradesh, and Telangana. Our team of highly qualified dermatologists and skin specialists provides comprehensive care for all skin, hair, and nail conditions, combining advanced medical treatments with patient-friendly care. <br><br>Whether it is common skin issues, chronic dermatological diseases, or advanced cosmetic procedures, our dermatology specialists ensure accurate diagnosis and effective treatment. With state-of-the-art facilities and internationally trained dermatologists, OMNI Hospitals stands as a trusted choice for skin care in Hyderabad."
+          },
+          {
+            "subtitle":"Conditions We Treat",
+            "description":"Our dermatologists specialize in diagnosing and treating a wide range of skin, hair, and nail conditions, including:",
+            "list":[
+              "Acne, pimples, and scars",
+              "Psoriasis, eczema, and dermatitis",
+              "Skin infections (bacterial, viral, fungal)",
+              "Pigmentation disorders & vitiligo",
+              "Allergic skin reactions and urticaria",
+              "Hair loss (alopecia) and dandruff",
+              "Nail disorders and fungal infections",
+              "Skin cancer screening and management"
+            ]
+          },
+          {
+            "subtitle":"Dermatology Treatments & Services",
+            "description":"OMNI Hospitals offers both medical and cosmetic dermatology services, ensuring holistic care for every patient:",
+            "list":[
+              "Medical Dermatology",
+              "Advanced acne and scar management",
+              "Psoriasis and eczema treatment",
+              "Vitiligo therapy & phototherapy",
+              "Skin allergy testing and treatment",
+              "Pediatric dermatology care",
+              "Cosmetic Dermatology",
+              "Chemical peels & microdermabrasion",
+              "Anti-aging treatments (Botox, fillers)",
+              "Laser hair reduction",
+              "Pigmentation & skin rejuvenation lasers",
+              "Scar and stretch mark reduction",
+              "Trichology (Hair Treatments)",
+              "PRP therapy for hair regrowth",
+              "Hair fall and dandruff treatment",
+              "Scalp Infections Management"
+            ]
+          },
+          {
+            "subtitle":"Why Choose OMNI Hospitals for Dermatology in Hyderabad?",
+            "list":[
+              "Experienced team of the best dermatologists in Hyderabad",
+              "Comprehensive care for medical and cosmetic dermatology",
+              "Advanced diagnostic tools & laser technologies",
+              "Personalized treatment plans tailored to patient needs",
+              "Multidisciplinary support from allied specialties"
+            ]
+
+
+          },
+          {
+            "description":"<br>If you’re searching for the best skin specialist in Hyderabad or a trusted dermatology hospital near you, OMNI Hospitals provides world-class skin and hair care with compassion and clinical excellence."
+          }
+        ]
+      },
+      {
+        "name":"Plastic Surgery",
+        "short_description":"The Department of Plastic, Reconstructive, and Cosmetic Surgery at OMNI Hospitals is recognized as one of the best plastic surgery centers in Hyderabad, Andhra Pradesh, and Telangana.",
+        "img":"assets/our_specialities/plastic_surgery.jpg",
+        "details":[
+          {
+            "subtitle":"<br>Best Plastic Surgery Hospital in Hyderabad – OMNI Hospitals",
+            "description":"The Department of Plastic, Reconstructive, and Cosmetic Surgery at OMNI Hospitals is recognized as one of the best plastic surgery centers in Hyderabad, Andhra Pradesh, and Telangana. Our team of highly skilled plastic surgeons offers a complete spectrum of reconstructive and cosmetic procedures, ensuring safe, precise, and natural-looking results.<br><br>From treating trauma and burns to performing advanced cosmetic enhancements, our specialists combine surgical expertise with patient-centered care. With world-class infrastructure and internationally trained surgeons, OMNI Hospitals is a trusted destination for plastic surgery in Hyderabad."
+          },
+          {
+            "subtitle":"Conditions We Treat",
+            "description":"Our plastic and reconstructive surgeons provide expert care for:",
+            "list":[
+              "Facial trauma and deformities",
+              "Hand injuries and complex trauma",
+              "Burns and post-burn deformities",
+              "Breast deformities and reconstruction",
+              "Congenital anomalies (cleft lip, palate, etc.)",
+              "Cosmetic concerns (face, body, and skin aesthetics)"
+            ]
+          },
+          {
+            "title":"Plastic Surgery Treatments & Services",
+            "subtitle":"<br>Reconstructive Plastic Surgery",
+            "list":[
+              "Facial plastic and reconstructive surgeries",
+              "Hand and trauma surgery",
+              "Acute burns care and post-burn deformity correction",
+              "Breast reconstruction surgeries",
+              "Congenital deformity repair"
+            ]
+          },
+          {
+            "subtitle":"Cosmetic Plastic Surgery",
+            "list":[
+              "Breast surgeries – augmentation, reduction, and lift",
+              "Abdominoplasty (tummy tuck)",
+              "Liposuction & body contouring",
+              "Hair transplantation",
+              "Facial cosmetic procedures – implants, Botox, fillers",
+              "Anti-aging and scar revision treatments"
+            ]
+          },
+          {
+            "subtitle":"Why Choose OMNI Hospitals for Plastic Surgery in Hyderabad?",
+            "list":[
+              "Experienced team of plastic and cosmetic surgeons in Hyderabad",
+              "Expertise in both reconstructive and aesthetic procedures",
+              "Advanced surgical technology and minimally invasive techniques",
+              "Comprehensive care from consultation to recovery",
+              "Multidisciplinary support with other specialties"
+            ]
+          },
+          {
+            "description":"If you are looking for the best plastic surgeon in Hyderabad or a trusted plastic surgery hospital near you, OMNI Hospitals ensures excellence in reconstructive and cosmetic surgery with compassion and safety at its core."
+          }
+        ]
+      },
+      {
+        "name":"Psychiatry",
+        "short_description":"The Department of Psychiatry at OMNI Hospitals is recognized as one of the leading centers for mental health care in Hyderabad, Telangana, and Andhra Pradesh.",
+        "img":"assets/our_specialities/psychiatric.jpg",
+        "details":[
+          {
+            "subtitle":"Best Psychiatry Hospital in Hyderabad – OMNI Hospitals",
+            "description":"The Department of Psychiatry at OMNI Hospitals is recognized as one of the leading centers for mental health care in Hyderabad, Telangana, and Andhra Pradesh. With a team of experienced psychiatrists, clinical psychologists, and mental health professionals, we provide comprehensive diagnosis, treatment, and long-term management of psychiatric disorders.<br><br>Our psychiatry specialists in Hyderabad combine evidence-based therapies, advanced medical treatments, and a compassionate approach to ensure holistic mental well-being for patients of all ages. At OMNI Hospitals, we understand the importance of addressing both emotional and behavioral health challenges with dignity and care."
+          },
+          {
+            "subtitle":"Conditions We Treat",
+            "description":"Our psychiatrists specialize in the management of a wide range of mental health disorders, including:",
+            "list":[
+              "Depression and mood disorders",
+              "Anxiety disorders, panic attacks, and phobias",
+              "Bipolar disorder",
+              "Schizophrenia and psychotic disorders",
+              "Obsessive Compulsive Disorder (OCD)",
+              "Post-Traumatic Stress Disorder (PTSD)",
+              "Sleep disorders and insomnia",
+              "Substance abuse and de-addiction",
+              "Dementia and age-related psychiatric conditions",
+              "Child and adolescent behavioral disorders",
+              "Psychiatry Treatments & Services",
+              "Comprehensive psychiatric evaluation & diagnosis",
+              "Individual, family, and group therapy sessions",
+              "Cognitive Behavioral Therapy (CBT) and psychotherapy",
+              "Medication management for psychiatric disorders",
+              "De-addiction and rehabilitation programs",
+              "Stress management and lifestyle counseling",
+              "Geriatric psychiatry care for dementia and late-life depression",
+              "Child psychiatry and developmental counseling"
+            ]
+          },
+          {
+            "subtitle":"Why Choose OMNI Hospitals for Psychiatry in Hyderabad?",
+            "list":[
+              "Team of highly experienced psychiatrists and psychologists in Hyderabad",
+              "Personalized treatment plans combining therapy and medication",
+              "Confidential and compassionate care for every patient",
+              "Inpatient and outpatient mental health services",
+              "Multidisciplinary support with neurology, psychology, and rehabilitation specialists"
+            ]
+          },
+          {
+            "description":"If you are searching for the best psychiatrist in Hyderabad or a trusted mental health hospital near you, OMNI Hospitals offers advanced psychiatric care with a patient-first approach, ensuring recovery and long-term mental well-being."
+          }
+        ]
       }
     ]
 }

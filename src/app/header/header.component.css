@@ -452,3 +452,184 @@
   display: block;
 }
 
+/* Fixed Navigation Styles */
+.pre-header.hidden {
+  display: none !important;
+  transition: all 0.3s ease;
+}
+
+.navbar.fixed-nav {
+  position: fixed !important;
+  top: 0 !important; /* When pre-header is hidden, navbar goes to top */
+  left: 0;
+  right: 0;
+  z-index: 1020 !important;
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  animation: slideDown 0.3s ease-out;
+  padding: 0.75rem 1rem;
+  height: auto;
+}
+
+/* Fixed logo styling */
+.fixed-logo {
+  height: 50px; /* Increased from 40px to 50px */
+  width: auto;
+  margin-right: 1rem;
+  transition: all 0.3s ease;
+}
+
+.navbar.fixed-nav .navbar-brand {
+  display: flex !important;
+  align-items: center;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Add padding to body when navigation is fixed */
+body.has-fixed-nav {
+  padding-top: 80px !important; /* Reduced padding since pre-header is hidden */
+}
+
+/* Smooth transitions for all elements */
+.pre-header,
+.navbar {
+  transition: all 0.3s ease;
+}
+
+/* Enhanced shadow and styling when scrolled */
+.pre-header.scrolled,
+.navbar.scrolled {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Navigation link enhancements for fixed state */
+.navbar.fixed-nav .nav-link {
+  padding: 0.5rem 0.75rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.navbar.fixed-nav .nav-link:hover {
+  background-color: rgba(0, 143, 213, 0.1);
+  border-radius: 6px;
+}
+
+.navbar.fixed-nav .nav-link.active {
+  background-color: #008FD5;
+  color: #fff !important;
+  border-radius: 6px;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 767.98px) {
+  .pre-header.hidden {
+    display: none !important;
+  }
+  
+  .navbar.fixed-nav {
+    top: 0 !important; /* When pre-header is hidden, navbar goes to top */
+    padding: 0.5rem 0.75rem;
+  }
+  
+  .fixed-logo {
+    height: 45px; /* Increased from 35px to 45px for mobile */
+  }
+  
+  body.has-fixed-nav {
+    padding-top: 60px !important; /* Reduced padding for mobile */
+  }
+}
+
+/* Back to top button styling */
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #008FD5;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1000;
+}
+
+.back-to-top.visible {
+  opacity: 1;
+}
+
+.back-to-top:hover {
+  background-color: #0066a3;
+}
+
+/* Additional fixes for content overlap */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Ensure the main content area has proper spacing */
+main, .main-content, app-home {
+  position: relative;
+  z-index: 1;
+}
+
+/* Fix for any Bootstrap container issues */
+.container-fluid {
+  position: relative;
+  z-index: 1;
+}
+
+/* Ensure proper header height calculations */
+.pre-header {
+  min-height: 80px;
+}
+
+.navbar {
+  min-height: 60px;
+}
+
+/* Prevent any absolute positioning issues */
+.pre-header.fixed-top,
+.navbar.fixed-nav {
+  position: fixed !important;
+}
+
+/* Ensure proper z-index stacking */
+.pre-header.fixed-top {
+  z-index: 1030 !important;
+}
+
+.navbar.fixed-nav {
+  z-index: 1020 !important;
+}
+
+/* Fix for mobile menu z-index */
+.mobile-menu {
+  z-index: 1040 !important;
+}
+
+
+/* Ensure dropdown menus work properly with fixed navigation */
+.navbar.fixed-nav .dropdown-menu {
+  margin-top: 0.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 1030 !important;
+}
+

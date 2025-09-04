@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener, OnDestroy } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
@@ -6,10 +6,11 @@ import { ActivatedRoute, Router } from '@angular/router';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnDestroy {
   activeSection = 'aboutOmni'; // Default
   hoveredItem: string | null = null;
   mobileMenuOpen = false;
+  isScrolled = false; // Add this property to track scroll state
 
   direction_icon: boolean = false;
   depertment_icon: boolean = false;
@@ -134,6 +135,34 @@ export class HeaderComponent {
         this.activeTab = '';
       })
     );
+  }
+
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    // Check if page is scrolled more than 50px
+    const wasScrolled = this.isScrolled;
+    this.isScrolled = window.scrollY > 50;
+    
+    // Add/remove body class for proper spacing
+    if (this.isScrolled !== wasScrolled) {
+      if (this.isScrolled) {
+        document.body.classList.add('has-fixed-nav');
+      } else {
+        document.body.classList.remove('has-fixed-nav');
+      }
+    }
+  }
+
+  ngOnDestroy(): void {
+    // Clean up body class when component is destroyed
+    document.body.classList.remove('has-fixed-nav');
+  }
+
+  scrollToTop(): void {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
   }
 
 

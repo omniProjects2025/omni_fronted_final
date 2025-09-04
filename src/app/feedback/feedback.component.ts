@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-feedback',
@@ -23,7 +25,7 @@ export class FeedbackComponent {
     'Giggles Vizag': ['Cardiology', 'Neurology', 'Oncology']
   };
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private http: HttpClient, private router: Router) {
     this.feedbackForm = this.fb.group({
       name: ['', Validators.required],
       isPatient: ['', Validators.required],
@@ -32,7 +34,7 @@ export class FeedbackComponent {
       phone: ['', [Validators.required, Validators.pattern(/^[6-9][0-9]{9}$/)]],
       email: ['', [Validators.email]],
       location: ['', Validators.required],
-      department: ['', Validators.required],
+      department: [''],
       doctorName: [''],
       rating: [0, Validators.min(1)],
       feedback: ['']
@@ -63,8 +65,36 @@ export class FeedbackComponent {
   onSubmit() {
     this.submitted = true;
     if (this.feedbackForm.valid) {
-      alert('Form submitted successfully!');
-      console.log(this.feedbackForm.value, 'feedbackForm..');
+      // Prepare payload for LeadSquared
+      const payload = [
+        { Attribute: "FirstName", Value: this.feedbackForm.value.name },
+        { Attribute: "Phone", Value: this.feedbackForm.value.phone },
+        { Attribute: "EmailAddress", Value: this.feedbackForm.value.email },
+        { Attribute: "mx_City", Value: this.feedbackForm.value.location },
+        { Attribute: "mx_Department", Value: this.feedbackForm.value.department },
+        { Attribute: "Description", Value: this.feedbackForm.value.feedback },
+        { Attribute: "Source", Value: "Website - Feedback" }
+      ];
+
+      const accessKey = 'u$r56afea08b32d556818ad1a5f69f0e7f0';
+      const secretKey = '8d7f86d677dadaba209b4dead3cfcc4ab019031b';
+      const api_url_base = 'https://api-in21.leadsquared.com/v2/';
+      const url = `${api_url_base}LeadManagement.svc/Lead.Capture?accessKey=${accessKey}&secretKey=${secretKey}`;
+
+      this.http.post(url, payload, { headers: { 'Content-Type': 'application/json' } })
+        .subscribe({
+          next: (res) => {
+            console.log('LeadSquared Feedback Success:', res);
+            alert('Your feedback has been submitted successfully!');
+            // Optionally reset form
+            this.feedbackForm.reset();
+            this.router.navigate(['/thank-you']);
+          },
+          error: (err) => {
+            console.error('LeadSquared Feedback Error:', err);
+            alert('There was a problem submitting your feedback.');
+          }
+        });
     }
   }
 }

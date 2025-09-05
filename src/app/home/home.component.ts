@@ -1,20 +1,60 @@
-import { Component, ViewChild, ElementRef, Renderer2, HostListener, ChangeDetectorRef, SimpleChanges, ChangeDetectionStrategy } from '@angular/core';
+import { Component, ViewChild, ElementRef, Renderer2, HostListener, ChangeDetectorRef, SimpleChanges, ChangeDetectionStrategy, OnDestroy, OnInit } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 import { register } from 'swiper/element/bundle';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { HttpClient } from '@angular/common/http';
+import 'owl.carousel';
+import { firstValueFrom, Observable, Subscription } from 'rxjs';
+import { UsersService } from '../users.service';
+import { VideoStateService } from '../services/video-state.service';
 register();
 declare var $: any;
 
-import 'owl.carousel';
-import { firstValueFrom, Observable } from 'rxjs';
-import { UsersService } from '../users.service';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit, OnDestroy {
+  private videoSubscription: Subscription = new Subscription();
+
+  ngOnDestroy(): void {
+    if (this.resizeListener) {
+      window.removeEventListener('resize', this.resizeListener);
+    }
+    this.videoSubscription.unsubscribe();
+    this.videoStateService.stopAllVideos();
+  }
+
+  // Video management methods
+  playTestimonialVideo(idx: number): void {
+    const testimonial = this.testimonials[idx];
+    if (!testimonial) return;
+
+    const videoId = this.extractVideoId(testimonial.videoUrl);
+    this.videoStateService.setCurrentlyPlayingVideo(videoId);
+  }
+
+  private extractVideoId(url: string): string {
+    const match = url.match(/embed\/([^?]+)/);
+    return match ? match[1] : url;
+  }
+
+  private updateVideoStates(currentVideoId: string | null): void {
+    this.testimonials.forEach((testimonial, index) => {
+      const videoId = this.extractVideoId(testimonial.videoUrl);
+      testimonial.videoPlayed = currentVideoId === videoId;
+    });
+    this.cdr.detectChanges();
+  }
+
+  isVideoPlaying(idx: number): boolean {
+    const testimonial = this.testimonials[idx];
+    if (!testimonial) return false;
+    
+    const videoId = this.extractVideoId(testimonial.videoUrl);
+    return this.videoStateService.getCurrentlyPlayingVideo() === videoId;
+  }
 
   @ViewChild('owlCarousel', { static: false }) owlCarousel!: ElementRef;
   @ViewChild('patientowlCarousel', { static: false }) patientowlCarousel!: ElementRef;
@@ -336,7 +376,7 @@ export class HomeComponent {
       id: 5, d_name: 'What is Lorem Ipsum?', d_description: ' OMNI hospitals was established with an intention of being a comprehensive & cost-effective chain of hospitals that provides super-specialty services with warmth and care. Omni hospitals is owned by the healthcare division of Incor group.', img: 'https://img.freepik.com/free-photo/men-with-protection-masks-visiting-hospital-clinic-checking-appointment-respecting-social-distance-waiting-room-global-pandemic_482257-2002.jpg?ga=GA1.1.900482830.1739181171&semt=ais_hybrid'
     },
     {
-      id: 6, d_name: 'What is Lorem Ipsum?', d_description: ' OMNI hospitals was established with an intention of being a comprehensive & cost-effective chain of hospitals that provides super-specialty services with warmth and care. Omni hospitals is owned by the healthcare division of Incor group.', img: 'https://img.freepik.com/free-photo/men-with-protection-masks-visiting-hospital-clinic-checking-appointment-respecting-social-distance-waiting-room-global-pandemic_482257-2002.jpg?ga=GA1.1.900482830.1739181171&semt=ais_hybrid'
+      id: 6, d_name: 'What is Lorem Ipsum?', d_description: ' OMNI hospitals was established with an intention of being a comprehensive & cost-effective chain of hospitals that provides super-specialty services with warmth and care. Omni hospitals is owned by the healthcare division of Incor group.', img: 'https://img.freepik.com/free-photo/men-with-protection-masks-visiting-hospital-clinic-checking-appointment-respecting_social-distance-waiting-room-global-pandemic_482257-2002.jpg?ga=GA1.1.900482830.1739181171&semt=ais_hybrid'
     }
   ]
 
@@ -403,19 +443,37 @@ export class HomeComponent {
     phone: '',
     email: ''
   };
-  constructor(private http: HttpClient, private sanitizer: DomSanitizer, private router: Router, private renderer: Renderer2, private cdr: ChangeDetectorRef, private UsersService: UsersService) {
+  constructor(
+    private http: HttpClient, 
+    private sanitizer: DomSanitizer, 
+    private router: Router, 
+    private renderer: Renderer2, 
+    private cdr: ChangeDetectorRef, 
+    private UsersService: UsersService,
+    private videoStateService: VideoStateService
+  ) {}
 
-  }
+  private resizeListener: (() => void) | undefined;
 
   ngOnInit(): void {
+    // Video reset on zoom/resize
+    this.resizeListener = () => {
+      this.videoStateService.stopAllVideos();
+      this.updateSlidesPerView();
+    };
+    window.addEventListener('resize', this.resizeListener);
+
+    // Subscribe to video state changes
+    this.videoSubscription = this.videoStateService.currentlyPlayingVideo$.subscribe(videoId => {
+      this.updateVideoStates(videoId);
+    });
+
     this.spanizedHeading = this.banner_one_text.split('');
-    this.onBackendIntigration()
-    this.onUserDetails()
+    this.onBackendIntigration();
+    this.onUserDetails();
     this.getUsers();
     this.updateSlidesPerView();
-    window.addEventListener('resize', this.updateSlidesPerView.bind(this));
     register();
-    
   }
 
   async onBackendIntigration() {

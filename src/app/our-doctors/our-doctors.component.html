@@ -1,7 +1,20 @@
 <app-header></app-header>
 <div *ngIf="isLoading" class="loader-container">
-    <div class="spinner-border text-primary" role="status">
+    <div class="spinner-border text-primary mb-3" role="status">
         <span class="visually-hidden">Loading...</span>
+    </div>
+    <p class="text-muted">Loading doctors...</p>
+    
+    <!-- Skeleton loader for better UX -->
+    <div class="skeleton-container">
+        <div *ngFor="let item of [1,2,3,4,5]" class="skeleton-card">
+            <div class="skeleton-image"></div>
+            <div class="skeleton-content">
+                <div class="skeleton-line skeleton-title"></div>
+                <div class="skeleton-line skeleton-text"></div>
+                <div class="skeleton-line skeleton-text"></div>
+            </div>
+        </div>
     </div>
 </div>
 <section class="bg-white py-3" *ngIf="!isLoading">
@@ -29,7 +42,7 @@
                         (click)="goToDoctorDetails(details['doctor_name'])">
                         <img [src]="details['profile'] ? details['profile'] : 'assets/our_doctors/doctor_dummy_image.svg'"
                             [alt]="details['doctor_name'] || 'Doctor Profile Image'" class="img-fluid rounded-circle"
-                            width="140" height="140">
+                            width="140" height="140" loading="lazy">
                     </div>
 
                     <!-- Doctor Name & Details -->

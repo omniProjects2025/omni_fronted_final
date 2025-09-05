@@ -10,10 +10,14 @@
   <!-- YouTube Video Embed (Only when Played) -->
   <div *ngIf="videoPlayed" class="video-iframe-container">
     <iframe #videoIframe
-      class="w-100 h-100 border-0"
-      [src]="videoUrl | videoUrl"
-      allow="autoplay; encrypted-media; fullscreen" 
+      [src]="currentVideoUrl | videoUrl"
+      allow="autoplay; encrypted-media; fullscreen; picture-in-picture; accelerometer; gyroscope; clipboard-write; web-share"
       allowfullscreen
+      webkitallowfullscreen
+      mozallowfullscreen
+      frameborder="0"
+      title="YouTube video player"
+      referrerpolicy="strict-origin-when-cross-origin"
       (load)="onIframeLoad()">
     </iframe>
   </div>

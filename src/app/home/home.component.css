@@ -384,26 +384,6 @@ h6 {
 }
 
 /* Ensure video player has proper dimensions in testimonials */
-.testimonial-item app-video-player {
-  width: 100% !important;
-  height: 150px !important;
-  display: block !important;
-  visibility: visible !important;
-  opacity: 1 !important;
-}
-
-.testimonial-item app-video-player .video-wrapper {
-  height: 150px !important;
-  width: 100% !important;
-  visibility: visible !important;
-  opacity: 1 !important;
-}
-
-.testimonial-item app-video-player .video-thumbnail,
-.testimonial-item app-video-player .video-iframe-container {
-  visibility: visible !important;
-  opacity: 1 !important;
-}
 
 .carousel-control-prev,
 .carousel-control-next {
@@ -423,7 +403,6 @@ h6 {
 
   /* Testimonial video and text blocks stack and fit nicely */
   .testimonial-item .row { align-items: stretch; }
-  .testimonial-item app-video-player { width: 100% !important; height: 150px !important; }
   .testimonial-item .col-md-4,
   .testimonial-item .col-md-8 { width: 100%; }
 }
@@ -876,6 +855,7 @@ a {
     height: 220px;
   }
 }
+
 
 .owl-carousel .owl-nav {
   position: absolute;

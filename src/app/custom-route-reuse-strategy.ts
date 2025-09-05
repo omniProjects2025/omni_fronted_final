@@ -3,39 +3,34 @@ import { RouteReuseStrategy, ActivatedRouteSnapshot, DetachedRouteHandle } from 
 export class CustomRouteReuseStrategy implements RouteReuseStrategy {
   private storedRoutes = new Map<string, DetachedRouteHandle>();
 
-shouldDetach(route: ActivatedRouteSnapshot): boolean {
-  if (!route || !route.routeConfig || typeof route.routeConfig.path !== 'string') {
+  shouldDetach(route: ActivatedRouteSnapshot): boolean {
+    // Don't detach any routes to prevent caching issues
     return false;
   }
 
-  return route.routeConfig.path === '';
-}
-
-
-
   // Stores the detached route
   store(route: ActivatedRouteSnapshot, handle: DetachedRouteHandle | null): void {
-    const id = this.getRouteId(route);
-    if (handle) {
-      this.storedRoutes.set(id, handle);
-    }
+    // No need to store since we're not detaching
   }
 
   // Determines if the route should be reattached
   shouldAttach(route: ActivatedRouteSnapshot): boolean {
-    const id = this.getRouteId(route);
-    return this.storedRoutes.has(id);
+    // Don't reattach since we're not storing
+    return false;
   }
 
   // Retrieves the stored route
   retrieve(route: ActivatedRouteSnapshot): DetachedRouteHandle | null {
-    const id = this.getRouteId(route);
-    return this.storedRoutes.get(id) || null;
+    // Return null since we're not storing routes
+    return null;
   }
 
   // Determines if the route should be reused
   shouldReuseRoute(future: ActivatedRouteSnapshot, curr: ActivatedRouteSnapshot): boolean {
-    return future.routeConfig === curr.routeConfig;
+    // Only reuse routes if they have the same route config and params
+    return future.routeConfig === curr.routeConfig && 
+           JSON.stringify(future.params) === JSON.stringify(curr.params) &&
+           JSON.stringify(future.queryParams) === JSON.stringify(curr.queryParams);
   }
 
   private getRouteId(route: ActivatedRouteSnapshot): string {

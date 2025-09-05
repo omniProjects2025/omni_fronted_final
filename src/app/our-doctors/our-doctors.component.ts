@@ -1,7 +1,8 @@
-import { Component, AfterViewInit, ViewChild, ElementRef, NgZone, ChangeDetectionStrategy, ChangeDetectorRef, OnDestroy, HostListener } from '@angular/core';
+import { Component, AfterViewInit, ViewChild, ElementRef, NgZone, ChangeDetectionStrategy, ChangeDetectorRef, OnDestroy, HostListener, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { DoctordetailsService } from '../doctordetails.service';
-import { finalize, take } from 'rxjs/operators';
+import { finalize, take, catchError, retry, shareReplay } from 'rxjs/operators';
+import { of, BehaviorSubject } from 'rxjs';
 
 @Component({
   selector: 'app-our-doctors',
@@ -9,7 +10,7 @@ import { finalize, take } from 'rxjs/operators';
   styleUrls: ['./our-doctors.component.css'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class OurDoctorsComponent implements AfterViewInit, OnDestroy {
+export class OurDoctorsComponent implements OnInit, AfterViewInit, OnDestroy {
   allDoctorData: any[] = [];
   isLoading = true;
   doctors: any[] = [];
@@ -24,6 +25,11 @@ export class OurDoctorsComponent implements AfterViewInit, OnDestroy {
   pageSize = 20;
   private io?: IntersectionObserver;
   isAppending = false;
+  
+  // Performance optimizations
+  private cachedData: any[] = [];
+  private filteredDataSubject = new BehaviorSubject<any[]>([]);
+  private hasInitialLoad = false;
 
   @ViewChild('loadMoreSentinel', { static: false }) loadMoreSentinel!: ElementRef;
 
@@ -35,7 +41,15 @@ export class OurDoctorsComponent implements AfterViewInit, OnDestroy {
   ) { }
 
   ngOnInit() {
-    this.getDoctorDetails();
+    // Check if we have cached data first
+    const cachedData = this.getCachedData();
+    if (cachedData && cachedData.length > 0) {
+      this.processCachedData(cachedData);
+      this.isLoading = false;
+      this.cdr.markForCheck();
+    } else {
+      this.getDoctorDetails();
+    }
   }
 
   ngAfterViewInit(): void {
@@ -62,46 +76,105 @@ export class OurDoctorsComponent implements AfterViewInit, OnDestroy {
     this.doctorservice.getDoctors()
       .pipe(
         take(1),
-        finalize(() => { this.isLoading = false; })
+        retry(2), // Retry failed requests twice
+        catchError((error) => {
+          console.error('Error loading doctors:', error);
+          this.isLoading = false;
+          this.cdr.markForCheck();
+          return of(null);
+        }),
+        finalize(() => { 
+          this.isLoading = false; 
+          this.hasInitialLoad = true;
+        })
       )
       .subscribe({
         next: (data: any) => {
-          this.allDoctorData = (data && data.data) ? data.data : [];
-          this.allDoctorsFlat = this.allDoctorData.flatMap(loc =>
-          (loc.doctors || []).map((doc: any) => {
-            const doctor_location = (doc.work_location || '').trim();
-            const doctor_designation = (doc.specialization || '').trim();
-            const doctor_name = doc.name || '';
-            return {
-              ...doc,
-              doctor_name,
-              doctor_location,
-              doctor_designation,
-              profile: doc.profile,
-              qualification: doc.qualification,
-              experience: doc.experience,
-              id: doc.id,
-              // normalized for faster filters
-              _name_lc: doctor_name.toLowerCase(),
-              _loc_lc: doctor_location.toLowerCase(),
-              _spec_lc: doctor_designation.toLowerCase()
-            };
-          })
-          );
-
-          this.doctors = this.sortByLocation(this.allDoctorsFlat);
-          this.visibleDoctors = this.doctors.slice(0, this.pageSize);
-          this.locations = [...new Set(this.allDoctorsFlat.map(d => d.doctor_location).filter(Boolean))];
-          this.specialities = [...new Set(this.allDoctorsFlat.map(d => d.doctor_designation).filter(Boolean))];
-          this.cdr.markForCheck();
-          this.ensureFilledView();
-          // Ensure observer attached after data renders
-          setTimeout(() => this.observeSentinel(), 0);
-        },
-        error: (err) => {
-          console.error(err);
+          if (data && data.data) {
+            this.processDoctorData(data.data);
+            this.cacheData(this.allDoctorsFlat);
+          }
         }
       });
+  }
+
+  private processDoctorData(rawData: any[]) {
+    this.allDoctorData = rawData;
+    
+    // Optimize data processing with single pass
+    this.allDoctorsFlat = this.allDoctorData.flatMap(loc =>
+      (loc.doctors || []).map((doc: any) => {
+        const doctor_location = (doc.work_location || '').trim();
+        const doctor_designation = (doc.specialization || '').trim();
+        const doctor_name = doc.name || '';
+        return {
+          ...doc,
+          doctor_name,
+          doctor_location,
+          doctor_designation,
+          profile: doc.profile,
+          qualification: doc.qualification,
+          experience: doc.experience,
+          id: doc.id,
+          // normalized for faster filters
+          _name_lc: doctor_name.toLowerCase(),
+          _loc_lc: doctor_location.toLowerCase(),
+          _spec_lc: doctor_designation.toLowerCase()
+        };
+      })
+    );
+
+    this.doctors = this.sortByLocation(this.allDoctorsFlat);
+    this.visibleDoctors = this.doctors.slice(0, this.pageSize);
+    
+    // Extract unique values more efficiently
+    this.locations = [...new Set(this.allDoctorsFlat.map(d => d.doctor_location).filter(Boolean))];
+    this.specialities = [...new Set(this.allDoctorsFlat.map(d => d.doctor_designation).filter(Boolean))];
+    
+    this.cdr.markForCheck();
+    this.ensureFilledView();
+    
+    // Ensure observer attached after data renders
+    setTimeout(() => this.observeSentinel(), 0);
+  }
+
+  private processCachedData(cachedData: any[]) {
+    this.allDoctorsFlat = cachedData;
+    this.doctors = this.sortByLocation(this.allDoctorsFlat);
+    this.visibleDoctors = this.doctors.slice(0, this.pageSize);
+    
+    this.locations = [...new Set(this.allDoctorsFlat.map(d => d.doctor_location).filter(Boolean))];
+    this.specialities = [...new Set(this.allDoctorsFlat.map(d => d.doctor_designation).filter(Boolean))];
+    
+    this.ensureFilledView();
+    setTimeout(() => this.observeSentinel(), 0);
+  }
+
+  private cacheData(data: any[]) {
+    try {
+      localStorage.setItem('doctors_cache', JSON.stringify({
+        data: data,
+        timestamp: Date.now()
+      }));
+    } catch (error) {
+      console.warn('Failed to cache data:', error);
+    }
+  }
+
+  private getCachedData(): any[] {
+    try {
+      const cached = localStorage.getItem('doctors_cache');
+      if (cached) {
+        const parsed = JSON.parse(cached);
+        // Cache valid for 1 hour
+        if (Date.now() - parsed.timestamp < 3600000) {
+          return parsed.data;
+        }
+      }
+    } catch (error) {
+      console.warn('Failed to retrieve cached data:', error);
+    }
+    return [];
   }
 
   onLocationChange() {
@@ -124,21 +197,34 @@ export class OurDoctorsComponent implements AfterViewInit, OnDestroy {
 
   applyFilters() {
     clearTimeout(this.filterDebounce);
-    this.filterDebounce = setTimeout(() => this.runFilters(), 150);
+    this.filterDebounce = setTimeout(() => this.runFilters(), 100); // Reduced debounce time
   }
 
   private runFilters() {
     this.updateSpecialitiesByLocation();
+    
     const nameLc = this.searchTerm.toLowerCase().trim();
     const locationLc = this.selectedLocation.toLowerCase().trim();
     const specialityLc = this.selectedSpeciality.toLowerCase().trim();
 
+    // Early return if no filters applied
+    if (!nameLc && !locationLc && !specialityLc) {
+      this.doctors = this.sortByLocation(this.allDoctorsFlat);
+      this.visibleDoctors = this.doctors.slice(0, this.pageSize);
+      this.cdr.markForCheck();
+      this.ensureFilledView();
+      setTimeout(() => this.observeSentinel(), 0);
+      return;
+    }
+
+    // Optimized filtering with early exits
     const filtered = this.allDoctorsFlat.filter(d => {
-      const matchesName = !nameLc || d._name_lc.includes(nameLc);
-      const matchesLocation = !locationLc || d._loc_lc === locationLc;
-      const matchesSpeciality = !specialityLc || d._spec_lc.includes(specialityLc);
-      return matchesName && matchesLocation && matchesSpeciality;
+      if (nameLc && !d._name_lc.includes(nameLc)) return false;
+      if (locationLc && d._loc_lc !== locationLc) return false;
+      if (specialityLc && !d._spec_lc.includes(specialityLc)) return false;
+      return true;
     });
+    
     this.doctors = this.sortByLocation(filtered);
     this.visibleDoctors = this.doctors.slice(0, this.pageSize);
     this.cdr.markForCheck();

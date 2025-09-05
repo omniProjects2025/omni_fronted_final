@@ -1,19 +1,56 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { Observable, of, throwError } from 'rxjs';
+import { catchError, retry, shareReplay, timeout } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DoctordetailsService {
   // private BASE_URL = 'http://localhost:3000';
-
-      private BASE_URL = 'https://omniservicebackend-vnyk.onrender.com';
+  private BASE_URL = 'https://omniservicebackend-vnyk.onrender.com';
+  private cache: Observable<any> | null = null;
+  private readonly CACHE_DURATION = 5 * 60 * 1000; // 5 minutes
+  private lastFetchTime = 0;
 
   constructor(private http: HttpClient) { }
 
-getDoctors() {
-  return this.http.get(`${this.BASE_URL}/getdoctors`, { withCredentials: true });
-}
+  getDoctors(): Observable<any> {
+    const now = Date.now();
+    
+    // Return cached data if still valid
+    if (this.cache && (now - this.lastFetchTime) < this.CACHE_DURATION) {
+      return this.cache;
+    }
 
+    // Create new request with optimizations
+    this.cache = this.http.get(`${this.BASE_URL}/getdoctors`, { 
+      withCredentials: true 
+    }).pipe(
+      timeout(10000), // 10 second timeout
+      retry(2), // Retry twice on failure
+      shareReplay(1), // Share the result among multiple subscribers
+      catchError(this.handleError.bind(this))
+    );
 
+    this.lastFetchTime = now;
+    return this.cache;
+  }
+
+  private handleError(error: HttpErrorResponse): Observable<any> {
+    console.error('Doctor service error:', error);
+    
+    // Return cached data if available, otherwise return empty result
+    if (this.cache) {
+      return this.cache;
+    }
+    
+    return of({ data: [] });
+  }
+
+  // Method to clear cache when needed
+  clearCache(): void {
+    this.cache = null;
+    this.lastFetchTime = 0;
+  }
 }

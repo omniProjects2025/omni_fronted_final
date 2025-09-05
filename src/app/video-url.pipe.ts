@@ -9,24 +9,54 @@ export class VideoUrlPipe implements PipeTransform {
 
   constructor(private sanitizer: DomSanitizer) {}
 
-  transform(url: string): SafeResourceUrl {
+  transform(url: string, autoplay: boolean = false): SafeResourceUrl {
     if (!url) {
       return this.sanitizer.bypassSecurityTrustResourceUrl('');
     }
 
     // Check if we have a cached version
-    if (this.cache.has(url)) {
-      return this.cache.get(url)!;
+    const cacheKey = `${url}_${autoplay}`;
+    if (this.cache.has(cacheKey)) {
+      return this.cache.get(cacheKey)!;
     }
 
-    // Create sanitized URL with parameters - remove autoplay to prevent reloading
-    const sanitizedUrl = this.sanitizer.bypassSecurityTrustResourceUrl(
-      `${url}?mute=0&modestbranding=1&rel=0&showinfo=0&enablejsapi=1`
-    );
-
-    // Cache the result
-    this.cache.set(url, sanitizedUrl);
-
+    let finalUrl = url;
+    
+    if (url.includes('youtube.com/embed')) {
+      const urlObj = new URL(url);
+      const params = urlObj.searchParams;
+      
+      // Essential YouTube parameters for proper functionality
+      params.set('rel', '0'); // Don't show related videos
+      params.set('showinfo', '0'); // Hide video info
+      params.set('fs', '1'); // Enable fullscreen button
+      params.set('modestbranding', '1'); // Minimal YouTube branding
+      params.set('iv_load_policy', '3'); // Hide annotations
+      params.set('cc_load_policy', '0'); // Hide captions by default
+      params.set('playsinline', '1'); // Play inline on mobile
+      params.set('enablejsapi', '1'); // Enable JavaScript API for better control
+      params.set('origin', window.location.origin); // Set origin for security
+      params.set('widget_referrer', window.location.origin); // Additional security
+      
+      // Set autoplay if requested
+      if (autoplay) {
+        params.set('autoplay', '1');
+      } else {
+        params.delete('autoplay');
+      }
+      
+      finalUrl = urlObj.toString();
+      
+      // Temporary debug to verify fullscreen parameters
+      if (finalUrl.includes('fs=1')) {
+        console.log('✅ Fullscreen enabled:', finalUrl);
+      } else {
+        console.log('❌ Fullscreen missing:', finalUrl);
+      }
+    }
+    
+    const sanitizedUrl = this.sanitizer.bypassSecurityTrustResourceUrl(finalUrl);
+    this.cache.set(cacheKey, sanitizedUrl);
     return sanitizedUrl;
   }
 }

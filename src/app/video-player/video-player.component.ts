@@ -17,7 +17,7 @@ export class VideoPlayerComponent implements AfterViewInit {
   @ViewChild('videoIframe', { static: false }) videoIframe!: ElementRef;
   
   private isInitialized = false;
-  private currentVideoUrl: string = '';
+  public currentVideoUrl: string = '';
   private static currentlyPlayingVideo: VideoPlayerComponent | null = null;
   
   constructor(
@@ -32,8 +32,10 @@ export class VideoPlayerComponent implements AfterViewInit {
   }
 
   ngAfterViewInit() {
-    // Initialize video player after view is ready
-    this.currentVideoUrl = this.videoUrl;
+    // Only set currentVideoUrl if not already playing
+    if (!this.videoPlayed) {
+      this.currentVideoUrl = this.videoUrl;
+    }
   }
 
   ngOnDestroy() {
@@ -54,11 +56,15 @@ export class VideoPlayerComponent implements AfterViewInit {
         VideoPlayerComponent.currentlyPlayingVideo !== this) {
       VideoPlayerComponent.currentlyPlayingVideo.stopVideo();
     }
-    
     // Only play if not already playing
     if (!this.videoPlayed) {
       this.videoPlayed = true;
-      this.currentVideoUrl = this.videoUrl;
+      // Add autoplay=1 to YouTube URL if not present
+      let url = this.videoUrl;
+      if (url.includes('youtube.com/embed')) {
+        url += (url.includes('?') ? '&' : '?') + 'autoplay=1';
+      }
+      this.currentVideoUrl = url;
       VideoPlayerComponent.currentlyPlayingVideo = this;
       this.videoPlayedChange.emit(true);
       this.cdr.detectChanges();
@@ -67,6 +73,7 @@ export class VideoPlayerComponent implements AfterViewInit {
 
   stopVideo(): void {
     this.videoPlayed = false;
+    this.currentVideoUrl = this.videoUrl;
     if (VideoPlayerComponent.currentlyPlayingVideo === this) {
       VideoPlayerComponent.currentlyPlayingVideo = null;
     }
@@ -75,7 +82,11 @@ export class VideoPlayerComponent implements AfterViewInit {
   }
 
   onImageError(event: any): void {
-    // Handle image load error silently
+    // Fallback to hqdefault.jpg if maxresdefault.jpg fails
+    const img: HTMLImageElement = event.target;
+    if (img.src.includes('maxresdefault.jpg')) {
+      img.src = img.src.replace('maxresdefault.jpg', 'hqdefault.jpg');
+    }
   }
 
   onIframeLoad(): void {

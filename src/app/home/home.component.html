@@ -452,60 +452,117 @@
 </div>
 
 
-<div class="modal fade custom-modal" id="appointmentModal" tabindex="-1" aria-hidden="true" data-bs-backdrop="static">
+<div class="modal fade appointment-modal" id="appointmentModal" tabindex="-1" aria-hidden="true" data-bs-backdrop="static">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
+      <!-- Modal Header -->
       <div class="modal-header">
-        <div class="modal-title-container">
-          <div class="line line-left"></div>
-          <span class="px-2 book_text" style="color: #008FD5; font-family: 'roboto'; font-weight: 500;">BOOK AN
-            APPOINTMENT</span>
-          <div class="line line-right"></div>
+        <div class="modal-title-section">
+          <div class="title-icon">
+            <img src="assets/icons/book_an_appointment_new_home_logo.svg" alt="Appointment" class="appointment-icon">
+          </div>
+          <h4 class="modal-title">Book an Appointment</h4>
+          <p class="modal-subtitle">Schedule your visit with our expert doctors</p>
         </div>
-        <button type="button" class="btn-close btn_close" data-bs-dismiss="modal"></button>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+          <span>&times;</span>
+        </button>
       </div>
 
-
-      <div class="form-container rounded">
-        <form>
-          <div class="d-flex flex-column">
-            <div class="form-floating mb-3">
-              <input type="text" class="form-control" id="fullName" placeholder=" " required>
-              <label for="fullName" class="ps-0">Full Name</label>
+      <!-- Modal Body -->
+      <div class="modal-body">
+        <form class="appointment-form" (ngSubmit)="onSubmitAppointment($event)" #appointmentForm="ngForm">
+          <div class="row g-2">
+            <!-- Full Name -->
+            <div class="col-12">
+              <div class="form-group">
+                <label for="fullName" class="form-label" [class.error-label]="!appointmentForm.form.get('fullName')?.valid && appointmentForm.form.get('fullName')?.touched">Full Name *</label>
+                <input type="text" class="form-control" id="fullName" name="fullName" 
+                       [(ngModel)]="appointmentFormData.fullName" placeholder="Enter your full name" required>
+                <div class="error-message" *ngIf="!appointmentForm.form.get('fullName')?.valid && appointmentForm.form.get('fullName')?.touched">
+                  Full Name is required
+                </div>
+              </div>
             </div>
-            <button type="submit" class="btn btn_outline_dark submit-btn">Submit</button>
+
+            <!-- Phone Number -->
+            <div class="col-12">
+              <div class="form-group">
+                <label for="phoneNumber" class="form-label" [class.error-label]="!appointmentForm.form.get('phoneNumber')?.valid && appointmentForm.form.get('phoneNumber')?.touched">Phone Number *</label>
+                <input type="tel" class="form-control" id="phoneNumber" name="phoneNumber" 
+                       [(ngModel)]="appointmentFormData.phoneNumber" placeholder="Enter your phone number" required>
+                <div class="error-message" *ngIf="!appointmentForm.form.get('phoneNumber')?.valid && appointmentForm.form.get('phoneNumber')?.touched">
+                  Phone Number is required
+                </div>
+              </div>
+            </div>
+
+            <!-- Email -->
+            <div class="col-12">
+              <div class="form-group">
+                <label for="email" class="form-label">Email ID</label>
+                <input type="email" class="form-control" id="email" name="email" 
+                       [(ngModel)]="appointmentFormData.email" placeholder="Enter your email">
+              </div>
+            </div>
+
+            <!-- Location -->
+            <div class="col-12">
+              <div class="form-group">
+                <label for="location" class="form-label" [class.error-label]="!appointmentForm.form.get('location')?.valid && appointmentForm.form.get('location')?.touched">Preferred Location *</label>
+                <select class="form-select" id="location" name="location" 
+                        [(ngModel)]="appointmentFormData.location" required>
+                  <option value="" disabled selected>Select Location</option>
+                  <option value="Kothapet">Kothapet</option>
+                  <option value="Kukatpally">Kukatpally</option>
+                  <option value="Nampally">Nampally</option>
+                  <option value="Vizag">Vizag</option>
+                  <option value="Kurnool">Kurnool</option>
+                </select>
+                <div class="error-message" *ngIf="!appointmentForm.form.get('location')?.valid && appointmentForm.form.get('location')?.touched">
+                  Please select a location
+                </div>
+              </div>
+            </div>
+
+            <!-- Department -->
+            <div class="col-12">
+              <div class="form-group">
+                <label for="department" class="form-label" [class.error-label]="!appointmentForm.form.get('department')?.valid && appointmentForm.form.get('department')?.touched">Department *</label>
+                <select class="form-select" id="department" name="department" 
+                        [(ngModel)]="appointmentFormData.department" required>
+                  <option value="" disabled selected>Select Department</option>
+                  <option value="Cardiology">Cardiology</option>
+                  <option value="Neurology">Neurology</option>
+                  <option value="Orthopedics">Orthopedics</option>
+                  <option value="General Medicine">General Medicine</option>
+                  <option value="Gastroenterology">Gastroenterology</option>
+                  <option value="Pediatrics">Pediatrics</option>
+                </select>
+                <div class="error-message" *ngIf="!appointmentForm.form.get('department')?.valid && appointmentForm.form.get('department')?.touched">
+                  Please select a department
+                </div>
+              </div>
+            </div>
+
+            <!-- Message -->
+            <div class="col-12">
+              <div class="form-group">
+                <label for="message" class="form-label">Additional Message</label>
+                <textarea class="form-control" id="message" name="message" rows="2" 
+                          [(ngModel)]="appointmentFormData.message" placeholder="Any specific requirements or concerns..."></textarea>
+              </div>
+            </div>
           </div>
 
-          <div class="form-floating mb-3">
-            <input type="tel" class="form-control" id="phoneNumber" placeholder=" " required>
-            <label for="phoneNumber" class="ps-0">Phone Number</label>
-          </div>
-
-          <div class="form-floating mb-3">
-            <input type="email" class="form-control" id="email" placeholder=" " required>
-            <label for="email" class="ps-0">Email ID</label>
-          </div>
-
-          <div class="mb-3 select-container">
-            <select class="form-control ps-0" id="location" (click)="locationToggle(1)">
-              <option value="" disabled selected>Location</option>
-              <option value="Hyderabad">Hyderabad</option>
-              <option value="Bangalore">Bangalore</option>
-              <option value="Mumbai">Mumbai</option>
-            </select>
-            <img src="assets/images/{{direction_icon?'down_icon.svg':'up_icon.svg'}}" class="select-icon"
-              id="location-icon">
-          </div>
-
-          <div class="select-container">
-            <select class="form-control ps-0" id="department" (click)="locationToggle(2)">
-              <option value="" disabled selected>Department</option>
-              <option value="Cardiology">Cardiology</option>
-              <option value="Neurology">Neurology</option>
-              <option value="Orthopedics">Orthopedics</option>
-            </select>
-            <img src="assets/images/{{depertment_icon?'down_icon.svg':'up_icon.svg'}}" class="select-icon"
-              id="location-icon">
+          <!-- Submit Button -->
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary btn-submit" [disabled]="isSubmitting">
+              <span class="btn-text" *ngIf="!isSubmitting">Book Appointment</span>
+              <span class="btn-text" *ngIf="isSubmitting">Submitting...</span>
+              <span class="btn-icon" *ngIf="!isSubmitting">→</span>
+              <span class="spinner-border spinner-border-sm" *ngIf="isSubmitting"></span>
+            </button>
           </div>
         </form>
       </div>

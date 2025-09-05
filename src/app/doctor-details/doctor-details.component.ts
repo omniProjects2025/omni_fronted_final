@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
 import { DoctordetailsService } from '../doctordetails.service';
 
 @Component({
@@ -10,7 +11,21 @@ import { DoctordetailsService } from '../doctordetails.service';
 export class DoctorDetailsComponent {
   doctors: any[] = []
   doctor_name = "";
-  constructor(private router: Router, private doctorservice: DoctordetailsService, private activated_routes: ActivatedRoute) {
+  selectedDoctor: any = null;
+  isSubmitting = false;
+  isLoading = true;
+  hasError = false;
+  errorMessage = '';
+  
+  appointmentData = {
+    fullName: '',
+    mobileNumber: '',
+    emailId: '',
+    location: '',
+    message: ''
+  };
+
+  constructor(private router: Router, private doctorservice: DoctordetailsService, private activated_routes: ActivatedRoute, private http: HttpClient) {
 
   }
 
@@ -30,40 +45,205 @@ export class DoctorDetailsComponent {
   //   });
   // }
 
-  goToBookAppointment() {
-    this.router.navigate(['/book-an-appointment']).then(success => {
-      if (success) {
-        console.log('Navigation to Book An Appointment successful');
-      } else {
-        console.log('Navigation failed');
+  openAppointmentModal(doctor: any) {
+    this.selectedDoctor = doctor;
+    this.resetAppointmentData();
+    // Open modal using Bootstrap
+    const modalElement = document.getElementById('appointmentModal');
+    if (modalElement) {
+      const modal = new (window as any).bootstrap.Modal(modalElement);
+      modal.show();
+    }
+  }
+
+  resetAppointmentData() {
+    this.appointmentData = {
+      fullName: '',
+      mobileNumber: '',
+      emailId: '',
+      location: '',
+      message: ''
+    };
+  }
+
+  submitAppointmentForm() {
+    if (this.isSubmitting) return;
+    
+    this.isSubmitting = true;
+
+    // Form validation
+    if (!this.appointmentData.fullName.trim()) {
+      alert('Full Name is required.');
+      this.isSubmitting = false;
+      return;
+    }
+    if (!this.appointmentData.mobileNumber.trim()) {
+      alert('Mobile Number is required.');
+      this.isSubmitting = false;
+      return;
+    }
+
+    // Prevent duplicate submission for 30 minutes
+    const lastSubmission = localStorage.getItem('lastAppointmentSubmission');
+    if (lastSubmission) {
+      const { name, phone, time } = JSON.parse(lastSubmission);
+      const thirtyMinutes = 30 * 60 * 1000;
+      const now = Date.now();
+
+      if (
+        name === this.appointmentData.fullName.trim() &&
+        phone === this.appointmentData.mobileNumber.trim() &&
+        now - time < thirtyMinutes
+      ) {
+        alert('You have already submitted an appointment request with this name and phone number in the last 30 minutes.');
+        this.isSubmitting = false;
+        return;
       }
-    }).catch(error => console.error('Navigation error:', error));
+    }
+
+    const payload = [
+      { Attribute: "FirstName", Value: this.appointmentData.fullName },
+      { Attribute: "Phone", Value: this.appointmentData.mobileNumber },
+      { Attribute: "EmailAddress", Value: this.appointmentData.emailId },
+      { Attribute: "mx_City", Value: this.appointmentData.location },
+      { Attribute: "mx_Department", Value: this.selectedDoctor?.depertment || '' },
+      { Attribute: "Description", Value: `Appointment request for Dr. ${this.selectedDoctor?.name}. ${this.appointmentData.message}` },
+      { Attribute: "Source", Value: "Website - Doctor Profile Appointment" },
+      { Attribute: "mx_DoctorName", Value: this.selectedDoctor?.name || '' }
+    ];
+
+    const accessKey = 'u$r56afea08b32d556818ad1a5f69f0e7f0';
+    const secretKey = '8d7f86d677dadaba209b4dead3cfcc4ab019031b';
+    const api_url_base = 'https://api-in21.leadsquared.com/v2/';
+    const url = `${api_url_base}LeadManagement.svc/Lead.Capture?accessKey=${accessKey}&secretKey=${secretKey}`;
+
+    this.http.post(url, payload, { headers: { 'Content-Type': 'application/json' } })
+      .subscribe({
+        next: (res) => {
+          console.log('LeadSquared Success:', res);
+          alert('Your appointment request has been submitted successfully! Our team will contact you soon.');
+
+          // Save last submission info for 30-minute check
+          localStorage.setItem('lastAppointmentSubmission', JSON.stringify({
+            name: this.appointmentData.fullName.trim(),
+            phone: this.appointmentData.mobileNumber.trim(),
+            time: Date.now()
+          }));
+
+          // Close modal and reset form
+          this.closeModal();
+          this.resetAppointmentData();
+          this.router.navigate(['/thank-you']);
+        },
+        error: (err) => {
+          console.error('LeadSquared Error:', err);
+          alert('There was a problem submitting your appointment request. Please try again or call us directly.');
+          this.isSubmitting = false;
+        }
+      });
+  }
+
+  closeModal() {
+    const modalElement = document.getElementById('appointmentModal');
+    if (modalElement) {
+      const modal = (window as any).bootstrap.Modal.getInstance(modalElement);
+      if (modal) {
+        modal.hide();
+      }
+    }
+    this.isSubmitting = false;
+  }
+
+  retryLoading() {
+    this.getDoctorDetails();
+  }
+
+  clearCache() {
+    // Clear all doctor-related cache
+    Object.keys(localStorage).forEach(key => {
+      if (key.startsWith('doctor_')) {
+        localStorage.removeItem(key);
+      }
+    });
+    this.getDoctorDetails();
   }
 
 getDoctorDetails(): void {
-  this.doctorservice.getDoctors().subscribe(
-    (response: any) => {
-      const dataArray = response?.data || [];
-      const allDoctors = dataArray
-        .map((item: any) => item.doctors || [])
-        .flat();
-      if (!this.doctor_name) {
-        this.doctors = [];
+  this.isLoading = true;
+  this.hasError = false;
+  this.errorMessage = '';
+
+  // Check if we have cached data for this doctor
+  const cacheKey = `doctor_${this.doctor_name.toLowerCase().replace(/\s+/g, '_')}`;
+  const cachedData = localStorage.getItem(cacheKey);
+  
+  if (cachedData) {
+    try {
+      const parsedData = JSON.parse(cachedData);
+      const cacheTime = parsedData.timestamp;
+      const now = Date.now();
+      const cacheExpiry = 5 * 60 * 1000; // 5 minutes cache
+      
+      if (now - cacheTime < cacheExpiry) {
+        this.doctors = parsedData.data;
+        this.isLoading = false;
+        console.log('Using cached doctor data');
         return;
       }
-      this.doctors = allDoctors.filter((doctor: any) =>
-        doctor.name?.trim().toLowerCase() === this.doctor_name.toLowerCase()
-      
-    );
-    console.log(this.doctors,'doctors...');
-      if (this.doctors.length === 0) {
+    } catch (e) {
+      console.warn('Failed to parse cached data:', e);
+    }
+  }
+
+  this.doctorservice.getDoctors().subscribe({
+    next: (response: any) => {
+      try {
+        const dataArray = response?.data || [];
+        const allDoctors = dataArray
+          .map((item: any) => item.doctors || [])
+          .flat();
+        
+        if (!this.doctor_name) {
+          this.doctors = [];
+          this.isLoading = false;
+          return;
+        }
+        
+        this.doctors = allDoctors.filter((doctor: any) =>
+          doctor.name?.trim().toLowerCase() === this.doctor_name.toLowerCase()
+        );
+        
+        // Cache the filtered data
+        if (this.doctors.length > 0) {
+          const cacheData = {
+            data: this.doctors,
+            timestamp: Date.now()
+          };
+          localStorage.setItem(cacheKey, JSON.stringify(cacheData));
+        }
+        
+        console.log(this.doctors, 'doctors...');
+        this.isLoading = false;
+        
+        if (this.doctors.length === 0) {
+          this.hasError = true;
+          this.errorMessage = `No doctor found with name: ${this.doctor_name}`;
+        }
+      } catch (error) {
+        console.error('Error processing doctor data:', error);
+        this.hasError = true;
+        this.errorMessage = 'Error processing doctor information';
+        this.isLoading = false;
       }
     },
-    (error: any) => {
+    error: (error: any) => {
       console.error('Error fetching doctor details:', error);
+      this.hasError = true;
+      this.errorMessage = 'Failed to load doctor details. Please check your internet connection and try again.';
       this.doctors = [];
+      this.isLoading = false;
     }
-  );
+  });
 }
 
 }

@@ -443,6 +443,18 @@ export class HomeComponent implements OnInit, OnDestroy {
     phone: '',
     email: ''
   };
+
+  // Appointment Modal Form Data
+  appointmentFormData = {
+    fullName: '',
+    phoneNumber: '',
+    email: '',
+    location: '',
+    department: '',
+    message: ''
+  };
+
+  isSubmitting = false;
   constructor(
     private http: HttpClient, 
     private sanitizer: DomSanitizer, 
@@ -906,6 +918,102 @@ onVideoPlay(idx: number): void {
       error: (err) => {
         console.error('LeadSquared Error:', err);
         alert('There was a problem submitting your enquiry.');
+      }
+    });
+  }
+
+  onSubmitAppointment(event: Event) {
+    event.preventDefault();
+    
+    if (this.isSubmitting) return;
+    
+    // Basic validation
+    if (!this.appointmentFormData.fullName.trim()) {
+      alert('Full Name is required.');
+      return;
+    }
+    if (!this.appointmentFormData.phoneNumber.trim()) {
+      alert('Phone Number is required.');
+      return;
+    }
+    if (!this.appointmentFormData.location) {
+      alert('Please select a location.');
+      return;
+    }
+    if (!this.appointmentFormData.department) {
+      alert('Please select a department.');
+      return;
+    }
+
+    // Prevent duplicate submission for 30 minutes
+    const lastSubmission = localStorage.getItem('appointmentLastSubmission');
+    if (lastSubmission) {
+      const { name, phone, time } = JSON.parse(lastSubmission);
+      const thirtyMinutes = 30 * 60 * 1000;
+      if (
+        name === this.appointmentFormData.fullName.trim() &&
+        phone === this.appointmentFormData.phoneNumber.trim() &&
+        Date.now() - time < thirtyMinutes
+      ) {
+        alert('You have already submitted an appointment request with this name and phone number in the last 30 minutes.');
+        return;
+      }
+    }
+
+    this.isSubmitting = true;
+
+    const payload = [
+      { Attribute: "FirstName", Value: this.appointmentFormData.fullName },
+      { Attribute: "Phone", Value: this.appointmentFormData.phoneNumber },
+      { Attribute: "EmailAddress", Value: this.appointmentFormData.email },
+      { Attribute: "mx_City", Value: this.appointmentFormData.location },
+      { Attribute: "mx_Department", Value: this.appointmentFormData.department },
+      { Attribute: "Description", Value: this.appointmentFormData.message },
+      { Attribute: "Source", Value: "Website - Home Appointment Modal" }
+    ];
+
+    const accessKey = 'u$r56afea08b32d556818ad1a5f69f0e7f0';
+    const secretKey = '8d7f86d677dadaba209b4dead3cfcc4ab019031b';
+    const api_url_base = 'https://api-in21.leadsquared.com/v2/';
+    const url = `${api_url_base}LeadManagement.svc/Lead.Capture?accessKey=${accessKey}&secretKey=${secretKey}`;
+
+    this.http.post(url, payload, { headers: { 'Content-Type': 'application/json' } }).subscribe({
+      next: (res) => {
+        console.log('LeadSquared Success:', res);
+        alert('Your appointment request has been submitted successfully!');
+        
+        // Save last submission info for 30-minute check
+        localStorage.setItem('appointmentLastSubmission', JSON.stringify({
+          name: this.appointmentFormData.fullName.trim(),
+          phone: this.appointmentFormData.phoneNumber.trim(),
+          time: Date.now()
+        }));
+
+        // Reset form
+        this.appointmentFormData = {
+          fullName: '',
+          phoneNumber: '',
+          email: '',
+          location: '',
+          department: '',
+          message: ''
+        };
+        
+        this.isSubmitting = false;
+        
+        // Close modal
+        const modalElement = document.getElementById('appointmentModal');
+        const modalInstance = bootstrap.Modal.getInstance(modalElement);
+        if (modalInstance) {
+          modalInstance.hide();
+        }
+        
+        this.router.navigate(['/thank-you']);
+      },
+      error: (err) => {
+        console.error('LeadSquared Error:', err);
+        alert('There was a problem submitting your appointment request.');
+        this.isSubmitting = false;
       }
     });
   }

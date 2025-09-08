@@ -38,7 +38,24 @@
 
 .mega-menu .dropdown-item:hover {
   background-color: transparent;
-  color: #007bff;
+  color: #000 !important; /* Changed from #007bff to black */
+}
+
+/* Prevent unwanted blue colors in dropdowns */
+.dropdown-item {
+  color: #000 !important;
+}
+
+.dropdown-item:hover {
+  color: #000 !important;
+}
+
+.dropdown-item:focus {
+  color: #000 !important;
+}
+
+.dropdown-item:visited {
+  color: #000 !important;
 }
 
 .blog_hover:hover,
@@ -333,7 +350,7 @@
 }
 
 .active-info-link {
-  color: #008FD5 !important;
+  color: #000 !important; /* Changed from #008FD5 to black */
   /* Bootstrap primary blue */
   font-weight: 500;
 }

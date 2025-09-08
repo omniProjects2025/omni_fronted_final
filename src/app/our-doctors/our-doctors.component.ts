@@ -41,13 +41,21 @@ export class OurDoctorsComponent implements OnInit, AfterViewInit, OnDestroy {
   ) { }
 
   ngOnInit() {
+    console.log('OurDoctorsComponent ngOnInit() called');
+    
+    // FOR TESTING: Clear cache to force API call
+    // Uncomment the line below to force API calls every time
+    // this.clearAllCaches();
+    
     // Check if we have cached data first
     const cachedData = this.getCachedData();
     if (cachedData && cachedData.length > 0) {
+      console.log('Using cached data from localStorage:', cachedData.length, 'doctors');
       this.processCachedData(cachedData);
       this.isLoading = false;
       this.cdr.markForCheck();
     } else {
+      console.log('No cached data found, making API call');
       this.getDoctorDetails();
     }
   }
@@ -72,6 +80,7 @@ export class OurDoctorsComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   getDoctorDetails() {
+    console.log('getDoctorDetails() called - making API request');
     this.isLoading = true;
     this.doctorservice.getDoctors()
       .pipe(
@@ -84,6 +93,7 @@ export class OurDoctorsComponent implements OnInit, AfterViewInit, OnDestroy {
           return of(null);
         }),
         finalize(() => { 
+          console.log('API call finalized - isLoading set to false');
           this.isLoading = false; 
           this.hasInitialLoad = true;
           this.cdr.markForCheck();
@@ -91,9 +101,14 @@ export class OurDoctorsComponent implements OnInit, AfterViewInit, OnDestroy {
       )
       .subscribe({
         next: (data: any) => {
+          console.log('API response received:', data);
           if (data && data.data) {
+            console.log('Processing doctor data:', data.data.length, 'doctors');
             this.processDoctorData(data.data);
             this.cacheData(this.allDoctorsFlat);
+            this.cdr.markForCheck(); // Add this to trigger change detection
+          } else {
+            console.log('No data received from API');
           }
         }
       });
@@ -149,6 +164,7 @@ export class OurDoctorsComponent implements OnInit, AfterViewInit, OnDestroy {
     
     this.ensureFilledView();
     setTimeout(() => this.observeSentinel(), 0);
+    this.cdr.markForCheck(); // Add this to trigger change detection
   }
 
   private cacheData(data: any[]) {
@@ -167,15 +183,35 @@ export class OurDoctorsComponent implements OnInit, AfterViewInit, OnDestroy {
       const cached = localStorage.getItem('doctors_cache');
       if (cached) {
         const parsed = JSON.parse(cached);
-        // Cache valid for 1 hour
-        if (Date.now() - parsed.timestamp < 3600000) {
+        // Cache valid for 1 hour (3600000ms)
+        // For development, you can reduce this to 300000ms (5 minutes)
+        const cacheDuration = 3600000; // 1 hour
+        if (Date.now() - parsed.timestamp < cacheDuration) {
+          console.log('Using cached data from localStorage');
           return parsed.data;
+        } else {
+          console.log('Cache expired, will make API call');
+          // Clean up expired cache
+          localStorage.removeItem('doctors_cache');
         }
       }
     } catch (error) {
       console.warn('Failed to retrieve cached data:', error);
+      // Clean up corrupted cache
+      localStorage.removeItem('doctors_cache');
     }
     return [];
+  }
+
+  // Method to clear all caches for testing
+  private clearAllCaches(): void {
+    console.log('Clearing all caches to force API call');
+    try {
+      localStorage.removeItem('doctors_cache');
+      this.doctorservice.clearCache();
+    } catch (error) {
+      console.warn('Failed to clear caches:', error);
+    }
   }
 
   onLocationChange() {

@@ -185,6 +185,18 @@
   transition: all 0.3s ease;
 }
 
+/* Specific fix for second opinion icon */
+.footer-icon img[src*="Images_Second_Opinion"] {
+  filter: brightness(0) invert(1) contrast(1.2); /* Enhanced visibility */
+  opacity: 1 !important;
+}
+
+/* Ensure all footer icons are visible */
+.mobile-footer-item .footer-icon img {
+  opacity: 1;
+  visibility: visible;
+}
+
 .mobile-footer-item:hover .footer-icon img {
   transform: scale(1.1);
 }
@@ -203,6 +215,11 @@
 @media (max-width: 767px) {
   body {
     padding-bottom: 80px;
+  }
+  
+  /* Ensure main content doesn't get hidden behind footer */
+  .main-content {
+    min-height: calc(100vh - 80px);
   }
 }
 
@@ -231,4 +248,18 @@ a {
 
 a:active, a:focus, a:visited {
   color: inherit;
+}
+
+/* Prevent unwanted blue colors on links */
+a:link, a:visited, a:hover, a:active {
+  color: inherit !important;
+}
+
+/* Specific fix for footer links */
+.footer-col a {
+  color: inherit !important;
+}
+
+.footer-col a:hover {
+  color: inherit !important;
 }

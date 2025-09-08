@@ -124,7 +124,6 @@ export class PackageDetailsComponent {
   }
 
   ngOnDestroy() {
-    this.renderer.setStyle(document.body, 'background-color', 'rgb(234, 232, 232)');
   }
 
   activatedRoutesData() {

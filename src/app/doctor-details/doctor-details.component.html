@@ -28,23 +28,23 @@
 </div>
 
 <!-- Doctor Details Content -->
-<div *ngIf="!isLoading && !hasError">
-  <div class="" *ngFor="let doctor of doctors, index as i">
+<div *ngIf="!isLoading && !hasError && doctors.length > 0">
+  <div class="">
     <section class="doctor-profile-section">
       <div class="container-fluid px-3 px-md-0">
         <div class="row align-items-center">
           <div class="col-12 col-md-4 text-center mb-3 mb-md-0">
-            <img [src]="doctor['profile']" alt="Doctor Photo" class="doctor-profile-img img-fluid" width="375px">
+            <img [src]="doctors[0]['profile']" alt="Doctor Photo" class="doctor-profile-img img-fluid" width="375px">
           </div>
           <div class="col-12 col-md-8 text-center text-md-start text-lg-start px-2 px-md-0 px-lg-0">
-            <h2 class="doctor_title">{{doctor['name']}}</h2>
+            <h2 class="doctor_title">{{doctors[0]['name']}}</h2>
             <div class="mb-2 doctor_details text-center text-md-start text-lg-start px-2 px-md-0 px-lg-0 p-0 m-0">
-              <div *ngFor="let qual of doctor['qualification']" class="mb-1">
+              <div *ngFor="let qual of doctors[0]['qualification']" class="mb-1">
                 {{ qual }}
               </div>
             </div>
-            <p class="fw-bold mb-3 doctor_department">{{doctor['depertment']}}</p>
-            <button class="book_btn" (click)="openAppointmentModal(doctor)">Book an Appointment</button>
+            <p class="fw-bold mb-3 doctor_department">{{doctors[0]['depertment']}}</p>
+            <button class="book_btn" (click)="openAppointmentModal(doctors[0])">Book an Appointment</button>
           </div>
         </div>
       </div>
@@ -61,7 +61,7 @@
               <h5 class="section-title"><img class="me-2" src="assets/our_doctors/area_of_expertise.png" alt=""
                   width="60px" height="69px">Area of Expertise</h5>
               <div class="about-text">
-                <div *ngFor="let item of doctor['area_expertise']" class="mb-1">
+                <div *ngFor="let item of doctors[0]['area_expertise']" class="mb-1">
                   {{ item }}
                 </div>
               </div>
@@ -71,7 +71,7 @@
               <h5 class="section-title"><img class="me-2" src="assets/our_doctors/education_new.png" alt=""
                   width="60px" height="69px">Education</h5>
               <div class="about-text">
-                <div *ngFor="let item of doctor['education']" class="mb-1">
+                <div *ngFor="let item of doctors[0]['education']" class="mb-1">
                   {{item}}
                 </div>
               </div>
@@ -80,7 +80,7 @@
             <div class="info-card">
               <h5 class="section-title">Bio</h5>
               <div class="about-text">
-                <div *ngFor="let item of doctor['bio']" class="mb-2">
+                <div *ngFor="let item of doctors[0]['bio']" class="mb-2">
                   {{item}}
                 </div>
               </div>
@@ -97,7 +97,7 @@
                   height="50px">
                 <h6 class="mb-0 head">Experience</h6>
               </div>
-              <p class="mb-0 desc">{{doctor['experience']}}</p>
+              <p class="mb-0 desc">{{doctors[0]['experience']}}</p>
             </div>
             
             <div class="info-card">
@@ -106,30 +106,30 @@
                   width="45px" height="50px">
                 <h6 class="mb-0 head">Specialization</h6>
               </div>
-              <p class="mb-0 desc">{{doctor['specialization']}}</p>
+              <p class="mb-0 desc">{{doctors[0]['specialization']}}</p>
             </div>
             
-            <div class="info-card" *ngIf="doctor['awards'] != ''">
+            <div class="info-card" *ngIf="doctors[0]['awards'] != ''">
               <div class="d-flex align-items-center gap-2 mb-2">
                 <img src="assets/our_doctors/awards_new.png" alt="Award Icon" class="img-fluid" width="48px"
                   height="50px">
                 <h6 class="mb-0 head">Awards</h6>
               </div>
               <div class="about-text">
-                <div *ngFor="let award of doctor['awards']" class="mb-1">
+                <div *ngFor="let award of doctors[0]['awards']" class="mb-1">
                   {{ award }}
                 </div>
               </div>
             </div>
             
-            <div class="info-card" *ngIf="doctor['fellowships'] != ''">
+            <div class="info-card" *ngIf="doctors[0]['fellowships'] != ''">
               <div class="d-flex align-items-center gap-2 mb-2">
                 <img src="assets/our_doctors/fellowship_new.png" alt="Fellowship Icon" class="img-fluid" width="45px"
                   height="50px">
                 <h6 class="mb-0 head">Fellowships</h6>
               </div>
               <div class="about-text">
-                <div *ngFor="let fellowship of doctor['fellowships']" class="mb-1">
+                <div *ngFor="let fellowship of doctors[0]['fellowships']" class="mb-1">
                   {{ fellowship }}
                 </div>
               </div>

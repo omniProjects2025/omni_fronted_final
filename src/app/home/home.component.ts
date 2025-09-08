@@ -126,16 +126,13 @@ export class HomeComponent implements OnInit, OnDestroy {
     { id: 5, dep_name: 'Gastroenterology', img: "assets/our_specialities_new/Gastro.svg" },
     { id: 6, dep_name: 'Neurology', img: "assets/our_specialities_new/brain.svg" },
     {
-      id: 7, dep_name: 'Nephrology & Urology', img: "assets/our_specialities_new/Nephrology_Urology.svg"
+      id: 7, dep_name: 'Nephrology', img: "assets/our_specialities_new/Nephrology_Urology.svg"
     },
     { id: 8, dep_name: 'Obstetrics & Gynaecology', img: "assets/our_specialities_new/Gynaecology.svg" },
     { id: 9, dep_name: 'Paediatrics', img: "assets/our_specialities_new/Paediatrics.svg" },
     { id: 10, dep_name: 'Pulmonology', img: "assets/our_specialities_new/Pulmonology.svg" },
     { id: 11, dep_name: 'Psychiatry', img: "assets/our_specialities_new/Psychiatry.svg" },
-    { id: 12, dep_name: 'Orthopedics & Sports Medicine', img: "assets/our_specialities_new/Orthopedic.svg" },
-    {
-      id: 13, dep_name: 'Vascular Surgery', img: "assets/our_specialities_new/vascular.svg"
-    }
+    { id: 12, dep_name: 'Orthopedics', img: "assets/our_specialities_new/Orthopedic.svg" },
   ]
 
   awards = [

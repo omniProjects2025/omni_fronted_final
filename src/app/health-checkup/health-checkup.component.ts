@@ -55,7 +55,6 @@ export class HealthCheckupComponent {
 
 
   ngOnDestroy() {
-    this.renderer.setStyle(document.body, 'background-color', 'rgb(234, 232, 232)');
   }
 
   getDiscount(oldPrice: number, newPrice: number): string {

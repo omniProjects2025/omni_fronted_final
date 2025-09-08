@@ -11,6 +11,7 @@ export class FooterComponent {
   hoveredIcon: string = '';
   email = "info@omnihospitals.in"
   specialties: string[] = [
+    'Cardiology',
     'Emergency Medicine & Critical Care',
     'ENT',
     'Medical & Surgical Gastroenterology',

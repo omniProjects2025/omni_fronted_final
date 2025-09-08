@@ -35,8 +35,8 @@
      }">
 
                                 <div class="icon-circle">
-                                    <img src="assets/images/{{counter.img}}" alt="{{ counter.label }}" width="142px"
-                                        height="142px">
+                                    <img src="assets/images/{{counter.img}}" alt="{{ counter.label }}" 
+                                        class="counter-icon">
                                 </div>
                                 <div class="text-left ms-3">
                                     <h5 class="counter" [attr.data-target]="counter.target">{{ counter.value }}+</h5>
@@ -47,13 +47,13 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 ">
+            <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
                 <div class="d-flex align-items-center justify-content-center">
                     <div class="line line-left"></div>
                     <h3 class="free_sec text-center px-2">Free Second Opinion</h3>
                     <div class="line line-right"></div>
                 </div>
-                <div class="ms-3">
+                <div class="ms-3 ms-md-3 ms-sm-0">
                     <form class="form-container py-4" #secondOpinionForm="ngForm">
                         <div class="">
                             <input type="text" class="form-control p-0 pt-2 pb-2 mb-3" name="fullName"

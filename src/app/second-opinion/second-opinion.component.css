@@ -36,6 +36,25 @@
     font-family: 'roboto';
     font-size: 20px;
 }
+
+.counter-icon {
+    width: 142px;
+    height: 142px;
+    transition: all 0.3s ease;
+    object-fit: contain;
+}
+
+.counter-icon:hover {
+    transform: scale(1.05);
+}
+
+.icon-circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 142px;
+    min-height: 142px;
+}
 .free_sec{
     color: #000000;
     font-weight: 500;
@@ -113,11 +132,193 @@
 .line-right {
     background: #008FD5;
 }
+/* Mobile Responsive Styles */
 @media (max-width: 768px) {
-    .free_sec {
-      font-size: 20px;
+    .opinion_head {
+        font-size: 24px;
+        text-align: center;
+        margin-bottom: 20px;
     }
-  }
+    
+    .head_text p {
+        font-size: 14px;
+        text-align: left;
+        padding: 0 15px;
+    }
+    
+    .free_sec {
+        font-size: 20px;
+        margin: 20px 0;
+    }
+    
+    .counter {
+        font-size: 35px !important;
+    }
+    
+    .counter-label {
+        font-size: 16px;
+    }
+    
+    .info-box {
+        margin-bottom: 20px;
+        padding: 20px;
+        background: rgba(255, 255, 255, 0.9);
+        border-radius: 15px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        border: 1px solid rgba(0, 143, 213, 0.2);
+    }
+    
+    .info-box .icon-circle {
+        min-width: 100px;
+        min-height: 100px;
+    }
+    
+    .info-box .icon-circle img {
+        width: 100px !important;
+        height: 100px !important;
+    }
+    
+    .form-container {
+        margin: 20px 15px;
+        padding: 25px 20px;
+        max-width: none;
+    }
+    
+    .form-control {
+        font-size: 16px;
+        padding: 12px 0 !important;
+    }
+    
+    .btn-submit {
+        width: 100%;
+        padding: 12px 20px;
+        font-size: 16px;
+        margin-top: 20px;
+    }
+    
+    .line {
+        width: 40px;
+        height: 2px;
+    }
+    
+    .counter_bg {
+        margin: 20px 15px;
+        padding: 20px 15px !important;
+        border-radius: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .opinion_head {
+        font-size: 20px;
+    }
+    
+    .head_text p {
+        font-size: 13px;
+        padding: 0 10px;
+    }
+    
+    .free_sec {
+        font-size: 18px;
+    }
+    
+    .counter {
+        font-size: 28px !important;
+    }
+    
+    .counter-label {
+        font-size: 14px;
+    }
+    
+    .info-box .icon-circle {
+        min-width: 80px;
+        min-height: 80px;
+    }
+    
+    .info-box .icon-circle img {
+        width: 80px !important;
+        height: 80px !important;
+    }
+    
+    .form-container {
+        margin: 15px 10px;
+        padding: 20px 15px;
+    }
+    
+    .form-control {
+        font-size: 14px;
+    }
+    
+    .btn-submit {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+    
+    .counter_bg {
+        margin: 15px 10px;
+        padding: 15px 10px !important;
+    }
+    
+    .ms-3 {
+        margin-left: 0 !important;
+    }
+    
+    .container {
+        padding: 0 10px;
+    }
+    
+    .row {
+        margin: 0;
+    }
+    
+    .col-md-8, .col-md-4 {
+        padding: 0 10px;
+    }
+}
+
+/* Additional mobile improvements */
+@media (max-width: 576px) {
+    .container {
+        padding: 0 5px;
+    }
+    
+    .form-container {
+        margin: 10px 5px;
+        padding: 15px 10px;
+    }
+    
+    .counter_bg {
+        margin: 10px 5px;
+        padding: 10px 5px !important;
+    }
+    
+    .info-box {
+        padding: 15px;
+        margin-bottom: 15px;
+        background: rgba(255, 255, 255, 0.95);
+        border-radius: 12px;
+        box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+        border: 1px solid rgba(0, 143, 213, 0.3);
+    }
+    
+    .info-box .icon-circle {
+        min-width: 70px;
+        min-height: 70px;
+    }
+    
+    .info-box .icon-circle img {
+        width: 70px !important;
+        height: 70px !important;
+    }
+    
+    .counter {
+        font-size: 24px !important;
+    }
+    
+    .counter-label {
+        font-size: 12px;
+    }
+}
 
   .custom_select_btn {
     appearance: none;           

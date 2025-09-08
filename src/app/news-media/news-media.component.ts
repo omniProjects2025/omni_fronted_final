@@ -1,5 +1,5 @@
 // Imports and component definition below (keep only one set)
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, ChangeDetectorRef } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { ActivatedRoute, Router } from '@angular/router';
 import { NewsService } from '../services/news.service';
@@ -15,12 +15,15 @@ import { Subscription } from 'rxjs';
 export class NewsMediaComponent implements OnInit, OnDestroy {
   private resizeListener: (() => void) | undefined;
   private videoSubscription: Subscription = new Subscription();
+  private lastZoom: number = window.devicePixelRatio;
+  private lastWindowWidth: number = window.innerWidth;
 
   ngOnDestroy(): void {
     if (this.resizeListener) {
       window.removeEventListener('resize', this.resizeListener);
     }
     this.videoSubscription.unsubscribe();
+    // Ensure all videos are stopped when leaving this component
     this.videoStateService.stopAllVideos();
   }
   media_type = 1;
@@ -225,12 +228,18 @@ export class NewsMediaComponent implements OnInit, OnDestroy {
     private router: Router, 
     public sanitizer: DomSanitizer, 
     private newsservice: NewsService,
-    private videoStateService: VideoStateService
+    private videoStateService: VideoStateService,
+    private cdr: ChangeDetectorRef
   ) {}
 
   ngOnInit() {
+    // Stop any videos from other components when entering this component
+    this.videoStateService.stopAllVideos();
+    
+    // Video states are managed by videoStateService, no local cleanup needed
+    
     this.resizeListener = () => {
-      this.videoStateService.stopAllVideos();
+      this.handleResizeOrZoom();
     };
     window.addEventListener('resize', this.resizeListener);
 
@@ -258,17 +267,16 @@ export class NewsMediaComponent implements OnInit, OnDestroy {
     });
   }
 
-  onVideoPlay(idx: number): void {
-    this.testimonials.forEach((item, i) => {
-      item.videoPlayed = i === idx; // only the clicked one plays
-    });
-  }
+  // Removed onVideoPlay method - using videoStateService instead
 
   // Video management methods
   playVideo(idx: number): void {
     const testimonial = this.testimonials[idx];
     if (!testimonial) return;
 
+    // Ensure no other videos are playing before starting this one
+    this.videoStateService.stopAllVideos();
+    
     const videoId = this.extractVideoId(testimonial.videoUrl);
     this.videoStateService.setCurrentlyPlayingVideo(videoId);
   }
@@ -279,10 +287,9 @@ export class NewsMediaComponent implements OnInit, OnDestroy {
   }
 
   private updateVideoStates(currentVideoId: string | null): void {
-    this.testimonials.forEach((testimonial, index) => {
-      const videoId = this.extractVideoId(testimonial.videoUrl);
-      testimonial.videoPlayed = currentVideoId === videoId;
-    });
+    // Only update the global service state, don't set local videoPlayed
+    // The isVideoPlaying() method will handle the UI state
+    this.cdr.detectChanges();
   }
 
   isVideoPlaying(idx: number): boolean {
@@ -291,6 +298,22 @@ export class NewsMediaComponent implements OnInit, OnDestroy {
     
     const videoId = this.extractVideoId(testimonial.videoUrl);
     return this.videoStateService.getCurrentlyPlayingVideo() === videoId;
+  }
+
+  private handleResizeOrZoom(): void {
+    const currentZoom = window.devicePixelRatio;
+    const currentWidth = window.innerWidth;
+    
+    // Check if it's a zoom change (devicePixelRatio changed) or actual resize
+    if (Math.abs(currentZoom - this.lastZoom) > 0.1) {
+      // Zoom change detected - don't stop videos unnecessarily
+      this.lastZoom = currentZoom;
+    } else if (Math.abs(currentWidth - this.lastWindowWidth) > 50) {
+      // Significant width change - actual resize
+      this.lastWindowWidth = currentWidth;
+      this.videoStateService.stopAllVideos();
+    }
+    // Small changes are ignored to prevent unnecessary video stops
   }
 
 

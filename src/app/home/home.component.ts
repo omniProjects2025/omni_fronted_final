@@ -24,6 +24,7 @@ export class HomeComponent implements OnInit, OnDestroy {
       window.removeEventListener('resize', this.resizeListener);
     }
     this.videoSubscription.unsubscribe();
+    // Ensure all videos are stopped when leaving this component
     this.videoStateService.stopAllVideos();
   }
 
@@ -32,6 +33,9 @@ export class HomeComponent implements OnInit, OnDestroy {
     const testimonial = this.testimonials[idx];
     if (!testimonial) return;
 
+    // Ensure no other videos are playing before starting this one
+    this.videoStateService.stopAllVideos();
+    
     const videoId = this.extractVideoId(testimonial.videoUrl);
     this.videoStateService.setCurrentlyPlayingVideo(videoId);
   }
@@ -42,11 +46,8 @@ export class HomeComponent implements OnInit, OnDestroy {
   }
 
   private updateVideoStates(currentVideoId: string | null): void {
-    this.testimonials.forEach((testimonial, index) => {
-      const videoId = this.extractVideoId(testimonial.videoUrl);
-      testimonial.videoPlayed = currentVideoId === videoId;
-    });
-    this.cdr.detectChanges();
+    // The isVideoPlaying() method will handle the UI state
+    // No need to force change detection here as it's handled by the subscription
   }
 
   isVideoPlaying(idx: number): boolean {
@@ -464,12 +465,18 @@ export class HomeComponent implements OnInit, OnDestroy {
   ) {}
 
   private resizeListener: (() => void) | undefined;
+  private lastZoom: number = window.devicePixelRatio;
+  private lastWindowWidth: number = window.innerWidth;
 
   ngOnInit(): void {
-    // Video reset on zoom/resize
+    // Stop any videos from other components when entering this component
+    this.videoStateService.stopAllVideos();
+    
+    // Video states are managed by videoStateService, no local cleanup needed
+    
+    // Improved resize handling - distinguishes zoom from actual resize
     this.resizeListener = () => {
-      this.videoStateService.stopAllVideos();
-      this.updateSlidesPerView();
+      this.handleResizeOrZoom();
     };
     window.addEventListener('resize', this.resizeListener);
 
@@ -682,6 +689,25 @@ export class HomeComponent implements OnInit, OnDestroy {
     }
   }
 
+  private handleResizeOrZoom(): void {
+    const currentZoom = window.devicePixelRatio;
+    const currentWidth = window.innerWidth;
+    
+    // Check if it's a zoom change (devicePixelRatio changed) or actual resize
+    if (Math.abs(currentZoom - this.lastZoom) > 0.1) {
+      // Zoom change detected - don't stop videos unnecessarily
+      this.lastZoom = currentZoom;
+      // Only update slides if needed
+      this.updateSlidesPerView();
+    } else if (Math.abs(currentWidth - this.lastWindowWidth) > 50) {
+      // Significant width change - actual resize
+      this.lastWindowWidth = currentWidth;
+      this.videoStateService.stopAllVideos();
+      this.updateSlidesPerView();
+    }
+    // Small changes are ignored to prevent unnecessary video stops
+  }
+
 
   goToDetails(speciality: string) {
     const urlFriendlyName = toUrlFriendly(speciality);
@@ -754,7 +780,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   owl(): void {
     const owl = $(this.owlCarousel.nativeElement);
     this.owlInstance = owl.owlCarousel({
-      loop: true,
+      loop: false, // Disabled loop to prevent double video issue during zoom
       margin: 20,
       nav: false,
       dots: false,
@@ -813,12 +839,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     });
   }
 
-onVideoPlay(idx: number): void {
-  this.testimonials.forEach((item, i) => {
-    item.videoPlayed = i === idx;
-  });
-  this.cdr.detectChanges(); // Force re-render
-}
+// Removed onVideoPlay method - using videoStateService instead
 
 
   trackByTestimonial(index: number, testimonial: any): string {

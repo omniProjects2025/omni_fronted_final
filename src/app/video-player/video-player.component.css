@@ -54,3 +54,28 @@
     font-size: 4rem;
   }
 }
+
+/* Zoom-responsive fixes for video player */
+@media (min-resolution: 1.5dppx) {
+  .video-wrapper {
+    max-width: 100%;
+    height: auto;
+    min-height: 200px;
+  }
+}
+
+@media (min-resolution: 2dppx) {
+  .video-wrapper {
+    max-width: 100%;
+    height: auto;
+    min-height: 180px;
+  }
+}
+
+@media (min-resolution: 3dppx) {
+  .video-wrapper {
+    max-width: 100%;
+    height: auto;
+    min-height: 160px;
+  }
+}

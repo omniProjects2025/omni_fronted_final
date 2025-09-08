@@ -164,42 +164,44 @@
 
         <div class="col-md-6">
           <h3>Nearest OMNI Hospital:</h3>
-          <ng-container *ngIf="nearestBranch['key'] === 'kukatpally'">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3805.4656864742747!2d78.4083654749371!3d17.485269683418686!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb91bc5cdb9fbd%3A0xb96e1ba3797d9253!2sOMNI%20Hospitals%2C%20Kukatpally!5e0!3m2!1sen!2sin!4v1745125466022!5m2!1sen!2sin"
-              width="680" height="950" style="border:0;" allowfullscreen="" loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </ng-container>
-          <ng-container *ngIf="nearestBranch['key'] === 'kothapet'">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.897405275579!2d78.538822!3d17.368669099999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb98e93eec1a2f%3A0x9dc9016e4c959f7d!2sOMNI%20Hospitals!5e0!3m2!1sen!2sin!4v1745143614525!5m2!1sen!2sin"
-              width="680" height="950" style="border:0;" allowfullscreen="" loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </ng-container>
-          <ng-container *ngIf="nearestBranch['key'] === 'udai'">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.3095579905453!2d78.47241199999999!3d17.3969257!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9762f7471823%3A0xcd02eae5dae78501!2sUdai%20Omni%20Hospital%20-%20Orthopedics%20%7C%20Multispeciality%20%7C%20Trauma!5e0!3m2!1sen!2sin!4v1745143719927!5m2!1sen!2sin"
-              width="680" height="950" style="border:0;" allowfullscreen="" loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </ng-container>
-          <ng-container *ngIf="nearestBranch['key'] == 'vizag'">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3800.5565941356035!2d83.3111361!3d17.7183946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a394315b6aa6577%3A0x3699aded6ece84dd!2sOMNI%20RK%20Multi%20Specialty%20Hospital!5e0!3m2!1sen!2sin!4v1745143810828!5m2!1sen!2sin"
-              width="680" height="950" style="border:0;" allowfullscreen="" loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </ng-container>
-          <ng-container *ngIf="nearestBranch['key'] === 'kurnool'">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3838.6279176861376!2d78.0415378!3d15.823561600000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb5ddf5391420ef%3A0x5751521ca97efcd8!2sOMNI%20Hospitals%20Kurnool!5e0!3m2!1sen!2sin!4v1745143913149!5m2!1sen!2sin"
-              width="680" height="950" style="border:0;" allowfullscreen="" loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </ng-container>
-          <ng-container *ngIf="nearestBranch['key'] === 'giggles'">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3800.5600994057054!2d83.3110427!3d17.7182292!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a39438ce00efc2f%3A0x14fd5f338cbade20!2sGiggles%20by%20Omni%20RK!5e0!3m2!1sen!2sin!4v1745144024428!5m2!1sen!2sin"
-              width="680" height="950" style="border:0;" allowfullscreen="" loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </ng-container>
+          <div class="map-container">
+            <ng-container *ngIf="nearestBranch['key'] === 'kukatpally'">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3805.4656864742747!2d78.4083654749371!3d17.485269683418686!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb91bc5cdb9fbd%3A0xb96e1ba3797d9253!2sOMNI%20Hospitals%2C%20Kukatpally!5e0!3m2!1sen!2sin!4v1745125466022!5m2!1sen!2sin"
+                class="responsive-map" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </ng-container>
+            <ng-container *ngIf="nearestBranch['key'] === 'kothapet'">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.897405275579!2d78.538822!3d17.368669099999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb98e93eec1a2f%3A0x9dc9016e4c959f7d!2sOMNI%20Hospitals!5e0!3m2!1sen!2sin!4v1745143614525!5m2!1sen!2sin"
+                class="responsive-map" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </ng-container>
+            <ng-container *ngIf="nearestBranch['key'] === 'udai'">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.3095579905453!2d78.47241199999999!3d17.3969257!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9762f7471823%3A0xcd02eae5dae78501!2sUdai%20Omni%20Hospital%20-%20Orthopedics%20%7C%20Multispeciality%20%7C%20Trauma!5e0!3m2!1sen!2sin!4v1745143719927!5m2!1sen!2sin"
+                class="responsive-map" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </ng-container>
+            <ng-container *ngIf="nearestBranch['key'] == 'vizag'">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3800.5565941356035!2d83.3111361!3d17.7183946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a394315b6aa6577%3A0x3699aded6ece84dd!2sOMNI%20RK%20Multi%20Specialty%20Hospital!5e0!3m2!1sen!2sin!4v1745143810828!5m2!1sen!2sin"
+                class="responsive-map" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </ng-container>
+            <ng-container *ngIf="nearestBranch['key'] === 'kurnool'">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3838.6279176861376!2d78.0415378!3d15.823561600000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb5ddf5391420ef%3A0x5751521ca97efcd8!2sOMNI%20Hospitals%20Kurnool!5e0!3m2!1sen!2sin!4v1745143913149!5m2!1sen!2sin"
+                class="responsive-map" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </ng-container>
+            <ng-container *ngIf="nearestBranch['key'] === 'giggles'">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3800.5600994057054!2d83.3110427!3d17.7182292!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a39438ce00efc2f%3A0x14fd5f338cbade20!2sGiggles%20by%20Omni%20RK!5e0!3m2!1sen!2sin!4v1745144024428!5m2!1sen!2sin"
+                class="responsive-map" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </ng-container>
+          </div>
         </div>
       </div>
     </div>

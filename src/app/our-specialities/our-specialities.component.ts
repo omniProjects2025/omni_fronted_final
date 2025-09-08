@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { OurSpecialitiesService } from './our-specialities.service';
+import { toUrlFriendly } from '../utils/url-helper.util';
 
 @Component({
   selector: 'app-our-specialities',
@@ -43,11 +44,7 @@ export class OurSpecialitiesComponent {
   }
 
   goToDetails(speciality: string) {
-    this.router.navigate(['/our-specialities-details'], {
-      queryParams: {
-        selected_speciality: speciality
-      }
-    });
-
+    const urlFriendlyName = toUrlFriendly(speciality);
+    this.router.navigate(['/our-specialities-details', urlFriendlyName]);
   }
 }

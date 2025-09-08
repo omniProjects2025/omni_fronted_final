@@ -86,6 +86,7 @@ export class OurDoctorsComponent implements OnInit, AfterViewInit, OnDestroy {
         finalize(() => { 
           this.isLoading = false; 
           this.hasInitialLoad = true;
+          this.cdr.markForCheck();
         })
       )
       .subscribe({
@@ -233,9 +234,15 @@ export class OurDoctorsComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   goToDoctorDetails(doctor_name: string) {
-    this.router.navigate(['/doctor-details'], {
-      queryParams: { selected_doctor: doctor_name }
-    });
+    // Convert doctor name to URL-friendly format
+    const urlFriendlyName = doctor_name
+      .toLowerCase()
+      .replace(/&/g, 'and')  // Replace & with 'and'
+      .replace(/\s+/g, '-')   // Replace spaces with hyphens
+      .replace(/[^a-z0-9-]/g, '') // Remove special characters except hyphens
+      .replace(/-+/g, '-')    // Replace multiple hyphens with single hyphen
+      .replace(/^-|-$/g, ''); // Remove leading/trailing hyphens
+    this.router.navigate(['/doctor-details', urlFriendlyName]);
   }
 
   goToBookAppointment() {

@@ -7,7 +7,7 @@
           <!-- Left Card Section -->
           <div class="col-lg-7 col-md-12 mb-4">
             <div class="card">
-              <img [src]="selectedDepartment['img']" class="border_rad" alt="Medical Image" height="" width="">
+              <img [src]="selectedDepartment['img']" class="border_rad img-fluid w-100" alt="Medical Image">
               
             </div>
           </div>
@@ -134,52 +134,6 @@
 
 
 
-<!-- <div class="row">
-  <div class="col-md-4">
-    <div *ngFor="let dept of filteredDepartments" class="mb-2 p-2 department-item">
-      <div *ngFor="let sub of dept.sub_departments"
-           (click)="onSubDepartmentSelect(sub)"
-           class="p-2 sub-department-item"
-           [class.active]="sub.id === selected_dep">
-        {{ sub.name }}
-      </div>
-    </div>
-  </div>
-
-  <div class="col-md-8">
-    <h3 class="sub_section_heading">
-      {{ selectedSubDepartment?.title || selectedSubDepartment?.name }}
-    </h3>
-    <p class="sub_section_description">{{ selectedSubDepartment?.subtitle }}</p>
-    <p class="sub_section_description">{{ selectedSubDepartment?.description }}</p>
-
-    <div *ngIf="selectedSubDepartment?.types" class="mb-3">
-      <h4>{{ selectedSubDepartment.types.title }}</h4>
-      <ul>
-        <li *ngFor="let item of selectedSubDepartment.types.list">{{ item }}</li>
-      </ul>
-    </div>
-
-    <div *ngIf="selectedSubDepartment?.procedure" class="mb-3">
-      <h4>{{ selectedSubDepartment.procedure.title }}</h4>
-      <ul *ngIf="selectedSubDepartment.procedure.steps">
-        <li *ngFor="let step of selectedSubDepartment.procedure.steps">{{ step }}</li>
-      </ul>
-      <p *ngIf="selectedSubDepartment.procedure.description">
-        {{ selectedSubDepartment.procedure.description }}
-      </p>
-    </div>
-
-    <div *ngIf="selectedSubDepartment?.benefits" class="mb-3">
-      <h4>{{ selectedSubDepartment.benefits.title }}</h4>
-      <ul>
-        <li *ngFor="let item of selectedSubDepartment.benefits.list">{{ item }}</li>
-      </ul>
-    </div>
-
-    <p *ngIf="selectedSubDepartment?.conclusion">{{ selectedSubDepartment.conclusion }}</p>
-  </div>
-</div> -->
 
 
 

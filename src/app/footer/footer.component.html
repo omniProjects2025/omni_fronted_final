@@ -2,7 +2,7 @@
   <div class="footer-container">
     <!-- Left Column -->
     <div class="footer-col">
-      <div class="d-flex justify-content-start">
+      <div class="d-flex justify-content-start align-items-center">
         <img src="assets/icons/Omni_Logo_White.png" alt="OMNI Logo" class="logo" />
         <img src="assets/icons/nabh_patient_safety_and_quality_of care_.svg" alt="NABH Logo" class="nabh-logo ms-3" />
       </div>
@@ -66,19 +66,19 @@
       <h6 clsass="footer-heading"><img class="me-2" src="assets/icons/right_arrow.svg" alt="" width="18">Our Hospitals
       </h6>
       <ul>
-        <a href="our-branches?selected_location=Kukatpally">
+        <a href="our-branches/kukatpally">
           <li>OMNI Hospitals, Kukatpally</li>
         </a>
-        <a href="our-branches?selected_location=UDAI%20OMNI%20-%20Nampally">
+        <a href="our-branches/udai-omni-nampally">
           <li>UDAI OMNI Hospitals, Chapel Road</li>
         </a>
-        <a href="our-branches?selected_location=Kothapet">
+        <a href="our-branches/kothapet">
           <li>OMNI Hospitals, Kothapet</li>
         </a>
-        <a href="our-branches?selected_location=Vizag">
+        <a href="our-branches/vizag">
           <li>OMNI Hospitals, Vizag</li>
         </a>
-        <a href="our-branches?selected_location=Kurnool">
+        <a href="our-branches/kurnool">
           <li>OMNI Hospitals, Kurnool</li>
         </a>
         <a href="https://giggles.co.in/vizag/">
@@ -146,17 +146,30 @@
     </div>
   </div>
 
-  <div class="d-flex align-items-center justify-content-center gap-5 py-2 d-md-none"
-    style="background-color: #bae87aa1;">
-    <div class="side_button bg_green" (click)="goToBookAnAppointment()">
-      <img src="assets/images/book_an_appointment.png" alt="appointment icon" />
-      <span class="fw-medium" style="font-size:10px">BOOK AN <br> APPOINTMENT</span>
+  <div class="mobile-footer-bar d-md-none">
+    <div class="mobile-footer-item" (click)="goToBookAnAppointment()">
+      <div class="footer-icon">
+        <img src="assets/icons/book_an_appointment_nav.svg" alt="appointment icon" />
+      </div>
+      <span class="footer-label">Appointment</span>
     </div>
-    <div class="side_button bg_blue">
-      <img src="assets/images/call_icon.png" alt="call icon" />
-      <a href="tel:8880101000" style="text-decoration: none; color: inherit;"><span class="fw-medium"
-          style="font-size:10px">CALL FOR <br> ENQUIRY</span>
-      </a>
+    <div class="mobile-footer-item" (click)="goToSecondOpinion()">
+      <div class="footer-icon">
+        <img src="assets/icons/Images_Second_Opinion.svg" alt="second opinion icon" />
+      </div>
+      <span class="footer-label">Second Opinion</span>
+    </div>
+    <div class="mobile-footer-item" (click)="goToWhatsApp()">
+      <div class="footer-icon">
+        <img src="assets/icons/whatsapp_icon.svg" alt="whatsapp icon" />
+      </div>
+      <span class="footer-label">WhatsApp</span>
+    </div>
+    <div class="mobile-footer-item" (click)="goToCall()">
+      <div class="footer-icon">
+        <img src="assets/icons/phone_icon.svg" alt="call icon" />
+      </div>
+      <span class="footer-label">Call</span>
     </div>
   </div>
 

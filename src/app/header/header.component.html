@@ -5,7 +5,7 @@
   [ngClass]="{'hidden': isScrolled, 'scrolled': isScrolled}">
   <!-- Brand -->
   <div class="d-none d-md-flex align-items-center mb-md-0">
-    <img src="assets/images/logo.png" alt="OMNI" class="p-3" />
+   <a href="home"> <img src="assets/images/logo.png" alt="OMNI" class="p-3" /></a>
   </div>
 
   <!-- Info Items (Desktop) -->
@@ -98,15 +98,18 @@
         <li class="nav-item" *ngFor="let item of navItems" [class.dropdown]="item.children"
           [class.show]="hoveredItem === item.key" (mouseenter)="hoveredItem = item.key"
           (mouseleave)="hoveredItem = null">
-          <a *ngIf="item.route && item.key !== 'bookAppointment'" class="nav-link" [routerLink]="item.route" routerLinkActive="active"
-            [routerLinkActiveOptions]="{ exact: true }" (click)="setActive(item.key)">
+          <a *ngIf="item.route && item.key !== 'bookAppointment' && item.key !== 'branches' && item.key !== 'specialities'" class="nav-link" [routerLink]="item.route" routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: false }" (click)="setActive(item.key)">
             <ng-container *ngIf="item.key === 'home'">
               <img src="assets/icons/home_page_btn.svg" class="me-1" alt="" width="25px" height="25px" />
             </ng-container>
             {{ item.label }}
           </a>
-          <a *ngIf="!item.route && item.modalTarget" class="nav-link" [attr.data-bs-toggle]="'modal'"
-            [attr.data-bs-target]="item.modalTarget" [ngClass]="{ 'active': activeTab === item.key }"
+          <a *ngIf="item.modalTarget || item.key === 'specialities'" class="nav-link" 
+            [attr.data-bs-toggle]="item.modalTarget ? 'modal' : null"
+            [attr.data-bs-target]="item.modalTarget"
+            [routerLink]="item.route"
+            [ngClass]="{ 'active': activeTab === item.key }"
             (click)="setActive(item.key)">
             {{ item.label }}
           </a>
@@ -135,15 +138,18 @@
 
   <ul class="navbar-nav">
     <li class="nav-item" *ngFor="let item of navItems">
-      <a *ngIf="item.route" class="nav-link" [routerLink]="item.route" (click)="closeMobileMenu()">
+      <a *ngIf="item.route && item.key !== 'branches' && item.key !== 'specialities'" class="nav-link" [routerLink]="item.route" (click)="closeMobileMenu()">
         <ng-container *ngIf="item.key === 'home'">
           Home
           <!-- <img src="assets/icons/home_page_btn.svg" class="me-1" alt="" width="25px" height="25px" /> -->
         </ng-container>
         {{ item.label }}
       </a>
-      <a *ngIf="!item.route && item.modalTarget" class="nav-link" [attr.data-bs-toggle]="'modal'"
-        [attr.data-bs-target]="item.modalTarget" (click)="closeMobileMenu()">
+      <a *ngIf="item.modalTarget || item.key === 'specialities'" class="nav-link" 
+        [attr.data-bs-toggle]="item.modalTarget ? 'modal' : null"
+        [attr.data-bs-target]="item.modalTarget"
+        [routerLink]="item.route"
+        (click)="closeMobileMenu()">
         {{ item.label }}
       </a>
     </li>

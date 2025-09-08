@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
-import { data } from 'jquery';
+import { fromUrlFriendly } from '../utils/url-helper.util';
 
 @Component({
   selector: 'app-our-specialities-details',
@@ -36,12 +36,13 @@ export class OurSpecialitiesDetailsComponent implements OnInit {
   ngOnInit() {
     window.scrollTo(0, 0);
 
-    // 1) Grab the param first
-    this.route.queryParams.subscribe(params => {
-      this.departmentName = (params['selected_speciality'] || '').trim();
+    // Get department name from route parameter
+    this.route.params.subscribe(params => {
+      const departmentParam = params['department'] || '';
+      // Convert URL-friendly format back to original name
+      this.departmentName = fromUrlFriendly(departmentParam);
       this.getAllSpecialities();
       console.log('departmentName', this.departmentName);
-      // 2) Then load JSON (avoids race)
     });
   }
 
@@ -51,14 +52,16 @@ export class OurSpecialitiesDetailsComponent implements OnInit {
       .subscribe({
         next: (data) => {
           this.selectedDepartment = (data.departments.filter((dept: any) => this.departmentName.toLocaleLowerCase() == dept.name.toLocaleLowerCase()))[0]
-          this.subDepartmentData = this.selectedDepartment.sub_departments[0];
-          this.selectedSubDept = this.subDepartmentData.name;
+          if (this.selectedDepartment && this.selectedDepartment.sub_departments && this.selectedDepartment.sub_departments.length > 0) {
+            this.subDepartmentData = this.selectedDepartment.sub_departments[0];
+            this.selectedSubDept = this.subDepartmentData.name;
+            this.onSelectSubDept(this.subDepartmentData.name);
+          }
         },
         error: (err) => {
           console.error('Failed to load departments JSON:', err);
         }
       });
-      this.onSelectSubDept(this.subDepartmentData.name);
   }
 
   getDepartmentName(): string {
@@ -67,8 +70,34 @@ export class OurSpecialitiesDetailsComponent implements OnInit {
 
 
   submitEnquiry() {
-    if (!this.enquiry.fullName.trim()) { alert('Full Name is required.'); return; }
-    if (!this.enquiry.phoneNumber.trim()) { alert('Phone Number is required.'); return; }
+    // Enhanced validation
+    if (!this.enquiry.fullName.trim()) { 
+      alert('Full Name is required.'); 
+      return; 
+    }
+    
+    if (this.enquiry.fullName.trim().length < 3) {
+      alert('Full Name must be at least 3 characters long.');
+      return;
+    }
+    
+    if (!this.enquiry.phoneNumber.trim()) { 
+      alert('Phone Number is required.'); 
+      return; 
+    }
+    
+    // Phone number validation (Indian format)
+    const phonePattern = /^[6-9]\d{9}$/;
+    if (!phonePattern.test(this.enquiry.phoneNumber.trim())) {
+      alert('Please enter a valid 10-digit mobile number starting with 6, 7, 8, or 9.');
+      return;
+    }
+    
+    // Email validation (optional but if provided, should be valid)
+    if (this.enquiry.emailId.trim() && !this.isValidEmail(this.enquiry.emailId.trim())) {
+      alert('Please enter a valid email address.');
+      return;
+    }
 
     const lastSubmission = localStorage.getItem('lastEnquiry');
     if (lastSubmission) {
@@ -112,11 +141,6 @@ export class OurSpecialitiesDetailsComponent implements OnInit {
         }
       });
   }
-  // onSubDepartmentSelect(sub: any) {
-  //   this.selectedSubDepartment = sub;  // ✅ show sub details only
-  //   this.selected_dep = sub.id;        // ✅ highlight active sidebar
-  //   this.departmentName = sub.name;
-  // }
   onSelectSubDept(subdept_name: string) {
     console.log(subdept_name);
     this.selectedSubDept = subdept_name;
@@ -125,6 +149,11 @@ export class OurSpecialitiesDetailsComponent implements OnInit {
     );
 
     console.log(this.subDepartmentData);
+  }
+
+  private isValidEmail(email: string): boolean {
+    const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    return emailPattern.test(email);
   }
 
 }

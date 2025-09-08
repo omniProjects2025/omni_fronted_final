@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { CommonModule as AngularCommonModule } from '@angular/common';
+import { CommonModule as AngularCommonModule, DatePipe } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 
 import { HomeComponent } from './home/home.component';
@@ -45,6 +45,7 @@ const routes: Routes = [
   { path: 'blogs', component: BlogsComponent },
   { path: 'technologies-details', component: TechnologiesDetailsComponent },
   { path: 'our-branches', component: OurBranchesComponent },
+  { path: 'our-branches/:location', component: OurBranchesComponent },
   { path: 'careers', component: CareersComponent },
   { path: 'feedback', component: FeedbackComponent },
   { path: 'blogs-details', component: BlogDetailsComponent },
@@ -55,6 +56,7 @@ const routes: Routes = [
   { path: 'fixed-surgical-packages', component: FixedSurgicalPackagesComponent },
   { path: 'contact-us', component: ContactUsComponent },
   { path: 'doctor-details', component: DoctorDetailsComponent },
+  { path: 'doctor-details/:doctor', component: DoctorDetailsComponent },
   { path: 'fixed-surgery-details', component: FixedSurgeryDetailsComponent },
   { path: 'our-empanelment', component: OurEmpanelmentComponent },
   { path: 'thank-you', component: ThankYouComponent },
@@ -68,6 +70,7 @@ const routes: Routes = [
     AngularCommonModule,
     RouterModule.forChild(routes)
   ],
-  declarations: []
+  declarations: [],
+  providers: [DatePipe]
 })
 export class CommonPagesModule { }

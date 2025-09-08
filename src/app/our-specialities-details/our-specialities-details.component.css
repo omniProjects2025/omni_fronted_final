@@ -671,3 +671,38 @@ details.dept-group+details.dept-group{margin-top:6px}
 h5 {
   cursor: pointer;
 }
+
+/* Enhanced responsive image styling */
+.border_rad {
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .border_rad {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+  
+  .card {
+    margin-bottom: 1rem;
+  }
+  
+  .form-card {
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .border_rad {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+  
+  .col-lg-7, .col-lg-5 {
+    margin-bottom: 1rem;
+  }
+}

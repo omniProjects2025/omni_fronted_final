@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
+import { DatePipe } from '@angular/common';
 
 @Component({
   selector: 'app-careers',
@@ -15,7 +16,26 @@ export class CareersComponent {
   today = new Date();
   applyForm: FormGroup;
   selectedFile: File | null = null;
+  selectedFileName: string = '';
   emil: string = 'doctors@omnihospitals.in';
+  
+  // Search and filter properties
+  searchTerm: string = '';
+  selectedDepartment: string = '';
+  selectedLocation: string = '';
+  
+  // Pagination properties
+  currentPage: number = 1;
+  itemsPerPage: number = 8;
+  
+  // Job details modal
+  selectedJob: any = null;
+  showJobDetailsModal: boolean = false;
+  
+  // Success/Error messages
+  successMessage: string = '';
+  errorMessage: string = '';
+  isSubmitting: boolean = false;
   careers = [
     { title: 'Compassionate Culture', image: 'culture_image.png', description: "We believe great healthcare starts with kindness. Our workplace culture is built on empathy, respect, and a shared commitment to patient well-being creating an environment where every voice is valued." },
     { title: 'Career Growth', image: 'career_growth.png', description: "Your growth matters to us. With continuous learning opportunities, mentoring, and internal advancement programs, we empower you to shape a fulfilling and long-term career in healthcare." },
@@ -35,7 +55,7 @@ export class CareersComponent {
     {id:10, title: 'Housekeeping Staff', location: 'Vizag', department: 'Housekeeping', postedDate: '2025-09-20', lastDate: '2025-10-01' },
   ];
 
-  constructor(private fb: FormBuilder, private http: HttpClient, private route: ActivatedRoute) {
+  constructor(private fb: FormBuilder, private http: HttpClient, private route: ActivatedRoute, private datePipe: DatePipe) {
     this.applyForm = this.fb.group({
       firstName: ['', Validators.required],
       lastName: [''],
@@ -109,40 +129,187 @@ socialShare(){
   //   }
   // }
 
-  onSubmit(): void {
-  if (this.applyForm.invalid) {
-    this.applyForm.markAllAsTouched();
-    return;
-  }
-
-  const formData = new FormData();
-  formData.append('firstName', this.applyForm.get('firstName')!.value);
-  formData.append('lastName', this.applyForm.get('lastName')!.value);
-  formData.append('phone', this.applyForm.get('phone')!.value);
-  formData.append('email', this.applyForm.get('email')!.value);
-  formData.append('position', this.applyForm.get('position')!.value);
-
-  if (this.selectedFile) {
-    formData.append('resume', this.selectedFile, this.selectedFile.name);
-  }
-
-  this.http.post(`${this.BASE_URL}/send-email`, formData).subscribe({
-    next: () => {
-      alert('Email sent successfully!');
-      this.applyForm.reset();
-      this.selectedFile = null;
-    },
-    error: (err) => {
-      console.error('Mail submit error:', err);
-      alert('Failed to send email.');
-    }
-  });
-}
 
   onFileChange(event: any) {
-    if (event.target.files.length > 0) {
+    if (event.target.files && event.target.files.length > 0) {
       this.selectedFile = event.target.files[0];
+      this.selectedFileName = this.selectedFile?.name || '';
     }
+  }
+
+  // Apply button click handler
+  applyForJob(job: any) {
+    this.selectedJob = job;
+    this.applyForm.patchValue({
+      position: job.title
+    });
+    this.switchTab('apply');
+    // Scroll to form
+    setTimeout(() => {
+      const formElement = document.querySelector('.apply-form-container');
+      if (formElement) {
+        formElement.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 100);
+  }
+
+  // Show job details modal
+  showJobDetails(job: any) {
+    this.selectedJob = job;
+    this.showJobDetailsModal = true;
+  }
+
+  // Close job details modal
+  closeJobDetails() {
+    this.showJobDetailsModal = false;
+    this.selectedJob = null;
+  }
+
+  // Remove selected file
+  removeFile() {
+    this.selectedFile = null;
+    this.selectedFileName = '';
+    // Reset file input
+    const fileInput = document.getElementById('customFile') as HTMLInputElement;
+    if (fileInput) {
+      fileInput.value = '';
+    }
+  }
+
+  // Format date using DatePipe
+  formatDate(dateString: string): string {
+    return this.datePipe.transform(dateString, 'MMM dd, yyyy') || dateString;
+  }
+
+  // Get filtered and paginated jobs
+  get filteredJobs() {
+    let filtered = this.jobList.filter(job => {
+      const matchesSearch = !this.searchTerm || 
+        job.title.toLowerCase().includes(this.searchTerm.toLowerCase()) ||
+        job.department.toLowerCase().includes(this.searchTerm.toLowerCase());
+      
+      const matchesDepartment = !this.selectedDepartment || job.department === this.selectedDepartment;
+      const matchesLocation = !this.selectedLocation || job.location === this.selectedLocation;
+      
+      return matchesSearch && matchesDepartment && matchesLocation;
+    });
+
+    const startIndex = (this.currentPage - 1) * this.itemsPerPage;
+    const endIndex = startIndex + this.itemsPerPage;
+    
+    return filtered.slice(startIndex, endIndex);
+  }
+
+  // Get total pages for pagination
+  get totalPages() {
+    const filtered = this.jobList.filter(job => {
+      const matchesSearch = !this.searchTerm || 
+        job.title.toLowerCase().includes(this.searchTerm.toLowerCase()) ||
+        job.department.toLowerCase().includes(this.searchTerm.toLowerCase());
+      
+      const matchesDepartment = !this.selectedDepartment || job.department === this.selectedDepartment;
+      const matchesLocation = !this.selectedLocation || job.location === this.selectedLocation;
+      
+      return matchesSearch && matchesDepartment && matchesLocation;
+    });
+    
+    return Math.ceil(filtered.length / this.itemsPerPage);
+  }
+
+  // Get unique departments for filter
+  get departments() {
+    return [...new Set(this.jobList.map(job => job.department))];
+  }
+
+  // Get unique locations for filter
+  get locations() {
+    return [...new Set(this.jobList.map(job => job.location))];
+  }
+
+  // Pagination methods
+  goToPage(page: number) {
+    if (page >= 1 && page <= this.totalPages) {
+      this.currentPage = page;
+    }
+  }
+
+  previousPage() {
+    if (this.currentPage > 1) {
+      this.currentPage--;
+    }
+  }
+
+  nextPage() {
+    if (this.currentPage < this.totalPages) {
+      this.currentPage++;
+    }
+  }
+
+  // Clear filters
+  clearFilters() {
+    this.searchTerm = '';
+    this.selectedDepartment = '';
+    this.selectedLocation = '';
+    this.currentPage = 1;
+  }
+
+  // Enhanced form submission with better error handling
+  onSubmit(): void {
+    this.isSubmitting = true;
+    this.errorMessage = '';
+    this.successMessage = '';
+
+    if (this.applyForm.invalid) {
+      this.applyForm.markAllAsTouched();
+      this.isSubmitting = false;
+      this.errorMessage = 'Please fill in all required fields correctly.';
+      return;
+    }
+
+    if (!this.selectedFile) {
+      this.errorMessage = 'Please upload your resume.';
+      this.isSubmitting = false;
+      return;
+    }
+
+    const formData = new FormData();
+    formData.append('firstName', this.applyForm.get('firstName')!.value);
+    formData.append('lastName', this.applyForm.get('lastName')!.value);
+    formData.append('phone', this.applyForm.get('phone')!.value);
+    formData.append('email', this.applyForm.get('email')!.value);
+    formData.append('position', this.applyForm.get('position')!.value);
+    formData.append('resume', this.selectedFile!, this.selectedFile!.name);
+
+    this.http.post(`${this.BASE_URL}/send-email`, formData).subscribe({
+      next: () => {
+        this.successMessage = 'Application submitted successfully! We will contact you soon.';
+        this.applyForm.reset();
+        this.selectedFile = null;
+        this.selectedFileName = '';
+        this.isSubmitting = false;
+        
+        // Reset file input
+        const fileInput = document.getElementById('customFile') as HTMLInputElement;
+        if (fileInput) {
+          fileInput.value = '';
+        }
+        
+        // Clear messages after 5 seconds
+        setTimeout(() => {
+          this.successMessage = '';
+        }, 5000);
+      },
+      error: (err) => {
+        console.error('Mail submit error:', err);
+        this.errorMessage = 'Failed to submit application. Please try again or contact us directly.';
+        this.isSubmitting = false;
+        
+        // Clear error message after 5 seconds
+        setTimeout(() => {
+          this.errorMessage = '';
+        }, 5000);
+      }
+    });
   }
 
 }

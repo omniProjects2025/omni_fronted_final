@@ -1,12 +1,14 @@
-import { Component, HostListener, OnDestroy } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Component, HostListener, OnDestroy, OnInit } from '@angular/core';
+import { ActivatedRoute, Router, NavigationEnd } from '@angular/router';
+import { toUrlFriendly } from '../utils/url-helper.util';
+import { filter } from 'rxjs/operators';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
-export class HeaderComponent implements OnDestroy {
+export class HeaderComponent implements OnInit, OnDestroy {
   activeSection = 'aboutOmni'; // Default
   hoveredItem: string | null = null;
   mobileMenuOpen = false;
@@ -126,6 +128,61 @@ export class HeaderComponent implements OnDestroy {
 
   ngOnInit() {
     this.activeTab = 'home';
+    this.setActiveBasedOnRoute();
+    
+    // Listen to route changes
+    this.router.events
+      .pipe(filter(event => event instanceof NavigationEnd))
+      .subscribe((event) => {
+        this.setActiveBasedOnRoute();
+      });
+  }
+
+  setActiveBasedOnRoute() {
+    const currentUrl = this.router.url;
+    console.log('setActiveBasedOnRoute called - Current URL:', currentUrl);
+    
+    // Check if we're on a specialty details page
+    if (currentUrl.includes('/our-specialities-details/')) {
+      this.activeTab = 'specialities';
+      console.log('Set active tab to specialities based on route (specialty details)');
+    }
+    // Check if we're on a branch page
+    else if (currentUrl.includes('/our-branches/')) {
+      this.activeTab = 'branches';
+      console.log('Set active tab to branches based on route (branch details)');
+    }
+    // Check if we're on the main specialties page
+    else if (currentUrl === '/our-specialities') {
+      this.activeTab = 'specialities';
+      console.log('Set active tab to specialities based on route (main specialties)');
+    }
+    // Check if we're on the main branches page
+    else if (currentUrl === '/our-branches') {
+      this.activeTab = 'branches';
+      console.log('Set active tab to branches based on route (main branches)');
+    }
+    // For other routes, determine based on the path
+    else if (currentUrl.startsWith('/our-specialities')) {
+      this.activeTab = 'specialities';
+      console.log('Set active tab to specialities based on route (starts with)');
+    }
+    else if (currentUrl.startsWith('/our-branches')) {
+      this.activeTab = 'branches';
+      console.log('Set active tab to branches based on route (starts with)');
+    }
+    else {
+      // For other routes, try to match with navigation items
+      const matchedItem = this.navItems.find(item => 
+        item.route && currentUrl.startsWith(item.route)
+      );
+      if (matchedItem) {
+        this.activeTab = matchedItem.key;
+        console.log('Set active tab to', matchedItem.key, 'based on route (matched item)');
+      } else {
+        console.log('No matching route found for:', currentUrl);
+      }
+    }
   }
 
   ngAfterViewInit() {
@@ -174,11 +231,19 @@ export class HeaderComponent implements OnDestroy {
     }
 
     setTimeout(() => {
-      this.router.navigate(['/our-branches'], {
-        queryParams: {
-          selected_location: location,
-          selected_image: selected_image
-        }
+      // Convert location name to URL-friendly format
+      const urlFriendlyName = location
+        .toLowerCase()
+        .replace(/&/g, 'and')  // Replace & with 'and'
+        .replace(/\s+/g, '-')   // Replace spaces with hyphens
+        .replace(/[^a-z0-9-]/g, '') // Remove special characters except hyphens
+        .replace(/-+/g, '-')    // Replace multiple hyphens with single hyphen
+        .replace(/^-|-$/g, ''); // Remove leading/trailing hyphens
+      
+      this.router.navigate(['/our-branches', urlFriendlyName]).then(() => {
+        // Set active state after navigation completes
+        this.setActive('branches');
+        console.log('Active state set to branches after modal navigation');
       });
     }, 300); // optional delay for smoother transition
   }
@@ -186,7 +251,12 @@ export class HeaderComponent implements OnDestroy {
   setActive(tab: string) {
     this.activeTab = tab;
     console.log(this.activeTab, 'this.activeTab');
+  }
 
+  // Public method to set active state from other components
+  setActiveFromExternal(tab: string) {
+    this.activeTab = tab;
+    console.log('Active tab set externally to:', tab);
   }
 
   isModalRouteActive(modalRoutePrefix: string): boolean {
@@ -210,18 +280,20 @@ export class HeaderComponent implements OnDestroy {
       this.router.navigate(['/about-us'], { queryParams: { id: id } });
       this.setActiveSection(id);
     } else if (key == 'branches') {
-      this.router.navigate(['/our-branches'], {
-        queryParams: {
-          selected_location: id,
-          // selected_image: img,
-        }
-      });
+      // Convert location name to URL-friendly format
+      const urlFriendlyName = id
+        .toLowerCase()
+        .replace(/&/g, 'and')  // Replace & with 'and'
+        .replace(/\s+/g, '-')   // Replace spaces with hyphens
+        .replace(/[^a-z0-9-]/g, '') // Remove special characters except hyphens
+        .replace(/-+/g, '-')    // Replace multiple hyphens with single hyphen
+        .replace(/^-|-$/g, ''); // Remove leading/trailing hyphens
+      this.router.navigate(['/our-branches', urlFriendlyName]);
+      this.setActive('branches'); // Set active state for branches
     } else if (key === 'specialities') {
-      this.router.navigate(['/our-specialities-details'], {
-        queryParams: {
-          selected_speciality: label
-        }
-      });
+      const urlFriendlyName = toUrlFriendly(label);
+      this.router.navigate(['/our-specialities-details', urlFriendlyName]);
+      // routerLinkActive will handle the active state automatically
     }
     this.hoveredItem = null;
   }

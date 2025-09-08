@@ -9,6 +9,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class OurBranchesComponent {
   selectedDepartment: string | null = null;
+  selectedLocation: string | null = null;
 
   departments: string[] = []; // now dynamic
 
@@ -75,7 +76,35 @@ export class OurBranchesComponent {
   //     specialization: 'Surgical Gastroenterologist',
   //     department: 'Dermatology'
   //   },
-  // ];
+  //   ];
+
+  constructor(private router: Router, private activated_routes: ActivatedRoute, private http: HttpClient) {}
+
+  ngOnInit(): void {
+    this.activated_routes.params.subscribe(params => {
+      const locationParam = params['location'] || '';
+      if (locationParam) {
+        // Convert URL-friendly format back to original location name
+        this.selectedLocation = locationParam
+          .replace(/-/g, ' ')           // Replace hyphens with spaces
+          .replace(/and/g, '&')         // Replace 'and' with &
+          .replace(/\b\w/g, (l: string) => l.toUpperCase()); // Capitalize first letter of each word
+        
+        // Handle specific case for UDAI OMNI - Nampally
+        if (this.selectedLocation === 'Udai Omni Nampally') {
+          this.selectedLocation = 'UDAI OMNI - Nampally';
+        }
+        console.log(this.selectedLocation, 'selectedLocation..');
+        if (this.selectedLocation) {
+          this.getting_location = this.selectedLocation; // Set getting_location for display
+          this.loadDoctors(this.selectedLocation);
+        }
+      } else {
+        // If no path parameter, check for query parameters (backward compatibility)
+        this.activatedRoutesData();
+      }
+    });
+  }
 
   BRANCH_LOCATIONS: any = [
     {
@@ -83,7 +112,7 @@ export class OurBranchesComponent {
       name: 'OMNI Hospitals, Kukatpally',
       lat: 17.485269683418686,
       lng: 78.4083654749371,
-      address: 'Mumbai Hwy, opp. BIG BAZAR, Balaji Nagar, Kukatpally, Hyderabad, Telangana 500072',
+      address: 'OMNI Hospitals, Kukatpally, Hyderabad, Telangana 500072',
       phone: '1234567889'
     },
     {
@@ -98,7 +127,7 @@ export class OurBranchesComponent {
       key: 'kothapet',
       name: 'OMNI Hospitals',
       lat: 17.3686691,
-      lng: 17.3686691,
+      lng: 78.538822,
       address: 'Plot No.W-11,B-9, Sy. No.9/1/A Near SVC Cinema Theatre opp PVT Market Building Kothapet, Dilsukhnagar, Hyderabad, Telangana 500036',
       phone: '1234567889'
     },
@@ -124,9 +153,6 @@ export class OurBranchesComponent {
 
   getting_image: string = '';
   getting_location: string = '';
-  constructor(private activated_routes: ActivatedRoute, private router: Router, private http: HttpClient) {
-    this.activatedRoutesData();
-  }
 
   activatedRoutesData() {
     this.activated_routes.queryParams.subscribe(params => {
@@ -163,11 +189,31 @@ export class OurBranchesComponent {
       : this.doctors;
   }
   openDirections(location: string) {
-    console.log(location, 'location...');
+    console.log('openDirections called with:', location);
+    console.log('getting_location:', this.getting_location);
 
     const loc = location.trim().toLowerCase();
-    console.log(loc, 'loc...');
+    console.log('Processed location:', loc);
 
+    // Find the branch location from BRANCH_LOCATIONS array
+    const branchLocation = this.BRANCH_LOCATIONS.find((branch: any) => 
+      branch.key.toLowerCase() === loc || 
+      branch.name.toLowerCase().includes(loc) ||
+      loc.includes(branch.key.toLowerCase())
+    );
+    
+    console.log('Found branch location:', branchLocation);
+
+    if (branchLocation) {
+      const encodedAddress = encodeURIComponent(branchLocation.address);
+      const googleMapsUrl = `https://www.google.com/maps/dir/?api=1&destination=${encodedAddress}`;
+      console.log('Using address from BRANCH_LOCATIONS:', branchLocation.address);
+      console.log('Google Maps URL:', googleMapsUrl);
+      window.open(googleMapsUrl, '_blank');
+      return;
+    }
+
+    // Fallback to hardcoded addresses for backward compatibility
     if (loc === 'kothapet') {
       const Kothapet = encodeURIComponent(
         'OMNI Hospitals, Plot No.W-11,B-9, Sy. No.9/1/A Near SVC Cinema Theatre opp PVT Market Building Kothapet, Dilsukhnagar, Hyderabad, Telangana 500036'
@@ -176,13 +222,15 @@ export class OurBranchesComponent {
       window.open(googleMapsUrlkothapet, '_blank');
     } else if (loc === 'kukatpally') {
       const kukatpally = encodeURIComponent(
-        'OMNI Hospitals, Kukatpally, Mumbai Hwy, opp. BIG BAZAR, Balaji Nagar, Kukatpally, Hyderabad, Telangana 500072'
+        'OMNI Hospitals, Kukatpally, Hyderabad, Telangana 500072'
       );
       const googleMapsUrlkukatpally = `https://www.google.com/maps/dir/?api=1&destination=${kukatpally}`;
+      console.log('Using fallback address for Kukatpally:', 'OMNI Hospitals, Kukatpally, Hyderabad, Telangana 500072');
+      console.log('Google Maps URL:', googleMapsUrlkukatpally);
       window.open(googleMapsUrlkukatpally, '_blank');
     }
 
-    else if (loc === 'udai omni - nampally') {
+    else if (loc === 'udai omni - nampally' || loc === 'udai omni nampally' || loc.includes('udai')) {
       const nampally = encodeURIComponent(
         'Udai Omni Hospital - Orthopedics | Multispeciality | Trauma, 5-9-92/A/1, Chapel Rd, near Fateh Maidan, Fateh Maidan, Abids, Hyderabad, Telangana 500001'
       );
@@ -215,14 +263,20 @@ export class OurBranchesComponent {
     }
 
     else {
-      console.warn('Location not recognized');
+      console.warn('Location not recognized:', loc);
     }
   }
 
   goToDoctorDetails(doctor_name:string) {
-    this.router.navigate(['/doctor-details'], {
-      queryParams: { selected_doctor: doctor_name }
-    });
+    // Convert doctor name to URL-friendly format
+    const urlFriendlyName = doctor_name
+      .toLowerCase()
+      .replace(/&/g, 'and')  // Replace & with 'and'
+      .replace(/\s+/g, '-')   // Replace spaces with hyphens
+      .replace(/[^a-z0-9-]/g, '') // Remove special characters except hyphens
+      .replace(/-+/g, '-')    // Replace multiple hyphens with single hyphen
+      .replace(/^-|-$/g, ''); // Remove leading/trailing hyphens
+    this.router.navigate(['/doctor-details', urlFriendlyName]);
   }
 
 

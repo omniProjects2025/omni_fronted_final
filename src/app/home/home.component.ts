@@ -7,6 +7,7 @@ import 'owl.carousel';
 import { firstValueFrom, Observable, Subscription } from 'rxjs';
 import { UsersService } from '../users.service';
 import { VideoStateService } from '../services/video-state.service';
+import { toUrlFriendly } from '../utils/url-helper.util';
 register();
 declare var $: any;
 
@@ -686,11 +687,8 @@ export class HomeComponent implements OnInit, OnDestroy {
 
 
   goToDetails(speciality: string) {
-    this.router.navigate(['/our-specialities-details'], {
-      queryParams: {
-        selected_speciality: speciality
-      }
-    });
+    const urlFriendlyName = toUrlFriendly(speciality);
+    this.router.navigate(['/our-specialities-details', urlFriendlyName]);
   }
 
   onClickTechno(technology: string) {
@@ -838,12 +836,15 @@ onVideoPlay(idx: number): void {
     }
 
     setTimeout(() => {
-      this.router.navigate(['/our-branches'], {
-        queryParams: {
-          selected_location: location,
-          selected_image: selected_image
-        }
-      });
+      // Convert location name to URL-friendly format
+      const urlFriendlyName = location
+        .toLowerCase()
+        .replace(/&/g, 'and')  // Replace & with 'and'
+        .replace(/\s+/g, '-')   // Replace spaces with hyphens
+        .replace(/[^a-z0-9-]/g, '') // Remove special characters except hyphens
+        .replace(/-+/g, '-')    // Replace multiple hyphens with single hyphen
+        .replace(/^-|-$/g, ''); // Remove leading/trailing hyphens
+      this.router.navigate(['/our-branches', urlFriendlyName]);
     }, 300);
   }
   goToFixedSurgical() {

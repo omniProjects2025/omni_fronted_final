@@ -30,8 +30,13 @@ export class DoctorDetailsComponent {
   }
 
   ngOnInit(): void {
-    this.activated_routes.queryParams.subscribe(params => {
-      this.doctor_name = params['selected_doctor']?.trim() || '';
+    this.activated_routes.params.subscribe(params => {
+      const doctorParam = params['doctor'] || '';
+      // Convert URL-friendly format back to original doctor name
+      this.doctor_name = doctorParam
+        .replace(/-/g, ' ')           // Replace hyphens with spaces
+        .replace(/and/g, '&')         // Replace 'and' with &
+        .replace(/\b\w/g, (l: string) => l.toUpperCase()); // Capitalize first letter of each word
       console.log(this.doctor_name, 'doctor_name..');
 
       this.getDoctorDetails(); // Only call this after doctor_name is set
@@ -209,9 +214,61 @@ getDoctorDetails(): void {
           return;
         }
         
+        // Try exact match first
         this.doctors = allDoctors.filter((doctor: any) =>
           doctor.name?.trim().toLowerCase() === this.doctor_name.toLowerCase()
         );
+        
+        // If no exact match, try partial match
+        if (this.doctors.length === 0) {
+          this.doctors = allDoctors.filter((doctor: any) =>
+            doctor.name?.trim().toLowerCase().includes(this.doctor_name.toLowerCase()) ||
+            this.doctor_name.toLowerCase().includes(doctor.name?.trim().toLowerCase())
+          );
+        }
+        
+        // If still no match, try removing common prefixes/suffixes
+        if (this.doctors.length === 0) {
+          const cleanDoctorName = this.doctor_name.toLowerCase()
+            .replace(/^dr\.?\s*/i, '') // Remove "Dr." prefix
+            .replace(/\s+/g, ' ')      // Normalize spaces
+            .trim();
+          
+          this.doctors = allDoctors.filter((doctor: any) => {
+            const cleanDbName = doctor.name?.trim().toLowerCase()
+              .replace(/^dr\.?\s*/i, '') // Remove "Dr." prefix
+              .replace(/\s+/g, ' ')      // Normalize spaces
+              .trim();
+            
+            return cleanDbName === cleanDoctorName ||
+                   cleanDbName.includes(cleanDoctorName) ||
+                   cleanDoctorName.includes(cleanDbName);
+          });
+        }
+        
+        // If still no match, try fuzzy matching with word-based comparison
+        if (this.doctors.length === 0) {
+          const searchWords = this.doctor_name.toLowerCase()
+            .replace(/^dr\.?\s*/i, '')
+            .replace(/[^\w\s]/g, ' ') // Remove special characters
+            .split(/\s+/)
+            .filter((word: string) => word.length > 1); // Filter out single characters
+          
+          this.doctors = allDoctors.filter((doctor: any) => {
+            const dbWords = doctor.name?.toLowerCase()
+              .replace(/^dr\.?\s*/i, '')
+              .replace(/[^\w\s]/g, ' ')
+              .split(/\s+/)
+              .filter((word: string) => word.length > 1);
+            
+            // Check if most words match
+            const matchingWords = searchWords.filter(searchWord => 
+              dbWords.some((dbWord: string) => dbWord.includes(searchWord) || searchWord.includes(dbWord))
+            );
+            
+            return matchingWords.length >= Math.min(searchWords.length, 2); // At least 2 words or most words match
+          });
+        }
         
         // Cache the filtered data
         if (this.doctors.length > 0) {
@@ -222,12 +279,25 @@ getDoctorDetails(): void {
           localStorage.setItem(cacheKey, JSON.stringify(cacheData));
         }
         
+        console.log('=== DOCTOR SEARCH DEBUG ===');
+        console.log('Searching for doctor:', this.doctor_name);
+        console.log('Total doctors in database:', allDoctors.length);
+        console.log('Found doctors:', this.doctors.length);
+        console.log('Sample doctor names:', allDoctors.slice(0, 5).map((d: any) => d.name));
+        console.log('=== END DEBUG ===');
         console.log(this.doctors, 'doctors...');
         this.isLoading = false;
         
         if (this.doctors.length === 0) {
           this.hasError = true;
           this.errorMessage = `No doctor found with name: ${this.doctor_name}`;
+          
+          // Debug: Show all available doctor names for troubleshooting
+          console.log('=== DEBUG: All available doctor names ===');
+          allDoctors.forEach((doctor: any, index: number) => {
+            console.log(`${index + 1}. "${doctor.name}"`);
+          });
+          console.log('=== End of doctor names ===');
         }
       } catch (error) {
         console.error('Error processing doctor data:', error);

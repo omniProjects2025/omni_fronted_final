@@ -1071,43 +1071,43 @@ a {
 
 /* Zoom-responsive video fixes - preserves existing layout */
 @media (min-resolution: 1.5dppx) {
-  .video-embed-wrapper {
+  /* .video-embed-wrapper {
     height: auto;
     min-height: 200px;
     max-height: 300px;
-  }
+  } */
   
-  .video-thumbnail, .video-iframe-container {
+  /* .video-thumbnail, .video-iframe-container {
     height: 100%;
     min-height: 200px;
-  }
+  } */
 }
 
 @media (min-resolution: 2dppx) {
-  .video-embed-wrapper {
+  /* .video-embed-wrapper {
     height: auto;
     min-height: 180px;
     max-height: 280px;
-  }
+  } */
   
-  .video-thumbnail, .video-iframe-container {
+  /* .video-thumbnail, .video-iframe-container {
     height: 100%;
     min-height: 180px;
-  }
+  } */
 }
 
 /* High zoom level handling */
 @media (min-resolution: 3dppx) {
-  .video-embed-wrapper {
+  /* .video-embed-wrapper {
     height: auto;
     min-height: 160px;
     max-height: 260px;
-  }
+  } */
   
-  .video-thumbnail, .video-iframe-container {
+  /* .video-thumbnail, .video-iframe-container {
     height: 100%;
     min-height: 160px;
-  }
+  } */
 }
 
 /* Tablet - Force 4 in one row */

@@ -273,6 +273,7 @@ export class OurDoctorsComponent implements OnInit, AfterViewInit, OnDestroy {
     // Convert doctor name to URL-friendly format
     const urlFriendlyName = doctor_name
       .toLowerCase()
+      .replace(/^dr\.?\s*/i, 'dr-')  // Handle Dr prefix properly
       .replace(/&/g, 'and')  // Replace & with 'and'
       .replace(/\s+/g, '-')   // Replace spaces with hyphens
       .replace(/[^a-z0-9-]/g, '') // Remove special characters except hyphens

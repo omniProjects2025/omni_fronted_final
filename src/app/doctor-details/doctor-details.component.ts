@@ -34,8 +34,9 @@ export class DoctorDetailsComponent {
       const doctorParam = params['doctor'] || '';
       // Convert URL-friendly format back to original doctor name
       this.doctor_name = doctorParam
+        .replace(/^dr-/, 'Dr ')        // Handle Dr prefix properly
         .replace(/-/g, ' ')           // Replace hyphens with spaces
-        .replace(/and/g, '&')         // Replace 'and' with &
+        .replace(/\band\b/g, '&')    // Replace 'and' with & (only whole words)
         .replace(/\b\w/g, (l: string) => l.toUpperCase()); // Capitalize first letter of each word
       console.log(this.doctor_name, 'doctor_name..');
 
@@ -254,20 +255,38 @@ getDoctorDetails(): void {
             .split(/\s+/)
             .filter((word: string) => word.length > 1); // Filter out single characters
           
-          this.doctors = allDoctors.filter((doctor: any) => {
+          // Calculate match scores for all doctors
+          const doctorsWithScores = allDoctors.map((doctor: any) => {
             const dbWords = doctor.name?.toLowerCase()
               .replace(/^dr\.?\s*/i, '')
               .replace(/[^\w\s]/g, ' ')
               .split(/\s+/)
-              .filter((word: string) => word.length > 1);
+              .filter((word: string) => word.length > 1) || [];
             
-            // Check if most words match
+            // Calculate match score
             const matchingWords = searchWords.filter(searchWord => 
               dbWords.some((dbWord: string) => dbWord.includes(searchWord) || searchWord.includes(dbWord))
             );
             
-            return matchingWords.length >= Math.min(searchWords.length, 2); // At least 2 words or most words match
+            const matchScore = matchingWords.length;
+            const totalWords = Math.max(searchWords.length, dbWords.length);
+            const matchPercentage = matchScore / totalWords;
+            
+            return { doctor, matchScore, matchPercentage };
           });
+          
+          // Filter doctors with at least 2 matching words and sort by match score
+          this.doctors = doctorsWithScores
+            .filter((item: any) => item.matchScore >= Math.min(searchWords.length, 2))
+            .sort((a: any, b: any) => {
+              // First sort by match percentage (higher is better)
+              if (b.matchPercentage !== a.matchPercentage) {
+                return b.matchPercentage - a.matchPercentage;
+              }
+              // Then by match score (higher is better)
+              return b.matchScore - a.matchScore;
+            })
+            .map((item: any) => item.doctor);
         }
         
         // Cache the filtered data

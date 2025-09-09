@@ -64,7 +64,6 @@
 }
 
 .doctor-profile-img {
-  border: 4px solid #008cdb;
   border-radius: 50%;
   box-shadow: 0 8px 25px rgba(0, 143, 213, 0.3);
   transition: transform 0.3s ease;

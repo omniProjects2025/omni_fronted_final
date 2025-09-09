@@ -53,7 +53,7 @@ export class OurDoctorsComponent implements OnInit, AfterViewInit, OnDestroy {
       console.log('Using cached data from localStorage:', cachedData.length, 'doctors');
       this.processCachedData(cachedData);
       this.isLoading = false;
-      this.cdr.markForCheck();
+      this.cdr.detectChanges(); // Use detectChanges instead of markForCheck for immediate update
     } else {
       console.log('No cached data found, making API call');
       this.getDoctorDetails();
@@ -164,7 +164,7 @@ export class OurDoctorsComponent implements OnInit, AfterViewInit, OnDestroy {
     
     this.ensureFilledView();
     setTimeout(() => this.observeSentinel(), 0);
-    this.cdr.markForCheck(); // Add this to trigger change detection
+    this.cdr.detectChanges(); // Use detectChanges for immediate update
   }
 
   private cacheData(data: any[]) {
@@ -183,9 +183,9 @@ export class OurDoctorsComponent implements OnInit, AfterViewInit, OnDestroy {
       const cached = localStorage.getItem('doctors_cache');
       if (cached) {
         const parsed = JSON.parse(cached);
-        // Cache valid for 1 hour (3600000ms)
-        // For development, you can reduce this to 300000ms (5 minutes)
-        const cacheDuration = 3600000; // 1 hour
+        // Cache valid for 5 minutes (300000ms) for better data freshness
+        // This ensures database updates are reflected within 5 minutes
+        const cacheDuration = 5 * 60 * 1000; // 5 minutes
         if (Date.now() - parsed.timestamp < cacheDuration) {
           console.log('Using cached data from localStorage');
           return parsed.data;
@@ -212,6 +212,15 @@ export class OurDoctorsComponent implements OnInit, AfterViewInit, OnDestroy {
     } catch (error) {
       console.warn('Failed to clear caches:', error);
     }
+  }
+
+  // Public method to force refresh data (useful for admin updates)
+  public forceRefresh(): void {
+    console.log('Force refreshing doctor data...');
+    this.clearAllCaches();
+    this.isLoading = true;
+    this.cdr.detectChanges();
+    this.getDoctorDetails();
   }
 
   onLocationChange() {

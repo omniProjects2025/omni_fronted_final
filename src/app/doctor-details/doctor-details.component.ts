@@ -167,11 +167,19 @@ export class DoctorDetailsComponent {
   clearCache() {
     // Clear all doctor-related cache
     Object.keys(localStorage).forEach(key => {
-      if (key.startsWith('doctor_')) {
+      if (key.startsWith('doctor_') || key === 'doctors_cache') {
         localStorage.removeItem(key);
       }
     });
+    // Also clear service cache
+    this.doctorservice.clearCache();
     this.getDoctorDetails();
+  }
+
+  // Method to force refresh data (useful for admin updates)
+  public forceRefresh(): void {
+    console.log('Force refreshing doctor details...');
+    this.clearCache();
   }
 
 getDoctorDetails(): void {
@@ -188,16 +196,20 @@ getDoctorDetails(): void {
       const parsedData = JSON.parse(cachedData);
       const cacheTime = parsedData.timestamp;
       const now = Date.now();
-      const cacheExpiry = 5 * 60 * 1000; // 5 minutes cache
+      const cacheExpiry = 2 * 60 * 1000; // 2 minutes cache for individual doctor pages
       
       if (now - cacheTime < cacheExpiry) {
         this.doctors = parsedData.data;
         this.isLoading = false;
         console.log('Using cached doctor data');
         return;
+      } else {
+        // Remove expired cache
+        localStorage.removeItem(cacheKey);
       }
     } catch (e) {
       console.warn('Failed to parse cached data:', e);
+      localStorage.removeItem(cacheKey);
     }
   }
 

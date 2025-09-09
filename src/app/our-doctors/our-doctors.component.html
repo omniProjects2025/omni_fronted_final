@@ -22,6 +22,12 @@
         <div class="line line-left"></div>
         <span class="title_text">OUR DOCTORS</span>
         <div class="line line-right"></div>
+        <!-- Refresh button for admin use -->
+        <button class="btn btn-outline-primary btn-sm ms-3" 
+                (click)="forceRefresh()" 
+                title="Refresh doctor data">
+            <i class="fas fa-sync-alt"></i> Refresh
+        </button>
     </div>
 
     <div class="container pb-2">

@@ -111,7 +111,7 @@ export class DoctorDetailsComponent {
       { Attribute: "Phone", Value: this.appointmentData.mobileNumber },
       { Attribute: "EmailAddress", Value: this.appointmentData.emailId },
       { Attribute: "mx_City", Value: this.appointmentData.location },
-      { Attribute: "mx_Department", Value: this.selectedDoctor?.depertment || '' },
+      { Attribute: "mx_Department", Value: this.selectedDoctor?.department || '' },
       { Attribute: "Description", Value: `Appointment request for Dr. ${this.selectedDoctor?.name}. ${this.appointmentData.message}` },
       { Attribute: "Source", Value: "Website - Doctor Profile Appointment" },
       { Attribute: "mx_DoctorName", Value: this.selectedDoctor?.name || '' }

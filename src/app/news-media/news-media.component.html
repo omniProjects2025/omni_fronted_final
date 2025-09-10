@@ -40,7 +40,7 @@
                 <!-- Fixed-height video wrapper -->
                 <div class="video-embed-wrapper">
                   <div *ngIf="!isVideoPlaying(idx)" class="video-thumbnail" (click)="playVideo(idx)">
-                    <img [src]="'https://img.youtube.com/vi/' + testimonial.thumbnailUrl + '/hqdefault.jpg'" class="w-100 h-100 object-fit-cover" [alt]="'Video thumbnail for ' + testimonial.thumbnailUrl" />
+                    <img [src]="'https://img.youtube.com/vi/' + testimonial.thumbnailUrl + '/maxresdefault.jpg'" class="w-100 h-100 object-fit-cover" [alt]="'Video thumbnail for ' + testimonial.thumbnailUrl" />
                     <div class="play-button">&#9654;</div>
                   </div>
                   <div *ngIf="isVideoPlaying(idx)" class="video-iframe-container">

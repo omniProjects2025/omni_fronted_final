@@ -189,12 +189,12 @@
   </div>
 
   <section class="pb-3 px-0 mx-2">
-    <ul class="nav d-md-none tabs_scroll border-none" id="mobileTab" role="tablist">
+    <ul class="nav d-md-none d-flex align-items-center justify-content-center tabs_scroll border-none" id="mobileTab" role="tablist">
       <li class="nav-item" role="presentation">
         <button class="nav-link active" id="vision-tab" data-bs-toggle="tab" data-bs-target="#vision" type="button"
           role="tab" aria-controls="vision" aria-selected="true">
           <div
-            class="d-flex gap-2 justify-content-start text-white bg_ltgreen mobile_left_box text-center py-2 ps-2 align-items-center">
+            class="d-flex gap-2 justify-content-start text-white bg_ltgreen mobile_left_box text-center align-items-center">
             <img class="mobile_eye_wh" src="assets/about_us/best_class_treatment.png" alt="">
           </div>
         </button>
@@ -307,10 +307,10 @@
       <div class="col-md-9" [ngClass]="{'order-md-1': i % 2 !== 0}">
         <div class="text-center" [ngClass]="i % 2 == 0 ? 'text-md-start' : 'text-md-end'">
           <h5 class="text_success fw-bold mb-0">{{ leader.name }}</h5>
-          <p class="dep_text fw-semibold mb-2">{{ leader.designation }}</p>
+          <p class="dep_text fw-semibold mb-2 fs-6">{{ leader.designation }}</p>
           <img src="assets/about_us/{{i % 2 == 0 ? 'right_trans.svg' : 'left_trans.svg'}}" alt="leadership border">
         </div>
-        <p class="text-dark {{i%2 ==0?'':'text_right'}}" style="font-family: 'Lato', sans-serif;">{{ leader.description }}</p>
+        <p class="text-dark text-align-justify px-md-o px-3 {{i%2 ==0?'':'text-md-align-right'}}" style="font-family: 'Lato', sans-serif;">{{ leader.description }}</p>
       </div>
     </div>
   </div>

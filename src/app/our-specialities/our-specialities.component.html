@@ -25,10 +25,6 @@
       </p>
 
       <div class="scrolling-wrapper d-flex flex-nowrap overflow-auto hide-scrollbar py-3">
-        <button class="btn filter-btn me-2 btn_padding flex-shrink-0"
-          [ngClass]="{ 'active-btn': selectedLocation === 'All' }" (click)="filterByLocation('All')">
-          All Departments
-        </button>
         <button *ngFor="let location of locations" class="btn filter-btn me-2 btn_padding flex-shrink-0"
           [ngClass]="{ 'active-btn': selectedLocation === location }" (click)="filterByLocation(location)">
           {{ location }}

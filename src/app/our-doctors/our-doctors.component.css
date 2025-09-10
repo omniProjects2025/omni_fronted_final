@@ -180,6 +180,7 @@ select.form-select {
   justify-content: center;
   align-items: center;
   padding: 50px 0;
+  min-height: 400px;
 }
 
 .loader-image {
@@ -248,6 +249,18 @@ select.form-select {
     background-position: -200% 0;
   }
 }
+
+/* Loading animation improvements */
+.spinner-border {
+  animation: spinner-border 0.75s linear infinite;
+}
+
+@keyframes spinner-border {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 
 @media (max-width: 768px) {
   .skeleton-card {

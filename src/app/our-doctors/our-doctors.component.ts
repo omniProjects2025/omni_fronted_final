@@ -85,7 +85,7 @@ export class OurDoctorsComponent implements OnInit, AfterViewInit, OnDestroy {
     this.doctorservice.getDoctors()
       .pipe(
         take(1),
-        retry(2), // Retry failed requests twice
+        retry(2), // Back to 2 retries
         catchError((error) => {
           console.error('Error loading doctors:', error);
           this.isLoading = false;
@@ -106,12 +106,20 @@ export class OurDoctorsComponent implements OnInit, AfterViewInit, OnDestroy {
             console.log('Processing doctor data:', data.data.length, 'doctors');
             this.processDoctorData(data.data);
             this.cacheData(this.allDoctorsFlat);
-            this.cdr.markForCheck(); // Add this to trigger change detection
+            this.cdr.markForCheck();
           } else {
             console.log('No data received from API');
           }
         }
       });
+  }
+
+  // Method to manually retry loading
+  retryLoading() {
+    console.log('Manual retry triggered');
+    this.isLoading = true;
+    this.cdr.markForCheck();
+    this.getDoctorDetails();
   }
 
   private processDoctorData(rawData: any[]) {
@@ -164,7 +172,7 @@ export class OurDoctorsComponent implements OnInit, AfterViewInit, OnDestroy {
     
     this.ensureFilledView();
     setTimeout(() => this.observeSentinel(), 0);
-    this.cdr.markForCheck(); // Add this to trigger change detection
+    this.cdr.markForCheck();
   }
 
   private cacheData(data: any[]) {

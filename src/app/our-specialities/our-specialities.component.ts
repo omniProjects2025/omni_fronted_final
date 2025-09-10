@@ -9,8 +9,8 @@ import { toUrlFriendly } from '../utils/url-helper.util';
   styleUrls: ['./our-specialities.component.css']
 })
 export class OurSpecialitiesComponent {
-  selectedLocation: string = 'All';
-  locations: string[] = ['Kothapet', 'Kukatpally', 'Nampally', 'Vizag', 'Kurnool'];
+  selectedLocation: string = 'Kukatpally';
+  locations: string[] = ['Kukatpally', 'Kothapet', 'Nampally', 'Vizag', 'Kurnool'];
   specialties: any[] = [];
   filteredSpecialties: any[] = [];
 
@@ -36,9 +36,7 @@ export class OurSpecialitiesComponent {
 
   filterByLocation(location: string) {
     this.selectedLocation = location;
-    this.filteredSpecialties = location === 'All'
-      ? this.specialties
-      : this.specialties.filter(s => s.location.includes(location));
+    this.filteredSpecialties = this.specialties.filter(s => s.location.includes(location));
     console.log(this.filteredSpecialties, 'filteredSpecialties...');
 
   }

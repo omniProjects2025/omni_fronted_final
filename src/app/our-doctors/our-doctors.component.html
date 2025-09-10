@@ -34,8 +34,12 @@
         <div class="row mx-1">
             <!-- Left Column: Doctors List -->
             <div class="col-lg-8 col-12 mb-4">
-                <div *ngIf="doctors.length === 0" class="text-center py-5 text-muted fw-medium">
-                    No doctors found. Try adjusting your filters.
+                <div *ngIf="doctors.length === 0 && !isLoading" class="text-center py-5 text-muted fw-medium">
+                    <div class="mb-3">
+                        <i class="fas fa-user-md fa-3x text-muted"></i>
+                    </div>
+                    <h5>No doctors found</h5>
+                    <p>Try adjusting your filters.</p>
                 </div>
 
                 <div *ngFor="let details of visibleDoctors; index as i; trackBy: trackByDoctorId"

@@ -27,8 +27,8 @@ export class DoctordetailsService {
     this.cache = this.http.get(`${this.BASE_URL}/getdoctors`, { 
       withCredentials: true 
     }).pipe(
-      timeout(10000), // 10 second timeout
-      retry(2), // Retry twice on failure
+      timeout(10000), // Back to 10 second timeout
+      retry(2), // Back to 2 retries
       shareReplay(1), // Share the result among multiple subscribers
       catchError(this.handleError.bind(this))
     );

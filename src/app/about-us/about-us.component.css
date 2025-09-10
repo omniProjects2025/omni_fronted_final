@@ -139,4 +139,7 @@ p {
 .right_74{
   right: 15% !important;
 }
+h2 {
+  font-size: clamp(1rem, 2vw + 0.5rem, 2rem) !important;
+}
 

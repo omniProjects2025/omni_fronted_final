@@ -509,7 +509,7 @@ textarea.form-control {
 
 .testimonial-item {
   padding: 20px 15px;
-  height: 100%;
+  height: 192px;
   border-radius: 15px;
   overflow: hidden;
   transition: transform 0.3s ease-in-out;

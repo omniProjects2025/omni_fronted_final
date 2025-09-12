@@ -12,13 +12,6 @@ export class OurSpecialitiesService {
   //  private BASE_URL = 'http://localhost:3000'; 
   //  private BASE_URL = 'https://omniservicebackend.onrender.com'; 
 
-<<<<<<< HEAD
-  private BASE_URL = 'http://api.omni-hospitals.in:3000';
-=======
-  // private BASE_URL = 'https://omniservicebackend-vnyk.onrender.com';\
-
-
->>>>>>> 006185b059c1a1cc19ccaf241107085b3f850de6
   private specialtiesCache$: Observable<any> | null = null;
   private cacheTimestamp: number = 0;
   private readonly CACHE_DURATION = 5 * 60 * 1000; // 5 minutes cache

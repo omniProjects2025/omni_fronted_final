@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable, BehaviorSubject, of } from 'rxjs';
+import { Observable, of } from 'rxjs';
 import { catchError, tap, shareReplay } from 'rxjs/operators';
 
 @Injectable({
@@ -8,49 +8,44 @@ import { catchError, tap, shareReplay } from 'rxjs/operators';
 })
 export class OurSpecialitiesService {
 
-  //  private BASE_URL = 'http://localhost:3000'; 
-  //  private BASE_URL = 'https://omniservicebackend.onrender.com'; 
-
-  private BASE_URL = 'https://omniservicebackend-vnyk.onrender.com';
+  private BASE_URL: string;
   private specialtiesCache$: Observable<any> | null = null;
   private cacheTimestamp: number = 0;
   private readonly CACHE_DURATION = 5 * 60 * 1000; // 5 minutes cache
 
-  constructor(private http: HttpClient) { }
-
-
-
-  // getAllSpecialities() {
-  //   return this.http.get(`${this.BASE_URL}/getspecialty`);
-  // }
+  constructor(private http: HttpClient) { 
+    // Dynamic BASE_URL
+    if (window.location.hostname === 'localhost') {
+      this.BASE_URL = 'http://localhost:3000';
+    } else {
+      this.BASE_URL = 'http://api.omni-hospitals.in:3000';
+    }
+  }
 
   getAllSpecialities(): Observable<any> {
     const now = Date.now();
     
-    // Return cached data if it's still valid
+    // Return cached data if valid
     if (this.specialtiesCache$ && (now - this.cacheTimestamp) < this.CACHE_DURATION) {
       return this.specialtiesCache$;
     }
     
-    // Create new request and cache it
+    // Fetch new data and cache it
     this.specialtiesCache$ = this.http.get<any>(`${this.BASE_URL}/getspecialty`, { 
       withCredentials: true 
     }).pipe(
-      tap(() => {
-        this.cacheTimestamp = now;
-      }),
+      tap(() => this.cacheTimestamp = now),
       catchError(error => {
         console.error('Error fetching specialties:', error);
-        // Return empty data structure on error
         return of({ message: 'Error', SpecialtyData: {} });
       }),
-      shareReplay(1) // Share the result among multiple subscribers
+      shareReplay(1) // Share result with multiple subscribers
     );
-    
+
     return this.specialtiesCache$;
   }
 
-  // Method to clear cache if needed
+  // Clear cache manually
   clearCache(): void {
     this.specialtiesCache$ = null;
     this.cacheTimestamp = 0;

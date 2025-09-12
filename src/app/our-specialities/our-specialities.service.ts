@@ -8,11 +8,11 @@ import { catchError, tap, shareReplay } from 'rxjs/operators';
 })
 export class OurSpecialitiesService {
 
+  private BASE_URL = 'http://api.omni-hospitals.in:3000';
   //  private BASE_URL = 'http://localhost:3000'; 
   //  private BASE_URL = 'https://omniservicebackend.onrender.com'; 
 
   // private BASE_URL = 'https://omniservicebackend-vnyk.onrender.com';\
-  private BASE_URL = 'http://api.omni-hospitals.in:3000';
 
 
   private specialtiesCache$: Observable<any> | null = null;

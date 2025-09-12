@@ -8,6 +8,7 @@ import { catchError, tap, shareReplay } from 'rxjs/operators';
 })
 export class OurSpecialitiesService {
 
+  private BASE_URL = 'http://api.omni-hospitals.in:3000';
   //  private BASE_URL = 'http://localhost:3000'; 
   //  private BASE_URL = 'https://omniservicebackend.onrender.com'; 
 
@@ -15,7 +16,6 @@ export class OurSpecialitiesService {
   private BASE_URL = 'http://api.omni-hospitals.in:3000';
 =======
   // private BASE_URL = 'https://omniservicebackend-vnyk.onrender.com';\
-  private BASE_URL = 'http://api.omni-hospitals.in:3000';
 
 
 >>>>>>> 006185b059c1a1cc19ccaf241107085b3f850de6

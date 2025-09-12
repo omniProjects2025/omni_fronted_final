@@ -29,13 +29,41 @@ yarn-error.log
 .history/*
 
 # Miscellaneous
-/.angular/cache
+/.angular
 .sass-cache/
 /connect.lock
 /coverage
 /libpeerconnection.log
 testem.log
 /typings
+
+.htaccess
+
+/api.omni-hospitals.in
+
+# Angular build output inside public_html
+/*.js
+/*.css
+/*.html
+/*.ico
+/*.txt
+/*.zip
+/assets
+/3rdpartylicenses.txt
+
+# Angular build output
+/dist
+/public_html/dist
+/public_html/*.js
+/public_html/*.css
+/public_html/*.html
+/public_html/*.ico
+/public_html/*.txt
+/public_html/*.zip
+
+# Angular cache
+/.angular
+
 
 # System files
 .DS_Store

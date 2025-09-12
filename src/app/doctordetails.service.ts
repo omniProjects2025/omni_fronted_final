@@ -8,7 +8,8 @@ import { catchError, retry, shareReplay, timeout } from 'rxjs/operators';
 })
 export class DoctordetailsService {
   // private BASE_URL = 'http://localhost:3000';
-  private BASE_URL = 'https://omniservicebackend-vnyk.onrender.com';
+  // private BASE_URL = 'https://omniservicebackend-vnyk.onrender.com';
+  private BASE_URL = 'http://api.omni-hospitals.in:3000';
   private cache: Observable<any> | null = null;
   private readonly CACHE_DURATION = 2 * 60 * 1000; // 2 minutes for better data freshness
   private lastFetchTime = 0;

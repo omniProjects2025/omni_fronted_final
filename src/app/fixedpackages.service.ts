@@ -11,7 +11,8 @@ export class FixedpackagesService {
 
   // private BASE_URL = 'http://localhost:3000';
   // private BASE_URL = 'https://omniservicebackend.onrender.com';
-  private BASE_URL = 'https://omniservicebackend-vnyk.onrender.com';
+  // private BASE_URL = 'https://omniservicebackend-vnyk.onrender.com';
+  private BASE_URL = 'http://api.omni-hospitals.in:3000';
 
 
   constructor(private http: HttpClient) { }

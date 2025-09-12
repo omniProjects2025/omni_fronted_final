@@ -43,7 +43,6 @@ export class OurSpecialitiesComponent implements OnInit {
     this.loadSpecialties();
   }
 
-
   private setDefaultMetaTags() {
     this.titleService.setTitle('Our Specialities - OMNI Hospitals | Best Multispecialty Hospital in Hyderabad');
     this.metaService.updateTag({ 
@@ -61,20 +60,19 @@ export class OurSpecialitiesComponent implements OnInit {
       next: (response) => {
         this.isLoading = false;
         
-        // Simple and clear data extraction
+        // Extract specialties data from API response
         if (response?.SpecialtyData?.[0]) {
           this.specialtiesData = response.SpecialtyData[0];
-          console.log('✅ Data loaded successfully:', Object.keys(this.specialtiesData));
           this.filterByLocation(this.selectedLocation);
         } else {
           this.errorMessage = 'No specialties data found';
-          console.error('❌ Invalid API response structure');
+          console.error('Invalid API response structure');
         }
       },
       error: (error) => {
         this.isLoading = false;
         this.errorMessage = 'Failed to load specialties. Please try again later.';
-        console.error('❌ API Error:', error);
+        console.error('API Error:', error);
       }
     });
   }
@@ -82,15 +80,12 @@ export class OurSpecialitiesComponent implements OnInit {
   filterByLocation(location: string) {
     this.selectedLocation = location;
     
-    // Simple data filtering
+    // Filter specialties by location
     const specialties = this.specialtiesData[location] || [];
     this.filteredSpecialties = specialties.map(specialty => ({
       ...specialty,
-      blue_icon: specialty.icon // Use icon as blue_icon for consistency
+      blue_icon: specialty.icon
     }));
-    
-    console.log(`📍 ${location}: ${this.filteredSpecialties.length} specialties loaded`);
-    console.log('Specialties:', this.filteredSpecialties.map(s => s.name));
     
     this.updateMetaTagsForLocation(location);
   }
@@ -99,19 +94,55 @@ export class OurSpecialitiesComponent implements OnInit {
     const specialties = this.filteredSpecialties;
     const specialtyNames = specialties.map(s => s.name).join(', ');
     
-    this.titleService.setTitle(`${location} Specialities - OMNI Hospitals | Expert Medical Care`);
+    // Check if any specialty has meta_title and meta_description from API
+    const specialtyWithMeta = specialties.find(s => s.meta_title && s.meta_description);
     
-    const description = specialties.length > 0 
-      ? `Expert medical specialties at OMNI Hospitals ${location}: ${specialtyNames}. Book your consultation today.`
-      : `OMNI Hospitals ${location} - Expert medical care and treatment.`;
+    if (specialtyWithMeta) {
+      // Use the first specialty's meta data that has both title and description
+      console.log(`📄 Using API meta data for ${location}:`, {
+        title: specialtyWithMeta.meta_title,
+        description: specialtyWithMeta.meta_description
+      });
+      this.titleService.setTitle(specialtyWithMeta.meta_title);
+      this.metaService.updateTag({ name: 'description', content: specialtyWithMeta.meta_description });
+    } else {
+      // Fallback to default meta tags
+      console.log(`📄 Using default meta tags for ${location}`);
+      this.titleService.setTitle(`${location} Specialities - OMNI Hospitals | Expert Medical Care`);
       
-    this.metaService.updateTag({ name: 'description', content: description });
+      const description = specialties.length > 0 
+        ? `Expert medical specialties at OMNI Hospitals ${location}: ${specialtyNames}. Book your consultation today.`
+        : `OMNI Hospitals ${location} - Expert medical care and treatment.`;
+        
+      this.metaService.updateTag({ name: 'description', content: description });
+    }
+    
     this.metaService.updateTag({ name: 'keywords', content: `${location}, medical specialties, ${specialtyNames}, OMNI hospitals` });
   }
 
   goToDetails(speciality: string) {
     const urlFriendlyName = toUrlFriendly(speciality);
     this.router.navigate(['/our-specialities-details', urlFriendlyName]);
+  }
+
+  onSpecialtyClick(specialty: Specialty) {
+    // Update meta tags with the specific specialty's meta data
+    if (specialty.meta_title && specialty.meta_description) {
+      console.log(`🎯 Using specialty-specific meta data:`, {
+        specialty: specialty.name,
+        title: specialty.meta_title,
+        description: specialty.meta_description
+      });
+      this.titleService.setTitle(specialty.meta_title);
+      this.metaService.updateTag({ name: 'description', content: specialty.meta_description });
+    } else {
+      console.log(`🎯 No meta data for ${specialty.name}, using location-based meta tags`);
+      // Fallback to location-based meta tags
+      this.updateMetaTagsForLocation(this.selectedLocation);
+    }
+    
+    // Navigate to specialty details
+    this.goToDetails(specialty.name);
   }
 
   retryLoading() {

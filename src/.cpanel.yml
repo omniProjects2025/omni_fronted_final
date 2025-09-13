@@ -1,0 +1,8 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/omni/public_html   # <-- Change if you want subfolder
+    - /bin/rm -rf $DEPLOYPATH/*                  # Clear old files
+    - /bin/npm install --legacy-peer-deps        # Install dependencies
+    - /bin/npm run build --prod                  # Build Angular
+    - /bin/cp -R dist/<your-angular-project-name>/* $DEPLOYPATH/

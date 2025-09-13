@@ -1,6 +1,6 @@
 import { Component, AfterViewInit, ViewChild, ElementRef, NgZone, ChangeDetectionStrategy, ChangeDetectorRef, OnDestroy, HostListener, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { DoctordetailsService } from '../doctordetails.service';
+import { DoctorDetailsService } from '../services/doctor-details.service';
 import { finalize, take, catchError, retry, shareReplay } from 'rxjs/operators';
 import { of, BehaviorSubject } from 'rxjs';
 
@@ -35,7 +35,7 @@ export class OurDoctorsComponent implements OnInit, AfterViewInit, OnDestroy {
 
   constructor(
     private router: Router,
-    private doctorservice: DoctordetailsService,
+    private doctorservice: DoctorDetailsService,
     private ngZone: NgZone,
     private cdr: ChangeDetectorRef
   ) { }

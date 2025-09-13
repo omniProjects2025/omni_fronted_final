@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { DatePipe } from '@angular/common';
+import { environment } from '../../environments/environment';
 
 @Component({
   selector: 'app-careers',
@@ -10,8 +11,7 @@ import { DatePipe } from '@angular/common';
   styleUrls: ['./careers.component.css']
 })
 export class CareersComponent {
-  // private BASE_URL =  'http://localhost:3000';
-  private BASE_URL = 'https://omniservicebackend-vnyk.onrender.com';
+  private BASE_URL = environment.apiBaseUrl;
   currentTab: 'openings' | 'joiners' | 'apply' = 'openings';
   today = new Date();
   applyForm: FormGroup;
@@ -280,7 +280,17 @@ socialShare(){
     formData.append('position', this.applyForm.get('position')!.value);
     formData.append('resume', this.selectedFile!, this.selectedFile!.name);
 
-    this.http.post(`${this.BASE_URL}/send-email`, formData).subscribe({
+    // Temporarily use debug endpoint to see what's being sent
+    console.log('Sending FormData with:', {
+      firstName: formData.get('firstName'),
+      lastName: formData.get('lastName'),
+      phone: formData.get('phone'),
+      email: formData.get('email'),
+      position: formData.get('position'),
+      resume: formData.get('resume')
+    });
+    
+    this.http.post(`${this.BASE_URL}/send-email-debug`, formData).subscribe({
       next: () => {
         this.successMessage = 'Application submitted successfully! We will contact you soon.';
         this.applyForm.reset();

@@ -1,9 +1,10 @@
 import { ChangeDetectorRef, Component, Renderer2 } from '@angular/core';
-import { HealthPackageService } from '../health-package.service';
+import { HealthPackageService } from '../services/health-package.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { HttpClient } from '@angular/common/http';
+import { environment } from '../../environments/environment';
 declare var $: any;
 interface HealthPackage {
   _id: string;
@@ -279,10 +280,8 @@ export class PackageDetailsComponent {
       { Attribute: 'Source', Value: 'Website - Package Booking' }
     ];
 
-    const accessKey = 'u$r56afea08b32d556818ad1a5f69f0e7f0';
-    const secretKey = '8d7f86d677dadaba209b4dead3cfcc4ab019031b';
-    const api_url_base = 'https://api-in21.leadsquared.com/v2/';
-    const url = `${api_url_base}LeadManagement.svc/Lead.Capture?accessKey=${accessKey}&secretKey=${secretKey}`;
+    // SECURITY: LeadSquared API calls now go through backend proxy
+    const url = `${environment.leadsquared.baseUrl}/submit`;
     this.http.post(url, payload, { headers: { 'Content-Type': 'application/json' } })
       .subscribe({
         next: (res) => {

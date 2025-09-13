@@ -2,8 +2,8 @@ import { ChangeDetectorRef, Component, Renderer2, AfterViewInit } from '@angular
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
-import { FixedpackagesService } from '../fixedpackages.service';
-import { UsersService } from '../users.service';
+import { FixedPackagesService } from '../services/fixed-packages.service';
+import { UsersService } from '../services/users.service';
 declare var $: any;
 
 @Component({
@@ -143,7 +143,7 @@ export class FixedSurgeryDetailsComponent implements AfterViewInit {
     private fb: FormBuilder,
     private sanitizer: DomSanitizer,
     private cdr: ChangeDetectorRef,
-    private fixedPackagesService: FixedpackagesService,
+    private fixedPackagesService: FixedPackagesService,
     private userservice: UsersService
   ) {
   }

@@ -2,7 +2,8 @@ import { HttpClient } from '@angular/common/http';
 import { Component, Renderer2 } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { HealthPackageService } from '../health-package.service';
+import { environment } from '../../environments/environment';
+import { HealthPackageService } from '../services/health-package.service';
 import { take } from 'rxjs/operators';
 
 @Component({
@@ -139,10 +140,8 @@ submitPackageForm() {
     { Attribute: 'Source', Value: 'Website - Package Booking' }
   ];
 
-  const accessKey = 'u$r56afea08b32d556818ad1a5f69f0e7f0';
-  const secretKey = '8d7f86d677dadaba209b4dead3cfcc4ab019031b';
-  const api_url_base = 'https://api-in21.leadsquared.com/v2/';
-  const url = `${api_url_base}LeadManagement.svc/Lead.Capture?accessKey=${accessKey}&secretKey=${secretKey}`;
+  // LeadSquared API call (matching working pages)
+  const url = `${environment.leadsquared.baseUrl}LeadManagement.svc/Lead.Capture?accessKey=${environment.leadsquared.accessKey}&secretKey=${environment.leadsquared.secretKey}`;
 
   this.http.post(url, payload, { headers: { 'Content-Type': 'application/json' } })
     .subscribe({

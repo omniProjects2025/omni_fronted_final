@@ -2,8 +2,8 @@ import { HttpClient } from '@angular/common/http';
 import { ChangeDetectorRef, Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Title, Meta } from '@angular/platform-browser';
-import { DoctordetailsService } from '../doctordetails.service';
-import { BlogDetailsDataService } from './blog-details-data.service';
+import { DoctorDetailsService } from '../services/doctor-details.service';
+import { BlogDetailsService } from '../services/blog-details.service';
 
 @Component({
   selector: 'app-blog-details-data',
@@ -21,7 +21,7 @@ allCategoriesBlogs:any[] = [];
     private http: HttpClient,
     private titleService: Title,
     private metaService: Meta,
-    private blogsservice: BlogDetailsDataService
+    private blogsservice: BlogDetailsService
   ) { }
 
   ngOnInit(): void {

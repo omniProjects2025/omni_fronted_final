@@ -1,8 +1,9 @@
 import { Component, OnDestroy } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
-import { DoctordetailsService } from '../doctordetails.service';
+import { DoctorDetailsService } from '../services/doctor-details.service';
 import { Title, Meta } from '@angular/platform-browser';
+import { environment } from '../../environments/environment';
 
 @Component({
   selector: 'app-doctor-details',
@@ -28,7 +29,7 @@ export class DoctorDetailsComponent implements OnDestroy {
 
   constructor(
     private router: Router, 
-    private doctorservice: DoctordetailsService, 
+    private doctorservice: DoctorDetailsService, 
     private activated_routes: ActivatedRoute, 
     private http: HttpClient,
     private titleService: Title,
@@ -123,10 +124,8 @@ export class DoctorDetailsComponent implements OnDestroy {
       { Attribute: "mx_DoctorName", Value: this.selectedDoctor?.name || '' }
     ];
 
-    const accessKey = 'u$r56afea08b32d556818ad1a5f69f0e7f0';
-    const secretKey = '8d7f86d677dadaba209b4dead3cfcc4ab019031b';
-    const api_url_base = 'https://api-in21.leadsquared.com/v2/';
-    const url = `${api_url_base}LeadManagement.svc/Lead.Capture?accessKey=${accessKey}&secretKey=${secretKey}`;
+    // LeadSquared API call (matching working pages)
+    const url = `${environment.leadsquared.baseUrl}LeadManagement.svc/Lead.Capture?accessKey=${environment.leadsquared.accessKey}&secretKey=${environment.leadsquared.secretKey}`;
 
     this.http.post(url, payload, { headers: { 'Content-Type': 'application/json' } })
       .subscribe({

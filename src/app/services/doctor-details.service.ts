@@ -2,12 +2,12 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Observable, of, throwError } from 'rxjs';
 import { catchError, retry, shareReplay, timeout } from 'rxjs/operators';
-import { environment } from '../environments/environment';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
-export class DoctordetailsService {
+export class DoctorDetailsService {
   private BASE_URL = environment.omniApiUrl;
   private cache: Observable<any> | null = null;
   private readonly CACHE_DURATION = 2 * 60 * 1000; // 2 minutes for better data freshness
@@ -27,8 +27,8 @@ export class DoctordetailsService {
     this.cache = this.http.get(`${this.BASE_URL}/getdoctors`, { 
       withCredentials: true 
     }).pipe(
-      timeout(10000), // Back to 10 second timeout
-      retry(2), // Back to 2 retries
+      timeout(10000), // 10 second timeout
+      retry(2), // 2 retries
       shareReplay(1), // Share the result among multiple subscribers
       catchError(this.handleError.bind(this))
     );
@@ -54,3 +54,4 @@ export class DoctordetailsService {
     this.lastFetchTime = 0;
   }
 }
+

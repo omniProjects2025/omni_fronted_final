@@ -7,7 +7,8 @@
     "start-no-warnings": "cross-env NODE_OPTIONS=--no-deprecation ng serve",
     "start-dev": "ng serve",
     "start-trace": "node --trace-deprecation ./node_modules/@angular/cli/bin/ng serve",
-    "build": "ng build",
+    "build": "ng build --configuration production",
+    "build-prod": "ng build --configuration production --aot --output-hashing=all",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },

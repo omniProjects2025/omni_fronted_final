@@ -487,7 +487,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     });
 
     this.spanizedHeading = this.banner_one_text.split('');
-    this.onBackendIntigration();
+    // this.onBackendIntigration();
     this.onUserDetails();
     this.getUsers();
     this.updateSlidesPerView();

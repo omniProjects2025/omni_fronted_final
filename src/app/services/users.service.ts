@@ -9,7 +9,10 @@ import { environment } from '../../environments/environment';
 export class UsersService {
   private BASE_URL = environment.blogApiUrl; // Using blogApiUrl as it was pointing to the same endpoint
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) { 
+    console.log('UsersService initialized with BASE_URL:', this.BASE_URL);
+    console.log('Environment production mode:', environment.production);
+  }
 
   signupUser(data: any): Observable<any> {
     return this.http.post(`${this.BASE_URL}/signup`, data);

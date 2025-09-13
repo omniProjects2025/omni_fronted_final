@@ -13,7 +13,7 @@ import { AboutUsComponent } from './about-us/about-us.component';
 // import { CarouselModule } from 'ngx-owl-carousel-o';
 import { HealthCheckupComponent } from './health-checkup/health-checkup.component';
 import { PackageDetailsComponent } from './package-details/package-details.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { OurSpecialitiesComponent } from './our-specialities/our-specialities.component';
 import { OurSpecialitiesDetailsComponent } from './our-specialities-details/our-specialities-details.component';
@@ -28,6 +28,7 @@ import { OurBranchesComponent } from './our-branches/our-branches.component';
 import { CareersComponent } from './careers/careers.component';
 import { FeedbackComponent } from './feedback/feedback.component';
 import { CustomRouteReuseStrategy } from './custom-route-reuse-strategy';
+import { ApiInterceptor } from './interceptors/api.interceptor';
 import { RouteReuseStrategy } from '@angular/router';
 import { BlogDetailsComponent } from './blog-details/blog-details.component';
 import { VideoUrlPipe } from './video-url.pipe';
@@ -98,7 +99,8 @@ import { NewlineToBrPipe } from './pipes/newline-to-br.pipe';
     YouTubePlayerModule
   ],
   providers: [
-    { provide: RouteReuseStrategy, useClass: CustomRouteReuseStrategy }
+    { provide: RouteReuseStrategy, useClass: CustomRouteReuseStrategy },
+    { provide: HTTP_INTERCEPTORS, useClass: ApiInterceptor, multi: true }
   ],
   bootstrap: [AppComponent]
 })

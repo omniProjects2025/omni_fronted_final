@@ -13,7 +13,10 @@ export class DoctorDetailsService {
   private readonly CACHE_DURATION = 2 * 60 * 1000; // 2 minutes for better data freshness
   private lastFetchTime = 0;
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) { 
+    console.log('DoctorDetailsService initialized with BASE_URL:', this.BASE_URL);
+    console.log('Environment production mode:', environment.production);
+  }
 
   getDoctors(): Observable<any> {
     const now = Date.now();

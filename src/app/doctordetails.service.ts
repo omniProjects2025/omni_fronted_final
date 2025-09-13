@@ -13,7 +13,16 @@ export class DoctordetailsService {
   private readonly CACHE_DURATION = 2 * 60 * 1000; // 2 minutes for better data freshness
   private lastFetchTime = 0;
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) { 
+    console.log('DoctordetailsService initialized with BASE_URL:', this.BASE_URL);
+    console.log('Environment production mode:', environment.production);
+    
+    // Log CORS debugging info
+    if (!environment.production) {
+      console.log('🔍 CORS Debug - Frontend origin:', window.location.origin);
+      console.log('🔍 CORS Debug - API calls will go to:', this.BASE_URL);
+    }
+  }
 
   getDoctors(): Observable<any> {
     const now = Date.now();

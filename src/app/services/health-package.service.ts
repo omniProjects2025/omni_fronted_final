@@ -10,7 +10,10 @@ export class HealthPackageService {
   private dataUrl = 'assets/json_data_files/data.json';
   private BASE_URL = environment.omniApiUrl;
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) { 
+    console.log('HealthPackageService initialized with BASE_URL:', this.BASE_URL);
+    console.log('Environment production mode:', environment.production);
+  }
 
   updateHealthpackages(data: any): Observable<any> {
     return this.http.post(`${this.BASE_URL}/updatehealthpackages`, data);

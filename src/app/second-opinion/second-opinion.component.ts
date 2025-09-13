@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { environment } from '../../environments/environment';
 
 @Component({
   selector: 'app-second-opinion',
@@ -100,9 +101,9 @@ export class SecondOpinionComponent{
       { Attribute: "mx_Department", Value: form.department },
       { Attribute: "Source", Value: "Website - Second Opinion" }
     ];
-    const accessKey = 'u$r56afea08b32d556818ad1a5f69f0e7f0';
-    const secretKey = '8d7f86d677dadaba209b4dead3cfcc4ab019031b';
-    const api_url_base = 'https://api-in21.leadsquared.com/v2/';
+    const accessKey = environment.leadsquared.accessKey;
+    const secretKey = environment.leadsquared.secretKey;
+    const api_url_base = environment.leadsquared.baseUrl;
     const url = `${api_url_base}LeadManagement.svc/Lead.Capture?accessKey=${accessKey}&secretKey=${secretKey}`;
     this.http.post(url, payload, { headers: { 'Content-Type': 'application/json' } })
       .subscribe({

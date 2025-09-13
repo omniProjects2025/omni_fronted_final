@@ -56,6 +56,9 @@ export class CareersComponent {
   ];
 
   constructor(private fb: FormBuilder, private http: HttpClient, private route: ActivatedRoute, private datePipe: DatePipe) {
+    console.log('CareersComponent initialized with BASE_URL:', this.BASE_URL);
+    console.log('Environment production mode:', environment.production);
+    
     this.applyForm = this.fb.group({
       firstName: ['', Validators.required],
       lastName: [''],

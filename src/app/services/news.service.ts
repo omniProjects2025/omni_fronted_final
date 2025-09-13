@@ -10,6 +10,8 @@ export class NewsService {
   private BASE_URL = environment.apiBaseUrl;
 
   constructor(private http: HttpClient) {
+    console.log('NewsService initialized with BASE_URL:', this.BASE_URL);
+    console.log('Environment production mode:', environment.production);
   }
 
   getAllNews(): Observable<{ message: string, NewsData: [] }> {

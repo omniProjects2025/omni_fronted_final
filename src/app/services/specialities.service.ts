@@ -14,7 +14,10 @@ export class SpecialitiesService {
   private cacheTimestamp: number = 0;
   private readonly CACHE_DURATION = 5 * 60 * 1000; // 5 minutes cache
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) { 
+    console.log('SpecialitiesService initialized with BASE_URL:', this.BASE_URL);
+    console.log('Environment production mode:', environment.production);
+  }
 
   getAllSpecialities(): Observable<any> {
     const now = Date.now();

@@ -6,8 +6,7 @@ import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
-});
-
+})
 export class SpecialitiesService {
   private BASE_URL = environment.specialtiesApiUrl;
 

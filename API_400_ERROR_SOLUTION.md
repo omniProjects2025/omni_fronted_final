@@ -47,3 +47,4 @@ Add logging to identify exactly what's being received.
 - `proxy.conf.json` - Update proxy configuration
 - Backend mail routes - Add debug logging
 - Frontend careers component - Verify FormData structure
+

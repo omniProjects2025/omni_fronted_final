@@ -101,3 +101,4 @@ Your application will now:
 
 **Note**: Make sure your backend server at `http://api.omni-hospitals.in:3000` has the `/getspecialty` endpoint implemented with the same response format as shown in the search results.
 
+

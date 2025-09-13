@@ -40,3 +40,4 @@ Write-Host "🔗 Frontend: http://localhost:4200" -ForegroundColor White
 Write-Host ""
 Write-Host "📝 Check the opened terminal windows for server status" -ForegroundColor Yellow
 
+

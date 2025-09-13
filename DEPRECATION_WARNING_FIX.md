@@ -85,3 +85,4 @@ After applying these fixes:
 
 ## Note
 The deprecation warning doesn't affect functionality - it's just a warning about using an old API. The polyfill and script suppression ensure a clean development experience while maintaining full functionality.
+

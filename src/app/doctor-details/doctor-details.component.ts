@@ -4,6 +4,8 @@ import { HttpClient } from '@angular/common/http';
 import { DoctorDetailsService } from '../services/doctor-details.service';
 import { Title, Meta } from '@angular/platform-browser';
 import { environment } from '../../environments/environment';
+import { take, catchError } from 'rxjs/operators';
+import { of } from 'rxjs';
 
 @Component({
   selector: 'app-doctor-details',
@@ -222,7 +224,17 @@ getDoctorDetails(): void {
     }
   }
 
-  this.doctorservice.getDoctors().subscribe({
+  this.doctorservice.getDoctors().pipe(
+    take(1), // Only take one emission to prevent loops
+    catchError((error) => {
+      console.error('Error loading doctors for details:', error);
+      this.hasError = true;
+      this.errorMessage = 'Failed to load doctor details. Please check your internet connection and try again.';
+      this.doctors = [];
+      this.isLoading = false;
+      return of({ data: [] }); // Return empty data instead of throwing
+    })
+  ).subscribe({
     next: (response: any) => {
       try {
         const dataArray = response?.data || [];

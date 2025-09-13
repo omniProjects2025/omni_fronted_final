@@ -5,11 +5,11 @@
 export const environment = {
   production: false,
   // DEVELOPMENT: Use proxy in development to avoid CORS issues
-  apiBaseUrl: '/api',
-  omniApiUrl: '/api', 
+  apiBaseUrl: 'http://localhost:3000/api',
+  omniApiUrl: 'http://localhost:3000/api', 
   specialtiesApiUrl: '/api',
   // Direct URLs for fallback (if proxy fails)
-  directApiUrl: 'http://localhost:3000',
+  directApiUrl: 'http://localhost:3000/api',
   baseUrl: '/api', // Consistent naming
   // LeadSquared configuration (matching existing working pages)
   leadsquared: {

@@ -48,3 +48,4 @@ Add logging to identify exactly what's being received.
 - Backend mail routes - Add debug logging
 - Frontend careers component - Verify FormData structure
 
+

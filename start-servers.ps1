@@ -41,3 +41,4 @@ Write-Host ""
 Write-Host "📝 Check the opened terminal windows for server status" -ForegroundColor Yellow
 
 
+

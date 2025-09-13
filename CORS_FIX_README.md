@@ -149,3 +149,4 @@ If you still encounter CORS issues:
 2. Verify the exact error message
 3. Ensure all origins are added to CORS configuration
 4. Check that proxy configuration is working
+

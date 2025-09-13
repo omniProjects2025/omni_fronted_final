@@ -4,6 +4,9 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "start-no-warnings": "cross-env NODE_OPTIONS=--no-deprecation ng serve",
+    "start-dev": "ng serve",
+    "start-trace": "node --trace-deprecation ./node_modules/@angular/cli/bin/ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
@@ -19,7 +22,7 @@
     "@angular/platform-browser-dynamic": "^16.2.0",
     "@angular/router": "^16.2.0",
     "@angular/youtube-player": "^16.2.14",
-    "@babel/runtime": "^7.28.2",
+    "@babel/runtime": "^7.28.4",
     "bootstrap": "^5.3.7",
     "jquery": "^3.7.1",
     "leaflet": "^1.9.4",
@@ -37,6 +40,7 @@
     "@types/jquery": "^3.5.32",
     "@types/leaflet": "^1.9.17",
     "@types/owl.carousel": "^2.3.6",
+    "cross-env": "^10.0.0",
     "jasmine-core": "~4.6.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",

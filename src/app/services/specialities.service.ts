@@ -2,33 +2,20 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, BehaviorSubject, of } from 'rxjs';
 import { catchError, tap, shareReplay } from 'rxjs/operators';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
-})
-export class OurSpecialitiesService {
+});
 
-  private BASE_URL = 'http://api.omni-hospitals.in:3000';
-  //  private BASE_URL = 'http://localhost:3000'; 
-  //  private BASE_URL = 'https://omniservicebackend.onrender.com'; 
-
-
-
-
-
-
+export class SpecialitiesService {
+  private BASE_URL = environment.specialtiesApiUrl;
 
   private specialtiesCache$: Observable<any> | null = null;
   private cacheTimestamp: number = 0;
   private readonly CACHE_DURATION = 5 * 60 * 1000; // 5 minutes cache
 
   constructor(private http: HttpClient) { }
-
-
-
-  // getAllSpecialities() {
-  //   return this.http.get(`${this.BASE_URL}/getspecialty`);
-  // }
 
   getAllSpecialities(): Observable<any> {
     const now = Date.now();
@@ -47,19 +34,17 @@ export class OurSpecialitiesService {
       }),
       catchError(error => {
         console.error('Error fetching specialties:', error);
-        // Return empty data structure on error
         return of({ message: 'Error', SpecialtyData: {} });
       }),
-      shareReplay(1) // Share the result among multiple subscribers
+      shareReplay(1)
     );
     
     return this.specialtiesCache$;
   }
 
-  // Method to clear cache if needed
   clearCache(): void {
     this.specialtiesCache$ = null;
     this.cacheTimestamp = 0;
   }
-
 }
+

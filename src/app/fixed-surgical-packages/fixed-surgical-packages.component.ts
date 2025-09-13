@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { ChangeDetectorRef, Component, Renderer2 } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { Router } from '@angular/router';
-import { FixedpackagesService } from '../fixedpackages.service';
+import { FixedPackagesService } from '../services/fixed-packages.service';
 
 @Component({
   selector: 'app-fixed-surgical-packages',
@@ -21,7 +21,7 @@ export class FixedSurgicalPackagesComponent {
     private router: Router,
     private renderer: Renderer2,
     private cdr: ChangeDetectorRef,
-    private fixedPackagesService: FixedpackagesService
+    private fixedPackagesService: FixedPackagesService
   ) { }
 
   ngOnInit(): void {

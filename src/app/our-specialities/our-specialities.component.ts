@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { OurSpecialitiesService } from './our-specialities.service';
+import { SpecialitiesService } from '../services/specialities.service';
 import { toUrlFriendly } from '../utils/url-helper.util';
 import { Title, Meta } from '@angular/platform-browser';
 
@@ -31,7 +31,7 @@ export class OurSpecialitiesComponent implements OnInit {
 
   constructor(
     private router: Router, 
-    private specialitiesService: OurSpecialitiesService,
+    private specialitiesService: SpecialitiesService,
     private titleService: Title,
     private metaService: Meta
   ) {

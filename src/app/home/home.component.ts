@@ -5,9 +5,10 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { HttpClient } from '@angular/common/http';
 import 'owl.carousel';
 import { firstValueFrom, Observable, Subscription } from 'rxjs';
-import { UsersService } from '../users.service';
+import { UsersService } from '../services/users.service';
 import { VideoStateService } from '../services/video-state.service';
 import { toUrlFriendly } from '../utils/url-helper.util';
+import { environment } from '../../environments/environment';
 register();
 declare var $: any;
 
@@ -505,7 +506,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     };
     try {
       const result1 = await firstValueFrom(
-        this.http.post('http://localhost:3000/signup', data, {
+        this.http.post(`${environment.apiBaseUrl}/signup`, data, {
           withCredentials: true
         })
       );
@@ -518,7 +519,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   async onUserDetails() {
     try {
       const result2 = await firstValueFrom(
-        this.http.get('http://localhost:3000/getusers', {
+        this.http.get(`${environment.apiBaseUrl}/getusers`, {
           withCredentials: true
         })
       );
@@ -876,14 +877,14 @@ export class HomeComponent implements OnInit, OnDestroy {
   }
 
   getUsers() {
-    this.UsersService.getAllUsers().subscribe(
-      res => {
+    this.UsersService.getAllUsers().subscribe({
+      next: (res: any) => {
         console.log('All Users:', res);
       },
-      err => {
+      error: (err: any) => {
         console.error('Error:', err);
       }
-    );
+    });
   }
 
 
@@ -918,10 +919,8 @@ export class HomeComponent implements OnInit, OnDestroy {
       { Attribute: 'Source', Value: 'Website - Home Contact Form' }
     ];
 
-    const accessKey = 'u$r56afea08b32d556818ad1a5f69f0e7f0';
-    const secretKey = '8d7f86d677dadaba209b4dead3cfcc4ab019031b';
-    const api_url_base = 'https://api-in21.leadsquared.com/v2/';
-    const url = `${api_url_base}LeadManagement.svc/Lead.Capture?accessKey=${accessKey}&secretKey=${secretKey}`;
+    // LeadSquared API call (matching working pages)
+    const url = `${environment.leadsquared.baseUrl}LeadManagement.svc/Lead.Capture?accessKey=${environment.leadsquared.accessKey}&secretKey=${environment.leadsquared.secretKey}`;
 
     this.http.post(url, payload, { headers: { 'Content-Type': 'application/json' } }).subscribe({
       next: () => {
@@ -991,10 +990,8 @@ export class HomeComponent implements OnInit, OnDestroy {
       { Attribute: "Source", Value: "Website - Home Appointment Modal" }
     ];
 
-    const accessKey = 'u$r56afea08b32d556818ad1a5f69f0e7f0';
-    const secretKey = '8d7f86d677dadaba209b4dead3cfcc4ab019031b';
-    const api_url_base = 'https://api-in21.leadsquared.com/v2/';
-    const url = `${api_url_base}LeadManagement.svc/Lead.Capture?accessKey=${accessKey}&secretKey=${secretKey}`;
+    // LeadSquared API call (matching working pages)
+    const url = `${environment.leadsquared.baseUrl}LeadManagement.svc/Lead.Capture?accessKey=${environment.leadsquared.accessKey}&secretKey=${environment.leadsquared.secretKey}`;
 
     this.http.post(url, payload, { headers: { 'Content-Type': 'application/json' } }).subscribe({
       next: (res) => {

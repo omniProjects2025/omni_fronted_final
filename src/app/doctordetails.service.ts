@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Observable, of, throwError } from 'rxjs';
-import { catchError, retry, shareReplay, timeout } from 'rxjs/operators';
+import { catchError, retry, shareReplay, timeout, tap } from 'rxjs/operators';
 import { environment } from '../environments/environment';
 
 @Injectable({
@@ -23,12 +23,12 @@ export class DoctordetailsService {
       return this.cache;
     }
 
-    // Create new request with optimizations
+
+    // Create new request - NO RETRIES
     this.cache = this.http.get(`${this.BASE_URL}/getdoctors`, { 
       withCredentials: true 
     }).pipe(
-      timeout(10000), // Back to 10 second timeout
-      retry(2), // Back to 2 retries
+      timeout(10000), // 10 second timeout only
       shareReplay(1), // Share the result among multiple subscribers
       catchError(this.handleError.bind(this))
     );
@@ -40,12 +40,16 @@ export class DoctordetailsService {
   private handleError(error: HttpErrorResponse): Observable<any> {
     console.error('Doctor service error:', error);
     
-    // Return cached data if available, otherwise return empty result
-    if (this.cache) {
-      return this.cache;
-    }
+    // Clear cache on error
+    this.cache = null;
+    this.lastFetchTime = 0;
     
-    return of({ data: [] });
+    // Return empty result with error indication - NO RETRIES
+    return of({ 
+      data: [], 
+      error: true, 
+      message: 'Failed to load doctors data' 
+    });
   }
 
   // Method to clear cache when needed

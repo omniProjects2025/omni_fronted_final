@@ -82,15 +82,15 @@ export class OurDoctorsComponent implements OnInit, AfterViewInit, OnDestroy {
   getDoctorDetails() {
     console.log('getDoctorDetails() called - making API request');
     this.isLoading = true;
+    
     this.doctorservice.getDoctors()
       .pipe(
         take(1),
-        retry(2), // Back to 2 retries
         catchError((error) => {
           console.error('Error loading doctors:', error);
           this.isLoading = false;
           this.cdr.markForCheck();
-          return of(null);
+          return of({ data: [], error: true });
         }),
         finalize(() => { 
           console.log('API call finalized - isLoading set to false');
@@ -102,7 +102,7 @@ export class OurDoctorsComponent implements OnInit, AfterViewInit, OnDestroy {
       .subscribe({
         next: (data: any) => {
           console.log('API response received:', data);
-          if (data && data.data) {
+          if (data && data.data && !data.error) {
             console.log('Processing doctor data:', data.data.length, 'doctors');
             this.processDoctorData(data.data);
             this.cacheData(this.allDoctorsFlat);

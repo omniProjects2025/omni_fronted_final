@@ -1,10 +1,9 @@
 export const environment = {
   production: true,
-  // SECURITY: Use HTTPS in production for secure communication
+  // PRODUCTION: All APIs use your production server
   apiBaseUrl: 'https://api.omni-hospitals.in/api',
   omniApiUrl: 'https://api.omni-hospitals.in/api',
   specialtiesApiUrl: 'https://api.omni-hospitals.in/api',
-  blogApiUrl: 'https://omniservicebackend.onrender.com',
   // Direct API URL for testing
   directApiUrl: 'https://api.omni-hospitals.in',
   baseUrl: 'https://api.omni-hospitals.in/api', // Consistent naming

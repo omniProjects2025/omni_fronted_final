@@ -7,7 +7,7 @@ import { environment } from '../../environments/environment';
   providedIn: 'root'
 })
 export class UsersService {
-  private BASE_URL = environment.blogApiUrl; // Using blogApiUrl as it was pointing to the same endpoint
+  private BASE_URL = environment.apiBaseUrl; // Using your production API server
 
   constructor(private http: HttpClient) { 
     console.log('UsersService initialized with BASE_URL:', this.BASE_URL);

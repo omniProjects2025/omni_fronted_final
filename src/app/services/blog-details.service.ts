@@ -7,7 +7,7 @@ import { environment } from '../../environments/environment';
   providedIn: 'root'
 })
 export class BlogDetailsService {
-  private BASE_URL = environment.blogApiUrl;
+  private BASE_URL = environment.apiBaseUrl;
   
   constructor(private http: HttpClient) { 
     console.log('BlogDetailsService initialized with BASE_URL:', this.BASE_URL);

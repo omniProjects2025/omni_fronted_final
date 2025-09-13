@@ -4,11 +4,10 @@
 
 export const environment = {
   production: false,
-  // SECURITY: Use proxy in development to avoid CORS issues
+  // DEVELOPMENT: Use proxy in development to avoid CORS issues
   apiBaseUrl: '/api',
   omniApiUrl: '/api', 
   specialtiesApiUrl: '/api',
-  blogApiUrl: 'https://omniservicebackend.onrender.com',
   // Direct URLs for fallback (if proxy fails)
   directApiUrl: 'http://localhost:3000',
   baseUrl: '/api', // Consistent naming

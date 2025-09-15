@@ -29,6 +29,8 @@ import { OurEmpanelmentComponent } from './our-empanelment/our-empanelment.compo
 import { BlogDetailsDataComponent } from './blog-details-data/blog-details-data.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { PatientCareComponent } from './patient-care/patient-care.component';
+import { PrivacyPolocyComponent } from './privacy-polocy/privacy-polocy.component';
+import { TermsConditionsComponent } from './terms-conditions/terms-conditions.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -61,7 +63,8 @@ const routes: Routes = [
   { path: 'our-empanelment', component: OurEmpanelmentComponent },
   { path: 'thank-you', component: ThankYouComponent },
   { path: 'patient-care', component: PatientCareComponent },
-
+  { path: 'privacy-polocy', component: PrivacyPolocyComponent },
+  { path: 'terms-conditions', component: TermsConditionsComponent },
   { path: '**', component: NotFoundComponent }, // 👈 Show 404 page here
 ];
 

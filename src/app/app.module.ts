@@ -46,6 +46,8 @@ import { BlogDetailsDataComponent } from './blog-details-data/blog-details-data.
 import { NotFoundComponent } from './not-found/not-found.component';
 import { PatientCareComponent } from './patient-care/patient-care.component';
 import { NewlineToBrPipe } from './pipes/newline-to-br.pipe';
+import { PrivacyPolocyComponent } from './privacy-polocy/privacy-polocy.component';
+import { TermsConditionsComponent } from './terms-conditions/terms-conditions.component';
 
 @NgModule({
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
@@ -85,7 +87,9 @@ import { NewlineToBrPipe } from './pipes/newline-to-br.pipe';
     OurEmpanelmentComponent,
     NotFoundComponent,
     PatientCareComponent,
-    NewlineToBrPipe
+    NewlineToBrPipe,
+    PrivacyPolocyComponent,
+    TermsConditionsComponent
   ],
   imports: [
     BrowserModule,

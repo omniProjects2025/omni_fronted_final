@@ -79,20 +79,163 @@
 }
 
 .footer-bottom {
-  background-color: #fff;
-  color: #000;
+  background: linear-gradient(135deg, #ffffff 0%, #f8fcff 100%);
+  color: #333;
   font-size: 14px;
+  padding: 20px 60px;
+  position: relative;
+  overflow: hidden;
+  border-top: 3px solid transparent;
+  background-clip: padding-box;
+}
+
+.footer-bottom::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #008FD5 0%, #8CC63F 50%, #008FD5 100%);
+}
+
+.footer-bottom::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 50%, rgba(0, 143, 213, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 80% 50%, rgba(140, 198, 63, 0.05) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.footer-bottom-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 12px 60px;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
+  gap: 20px;
+  position: relative;
+  z-index: 2;
 }
 
-.footer-bottom a {
-  color: #000;
-  text-decoration: underline;
-  margin-left: 20px;
+.copyright-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.copyright-text {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.copyright-text i {
+  color: #008FD5;
+  font-size: 16px;
+}
+
+.copyright-year {
+  background: linear-gradient(135deg, #008FD5 0%, #8CC63F 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.company-name {
+  color: #333;
+  font-weight: 600;
+}
+
+.copyright-subtitle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: #666;
+  font-style: italic;
+}
+
+.copyright-subtitle i {
+  color: #e74c3c;
+  font-size: 12px;
+}
+
+.footer-links-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: flex-end;
+}
+
+.legal-links {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-link {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #333 !important;
+  text-decoration: none !important;
+  font-weight: 500;
+  font-size: 14px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  background: linear-gradient(135deg, rgba(0, 143, 213, 0.1) 0%, rgba(140, 198, 63, 0.1) 100%);
+  border: 1px solid transparent;
+}
+
+.footer-link:hover {
+  background: linear-gradient(135deg, #008FD5 0%, #8CC63F 100%);
+  color: white !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 143, 213, 0.3);
+}
+
+.footer-link i {
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.footer-link:hover i {
+  transform: scale(1.1);
+}
+
+.footer-divider {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, #008FD5 50%, transparent 100%);
+  margin: 8px 0;
+}
+
+.footer-info {
+  display: flex;
+  gap: 20px;
+  font-size: 12px;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #666;
+  font-weight: 500;
+}
+
+.info-item i {
+  color: #8CC63F;
+  font-size: 12px;
 }
 
 @media (max-width: 991px) {
@@ -100,6 +243,29 @@
     grid-template-columns: 1fr 1fr;
     gap: 30px;
     padding: 30px 20px;
+  }
+  
+  .footer-bottom {
+    padding: 15px 20px;
+  }
+  
+  .footer-bottom-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+  }
+  
+  .footer-links-section {
+    align-items: center;
+  }
+  
+  .legal-links {
+    justify-content: center;
+  }
+  
+  .footer-info {
+    justify-content: center;
   }
 }
 
@@ -109,7 +275,6 @@
     gap: 20px;
     padding: 20px 15px;
   }
-
 
   .footer-col ul {
     padding-left: 0; /* remove extra indentation */
@@ -129,7 +294,55 @@
     flex-direction: column;
     align-items: flex-start !important;
   }
-
+  
+  .footer-bottom {
+    padding: 12px 15px;
+  }
+  
+  .footer-bottom-content {
+    gap: 12px;
+  }
+  
+  .copyright-text {
+    font-size: 14px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .copyright-year {
+    font-size: 14px;
+  }
+  
+  .company-name {
+    font-size: 13px;
+  }
+  
+  .copyright-subtitle {
+    font-size: 11px;
+    justify-content: center;
+  }
+  
+  .legal-links {
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+  }
+  
+  .footer-link {
+    justify-content: center;
+    padding: 6px 10px;
+    font-size: 13px;
+  }
+  
+  .footer-info {
+    flex-direction: column;
+    gap: 6px;
+    font-size: 11px;
+  }
+  
+  .info-item {
+    justify-content: center;
+  }
 }
 
 

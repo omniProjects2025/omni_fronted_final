@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Observable, of, throwError } from 'rxjs';
-import { catchError, retry, shareReplay, timeout } from 'rxjs/operators';
+import { catchError, shareReplay, timeout } from 'rxjs/operators';
 import { environment } from '../../environments/environment';
 
 @Injectable({
@@ -31,7 +31,6 @@ export class DoctorDetailsService {
       withCredentials: true 
     }).pipe(
       timeout(10000), // 10 second timeout
-      retry(2), // 2 retries
       shareReplay(1), // Share the result among multiple subscribers
       catchError(this.handleError.bind(this))
     );

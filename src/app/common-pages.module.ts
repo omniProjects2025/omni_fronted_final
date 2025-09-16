@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule as AngularCommonModule, DatePipe } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { HomeComponent } from './home/home.component';
 import { SecondOpinionComponent } from './second-opinion/second-opinion.component';
@@ -31,6 +32,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { PatientCareComponent } from './patient-care/patient-care.component';
 import { PrivacyPolocyComponent } from './privacy-polocy/privacy-polocy.component';
 import { TermsConditionsComponent } from './terms-conditions/terms-conditions.component';
+import { KeySurgeriesComponent } from './key-surgeries/key-surgeries.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -65,15 +67,19 @@ const routes: Routes = [
   { path: 'patient-care', component: PatientCareComponent },
   { path: 'privacy-polocy', component: PrivacyPolocyComponent },
   { path: 'terms-conditions', component: TermsConditionsComponent },
+  { path: 'key-surgeries', component:KeySurgeriesComponent},
   { path: '**', component: NotFoundComponent }, // 👈 Show 404 page here
 ];
 
 @NgModule({
   imports: [
     AngularCommonModule,
+    FormsModule,
+    ReactiveFormsModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [],
+  declarations: [
+     ],
   providers: [DatePipe]
 })
 export class CommonPagesModule { }

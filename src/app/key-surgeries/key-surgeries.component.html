@@ -1,0 +1,171 @@
+<app-header></app-header>
+<div class="key-surgeries-container">
+  <!-- Header Banner Section -->
+  <div class="header-banner">
+    <div class="banner-content">
+      <h1 class="banner-title">Key Surgeries</h1>
+      <div class="banner-divider">
+        <div class="divider-line"></div>
+        <div class="divider-circle"></div>
+        <div class="divider-line"></div>
+      </div>
+      <p class="banner-subtitle">OMNI Hospitals - Your Trusted Healthcare Partner</p>
+    </div>
+  </div>
+
+  <!-- Department Filter Buttons -->
+  <div class="department-filter-section">
+    <div class="container">
+      <div class="department-buttons">
+        <button 
+          *ngFor="let department of departments" 
+          class="department-btn"
+          [class.active]="selectedDepartment === department.name"
+          (click)="selectDepartment(department.name)">
+          <!-- <span class="department-icon">{{ department.icon }}</span> -->
+          <span class="department-name">{{ department.name }}</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Surgeries Section -->
+  <div class="surgeries-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">{{ selectedDepartment }} Surgeries</h2>
+        <p class="section-subtitle">{{ filteredSurgeries.length }} surgical procedures available</p>
+      </div>
+
+      <!-- Surgeries List with Direct Content Display -->
+      <div class="surgeries-list">
+        <div 
+          *ngFor="let surgery of filteredSurgeries; trackBy: trackBySurgery" 
+          class="surgery-item">
+          
+          <!-- Surgery Header -->
+          <div class="surgery-header">
+            <div class="surgery-title-section">
+              <h3 class="surgery-title">{{ surgery.name }}</h3>
+              <div class="surgery-badge">{{ selectedDepartment }}</div>
+            </div>
+          </div>
+
+          <!-- Surgery Content (Always Visible) -->
+          <div class="surgery-content">
+            <div class="surgery-description">
+              <p>{{ surgery.description }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- No surgeries message -->
+      <div *ngIf="filteredSurgeries.length === 0" class="no-surgeries">
+        <div class="no-surgeries-content">
+          <div class="no-surgeries-icon">🔍</div>
+          <h3>No surgeries found</h3>
+          <p>Please select a different department to view available surgical procedures.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Call to Action Section -->
+  <div class="cta-section">
+    <div class="container">
+      <div class="cta-content">
+        <h2 class="cta-title">Need Expert Surgical Care?</h2>
+        <p class="cta-subtitle">Our experienced surgeons are ready to provide the best surgical treatment for your needs.</p>
+        <div class="cta-buttons">
+          <button class="cta-btn primary" (click)="openAppointmentModal()">
+            Book Consultation
+          </button>
+          <button class="cta-btn secondary" (click)="goToDoctors()">
+            View Our Doctors
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Appointment Modal -->
+  <div class="appointment-modal-overlay" *ngIf="showAppointmentModal" (click)="closeAppointmentModal()">
+    <div class="appointment-modal" (click)="$event.stopPropagation()">
+      <div class="modal-header">
+        <div class="modal-title-section">
+          <div class="title-icon">
+            <img src="assets/icons/book_appointment_white_bg.svg" alt="Appointment" class="appointment-icon">
+          </div>
+          <h3 class="modal-title">Book Consultation</h3>
+          <p class="modal-subtitle">Get expert surgical consultation from our specialists</p>
+        </div>
+        <button class="btn-close" (click)="closeAppointmentModal()">
+          <span>×</span>
+        </button>
+      </div>
+      
+      <div class="modal-body">
+        <form class="appointment-form" [formGroup]="appointmentForm" (ngSubmit)="submitAppointmentForm()">
+          <div class="form-group">
+            <label class="form-label">Full Name*</label>
+            <input type="text" class="form-control" formControlName="fullName">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Phone Number*</label>
+            <div class="input-group">
+              <span class="input-group-text">+91</span>
+              <input type="tel" class="form-control" formControlName="phoneNumber">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Email ID</label>
+            <input type="email" class="form-control" formControlName="emailId">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Location*</label>
+            <select class="form-select" formControlName="location">
+              <option disabled selected>Select Location</option>
+              <option>Hyderabad</option>
+              <option>Vizag</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Department</label>
+            <select class="form-select" formControlName="department">
+              <option disabled selected>Select Department</option>
+              <option>Cardiology</option>
+              <option>Orthopedics</option>
+              <option>Plastic Surgery</option>
+              <option>Neuro Intervention</option>
+              <option>Vascular Surgery</option>
+              <option>ENT</option>
+              <option>Urology</option>
+              <option>Obstetrics and Gynaecology</option>
+              <option>General Surgery</option>
+              <option>Neuro Surgery</option>
+              <option>Gastroenterology</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Health Concern/Message</label>
+            <textarea rows="3" class="form-control" formControlName="message"></textarea>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn-submit" [disabled]="appointmentForm.invalid">
+              <span class="btn-icon">📋</span>
+              Submit Request
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpInterceptor, HttpRequest, HttpHandler, HttpEvent, HttpErrorResponse } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
-import { catchError, retry, timeout } from 'rxjs/operators';
+import { catchError, timeout } from 'rxjs/operators';
 import { environment } from '../../environments/environment';
 
 @Injectable()
@@ -28,11 +28,6 @@ export class ApiInterceptor implements HttpInterceptor {
 
     return next.handle(apiReq).pipe(
       timeout(30000), // 30 second timeout
-      retry({
-        count: 2,
-        delay: 1000,
-        resetOnSuccess: true
-      }),
       catchError((error: HttpErrorResponse) => {
         console.error('❌ API Error:', error);
         

@@ -66,7 +66,6 @@ export class FooterComponent {
   }
 
   goToWhatsApp() {
-    // Open WhatsApp with a pre-filled message
     const phoneNumber = '8880101000';
     const message = 'Hello, I would like to get more information about your services.';
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;

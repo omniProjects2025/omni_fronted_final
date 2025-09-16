@@ -63,32 +63,10 @@ export class HomeComponent implements OnInit, OnDestroy {
   @ViewChild('patientowlCarousel', { static: false }) patientowlCarousel!: ElementRef;
   @ViewChild('blogCarousel', { static: false }) blogCarousel!: ElementRef;
   @ViewChild('swiperContainer', { static: false }) swiperContainer!: ElementRef;
-  readMoreVisible = false;
-  banner_one_text = 'Best Multispeciality Hospitals in Andhra Pradesh, Telangana';
-  carouselInitialized = false;
-  spanizedHeading: string[] = [];
-  spanizedParagraph: string[] = [];
   showFullText = false;
-
-  videoPlayed: boolean = false;
-  sanitizedVideoUrl!: SafeResourceUrl;
-
-  private swiperInitialized = false;
   active_button = 0;
   isMobile = false;
-  title = 'Omni_project';
-  activeIndex = 0;
-  direction_icon: boolean = false;
-  depertment_icon: boolean = false;
-  showMore: boolean = false;
-  showmoreactive_one: boolean = false;
-  startIndex = 0;
-  currentIndex = 0;
   currentBlogIndex = 0;
-  totalItems: number = 0;
-  prevBtn!: HTMLElement | null;
-  nextBtn!: HTMLElement | null;
-  carousel!: HTMLElement | null;
   slidesPerView = 3;
 
   breakpointsJson = JSON.stringify({
@@ -100,7 +78,12 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   canSlidePrev = false;
   canSlideNext = true;
-  swiperInstance: any;
+  owlInstance: any;
+  
+  get totalBlogSlides(): number {
+    return this.blogs.length;
+  }
+  
   specialities = [
     {
       id: 1, spe_name: 'Our Specialities'
@@ -146,14 +129,6 @@ export class HomeComponent implements OnInit, OnDestroy {
     { img: 'assets/images/awards/award6.png' }
   ];
 
-  selectedIndex: number = 0;
-  counters = [
-    { id: 1, img: 'why_choose_hospitals.svg', label: 'Hospitals', target: 6, value: 0 },
-    { id: 2, img: 'hospital_beds.svg', label: 'Beds', target: 1200, value: 0 },
-    { id: 3, img: 'why_choose_doctors.svg', label: 'Doctors', target: 200, value: 0 },
-    { id: 4, img: 'pharmacy.svg', label: 'Pharmacy', target: 6, value: 0 }
-  ];
-  shortText = 'OMNI hospitals was established with an intention of being a comprehensive & cost-effective chain of hospitals that provides super-specialty services with warmth and care.';
   fullText = 'OMNI hospitals was established with an intention of being a comprehensive & cost-effective chain of hospitals that provides super-specialty services with warmth and care. Omni hospitals is Owned by the healthcare division of incor group. OMNI hospitals was established with an intention of being a comprehensive & cost-effective chain of hospitals that provides super-specialty services with warmth and care. Omni hospitals is Owned by the healthcare division of incor group.';
 
   why_choose_omni = [
@@ -247,8 +222,6 @@ export class HomeComponent implements OnInit, OnDestroy {
     }
   ];
 
-
-  hoveredCard = '';
 
   testimonials = [
    
@@ -353,34 +326,6 @@ export class HomeComponent implements OnInit, OnDestroy {
     }
   ];
 
-  totalBlogSlides = this.blogs.length;
-  groupedTestimonials: any[][] = [];
-  totalSlides = this.testimonials.length;
-
-  omni_mail_id = 'info@omnihospitals.in'
-
-  depertments = [
-    {
-      id: 1, d_name: 'What is Lorem Ipsum?', d_description: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.", img: 'https://img.freepik.com/free-photo/men-with-protection-masks-visiting-hospital-clinic-checking-appointment-respecting-social-distance-waiting-room-global-pandemic_482257-2002.jpg?ga=GA1.1.900482830.1739181171&semt=ais_hybrid'
-    },
-    {
-      id: 2, d_name: 'What is Lorem Ipsum?', d_description: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.", img: 'https://img.freepik.com/free-photo/men-with-protection-masks-visiting-hospital-clinic-checking-appointment-respecting-social-distance-waiting-room-global-pandemic_482257-2002.jpg?ga=GA1.1.900482830.1739181171&semt=ais_hybrid'
-    },
-    {
-      id: 3, d_name: 'What is Lorem Ipsum?', d_description: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.", img: 'https://img.freepik.com/free-photo/men-with-protection-masks-visiting-hospital-clinic-checking-appointment-respecting-social-distance-waiting-room-global-pandemic_482257-2002.jpg?ga=GA1.1.900482830.1739181171&semt=ais_hybrid'
-    },
-    {
-      id: 4, d_name: 'What is Lorem Ipsum?', d_description: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.", img: 'https://img.freepik.com/free-photo/men-with-protection-masks-visiting-hospital-clinic-checking-appointment-respecting-social-distance-waiting-room-global-pandemic_482257-2002.jpg?ga=GA1.1.900482830.1739181171&semt=ais_hybrid'
-    },
-    {
-      id: 5, d_name: 'What is Lorem Ipsum?', d_description: ' OMNI hospitals was established with an intention of being a comprehensive & cost-effective chain of hospitals that provides super-specialty services with warmth and care. Omni hospitals is owned by the healthcare division of Incor group.', img: 'https://img.freepik.com/free-photo/men-with-protection-masks-visiting-hospital-clinic-checking-appointment-respecting-social-distance-waiting-room-global-pandemic_482257-2002.jpg?ga=GA1.1.900482830.1739181171&semt=ais_hybrid'
-    },
-    {
-      id: 6, d_name: 'What is Lorem Ipsum?', d_description: ' OMNI hospitals was established with an intention of being a comprehensive & cost-effective chain of hospitals that provides super-specialty services with warmth and care. Omni hospitals is owned by the healthcare division of Incor group.', img: 'https://img.freepik.com/free-photo/men-with-protection-masks-visiting-hospital-clinic-checking-appointment-respecting_social-distance-waiting-room-global-pandemic_482257-2002.jpg?ga=GA1.1.900482830.1739181171&semt=ais_hybrid'
-    }
-  ]
-
-  owlInstance: any;
 
   locations_details = [
     {
@@ -403,40 +348,6 @@ export class HomeComponent implements OnInit, OnDestroy {
     }
   ]
 
-  images = [
-    { src: 'assets/owl1.jpg', title: 'MRI', description: 'Lorem Ipsum is simply dummy text of the printing industry.' },
-    { src: 'assets/owl2.jpg', title: 'MRI', description: 'Lorem Ipsum is simply dummy text of the printing industry.' },
-    { src: 'assets/owl3.jpg', title: 'MRI', description: 'Lorem Ipsum is simply dummy text of the printing industry.' },
-    { src: 'assets/owl4.jpg', title: 'MRI', description: 'Lorem Ipsum is simply dummy text of the printing industry.' },
-    { src: 'assets/owl4.jpg', title: 'MRI', description: 'Lorem Ipsum is simply dummy text of the printing industry.' },
-    { src: 'assets/owl4.jpg', title: 'MRI', description: 'Lorem Ipsum is simply dummy text of the printing industry.' },
-    { src: 'assets/owl4.jpg', title: 'MRI', description: 'Lorem Ipsum is simply dummy text of the printing industry.' },
-    { src: 'assets/owl4.jpg', title: 'MRI', description: 'Lorem Ipsum is simply dummy text of the printing industry.' },
-  ];
-
-  slides = [
-    {
-      img: 'assets/mri1.jpg',
-      title: 'MRI',
-      desc: 'Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting Industry. Lorem Ipsum Has Been The Industry’s Standard Dummy...',
-    },
-    {
-      img: 'assets/mri2.jpg',
-      title: 'MRI',
-      desc: 'Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting Industry. Lorem Ipsum Has Been The Industry’s Standard Dummy...',
-    },
-    {
-      img: 'assets/mri3.jpg',
-      title: 'MRI',
-      desc: 'Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting Industry. Lorem Ipsum Has Been The Industry’s Standard Dummy...',
-    },
-    {
-      img: 'assets/mri4.jpg',
-      title: 'MRI',
-      desc: 'Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting Industry. Lorem Ipsum Has Been The Industry’s Standard Dummy...',
-    },
-  ];
-  index = 0;
 
   formData = {
     name: '',
@@ -466,7 +377,6 @@ export class HomeComponent implements OnInit, OnDestroy {
   ) {}
 
   private resizeListener: (() => void) | undefined;
-  private lastZoom: number = window.devicePixelRatio;
   private lastWindowWidth: number = window.innerWidth;
 
   ngOnInit(): void {
@@ -486,48 +396,10 @@ export class HomeComponent implements OnInit, OnDestroy {
       this.updateVideoStates(videoId);
     });
 
-    this.spanizedHeading = this.banner_one_text.split('');
-    // this.onBackendIntigration();
-    this.onUserDetails();
-    this.getUsers();
     this.updateSlidesPerView();
     register();
   }
 
-  async onBackendIntigration() {
-    const data = {
-      firstName: 'gp',
-      lastName: 'chat',
-      emailId: 'chat@gmail.com',
-      password: 'bpoil@123',
-      age: 25,
-      phoneNumber: '123456789',
-      gender: 'male',
-    };
-    try {
-      const result1 = await firstValueFrom(
-        this.http.post(`${environment.apiBaseUrl}/signup`, data, {
-          withCredentials: true
-        })
-      );
-      console.log('API Success:', result1);
-    } catch (error) {
-      console.error('API Error:', error);
-    }
-  }
-
-  async onUserDetails() {
-    try {
-      const result2 = await firstValueFrom(
-        this.http.get(`${environment.apiBaseUrl}/getusers`, {
-          withCredentials: true
-        })
-      );
-      console.log('All users Success:', result2);
-    } catch (error) {
-
-    }
-  }
 
   ngAfterViewInit() {
     this.observeCounters();
@@ -540,35 +412,15 @@ export class HomeComponent implements OnInit, OnDestroy {
     }, 100);
   }
 
-  ngOnChanges(changes: SimpleChanges) {
-    if (changes['activeIndex']) {
-      if (this.activeIndex === 2 && !this.swiperInitialized) {
-        setTimeout(() => {
-          this.initSwiper(true);
-          this.swiperInitialized = true;
-        }, 200);
-      } else {
-        this.swiperInitialized = false;
-      }
-    }
-  }
 
-  ngAfterViewChecked() {
-    if (this.activeIndex === 2 && this.swiperContainer?.nativeElement?.swiper) {
-      const swiper = this.swiperContainer.nativeElement.swiper;
-      this.updateArrowStates(swiper);
-    }
-
-  }
-
-  toggleReadMore(): void {
-    this.showMore = !this.showMore;
-  }
-  ReadMore() {
-    this.showmoreactive_one = !this.showmoreactive_one
-  }
   ourSpecialities(index: any) {
-    this.active_button = index;
+    if (index === 1) {
+      // Navigate to key-surgeries page
+      this.router.navigate(['/key-surgeries']);
+    } else {
+      // Show Our Specialities section
+      this.active_button = index;
+    }
   }
 
   animateCounter(element: HTMLElement, target: number) {
@@ -604,17 +456,6 @@ export class HomeComponent implements OnInit, OnDestroy {
   }
 
 
-  updateCarousel(direction: 'next' | 'prev') {
-    if (direction === 'prev' && this.index > 0) {
-      this.index--;
-    } else if (direction === 'next' && this.index < this.depertments.length - 1) {
-      this.index++;
-    }
-  }
-
-  getTransform() {
-    return `translateX(-${this.index * 100}%)`;
-  }
 
 
   ourDoctorsDetails() {
@@ -625,14 +466,6 @@ export class HomeComponent implements OnInit, OnDestroy {
         console.log('Navigation failed');
       }
     }).catch(error => console.error('Navigation error:', error));
-  }
-  locationToggle(num: number) {
-    if (num == 1) {
-      this.direction_icon = !this.direction_icon
-    }
-    else {
-      this.depertment_icon = !this.depertment_icon
-    }
   }
   healthCheckup() {
     this.router.navigate(['/health-checkup']).then(success => {
@@ -655,29 +488,12 @@ export class HomeComponent implements OnInit, OnDestroy {
     }).catch(error => console.error('Navigation error:', error));
   }
 
-  goToSlide(index: number) {
-    this.currentIndex = index;
-    $(this.owlCarousel.nativeElement).trigger('to.owl.carousel', [index, 300]);
-  }
 
   goToBlogSlide(index: number) {
     this.currentBlogIndex = index;
     $(this.blogCarousel.nativeElement).trigger('to.owl.carousel', [index, 300]);
   }
 
-  prev() {
-    $('#owl-demo').trigger('prev.owl.carousel');
-  }
-
-  next() {
-    $('#owl-demo').trigger('next.owl.carousel');
-  }
-
-  updateNavButtons() {
-    const carousel = $('#owl-demo');
-    $('#prevBtn').toggle(!carousel.find('.owl-item:first').hasClass('active'));
-    $('#nextBtn').toggle(!carousel.find('.owl-item:last').hasClass('active'));
-  }
   updateSlidesPerView(): void {
     const screenWidth = window.innerWidth;
     this.isMobile = screenWidth < 768;
@@ -691,16 +507,10 @@ export class HomeComponent implements OnInit, OnDestroy {
   }
 
   private handleResizeOrZoom(): void {
-    const currentZoom = window.devicePixelRatio;
     const currentWidth = window.innerWidth;
     
-    // Check if it's a zoom change (devicePixelRatio changed) or actual resize
-    if (Math.abs(currentZoom - this.lastZoom) > 0.1) {
-      // Zoom change detected - don't stop videos unnecessarily
-      this.lastZoom = currentZoom;
-      // Only update slides if needed
-      this.updateSlidesPerView();
-    } else if (Math.abs(currentWidth - this.lastWindowWidth) > 50) {
+    // Check if it's a significant width change - actual resize
+    if (Math.abs(currentWidth - this.lastWindowWidth) > 50) {
       // Significant width change - actual resize
       this.lastWindowWidth = currentWidth;
       this.videoStateService.stopAllVideos();
@@ -876,16 +686,6 @@ export class HomeComponent implements OnInit, OnDestroy {
     }).catch(error => console.error('Navigation error:', error));
   }
 
-  getUsers() {
-    this.UsersService.getAllUsers().subscribe({
-      next: (res: any) => {
-        console.log('All Users:', res);
-      },
-      error: (err: any) => {
-        console.error('Error:', err);
-      }
-    });
-  }
 
 
   toggleFaq(index: number) {

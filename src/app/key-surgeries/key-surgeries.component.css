@@ -1,0 +1,844 @@
+/* Key Surgeries Component - Professional Styling with Brand Colors */
+
+.key-surgeries-container {
+  min-height: 100vh;
+  background: #f8f9fa;
+  font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header Banner Section - Like Terms & Conditions */
+.header-banner {
+  background: linear-gradient(135deg, #008FD5 0%, #8CC63F 100%);
+  padding: 80px 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.header-banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="75" cy="75" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="50" cy="10" r="0.5" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+  opacity: 0.3;
+}
+
+.banner-content {
+  position: relative;
+  z-index: 2;
+  color: white;
+}
+
+.banner-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin: 0 0 20px 0;
+  font-family: 'Roboto', sans-serif;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.banner-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 20px 0;
+}
+
+.divider-line {
+  width: 40px;
+  height: 3px;
+  background: #8CC63F;
+}
+
+.divider-circle {
+  width: 8px;
+  height: 8px;
+  background: #8CC63F;
+  border-radius: 50%;
+}
+
+.banner-subtitle {
+  font-size: 1.25rem;
+  opacity: 0.9;
+  margin: 0;
+  font-weight: 400;
+}
+
+/* Department Filter Section */
+.department-filter-section {
+  background: white;
+  padding: 40px 0;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.department-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+}
+
+.department-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  border: 2px solid #008FD5;
+  border-radius: 50px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: white;
+  color: #008FD5;
+  min-width: 140px;
+  justify-content: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+.department-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 143, 213, 0.15);
+}
+
+.department-btn.active {
+  background: #008FD5;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 143, 213, 0.2);
+}
+
+.department-icon {
+  font-size: 1.2rem;
+}
+
+.department-name {
+  white-space: nowrap;
+}
+
+/* Surgeries Section */
+.surgeries-section {
+  padding: 60px 0;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #008FD5;
+  margin: 0 0 12px 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  color: #6b7280;
+  margin: 0;
+}
+
+/* Surgeries List */
+.surgeries-list {
+  margin-bottom: 40px;
+}
+
+.surgery-item {
+  background: white;
+  border-radius: 16px;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  position: relative;
+}
+
+.surgery-item:hover {
+  box-shadow: 0 8px 25px -5px rgba(0, 0, 0, 0.1), 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  border-color: #008FD5;
+}
+
+.surgery-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #008FD5, #8CC63F);
+}
+
+.surgery-header {
+  padding: 1.5rem 1.5rem 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.surgery-title-section {
+  flex: 1;
+}
+
+.surgery-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0 0 0.5rem 0;
+  line-height: 1.4;
+  font-family: 'Roboto', sans-serif;
+}
+
+.surgery-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, #008FD5 0%, #8CC63F 100%);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.surgery-content {
+  background: #f8fafc;
+}
+
+.surgery-description {
+  padding: 1.5rem;
+  color: #4b5563;
+  line-height: 1.7;
+  margin: 0;
+  font-size: 0.95rem;
+  text-align: justify;
+}
+
+
+/* No Surgeries Message */
+.no-surgeries {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.no-surgeries-content {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.no-surgeries-icon {
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+
+.no-surgeries h3 {
+  font-size: 1.5rem;
+  color: #374151;
+  margin: 0 0 12px 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.no-surgeries p {
+  color: #6b7280;
+  margin: 0;
+}
+
+/* Call to Action Section */
+.cta-section {
+  background: linear-gradient(135deg, #1f2937 0%, #374151 100%);
+  color: white;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.cta-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.cta-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0 0 16px 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.cta-subtitle {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  margin: 0 0 40px 0;
+  line-height: 1.6;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.cta-btn {
+  padding: 16px 32px;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  font-family: 'Roboto', sans-serif;
+  min-width: 180px;
+}
+
+.cta-btn.primary {
+  background: linear-gradient(135deg, #008FD5 0%, #8CC63F 100%);
+  color: white;
+}
+
+.cta-btn.primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 143, 213, 0.3);
+}
+
+.cta-btn.secondary {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.cta-btn.secondary:hover {
+  background: white;
+  color: #1f2937;
+  transform: translateY(-2px);
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 16px;
+  }
+
+  .banner-title {
+    font-size: 2.5rem;
+  }
+
+  .banner-subtitle {
+    font-size: 1rem;
+  }
+
+  .header-banner {
+    padding: 60px 0;
+  }
+
+  .department-filter-section {
+    padding: 30px 0;
+  }
+
+  .department-buttons {
+    gap: 8px;
+  }
+
+  .department-btn {
+    padding: 10px 16px;
+    font-size: 0.85rem;
+    min-width: 120px;
+  }
+
+  .department-name {
+    font-size: 0.8rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .surgeries-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .surgery-card {
+    padding: 20px;
+  }
+
+  .surgery-title {
+    font-size: 1.1rem;
+  }
+
+  .surgery-description {
+    font-size: 0.9rem;
+  }
+
+  .cta-title {
+    font-size: 2rem;
+  }
+
+  .cta-subtitle {
+    font-size: 1rem;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cta-btn {
+    width: 100%;
+    max-width: 280px;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner-title {
+    font-size: 2rem;
+  }
+
+  .department-btn {
+    padding: 8px 12px;
+    font-size: 0.8rem;
+    min-width: 100px;
+  }
+
+  .department-icon {
+    font-size: 1rem;
+  }
+
+  .section-title {
+    font-size: 1.75rem;
+  }
+
+  .surgery-card {
+    padding: 16px;
+  }
+
+  .surgery-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+
+  .surgery-title {
+    font-size: 1rem;
+  }
+
+  .cta-title {
+    font-size: 1.75rem;
+  }
+}
+
+/* Smooth scrolling for better UX */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Enhanced focus states for accessibility */
+.department-btn:focus,
+.learn-more-btn:focus,
+.cta-btn:focus {
+  outline: 2px solid #008FD5;
+  outline-offset: 2px;
+}
+
+/* Loading animation for department buttons */
+.department-btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.department-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.department-btn:hover::before {
+  left: 100%;
+}
+
+/* Appointment Modal Styles */
+.appointment-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.appointment-modal {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  max-width: 500px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  animation: modalSlideIn 0.3s ease-out;
+  position: relative;
+  z-index: 10000;
+}
+
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.appointment-modal .modal-header {
+  background: linear-gradient(135deg, #008FD5 0%, #8CC63F 100%);
+  color: white;
+  padding: 1.5rem;
+  border-radius: 16px 16px 0 0;
+  position: relative;
+}
+
+.appointment-modal .modal-title-section {
+  text-align: center;
+}
+
+.appointment-modal .appointment-icon {
+  width: 45px;
+  height: 45px;
+  filter: brightness(0) invert(1);
+  opacity: 0.9;
+  margin-bottom: 0.75rem;
+}
+
+.appointment-modal .modal-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+.appointment-modal .modal-subtitle {
+  font-size: 0.875rem;
+  opacity: 0.9;
+  margin-bottom: 0;
+  font-weight: 400;
+}
+
+.appointment-modal .btn-close {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  opacity: 1;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  z-index: 10001;
+}
+
+.appointment-modal .btn-close:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.1);
+}
+
+.appointment-modal .btn-close span {
+  color: white;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.appointment-modal .modal-body {
+  padding: 1.5rem;
+}
+
+.appointment-form .form-group {
+  margin-bottom: 1rem;
+}
+
+.appointment-modal .form-label {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.375rem;
+  font-size: 0.875rem;
+}
+
+.appointment-modal .form-control, .appointment-modal .form-select {
+  border: 2px solid #e1e8ed;
+  border-radius: 8px;
+  padding: 0.625rem 0.875rem;
+  font-size: 0.875rem;
+  transition: all 0.3s ease;
+  background: #fff;
+  width: 100%;
+}
+
+.appointment-modal .form-control:focus, .appointment-modal .form-select:focus {
+  border-color: #008FD5;
+  box-shadow: 0 0 0 0.15rem rgba(0, 143, 213, 0.15);
+  outline: none;
+}
+
+.appointment-modal .input-group {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.appointment-modal .input-group-text {
+  background: #f8f9fa;
+  border: 2px solid #e1e8ed;
+  border-right: none;
+  color: #6c757d;
+  font-weight: 500;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.appointment-modal .input-group .form-control {
+  border-left: none;
+  flex: 1;
+  min-width: 0;
+}
+
+/* Desktop-specific input group styles */
+@media (min-width: 769px) {
+  .appointment-modal .input-group {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: stretch;
+  }
+  
+  .appointment-modal .input-group-text {
+    flex-shrink: 0;
+    white-space: nowrap;
+    padding: 0.75rem 1rem;
+  }
+  
+  .appointment-modal .input-group .form-control {
+    flex: 1;
+    min-width: 0;
+  }
+}
+
+.appointment-modal .form-actions {
+  text-align: center;
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e1e8ed;
+}
+
+.appointment-modal .btn-submit {
+  background: linear-gradient(135deg, #008FD5 0%, #8CC63F 100%);
+  border: none;
+  border-radius: 25px;
+  padding: 0.75rem 2rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: white;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  min-width: 140px;
+  justify-content: center;
+}
+
+.appointment-modal .btn-submit:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 25px rgba(0, 143, 213, 0.3);
+}
+
+.appointment-modal .btn-icon {
+  transition: transform 0.3s ease;
+}
+
+.appointment-modal .btn-submit:hover .btn-icon {
+  transform: translateX(3px);
+}
+
+/* Mobile Responsive for Surgery List */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .surgery-item {
+    margin-bottom: 0.75rem;
+  }
+  
+  .surgery-header {
+    padding: 1rem;
+  }
+  
+  .surgery-title {
+    font-size: 1.1rem;
+  }
+  
+  .surgery-badge {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.6rem;
+  }
+  
+  .surgery-description {
+    padding: 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Mobile Responsive for Modal */
+@media (max-width: 768px) {
+  .appointment-modal-overlay {
+    padding: 10px;
+  }
+  
+  .appointment-modal {
+    max-width: calc(100% - 20px);
+  }
+  
+  .appointment-modal .modal-header {
+    padding: 1rem;
+  }
+  
+  .appointment-modal .modal-title {
+    font-size: 1.25rem;
+  }
+  
+  .appointment-modal .appointment-icon {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .appointment-modal .modal-body {
+    padding: 1rem;
+  }
+  
+  .appointment-modal .form-control, .appointment-modal .form-select {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.875rem;
+  }
+  
+  .appointment-modal .btn-submit {
+    padding: 0.625rem 1.5rem;
+    font-size: 0.875rem;
+    min-width: 120px;
+  }
+  
+  /* Fix mobile number input group for mobile */
+  .appointment-modal .input-group {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  
+  .appointment-modal .input-group-text {
+    flex-shrink: 0;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.875rem;
+    white-space: nowrap;
+  }
+  
+  .appointment-modal .input-group .form-control {
+    flex: 1;
+    min-width: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .appointment-modal-overlay {
+    padding: 5px;
+  }
+  
+  .appointment-modal {
+    max-width: calc(100% - 10px);
+  }
+  
+  .appointment-modal .modal-header {
+    padding: 0.875rem;
+  }
+  
+  .appointment-modal .modal-title {
+    font-size: 1.125rem;
+  }
+  
+  .appointment-modal .appointment-icon {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .appointment-modal .modal-body {
+    padding: 0.875rem;
+  }
+  
+  .appointment-modal .form-group {
+    margin-bottom: 0.875rem;
+  }
+  
+  .appointment-modal .form-control, .appointment-modal .form-select {
+    padding: 0.5rem 0.625rem;
+    font-size: 0.8rem;
+  }
+  
+  .appointment-modal .form-label {
+    font-size: 0.8rem;
+  }
+  
+  .appointment-modal .btn-submit {
+    padding: 0.5rem 1.25rem;
+    font-size: 0.8rem;
+    min-width: 100px;
+  }
+  
+  /* Additional mobile fixes for input group */
+  .appointment-modal .input-group-text {
+    padding: 0.5rem 0.5rem;
+    font-size: 0.8rem;
+  }
+  
+  .appointment-modal .input-group .form-control {
+    padding: 0.5rem 0.5rem;
+    font-size: 0.8rem;
+  }
+}
+
+/* Print styles */
+@media print {
+  .department-filter-section,
+  .cta-section,
+  .appointment-modal-overlay {
+    display: none;
+  }
+  
+  .surgery-card {
+    break-inside: avoid;
+    box-shadow: none;
+    border: 1px solid #ccc;
+  }
+}

@@ -74,48 +74,6 @@
   </div>
   <!--************** Start End Here OUR SPECIALITIES -->
 
-  <div class="" *ngIf="active_button==1">
-    <div class="carousel-container pt-1 pb-5">
-      <div class="carousel" [style.transform]="getTransform()" [style.transition]="'transform 0.4s ease'">
-        <div class="carousel-slide" *ngFor="let dep of depertments" style="min-width:100%">
-          <div class="text-center specialities-container">
-            <div class="title-container py-3">
-              <div class="line line-left"></div>
-              <span class="title_text">KEY SURGERIES</span>
-              <div class="line line-right"></div>
-            </div>
-            <div class="row align-items-center g-0 pt-4">
-              <!-- IMAGE SECTION -->
-              <div class="col-md-3 ms-md-4 col-12 d-flex justify-content-center mb-3 mb-md-0 img_left_margin">
-                <img class="border_radius" width="310" height="310" [src]="dep['img']" alt="surgery-image">
-              </div>
-
-              <!-- TEXT SECTION -->
-              <div class="col-md-8 col-12 ps-md-3 key_tab spac_mobile">
-                <h1 class="head_text text-start mt-md-0 mt-2">{{ dep['d_name'] }}</h1>
-                <p class="key_surgeries">
-                  {{ dep['d_description'] }}
-                  <span class="p-0 m-0" *ngIf="showmoreactive_one">
-                    It aims to provide high-quality treatment with cutting-edge technology and experienced doctors.
-                  </span>
-                  <button (click)="ReadMore()" class="btn btn-link text_lgt_primary fw-bold p-0">
-                    {{ showmoreactive_one ? 'Read Less <<' : 'Read More >>' }} </button>
-                </p>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </div>
-      <div class="carousel-buttons px-3 d-flex justify-content-between" style="gap:12px">
-        <img class="me-1" src="assets/images/{{index!=0?'back_black.svg':'back_gray.svg'}}" alt=""
-          (click)="index!=0?updateCarousel('prev'):''">
-        <img class="ms-1"
-          src="assets/images/{{index === depertments.length - 1?'farward_gray.svg':'farward_black.svg'}}" alt=""
-          (click)="index==depertments.length-1?'':updateCarousel('next')">
-      </div>
-    </div>
-  </div>
 
 
 

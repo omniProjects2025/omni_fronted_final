@@ -48,6 +48,7 @@ import { PatientCareComponent } from './patient-care/patient-care.component';
 import { NewlineToBrPipe } from './pipes/newline-to-br.pipe';
 import { PrivacyPolocyComponent } from './privacy-polocy/privacy-polocy.component';
 import { TermsConditionsComponent } from './terms-conditions/terms-conditions.component';
+import { KeySurgeriesComponent } from './key-surgeries/key-surgeries.component';
 
 @NgModule({
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
@@ -89,7 +90,8 @@ import { TermsConditionsComponent } from './terms-conditions/terms-conditions.co
     PatientCareComponent,
     NewlineToBrPipe,
     PrivacyPolocyComponent,
-    TermsConditionsComponent
+    TermsConditionsComponent,
+    KeySurgeriesComponent
   ],
   imports: [
     BrowserModule,

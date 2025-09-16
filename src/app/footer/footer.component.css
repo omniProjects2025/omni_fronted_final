@@ -284,15 +284,25 @@
     font-size: 13px;
   }
 
-  .logo, .nabh-logo {
-    margin: 0 auto 10px auto;
-    display: block;
-    align-self: auto;
+  /* Fix logo sizing and alignment for mobile */
+  .logo {
+    max-width: 150px;
+    height: auto;
+    margin-bottom: 10px;
   }
   
+  .nabh-logo {
+    max-width: 60px;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  /* Keep logos in horizontal alignment on mobile */
   .d-flex.justify-content-start.align-items-center {
-    flex-direction: column;
-    align-items: flex-start !important;
+    flex-direction: row;
+    align-items: center !important;
+    flex-wrap: wrap;
+    gap: 10px;
   }
   
   .footer-bottom {
@@ -342,6 +352,26 @@
   
   .info-item {
     justify-content: center;
+  }
+}
+
+/* Additional mobile optimizations for very small screens */
+@media (max-width: 480px) {
+  .logo {
+    max-width: 120px;
+  }
+  
+  .nabh-logo {
+    max-width: 50px;
+  }
+  
+  .d-flex.justify-content-start.align-items-center {
+    gap: 8px;
+  }
+  
+  .footer-desc {
+    font-size: 13px;
+    margin-bottom: 12px;
   }
 }
 

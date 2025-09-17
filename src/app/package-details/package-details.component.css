@@ -154,9 +154,318 @@ ul li {
     color: rgba(102, 102, 102, 1);
 }
 
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+    .container-fluid {
+        padding: 15px !important;
+    }
+    
+    /* Main package section */
+    section {
+        border-radius: 20px !important;
+        margin: 10px 0 !important;
+    }
+    
+    .py-4.pe-lg-5.mb-lg-5 {
+        padding: 20px 15px !important;
+    }
+    
+    .package_title {
+        font-size: 2rem !important;
+        margin-bottom: 20px !important;
+        line-height: 1.2 !important;
+    }
+    
+    .package_price {
+        font-size: 1.8rem !important;
+        margin-bottom: 25px !important;
+    }
+    
+    .img_border {
+        margin-bottom: 25px !important;
+        max-height: 280px !important;
+        object-fit: cover !important;
+        border-radius: 10px !important;
+    }
+    
+    /* Form improvements */
+    .sub_btn {
+        padding: 15px 50px !important;
+        font-size: 1rem !important;
+        width: 100% !important;
+        max-width: 320px !important;
+        margin-top: 20px !important;
+    }
+    
+    .form-control {
+        padding: 12px 15px !important;
+        font-size: 16px !important;
+        border-radius: 8px !important;
+        margin-bottom: 15px !important;
+    }
+    
+    label {
+        font-size: 1rem !important;
+        margin-bottom: 8px !important;
+        font-weight: 600 !important;
+    }
+    
+    /* Package includes section */
+    .px-5 {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+    
+    .my-4.px-3 {
+        margin: 20px 0 !important;
+        padding: 0 10px !important;
+    }
+    
+    .package-label {
+        font-size: 0.9rem !important;
+        padding: 10px 15px !important;
+        font-weight: 600 !important;
+    }
+    
+    .custom-box-shadow {
+        padding: 25px 20px !important;
+        margin: 20px 0 !important;
+        border-radius: 15px !important;
+    }
+    
+    ul {
+        padding-left: 20px !important;
+        margin-top: 15px !important;
+    }
+    
+    ul li {
+        font-size: 1rem !important;
+        margin-bottom: 8px !important;
+        line-height: 1.4 !important;
+        color: #333 !important;
+    }
+    
+    /* FAQ section */
+    .px-4 {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+    
+    .faqs_quetions {
+        font-size: 1.1rem !important;
+        margin-bottom: 10px !important;
+        font-weight: 600 !important;
+    }
+    
+    .faqs_answer {
+        font-size: 1rem !important;
+        line-height: 1.5 !important;
+        margin-bottom: 20px !important;
+    }
+    
+    /* More packages section */
+    .more_package_txt {
+        font-size: 1.5rem !important;
+        margin-bottom: 20px !important;
+        padding-left: 15px !important;
+    }
+    
+    /* Carousel cards */
+    .view_book_btn {
+        font-size: 0.8rem !important;
+        padding: 8px 18px !important;
+        margin: 3px !important;
+    }
+    
+    .card-body .package_title {
+        font-size: 1rem !important;
+        margin-bottom: 10px !important;
+    }
+    
+    .orginal_price {
+        font-size: 0.9rem !important;
+    }
+    
+    .discount_price {
+        font-size: 1.1rem !important;
+    }
+    
+    .badge_bg {
+        font-size: 0.8rem !important;
+        padding: 5px 10px !important;
+    }
+    
+    /* Map responsive */
+    iframe {
+        height: 300px !important;
+        border-radius: 10px !important;
+    }
+    
+    /* Modal responsive */
+    .modal-dialog {
+        margin: 15px !important;
+        max-width: calc(100% - 30px) !important;
+    }
+    
+    .modal-body {
+        padding: 25px !important;
+    }
+    
+    .modal-header {
+        padding: 20px 25px !important;
+    }
+    
+    .modal-title {
+        font-size: 1.3rem !important;
+    }
+}
+
 @media (max-width: 576px) {
     .hr_line {
         display: none;
+    }
+    
+    .container-fluid {
+        padding: 10px !important;
+    }
+    
+    /* Main package section */
+    .py-4.pe-lg-5.mb-lg-5 {
+        padding: 15px 10px !important;
+    }
+    
+    .package_title {
+        font-size: 1.6rem !important;
+        margin-bottom: 15px !important;
+    }
+    
+    .package_price {
+        font-size: 1.4rem !important;
+        margin-bottom: 20px !important;
+    }
+    
+    .img_border {
+        max-height: 220px !important;
+        margin-bottom: 20px !important;
+    }
+    
+    /* Form improvements */
+    .sub_btn {
+        padding: 12px 40px !important;
+        font-size: 0.9rem !important;
+        margin-top: 15px !important;
+    }
+    
+    .form-control {
+        padding: 10px 12px !important;
+        font-size: 15px !important;
+        margin-bottom: 12px !important;
+    }
+    
+    label {
+        font-size: 0.9rem !important;
+        margin-bottom: 6px !important;
+    }
+    
+    /* Package includes section */
+    .px-5 {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+    
+    .my-4.px-3 {
+        margin: 15px 0 !important;
+        padding: 0 5px !important;
+    }
+    
+    .package-label {
+        font-size: 0.8rem !important;
+        padding: 8px 12px !important;
+    }
+    
+    .custom-box-shadow {
+        padding: 20px 15px !important;
+        margin: 15px 0 !important;
+    }
+    
+    ul {
+        padding-left: 18px !important;
+        margin-top: 12px !important;
+    }
+    
+    ul li {
+        font-size: 0.9rem !important;
+        margin-bottom: 6px !important;
+    }
+    
+    /* FAQ section */
+    .px-4 {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+    
+    .faqs_quetions {
+        font-size: 1rem !important;
+        margin-bottom: 8px !important;
+    }
+    
+    .faqs_answer {
+        font-size: 0.9rem !important;
+        margin-bottom: 15px !important;
+    }
+    
+    /* More packages section */
+    .more_package_txt {
+        font-size: 1.3rem !important;
+        margin-bottom: 15px !important;
+        padding-left: 10px !important;
+    }
+    
+    /* Carousel cards */
+    .view_book_btn {
+        font-size: 0.7rem !important;
+        padding: 6px 15px !important;
+        margin: 2px !important;
+    }
+    
+    .card-body .package_title {
+        font-size: 0.9rem !important;
+    }
+    
+    .orginal_price {
+        font-size: 0.8rem !important;
+    }
+    
+    .discount_price {
+        font-size: 1rem !important;
+    }
+    
+    .badge_bg {
+        font-size: 0.7rem !important;
+        padding: 4px 8px !important;
+    }
+    
+    /* Map responsive */
+    iframe {
+        height: 250px !important;
+    }
+    
+    /* Modal responsive */
+    .modal-dialog {
+        margin: 10px !important;
+        max-width: calc(100% - 20px) !important;
+    }
+    
+    .modal-body {
+        padding: 20px !important;
+    }
+    
+    .modal-header {
+        padding: 15px 20px !important;
+    }
+    
+    .modal-title {
+        font-size: 1.1rem !important;
     }
 }
 

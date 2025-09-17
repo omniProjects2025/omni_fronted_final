@@ -19,6 +19,7 @@ export class HealthCheckupComponent {
   selected: string = 'All Packages';
   allPackages: any = {};
   displayedPackages: any[] = [];
+  selectedPackageName: string = '';
   packageData = {
     fullName: '',
     emailId: '',
@@ -62,6 +63,80 @@ export class HealthCheckupComponent {
     return ((1 - newPrice / oldPrice) * 100).toFixed(0) + '% Off';
   }
 
+  getPackageIcon(packageName: string): string {
+    if (!packageName) return 'fas fa-heartbeat';
+    
+    const name = packageName.toLowerCase();
+    
+    // Cardiac/Heart related packages
+    if (name.includes('cardiac') || name.includes('heart') || name.includes('cardio')) {
+      return 'fas fa-heartbeat';
+    }
+    
+    // Orthopedic/Bone related packages
+    if (name.includes('ortho') || name.includes('bone') || name.includes('joint') || name.includes('spine')) {
+      return 'fas fa-bone';
+    }
+    
+    // Eye/Vision related packages
+    if (name.includes('eye') || name.includes('vision') || name.includes('ophthal')) {
+      return 'fas fa-eye';
+    }
+    
+    // Diabetes related packages
+    if (name.includes('diabetes') || name.includes('diabetic') || name.includes('sugar')) {
+      return 'fas fa-tint';
+    }
+    
+    // Kidney related packages
+    if (name.includes('kidney') || name.includes('renal') || name.includes('nephro')) {
+      return 'fas fa-filter';
+    }
+    
+    // Liver related packages
+    if (name.includes('liver') || name.includes('hepatic')) {
+      return 'fas fa-leaf';
+    }
+    
+    // Cancer related packages
+    if (name.includes('cancer') || name.includes('onco') || name.includes('tumor')) {
+      return 'fas fa-ribbon';
+    }
+    
+    // Women's health packages
+    if (name.includes('women') || name.includes('gynec') || name.includes('pregnancy') || name.includes('maternal')) {
+      return 'fas fa-female';
+    }
+    
+    // Men's health packages
+    if (name.includes('men') || name.includes('male') || name.includes('prostate')) {
+      return 'fas fa-male';
+    }
+    
+    // Child/Pediatric packages
+    if (name.includes('child') || name.includes('pediatric') || name.includes('baby') || name.includes('infant')) {
+      return 'fas fa-child';
+    }
+    
+    // Senior/Elderly packages
+    if (name.includes('senior') || name.includes('elderly') || name.includes('geriatric')) {
+      return 'fas fa-user-clock';
+    }
+    
+    // Full body/Complete packages
+    if (name.includes('whole') || name.includes('complete') || name.includes('full') || name.includes('comprehensive')) {
+      return 'fas fa-user-md';
+    }
+    
+    // Executive packages
+    if (name.includes('executive') || name.includes('corporate') || name.includes('business')) {
+      return 'fas fa-briefcase';
+    }
+    
+    // Default health checkup icon
+    return 'fas fa-stethoscope';
+  }
+
 
   viewPackageDetails(selected_obj: any) {
     console.log(selected_obj, 'selected_obj...');
@@ -84,16 +159,20 @@ export class HealthCheckupComponent {
     });
   }
 
-bookAppointment(id: number, package_type: string) {
+bookAppointment(id: number, package_title: string) {
+  this.selectedPackageName = package_title;
   this.appointmentForm.patchValue({
-    packageType: package_type,
-    speciality: package_type
+    packageType: package_title,
+    speciality: package_title
   });
 
   const modalElement = document.getElementById('appointmentModal');
   if (modalElement) {
     modalElement.removeAttribute('inert');
-    this.modalInstance = (window as any).bootstrap.Modal.getOrCreateInstance(modalElement);
+    this.modalInstance = (window as any).bootstrap.Modal.getOrCreateInstance(modalElement, {
+      backdrop: 'static',
+      keyboard: false
+    });
     this.modalInstance.show();
     setTimeout(() => {
       document

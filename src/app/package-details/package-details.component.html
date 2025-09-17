@@ -13,31 +13,33 @@
           <!-- Details -->
           <div class="col-lg-6">
             <h1 class="package_title">{{ selectedPackage['package_title'] }}</h1>
-            <h5 class="package_price">{{ selectedPackage['newPrice'] }}</h5>
+            <h5 class="package_price">₹{{ selectedPackage['newPrice'] }}/-</h5>
 
             <form (ngSubmit)="submitPackageForm()" #packageForm="ngForm">
               <div class="row">
-                <div class="col-md-6 mb-3">
+                <div class="col-md-6 col-12 mb-3">
                   <label for="name">Full Name*</label>
-                  <input type="text" class="form-control" name="fullName" [(ngModel)]="packageData.fullName" required>
+                  <input type="text" class="form-control" name="fullName" [(ngModel)]="packageData.fullName" 
+                         placeholder="Enter your full name" required>
                 </div>
-                <div class="col-md-6 mb-3">
+                <div class="col-md-6 col-12 mb-3">
                   <label for="email">Email ID*</label>
-                  <input type="email" class="form-control" name="emailId" [(ngModel)]="packageData.emailId" required>
+                  <input type="email" class="form-control" name="emailId" [(ngModel)]="packageData.emailId" 
+                         placeholder="Enter your email address" required>
                 </div>
-                <div class="col-md-6 mb-3">
+                <div class="col-md-6 col-12 mb-3">
                   <label for="phone">Phone Number*</label>
                   <input type="tel" class="form-control" name="phoneNumber" [(ngModel)]="packageData.phoneNumber"
-                    required>
+                    placeholder="Enter 10-digit mobile number" required maxlength="10">
                 </div>
-                <div class="col-md-6 mb-3">
+                <div class="col-md-6 col-12 mb-3">
                   <label for="date">Appointment Date</label>
                   <input type="date" class="form-control" name="appointmentDate"
                     [(ngModel)]="packageData.appointmentDate">
                 </div>
               </div>
               <div class="text-center pt-3">
-                <button type="submit" class="sub_btn">Submit</button>
+                <button type="submit" class="sub_btn">Book Appointment</button>
               </div>
             </form>
           </div>
@@ -85,7 +87,7 @@
                 <p class="discount_price ms-2 p-0 m-0">{{ package.newPrice }}/-</p>
               </div>
               <span class="badge badge_bg mb-2">{{ package.discount + '%' }} Off</span>
-              <div class="d-flex justify-content-center gap-2 mt-2">
+              <div class="d-flex flex-wrap justify-content-center gap-2 mt-2">
                 <button class="view_book_btn" (click)="onPackageCardClick(package)">View Details</button>
                 <button class="view_book_btn" (click)="bookAppointment(selectedPackageId, package.package_title)">
                   Book an Appointment

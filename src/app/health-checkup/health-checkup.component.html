@@ -20,9 +20,10 @@
       <div class="card">
         <div class="row">
           <div class="">
-            <img [src]="checkup.image" class="" alt="checkup" height="232px" width="100%">
+            <img [src]="checkup.image" class="card-image" alt="checkup" width="100%">
           </div>
-          <h5 class="ms-4 mt-2 dep_text">{{ checkup['package_title'] | titlecase }}</h5>
+          <!-- <h5 class="ms-4 mt-2 dep_text">{{ (checkup['package_title'] || checkup['title'] || checkup['name'] || 'Health Package') | titlecase }}</h5> -->
+          <h5 class="ms-4 mt-2 dep_text">{{ checkup['package_title'] }}</h5>
           <div class='d-flex align-items-center justify-content-start ms-4'>
             <span class="old-price" style="font-weight: 300 !important;">₹{{ checkup['oldPrice'] }}/-</span>
             <span class="new-price ms-2">₹{{ checkup['newPrice'] }}/-</span>
@@ -31,10 +32,10 @@
             <div class="ms-4">
               <p class="discount p-0">{{ getDiscount(checkup['oldPrice'], checkup['newPrice']) }}</p>
             </div>
-            <div class="ms-3">
+            <div class="ms-3 d-flex flex-wrap">
               <button class="btn view_button ms-3 w_dth px-0" (click)="viewPackageDetails(checkup)">View
                 Details</button>
-              <button class="btn view_button w_dth px-0" (click)="bookAppointment(checkup['id'], checkup['title'])">Book
+              <button class="btn view_button w_dth px-0" (click)="bookAppointment(checkup['id'], checkup['package_title'])">Book
                 an
                 Appointment</button>
             </div>
@@ -44,45 +45,72 @@
     </div>
   </div>
   <!-- Bootstrap Modal -->
-  <div class="modal fade custom-backdrop" id="appointmentModal" data-bs-backdrop="static" tabindex="-1">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title w-100 text-center">Book an Appointment</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+  <div class="modal fade custom-backdrop" id="appointmentModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content appointment-modal">
+        <div class="modal-header appointment-modal-header">
+          <div class="modal-title-section">
+            <h5 class="modal-title">Book an Appointment</h5>
+            <p class="modal-subtitle">Fill in your details to book your health checkup package</p>
+          </div>
+          <button type="button" class="btn-close appointment-close-btn" data-bs-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
         </div>
-        <div class="modal-body">
+        <div class="modal-body appointment-modal-body">
           <form [formGroup]="appointmentForm">
-            <div class="mb-3">
-              <label class="form-label">Package Type</label>
-              <input type="text" class="form-control" formControlName="speciality" readonly>
-            </div>
-            <div class="mb-3">
-              <label class="form-label">Name</label>
-              <input type="text" class="form-control" formControlName="name">
-              <div *ngIf="appointmentForm.get('name')?.invalid && appointmentForm.get('name')?.touched"
-                class="text-danger">
-                Name is required.
+            <!-- Selected Package Display -->
+            <div class="selected-package-card">
+              <div class="package-info">
+                <div class="package-icon">
+                  <i [class]="getPackageIcon(selectedPackageName)"></i>
+                </div>
+                <div class="package-details">
+                  <h6 class="package-title">Selected Package</h6>
+                  <p class="package-name">{{ selectedPackageName || 'Health Checkup Package' }}</p>
+                </div>
               </div>
             </div>
-            <div class="mb-3">
-              <label class="form-label">Email</label>
-              <input type="email" class="form-control" formControlName="email">
-              <div *ngIf="appointmentForm.get('email')?.invalid && appointmentForm.get('email')?.touched"
-                class="text-danger">
-                Enter a valid email.
+
+            <!-- Form Fields -->
+            <div class="form-section">
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label class="form-label appointment-label">Full Name *</label>
+                  <input type="text" class="form-control appointment-input" formControlName="name" 
+                         placeholder="Enter your full name">
+                  <div *ngIf="appointmentForm.get('name')?.invalid && appointmentForm.get('name')?.touched"
+                    class="error-message">
+                    <i class="fas fa-exclamation-circle"></i> Name is required
+                  </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label class="form-label appointment-label">Mobile Number *</label>
+                  <input type="tel" class="form-control appointment-input" formControlName="mobile" 
+                         placeholder="Enter 10-digit mobile number" maxlength="10">
+                  <div *ngIf="appointmentForm.get('mobile')?.invalid && appointmentForm.get('mobile')?.touched"
+                    class="error-message">
+                    <i class="fas fa-exclamation-circle"></i> Enter a valid 10-digit mobile number
+                  </div>
+                </div>
+              </div>
+              <div class="mb-3">
+                <label class="form-label appointment-label">Email Address *</label>
+                <input type="email" class="form-control appointment-input" formControlName="email" 
+                       placeholder="Enter your email address">
+                <div *ngIf="appointmentForm.get('email')?.invalid && appointmentForm.get('email')?.touched"
+                  class="error-message">
+                  <i class="fas fa-exclamation-circle"></i> Enter a valid email address
+                </div>
               </div>
             </div>
-            <div class="mb-3">
-              <label class="form-label">Mobile Number</label>
-              <input type="text" class="form-control" formControlName="mobile">
-              <div *ngIf="appointmentForm.get('mobile')?.invalid && appointmentForm.get('mobile')?.touched"
-                class="text-danger">
-                Enter a valid 10-digit mobile number.
-              </div>
-            </div>
-            <div class="d-flex justify-content-center" (click)="submitPackageForm()">
-              <button type="submit" class="btn btn-success w-50">Submit</button>
+
+            <!-- Submit Button -->
+            <div class="submit-section">
+              <button type="button" class="btn appointment-submit-btn" (click)="submitPackageForm()">
+                <i class="fas fa-calendar-check"></i>
+                Book Appointment
+              </button>
             </div>
           </form>
         </div>

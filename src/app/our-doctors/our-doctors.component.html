@@ -4,7 +4,7 @@
         <span class="visually-hidden">Loading...</span>
     </div>
     <p class="text-muted">Loading doctors...</p>
-    
+
     <!-- Skeleton loader for better UX -->
     <div class="skeleton-container">
         <div *ngFor="let item of [1,2,3,4,5]" class="skeleton-card">
@@ -48,7 +48,7 @@
           'border-bottom border_bottom_radius': i === visibleDoctors.length - 1
         }">
                     <!-- Doctor Image -->
-                    <div class="col-md-3 col-12 d-flex align-items-center justify-content-center mb-3 mb-md-0"
+                    <div class="col-md-3 col-12 d-flex align-items-center justify-content-center mb-3 mb-md-0" style="cursor: pointer;"
                         (click)="goToDoctorDetails(details['doctor_name'])">
                         <img [src]="details['profile'] ? details['profile'] : 'assets/our_doctors/doctor_dummy_image.svg'"
                             [alt]="details['doctor_name'] || 'Doctor Profile Image'" class="img-fluid rounded-circle"
@@ -56,7 +56,7 @@
                     </div>
 
                     <!-- Doctor Name & Details -->
-                    <div class="col-md-6 col-12 text-center text-md-start"
+                    <div class="col-md-6 col-12 text-center text-md-start" style="cursor: pointer;"
                         (click)="goToDoctorDetails(details['doctor_name'])">
                         <h2 class="fs-5 fw-bold">{{details['doctor_name']}}</h2>
                         <div class="mb-0">
@@ -131,8 +131,9 @@
                                 need a specialist, super specialist, or surgeon, OMNI Hospitals makes booking an
                                 appointment simple, quick, and patient-friendly.
                             </p>
-                            <p class="text-center fw_normal">From general medicine to advanced super specialties, our doctors are here to care for every health need. All you need to do is:
-</p>
+                            <p class="text-center fw_normal">From general medicine to advanced super specialties, our
+                                doctors are here to care for every health need. All you need to do is:
+                            </p>
                             <!-- <p class="text-center text-muted">
                                 Our doctors are spread across multidisciplinary medical specialties. All you need to do
                                 is:

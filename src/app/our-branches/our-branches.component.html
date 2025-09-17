@@ -124,13 +124,13 @@
             <div class="doctor-card mb-3 p-3 shadow-sm">
               <div class="row g-0 align-items-center">
                 <!-- Doctor Image -->
-                <div class="col-md-2 text-center" (click)="goToDoctorDetails(doc.name)">
+                <div class="col-md-2 text-center" (click)="goToDoctorDetails(doc.name)" style="cursor: pointer;">
                   <img [src]="doc.profile" class="doctor-img" alt="Doctor Image" />
                 </div>
 
                 <!-- Doctor Info -->
                 <div class="col-md-7">
-                  <div class="ms-3" (click)="goToDoctorDetails(doc.name)">
+                  <div class="ms-3" (click)="goToDoctorDetails(doc.name)" style="cursor: pointer;">
                     <h5 class="fw-bold">{{ doc.name }}</h5>
                     <p class="mb-1 small text-muted">
                       {{doc.qualification}}

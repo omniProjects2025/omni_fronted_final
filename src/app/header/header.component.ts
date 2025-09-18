@@ -34,7 +34,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
         { id: 'ent', label: 'ENT', route: '/speciality/ent' },
         { id: 'general-medicine', label: 'General Medicine', route: '/speciality/general-medicine' },
         { id: 'general-surgery', label: 'General Surgery', route: '/speciality/general-surgery' },
-        { id: 'gastroenterology', label: 'Medical & Surgical Gastroenterology', route: '/speciality/gastroenterology' },
+        { id: 'gastroenterology', label: 'Gastroenterology', route: '/speciality/gastroenterology' },
         { id: 'nephrology', label: 'Nephrology', route: '/speciality/nephrology' },
         { id: 'neurology', label: 'Neurology', route: '/speciality/neurology' },
         { id: 'dermatology', label: 'Dermatology', route: '/speciality/dermatology' },

@@ -14,7 +14,7 @@ export class FooterComponent {
     'Cardiology',
     'Emergency Medicine & Critical Care',
     'ENT',
-    'Medical & Surgical Gastroenterology',
+    'Gastroenterology',
     'General Surgery',
     'General Medicine',
     'Nephrology',

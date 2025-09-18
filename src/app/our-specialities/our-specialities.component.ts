@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { SpecialitiesService } from '../services/specialities.service';
 import { toUrlFriendly } from '../utils/url-helper.util';
 import { Title, Meta } from '@angular/platform-browser';
+import { CanonicalService } from '../services/canonical.service';
 
 interface Specialty {
   name: string;
@@ -33,10 +34,12 @@ export class OurSpecialitiesComponent implements OnInit {
     private router: Router, 
     private specialitiesService: SpecialitiesService,
     private titleService: Title,
-    private metaService: Meta
+    private metaService: Meta,
+    private canonicalService: CanonicalService
   ) {
     window.scrollTo(0, 0);
     this.setDefaultMetaTags();
+    this.setCanonicalUrl();
   }
 
   ngOnInit() {
@@ -50,6 +53,10 @@ export class OurSpecialitiesComponent implements OnInit {
       content: 'Discover comprehensive medical specialties at OMNI Hospitals. From cardiology to orthopedics, we offer expert care across multiple locations in Andhra Pradesh and Telangana.' 
     });
     this.metaService.updateTag({ name: 'keywords', content: 'medical specialties, cardiology, orthopedics, neurology, nephrology, OMNI hospitals, Hyderabad, Andhra Pradesh, Telangana' });
+  }
+
+  private setCanonicalUrl() {
+    this.canonicalService.setCanonicalUrl('/our-specialities');
   }
 
   private loadSpecialties() {

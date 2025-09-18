@@ -1,5 +1,7 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, ViewChild, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Title, Meta } from '@angular/platform-browser';
+import { CanonicalService } from '../services/canonical.service';
 declare var $: any;
 
 @Component({
@@ -7,8 +9,31 @@ declare var $: any;
   templateUrl: './about-us.component.html',
   styleUrls: ['./about-us.component.css']
 })
-export class AboutUsComponent {
+export class AboutUsComponent implements OnInit {
   @ViewChild('boardCarousel', { static: false }) boardCarousel!: ElementRef;
+
+  constructor(
+    private titleService: Title,
+    private metaService: Meta,
+    private canonicalService: CanonicalService
+  ) {}
+
+  ngOnInit(): void {
+    this.setSEOTags();
+  }
+
+  private setSEOTags(): void {
+    this.titleService.setTitle('About Us - OMNI Hospitals | Leading Healthcare Provider in Hyderabad');
+    this.metaService.updateTag({ 
+      name: 'description', 
+      content: 'Learn about OMNI Hospitals - our mission, vision, and commitment to providing world-class healthcare services across multiple locations in Andhra Pradesh and Telangana.' 
+    });
+    this.metaService.updateTag({ 
+      name: 'keywords', 
+      content: 'about OMNI hospitals, healthcare provider Hyderabad, hospital mission vision, medical excellence, Andhra Pradesh Telangana healthcare' 
+    });
+    this.canonicalService.setCanonicalUrl('/about-us');
+  }
 
   selectedIndex: number = 0;
   selected_team = 1;

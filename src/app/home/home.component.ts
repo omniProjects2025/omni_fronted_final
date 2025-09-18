@@ -1,12 +1,13 @@
 import { Component, ViewChild, ElementRef, Renderer2, HostListener, ChangeDetectorRef, SimpleChanges, ChangeDetectionStrategy, OnDestroy, OnInit } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 import { register } from 'swiper/element/bundle';
-import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+import { DomSanitizer, SafeResourceUrl, Title, Meta } from '@angular/platform-browser';
 import { HttpClient } from '@angular/common/http';
 import 'owl.carousel';
 import { firstValueFrom, Observable, Subscription } from 'rxjs';
 import { UsersService } from '../services/users.service';
 import { VideoStateService } from '../services/video-state.service';
+import { CanonicalService } from '../services/canonical.service';
 import { toUrlFriendly } from '../utils/url-helper.util';
 import { environment } from '../../environments/environment';
 register();
@@ -373,13 +374,32 @@ export class HomeComponent implements OnInit, OnDestroy {
     private renderer: Renderer2, 
     private cdr: ChangeDetectorRef, 
     private UsersService: UsersService,
-    private videoStateService: VideoStateService
+    private videoStateService: VideoStateService,
+    private titleService: Title,
+    private metaService: Meta,
+    private canonicalService: CanonicalService
   ) {}
 
   private resizeListener: (() => void) | undefined;
   private lastWindowWidth: number = window.innerWidth;
 
+  private setSEOTags(): void {
+    this.titleService.setTitle('OMNI Hospitals - Best Multispecialty Hospital in Hyderabad | Expert Medical Care');
+    this.metaService.updateTag({ 
+      name: 'description', 
+      content: 'OMNI Hospitals - Leading multispecialty hospital in Hyderabad offering expert medical care across cardiology, orthopedics, neurology, and more. Book your appointment today.' 
+    });
+    this.metaService.updateTag({ 
+      name: 'keywords', 
+      content: 'OMNI hospitals, multispecialty hospital Hyderabad, cardiology, orthopedics, neurology, nephrology, best hospital Hyderabad, medical care Andhra Pradesh, Telangana' 
+    });
+    this.canonicalService.setCanonicalUrl('/');
+  }
+
   ngOnInit(): void {
+    // Set SEO meta tags and canonical URL
+    this.setSEOTags();
+    
     // Stop any videos from other components when entering this component
     this.videoStateService.stopAllVideos();
     

@@ -59,7 +59,7 @@
               <ng-container *ngFor="let desc of selectedDepartment.details">
                 <h5 [innerHTML]="desc.title"></h5>
                 <h6 *ngIf="desc.subtitle" [innerHTML]="desc.subtitle"></h6>
-                <p [innerHTML]="desc.description"></p>
+                <p *ngFor="let data of desc.description" [innerHTML]="data"></p>
                 <ng-container *ngIf="desc.para">
                 <p *ngFor="let desc_para of desc.para" [innerHTML]="desc_para"></p>
               </ng-container>
@@ -69,7 +69,7 @@
                 <ng-container *ngFor="let sec of desc?.sections">
                   <h6>{{sec.subtitle}}</h6>
                   <p class="m-0">{{sec.heading}}</p>
-                  <p [innerHTML]="sec?.description | newlineToBr"></p>
+                  <p *ngFor="let data of sec?.description" [innerHTML]="data | newlineToBr"></p>
                   <ul>
                     <li *ngFor="let item of sec.list">{{item}}</li>
                   </ul>
@@ -109,10 +109,14 @@
                 <h5>{{subDepartmentData?.name}}</h5>
                 <p *ngIf="subDepartmentData?.title" [innerHTML]="subDepartmentData.title"></p>
                 <p *ngIf="subDepartmentData?.subtitle" [innerHTML]="subDepartmentData?.subtitle"></p>
-                <p *ngIf="subDepartmentData?.description" [innerHTML]="subDepartmentData?.description"></p>
+                <ng-container *ngIf="subDepartmentData?.description">
+                <p *ngFor="let desc_data of subDepartmentData?.description" [innerHTML]="desc_data"></p>
+              </ng-container>
                 <ng-container *ngFor="let ques of subDepartmentData?.sections">
                   <h6 *ngIf="ques.subtitle" class="text-align-left" [innerHTML]="ques.subtitle"></h6>
-                  <p *ngIf="ques?.description" [innerHTML]="ques?.description"></p>
+                  <ng-container *ngIf="ques?.description">
+                    <p *ngFor="let que_data of ques?.description" [innerHTML]="que_data"></p>
+                  </ng-container>
                   <ng-container *ngFor="let para of ques?.para">
                     <p *ngIf="para" [innerHTML]="para"></p>
                   </ng-container>
@@ -134,10 +138,5 @@
     </div>
   </section>
 </ng-container>
-
-
-
-
-
 
 <app-footer></app-footer>

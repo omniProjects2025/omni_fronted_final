@@ -584,64 +584,6 @@
       ]
     },
     {
-      "name": "General Medicine",
-      "short_description": "The department of  general medicine at Omni Hospitals has the best team of top General surgeons and physicians in Hyderabad, with vast experience in treating all branches of internal medicine",
-      "img": "assets/our_specialities/general_medicine.jpg",
-      "meta_title": "Best General Medicine Hospital in Kukatpally, Hyderabad | OMNI Hospitals",
-      "meta_description": "OMNI Hospitals has the best general physicians in Kukatpally. We provide expert care for diabetes, hypertension, infections, and respiratory issues with advanced diagnostics.",
-      "details": [
-        {
-          "description": [
-            "The department of general medicine at Omni Hospitals has the best team of top General surgeons and physicians in Hyderabad with vast experience in treating all branches of internal medicine and offers non-surgical primary healthcare services in areas of respiratory diseases, endocrinology, thyroid issues, infections, sudden changes in weight (weight gain or weight loss), and neurology etc. Our team is well-equipped with knowledge of advanced science and interdisciplinary diagnosis to cater to the needs of out-patient and in-patient services, and emergency care for patients with communicable and non-communicable diseases."
-          ]
-        },
-        {
-          "title": "Expertise in General Medicine Care",
-          "description": [
-            "Our specialists provide expert care for:"
-          ],
-          "list": [
-            "Diabetes, hypertension & thyroid disorders",
-            "Fever evaluation & infectious diseases",
-            "Respiratory illnesses like asthma, bronchitis & pneumonia",
-            "Gastrointestinal conditions such as acidity, gastritis & IBS",
-            "Lifestyle-related health issues & obesity",
-            "Autoimmune and metabolic disorders"
-          ]
-        },
-        {
-          "title": "Advanced Diagnostics & Treatments",
-          "description": [
-            "We are equipped with modern medical facilities, including:"
-          ],
-          "list": [
-            "Comprehensive blood investigations",
-            "Advanced radiology & imaging",
-            "ECG, 2D Echo, Holter monitoring",
-            "Pulmonary function tests",
-            "Preventive health check-up packages"
-          ]
-        },
-        {
-          "title": "Conditions We Treat",
-          "list": [
-            "Diabetes & metabolic disorders",
-            "Hypertension & cardiovascular risk management",
-            "Thyroid diseases",
-            "Respiratory infections & chronic lung diseases",
-            "Gastrointestinal disorders",
-            "Autoimmune & multi-system diseases",
-            "General infections & seasonal fevers"
-          ]
-        },
-        {
-          "description": [
-            "Looking for the best general medicine hospital in Hyderabad? Choose OMNI Hospitals for accurate diagnosis, holistic treatment, and compassionate patient care."
-          ]
-        }
-      ]
-    },
-    {
       "name": "General Surgery",
       "short_description": "The Department of General Surgery at OMNI Hospitals is one of the leading centers for surgical care in Hyderabad, Telangana…",
       "img": "assets/our_specialities/general_surgery.jpg",
@@ -1418,7 +1360,7 @@
       ]
     },
     {
-      "name": "dermatology",
+      "name": "Dermatology",
       "short_description": "The Department of Dermatology at OMNI Hospitals is recognized as one of the best skin hospitals in Hyderabad, Andhra Pradesh, and Telangana.",
       "img": "assets/our_specialities/dermatology.jpg",
       "meta_title": "Best Dermatology Hospital in Hyderabad | OMNI Hospitals",

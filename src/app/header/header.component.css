@@ -640,7 +640,7 @@ main, .main-content, app-home {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   z-index: 1030 !important;
 } */
-.nav-item .dropdown-menu{
+/* .nav-item .dropdown-menu{
   margin-top: 0.5rem;
   border-radius: 0.5rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -652,7 +652,7 @@ main, .main-content, app-home {
   left: 0;
   width: 100%;
   height: 55px; 
-}
+} */
 
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(-5px); }

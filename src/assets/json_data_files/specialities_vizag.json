@@ -1,910 +1,913 @@
 {
-    "departments": [
-      {
-        "name": "Cardiology",
-        "short_description": "",
-        "img": "assets/our_specialities/cardiology.jpg",
-        "details": [
-          {
-            "title": "Best cardiology hospital in Vizag",
-            "subtitle": "",
-            "description": [
-              "The Department of Cardiology at OMNI Hospitals is widely recognized as one of the best cardiology hospitals in Vizag. Known by many patients searching for a trusted cardiology hospital near me, we are equipped with advanced cardiac care infrastructure and staffed by leading cardiology doctors in Vizag and heart specialists. Our hospital is committed to diagnosing, treating, and managing a wide range of heart and vascular conditions, making us one of the top hospitals in Vizag.",
-              "Our expert cardiologists in Vizag and heart specialists in Vizag specialize in the treatment of ischemic heart disease, valvular heart disease, high blood pressure (hypertension), cardiac arrhythmias, congenital heart defects, and vascular disorders. For patients experiencing cardiac emergencies such as heart attacks, chest pain, or treatment for heart failure, our Coronary Care Unit (CCU) offers 24/7 critical care and monitoring.",
-              "OMNI Hospitals is among the most trusted heart hospitals in Vizag, providing both invasive and non-invasive cardiology services, including angioplasty in Vizag, angiography in Vizag, echocardiography, cardiac catheterization, pacemaker implant, and CABG in Vizag. Patients can also get transparent information regarding the cost of angioplasty in Vizag, the cost of bypass surgery in Vizag, or the cost of pacemaker implant in Vizag, ensuring trust and affordability.",
-              "Our state-of-the-art cardiac diagnostic tools ensure accurate assessment and timely intervention for all heart conditions. We take pride in being one of the top heart surgery hospitals in Vizag, offering comprehensive pre-operative and post-operative cardiac care.",
-              "Our team of highly skilled cardiac surgeons in Vizag, including some of the best cardiac surgeons in Vizag, is experienced in performing complex cardiac procedures with utmost precision, safety, and compassion. If you're searching for the best cardiologist in Vizag, OMNI Hospitals delivers clinical excellence with a patient-first approach."
-            ],
-            "list": []
-          },
-          {
-            "subtitle": "Expertise in Cardiac & Thoracic Care",
-            "description": ["Our specialists perform:"],
-            "list": [
-              "Adult & pediatric heart surgeries",
-              "Bypass surgery (CABG in Vizag) & valve replacement",
-              "Heart & lung transplants",
-              "Aneurysm & congenital defect repair",
-              "Thoracic & lung cancer surgeries"
-            ]
-          },
-          {
-            "subtitle": "Advanced Heart Treatments",
-            "description": [
-              "We offer both invasive and non-invasive cardiac procedures, including:"
-            ],
-            "list": [
-              "ECG, 2D Echo, TMT, Holter monitoring",
-              "Angiogram, Angioplasty in Vizag, Angiography in Vizag, Cardiac catheterization",
-              "Pacemaker implantation & Valvuloplasty",
-              "Electrophysiology & RF ablation"
-            ]
-          },
-          {
-            "subtitle": "Conditions We Treat",
-            "list": [
-              "Coronary artery disease",
-              "Heart failure & valve disorders",
-              "Atrial fibrillation & congenital defects",
-              "Lung diseases, GERD, and esophageal cancers"
-            ]
-          },
-          {
-            "subtitle": [
-              "Looking for the best heart hospital in Vizag? Choose OMNI Hospitals for comprehensive, compassionate, and advanced cardiac care with the expertise of the best cardiologists in Vizag and cardiac surgeons in Vizag."
-            ]
-          }
-        ],
-        "sub_departments": [
-          {
-            "name": "",
-            "title": "",
-            "subtitle": "",
-            "description": [],
-            "sections": [
-              {
-                "subtitle": "",
-                "description": "",
-                "list": []
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "name": "Orthopedic",
-        "short_description": "",
-        "img": "",
-        "details": [
-          {
-            "title": "",
-            "subtitle": "Best Orthopedic Hospital in Vizag",
-            "description": [
-              "The Centre for Orthopedics at OMNI Hospitals is widely regarded as the best orthopedic hospital in Vizag, offering one of the most advanced and comprehensive orthopedic healthcare systems in the region. We provide virtually all of the latest treatments, technologies, and services, comparable to the finest orthopedic centers.",
-              "Our team includes some of the best orthopedic doctors in Vizag, along with internationally reputed surgeons, expert medical and rehabilitative specialists, and highly skilled occupational and physical therapists. Our dedicated physiotherapy department is staffed by qualified professionals who support patients throughout their recovery journey."
-            ],
-            "list": []
-          },
-          {
-            "subtitle": "Consult the Best Orthopedic Doctor in Vizag",
-            "description": [
-              "The Department of Orthopedics at OMNI Hospitals is a pioneer in managing musculoskeletal conditions and performs more joint replacement procedures than any other hospital in Andhra Pradesh. Whether you’re looking for the best orthopedic doctor in Vizag or the top knee replacement surgeon in Vizag, our specialists are equipped with the experience and training to handle a wide range of orthopedic concerns."
-            ]
-          },
-          {
-            "description": ["Our services cover:"],
-            "list": [
-              "Inflammatory arthritis and osteoarthritis",
-              "Autoimmune and connective tissue diseases",
-              "Ligament and cartilage injuries",
-              "Revision surgeries",
-              "Minimally invasive procedures",
-              "Partial and total joint replacements"
-            ]
-          },
-          {
-            "description": [
-              "OMNI Hospitals ensures continuity of care, right from diagnosis to treatment, rehabilitation, and wellness, making it one of the best orthopedic hospitals in Vizag."
-            ]
-          },
-          {
-            "subtitle": "Orthopedic Diagnosis and Treatments",
-            "description": [
-              "As a top orthopedic specialist in Vizag, OMNI Hospitals provides diagnosis and treatment for a full spectrum of orthopedic conditions, from the simplest fractures to the most complex musculoskeletal disorders. We have specialized sub-departments for each orthopedic area, allowing us to provide comprehensive orthopedic treatment in Vizag all under one roof.",
-              "Our facility is recognized regionally and nationally for excellence in:"
-            ],
-            "list": ["Patient care", "Rehabilitation", "Medical education"]
-          },
-          {
-            "description": [
-              "We are committed to offering high-quality, cost-effective, and round-the-clock orthopedic care for patients from all walks of life."
-            ]
-          },
-          {
-            "subtitle": "Knee Replacement Surgery in Vizag",
-            "description": [
-              "Looking for a knee replacement in Vizag? At OMNI Hospitals, we offer world-class knee replacement surgery in Vizag, commonly referred to as knee arthroplasty, to relieve pain and restore joint function. During the procedure, damaged portions of the thigh bone, shinbone, and kneecap are replaced with a prosthesis made from high-quality metal alloys, medical-grade plastics, and polymers."
-            ]
-          },
-          {
-            "subtitle": "When is Knee Replacement Needed?",
-            "description": [
-              "Knee replacement is typically advised for individuals suffering from severe osteoarthritis pain, especially when it affects walking, climbing stairs, or even resting. Our experienced knee replacement surgeons in Vizag offer personalized care plans to achieve the best outcomes."
-            ]
-          },
-          {
-            "subtitle": "Knee Replacement Success Rate and Risks",
-            "description": [
-              "With proper post-operative care and physiotherapy, the success rate of knee replacement surgery is high. Most patients experience long-term relief from pain and improved mobility.",
-              "However, like any major surgery, there are risks, including:"
-            ],
-            "list": [
-              "Infection",
-              "Blood clots",
-              "Stroke",
-              "Nerve damage",
-              "Chest pain"
-            ]
-          },
-          {
-            "description": [
-              "Our specialists minimize risks through advanced surgical protocols and post-operative care."
-            ]
-          },
-          {
-            "subtitle": "Affordable Knee Replacement Surgery Cost in Vizag",
-            "description": [
-              "We understand the importance of transparency when it comes to medical expenses. At OMNI, the knee replacement surgery cost in Vizag is competitively priced without compromising on quality or outcomes. Contact our team for a detailed, personalized quote."
-            ]
-          },
-          {
-            "subtitle": "Find the Best Orthopedic Specialists and Arthroscopy Doctors Near You",
-            "description": ["If you're searching for:"],
-            "list": [
-              "Best orthopedic doctor in Vizag",
-              "Orthopaedic hospitals in Vizag",
-              "Top knee replacement surgeon in Vizag",
-              "Arthroscopy doctors near me"
-            ]
-          },
-          {
-            "description": [
-              "If you’re looking for the best knee replacement surgeon in Vizag or planning for knee replacement in Vizag, OMNI Hospitals delivers trusted outcomes with compassionate care."
-            ]
-          }
-        ],
-        "sub_departments": [
-          {
-            "name": "",
-            "title": "",
-            "subtitle": "",
-            "description": [""],
-            "sections": []
-          }
-        ]
-      },
-      {
-        "name": "Neurology",
-        "short_description": "",
-        "img": "",
-        "details": [
-          {
-            "title": "Best Neurology Hospital in Vizag",
-            "subtitle": "",
-            "description": [
-              "The Department of Neurology at OMNI Hospitals is one of the top neurology hospital and the best neurologist in vizag for brain, spinal cord, and nervous system care in Vizag and the state of Andhra Pradesh. Our team of highly experienced Neuro physician in vizag specializes in the diagnosis, treatment, and management of a wide range of neurological conditions with precision and compassion."
-            ],
-            "list": []
-          },
-          {
-            "subtitle": "Conditions We Treat",
-            "description": "At OMNI Hospitals, our neurologists provide expert care for:",
-            "para": [
-              "<b>Stroke</b> – Ischemic & hemorrhagic strokes, emergency stroke care, and rehabilitation",
-              "<b>Epilepsy & Seizure Disorders</b> – Comprehensive epilepsy management and surgical evaluation",
-              "<b>Movement Disorders</b> – Parkinson’s disease, tremors, dystonia, and other motor disorders",
-              "<b>Headache & Migraine Disorders</b> – Specialized clinics for chronic headache management",
-              "<b>Dementia & Cognitive Decline</b> – Alzheimer’s disease and age-related memory conditions",
-              "<b>Multiple Sclerosis & Autoimmune Neurology</b> – Advanced therapies for MS and related conditions",
-              "<b>Peripheral Neuropathy & Nerve Disorders</b> – Nerve injuries, neuropathic pain, and neuromuscular diseases",
-              "<b>Spinal Cord & Neuro-infections</b> – Meningitis, encephalitis, and spinal cord diseases",
-              "<b>Pediatric Neurology</b> – Epilepsy, developmental disorders, and childhood neurological conditions"
-            ]
-          },
-          {
-            "subtitle": "Treatments & Services Offered",
-            "description": "Our neurologists offer a wide spectrum of advanced diagnostic and therapeutic services, including:",
-            "para": [
-              "<b>Stroke Care & Rehabilitation – Clot-busting therapy, neurocritical care, physiotherapy support",
-              "<b>Epilepsy Management – Video-EEG monitoring, medical therapy, epilepsy surgery evaluation",
-              "<b>Movement Disorder Treatments – Deep Brain Stimulation (DBS), Botulinum toxin therapy",
-              "<b>Headache & Migraine Clinics – Personalized treatment plans for chronic headaches",
-              "<b>Cognitive Disorder Care – Dementia evaluation and memory clinics",
-              "<b>Multiple Sclerosis & Autoimmune Disorder Care – Immunotherapies and disease-modifying treatments",
-              "<b>Neurodiagnostics – EEG, EMG, Nerve Conduction Studies, advanced neuroimaging",
-              "<b>Pediatric Neurology Services – Specialized care for children with neurological conditions",
-              "<b>Neuro Rehabilitation</b> – Physiotherapy, occupational therapy, and speech therapy for recovery"
-            ]
-          },
-          {
-            "subtitle": "Why Choose OMNI Hospitals for Neurology?",
-            "description": "At OMNI Hospitals, we combine cutting-edge neurology treatments with a patient-first approach, making us one of the best neurology hospital in vizag. Whether it’s stroke emergencies, epilepsy care, or chronic neurological disorders, our specialists are dedicated to restoring health and quality of life."
-          },
-          {
-            "subtitle": "Your Trusted Neurology Partner in Vizag",
-            "description": [
-              "OMNI Hospitals stands as a symbol of trust for neurological care in the region. Whether you're searching for the best neurologist in Vizag, a specialized neuro physician in Vizag, or a facility known as the best brain stroke hospital in Vizag, we are here to help.",
-              "If you or a loved one is experiencing signs of memory loss, confusion, weakness, or sudden changes in behavior—don't wait. Our experts are here to guide you toward a healthier brain and better quality of life."
-            ]
-          }
-        ],
-        "sub_departments": [
-          {
-            "name": "",
-            "title": "",
-            "subtitle": "",
-            "description": [],
-            "sections": [
-              {
-                "subtitle": "",
-                "description": "",
-                "list": []
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "name": "General Medicine",
-        "short_description": "",
-        "img": "",
-        "details": [
-          {
-            "title": "Best General Medicine Hospital in Vizag – OMNI Hospitals",
-            "subtitle": "",
-            "description": [
-              "The Department of General Medicine at OMNI Hospitals is recognized as the best general medicine hospital in Vizag, housing a team of top-rated and experienced physicians. Our team includes the best general medicine doctors in Vizag, highly qualified general physicians in Vizag, and internal medicine experts with deep clinical expertise across various subspecialties.",
-              "We specialize in non-surgical primary healthcare services, including the treatment of:"
-            ],
-            "list": [
-              "Respiratory diseases",
-              "Endocrine and thyroid disorders",
-              "Infections and fever management",
-              "Sudden weight changes (gain or loss)",
-              "Chronic conditions such as diabetes and hypertension"
-            ]
-          },
-          {
-            "description": [
-              "If you're searching for a best general medicine doctor in Vizag or a general physician near me in Vizag, OMNI offers comprehensive and compassionate care tailored to every patient."
-            ]
-          },
-          {
-            "title": "Expertise in General Medicine Care",
-            "description": "Our internal medicine specialists offer evidence-based treatment for:",
-            "list": [
-              "Diabetes, hypertension & thyroid disorders",
-              "Fever evaluation & infectious diseases",
-              "Respiratory illnesses like asthma, bronchitis & pneumonia",
-              "Gastrointestinal conditions such as acidity, gastritis & IBS",
-              "Autoimmune and metabolic disorders",
-              "Lifestyle-related health issues, including obesity and stress-related conditions"
-            ]
-          },
-          {
-            "description": [
-              "Each general physician in Vizag at OMNI is trained to provide preventive, diagnostic, and therapeutic services with a multidisciplinary approach."
-            ]
-          },
-          {
-            "title": "Advanced Diagnostics & Treatments",
-            "description": "As a modern general medicine, OMNI is equipped with state-of-the-art medical technology, including:",
-            "list": [
-              "Comprehensive blood and urine tests",
-              "Advanced radiology and imaging (X-ray, Ultrasound, CT)",
-              "ECG, 2D Echo, Holter monitoring",
-              "Pulmonary function tests",
-              "Preventive health check-up packages"
-            ]
-          },
-          {
-            "title": "Conditions We Treat",
-            "description": [
-              "Our expert team of best general medicine doctors in vizag and treats a wide range of conditions:"
-            ],
-            "list": [
-              "Diabetes & metabolic disorders",
-              "Hypertension & cardiovascular risk management",
-              "Thyroid diseases",
-              "Chronic lung diseases & respiratory infections",
-              "Autoimmune & multi-system conditions",
-              "Seasonal fevers, viral infections, and general illnesses"
-            ]
-          },
-          {
-            "subtitle": "Why Choose OMNI Hospitals?",
-            "list": [
-              "Experienced general medicine doctors in Vizag",
-              "Trusted general physicians near you in Vizag",
-              "Skilled and compassionate general surgery doctors in Vizag",
-              "Modern facilities and diagnostics",
-              "24/7 emergency care and in-patient support",
-              "Affordable and transparent pricing"
-            ]
-          },
-          {
-            "description": [
-              "If you're searching for the best general physician in Vizag, general medicine doctor in Vizag, or require expert general surgery treatment in Vizag, OMNI Hospitals is your trusted destination."
-            ]
-          }
-        ],
-        "sub_departments": []
-      },
-      {
-        "name": "General Surgery",
-        "short_description": "",
-        "img": "",
-        "details": [
-          {
-            "title": "Best General Surgery Hospital in Vizag – OMNI Hospitals",
-            "subtitle": "",
-            "description": [
-              "The Department of General Surgery at OMNI Hospitals Vizag is one of the most trusted centers for surgical care in Andhra Pradesh. Known as the best general surgery hospital in Vizag, we offer advanced infrastructure, modern operation theaters, and a team of highly skilled surgeons who specialize in diagnosing, treating, and managing a wide range of surgical conditions with precision and compassion.",
-              "Our expert team includes some of the best general surgeons in Vizag, experienced in both emergency and elective procedures. We utilize minimally invasive techniques such as laparoscopic and laser surgery to ensure reduced pain, shorter hospital stays, and quicker recovery, placing us among the top choices for general surgery treatment in Vizag."
-            ]
-          },
-          {
-            "subtitle": "Conditions & Surgeries We Treat",
-            "description": [
-              "At OMNI Hospitals Visakhapatnam, we provide comprehensive surgical care for:"
-            ],
-            "list": [
-              "Appendicitis & Gallbladder Stones",
-              "Hernias (Inguinal, Umbilical, Ventral, Incisional)",
-              "Thyroid & Parathyroid Disorders",
-              "Breast Surgery (Lumps, Cysts, Cancer Screening & Treatment)",
-              "Varicose Veins & Vascular Conditions",
-              "Piles, Fissures & Fistula (Proctology Care)",
-              "Abdominal Trauma & Emergency Surgeries",
-              "Gastrointestinal Surgeries (Stomach, Intestine, Colon, Liver, Pancreas)",
-              "Skin & Soft Tissue Surgeries (Cysts, Lipomas, Abscesses, Tumors)"
-            ]
-          },
-          {
-            "description": [
-              "If you're looking for the best general surgery doctor in Vizag, our surgeons are equipped with the skills and technology to offer safe and successful outcomes across all major surgical domains."
-            ]
-          },
-          {
-            "subtitle": "Advanced Surgical Procedures",
-            "description": "OMNI Hospitals Visakhapatnam is equipped to perform:",
-            "sections": [
-              {
-                "list": [
-                  "Laparoscopic & Minimally Invasive Surgeries",
-                  "Laser Surgery for Piles, Fissures & Fistulas",
-                  "Endocrine Surgery (Thyroid, Adrenal, Parathyroid)",
-                  "Oncological Surgery (Cancer-related procedures)",
-                  "Trauma & Emergency Surgery"
-                ]
-              }
-            ]
-          },
-          {
-            "description": [
-              "Our specialists are among the best general surgeons in Vizag, known for handling complex cases with precision and care."
-            ]
-          },
-          {
-            "subtitle": "Why Choose OMNI for General Surgery in Vizag?",
-            "list": [
-              "Team of highly experienced and compassionate general surgeons",
-              "State-of-the-art operation theaters and infection-controlled environments",
-              "Advanced diagnostic and imaging facilities",
-              "24/7 emergency surgical care and trauma response",
-              "Comprehensive post-surgical care and recovery management"
-            ]
-          },
-          {
-            "description": [
-              "Whether you're in need of day-care procedures or critical emergency surgery, OMNI stands out as a top-rated general surgery hospital in Vizag for delivering quality and patient-focused care."
-            ]
-          },
-          {
-            "subtitle": "Looking for the Best General Surgeon in Vizag?",
-            "description": [
-              "At OMNI Hospitals, we are committed to providing you with the best possible surgical care. If you're searching for the best general surgeon in Vizag, need expert consultation, or are seeking effective general surgery treatment in Vizag, we’re here to help. Our team ensures the highest standards in safety, surgical outcomes, and compassionate care."
-            ]
-          }
-        ],
-        "sub_departments": []
-      },
-      {
-        "name": "Pulmonology",
-        "short_description": "",
-        "img": "",
-        "details": [
-          {
-            "title": "Best Pulmonology Hospital in Vizag – OMNI Hospitals",
-            "subtitle": "",
-            "description": [
-              "The Department of Pulmonology at OMNI Hospitals is recognized as one of the best centers for comprehensive lung and respiratory care in Vizag. Our team of highly experienced pulmonologists in Vizag, chest physicians, respiratory diseases specialists, and respiratory therapists specializes in diagnosing, treating, and managing a wide range of acute and chronic lung diseases. With advanced diagnostic tools, modern infrastructure, and patient-centered care, we provide specialized treatment for respiratory conditions in adults and children.",
-              "If you’re searching for a trusted pulmonology specialist in Vizag or the best pulmonology doctor in Vizag, OMNI Hospitals offers compassionate and evidence-based care from some of the most experienced lungs doctors in Vizag."
-            ],
-            "list": []
-          },
-          {
-            "subtitle": "Conditions We Treat",
-            "description": [
-              "Our pulmonology experts manage a broad spectrum of respiratory disorders, including:"
-            ],
-            "list": [
-              "Asthma & COPD (Chronic Obstructive Pulmonary Disease)",
-              "Pneumonia, Bronchitis, and Tuberculosis (TB)",
-              "Interstitial Lung Disease (ILD) & Pulmonary Fibrosis",
-              "Lung Cancer & Pleural Diseases",
-              "Sleep Disorders (Obstructive Sleep Apnea, Insomnia, Snoring issues) – with advanced sleep apnea treatment in Vizag",
-              "Pulmonary Hypertension & Respiratory Failure",
-              "Allergies and Occupational Lung Diseases",
-              "COVID-19 & Post-COVID Pulmonary Complications"
-            ]
-          },
-          {
-            "subtitle": "Pulmonology Services & Treatments",
-            "description": [
-              "OMNI Hospitals offers advanced medical and interventional pulmonology services in Vizag, including:"
-            ],
-            "list": [
-              "Pulmonary Function Tests (PFT)",
-              "Sleep Studies & Sleep Apnea Management (Polysomnography, CPAP/BiPAP therapy)",
-              "Bronchoscopy (Diagnostic & Therapeutic)",
-              "Thoracoscopy & Pleural Procedures",
-              "Advanced Imaging & Lung Biopsy",
-              "Oxygen Therapy & Ventilator Support",
-              "Pulmonary Rehabilitation & Lifestyle Counseling",
-              "Critical care management for acute respiratory failure"
-            ]
-          },
-          {
-            "subtitle": "Why Choose OMNI Hospitals for Pulmonology in Vizag?",
-            "list": [
-              "Expert team of top pulmonologists in Vizag, including the best pulmonology doctors in Vizag",
-              "Advanced critical care and state-of-the-art respiratory ICUs",
-              "24/7 emergency care for respiratory distress and lung-related emergencies",
-              "Comprehensive management of both medical and surgical pulmonology cases",
-              "Patient-focused approach with accurate diagnosis and long-term care"
-            ]
-          },
-          {
-            "description": [
-              "At OMNI Hospitals Vizag, we are committed to improving lung health through early diagnosis, advanced treatments, and compassionate care. Whether it is a simple allergy, chronic asthma, or a complex lung disease, our pulmonology team in Vizag ensures precise care for every patient.",
-              "If you're looking for a pulmonologist in Vizag, consultation with a lungs doctor in Vizag, or need help managing breathing-related issues, OMNI Hospitals provides trusted, comprehensive care for all respiratory conditions."
-            ]
-          }
-        ],
-        "sub_departments": [
-          {
-            "name": "",
-            "title": "",
-            "subtitle": "",
-            "description": [],
-            "sections": [
-              {
-                "subtitle": "",
-                "description": "",
-                "list": []
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "name": "Obstetrics and Gynecology",
-        "short_description": "",
-        "img": "",
-        "details": [
-          {
-            "title": "Best Obstetrics and Gynecology Hospital in Vizag – OMNI Hospitals",
-            "subtitle": "",
-            "description": [
-              "The Department of Obstetrics and Gynecology at OMNI Hospitals is dedicated to providing comprehensive women’s healthcare across all stages of life – from adolescence to motherhood and beyond. Recognized as the best gynecologist hospital in Vizag and among the top gynecologist hospitals in Vizag, our department offers a full spectrum of services, ranging from routine gynecological care to advanced treatments for complex conditions.",
-              "Whether you’re searching for the best gynecologist in Vizag, a reliable maternity hospital, or looking for a gynecologist near Vizag, OMNI Hospitals is your trusted destination for expert women’s healthcare."
-            ]
-          },
-          {
-            "subtitle": "Obstetrics – Maternity & Pregnancy Care",
-            "description": [
-              "Our team of expert obstetricians in Vizag ensures safe and compassionate care throughout pregnancy, childbirth, and postpartum. With modern delivery suites, advanced fetal monitoring, and 24/7 emergency support, we specialize in:"
-            ],
-            "list": [
-              "Normal and High-Risk Pregnancy Management",
-              "Painless (Epidural) Delivery",
-              "Cesarean Section (C-Section)",
-              "Antenatal and Postnatal Care",
-              "Fetal Medicine and Ultrasound Scans",
-              "Preconception Counseling"
-            ]
-          },
-          {
-            "description": [
-              "As a top-rated maternity hospital near me, OMNI Hospitals offers customized maternity packages for all types of deliveries, including high-risk cases. Our labor and delivery unit is well-equipped to handle gestational diabetes, hypertension, multiple pregnancies, and preterm labor, ensuring the safest outcomes for both mother and baby."
-            ]
-          },
-          {
-            "subtitle": "Gynecology – Women’s Health Services",
-            "description": [
-              "Our expert gynecologists in Vizag, including the best gynecologist near Vizag, specialize in preventive, medical, and surgical care for women of all ages. We provide expert management of:"
-            ],
-            "list": [
-              "Menstrual Disorders & PCOS (Polycystic Ovary Syndrome)",
-              "Fibroids, Endometriosis, and Pelvic Pain",
-              "Cervical, Ovarian, and Uterine Cancers",
-              "Urinary Incontinence & Pelvic Organ Prolapse",
-              "Infertility Evaluation and Treatment",
-              "Menopause Care & Hormonal Therapy"
-            ]
-          },
-          {
-            "description": [
-              "We are also recognized as the best ovarian cyst hospital in Vizag, offering minimally invasive ovarian cyst removal and long-term care."
-            ]
-          },
-          {
-            "subtitle": "Advanced Gynecological Surgeries",
-            "description": [
-              "OMNI Hospitals Vizag is equipped with state-of-the-art surgical technology, offering:"
-            ],
-            "list": [
-              "Laparoscopic & Hysteroscopic Surgeries",
-              "Hysterectomy (Minimally Invasive & Open)",
-              "Myomectomy (Fibroid Removal)",
-              "Endometrial Ablation & Ovarian Cyst Removal",
-              "Colporrhaphy procedures performed by the top Colporrhaphy specialists in Vizag at our dedicated surgical unit"
-            ]
-          },
-          {
-            "description": [
-              "For those searching for a Colporrhaphy hospital in Vizag, OMNI provides expert diagnosis and treatment for pelvic organ prolapse using modern techniques and compassionate care."
-            ]
-          },
-          {
-            "subtitle": "Why Choose OMNI Hospitals in Vizag?",
-            "list": [
-              "Team of the best gynecologists in Vizag with expertise in both obstetrics and gynecology",
-              "24/7 maternity emergency services and NICU (Neonatal Intensive Care Unit)",
-              "Advanced care for high-risk pregnancies and gynecologic disorders",
-              "Comprehensive mother and child care under one roof",
-              "Recognized as a top-tier gynecologist hospital in Vizag with a legacy of trust",
-              "Transparent and flexible maternity package options tailored to patient needs",
-              "Patient-first approach with personalized treatment plans"
-            ]
-          },
-          {
-            "description": [
-              "At OMNI Hospitals, Vizag, we take pride in being a leader in maternity, obstetrics, and gynecology care. Whether you are planning for pregnancy, seeking care for gynecological conditions, or exploring options for surgery, our expert team ensures your health and comfort at every stage.",
-              "If you're looking for the best gynecologist Visakhapatnam has to offer or a trusted maternity hospital near me, OMNI Hospitals delivers excellence in women’s health with compassion and care."
-            ]
-          }
-        ],
-        "sub_departments": [
-          {
-            "name": "",
-            "title": "",
-            "subtitle": "",
-            "description": [],
-            "sections": [
-              {
-                "subtitle": "",
-                "description": "",
-                "list": []
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "name": "Gastroenterology",
-        "short_description": "",
-        "img": "",
-        "details": [
-          {
-            "title": "Best Gastroenterology Hospital in Vizag – OMNI Hospitals",
-            "subtitle": "",
-            "description": [
-              "OMNI Hospitals is proud to be recognized as the best gastroenterology hospital in Vizag, offering advanced diagnostic, medical, and surgical treatment for a wide range of digestive and liver-related disorders. With world-class facilities and a multidisciplinary approach, we are committed to delivering comprehensive care with compassion and clinical excellence.",
-              "Whether you're searching for the best gastroenterologist in Vizag or a reliable gastroenterology hospital near Vizag, our expert team of specialists is here to provide accurate diagnosis, personalized treatment plans, and long-term support."
-            ]
-          },
-          {
-            "subtitle": "Our Expertise in Gastroenterology",
-            "description": [
-              "Our team includes some of the best gastroenterology doctors in Vizag who are highly experienced in diagnosing and treating disorders related to the digestive system, liver, pancreas, gallbladder, and intestines."
-            ]
-          },
-          {
-            "subtitle": "Conditions We Treat:",
-            "description": [
-              "Acid reflux, GERD, and heartburn",
-              "Irritable Bowel Syndrome (IBS) and Inflammatory Bowel Disease (IBD)",
-              "Liver diseases including Hepatitis B & C, fatty liver, and cirrhosis",
-              "Pancreatitis and pancreatic disorders",
-              "Gallstones and gallbladder infections",
-              "Gastric ulcers and bleeding",
-              "Colon polyps and colorectal cancer screening",
-              "Gastrointestinal infections and malabsorption disorders"
-            ]
-          },
-          {
-            "description": [
-              "Whether you need a routine endoscopy or complex surgical intervention, our gastroenterologist in Vizag ensures precise, evidence-based treatment."
-            ]
-          },
-          {
-            "subtitle": "Advanced Gastroenterology Treatments & Services",
-            "description": [
-              "As a top gastroenterology hospital in Vizag, we offer cutting-edge procedures and technologies, including:"
-            ],
-            "list": [
-              "Upper GI Endoscopy",
-              "Colonoscopy",
-              "ERCP (Endoscopic Retrograde Cholangiopancreatography)",
-              "Capsule Endoscopy",
-              "Liver Biopsy",
-              "Endoscopic Ultrasound (EUS)",
-              "Laparoscopic gastrointestinal surgeries"
-            ]
-          },
-          {
-            "description": [
-              "For complex cases, our best gastroenterology surgeons in Vizag provide minimally invasive procedures, ensuring quicker recovery, reduced pain, and improved outcomes."
-            ]
-          },
-          {
-            "subtitle": "Why Choose OMNI Hospitals for Gastroenterology in Vizag?",
-            "list": [
-              "A team of the best gastroenterologists in Vizag, dedicated to digestive health",
-              "Advanced diagnostics and therapeutic endoscopy suite",
-              "Comprehensive liver and pancreatic disease management",
-              "24/7 emergency care for gastrointestinal bleeding and acute conditions",
-              "Personalized care by the top gastroenterology doctors in Vizag",
-              "Well-equipped operation theaters and ICU support for critical GI surgeries"
-            ]
-          },
-          {
-            "description": "If you're looking for a gastroenterologist near Vizag or the best gastroenterology surgeon in Vizag, OMNI Hospitals is your trusted partner in long-term digestive health."
-          },
-          {
-            "subtitle": "Visit the Best Gastroenterology Hospital Near Vizag",
-            "description": [
-              "With a strong reputation for quality, safety, and successful outcomes, OMNI Hospitals continues to lead as the best gastroenterology hospital in Vizag. Our commitment to innovation and patient satisfaction makes us the preferred choice for thousands seeking reliable gastrointestinal care.",
-              "Don't ignore symptoms like persistent stomach pain, acidity, bloating, or irregular bowel movements. Consult the best gastroenterology doctor in Vizag today for accurate diagnosis and effective treatment."
-            ]
-          }
-        ],
-        "sub_departments": [
-          {
-            "name": "",
-            "title": "",
-            "subtitle": "",
-            "description": [],
-            "sections": [
-              {
-                "subtitle": "",
-                "description": "",
-                "list": []
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "name": "Nephrology",
-        "short_description": "",
-        "img": "",
-        "details": [
-          {
-            "title": "Best Nephrology Hospital in Vizag – OMNI Hospitals",
-            "subtitle": "",
-            "description": [
-              "The Department of Nephrology at OMNI Hospitals is recognized as one of the best nephrology hospital in visakhapatnam, offering advanced diagnosis and treatment for a wide range of kidney-related conditions. With a team of highly experienced nephrologists in Vizag, dialysis specialists, and transplant experts, we are committed to delivering comprehensive care for patients with acute and chronic kidney diseases. Our state-of-the-art infrastructure includes modern dialysis units, advanced imaging, and intensive care facilities, making us a trusted kidney hospital in Vizag and the best nephrology hospital in Vizag."
-            ],
-            "list": []
-          },
-          {
-            "subtitle": "Conditions We Treat",
-            "description": [
-              "Our nephrology experts, including some of the best nephrologists in Vizag, specialize in the management of:"
-            ],
-            "list": [
-              "Acute kidney injury (AKI)",
-              "Chronic Kidney Disease (CKD) – OMNI is widely regarded as a leading Chronic Kidney Disease hospital in Vizag",
-              "End-stage renal disease (ESRD)",
-              "Diabetic kidney disease (Diabetic nephropathy)",
-              "Hypertensive nephropathy",
-              "Glomerulonephritis",
-              "Polycystic kidney disease (PKD)",
-              "Kidney stones and urinary tract obstructions",
-              "Electrolyte and acid-base disorders",
-              "Pediatric kidney conditions"
-            ]
-          },
-          {
-            "subtitle": "Nephrology Services at OMNI Hospitals, Visakhapatnam",
-            "description": [
-              "We provide a comprehensive range of medical and interventional nephrology services, including:"
-            ],
-            "list": [
-              "Hemodialysis & Peritoneal Dialysis – 24/7 dialysis centers with advanced machines and infection control protocols, supervised by expert kidney doctors in Vizag",
-              "Continuous Renal Replacement Therapy (CRRT) – for critically ill patients in the ICU",
-              "Kidney Biopsy – for accurate diagnosis of complex renal disorders",
-              "Plasmapheresis & Hemoperfusion – advanced blood purification therapies",
-              "Renal Transplantation (Pre & Post Care) – evaluation, donor matching, transplant surgery support, and long-term follow-up care at one of the best nephrology hospitals in Visakhapatnam",
-              "Hypertension & Diabetic Kidney Care – targeted management of high-risk patients"
-            ]
-          },
-          {
-            "subtitle": "Why Choose OMNI Hospitals for Kidney Care in Vizag?",
-            "list": [
-              "Expert team of nephrologists in Vizag, kidney doctors in Vizag, and transplant specialists",
-              "24/7 dialysis units with specialized staff and an infection-free environment",
-              "Advanced ICUs for critically ill renal patients",
-              "Multidisciplinary approach involving endocrinology, cardiology, and critical care",
-              "Patient-first care with individualized treatment plans"
-            ]
-          },
-          {
-            "description": [
-              "If you’re looking for the best nephrologist in Vizag, the best nephrology hospital in Vizag, or a trusted kidney treatment hospital in Vizag, OMNI Hospitals provides expert treatment, advanced facilities, and compassionate care to improve kidney health and overall quality of life."
-            ]
-          }
-        ],
-        "sub_departments": [
-          {
-            "name": "",
-            "title": "",
-            "subtitle": "",
-            "description": [],
-            "sections": [
-              {
-                "subtitle": "",
-                "description": "",
-                "list": []
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "name": "Emergency Medicine & Critical Care",
-        "short_description": "",
-        "img": "",
-        "details": [
-          {
-            "title": "Best Emergency Medicine & Critical Care Hospital in Vizag – OMNI Hospitals",
-            "subtitle": "",
-            "description": [
-              "The Department of Emergency Medicine & Critical Care at OMNI Hospitals provides round-the-clock, life-saving care for patients with medical, surgical, and trauma emergencies. With a team of highly skilled emergency physicians, intensivists, nurses, and paramedics, we are recognized among the best emergency and critical care hospitals in Vizag and Telangana. Equipped with state-of-the-art technology, modern ICUs, and rapid response protocols, we ensure timely diagnosis, stabilization, and treatment for critically ill patients."
-            ],
-            "list": []
-          },
-          {
-            "subtitle": "Emergency Medicine Services",
-            "description": [
-              "Our 24/7 Emergency Department is designed to handle all medical and surgical emergencies with speed and precision."
-            ]
-          },
-          {
-            "subtitle": "Conditions Managed",
-            "list": [
-              "Heart attacks, cardiac arrest, and chest pain",
-              "Stroke and neurological emergencies",
-              "Respiratory distress and severe asthma attacks",
-              "Accidents, fractures, and polytrauma",
-              "Poisoning and drug overdose",
-              "Seizures and sudden loss of consciousness",
-              "Acute abdominal pain and gastrointestinal emergencies",
-              "Severe infections and sepsis"
-            ]
-          },
-          {
-            "subtitle": "Emergency Facilities",
-            "list": [
-              "Dedicated triage system for immediate assessment",
-              "Advanced cardiac life support (ACLS) & basic life support (BLS) trained staff",
-              "Emergency resuscitation and trauma bays",
-              "24/7 availability of CT, MRI, X-ray, and laboratory services",
-              "Ambulance and paramedic services with pre-hospital care"
-            ]
-          },
-          {
-            "subtitle": "Critical Care Services",
-            "description": [
-              "Our Intensive Care Units (ICUs) are equipped with advanced monitoring systems and life-support technologies to provide expert care for critically ill patients."
-            ]
-          },
-          {
-            "subtitle": "Specialties of Critical Care",
-            "list": [
-              "Medical ICU (MICU)",
-              "Surgical ICU (SICU)",
-              "Cardiac ICU (CCU)",
-              "Neuro ICU",
-              "Pediatric & Neonatal ICU (PICU/NICU)"
-            ]
-          },
-          {
-            "subtitle": "Expertise in Critical Care",
-            "list": [
-              "Management of sepsis and multi-organ failure",
-              "Ventilator support and advanced airway management",
-              "Post-operative critical care",
-              "Hemodynamic monitoring and critical trauma management",
-              "Dialysis and renal replacement therapies in the ICU",
-              "Multi-disciplinary care involving cardiology, neurology, nephrology, and pulmonology"
-            ]
-          },
-          {
-            "subtitle": "Why Choose OMNI Hospitals?",
-            "list": [
-              "24/7 emergency and trauma response team",
-              "Advanced critical care units with life-saving equipment",
-              "Team of experienced emergency physicians, intensivists, and critical care nurses",
-              "Rapid diagnostics and integrated multi-specialty support",
-              "Proven expertise in handling high-risk and complex emergencies",
-              "Patient-centric approach with compassionate and continuous care"
-            ]
-          },
-          {
-            "description": [
-              "If you are searching for the best emergency hospital in Vizag or an advanced critical care hospital near you, OMNI Hospitals ensures timely intervention, expert treatment, and improved survival outcomes.",
-              "During unexpected health emergencies, many look for an emergency care hospital near me. OMNI Hospitals in Vizag ensures rapid response, expert care, and life-saving treatment any time of the day."
-            ]
-          }
-        ],
-        "sub_departments": [
-          {
-            "name": "",
-            "title": "",
-            "subtitle": "",
-            "description": [],
-            "sections": [
-              {
-                "subtitle": "",
-                "description": "",
-                "list": []
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "name": "",
-        "short_description": "",
-        "img": "",
-        "details": [
-          {
-            "title": "",
-            "subtitle": "",
-            "description": [],
-            "list": []
-          }
-        ],
-        "sub_departments": [
-          {
-            "name": "",
-            "title": "",
-            "subtitle": "",
-            "description": [],
-            "sections": [
-              {
-                "subtitle": "",
-                "description": "",
-                "list": []
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  }
-  
+  "departments": [
+    {
+      "name": "Cardiology",
+      "short_description": "",
+      "img": "assets/our_specialities/cardiology.jpg",
+      "meta_title": "OMNI Hospitals: Best Heart & Cardiology Hospital in Vizag",
+      "meta_description": "OMNI Hospitals is the best heart hospital in Vizag. Our expert cardiologists offer advanced cardiac care, angioplasty, bypass surgery, and 24/7 emergency services.",
+      "details": [
+        {
+          "title": "Best cardiology hospital in Vizag",
+          "subtitle": "",
+          "description": [
+            "The Department of Cardiology at OMNI Hospitals is widely recognized as one of the best cardiology hospitals in Vizag. Known by many patients searching for a trusted cardiology hospital near me, we are equipped with advanced cardiac care infrastructure and staffed by leading cardiology doctors in Vizag and heart specialists. Our hospital is committed to diagnosing, treating, and managing a wide range of heart and vascular conditions, making us one of the top hospitals in Vizag.",
+            "Our expert cardiologists in Vizag and heart specialists in Vizag specialize in the treatment of ischemic heart disease, valvular heart disease, high blood pressure (hypertension), cardiac arrhythmias, congenital heart defects, and vascular disorders. For patients experiencing cardiac emergencies such as heart attacks, chest pain, or treatment for heart failure, our Coronary Care Unit (CCU) offers 24/7 critical care and monitoring.",
+            "OMNI Hospitals is among the most trusted heart hospitals in Vizag, providing both invasive and non-invasive cardiology services, including angioplasty in Vizag, angiography in Vizag, echocardiography, cardiac catheterization, pacemaker implant, and CABG in Vizag. Patients can also get transparent information regarding the cost of angioplasty in Vizag, the cost of bypass surgery in Vizag, or the cost of pacemaker implant in Vizag, ensuring trust and affordability.",
+            "Our state-of-the-art cardiac diagnostic tools ensure accurate assessment and timely intervention for all heart conditions. We take pride in being one of the top heart surgery hospitals in Vizag, offering comprehensive pre-operative and post-operative cardiac care.",
+            "Our team of highly skilled cardiac surgeons in Vizag, including some of the best cardiac surgeons in Vizag, is experienced in performing complex cardiac procedures with utmost precision, safety, and compassion. If you're searching for the best cardiologist in Vizag, OMNI Hospitals delivers clinical excellence with a patient-first approach."
+          ],
+          "list": []
+        },
+        {
+          "subtitle": "Expertise in Cardiac & Thoracic Care",
+          "description": [
+            "Our specialists perform:"
+          ],
+          "list": [
+            "Adult & pediatric heart surgeries",
+            "Bypass surgery (CABG in Vizag) & valve replacement",
+            "Heart & lung transplants",
+            "Aneurysm & congenital defect repair",
+            "Thoracic & lung cancer surgeries"
+          ]
+        },
+        {
+          "subtitle": "Advanced Heart Treatments",
+          "description": [
+            "We offer both invasive and non-invasive cardiac procedures, including:"
+          ],
+          "list": [
+            "ECG, 2D Echo, TMT, Holter monitoring",
+            "Angiogram, Angioplasty in Vizag, Angiography in Vizag, Cardiac catheterization",
+            "Pacemaker implantation & Valvuloplasty",
+            "Electrophysiology & RF ablation"
+          ]
+        },
+        {
+          "subtitle": "Conditions We Treat",
+          "list": [
+            "Coronary artery disease",
+            "Heart failure & valve disorders",
+            "Atrial fibrillation & congenital defects",
+            "Lung diseases, GERD, and esophageal cancers"
+          ]
+        },
+        {
+          "subtitle": [
+            "Looking for the best heart hospital in Vizag? Choose OMNI Hospitals for comprehensive, compassionate, and advanced cardiac care with the expertise of the best cardiologists in Vizag and cardiac surgeons in Vizag."
+          ]
+        }
+      ],
+      "sub_departments": [
+        {
+          "name": "",
+          "title": "",
+          "subtitle": "",
+          "description": [],
+          "sections": [
+            {
+              "subtitle": "",
+              "description": "",
+              "list": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "orthopedics",
+      "short_description": "",
+      "img": "assets/our_specialities/ortho.jpg",
+      "meta_title": "Best Orthopedic & Knee Hospital in Vizag | Omni Hospitals",
+      "meta_description": "As a leading orthopedic hospital in Vizag, OMNI Hospitals offers advanced care for all joint, bone and musculoskeletal conditions, including knee and joint replacement.",
+      "details": [
+        {
+          "title": "",
+          "subtitle": "Best Orthopedic Hospital in Vizag",
+          "description": [
+            "The Centre for Orthopedics at OMNI Hospitals is widely regarded as the best orthopedic hospital in Vizag, offering one of the most advanced and comprehensive orthopedic healthcare systems in the region. We provide virtually all of the latest treatments, technologies, and services, comparable to the finest orthopedic centers.",
+            "Our team includes some of the best orthopedic doctors in Vizag, along with internationally reputed surgeons, expert medical and rehabilitative specialists, and highly skilled occupational and physical therapists. Our dedicated physiotherapy department is staffed by qualified professionals who support patients throughout their recovery journey."
+          ],
+          "list": []
+        },
+        {
+          "subtitle": "Consult the Best Orthopedic Doctor in Vizag",
+          "description": [
+            "The Department of Orthopedics at OMNI Hospitals is a pioneer in managing musculoskeletal conditions and performs more joint replacement procedures than any other hospital in Andhra Pradesh. Whether you’re looking for the best orthopedic doctor in Vizag or the top knee replacement surgeon in Vizag, our specialists are equipped with the experience and training to handle a wide range of orthopedic concerns."
+          ]
+        },
+        {
+          "description": [
+            "Our services cover:"
+          ],
+          "list": [
+            "Inflammatory arthritis and osteoarthritis",
+            "Autoimmune and connective tissue diseases",
+            "Ligament and cartilage injuries",
+            "Revision surgeries",
+            "Minimally invasive procedures",
+            "Partial and total joint replacements"
+          ]
+        },
+        {
+          "description": [
+            "OMNI Hospitals ensures continuity of care, right from diagnosis to treatment, rehabilitation, and wellness, making it one of the best orthopedic hospitals in Vizag."
+          ]
+        },
+        {
+          "subtitle": "Orthopedic Diagnosis and Treatments",
+          "description": [
+            "As a top orthopedic specialist in Vizag, OMNI Hospitals provides diagnosis and treatment for a full spectrum of orthopedic conditions, from the simplest fractures to the most complex musculoskeletal disorders. We have specialized sub-departments for each orthopedic area, allowing us to provide comprehensive orthopedic treatment in Vizag all under one roof.",
+            "Our facility is recognized regionally and nationally for excellence in:"
+          ],
+          "list": [
+            "Patient care",
+            "Rehabilitation",
+            "Medical education"
+          ]
+        },
+        {
+          "description": [
+            "We are committed to offering high-quality, cost-effective, and round-the-clock orthopedic care for patients from all walks of life."
+          ]
+        },
+        {
+          "subtitle": "Knee Replacement Surgery in Vizag",
+          "description": [
+            "Looking for a knee replacement in Vizag? At OMNI Hospitals, we offer world-class knee replacement surgery in Vizag, commonly referred to as knee arthroplasty, to relieve pain and restore joint function. During the procedure, damaged portions of the thigh bone, shinbone, and kneecap are replaced with a prosthesis made from high-quality metal alloys, medical-grade plastics, and polymers."
+          ]
+        },
+        {
+          "subtitle": "When is Knee Replacement Needed?",
+          "description": [
+            "Knee replacement is typically advised for individuals suffering from severe osteoarthritis pain, especially when it affects walking, climbing stairs, or even resting. Our experienced knee replacement surgeons in Vizag offer personalized care plans to achieve the best outcomes."
+          ]
+        },
+        {
+          "subtitle": "Knee Replacement Success Rate and Risks",
+          "description": [
+            "With proper post-operative care and physiotherapy, the success rate of knee replacement surgery is high. Most patients experience long-term relief from pain and improved mobility.",
+            "However, like any major surgery, there are risks, including:"
+          ],
+          "list": [
+            "Infection",
+            "Blood clots",
+            "Stroke",
+            "Nerve damage",
+            "Chest pain"
+          ]
+        },
+        {
+          "description": [
+            "Our specialists minimize risks through advanced surgical protocols and post-operative care."
+          ]
+        },
+        {
+          "subtitle": "Affordable Knee Replacement Surgery Cost in Vizag",
+          "description": [
+            "We understand the importance of transparency when it comes to medical expenses. At OMNI, the knee replacement surgery cost in Vizag is competitively priced without compromising on quality or outcomes. Contact our team for a detailed, personalized quote."
+          ]
+        },
+        {
+          "subtitle": "Find the Best Orthopedic Specialists and Arthroscopy Doctors Near You",
+          "description": [
+            "If you're searching for:"
+          ],
+          "list": [
+            "Best orthopedic doctor in Vizag",
+            "Orthopaedic hospitals in Vizag",
+            "Top knee replacement surgeon in Vizag",
+            "Arthroscopy doctors near me"
+          ]
+        },
+        {
+          "description": [
+            "If you’re looking for the best knee replacement surgeon in Vizag or planning for knee replacement in Vizag, OMNI Hospitals delivers trusted outcomes with compassionate care."
+          ]
+        }
+      ],
+      "sub_departments": [
+        {
+          "name": "",
+          "title": "",
+          "subtitle": "",
+          "description": [
+            ""
+          ],
+          "sections": []
+        }
+      ]
+    },
+    {
+      "name": "Neurology",
+      "short_description": "",
+      "img": "assets/our_specialities/nuerology.jpg",
+      "meta_title": "OMNI RK : Best Neuro Physicians in Vizag for Brain Care",
+      "meta_description": "OMNI Hospitals is a top neurology hospital in Vizag with expert neuro physicians. We offer specialized care for stroke, epilepsy, Parkinson's disease, and migraines.",
+      "details": [
+        {
+          "title": "Best Neurology Hospital in Vizag",
+          "subtitle": "",
+          "description": [
+            "The Department of Neurology at OMNI Hospitals is one of the top neurology hospital and the best neurologist in vizag for brain, spinal cord, and nervous system care in Vizag and the state of Andhra Pradesh. Our team of highly experienced Neuro physician in vizag specializes in the diagnosis, treatment, and management of a wide range of neurological conditions with precision and compassion."
+          ],
+          "list": []
+        },
+        {
+          "subtitle": "Conditions We Treat",
+          "description": "At OMNI Hospitals, our neurologists provide expert care for:",
+          "para": [
+            "<b>Stroke</b> – Ischemic & hemorrhagic strokes, emergency stroke care, and rehabilitation",
+            "<b>Epilepsy & Seizure Disorders</b> – Comprehensive epilepsy management and surgical evaluation",
+            "<b>Movement Disorders</b> – Parkinson’s disease, tremors, dystonia, and other motor disorders",
+            "<b>Headache & Migraine Disorders</b> – Specialized clinics for chronic headache management",
+            "<b>Dementia & Cognitive Decline</b> – Alzheimer’s disease and age-related memory conditions",
+            "<b>Multiple Sclerosis & Autoimmune Neurology</b> – Advanced therapies for MS and related conditions",
+            "<b>Peripheral Neuropathy & Nerve Disorders</b> – Nerve injuries, neuropathic pain, and neuromuscular diseases",
+            "<b>Spinal Cord & Neuro-infections</b> – Meningitis, encephalitis, and spinal cord diseases",
+            "<b>Pediatric Neurology</b> – Epilepsy, developmental disorders, and childhood neurological conditions"
+          ]
+        },
+        {
+          "subtitle": "Treatments & Services Offered",
+          "description": "Our neurologists offer a wide spectrum of advanced diagnostic and therapeutic services, including:",
+          "para": [
+            "<b>Stroke Care & Rehabilitation – Clot-busting therapy, neurocritical care, physiotherapy support",
+            "<b>Epilepsy Management – Video-EEG monitoring, medical therapy, epilepsy surgery evaluation",
+            "<b>Movement Disorder Treatments – Deep Brain Stimulation (DBS), Botulinum toxin therapy",
+            "<b>Headache & Migraine Clinics – Personalized treatment plans for chronic headaches",
+            "<b>Cognitive Disorder Care – Dementia evaluation and memory clinics",
+            "<b>Multiple Sclerosis & Autoimmune Disorder Care – Immunotherapies and disease-modifying treatments",
+            "<b>Neurodiagnostics – EEG, EMG, Nerve Conduction Studies, advanced neuroimaging",
+            "<b>Pediatric Neurology Services – Specialized care for children with neurological conditions",
+            "<b>Neuro Rehabilitation</b> – Physiotherapy, occupational therapy, and speech therapy for recovery"
+          ]
+        },
+        {
+          "subtitle": "Why Choose OMNI Hospitals for Neurology?",
+          "description": "At OMNI Hospitals, we combine cutting-edge neurology treatments with a patient-first approach, making us one of the best neurology hospital in vizag. Whether it’s stroke emergencies, epilepsy care, or chronic neurological disorders, our specialists are dedicated to restoring health and quality of life."
+        },
+        {
+          "subtitle": "Your Trusted Neurology Partner in Vizag",
+          "description": [
+            "OMNI Hospitals stands as a symbol of trust for neurological care in the region. Whether you're searching for the best neurologist in Vizag, a specialized neuro physician in Vizag, or a facility known as the best brain stroke hospital in Vizag, we are here to help.",
+            "If you or a loved one is experiencing signs of memory loss, confusion, weakness, or sudden changes in behavior—don't wait. Our experts are here to guide you toward a healthier brain and better quality of life."
+          ]
+        }
+      ],
+      "sub_departments": [
+        {
+          "name": "",
+          "title": "",
+          "subtitle": "",
+          "description": [],
+          "sections": [
+            {
+              "subtitle": "",
+              "description": "",
+              "list": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "General Medicine",
+      "short_description": "",
+      "img": "assets/our_specialities/general_medicine.jpg",
+      "meta_title": "Best General Medicine Hospital in Vizag | OMNI Hospitals",
+      "meta_description": "OMNI Hospitals is the best general medicine hospital in Vizag. Our expert physicians provide comprehensive internal medicine care for diabetes, hypertension, and chronic conditions.",
+      "details": [
+        {
+          "title": "Best General Medicine Hospital in Vizag – OMNI Hospitals",
+          "subtitle": "",
+          "description": [
+            "The Department of General Medicine at OMNI Hospitals is recognized as the best general medicine hospital in Vizag, housing a team of top-rated and experienced physicians. Our team includes the best general medicine doctors in Vizag, highly qualified general physicians in Vizag, and internal medicine experts with deep clinical expertise across various subspecialties.",
+            "We specialize in non-surgical primary healthcare services, including the treatment of:"
+          ],
+          "list": [
+            "Respiratory diseases",
+            "Endocrine and thyroid disorders",
+            "Infections and fever management",
+            "Sudden weight changes (gain or loss)",
+            "Chronic conditions such as diabetes and hypertension"
+          ]
+        },
+        {
+          "description": [
+            "If you're searching for a best general medicine doctor in Vizag or a general physician near me in Vizag, OMNI offers comprehensive and compassionate care tailored to every patient."
+          ]
+        },
+        {
+          "title": "Expertise in General Medicine Care",
+          "description": "Our internal medicine specialists offer evidence-based treatment for:",
+          "list": [
+            "Diabetes, hypertension & thyroid disorders",
+            "Fever evaluation & infectious diseases",
+            "Respiratory illnesses like asthma, bronchitis & pneumonia",
+            "Gastrointestinal conditions such as acidity, gastritis & IBS",
+            "Autoimmune and metabolic disorders",
+            "Lifestyle-related health issues, including obesity and stress-related conditions"
+          ]
+        },
+        {
+          "description": [
+            "Each general physician in Vizag at OMNI is trained to provide preventive, diagnostic, and therapeutic services with a multidisciplinary approach."
+          ]
+        },
+        {
+          "title": "Advanced Diagnostics & Treatments",
+          "description": "As a modern general medicine, OMNI is equipped with state-of-the-art medical technology, including:",
+          "list": [
+            "Comprehensive blood and urine tests",
+            "Advanced radiology and imaging (X-ray, Ultrasound, CT)",
+            "ECG, 2D Echo, Holter monitoring",
+            "Pulmonary function tests",
+            "Preventive health check-up packages"
+          ]
+        },
+        {
+          "title": "Conditions We Treat",
+          "description": [
+            "Our expert team of best general medicine doctors in vizag and treats a wide range of conditions:"
+          ],
+          "list": [
+            "Diabetes & metabolic disorders",
+            "Hypertension & cardiovascular risk management",
+            "Thyroid diseases",
+            "Chronic lung diseases & respiratory infections",
+            "Autoimmune & multi-system conditions",
+            "Seasonal fevers, viral infections, and general illnesses"
+          ]
+        },
+        {
+          "subtitle": "Why Choose OMNI Hospitals?",
+          "list": [
+            "Experienced general medicine doctors in Vizag",
+            "Trusted general physicians near you in Vizag",
+            "Skilled and compassionate general surgery doctors in Vizag",
+            "Modern facilities and diagnostics",
+            "24/7 emergency care and in-patient support",
+            "Affordable and transparent pricing"
+          ]
+        },
+        {
+          "description": [
+            "If you're searching for the best general physician in Vizag, general medicine doctor in Vizag, or require expert general surgery treatment in Vizag, OMNI Hospitals is your trusted destination."
+          ]
+        }
+      ],
+      "sub_departments": []
+    },
+    {
+      "name": "General Surgery",
+      "short_description": "",
+      "img": "assets/our_specialities/general_surgery.jpg",
+      "meta_title": "Best General Surgery Hospital in Vizag | OMNI Hospitals",
+      "meta_description": "OMNI Hospitals is the best general surgery hospital in Vizag. Our expert surgeons provide advanced surgical care for appendicitis, hernias, gallstones, and emergency surgeries.",
+      "details": [
+        {
+          "title": "Best General Surgery Hospital in Vizag – OMNI Hospitals",
+          "subtitle": "",
+          "description": [
+            "The Department of General Surgery at OMNI Hospitals Vizag is one of the most trusted centers for surgical care in Andhra Pradesh. Known as the best general surgery hospital in Vizag, we offer advanced infrastructure, modern operation theaters, and a team of highly skilled surgeons who specialize in diagnosing, treating, and managing a wide range of surgical conditions with precision and compassion.",
+            "Our expert team includes some of the best general surgeons in Vizag, experienced in both emergency and elective procedures. We utilize minimally invasive techniques such as laparoscopic and laser surgery to ensure reduced pain, shorter hospital stays, and quicker recovery, placing us among the top choices for general surgery treatment in Vizag."
+          ]
+        },
+        {
+          "subtitle": "Conditions & Surgeries We Treat",
+          "description": [
+            "At OMNI Hospitals Visakhapatnam, we provide comprehensive surgical care for:"
+          ],
+          "list": [
+            "Appendicitis & Gallbladder Stones",
+            "Hernias (Inguinal, Umbilical, Ventral, Incisional)",
+            "Thyroid & Parathyroid Disorders",
+            "Breast Surgery (Lumps, Cysts, Cancer Screening & Treatment)",
+            "Varicose Veins & Vascular Conditions",
+            "Piles, Fissures & Fistula (Proctology Care)",
+            "Abdominal Trauma & Emergency Surgeries",
+            "Gastrointestinal Surgeries (Stomach, Intestine, Colon, Liver, Pancreas)",
+            "Skin & Soft Tissue Surgeries (Cysts, Lipomas, Abscesses, Tumors)"
+          ]
+        },
+        {
+          "description": [
+            "If you're looking for the best general surgery doctor in Vizag, our surgeons are equipped with the skills and technology to offer safe and successful outcomes across all major surgical domains."
+          ]
+        },
+        {
+          "subtitle": "Advanced Surgical Procedures",
+          "description": "OMNI Hospitals Visakhapatnam is equipped to perform:",
+          "sections": [
+            {
+              "list": [
+                "Laparoscopic & Minimally Invasive Surgeries",
+                "Laser Surgery for Piles, Fissures & Fistulas",
+                "Endocrine Surgery (Thyroid, Adrenal, Parathyroid)",
+                "Oncological Surgery (Cancer-related procedures)",
+                "Trauma & Emergency Surgery"
+              ]
+            }
+          ]
+        },
+        {
+          "description": [
+            "Our specialists are among the best general surgeons in Vizag, known for handling complex cases with precision and care."
+          ]
+        },
+        {
+          "subtitle": "Why Choose OMNI for General Surgery in Vizag?",
+          "list": [
+            "Team of highly experienced and compassionate general surgeons",
+            "State-of-the-art operation theaters and infection-controlled environments",
+            "Advanced diagnostic and imaging facilities",
+            "24/7 emergency surgical care and trauma response",
+            "Comprehensive post-surgical care and recovery management"
+          ]
+        },
+        {
+          "description": [
+            "Whether you're in need of day-care procedures or critical emergency surgery, OMNI stands out as a top-rated general surgery hospital in Vizag for delivering quality and patient-focused care."
+          ]
+        },
+        {
+          "subtitle": "Looking for the Best General Surgeon in Vizag?",
+          "description": [
+            "At OMNI Hospitals, we are committed to providing you with the best possible surgical care. If you're searching for the best general surgeon in Vizag, need expert consultation, or are seeking effective general surgery treatment in Vizag, we’re here to help. Our team ensures the highest standards in safety, surgical outcomes, and compassionate care."
+          ]
+        }
+      ],
+      "sub_departments": []
+    },
+    {
+      "name": "Pulmonology",
+      "short_description": "",
+      "img": "assets/our_specialities/pulmonology.jpg",
+      "meta_title": "Best Pulmonology Hospital in Vizag | OMNI Hospitals",
+      "meta_description": "OMNI Hospitals is a leading pulmonology hospital in Vizag, providing expert care for asthma, COPD, sleep disorders, and other chronic lung diseases.",
+      "details": [
+        {
+          "title": "Best Pulmonology Hospital in Vizag – OMNI Hospitals",
+          "subtitle": "",
+          "description": [
+            "The Department of Pulmonology at OMNI Hospitals is recognized as one of the best centers for comprehensive lung and respiratory care in Vizag. Our team of highly experienced pulmonologists in Vizag, chest physicians, respiratory diseases specialists, and respiratory therapists specializes in diagnosing, treating, and managing a wide range of acute and chronic lung diseases. With advanced diagnostic tools, modern infrastructure, and patient-centered care, we provide specialized treatment for respiratory conditions in adults and children.",
+            "If you’re searching for a trusted pulmonology specialist in Vizag or the best pulmonology doctor in Vizag, OMNI Hospitals offers compassionate and evidence-based care from some of the most experienced lungs doctors in Vizag."
+          ],
+          "list": []
+        },
+        {
+          "subtitle": "Conditions We Treat",
+          "description": [
+            "Our pulmonology experts manage a broad spectrum of respiratory disorders, including:"
+          ],
+          "list": [
+            "Asthma & COPD (Chronic Obstructive Pulmonary Disease)",
+            "Pneumonia, Bronchitis, and Tuberculosis (TB)",
+            "Interstitial Lung Disease (ILD) & Pulmonary Fibrosis",
+            "Lung Cancer & Pleural Diseases",
+            "Sleep Disorders (Obstructive Sleep Apnea, Insomnia, Snoring issues) – with advanced sleep apnea treatment in Vizag",
+            "Pulmonary Hypertension & Respiratory Failure",
+            "Allergies and Occupational Lung Diseases",
+            "COVID-19 & Post-COVID Pulmonary Complications"
+          ]
+        },
+        {
+          "subtitle": "Pulmonology Services & Treatments",
+          "description": [
+            "OMNI Hospitals offers advanced medical and interventional pulmonology services in Vizag, including:"
+          ],
+          "list": [
+            "Pulmonary Function Tests (PFT)",
+            "Sleep Studies & Sleep Apnea Management (Polysomnography, CPAP/BiPAP therapy)",
+            "Bronchoscopy (Diagnostic & Therapeutic)",
+            "Thoracoscopy & Pleural Procedures",
+            "Advanced Imaging & Lung Biopsy",
+            "Oxygen Therapy & Ventilator Support",
+            "Pulmonary Rehabilitation & Lifestyle Counseling",
+            "Critical care management for acute respiratory failure"
+          ]
+        },
+        {
+          "subtitle": "Why Choose OMNI Hospitals for Pulmonology in Vizag?",
+          "list": [
+            "Expert team of top pulmonologists in Vizag, including the best pulmonology doctors in Vizag",
+            "Advanced critical care and state-of-the-art respiratory ICUs",
+            "24/7 emergency care for respiratory distress and lung-related emergencies",
+            "Comprehensive management of both medical and surgical pulmonology cases",
+            "Patient-focused approach with accurate diagnosis and long-term care"
+          ]
+        },
+        {
+          "description": [
+            "At OMNI Hospitals Vizag, we are committed to improving lung health through early diagnosis, advanced treatments, and compassionate care. Whether it is a simple allergy, chronic asthma, or a complex lung disease, our pulmonology team in Vizag ensures precise care for every patient.",
+            "If you're looking for a pulmonologist in Vizag, consultation with a lungs doctor in Vizag, or need help managing breathing-related issues, OMNI Hospitals provides trusted, comprehensive care for all respiratory conditions."
+          ]
+        }
+      ],
+      "sub_departments": [
+        {
+          "name": "",
+          "title": "",
+          "subtitle": "",
+          "description": [],
+          "sections": [
+            {
+              "subtitle": "",
+              "description": "",
+              "list": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Obstetrics and Gynecology",
+      "short_description": "",
+      "img": "assets/our_specialities/gynocology.jpg",
+      "meta_title": "Top Obstetrics & Gynecology Hospital in Vizag | OMNI Hospitals",
+      "meta_description": "OMNI Hospitals is the best gynecologist hospital in Vizag. We offer expert women's health services from high-risk pregnancy care to advanced gynecological surgeries.",
+      "details": [
+        {
+          "title": "Best Obstetrics and Gynecology Hospital in Vizag – OMNI Hospitals",
+          "subtitle": "",
+          "description": [
+            "The Department of Obstetrics and Gynecology at OMNI Hospitals is dedicated to providing comprehensive women’s healthcare across all stages of life – from adolescence to motherhood and beyond. Recognized as the best gynecologist hospital in Vizag and among the top gynecologist hospitals in Vizag, our department offers a full spectrum of services, ranging from routine gynecological care to advanced treatments for complex conditions.",
+            "Whether you’re searching for the best gynecologist in Vizag, a reliable maternity hospital, or looking for a gynecologist near Vizag, OMNI Hospitals is your trusted destination for expert women’s healthcare."
+          ]
+        },
+        {
+          "subtitle": "Obstetrics – Maternity & Pregnancy Care",
+          "description": [
+            "Our team of expert obstetricians in Vizag ensures safe and compassionate care throughout pregnancy, childbirth, and postpartum. With modern delivery suites, advanced fetal monitoring, and 24/7 emergency support, we specialize in:"
+          ],
+          "list": [
+            "Normal and High-Risk Pregnancy Management",
+            "Painless (Epidural) Delivery",
+            "Cesarean Section (C-Section)",
+            "Antenatal and Postnatal Care",
+            "Fetal Medicine and Ultrasound Scans",
+            "Preconception Counseling"
+          ]
+        },
+        {
+          "description": [
+            "As a top-rated maternity hospital near me, OMNI Hospitals offers customized maternity packages for all types of deliveries, including high-risk cases. Our labor and delivery unit is well-equipped to handle gestational diabetes, hypertension, multiple pregnancies, and preterm labor, ensuring the safest outcomes for both mother and baby."
+          ]
+        },
+        {
+          "subtitle": "Gynecology – Women’s Health Services",
+          "description": [
+            "Our expert gynecologists in Vizag, including the best gynecologist near Vizag, specialize in preventive, medical, and surgical care for women of all ages. We provide expert management of:"
+          ],
+          "list": [
+            "Menstrual Disorders & PCOS (Polycystic Ovary Syndrome)",
+            "Fibroids, Endometriosis, and Pelvic Pain",
+            "Cervical, Ovarian, and Uterine Cancers",
+            "Urinary Incontinence & Pelvic Organ Prolapse",
+            "Infertility Evaluation and Treatment",
+            "Menopause Care & Hormonal Therapy"
+          ]
+        },
+        {
+          "description": [
+            "We are also recognized as the best ovarian cyst hospital in Vizag, offering minimally invasive ovarian cyst removal and long-term care."
+          ]
+        },
+        {
+          "subtitle": "Advanced Gynecological Surgeries",
+          "description": [
+            "OMNI Hospitals Vizag is equipped with state-of-the-art surgical technology, offering:"
+          ],
+          "list": [
+            "Laparoscopic & Hysteroscopic Surgeries",
+            "Hysterectomy (Minimally Invasive & Open)",
+            "Myomectomy (Fibroid Removal)",
+            "Endometrial Ablation & Ovarian Cyst Removal",
+            "Colporrhaphy procedures performed by the top Colporrhaphy specialists in Vizag at our dedicated surgical unit"
+          ]
+        },
+        {
+          "description": [
+            "For those searching for a Colporrhaphy hospital in Vizag, OMNI provides expert diagnosis and treatment for pelvic organ prolapse using modern techniques and compassionate care."
+          ]
+        },
+        {
+          "subtitle": "Why Choose OMNI Hospitals in Vizag?",
+          "list": [
+            "Team of the best gynecologists in Vizag with expertise in both obstetrics and gynecology",
+            "24/7 maternity emergency services and NICU (Neonatal Intensive Care Unit)",
+            "Advanced care for high-risk pregnancies and gynecologic disorders",
+            "Comprehensive mother and child care under one roof",
+            "Recognized as a top-tier gynecologist hospital in Vizag with a legacy of trust",
+            "Transparent and flexible maternity package options tailored to patient needs",
+            "Patient-first approach with personalized treatment plans"
+          ]
+        },
+        {
+          "description": [
+            "At OMNI Hospitals, Vizag, we take pride in being a leader in maternity, obstetrics, and gynecology care. Whether you are planning for pregnancy, seeking care for gynecological conditions, or exploring options for surgery, our expert team ensures your health and comfort at every stage.",
+            "If you're looking for the best gynecologist Visakhapatnam has to offer or a trusted maternity hospital near me, OMNI Hospitals delivers excellence in women’s health with compassion and care."
+          ]
+        }
+      ],
+      "sub_departments": [
+        {
+          "name": "",
+          "title": "",
+          "subtitle": "",
+          "description": [],
+          "sections": [
+            {
+              "subtitle": "",
+              "description": "",
+              "list": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Gastroenterology",
+      "short_description": "",
+      "img": "assets/our_specialities/gastrology.jpg",
+      "meta_title": "Best Gastroenterology Hospital in Vizag | OMNI Hospitals",
+      "meta_description": "OMNI Hospitals is a leading gastroenterology hospital in Vizag, offering expert care for GERD, IBS, liver diseases, and gallstones with advanced procedures.",
+      "details": [
+        {
+          "title": "Best Gastroenterology Hospital in Vizag – OMNI Hospitals",
+          "subtitle": "",
+          "description": [
+            "OMNI Hospitals is proud to be recognized as the best gastroenterology hospital in Vizag, offering advanced diagnostic, medical, and surgical treatment for a wide range of digestive and liver-related disorders. With world-class facilities and a multidisciplinary approach, we are committed to delivering comprehensive care with compassion and clinical excellence.",
+            "Whether you're searching for the best gastroenterologist in Vizag or a reliable gastroenterology hospital near Vizag, our expert team of specialists is here to provide accurate diagnosis, personalized treatment plans, and long-term support."
+          ]
+        },
+        {
+          "subtitle": "Our Expertise in Gastroenterology",
+          "description": [
+            "Our team includes some of the best gastroenterology doctors in Vizag who are highly experienced in diagnosing and treating disorders related to the digestive system, liver, pancreas, gallbladder, and intestines."
+          ]
+        },
+        {
+          "subtitle": "Conditions We Treat:",
+          "description": [
+            "Acid reflux, GERD, and heartburn",
+            "Irritable Bowel Syndrome (IBS) and Inflammatory Bowel Disease (IBD)",
+            "Liver diseases including Hepatitis B & C, fatty liver, and cirrhosis",
+            "Pancreatitis and pancreatic disorders",
+            "Gallstones and gallbladder infections",
+            "Gastric ulcers and bleeding",
+            "Colon polyps and colorectal cancer screening",
+            "Gastrointestinal infections and malabsorption disorders"
+          ]
+        },
+        {
+          "description": [
+            "Whether you need a routine endoscopy or complex surgical intervention, our gastroenterologist in Vizag ensures precise, evidence-based treatment."
+          ]
+        },
+        {
+          "subtitle": "Advanced Gastroenterology Treatments & Services",
+          "description": [
+            "As a top gastroenterology hospital in Vizag, we offer cutting-edge procedures and technologies, including:"
+          ],
+          "list": [
+            "Upper GI Endoscopy",
+            "Colonoscopy",
+            "ERCP (Endoscopic Retrograde Cholangiopancreatography)",
+            "Capsule Endoscopy",
+            "Liver Biopsy",
+            "Endoscopic Ultrasound (EUS)",
+            "Laparoscopic gastrointestinal surgeries"
+          ]
+        },
+        {
+          "description": [
+            "For complex cases, our best gastroenterology surgeons in Vizag provide minimally invasive procedures, ensuring quicker recovery, reduced pain, and improved outcomes."
+          ]
+        },
+        {
+          "subtitle": "Why Choose OMNI Hospitals for Gastroenterology in Vizag?",
+          "list": [
+            "A team of the best gastroenterologists in Vizag, dedicated to digestive health",
+            "Advanced diagnostics and therapeutic endoscopy suite",
+            "Comprehensive liver and pancreatic disease management",
+            "24/7 emergency care for gastrointestinal bleeding and acute conditions",
+            "Personalized care by the top gastroenterology doctors in Vizag",
+            "Well-equipped operation theaters and ICU support for critical GI surgeries"
+          ]
+        },
+        {
+          "description": "If you're looking for a gastroenterologist near Vizag or the best gastroenterology surgeon in Vizag, OMNI Hospitals is your trusted partner in long-term digestive health."
+        },
+        {
+          "subtitle": "Visit the Best Gastroenterology Hospital Near Vizag",
+          "description": [
+            "With a strong reputation for quality, safety, and successful outcomes, OMNI Hospitals continues to lead as the best gastroenterology hospital in Vizag. Our commitment to innovation and patient satisfaction makes us the preferred choice for thousands seeking reliable gastrointestinal care.",
+            "Don't ignore symptoms like persistent stomach pain, acidity, bloating, or irregular bowel movements. Consult the best gastroenterology doctor in Vizag today for accurate diagnosis and effective treatment."
+          ]
+        }
+      ],
+      "sub_departments": [
+        {
+          "name": "",
+          "title": "",
+          "subtitle": "",
+          "description": [],
+          "sections": [
+            {
+              "subtitle": "",
+              "description": "",
+              "list": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Nephrology",
+      "short_description": "",
+      "img": "assets/our_specialities/nephrology.jpg",
+      "meta_title": "Best Nephrology & Kidney Care Hospital in Vizag | OMNI RK",
+      "meta_description": "OMNI Hospitals is a leading nephrology hospital in Vizag. We offer expert diagnosis and treatment for CKD, kidney diseases, dialysis, and renal transplantation.",
+      "details": [
+        {
+          "title": "Best Nephrology Hospital in Vizag – OMNI Hospitals",
+          "subtitle": "",
+          "description": [
+            "The Department of Nephrology at OMNI Hospitals is recognized as one of the best nephrology hospital in visakhapatnam, offering advanced diagnosis and treatment for a wide range of kidney-related conditions. With a team of highly experienced nephrologists in Vizag, dialysis specialists, and transplant experts, we are committed to delivering comprehensive care for patients with acute and chronic kidney diseases. Our state-of-the-art infrastructure includes modern dialysis units, advanced imaging, and intensive care facilities, making us a trusted kidney hospital in Vizag and the best nephrology hospital in Vizag."
+          ],
+          "list": []
+        },
+        {
+          "subtitle": "Conditions We Treat",
+          "description": [
+            "Our nephrology experts, including some of the best nephrologists in Vizag, specialize in the management of:"
+          ],
+          "list": [
+            "Acute kidney injury (AKI)",
+            "Chronic Kidney Disease (CKD) – OMNI is widely regarded as a leading Chronic Kidney Disease hospital in Vizag",
+            "End-stage renal disease (ESRD)",
+            "Diabetic kidney disease (Diabetic nephropathy)",
+            "Hypertensive nephropathy",
+            "Glomerulonephritis",
+            "Polycystic kidney disease (PKD)",
+            "Kidney stones and urinary tract obstructions",
+            "Electrolyte and acid-base disorders",
+            "Pediatric kidney conditions"
+          ]
+        },
+        {
+          "subtitle": "Nephrology Services at OMNI Hospitals, Visakhapatnam",
+          "description": [
+            "We provide a comprehensive range of medical and interventional nephrology services, including:"
+          ],
+          "list": [
+            "Hemodialysis & Peritoneal Dialysis – 24/7 dialysis centers with advanced machines and infection control protocols, supervised by expert kidney doctors in Vizag",
+            "Continuous Renal Replacement Therapy (CRRT) – for critically ill patients in the ICU",
+            "Kidney Biopsy – for accurate diagnosis of complex renal disorders",
+            "Plasmapheresis & Hemoperfusion – advanced blood purification therapies",
+            "Renal Transplantation (Pre & Post Care) – evaluation, donor matching, transplant surgery support, and long-term follow-up care at one of the best nephrology hospitals in Visakhapatnam",
+            "Hypertension & Diabetic Kidney Care – targeted management of high-risk patients"
+          ]
+        },
+        {
+          "subtitle": "Why Choose OMNI Hospitals for Kidney Care in Vizag?",
+          "list": [
+            "Expert team of nephrologists in Vizag, kidney doctors in Vizag, and transplant specialists",
+            "24/7 dialysis units with specialized staff and an infection-free environment",
+            "Advanced ICUs for critically ill renal patients",
+            "Multidisciplinary approach involving endocrinology, cardiology, and critical care",
+            "Patient-first care with individualized treatment plans"
+          ]
+        },
+        {
+          "description": [
+            "If you’re looking for the best nephrologist in Vizag, the best nephrology hospital in Vizag, or a trusted kidney treatment hospital in Vizag, OMNI Hospitals provides expert treatment, advanced facilities, and compassionate care to improve kidney health and overall quality of life."
+          ]
+        }
+      ],
+      "sub_departments": [
+        {
+          "name": "",
+          "title": "",
+          "subtitle": "",
+          "description": [],
+          "sections": [
+            {
+              "subtitle": "",
+              "description": "",
+              "list": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Emergency Medicine & Critical Care",
+      "short_description": "",
+      "img": "assets/our_specialities/emergency_medicine_critical_care.jpg",
+      "meta_title": "OMNI Hospitals: Top Emergency & Critical Care in Vizag",
+      "meta_description": "OMNI Hospitals offers 24/7 life-saving emergency care in Vizag. Our experts provide critical care for heart attacks, stroke, trauma, and other medical emergencies.",
+      "details": [
+        {
+          "title": "Best Emergency Medicine & Critical Care Hospital in Vizag – OMNI Hospitals",
+          "subtitle": "",
+          "description": [
+            "The Department of Emergency Medicine & Critical Care at OMNI Hospitals provides round-the-clock, life-saving care for patients with medical, surgical, and trauma emergencies. With a team of highly skilled emergency physicians, intensivists, nurses, and paramedics, we are recognized among the best emergency and critical care hospitals in Vizag and Telangana. Equipped with state-of-the-art technology, modern ICUs, and rapid response protocols, we ensure timely diagnosis, stabilization, and treatment for critically ill patients."
+          ],
+          "list": []
+        },
+        {
+          "subtitle": "Emergency Medicine Services",
+          "description": [
+            "Our 24/7 Emergency Department is designed to handle all medical and surgical emergencies with speed and precision."
+          ]
+        },
+        {
+          "subtitle": "Conditions Managed",
+          "list": [
+            "Heart attacks, cardiac arrest, and chest pain",
+            "Stroke and neurological emergencies",
+            "Respiratory distress and severe asthma attacks",
+            "Accidents, fractures, and polytrauma",
+            "Poisoning and drug overdose",
+            "Seizures and sudden loss of consciousness",
+            "Acute abdominal pain and gastrointestinal emergencies",
+            "Severe infections and sepsis"
+          ]
+        },
+        {
+          "subtitle": "Emergency Facilities",
+          "list": [
+            "Dedicated triage system for immediate assessment",
+            "Advanced cardiac life support (ACLS) & basic life support (BLS) trained staff",
+            "Emergency resuscitation and trauma bays",
+            "24/7 availability of CT, MRI, X-ray, and laboratory services",
+            "Ambulance and paramedic services with pre-hospital care"
+          ]
+        },
+        {
+          "subtitle": "Critical Care Services",
+          "description": [
+            "Our Intensive Care Units (ICUs) are equipped with advanced monitoring systems and life-support technologies to provide expert care for critically ill patients."
+          ]
+        },
+        {
+          "subtitle": "Specialties of Critical Care",
+          "list": [
+            "Medical ICU (MICU)",
+            "Surgical ICU (SICU)",
+            "Cardiac ICU (CCU)",
+            "Neuro ICU",
+            "Pediatric & Neonatal ICU (PICU/NICU)"
+          ]
+        },
+        {
+          "subtitle": "Expertise in Critical Care",
+          "list": [
+            "Management of sepsis and multi-organ failure",
+            "Ventilator support and advanced airway management",
+            "Post-operative critical care",
+            "Hemodynamic monitoring and critical trauma management",
+            "Dialysis and renal replacement therapies in the ICU",
+            "Multi-disciplinary care involving cardiology, neurology, nephrology, and pulmonology"
+          ]
+        },
+        {
+          "subtitle": "Why Choose OMNI Hospitals?",
+          "list": [
+            "24/7 emergency and trauma response team",
+            "Advanced critical care units with life-saving equipment",
+            "Team of experienced emergency physicians, intensivists, and critical care nurses",
+            "Rapid diagnostics and integrated multi-specialty support",
+            "Proven expertise in handling high-risk and complex emergencies",
+            "Patient-centric approach with compassionate and continuous care"
+          ]
+        },
+        {
+          "description": [
+            "If you are searching for the best emergency hospital in Vizag or an advanced critical care hospital near you, OMNI Hospitals ensures timely intervention, expert treatment, and improved survival outcomes.",
+            "During unexpected health emergencies, many look for an emergency care hospital near me. OMNI Hospitals in Vizag ensures rapid response, expert care, and life-saving treatment any time of the day."
+          ]
+        }
+      ],
+      "sub_departments": [
+        {
+          "name": "",
+          "title": "",
+          "subtitle": "",
+          "description": [],
+          "sections": [
+            {
+              "subtitle": "",
+              "description": "",
+              "list": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

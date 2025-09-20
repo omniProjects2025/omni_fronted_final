@@ -24,7 +24,8 @@ interface LocationSpecialties {
 })
 export class OurSpecialitiesComponent implements OnInit {
   selectedLocation: string = 'Kukatpally';
-  locations: string[] = ['Kukatpally', 'Kothapet', 'Nampally', 'Vizag', 'Kurnool'];
+  // locations: string[] = ['Kukatpally', 'Kothapet', 'Nampally', 'Vizag', 'Kurnool'];
+  locations: string[] = ['Kukatpally','Vizag'];
   filteredSpecialties: Specialty[] = [];
   isLoading: boolean = true;
   errorMessage: string = '';
@@ -129,7 +130,9 @@ export class OurSpecialitiesComponent implements OnInit {
 
   goToDetails(speciality: string) {
     const urlFriendlyName = toUrlFriendly(speciality);
-    this.router.navigate(['/our-specialities-details', urlFriendlyName]);
+    this.router.navigate(['/our-specialities-details', urlFriendlyName], {
+      queryParams: { location: this.selectedLocation.toLowerCase() }
+    });
   }
 
   onSpecialtyClick(specialty: Specialty) {

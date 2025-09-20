@@ -21,15 +21,16 @@
   <div class="container-fluid px-3 px-md-5">
     <div class="row align-items-start position-relative">
 
-      <button
+      <!-- <button
         class="btn bg_danger text-white emergency-btn d-flex flex-column justify-content-center align-items-center fw-bold hover-scale"
-        style="line-height: 1.4;" (click)="toggleEmergencyModal()" *ngIf="!showEmergencyModal"
-        data-button="emergency" (mousedown)="onButtonPress('emergency')">
+        style="line-height: 1.4;" (click)="toggleEmergencyModal()" *ngIf="!showEmergencyModal" data-button="emergency"
+        (mousedown)="onButtonPress('emergency')">
         <span *ngFor="let l of 'EMERGENCY'.split('')" class="animate-float">{{ l }}</span>
-      </button>
+      </button> -->
 
       <div class="col-lg-5 mb-4 mb-lg-0 text-center">
-        <img src="assets/our_doctors/book_an_appointment_image.svg" alt="Doctor" class="custom-appointment-image hover-scale" />
+        <img src="assets/our_doctors/book_an_appointment_image.svg" alt="Doctor"
+          class="custom-appointment-image hover-scale" />
       </div>
 
       <div class="col-lg-7 mx-auto">
@@ -44,49 +45,65 @@
             <form class="pt-4" (ngSubmit)="submitForm()" #form="ngForm">
               <div class="mb-3" data-animation="fadeInUp">
                 <label class="form-label">Full Name*</label>
-                <input type="text" class="form-control hover-glow" name="fullName" [(ngModel)]="formData.fullName" 
-                       required (focus)="onFormInputFocus($event)" (blur)="onFormInputBlur($event)" />
+                <input type="text" class="form-control hover-glow" name="fullName" [(ngModel)]="formData.fullName"
+                  required (focus)="onFormInputFocus($event)" (blur)="onFormInputBlur($event)" />
               </div>
 
               <div class="mb-3" data-animation="fadeInUp">
                 <label class="form-label">Phone Number*</label>
                 <div class="input-group">
                   <span class="input-group-text">+91</span>
-                  <input type="tel" class="form-control hover-glow" name="phoneNumber" [(ngModel)]="formData.phoneNumber"
-                    required (focus)="onFormInputFocus($event)" (blur)="onFormInputBlur($event)" />
+                  <input type="tel" class="form-control hover-glow" name="phoneNumber"
+                    [(ngModel)]="formData.phoneNumber" required (focus)="onFormInputFocus($event)"
+                    (blur)="onFormInputBlur($event)" />
                 </div>
               </div>
 
               <div class="mb-3" data-animation="fadeInUp">
                 <label class="form-label">Email ID</label>
-                <input type="email" class="form-control hover-glow" name="emailId" [(ngModel)]="formData.emailId" 
-                       (focus)="onFormInputFocus($event)" (blur)="onFormInputBlur($event)" />
+                <input type="email" class="form-control hover-glow" name="emailId" [(ngModel)]="formData.emailId"
+                  (focus)="onFormInputFocus($event)" (blur)="onFormInputBlur($event)" />
               </div>
 
               <div class="mb-3" data-animation="fadeInUp">
                 <label class="form-label">Location*</label>
-                <select class="form-select hover-glow" name="location" [(ngModel)]="formData.location" 
-                        required (focus)="onFormInputFocus($event)" (blur)="onFormInputBlur($event)">
+                <select class="form-select hover-glow" name="location" [(ngModel)]="formData.location" required
+                  (focus)="onFormInputFocus($event)" (blur)="onFormInputBlur($event)">
                   <option disabled selected>Select Location</option>
-                  <option>Hyderabad</option>
+                  <option>Kukatpally</option>
+                  <option>Kothapet</option>
+                  <option>Nampally</option>
                   <option>Vizag</option>
+                  <option>Kurnool</option>
                 </select>
               </div>
 
               <div class="mb-3" data-animation="fadeInUp">
                 <label class="form-label">Department</label>
                 <select class="form-select hover-glow" name="department" [(ngModel)]="formData.department"
-                        (focus)="onFormInputFocus($event)" (blur)="onFormInputBlur($event)">
+                  (focus)="onFormInputFocus($event)" (blur)="onFormInputBlur($event)">
                   <option disabled selected>Select Department</option>
                   <option>Cardiology</option>
+                  <option>Dermatology</option>
+                  <option>Emergency Medicine & Critical Care</option>
+                  <option>ENT</option>
+                  <option>General Medicine</option>
+                  <option>General Surgery</option>
+                  <option>Gastroenterology</option>
+                  <option>Gynaecology</option>
+                  <option>Neurology</option>
                   <option>Orthopedics</option>
+                  <option>Paediatrics</option>
+                  <option>Psychiatry</option>
+                  <option>Pulmonology</option>
+                  <option>Plastic Surgery</option>
                 </select>
               </div>
 
               <div class="mb-3" data-animation="fadeInUp">
                 <label class="form-label">Health Concern/Message</label>
                 <textarea rows="3" class="form-control hover-glow" name="message" [(ngModel)]="formData.message"
-                          (focus)="onFormInputFocus($event)" (blur)="onFormInputBlur($event)"></textarea>
+                  (focus)="onFormInputFocus($event)" (blur)="onFormInputBlur($event)"></textarea>
               </div>
 
               <div class="text-center">
@@ -115,25 +132,28 @@
     </div>
   </div>
 
-  <div class="position-fixed" *ngIf="showEmergencyModal" style="top: 30%; left: 0; z-index: 1056;">
-    <div class="bg_danger text-white p-3 rounded-end shadow d-flex animate-scale-in" style="width: 350px;">
-      <div class="d-flex flex-column align-items-center pe-3" style="min-width: 30px;">
-        <span *ngFor="let l of 'EMERGENCY'.split('')" class="fw-bold animate-float" style="line-height: 1.4; font-size: 20px;">
-          {{ l }}
-        </span>
-      </div>
-
-      <div class="flex-grow-1 mt-3">
-        <div class="d-flex justify-content-between align-items-center mb-2">
-          <strong>Emergency Numbers</strong>
-          <button type="button" class="btn-close btn-close-white btn-sm hover-scale" 
-                  (click)="showEmergencyModal = false" data-button="close" (mousedown)="onButtonPress('close')"></button>
+  <div *ngIf="false">
+    <div class="position-fixed" *ngIf="showEmergencyModal" style="top: 30%; left: 0; z-index: 1056;">
+      <div class="bg_danger text-white p-3 rounded-end shadow d-flex animate-scale-in" style="width: 350px;">
+        <div class="d-flex flex-column align-items-center pe-3" style="min-width: 30px;">
+          <span *ngFor="let l of 'EMERGENCY'.split('')" class="fw-bold animate-float"
+            style="line-height: 1.4; font-size: 20px;">
+            {{ l }}
+          </span>
         </div>
-
-        <div *ngFor="let location of emergencyNumbers; index as i" class="d-flex justify-content-between mb-2"
-          style="padding-bottom: 2px;" [class]="'stagger-' + (i + 1)">
-          <div style="white-space: nowrap;">{{ location.place }}</div>
-          <div class="fw-bold text-end" style="white-space: nowrap;">{{ location.phone }}</div>
+  
+        <div class="flex-grow-1 mt-3">
+          <div class="d-flex justify-content-between align-items-center mb-2">
+            <strong>Emergency Numbers</strong>
+            <button type="button" class="btn-close btn-close-white btn-sm hover-scale"
+              (click)="showEmergencyModal = false" data-button="close" (mousedown)="onButtonPress('close')"></button>
+          </div>
+  
+          <div *ngFor="let location of emergencyNumbers; index as i" class="d-flex justify-content-between mb-2"
+            style="padding-bottom: 2px;" [class]="'stagger-' + (i + 1)">
+            <div style="white-space: nowrap;">{{ location.place }}</div>
+            <div class="fw-bold text-end" style="white-space: nowrap;">{{ location.phone }}</div>
+          </div>
         </div>
       </div>
     </div>
@@ -141,23 +161,24 @@
 
   <div class="container-fluid" style="margin-bottom: 2px;">
     <div class="row">
-      <div class="col-md-4 bg_success p-3 d-flex align-items-center justify-content-start gap-3 hover-lift" 
-           data-button="book-appointment" (mousedown)="onButtonPress('book-appointment')">
+      <div class="col-md-4 bg_success p-3 d-flex align-items-center justify-content-start gap-3 hover-lift"
+        data-button="book-appointment" (mousedown)="onButtonPress('book-appointment')">
         <div class="d-flex align-items-center">
           <img class="ms-1 me-2 ms-4 hover-rotate" src="assets/icons/book_appointment_black_bg.svg" alt="">
           <h6 class="mb-0 strip_book">Book An Appointment<br /><small class="small_para">888 0101 000</small></h6>
         </div>
       </div>
-      <div class="col-md-4 bg_primary p-3 d-flex align-items-center justify-content-start gap-3 hover-lift" 
-           (click)="goToHealthPackages()" data-button="health-packages" (mousedown)="onButtonPress('health-packages')">
+      <div class="col-md-4 bg_primary p-3 d-flex align-items-center justify-content-start gap-3 hover-lift"
+        (click)="goToHealthPackages()" data-button="health-packages" (mousedown)="onButtonPress('health-packages')">
         <div class="d-flex align-items-center">
           <img class="ms-1 me-2 ms-4 hover-rotate" src="assets/icons/book_appointment_white_bg.svg" alt="">
           <h6 class="mb-0 strip_book p-0">Health Check Packages<br /><small class="small_para p-0">Simply Dummy Text Of
               The Printing</small></h6>
         </div>
       </div>
-      <div class="col-md-4 bg_success p-3 d-flex align-items-center justify-content-start gap-3 hover-lift" 
-           data-bs-toggle="modal" data-bs-target="#branchesModal" data-button="locations" (mousedown)="onButtonPress('locations')">
+      <div class="col-md-4 bg_success p-3 d-flex align-items-center justify-content-start gap-3 hover-lift"
+        data-bs-toggle="modal" data-bs-target="#branchesModal" data-button="locations"
+        (mousedown)="onButtonPress('locations')">
         <div class="d-flex align-items-center">
           <img class="ms-1 me-2 ms-4 hover-rotate" src="assets/icons/book_appointment_black_bg.svg" alt="">
           <h6 class="mb-0 strip_loc">Our Locations<br /><small class="small_loc">Simply Dummy Text Of
@@ -181,16 +202,17 @@
               <div class="line line-right"></div>
             </div>
             <div class="col-md-1 col-1 d-flex col-sm-2 col-xs-2 align-items-center justify-start p-0 m-0">
-              <button class="hover-scale" type="button" class="btn-close" data-bs-dismiss="modal" 
-                      aria-label="Close" data-button="modal-close" (mousedown)="onButtonPress('modal-close')"></button>
+              <button class="hover-scale" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+                data-button="modal-close" (mousedown)="onButtonPress('modal-close')"></button>
             </div>
           </div>
           <div class="modal-body">
             <div class="container">
               <div class="row g-3">
-                <div class="col-6 col-md-4" *ngFor="let details of locations_details; index as l" 
-                     [class]="'stagger-' + (l + 1)">
-                  <div class="text-center hover-scale" (click)="routeToLocation(details['location_name'], details['img'])">
+                <div class="col-6 col-md-4" *ngFor="let details of locations_details; index as l"
+                  [class]="'stagger-' + (l + 1)">
+                  <div class="text-center hover-scale"
+                    (click)="routeToLocation(details['location_name'], details['img'])">
                     <img src="assets/locations/{{details['img']}}" alt="Kothapet" class="hover-rotate">
                     <p class="border_prop py-2">{{details['location_name']}}</p>
                   </div>

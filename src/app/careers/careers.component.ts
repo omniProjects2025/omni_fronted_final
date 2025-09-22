@@ -56,9 +56,6 @@ export class CareersComponent {
   ];
 
   constructor(private fb: FormBuilder, private http: HttpClient, private route: ActivatedRoute, private datePipe: DatePipe) {
-    console.log('CareersComponent initialized with BASE_URL:', this.BASE_URL);
-    console.log('Environment production mode:', environment.production);
-    
     this.applyForm = this.fb.group({
       firstName: ['', Validators.required],
       lastName: [''],
@@ -99,7 +96,7 @@ this.socialShare();
     }
   }
 socialShare(){
-  this.route.fragment.subscribe(fragment => {
+  this.route.fragment.subscribe((fragment: string | null) => {
     if (fragment) {
       setTimeout(() => {
         const el = document.getElementById(fragment);
@@ -256,73 +253,30 @@ socialShare(){
     this.currentPage = 1;
   }
 
-  // Enhanced form submission with better error handling
-  onSubmit(): void {
-    this.isSubmitting = true;
-    this.errorMessage = '';
-    this.successMessage = '';
+  onSubmit() {
+    if (this.applyForm.valid) {
+      const formData = new FormData();
+      formData.append('firstName', this.applyForm.get('firstName')?.value);
+      formData.append('lastName', this.applyForm.get('lastName')?.value);
+      formData.append('phone', this.applyForm.get('phone')?.value);
+      formData.append('email', this.applyForm.get('email')?.value);
+      formData.append('position', this.applyForm.get('position')?.value);
 
-    if (this.applyForm.invalid) {
-      this.applyForm.markAllAsTouched();
-      this.isSubmitting = false;
-      this.errorMessage = 'Please fill in all required fields correctly.';
-      return;
-    }
-
-    if (!this.selectedFile) {
-      this.errorMessage = 'Please upload your resume.';
-      this.isSubmitting = false;
-      return;
-    }
-
-    const formData = new FormData();
-    formData.append('firstName', this.applyForm.get('firstName')!.value);
-    formData.append('lastName', this.applyForm.get('lastName')!.value);
-    formData.append('phone', this.applyForm.get('phone')!.value);
-    formData.append('email', this.applyForm.get('email')!.value);
-    formData.append('position', this.applyForm.get('position')!.value);
-    formData.append('resume', this.selectedFile!, this.selectedFile!.name);
-
-    // Temporarily use debug endpoint to see what's being sent
-    console.log('Sending FormData with:', {
-      firstName: formData.get('firstName'),
-      lastName: formData.get('lastName'),
-      phone: formData.get('phone'),
-      email: formData.get('email'),
-      position: formData.get('position'),
-      resume: formData.get('resume')
-    });
-    
-    this.http.post(`${this.BASE_URL}/send-email-debug`, formData).subscribe({
-      next: () => {
-        this.successMessage = 'Application submitted successfully! We will contact you soon.';
-        this.applyForm.reset();
-        this.selectedFile = null;
-        this.selectedFileName = '';
-        this.isSubmitting = false;
-        
-        // Reset file input
-        const fileInput = document.getElementById('customFile') as HTMLInputElement;
-        if (fileInput) {
-          fileInput.value = '';
-        }
-        
-        // Clear messages after 5 seconds
-        setTimeout(() => {
-          this.successMessage = '';
-        }, 5000);
-      },
-      error: (err) => {
-        console.error('Mail submit error:', err);
-        this.errorMessage = 'Failed to submit application. Please try again or contact us directly.';
-        this.isSubmitting = false;
-        
-        // Clear error message after 5 seconds
-        setTimeout(() => {
-          this.errorMessage = '';
-        }, 5000);
+      // Attach file
+      if (this.selectedFile) {
+        formData.append('resume', this.selectedFile, this.selectedFile.name);
       }
-    });
+
+      // Send FormData in the request
+      this.http.post('http://localhost:3000/api/send-email', formData).subscribe(
+        res => alert('Email sent successfully!'),
+        err => alert('Failed to send email.')
+      );
+
+      this.applyForm.reset();
+    } else {
+      this.applyForm.markAllAsTouched();
+    }
   }
 
 }

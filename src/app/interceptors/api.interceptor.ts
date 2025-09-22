@@ -13,11 +13,19 @@ export class ApiInterceptor implements HttpInterceptor {
     // Clone the request and add necessary headers
     let apiReq = req.clone({
       setHeaders: {
-        'Content-Type': req.headers.get('Content-Type') || 'application/json',
         'Accept': 'application/json',
         'X-Requested-With': 'XMLHttpRequest'
       }
     });
+
+    // Only set Content-Type for non-FormData requests
+    if (!(req.body instanceof FormData)) {
+      apiReq = apiReq.clone({
+        setHeaders: {
+          'Content-Type': req.headers.get('Content-Type') || 'application/json'
+        }
+      });
+    }
 
     // Add credentials for API calls
     if (req.url.startsWith('/api') || req.url.includes('api')) {

@@ -215,7 +215,7 @@ const corsOptions = {
   origin: [
     'http://omni-hospitals.in',
     'http://www.omni-hospitals.in',
-    'https://omni-hospitals.in',
+    'https://omnihospitals.in',
     'https://www.omni-hospitals.in'
   ],
   credentials: true

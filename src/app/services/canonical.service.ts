@@ -5,7 +5,7 @@ import { Meta } from '@angular/platform-browser';
   providedIn: 'root'
 })
 export class CanonicalService {
-  private baseUrl = 'https://omni-hospitals.in';
+  private baseUrl = 'https://omnihospitals.in';
 
   constructor(private metaService: Meta) {}
 

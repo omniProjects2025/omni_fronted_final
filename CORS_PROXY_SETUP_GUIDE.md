@@ -115,7 +115,7 @@ const parsedEnvOrigins = (process.env.CORS_ORIGINS || '')
 
 const defaultOrigins = [
   // Production domains
-  'https://omni-hospitals.in',
+  'https://omnihospitals.in',
   'http://omni-hospitals.in',
   'https://www.omni-hospitals.in',
   'http://www.omni-hospitals.in',
@@ -223,7 +223,7 @@ Response sent back through proxy
 
 ### Production Flow
 ```
-Angular (https://omni-hospitals.in)
+Angular (https://omnihospitals.in)
     ↓ API call to https://api.omni-hospitals.in/api/getspecialty
 Node.js Backend (https://api.omni-hospitals.in)
     ↓ CORS allows omni-hospitals.in

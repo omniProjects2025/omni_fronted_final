@@ -85,7 +85,7 @@ const defaultOrigins = [
 **Or use environment variable:**
 ```bash
 # In .env file
-CORS_ORIGINS=https://omni-hospitals.in,https://www.omni-hospitals.in,http://localhost:4200
+CORS_ORIGINS=https://omnihospitals.in,https://www.omni-hospitals.in,http://localhost:4200
 ```
 
 ## 🚨 Common Issues & Solutions
@@ -116,7 +116,7 @@ CORS_ORIGINS=https://omni-hospitals.in,https://www.omni-hospitals.in,http://loca
 - API Calls: `/api/*` → Proxy → `http://localhost:3000/api/*`
 
 ### Production:
-- Frontend: `https://omni-hospitals.in`
+- Frontend: `https://omnihospitals.in`
 - Backend: `https://api.omni-hospitals.in`
 - API Calls: Direct to `https://api.omni-hospitals.in/api/*`
 

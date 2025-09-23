@@ -90,7 +90,7 @@ PORT=3000
 MONGODB_URI=mongodb://localhost:27017/omni_hospitals
 
 # CORS Origins
-CORS_ORIGINS=https://omni-hospitals.in,https://www.omni-hospitals.in,http://omni-hospitals.in
+CORS_ORIGINS=https://omnihospitals.in,https://www.omni-hospitals.in,http://omni-hospitals.in
 
 # Other configs...
 ```

@@ -85,7 +85,7 @@ nano .env
 NODE_ENV=production
 PORT=3000
 MONGO_URI=mongodb+srv://omniServices:Pallesathish%40123@omniservices.b4pjssa.mongodb.net/omniService
-CORS_ORIGINS=https://omni-hospitals.in,https://www.omni-hospitals.in,http://localhost:4200
+CORS_ORIGINS=https://omnihospitals.in,https://www.omni-hospitals.in,http://localhost:4200
 ```
 
 ### Start backend with PM2:

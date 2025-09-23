@@ -74,7 +74,7 @@ Backend: http://localhost:3000
 
 ### **Production (Now Working)**
 ```
-Frontend: https://omni-hospitals.in
+Frontend: https://omnihospitals.in
 API Calls: http://api.omni-hospitals.in:3000/getspecialty
 Backend: http://api.omni-hospitals.in:3000
 ```
@@ -138,7 +138,7 @@ fetch('http://api.omni-hospitals.in:3000/getspecialty')
 // In your backend server.js
 const corsOptions = {
   origin: [
-    'https://omni-hospitals.in',
+    'https://omnihospitals.in',
     'https://www.omni-hospitals.in',
     'http://localhost:4200' // Keep for development
   ],
@@ -150,7 +150,7 @@ const corsOptions = {
 
 ### **Immediate**
 1. **Deploy your Angular app** with the updated production build
-2. **Test from your live domain** (https://omni-hospitals.in)
+2. **Test from your live domain** (https://omnihospitals.in)
 3. **Verify all pages load** and API calls work
 
 ### **Future Improvements**

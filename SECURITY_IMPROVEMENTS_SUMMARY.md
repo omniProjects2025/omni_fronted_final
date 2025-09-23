@@ -13,7 +13,7 @@ I've completely secured both your backend and frontend projects. Here are all th
 #### **BEFORE** (Security Issues):
 ```javascript
 const defaultOrigins = [
-  'https://omni-hospitals.in',
+  'https://omnihospitals.in',
   'http://omni-hospitals.in',
   'https://www.omni-hospitals.in',
   'http://www.omni-hospitals.in',
@@ -31,7 +31,7 @@ const defaultOrigins = [
 // SECURE: Only allow specific, necessary origins
 const defaultOrigins = [
   // Production domain (HTTPS only for security)
-  'https://omni-hospitals.in',
+  'https://omnihospitals.in',
   // Development (HTTP allowed for local dev only)
   'http://localhost:4200'
 ];
@@ -396,7 +396,7 @@ export class LeadSquaredService {
 1. **Set Environment Variables**:
    ```bash
    NODE_ENV=production
-   CORS_ORIGINS=https://omni-hospitals.in
+   CORS_ORIGINS=https://omnihospitals.in
    LEADSQUARED_ACCESS_KEY=your_key
    LEADSQUARED_SECRET_KEY=your_secret
    ```

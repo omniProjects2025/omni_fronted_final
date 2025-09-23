@@ -62,7 +62,7 @@ if %errorlevel% equ 0 (
     echo.
     echo 🚀 DEPLOYMENT READY!
     echo Upload the contents of: dist\omni-project-frontend\
-    echo To your production server at: https://omni-hospitals.in
+    echo To your production server at: https://omnihospitals.in
     echo.
     echo ✅ This will fix ALL URL issues!
     

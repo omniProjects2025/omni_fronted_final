@@ -1,7 +1,7 @@
 # 🚨 URGENT FIX: Mixed Content Error Solution
 
 ## Problem
-Your website `https://omni-hospitals.in` is calling HTTP API endpoints:
+Your website `https://omnihospitals.in` is calling HTTP API endpoints:
 ```
 ❌ http://api.omni-hospitals.in:3000/getspecialty
 ```
@@ -55,7 +55,7 @@ Instead of:
 ## 🚀 Deployment
 
 1. **Upload** the entire `dist/omni-project-frontend/` folder contents to your web server
-2. **Replace** all existing files on `https://omni-hospitals.in`
+2. **Replace** all existing files on `https://omnihospitals.in`
 3. **Test** - the Mixed Content error should be gone!
 
 ## 📋 Environment Configuration (Already Correct)
@@ -78,4 +78,4 @@ This will **completely resolve** the Mixed Content error!
 
 ---
 
-**Note**: Make sure your backend server at `api.omni-hospitals.in` supports HTTPS and has CORS configured for `https://omni-hospitals.in`.
+**Note**: Make sure your backend server at `api.omni-hospitals.in` supports HTTPS and has CORS configured for `https://omnihospitals.in`.

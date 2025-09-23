@@ -143,7 +143,7 @@ nano .env
 NODE_ENV=production
 MONGODB_URI=mongodb://localhost:27017/omni_hospitals
 PORT=3000
-CORS_ORIGINS=https://omni-hospitals.in,https://api.omni-hospitals.in
+CORS_ORIGINS=https://omnihospitals.in,https://api.omni-hospitals.in
 LEADSQUARED_ACCESS_KEY=your_access_key_here
 LEADSQUARED_SECRET_KEY=your_secret_key_here
 ```
@@ -219,7 +219,7 @@ curl -X GET https://api.omni-hospitals.in/api/health
 
 # Test CORS
 curl -X OPTIONS https://api.omni-hospitals.in/api/health \
-  -H "Origin: https://omni-hospitals.in" \
+  -H "Origin: https://omnihospitals.in" \
   -H "Access-Control-Request-Method: GET" \
   -v
 
@@ -232,12 +232,12 @@ curl -X GET https://api.omni-hospitals.in/api/gethealthpackages
 #### **5.2 Test Frontend**
 ```bash
 # Test main site
-curl -I https://omni-hospitals.in
+curl -I https://omnihospitals.in
 
 # Should return 200 OK with Content-Type: text/html
 
 # Test in browser:
-# 1. Go to https://omni-hospitals.in
+# 1. Go to https://omnihospitals.in
 # 2. Open Developer Tools → Network tab
 # 3. Navigate through site
 # 4. Verify API calls go to https://api.omni-hospitals.in/api/*
@@ -290,7 +290,7 @@ chmod -R 755 /public_html/
 certbot renew --force-renewal
 
 # Check SSL configuration
-curl -I https://omni-hospitals.in
+curl -I https://omnihospitals.in
 curl -I https://api.omni-hospitals.in
 ```
 
@@ -298,7 +298,7 @@ curl -I https://api.omni-hospitals.in
 
 ### **Step 7: Final Verification Checklist**
 
-- [ ] ✅ Frontend loads at `https://omni-hospitals.in`
+- [ ] ✅ Frontend loads at `https://omnihospitals.in`
 - [ ] ✅ API responds at `https://api.omni-hospitals.in/health`
 - [ ] ✅ No mixed-content errors in browser console
 - [ ] ✅ No CORS errors in browser console

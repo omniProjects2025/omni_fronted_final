@@ -34,7 +34,7 @@ if %errorlevel% equ 0 (
     echo 🌐 Environment verification:
     echo - Make sure your backend API is running on HTTPS
     echo - Backend should be at: https://api.omni-hospitals.in
-    echo - CORS should allow: https://omni-hospitals.in
+    echo - CORS should allow: https://omnihospitals.in
     
 ) else (
     echo ❌ Build failed! Check the errors above.

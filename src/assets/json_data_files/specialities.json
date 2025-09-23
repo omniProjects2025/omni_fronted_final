@@ -10,7 +10,7 @@
         {
           "title": "Best Cardiology Hospital in Hyderabad",
           "description": [
-            "The Department of Cardiology at OMNI Hospitals is widely recognized as one of the best cardiology hospitals in Kukatpally and Hyderabad. Known by many patients searching for a trusted <b>cardiology hospital near me</b>, we are equipped with advanced cardiac care infrastructure and staffed by leading cardiology doctors in Hyderabad and heart specialists. Our hospital is committed to diagnosing, treating, and managing a wide range of heart and vascular conditions, making us one of the top hospitals in Hyderabad.",
+            "The Department of Cardiology at OMNI Hospitals is widely recognized as one of the best cardiology hospitals in Kukatpally and Hyderabad. Known by many patients searching for a trusted cardiology hospital near me, we are equipped with advanced cardiac care infrastructure and staffed by leading cardiology doctors in Hyderabad and heart specialists. Our hospital is committed to diagnosing, treating, and managing a wide range of heart and vascular conditions, making us one of the top hospitals in Hyderabad.",
             "Our expert cardiologists in Hyderabad and heart specialists in Kukatpally specialize in the treatment of ischemic heart disease, valvular heart disease, high blood pressure (hypertension), cardiac arrhythmias, congenital heart defects, and vascular disorders. For patients experiencing cardiac emergencies such as heart attacks, chest pain, or treatment for heart failure, our Coronary Care Unit (CCU) offers 24/7 critical care and monitoring.",
             "OMNI Hospitals is among the most trusted heart hospitals in Hyderabad, providing both invasive and non-invasive cardiology services, including angioplasty in Hyderabad, angiography in Hyderabad, echocardiography, cardiac catheterization, pacemaker implant, and CABG in Hyderabad. Patients can also get transparent information regarding the cost of angioplasty in Hyderabad, cost of bypass surgery in Hyderabad, or cost of pacemaker implant in Hyderabad, ensuring trust and affordability.",
             "Our state-of-the-art cardiac diagnostic tools ensure accurate assessment and timely intervention for all heart conditions. We take pride in being one of the top heart surgery hospitals in Hyderabad, offering comprehensive pre-operative and post-operative cardiac care.",
@@ -18,12 +18,11 @@
           ]
         },
         {
-          "title": "Best Cardiology Hospital in Hyderabad",
           "sections": [
             {
               "subtitle": "Expertise in Cardiac & Thoracic Care",
-              "heading": "Our specialists perform:",
-              "para": [
+              "description": ["Our specialists perform:"],
+              "list": [
                 "Adult & pediatric heart surgeries",
                 "Bypass surgery (CABG in Hyderabad) & valve replacement",
                 "Heart & lung transplants",
@@ -33,6 +32,9 @@
             },
             {
               "subtitle": "Advanced Heart Treatments",
+              "description": [
+                "We offer both invasive and non-invasive cardiac procedures, including:"
+              ],
               "list": [
                 "ECG, 2D Echo, TMT, Holter monitoring",
                 "Angiogram, Angioplasty in Hyderabad, Angiography in Hyderabad, Cardiac catheterization",
@@ -52,7 +54,7 @@
           ]
         },
         {
-          "description":[
+          "description": [
             "Looking for the best heart hospital in Hyderabad? Choose OMNI Hospitals for comprehensive, compassionate, and advanced cardiac care with the expertise of the best cardiologists in Hyderabad, cardiac surgeons in Hyderabad, and heart specialists in Kukatpally."
           ]
         }
@@ -106,20 +108,26 @@
                 "Reduces fatigue and dizziness",
                 "Enhances quality of life for patients with slow or irregular heartbeats"
               ]
+            },
+            {
+              "description": [
+                "At OMNI Hospitals, we use state-of-the-art cardiac facilities and a highly experienced heart team to provide the best pacemaker treatment in Hyderabad with excellent post-surgical care and long-term follow-up."
+              ]
             }
-          ],
-          "conclusion": "At OMNI Hospitals, we use state-of-the-art cardiac facilities and a highly experienced heart team to provide the best pacemaker treatment in Hyderabad with excellent post-surgical care and long-term follow-up."
+          ]
         },
         {
           "name": "Coronary Angioplasty",
           "title": "Advanced Heart Blockage Treatment in Hyderabad",
           "description": [
-            "Coronary Angioplasty, also known as Percutaneous Coronary Intervention (PCI), is a minimally invasive procedure used to open blocked or narrowed arteries of the heart. This procedure helps restore normal blood flow and prevent life-threatening complications such as heart attacks. During angioplasty, a stent is often placed at the site of the blockage to keep the artery open long-term. It’s commonly performed in patients diagnosed with coronary artery disease (CAD) or those who have experienced a cardiac event."
+            "Coronary Angioplasty, also known as Percutaneous Coronary Intervention (PCI), is a minimally invasive procedure used to open blocked or narrowed arteries of the heart. This procedure helps restore normal blood flow and prevent life-threatening complications such as heart attacks.",
+            "During angioplasty, a stent is often placed at the site of the blockage to keep the artery open long-term. It’s commonly performed in patients diagnosed with coronary artery disease (CAD) or those who have experienced a cardiac event."
           ],
           "sections": [
             {
               "subtitle": "Who Needs Coronary Angioplasty?",
-              "list": [
+              "description": [
+                "Angioplasty is usually recommended for individuals experiencing:",
                 "Acute myocardial infarction (heart attack)",
                 "Severe chest pain (Angina)",
                 "Coronary artery blockages (Atherosclerosis)",
@@ -142,7 +150,8 @@
             },
             {
               "subtitle": "Post-Angioplasty Recovery and Care",
-              "list": [
+              "description": [
+                "After successful angioplasty, patients are advised to:",
                 "Adopt a heart-healthy lifestyle and low-fat diet",
                 "Avoid smoking, alcohol, and tobacco",
                 "Manage cholesterol (LDL/HDL) and blood pressure",
@@ -178,12 +187,14 @@
             {
               "subtitle": "How a Coronary Angiogram Works",
               "description": [
-                "The procedure involves inserting a thin, flexible tube called a catheter into a blood vessel (usually through the wrist or groin). A contrast dye, safe for human use, is injected into the coronary arteries. As the dye flows through the heart's arteries, it becomes visible under real-time X-ray imaging (fluoroscopy).\n\nThe resulting series of images known as the angiogram help cardiologists assess the severity and location of arterial blockages, making it a critical step before procedures like angioplasty or stent placement."
+                "The procedure involves inserting a thin, flexible tube called a catheter into a blood vessel (usually through the wrist or groin). A contrast dye, safe for human use, is injected into the coronary arteries. As the dye flows through the heart's arteries, it becomes visible under real-time X-ray imaging (fluoroscopy).",
+                "The resulting series of images known as the angiogram helps cardiologists assess the severity and location of arterial blockages, making it a critical step before procedures like angioplasty or stent placement."
               ]
             },
             {
               "subtitle": "When Is a Coronary Angiogram Recommended?",
-              "list": [
+              "description": [
+                "Doctors recommend a coronary angiography when a patient presents with:",
                 "Chest pain or angina (tightness, pressure, or burning)",
                 "Abnormal ECG, stress test, or echocardiogram results",
                 "Unexplained pain in the jaw, neck, shoulder, or arm",
@@ -202,9 +213,8 @@
             {
               "subtitle": "Post-Angiogram Care and Recovery",
               "description": [
-                "After the procedure, the patient is kept under observation for a few hours. Most patients are discharged the same day or within 24 hours. A follow-up appointment is scheduled to discuss the angiogram results and next steps in treatment."
-              ],
-              "list": [
+                "After the procedure, the patient is kept under observation for a few hours. Most patients are discharged the same day or within 24 hours. A follow-up appointment is scheduled to discuss the angiogram results and next steps in treatment.",
+                "Post-care recommendations include:",
                 "Adopting a heart-healthy lifestyle",
                 "Quitting smoking, alcohol, and tobacco use",
                 "Maintaining normal cholesterol and blood pressure",
@@ -213,7 +223,7 @@
             },
             {
               "subtitle": "Why Choose OMNI Hospitals for Coronary Angiogram in Hyderabad?",
-              "list": [
+              "description": [
                 "Best-in-class Cath Lab facilities",
                 "Expert team of interventional cardiologists",
                 "Quick and accurate diagnosis of heart blockages",
@@ -224,14 +234,15 @@
         },
         {
           "name": "Heart Failure Treatment in Hyderabad",
-          "title": "Expert Care for Heart Failure Diagnosis, Symptoms & Management at OMNI Hospitals",
           "description": [
-            "Heart failure is a condition where the heart is unable to pump enough blood to meet the body’s needs. It often develops over time due to conditions like high blood pressure, coronary artery disease, or previous heart attacks, which weaken the heart muscle.\n\nAt OMNI Hospitals, our expert cardiology team in Hyderabad offers advanced diagnosis, effective treatment, and long-term management plans for patients with chronic or acute heart failure."
+            "Expert Care for Heart Failure Diagnosis, Symptoms & Management at OMNI Hospitals Heart failure is a condition where the heart is unable to pump enough blood to meet the body’s needs. It often develops over time due to conditions like high blood pressure, coronary artery disease, or previous heart attacks, which weaken the heart muscle.",
+            "At OMNI Hospitals, our expert cardiology team in Hyderabad offers advanced diagnosis, effective treatment, and long-term management plans for patients with chronic or acute heart failure."
           ],
           "sections": [
             {
               "subtitle": "Common Causes of Heart Failure",
-              "list": [
+              "description": [
+                "Heart failure is often linked to the following heart and systemic conditions:",
                 "Coronary Artery Disease (CAD) – narrowed or blocked arteries reduce blood supply to the heart.",
                 "Congenital Heart Defects – structural issues present from birth.",
                 "Heart Attack – damage from a past attack can impair heart function.",
@@ -241,7 +252,7 @@
             },
             {
               "subtitle": "Heart Failure Symptoms to Watch For",
-              "list": [
+              "description": [
                 "Shortness of breath (during activity or rest)",
                 "Fatigue and weakness",
                 "Swelling in feet or ankles (pedal edema)",
@@ -250,13 +261,14 @@
                 "Chest pain or pressure",
                 "Loss of appetite, indigestion",
                 "Dizziness or giddiness",
-                "Persistent dry cough"
-              ],
-              "conclusion": "Early detection of these signs of heart failure is crucial for effective treatment."
+                "Persistent dry cough",
+                "Early detection of these signs of heart failure is crucial for effective treatment."
+              ]
             },
             {
               "subtitle": "Diagnosis of Heart Failure at OMNI Hospitals",
-              "list": [
+              "description": [
+                "Our cardiologists in Hyderabad use a combination of clinical evaluation and diagnostic tools:",
                 "2D Echo – assesses heart pumping, valve function, and chamber size",
                 "ECG (Electrocardiogram) – identifies rhythm abnormalities or heart attack history",
                 "Chest X-ray – checks for heart enlargement and fluid in the lungs",
@@ -266,49 +278,34 @@
             },
             {
               "subtitle": "Heart Failure Treatment Options in Hyderabad",
-              "sections": [
-                {
-                  "subtitle": "Lifestyle Modifications",
-                  "list": [
-                    "Weight control, salt and fluid restriction",
-                    "Cardiac rehabilitation and low-impact exercise",
-                    "Complete avoidance of smoking, alcohol, and substance abuse"
-                  ]
-                },
-                {
-                  "subtitle": "Medications",
-                  "list": [
-                    "Diuretics to prevent fluid retention",
-                    "ACE inhibitors, beta-blockers, and other heart medications to improve heart function"
-                  ]
-                },
-                {
-                  "subtitle": "Surgical Interventions",
-                  "list": [
-                    "Bypass surgery, valve repair or replacement",
-                    "Heart transplant in end-stage heart failure cases"
-                  ]
-                },
-                {
-                  "subtitle": "Implantable Cardiac Devices",
-                  "list": [
-                    "ICDs (Implantable Cardioverter Defibrillators) to correct dangerous arrhythmias",
-                    "CRT (Cardiac Resynchronization Therapy) for synchronizing heartbeats and improving pump function"
-                  ]
-                }
+              "description": [
+                "OMNI Hospitals offers both non-invasive and surgical treatments for heart failure, based on the patient's condition:",
+                "🔹 Lifestyle Modifications <br>Weight control, salt, and fluid restriction",
+                "Cardiac rehabilitation and low-impact exercise",
+                "Complete avoidance of smoking, alcohol, and substance abuse",
+                "🔹 Medications <br>Diuretics to prevent fluid retention",
+                "ACE inhibitors, beta-blockers, and other heart medications to improve heart function",
+                "🔹 Surgical Interventions <br>Bypass surgery, valve repair, or replacement",
+                "Heart transplant in end-stage heart failure cases",
+                "🔹 Implantable Cardiac Devices<br>ICDs (Implantable Cardioverter Defibrillators) to correct dangerous arrhythmias",
+                "CRT (Cardiac Resynchronization Therapy) for synchronizing heartbeats and improving pump function"
               ]
             },
             {
               "subtitle": "Why Choose OMNI Hospitals for Heart Failure Treatment in Hyderabad?",
-              "list": [
+              "description": [
                 "Experienced cardiologists & heart failure specialists",
                 "Advanced diagnostics and state-of-the-art cardiac care units",
                 "Personalized treatment plans and rehabilitation support",
                 "24x7 emergency cardiac care"
               ]
+            },
+            {
+              "description": [
+                "Book an appointment today with a leading cardiologist in Hyderabad to get evaluated for heart failure symptoms or ongoing management support."
+              ]
             }
-          ],
-          "conclusion": "Book an appointment today with a leading cardiologist in Hyderabad to get evaluated for heart failure symptoms or ongoing management support."
+          ]
         }
       ]
     },
@@ -328,9 +325,7 @@
         {
           "title": "Conditions We Treat",
           "description": [
-            "Our experienced otolaryngologists provide expert care for a wide range of ENT problems, including:"
-          ],
-          "para": [
+            "Our experienced otolaryngologists provide expert care for a wide range of ENT problems, including:",
             "<strong>Ear Disorders:</strong> Hearing loss, ear infections, tinnitus, balance issues",
             "<strong>Nose & Sinus Conditions:</strong> Sinusitis, nasal blockage, allergy management, deviated septum – making Omni a trusted choice for those searching for a sinus hospital near me",
             "<strong>Throat & Voice:</strong> Tonsillitis, voice disorders, swallowing difficulties, sleep apnea",
@@ -342,9 +337,7 @@
         {
           "title": "Advanced ENT Diagnostics & Treatments",
           "description": [
-            "With cutting-edge facilities at our core, Omni Hospitals – widely recognized as the best ENT hospital in Kukatpally – offers:"
-          ],
-          "list": [
+            "With cutting-edge facilities at our core, Omni Hospitals – widely recognized as the best ENT hospital in Kukatpally – offers:",
             "<strong>Diagnostic Excellence:</strong> Audiometry, nasal endoscopy, CT scans, endoscopic sinus evaluations",
             "<strong>Medical Therapy:</strong> Allergy injections, voice therapy, and medication for ENT infections",
             "<strong>Minimally Invasive Surgeries:</strong> Functional Endoscopic Sinus Surgery (FESS), septorhinoplasty, and more",
@@ -353,8 +346,8 @@
           ]
         },
         {
-          "title": "Why Choose Omni Hospitals’ ENT Services?",
-          "list": [
+          "title": "Why Choose Omni Hospitals for ENT Services?",
+          "description": [
             "Top-Rated ENT Specialists in Hyderabad with years of surgical and clinical expertise",
             "Modern, patient-centric infrastructure suited for both minor and complex ENT procedures",
             "Trusted as a microscopic ear hospital in Hyderabad for advanced ear surgeries",
@@ -384,9 +377,7 @@
         },
         {
           "title": "Expertise in General Medicine Care",
-          "description": [
-            "Our specialists provide expert care for:"
-          ],
+          "description": ["Our specialists provide expert care for:"],
           "list": [
             "Diabetes, hypertension & thyroid disorders",
             "Fever evaluation & infectious diseases",
@@ -547,19 +538,17 @@
           ]
         },
         {
-          "subtitle": "Treatments & Services Offered",
+          "title": "Treatments & Services Offered",
           "description": [
-            "Our neurologists offer a wide spectrum of advanced diagnostic and therapeutic services, including:"
-          ],
-          "para": [
-            "<b>Stroke Care & Rehabilitation – Clot-busting therapy, neurocritical care, physiotherapy support",
-            "<b>Epilepsy Management – Video-EEG monitoring, medical therapy, epilepsy surgery evaluation",
-            "<b>Movement Disorder Treatments – Deep Brain Stimulation (DBS), Botulinum toxin therapy",
-            "<b>Headache & Migraine Clinics – Personalized treatment plans for chronic headaches",
-            "<b>Cognitive Disorder Care – Dementia evaluation and memory clinics",
-            "<b>Multiple Sclerosis & Autoimmune Disorder Care – Immunotherapies and disease-modifying treatments",
-            "<b>Neurodiagnostics – EEG, EMG, Nerve Conduction Studies, advanced neuroimaging",
-            "<b>Pediatric Neurology Services – Specialized care for children with neurological conditions",
+            "Our neurologists offer a wide spectrum of advanced diagnostic and therapeutic services, including:",
+            "<b>Stroke Care & Rehabilitation</b> – Clot-busting therapy, neurocritical care, physiotherapy support",
+            "<b>Epilepsy Management</b> – Video-EEG monitoring, medical therapy, epilepsy surgery evaluation",
+            "<b>Movement Disorder Treatments</b> – Deep Brain Stimulation (DBS), Botulinum toxin therapy",
+            "<b>Headache & Migraine Clinics</b> – Personalized treatment plans for chronic headaches",
+            "<b>Cognitive Disorder Care</b> – Dementia evaluation and memory clinics",
+            "<b>Multiple Sclerosis & Autoimmune Disorder Care</b> – Immunotherapies and disease-modifying treatments",
+            "<b>Neurodiagnostics</b> – EEG, EMG, Nerve Conduction Studies, advanced neuroimaging",
+            "<b>Pediatric Neurology Services</b> – Specialized care for children with neurological conditions",
             "<b>Neuro Rehabilitation</b> – Physiotherapy, occupational therapy, and speech therapy for recovery"
           ]
         },
@@ -581,7 +570,7 @@
         {
           "title": "<br> Best General Surgery Hospital in Hyderabad",
           "description": [
-            "BThe Department of General Surgery at OMNI Hospitals is one of the leading centers for surgical care in Hyderabad, Telangana. With advanced infrastructure, modern operating theaters, and highly skilled surgeons, we specialize in diagnosing, treating, and managing a wide spectrum of surgical conditions with precision and compassion. <br><br>Our team of expert general surgeons in Hyderabad is experienced in performing both emergency and elective surgeries, ensuring patient safety and faster recovery. We use minimally invasive techniques, including laparoscopic and robotic-assisted surgery, to reduce pain, shorten hospital stays, and improve surgical outcomes."
+            "The Department of General Surgery at OMNI Hospitals is one of the leading centers for surgical care in Hyderabad, Telangana. With advanced infrastructure, modern operating theaters, and highly skilled surgeons, we specialize in diagnosing, treating, and managing a wide spectrum of surgical conditions with precision and compassion. <br><br>Our team of expert general surgeons in Hyderabad is experienced in performing both emergency and elective surgeries, ensuring patient safety and faster recovery. We use minimally invasive techniques, including laparoscopic and robotic-assisted surgery, to reduce pain, shorten hospital stays, and improve surgical outcomes."
           ]
         },
         {
@@ -608,9 +597,7 @@
         },
         {
           "subtitle": "Advanced Surgical Procedures",
-          "description": [
-            "OMNI Hospitals offers expertise in:"
-          ],
+          "description": ["OMNI Hospitals offers expertise in:"],
           "sections": [
             {
               "list": [
@@ -1213,9 +1200,7 @@
             },
             {
               "subtitle": "PREVENTION",
-              "description": [
-                "Pneumonia can be prevented by the following:"
-              ],
+              "description": ["Pneumonia can be prevented by the following:"],
               "list": [
                 "Maintain a healthy lifestyle.",
                 "Quit smoking for better lung immunity.",
@@ -1320,9 +1305,7 @@
             },
             {
               "subtitle": "Complications",
-              "description": [
-                "Possible complications include:"
-              ],
+              "description": ["Possible complications include:"],
               "list": [
                 "Daytime drowsiness, Normal, restorative sleep is impossible due to the frequent awakenings brought on by sleep apnea, which increases the likelihood of extreme daytime sleepiness, weariness, and irritability.",
                 "You can have trouble staying awake and find yourself nodding off when working, watching TV, or even while driving. Accidents in the workplace and on the road are more likely to occur in those with sleep apnea.",

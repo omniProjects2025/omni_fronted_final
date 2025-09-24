@@ -115,10 +115,10 @@ export class HomeComponent implements OnInit, OnDestroy {
       id: 7, dep_name: 'Nephrology', img: "assets/our_specialities_new/Nephrology_Urology.svg"
     },
     { id: 8, dep_name: 'Obstetrics & Gynaecology', img: "assets/our_specialities_new/Gynaecology.svg" },
-    { id: 9, dep_name: 'Paediatrics', img: "assets/our_specialities_new/Paediatrics.svg" },
-    { id: 10, dep_name: 'Pulmonology', img: "assets/our_specialities_new/Pulmonology.svg" },
-    { id: 11, dep_name: 'Psychiatry', img: "assets/our_specialities_new/Psychiatry.svg" },
-    { id: 12, dep_name: 'Orthopedics', img: "assets/our_specialities_new/Orthopedic.svg" },
+    // { id: 9, dep_name: 'Paediatrics', img: "assets/our_specialities_new/Paediatrics.svg" },
+    { id: 9, dep_name: 'Pulmonology', img: "assets/our_specialities_new/Pulmonology.svg" },
+    { id: 10, dep_name: 'Psychiatry', img: "assets/our_specialities_new/Psychiatry.svg" },
+    { id: 11, dep_name: 'Orthopedics', img: "assets/our_specialities_new/Orthopedic.svg" },
   ]
 
   awards = [
@@ -736,7 +736,7 @@ export class HomeComponent implements OnInit, OnDestroy {
       { Attribute: 'FirstName', Value: this.formData.name },
       { Attribute: 'Phone', Value: this.formData.phone },
       { Attribute: 'EmailAddress', Value: this.formData.email },
-      { Attribute: 'Source', Value: 'Website - Home Contact Form' }
+      { Attribute: 'Source', Value: 'Website - Home Need Assistance' }
     ];
 
     // LeadSquared API call (matching working pages)

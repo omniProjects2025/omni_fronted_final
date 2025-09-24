@@ -154,7 +154,8 @@ export class HealthCheckupComponent {
       name: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
       mobile: ['', [Validators.required, Validators.pattern('^[0-9]{10}$')]],
-      packageType: new FormControl('', Validators.required)
+      packageType: new FormControl('', Validators.required),
+      speciality: new FormControl('')
 
     });
   }
@@ -214,8 +215,8 @@ submitPackageForm() {
     { Attribute: 'FirstName', Value: this.packageData.fullName },
     { Attribute: 'Phone', Value: this.packageData.phoneNumber },
     { Attribute: 'EmailAddress', Value: this.packageData.emailId },
-    { Attribute: 'mx_Speciality', Value: formValues.speciality }, // send speciality
-    { Attribute: 'mx_AppointmentDate', Value: this.packageData.appointmentDate },
+    { Attribute: 'mx_Speciality', Value: formValues.speciality || this.selectedPackageName },
+    { Attribute: 'mx_AppointmentDate', Value: this.packageData.appointmentDate || '' },
     { Attribute: 'Source', Value: 'Website - Package Booking' }
   ];
 

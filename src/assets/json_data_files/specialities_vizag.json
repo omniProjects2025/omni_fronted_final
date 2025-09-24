@@ -72,9 +72,9 @@
         ]
       },
       {
-        "name": "Orthopedic",
+        "name": "orthopedics",
         "short_description": "",
-        "img": "",
+        "img": "assets/our_specialities/ortho.jpg",
         "details": [
           {
             "title": "",
@@ -186,7 +186,7 @@
       {
         "name": "Neurology",
         "short_description": "",
-        "img": "",
+        "img": "assets/our_specialities/nuerology.jpg",
         "details": [
           {
             "title": "Best Neurology Hospital in Vizag",
@@ -257,7 +257,7 @@
       {
         "name": "General Medicine",
         "short_description": "",
-        "img": "",
+        "img": "assets/our_specialities/general_medicine.jpg",
         "details": [
           {
             "title": "Best General Medicine Hospital in Vizag – OMNI Hospitals",
@@ -343,7 +343,7 @@
       {
         "name": "General Surgery",
         "short_description": "",
-        "img": "",
+        "img": "assets/our_specialities/general_surgery.jpg",
         "details": [
           {
             "title": "Best General Surgery Hospital in Vizag – OMNI Hospitals",
@@ -422,7 +422,7 @@
       {
         "name": "Pulmonology",
         "short_description": "",
-        "img": "",
+        "img": "assets/our_specialities/pulmonology.jpg",
         "details": [
           {
             "title": "Best Pulmonology Hospital in Vizag – OMNI Hospitals",
@@ -499,9 +499,9 @@
         ]
       },
       {
-        "name": "Obstetrics and Gynecology",
+        "name": "Obstetrics & Gynaecology",
         "short_description": "",
-        "img": "",
+        "img": "assets/our_specialities/gynocology.jpg",
         "details": [
           {
             "title": "Best Obstetrics and Gynecology Hospital in Vizag – OMNI Hospitals",
@@ -605,7 +605,7 @@
       {
         "name": "Gastroenterology",
         "short_description": "",
-        "img": "",
+        "img": "assets/our_specialities/gastrology.jpg",
         "details": [
           {
             "title": "Best Gastroenterology Hospital in Vizag – OMNI Hospitals",
@@ -700,7 +700,7 @@
       {
         "name": "Nephrology",
         "short_description": "",
-        "img": "",
+        "img": "assets/our_specialities/nephrology.jpg",
         "details": [
           {
             "title": "Best Nephrology Hospital in Vizag – OMNI Hospitals",
@@ -777,7 +777,7 @@
       {
         "name": "Emergency Medicine & Critical Care",
         "short_description": "",
-        "img": "",
+        "img": "assets/our_specialities/emergency_medicine_critical_care.jpg",
         "details": [
           {
             "title": "Best Emergency Medicine & Critical Care Hospital in Vizag – OMNI Hospitals",
@@ -880,7 +880,7 @@
       {
         "name": "Dermatology",
         "short_description": "",
-        "img": "",
+        "img": "assets/our_specialities/dermatology.jpg",
         "details": [
           {
             "title": "Best Dermatology Hospital in Vizag – OMNI Hospitals",
@@ -957,7 +957,7 @@
       {
         "name": "ENT",
         "short_description": "",
-        "img": "",
+        "img": "assets/our_specialities/ent.jpg",
         "details": [
           {
             "title": "Best ENT Hospital in Vizag",
@@ -1412,7 +1412,7 @@
       {
         "name": "Plastic Surgery",
         "short_description": "",
-        "img": "",
+        "img": "assets/our_specialities/plastic_surgery.jpg",
         "details": [
           {
             "title": "Best Plastic Surgery Hospital in Vizag – OMNI Hospitals",

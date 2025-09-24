@@ -1,7 +1,8 @@
 <app-header></app-header>
 <header class="p-0">
   <img src="assets/health_checkup/health_checkup.jpg" class=" w-100 d-none d-md-block" alt="Lungs Image" height="">
-  <img src="assets/health_checkup/health_checkup_mobile.jpg" class=" w-100 d-block d-md-none" alt="Lungs Image" height="">
+  <img src="assets/health_checkup/health_checkup_mobile.jpg" class=" w-100 d-block d-md-none" alt="Lungs Image"
+    height="">
 </header>
 <div class="container">
   <div class="py-3">
@@ -35,7 +36,8 @@
             <div class="ms-3 d-flex flex-wrap">
               <button class="btn view_button ms-3 w_dth px-0" (click)="viewPackageDetails(checkup)">View
                 Details</button>
-              <button class="btn view_button w_dth px-0" (click)="bookAppointment(checkup['id'], checkup['package_title'])">Book
+              <button class="btn view_button w_dth px-0"
+                (click)="bookAppointment(checkup['id'], checkup['package_title'])">Book
                 an
                 Appointment</button>
             </div>
@@ -45,7 +47,8 @@
     </div>
   </div>
   <!-- Bootstrap Modal -->
-  <div class="modal fade custom-backdrop" id="appointmentModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
+  <div class="modal fade custom-backdrop" id="appointmentModal" data-bs-backdrop="static" data-bs-keyboard="false"
+    tabindex="-1">
     <div class="modal-dialog modal-dialog-centered modal-lg">
       <div class="modal-content appointment-modal">
         <div class="modal-header appointment-modal-header">
@@ -77,8 +80,8 @@
               <div class="row">
                 <div class="col-md-6 mb-3">
                   <label class="form-label appointment-label">Full Name *</label>
-                  <input type="text" class="form-control appointment-input" formControlName="name" 
-                         placeholder="Enter your full name">
+                  <input type="text" class="form-control appointment-input" formControlName="name"
+                    placeholder="Enter your full name">
                   <div *ngIf="appointmentForm.get('name')?.invalid && appointmentForm.get('name')?.touched"
                     class="error-message">
                     <i class="fas fa-exclamation-circle"></i> Name is required
@@ -86,8 +89,8 @@
                 </div>
                 <div class="col-md-6 mb-3">
                   <label class="form-label appointment-label">Mobile Number *</label>
-                  <input type="tel" class="form-control appointment-input" formControlName="mobile" 
-                         placeholder="Enter 10-digit mobile number" maxlength="10">
+                  <input type="tel" class="form-control appointment-input" formControlName="mobile"
+                    placeholder="Enter 10-digit mobile number" maxlength="10">
                   <div *ngIf="appointmentForm.get('mobile')?.invalid && appointmentForm.get('mobile')?.touched"
                     class="error-message">
                     <i class="fas fa-exclamation-circle"></i> Enter a valid 10-digit mobile number
@@ -96,8 +99,8 @@
               </div>
               <div class="mb-3">
                 <label class="form-label appointment-label">Email Address *</label>
-                <input type="email" class="form-control appointment-input" formControlName="email" 
-                       placeholder="Enter your email address">
+                <input type="email" class="form-control appointment-input" formControlName="email"
+                  placeholder="Enter your email address">
                 <div *ngIf="appointmentForm.get('email')?.invalid && appointmentForm.get('email')?.touched"
                   class="error-message">
                   <i class="fas fa-exclamation-circle"></i> Enter a valid email address
@@ -119,21 +122,11 @@
   </div>
 </div>
 <div class="mx-5 text-justify">
-  <h5 class="quetion_txt">What is Lorem Ipsum?</h5>
-  <p class="answer_txt">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-    when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-    It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially
-    unchanged.
-    It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-    and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-  <h5>What is Lorem Ipsum?</h5>
-  <p class="text-justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-    when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-    It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially
-    unchanged.
-    It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-    and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+  <h5 class="">Why should I go for a health checkup package?</h5>
+  <p class="text-justify">Regular health checkups help in early detection of medical conditions such as diabetes,
+    hypertension, thyroid issues, heart disease, and more. Detecting health risks early allows for timely treatment and
+    better outcomes.</p>
+  <h5>How often should I get a health checkup done?</h5>
+  <p class="text-justify">It depends on your age, lifestyle, and medical history. Generally, an annual checkup is recommended for adults. For people with existing conditions or risk factors, more frequent checkups may be necessary.</p>
 </div>
 <app-footer></app-footer>

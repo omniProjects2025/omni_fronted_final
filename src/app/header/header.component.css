@@ -30,11 +30,13 @@
 .mega-menu .dropdown-item:hover {
   background-color: transparent;
   color: #000 !important; /* Changed from #007bff to black */
+  cursor: pointer;
 }
 
 /* Prevent unwanted blue colors in dropdowns */
 .dropdown-item {
   color: #000 !important;
+  cursor: pointer;
 }
 
 .dropdown-item:hover {

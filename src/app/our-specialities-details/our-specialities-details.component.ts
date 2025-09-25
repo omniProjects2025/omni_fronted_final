@@ -289,4 +289,11 @@ export class OurSpecialitiesDetailsComponent implements OnInit {
     return locationMap[location.toLowerCase()] || location;
   }
 
+  // Method to navigate back to specialities page with location preserved
+  // navigateBackToSpecialities() {
+  //   this.router.navigate(['/our-specialities'], {
+  //     queryParams: { location: this.selectedLocation }
+  //   });
+  // }
+
 }

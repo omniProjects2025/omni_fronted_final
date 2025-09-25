@@ -15,6 +15,6 @@ export class OurEmpanelmentComponent {
     'the_new_india.svg', 'vipul_medcorp_insurance.svg', 'icici_lombard_insurance.svg', 'iffco_tikko.svg',
     'magma_hma.svg', 'manipal_cigna.svg', 'royal_sunsaram_insurance.svg', 'united_india_insurance.svg',
     'All Insurance Logos For Website_Medvantage.svg', 'good_health.svg', 'paramount_health.svg', 'raksha_health.svg', 'vidal_health_insurence_logo.svg',
-    'vipul_medicorp.svg', 'aditya_birla.svg', 'future_cenerali.svg', 'genins_india_insurance.svg', 'libarty_health_insurance.svg', 'oriental_insurance.svg', 'park_mediclaim.svg', 'phpl_behind.svg', 'relaince_general_insurance.svg', 'univeral_sompo.svg'
+    'vipul_medicorp.svg', 'aditya_birla.svg', 'future_cenerali.svg', 'genins_india_insurance.svg', 'libarty_health_insurance.svg', 'oriental_insurance.svg', 'park_mediclaim.svg', 'phpl_behind.svg', 'relaince_general_insurance.svg', 'univeral_sompo.svg', 'NFC_logo.png'
   ];
 }

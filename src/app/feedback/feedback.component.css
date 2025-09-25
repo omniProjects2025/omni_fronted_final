@@ -57,7 +57,25 @@ textarea,
   cursor: pointer;
 }
 
-.star-icon.filled {
-  color: orange; /* Or use 'yellow' if preferred */
-  border-color: orange;
+.form-check-input {
+  border: 2px solid #8CC63F;
+  background-color: #ffffff;
+}
+
+.form-check-input:checked {
+  background-color: #8CC63F;
+  border-color: #8CC63F;
+}
+
+.form-check-input:focus {
+  border-color: #8CC63F;
+  box-shadow: 0 0 0 0.2rem rgba(140, 198, 63, 0.25);
+}
+
+.form-check {
+  cursor: pointer;
+}
+
+.form-check-label {
+  cursor: pointer;
 }

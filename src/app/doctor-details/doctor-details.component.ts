@@ -21,6 +21,13 @@ export class DoctorDetailsComponent implements OnDestroy {
   hasError = false;
   errorMessage = '';
   
+  // Store filter state from query parameters
+  filterState = {
+    location: '',
+    speciality: '',
+    search: ''
+  };
+  
   appointmentData = {
     fullName: '',
     mobileNumber: '',
@@ -52,6 +59,13 @@ export class DoctorDetailsComponent implements OnDestroy {
       console.log(this.doctor_name, 'doctor_name..');
 
       this.getDoctorDetails(); // Only call this after doctor_name is set
+    });
+
+    // Get filter state from query parameters
+    this.activated_routes.queryParams.subscribe(queryParams => {
+      this.filterState.location = queryParams['location'] || '';
+      this.filterState.speciality = queryParams['speciality'] || '';
+      this.filterState.search = queryParams['search'] || '';
     });
   }
 
@@ -344,24 +358,19 @@ getDoctorDetails(): void {
   });
 }
 
-  // Method to set meta tags for SEO using API data
   private setMetaTags(doctor: any): void {
     if (!doctor) return;
 
-    // Set page title from API data or fallback
     const title = doctor.meta_title || `${doctor.name} - ${doctor.specialization || doctor.depertment} | OMNI Hospitals`;
     this.titleService.setTitle(title);
 
-    // Set meta description from API data or fallback
     const description = doctor.meta_description || 
       `Book appointment with ${doctor.name}, ${doctor.specialization || doctor.depertment} at OMNI Hospitals. ${doctor.experience ? `Experience: ${doctor.experience}.` : ''} ${doctor.work_location ? `Location: ${doctor.work_location}.` : ''} Expert medical care and treatment.`;
     
     this.metaService.updateTag({ name: 'description', content: description });
 
-    // Set additional meta tags for better SEO
     this.metaService.updateTag({ name: 'keywords', content: `${doctor.name}, ${doctor.specialization || doctor.depertment}, doctor, appointment, OMNI Hospitals, ${doctor.work_location || ''}` });
     
-    // Set Open Graph tags for social media sharing
     this.metaService.updateTag({ property: 'og:title', content: title });
     this.metaService.updateTag({ property: 'og:description', content: description });
     this.metaService.updateTag({ property: 'og:type', content: 'profile' });

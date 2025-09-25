@@ -1,5 +1,5 @@
 import { Component, AfterViewInit, ViewChild, ElementRef, NgZone, ChangeDetectionStrategy, ChangeDetectorRef, OnDestroy, HostListener, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { DoctorDetailsService } from '../services/doctor-details.service';
 import { finalize, take, catchError, retry, shareReplay } from 'rxjs/operators';
 import { of, BehaviorSubject } from 'rxjs';
@@ -30,11 +30,15 @@ export class OurDoctorsComponent implements OnInit, AfterViewInit, OnDestroy {
   private cachedData: any[] = [];
   private filteredDataSubject = new BehaviorSubject<any[]>([]);
   private hasInitialLoad = false;
+  
+  // Flag to prevent circular updates when restoring from URL
+  private isRestoringFromUrl = false;
 
   @ViewChild('loadMoreSentinel', { static: false }) loadMoreSentinel!: ElementRef;
 
   constructor(
     private router: Router,
+    private route: ActivatedRoute,
     private doctorservice: DoctorDetailsService,
     private ngZone: NgZone,
     private cdr: ChangeDetectorRef
@@ -42,6 +46,28 @@ export class OurDoctorsComponent implements OnInit, AfterViewInit, OnDestroy {
 
   ngOnInit() {
     console.log('OurDoctorsComponent ngOnInit() called');
+    
+    // Check for filter parameters from query params to restore filter state
+    this.route.queryParams.subscribe(params => {
+      this.isRestoringFromUrl = true;
+      
+      if (params['location']) {
+        this.selectedLocation = params['location'];
+      }
+      if (params['speciality']) {
+        this.selectedSpeciality = params['speciality'];
+      }
+      if (params['search']) {
+        this.searchTerm = params['search'];
+      }
+      
+      // Apply filters after restoring from URL
+      if (this.allDoctorsFlat.length > 0) {
+        this.runFilters();
+      }
+      
+      this.isRestoringFromUrl = false;
+    });
     
     // FOR TESTING: Clear cache to force API call
     // Uncomment the line below to force API calls every time
@@ -158,6 +184,11 @@ export class OurDoctorsComponent implements OnInit, AfterViewInit, OnDestroy {
     this.cdr.markForCheck();
     this.ensureFilledView();
     
+    // Apply filters if there are URL parameters
+    if (this.selectedLocation || this.selectedSpeciality || this.searchTerm) {
+      this.runFilters();
+    }
+    
     // Ensure observer attached after data renders
     setTimeout(() => this.observeSentinel(), 0);
   }
@@ -173,6 +204,11 @@ export class OurDoctorsComponent implements OnInit, AfterViewInit, OnDestroy {
     this.ensureFilledView();
     setTimeout(() => this.observeSentinel(), 0);
     this.cdr.markForCheck();
+    
+    // Apply filters if there are URL parameters
+    if (this.selectedLocation || this.selectedSpeciality || this.searchTerm) {
+      this.runFilters();
+    }
   }
 
   private cacheData(data: any[]) {
@@ -225,6 +261,10 @@ export class OurDoctorsComponent implements OnInit, AfterViewInit, OnDestroy {
   onLocationChange() {
     this.selectedSpeciality = '';
     this.updateSpecialitiesByLocation();
+    // Only update URL if not restoring from URL parameters
+    if (!this.isRestoringFromUrl) {
+      this.updateUrlWithFilters();
+    }
     this.applyFilters();
   }
 
@@ -242,7 +282,33 @@ export class OurDoctorsComponent implements OnInit, AfterViewInit, OnDestroy {
 
   applyFilters() {
     clearTimeout(this.filterDebounce);
-    this.filterDebounce = setTimeout(() => this.runFilters(), 100); // Reduced debounce time
+    this.filterDebounce = setTimeout(() => {
+      this.runFilters();
+      // Only update URL if not restoring from URL parameters
+      if (!this.isRestoringFromUrl) {
+        this.updateUrlWithFilters();
+      }
+    }, 100); // Reduced debounce time
+  }
+
+  private updateUrlWithFilters() {
+    const queryParams: any = {};
+    
+    if (this.selectedLocation) {
+      queryParams.location = this.selectedLocation;
+    }
+    if (this.selectedSpeciality) {
+      queryParams.speciality = this.selectedSpeciality;
+    }
+    if (this.searchTerm) {
+      queryParams.search = this.searchTerm;
+    }
+    
+    this.router.navigate([], {
+      relativeTo: this.route,
+      queryParams: queryParams,
+      queryParamsHandling: 'merge'
+    });
   }
 
   private runFilters() {
@@ -287,7 +353,22 @@ export class OurDoctorsComponent implements OnInit, AfterViewInit, OnDestroy {
       .replace(/[^a-z0-9-]/g, '') // Remove special characters except hyphens
       .replace(/-+/g, '-')    // Replace multiple hyphens with single hyphen
       .replace(/^-|-$/g, ''); // Remove leading/trailing hyphens
-    this.router.navigate(['/doctor-details', urlFriendlyName]);
+    
+    // Preserve current filter state in query parameters
+    const queryParams: any = {};
+    if (this.selectedLocation) {
+      queryParams.location = this.selectedLocation;
+    }
+    if (this.selectedSpeciality) {
+      queryParams.speciality = this.selectedSpeciality;
+    }
+    if (this.searchTerm) {
+      queryParams.search = this.searchTerm;
+    }
+    
+    this.router.navigate(['/doctor-details', urlFriendlyName], {
+      queryParams: queryParams
+    });
   }
 
   goToBookAppointment() {

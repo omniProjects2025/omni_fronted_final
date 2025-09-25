@@ -611,14 +611,6 @@ details.dept-group+details.dept-group{margin-top:6px}
   position: relative;
 }
 
-.col-lg-9 ul li::before {
-  content: '•';
-  color: #8CC63F;
-  font-weight: bold;
-  position: absolute;
-  left: -15px;
-}
-
 /* Mobile responsive for sub-departments */
 @media (max-width: 768px) {
   .sub-dept-sidebar {

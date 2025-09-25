@@ -14,24 +14,37 @@ export class FeedbackComponent {
   submitted = false;
   otpSent = false;
   stars = [1, 2, 3, 4, 5];
-  filteredDepartments: string[] = [
-    'Cardiology', 'Neurology', 'Oncology'
+  // Location options
+  locations: string[] = ['Kukatpally', 'Kothapet', 'Vizag', 'Kurnool', 'Nampally'];
+
+  // Department options (same for all locations)
+  departments: string[] = [
+    'Cardiology',
+    'Orthopedic',
+    'Neurology',
+    'Emergency Medicine & Critical Care',
+    'General Medicine',
+    'General Surgery',
+    'Gastroenterology',
+    'Obstetrics & Gynaecology',
+    'ENT',
+    'Nephrology',
+    'Pulmonology',
+    'Dermatology',
+    'Psychiatry',
+    'Plastic Surgery',
+    'Others'
   ];
 
-  departmentMap: { [key: string]: string[] } = {
-    'Kothapet': ['Cardiology', 'Neurology'],
-    'Kukkatpally': ['Oncology'],
-    'Udai - Nampally': ['Cardiology', 'Oncology'],
-    'OMNI - Vizag': ['Neurology'],
-    'Giggles Vizag': ['Cardiology', 'Neurology', 'Oncology']
-  };
+  // Track if user is a patient
+  isPatientValue: string = '';
 
   constructor(private fb: FormBuilder, private http: HttpClient, private router: Router) {
     this.feedbackForm = this.fb.group({
       name: ['', Validators.required],
       isPatient: ['', Validators.required],
-      patientId: ['', Validators.required],
-      patientAddress: ['', Validators.required],
+      patientId: [''],
+      patientAddress: [''],
       phone: ['', [Validators.required, Validators.pattern(/^[6-9][0-9]{9}$/)]],
       email: ['', [Validators.email]],
       location: ['', Validators.required],
@@ -41,9 +54,9 @@ export class FeedbackComponent {
       feedback: ['']
     });
 
-    this.feedbackForm.get('location')?.valueChanges.subscribe(loc => {
-      this.filteredDepartments = this.departmentMap[loc] || [];
-      this.feedbackForm.get('department')?.setValue('');
+    this.feedbackForm.get('isPatient')?.valueChanges.subscribe(value => {
+      this.isPatientValue = value;
+      this.updatePatientIdValidation();
     });
   }
 
@@ -63,17 +76,28 @@ export class FeedbackComponent {
     }
   }
 
+  updatePatientIdValidation() {
+    const patientIdControl = this.feedbackForm.get('patientId');
+    if (this.isPatientValue === 'yes') {
+      patientIdControl?.setValidators([Validators.required]);
+    } else {
+      patientIdControl?.clearValidators();
+    }
+    patientIdControl?.updateValueAndValidity();
+  }
+
   onSubmit() {
     this.submitted = true;
     if (this.feedbackForm.valid) {
-      // Prepare payload for LeadSquared
       const payload = [
         { Attribute: "FirstName", Value: this.feedbackForm.value.name },
         { Attribute: "Phone", Value: this.feedbackForm.value.phone },
         { Attribute: "EmailAddress", Value: this.feedbackForm.value.email },
         { Attribute: "mx_City", Value: this.feedbackForm.value.location },
-        { Attribute: "mx_Department", Value: this.feedbackForm.value.department },
-        { Attribute: "Description", Value: this.feedbackForm.value.feedback },
+        { Attribute: "mx_Department", Value: this.feedbackForm.value.department || '' },
+        { Attribute: "mx_PatientId", Value: this.feedbackForm.value.patientId || '' },
+        { Attribute: "mx_IsPatient", Value: this.feedbackForm.value.isPatient },
+        { Attribute: "mx_Comments", Value: this.feedbackForm.value.feedback || '' },
         { Attribute: "Source", Value: "Website - Feedback" }
       ];
 
@@ -87,7 +111,6 @@ export class FeedbackComponent {
           next: (res) => {
             console.log('LeadSquared Feedback Success:', res);
             alert('Your feedback has been submitted successfully!');
-            // Optionally reset form
             this.feedbackForm.reset();
             this.router.navigate(['/thank-you']);
           },

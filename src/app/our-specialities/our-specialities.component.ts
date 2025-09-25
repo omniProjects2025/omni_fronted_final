@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { SpecialitiesService } from '../services/specialities.service';
 import { toUrlFriendly } from '../utils/url-helper.util';
 import { Title, Meta } from '@angular/platform-browser';
@@ -33,6 +33,7 @@ export class OurSpecialitiesComponent implements OnInit {
 
   constructor(
     private router: Router, 
+    private route: ActivatedRoute,
     private specialitiesService: SpecialitiesService,
     private titleService: Title,
     private metaService: Meta,
@@ -44,6 +45,18 @@ export class OurSpecialitiesComponent implements OnInit {
   }
 
   ngOnInit() {
+    // Check for location parameter from query params to restore tab state
+    this.route.queryParams.subscribe(params => {
+      if (params['location']) {
+        const locationFromParams = params['location'];
+        // Convert lowercase to proper case for display
+        const properCaseLocation = this.convertToProperCase(locationFromParams);
+        if (this.locations.includes(properCaseLocation)) {
+          this.selectedLocation = properCaseLocation;
+        }
+      }
+    });
+    
     this.loadSpecialties();
   }
 
@@ -87,6 +100,13 @@ export class OurSpecialitiesComponent implements OnInit {
 
   filterByLocation(location: string) {
     this.selectedLocation = location;
+    
+    // Update URL query parameters to preserve tab state
+    this.router.navigate([], {
+      relativeTo: this.route,
+      queryParams: { location: location.toLowerCase() },
+      queryParamsHandling: 'merge'
+    });
     
     // Filter specialties by location
     const specialties = this.specialtiesData[location] || [];
@@ -133,6 +153,18 @@ export class OurSpecialitiesComponent implements OnInit {
     this.router.navigate(['/our-specialities-details', urlFriendlyName], {
       queryParams: { location: this.selectedLocation.toLowerCase() }
     });
+  }
+
+  private convertToProperCase(location: string): string {
+    const locationMap: { [key: string]: string } = {
+      'kukatpally': 'Kukatpally',
+      'vizag': 'Vizag',
+      'kothapet': 'Kothapet',
+      'nampally': 'Nampally',
+      'kurnool': 'Kurnool'
+    };
+    
+    return locationMap[location.toLowerCase()] || location;
   }
 
   onSpecialtyClick(specialty: Specialty) {

@@ -1675,6 +1675,67 @@
           ]
         }
       ]
+    },
+    {
+      "name": "Physiotherapy",
+      "short_description": "",
+      "img": "assets/our_specialities/physiotheropy.jpg",
+      "meta_title": "Best Physiotherapy Hospital in Hyderabad | OMNI Hospitals",
+      "meta_description": "OMNI is the best physiotherapy hospital in Hyderabad. Our expert physiotherapist provides advanced rehab for spine, stroke, sports injuries, and chronic pain.",
+      "details": [
+        {
+          "subtitle": "Best Physiotherapy Hospital in Hyderabad",
+          "description": [
+            "The Department of Physiotherapy at OMNI Hospitals is recognized as one of the best physiotherapy hospitals in Hyderabad, providing advanced rehabilitation and recovery programs for patients of all ages. With modern equipment and highly trained specialists, we focus on restoring mobility, reducing pain, and improving quality of life.",
+            "Our expert team includes some of the top physiotherapists in Kukatpally, known for their patient-centered approach and evidence-based treatments. Whether recovering from surgery, managing a chronic condition, or seeking the best physiotherapy treatment in Kukatpally, OMNI Hospitals offers comprehensive care tailored to individual needs."
+          ]
+        },
+        {
+          "subtitle": "Conditions We Treat",
+          "description": [
+            "As a leading center for physiotherapy and rehabilitation, OMNI Hospitals provides treatment for:"
+          ],
+          "list": [
+            "Spinal Cord Injury Treatment in Hyderabad",
+            "Stroke & Neurological Rehabilitation",
+            "Sports Injuries & Post-Surgical Rehab",
+            "Back Pain, Neck Pain & Joint Pain Management",
+            "Arthritis & Osteoporosis Care",
+            "Pediatric & Geriatric Physiotherapy",
+            "Post-Fracture & Post-Orthopedic Surgery Recovery",
+            "Pulmonary & Cardiac Rehabilitation"
+          ]
+        },
+        {
+          "subtitle": "Advanced Physiotherapy Services",
+          "description":"OMNI Hospitals offers specialized services such as:",
+          "list": [
+            "Manual Therapy & Mobilization Techniques",
+            "Electrotherapy & Ultrasound Therapy",
+            "Laser & Shockwave Therapy",
+            "Postural Correction & Ergonomic Training",
+            "Balance & Gait Training",
+            "Customized Exercise Programs & Home Care Guidance"
+          ]
+        },
+        {
+          "subtitle": "Why Choose OMNI Hospitals for Physiotherapy?",
+          "list": [
+            "Experienced team of the best physiotherapy doctors in Kukatpally",
+            "Recognized among the top physiotherapy hospitals in Hyderabad",
+            "State-of-the-art rehab facilities with modern physiotherapy equipment",
+            "Individualized treatment plans for faster recovery",
+            "Multidisciplinary support from orthopedic, neuro, and rehabilitation specialists",
+            "Compassionate care with focus on long-term wellness"
+          ]
+        },
+        {
+          "subtitle":"Looking for the Best Physiotherapy Doctor in Kukatpally?",
+          "description": [
+            "At OMNI Hospitals, patients receive care from some of the most experienced and trusted specialists, ensuring access to the best physiotherapy treatment in Kukatpally. Whether it’s recovery after a spinal cord injury, sports injury, or chronic pain condition, our physiotherapists provide holistic treatment for a better and healthier tomorrow."
+          ]
+        }
+      ]
     }
   ]
 }

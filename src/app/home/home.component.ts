@@ -37,7 +37,7 @@ export class HomeComponent implements OnInit, OnDestroy {
 
     // Ensure no other videos are playing before starting this one
     this.videoStateService.stopAllVideos();
-    
+
     const videoId = this.extractVideoId(testimonial.videoUrl);
     this.videoStateService.setCurrentlyPlayingVideo(videoId);
   }
@@ -55,7 +55,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   isVideoPlaying(idx: number): boolean {
     const testimonial = this.testimonials[idx];
     if (!testimonial) return false;
-    
+
     const videoId = this.extractVideoId(testimonial.videoUrl);
     return this.videoStateService.getCurrentlyPlayingVideo() === videoId;
   }
@@ -80,11 +80,11 @@ export class HomeComponent implements OnInit, OnDestroy {
   canSlidePrev = false;
   canSlideNext = true;
   owlInstance: any;
-  
+
   get totalBlogSlides(): number {
     return this.blogs.length;
   }
-  
+
   specialities = [
     {
       id: 1, spe_name: 'Our Specialities'
@@ -149,6 +149,18 @@ export class HomeComponent implements OnInit, OnDestroy {
   ];
 
   userTestimonials = [
+    {
+      name: "Nandini Yadav",
+      location: "Kukatpally",
+      image: "assets/technologies/women_dummy_profile.svg",
+      text: "I'm admitted under dr. Vinay Kumar.  I had a great experience at omni hospital kukatpally."
+    },
+    {
+      name: "anand kumar",
+      location: "Kukatpally",
+      image: "assets/technologies/men_dummy_profile.svg",
+      text: "Myself anand Kumar came for here gastric problem since past 2yrs am suffering liver problem also Dr.saidulu sir seen my case nd done endoscopy is very simple manner Nd team also very good Thanks u sir"
+    },
     {
       name: 'Raji Reddy',
       location: 'Kukatpally',
@@ -225,7 +237,7 @@ export class HomeComponent implements OnInit, OnDestroy {
 
 
   testimonials = [
-   
+
     {
       name: "Kanakamma",
       text: "Rapid Recovery After Total Knee Replacement (TKR) Surgery by Dr. Ranjith",
@@ -368,30 +380,30 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   isSubmitting = false;
   constructor(
-    private http: HttpClient, 
-    private sanitizer: DomSanitizer, 
-    private router: Router, 
-    private renderer: Renderer2, 
-    private cdr: ChangeDetectorRef, 
+    private http: HttpClient,
+    private sanitizer: DomSanitizer,
+    private router: Router,
+    private renderer: Renderer2,
+    private cdr: ChangeDetectorRef,
     private UsersService: UsersService,
     private videoStateService: VideoStateService,
     private titleService: Title,
     private metaService: Meta,
     private canonicalService: CanonicalService
-  ) {}
+  ) { }
 
   private resizeListener: (() => void) | undefined;
   private lastWindowWidth: number = window.innerWidth;
 
   private setSEOTags(): void {
     this.titleService.setTitle('OMNI Hospitals - Best Multispecialty Hospital in Hyderabad | Expert Medical Care');
-    this.metaService.updateTag({ 
-      name: 'description', 
-      content: 'OMNI Hospitals - Leading multispecialty hospital in Hyderabad offering expert medical care across cardiology, orthopedics, neurology, and more. Book your appointment today.' 
+    this.metaService.updateTag({
+      name: 'description',
+      content: 'OMNI Hospitals - Leading multispecialty hospital in Hyderabad offering expert medical care across cardiology, orthopedics, neurology, and more. Book your appointment today.'
     });
-    this.metaService.updateTag({ 
-      name: 'keywords', 
-      content: 'OMNI hospitals, multispecialty hospital Hyderabad, cardiology, orthopedics, neurology, nephrology, best hospital Hyderabad, medical care Andhra Pradesh, Telangana' 
+    this.metaService.updateTag({
+      name: 'keywords',
+      content: 'OMNI hospitals, multispecialty hospital Hyderabad, cardiology, orthopedics, neurology, nephrology, best hospital Hyderabad, medical care Andhra Pradesh, Telangana'
     });
     this.canonicalService.setCanonicalUrl('/');
   }
@@ -399,12 +411,12 @@ export class HomeComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     // Set SEO meta tags and canonical URL
     this.setSEOTags();
-    
+
     // Stop any videos from other components when entering this component
     this.videoStateService.stopAllVideos();
-    
+
     // Video states are managed by videoStateService, no local cleanup needed
-    
+
     // Improved resize handling - distinguishes zoom from actual resize
     this.resizeListener = () => {
       this.handleResizeOrZoom();
@@ -528,7 +540,7 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   private handleResizeOrZoom(): void {
     const currentWidth = window.innerWidth;
-    
+
     // Check if it's a significant width change - actual resize
     if (Math.abs(currentWidth - this.lastWindowWidth) > 50) {
       // Significant width change - actual resize
@@ -670,7 +682,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     });
   }
 
-// Removed onVideoPlay method - using videoStateService instead
+  // Removed onVideoPlay method - using videoStateService instead
 
 
   trackByTestimonial(index: number, testimonial: any): string {
@@ -762,9 +774,9 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   onSubmitAppointment(event: Event) {
     event.preventDefault();
-    
+
     if (this.isSubmitting) return;
-    
+
     // Basic validation
     if (!this.appointmentFormData.fullName.trim()) {
       alert('Full Name is required.');
@@ -817,7 +829,7 @@ export class HomeComponent implements OnInit, OnDestroy {
       next: (res) => {
         console.log('LeadSquared Success:', res);
         alert('Your appointment request has been submitted successfully!');
-        
+
         // Save last submission info for 30-minute check
         localStorage.setItem('appointmentLastSubmission', JSON.stringify({
           name: this.appointmentFormData.fullName.trim(),
@@ -834,16 +846,16 @@ export class HomeComponent implements OnInit, OnDestroy {
           department: '',
           message: ''
         };
-        
+
         this.isSubmitting = false;
-        
+
         // Close modal
         const modalElement = document.getElementById('appointmentModal');
         const modalInstance = bootstrap.Modal.getInstance(modalElement);
         if (modalInstance) {
           modalInstance.hide();
         }
-        
+
         this.router.navigate(['/thank-you']);
       },
       error: (err) => {

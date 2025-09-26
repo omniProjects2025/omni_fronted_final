@@ -21,7 +21,9 @@
           "sections": [
             {
               "subtitle": "Expertise in Cardiac & Thoracic Care",
-              "description": ["Our specialists perform:"],
+              "description": [
+                "Our specialists perform:"
+              ],
               "list": [
                 "Adult & pediatric heart surgeries",
                 "Bypass surgery (CABG in Hyderabad) & valve replacement",
@@ -377,7 +379,9 @@
         },
         {
           "title": "Expertise in General Medicine Care",
-          "description": ["Our specialists provide expert care for:"],
+          "description": [
+            "Our specialists provide expert care for:"
+          ],
           "list": [
             "Diabetes, hypertension & thyroid disorders",
             "Fever evaluation & infectious diseases",
@@ -597,7 +601,9 @@
         },
         {
           "subtitle": "Advanced Surgical Procedures",
-          "description": ["OMNI Hospitals offers expertise in:"],
+          "description": [
+            "OMNI Hospitals offers expertise in:"
+          ],
           "sections": [
             {
               "list": [
@@ -1200,7 +1206,9 @@
             },
             {
               "subtitle": "PREVENTION",
-              "description": ["Pneumonia can be prevented by the following:"],
+              "description": [
+                "Pneumonia can be prevented by the following:"
+              ],
               "list": [
                 "Maintain a healthy lifestyle.",
                 "Quit smoking for better lung immunity.",
@@ -1305,7 +1313,9 @@
             },
             {
               "subtitle": "Complications",
-              "description": ["Possible complications include:"],
+              "description": [
+                "Possible complications include:"
+              ],
               "list": [
                 "Daytime drowsiness, Normal, restorative sleep is impossible due to the frequent awakenings brought on by sleep apnea, which increases the likelihood of extreme daytime sleepiness, weariness, and irritability.",
                 "You can have trouble staying awake and find yourself nodding off when working, watching TV, or even while driving. Accidents in the workplace and on the road are more likely to occur in those with sleep apnea.",
@@ -1535,6 +1545,133 @@
         {
           "description": [
             "If you are searching for the best psychiatry doctor in Kukatpally, the best psychiatry hospitals in Kukatpally, or a trusted mental health hospital near you, OMNI Hospitals offers advanced psychiatric care with a patient-first approach, ensuring recovery and long-term mental well-being."
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Neuro surgery",
+      "short_description": "",
+      "img": "assets/our_specialities/psychiatric.jpg",
+      "meta_title": "Best Neurosurgery Hospital in Hyderabad | OMNI Hospitals",
+      "meta_description": "OMNI is the best neurosurgery hospital in Hyderabad. Our expert neurosurgeon provides advanced, minimally invasive care for complex brain and spine conditions.",
+      "details": [
+        {
+          "subtitle": "Best Neurosurgery Hospital in Hyderabad",
+          "description": [
+            "The Department of Neurosurgery at OMNI Hospitals is one of the most advanced centers for brain, spine, and nervous system care in Hyderabad, Telangana. Recognized as one of the best neurosurgery hospitals in Hyderabad, we provide comprehensive care for patients with complex neurological conditions.",
+            "Our team includes some of the best neurosurgeons in Hyderabad, renowned for their precision, experience, and patient-focused approach. Using cutting-edge technology and minimally invasive surgical techniques, we aim to ensure faster recovery, reduced hospital stays, and improved quality of life for our patients."
+          ]
+        },
+        {
+          "subtitle": "Conditions & Surgeries We Treat",
+          "description": [
+            "As a leading neurosurgeon hospital in Hyderabad, OMNI Hospitals specializes in:"
+          ],
+          "list": [
+            "Brain Tumors (Benign & Malignant)",
+            "Stroke, Aneurysms & Vascular Malformations",
+            "Spinal Disorders (Disc Prolapse, Spinal Stenosis, Spinal Cord Injuries)",
+            "Traumatic Brain & Spine Injuries",
+            "Epilepsy & Seizure Surgery",
+            "Pediatric Neurosurgery",
+            "Hydrocephalus & Congenital Disorders",
+            "Peripheral Nerve Surgeries",
+            "Neuro-Oncology & Skull Base Surgeries"
+          ]
+        },
+        {
+          "subtitle": "Advanced Neurosurgical Procedures",
+          "description": [
+            "OMNI Hospitals offers advanced expertise in:"
+          ],
+          "list": [
+            "Minimally Invasive & Endoscopic Brain Surgery",
+            "Image-Guided & Navigation-Assisted Neurosurgery",
+            "Stereotactic Surgery",
+            "Functional Neurosurgery for Epilepsy & Movement Disorders",
+            "Spine Surgery & Neuro-Trauma Care",
+            "Microsurgical Procedures for Complex Brain & Spine Conditions"
+          ]
+        },
+        {
+          "subtitle": "Why Choose OMNI Hospitals for Neurosurgery?",
+          "list": [
+            "A team of highly experienced and famous neurosurgeons in Hyderabad",
+            "24/7 availability for neuro-emergency & trauma cases",
+            "Dedicated Neuro ICU with advanced monitoring facilities",
+            "State-of-the-art operating theaters with navigation & endoscopy systems",
+            "Multidisciplinary care with neurologists, orthopedic spine surgeons & rehabilitation specialists"
+          ]
+        },
+        {
+          "subtitle": "Looking for the Best Neurosurgeon in Hyderabad?",
+          "description": [
+            "At OMNI Hospitals, we bring together expertise, technology, and compassionate care to provide the best neurosurgery in Hyderabad. Whether you need treatment for a complex brain disorder, spinal injury, or pediatric neurosurgery, our specialists ensure precise diagnosis, safe surgery, and comprehensive recovery support."
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Urology",
+      "short_description": "",
+      "img": "assets/our_specialities/psychiatric.jpg",
+      "meta_title": "Best Urology Hospital in Hyderabad | OMNI Hospitals",
+      "meta_description": "OMNI Hospitals is the best urology hospital in Hyderabad. Our expert doctors offer advanced, minimally invasive treatment for kidney stones, prostate, and all urinary conditions.",
+      "details": [
+        {
+          "subtitle": "Best Urology Hospital in Hyderabad",
+          "description": [
+            "The Department of Urology at OMNI Hospitals is among the top urology hospitals in Hyderabad, offering advanced diagnosis and treatment for urinary tract, kidney, bladder, and prostate conditions. Recognized as one of the best urology hospitals in Hyderabad, we combine cutting-edge technology with expert care to deliver excellent outcomes.",
+            "Our team includes some of the best urology doctors in Hyderabad, highly skilled in performing minimally invasive and complex urological procedures. From urinary infections to advanced kidney stone and prostate surgeries, our specialists ensure precise treatment and faster recovery."
+          ]
+        },
+        {
+          "subtitle": "Conditions We Treat",
+          "description": [
+            "As a leading urology specialist hospital in Hyderabad, OMNI Hospitals provides care for:"
+          ],
+          "list": [
+            "Kidney Stones & Ureteric Stones",
+            "Urinary Tract Infections (UTI)",
+            "Prostate Enlargement (BPH) & Prostate Cancer",
+            "Urinary Incontinence & Overactive Bladder",
+            "Urethral Stricture & Bladder Disorders",
+            "Male Infertility & Andrology Care",
+            "Pediatric Urology Conditions",
+            "Urinary Tract Malformations & Congenital Issues",
+            "Cancers of the Kidney, Bladder & Urethra"
+          ]
+        },
+        {
+          "subtitle": "Advanced Urology Procedures",
+          "description": [
+            "OMNI Hospitals offers expertise in:"
+          ],
+          "list": [
+            "Laparoscopic & Minimally Invasive Urological Surgeries",
+            "Laser Surgery for Kidney Stones & Prostate",
+            "Endourology (PCNL, URS, RIRS)",
+            "Uro-Oncology Surgeries",
+            "Pediatric Urology Surgery",
+            "Reconstructive Urology & Male Infertility Surgeries"
+          ]
+        },
+        {
+          "subtitle": "Why Choose OMNI Hospitals for Urology?",
+          "list": [
+            "Experienced team of the best urology surgeons in Hyderabad",
+            "Recognized among the best hospitals for urology in Hyderabad",
+            "Expertise in treating urinary incontinence, kidney stones & prostate conditions",
+            "Dedicated facilities for urinary incontinence hospital care in Hyderabad",
+            "24/7 emergency support for urological trauma and acute urinary issues",
+            "Patient-centric approach with advanced diagnostics & follow-up care"
+          ]
+        },
+        {
+          "subtitle": "Looking for the Best Urology Doctor in Hyderabad?",
+          "description": [
+            "At OMNI Hospitals, patients are treated by some of the top urology doctors in Hyderabad, known for their excellence in managing urinary tract conditions with compassion and precision. Whether it’s finding the best doctor for urinary tract infection in Hyderabad, getting the best medicine for urinary incontinence, or consulting the best urinary doctor in Hyderabad, our specialists provide personalized care for every patient."
           ]
         }
       ]

@@ -1,0 +1,338 @@
+<!-- Fixed Navigation Bar -->
+<div class="fixed-nav">
+  <div class="nav-buttons">
+    <button class="nav-btn" (click)="goToHome()" title="Home">
+      <i class="fas fa-home"></i>
+      <span class="btn-text">Home</span>
+    </button>
+    <button class="nav-btn" (click)="goToKeySurgeries()" title="Key Surgeries">
+      <i class="fas fa-stethoscope"></i>
+      <span class="btn-text">Key Surgeries</span>
+    </button>
+    <button class="nav-btn active" title="TKR Landing Page">
+      <i class="fas fa-bone"></i>
+      <span class="btn-text">Total Knee Replacement</span>
+    </button>
+  </div>
+
+  <!-- Phone Button -->
+  <button class="phone-btn" (click)="makeCall()" title="Call Now">
+    <i class="fas fa-phone"></i>
+    <span class="phone-text">888 0101 000</span>
+  </button>
+</div>
+
+<!-- Main Content -->
+<div class="main-content">
+  <!-- Banner Section -->
+  <section class="banner-section" data-aos="fade-in">
+    <div class="banner-image">
+      <img src="assets/images/knee_replacement_desktop.jpg" alt="Total Knee Replacement Surgery at Omni Hospitals"
+        class="img-fluid desktop-banner">
+      <img src="assets/images/knee_replacement_mobile.jpg" alt="Total Knee Replacement Surgery at Omni Hospitals"
+        class="img-fluid mobile-banner">
+    </div>
+  </section>
+
+  <!-- Main Content Section with Two Columns -->
+  <section class="main-content-section" id="consultation-form" data-aos="fade-up">
+    <div class="container">
+      <div class="row">
+        <!-- Left Column - Content -->
+        <div class="col-lg-8">
+          <div class="content-wrapper">
+            <!-- Main Heading -->
+            <h1>Total Knee Replacement Surgery in Kukatpally, Hyderabad</h1>
+
+            <!-- Sub Heading -->
+            <h2>Get a Comprehensive Total Knee Replacement in Hyderabad at Omni Hospitals.</h2>
+
+            <!-- Introduction -->
+            <div class="intro-content">
+              <p>We specialize in Total Knee Replacement Surgery (TKR Surgery) and Partial Knee Replacement Surgery
+                using state-of-the-art technology and advanced minimally invasive techniques.</p>
+              <p><strong>Total Knee Replacement surgery costs Rs. 1.5 Lacs. All inclusive. No hidden cost.</strong>
+                Includes Stryker implants, procedure charges, anesthesia charges, 2 days hospital stay, IP medicines, IP
+                Physiotherapy, Investigations, 1st review in OPD.</p>
+              <p><strong>Get first consultation free with our chief orthopaedic surgeon Dr. Praneeth Reddy.</strong></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column - Form -->
+        <div class="col-lg-4">
+          <div class="form-container">
+            <h2>Book Your First Free Consultation</h2>
+            <p class="form-subtitle">Get expert advice from our orthopaedic specialists</p>
+
+            <form [formGroup]="consultationForm" (ngSubmit)="onSubmit()" class="consultation-form">
+              <div class="mb-3">
+                <label for="name" class="form-label">Full Name *</label>
+                <input type="text" id="name" class="form-control" [class.is-invalid]="isFieldInvalid('name')"
+                  formControlName="name" placeholder="Enter your full name">
+                <div class="invalid-feedback" *ngIf="isFieldInvalid('name')">
+                  {{ getFieldError('name') }}
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label for="phone" class="form-label">Phone Number *</label>
+                <input type="tel" id="phone" class="form-control" [class.is-invalid]="isFieldInvalid('phone')"
+                  formControlName="phone" placeholder="Enter 10-digit phone number">
+                <div class="invalid-feedback" *ngIf="isFieldInvalid('phone')">
+                  {{ getFieldError('phone') }}
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label for="email" class="form-label">Email Address</label>
+                <input type="email" id="email" class="form-control" [class.is-invalid]="isFieldInvalid('email')"
+                  formControlName="email" placeholder="Enter your email address">
+                <div class="invalid-feedback" *ngIf="isFieldInvalid('email')">
+                  {{ getFieldError('email') }}
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label for="message" class="form-label">Message</label>
+                <textarea id="message" class="form-control" [class.is-invalid]="isFieldInvalid('message')"
+                  formControlName="message" rows="4"
+                  placeholder="Tell us about your condition or any specific requirements"></textarea>
+                <div class="invalid-feedback" *ngIf="isFieldInvalid('message')">
+                  {{ getFieldError('message') }}
+                </div>
+              </div>
+
+              <div class="text-center">
+                <button type="submit" class="btn btn-primary btn-lg w-100" [disabled]="isSubmitting">
+                  <span *ngIf="isSubmitting" class="spinner-border spinner-border-sm me-2"></span>
+                  {{ isSubmitting ? 'Submitting...' : 'Submit Consultation Request' }}
+                </button>
+              </div>
+
+              <div class="form-message mt-3" *ngIf="submitMessage">
+                <div class="alert" [class.alert-success]="submitSuccess" [class.alert-danger]="!submitSuccess">
+                  {{ submitMessage }}
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Full Width Content Sections -->
+  <section class="full-width-content" data-aos="fade-up">
+    <div class="container">
+      <!-- Why Patients Choose Omni Hospitals -->
+      <h2>Why Patients Choose Omni Hospitals</h2>
+      <div class="features-list">
+        <ul>
+          <li>Over 15 Years of Trusted Orthopedic Excellence</li>
+          <li>The Best Knee Replacement Hospital in Kukatpally</li>
+          <li>Minimally Invasive TKR Surgery – Less Pain, Faster Recovery</li>
+          <li>Specialized in Knee Arthroplasty with Proven Success</li>
+          <li>Insurance Coverage Available</li>
+        </ul>
+      </div>
+
+      <!-- Why Live with Pain Any Longer -->
+      <h2>Why Live with Pain Any Longer</h2>
+      <h3>Ignoring or delaying knee surgery can lead to:</h3>
+      <div class="pain-consequences">
+        <ul>
+          <li>Severe joint damage & arthritis</li>
+          <li>Difficulty in walking, climbing stairs</li>
+          <li>Higher risk of falls and fractures</li>
+          <li>Loss of independence and quality of life</li>
+        </ul>
+      </div>
+
+      <!-- Cost Section -->
+      <h2>Total Knee Replacement Surgery Cost in Hyderabad</h2>
+      <div class="cost-info">
+        <p>At Omni Hospitals, TKR surgery costs Rs. 1.5 Lacs all inclusive, including implants. No hidden cost.</p>
+        <p><strong>Transparent pricing. Flexible options. Insurance support available.</strong></p>
+      </div>
+
+      <!-- Surgery Options -->
+      <h2>Our Knee Surgery Options</h2>
+      <div class="surgery-options">
+        <h3>Total Knee Replacement Surgery (TKR):</h3>
+        <p>Complete joint replacement for severe arthritis & pain</p>
+
+        <h3>Partial Knee Replacement Surgery:</h3>
+        <p>Only the damaged area is replaced – preserving healthy tissue</p>
+
+        <h3>Minimally Invasive Knee Arthroplasty:</h3>
+        <p>Smaller cuts, less pain, faster recovery</p>
+      </div>
+
+      <!-- What Makes Us Different -->
+      <h2>What Makes Us Different?</h2>
+      <div class="differentiators">
+        <ul>
+          <li>Expert Surgeons with global training & success stories</li>
+          <li>Comprehensive Care from diagnosis to physiotherapy</li>
+          <li>Cutting-edge Technology for precision & long-lasting results</li>
+          <li>Faster Recovery Programs helping you walk sooner</li>
+          <li>High Quality Implants: We use the reputed American brand Stryker</li>
+          <li>Dedicated counsellor and support staff: We have a dedicated patient counsellor for knee surgery who will
+            guide the patient all the way - from initial enquiry to recovery and post-discharge follow-up.</li>
+        </ul>
+        <p><strong>We use Stryker implants, known worldwide for their quality, durability, and better patient
+            outcomes.</strong></p>
+      </div>
+
+      <!-- Doctors Section -->
+      <h2>Meet the Best Knee Replacement Specialists in Hyderabad</h2>
+      <div class="doctors-section">
+        <div class="doctor-card" data-aos="fade-right">
+          <img src="assets/images/praneeth_reddy_tkr.jpg" alt="Dr. Praneeth Reddy" class="doctor-image">
+          <a href="https://omnihospitals.in/doctor-details/dr-praneeth-reddy?location=kukatpally">
+            <div class="doctor-info">
+              <h3>Dr. Praneeth Reddy</h3>
+              <p class="qualifications">MBBS, MS(Ortho)</p>
+              <p class="fellowships">Fellow in Joint Replacement, Fellow in Shoulder & Elbow Surgery (Italy)</p>
+              <p class="designation">Senior Consultant</p>
+              <p class="specialization">Arthroscopy & Joint Replacement Surgeon</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="doctor-card" data-aos="fade-left">
+          <img src="assets/images/ranjith_nellore_mahesh.jpg" alt="Dr. Ranjith Nellore Mahesh" class="doctor-image">
+          <a href="https://omnihospitals.in/doctor-details/dr-ranjith-nellore-mahesh?location=kukatpally">
+          <div class="doctor-info">
+            <h3>Dr. Ranjith Nellore Mahesh</h3>
+            <p class="qualifications">MBBS, MS (Ortho)</p>
+            <p class="fellowships">FIPO (Paediatric Orthopaedics-IGICH)</p>
+            <p class="fellowships">FIJR (Joint Replacement Surgery)</p>
+            <p class="fellowships">FIRKR (Robotic Knee Replacement Surgery)</p>
+            <p class="designation">Orthopaedic Surgeon</p>
+          </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Take the First Step -->
+      <h3>Take the First Step Towards Pain-Free Living</h3>
+      <p><strong>Get Right Diagnosis, Treatment & Cost Estimate Details to Make a Fully Informed Decision</strong></p>
+
+      <!-- Horizontal Inquiry Form -->
+      <div class="horizontal-inquiry-form" data-aos="fade-up">
+        <div class="form-title">Get a Call from Our Experts</div>
+        <form [formGroup]="inquiryForm" (ngSubmit)="onInquirySubmit()" class="inquiry-form">
+          <div class="form-field">
+            <input 
+              type="text" 
+              formControlName="fullName"
+              placeholder="Full Name*"
+              class="form-input"
+              [class.is-invalid]="isFieldInvalid('fullName')">
+            <div class="invalid-feedback" *ngIf="isFieldInvalid('fullName')">
+              {{ getFieldError('fullName') }}
+            </div>
+          </div>
+          
+          <div class="form-field">
+            <input 
+              type="tel" 
+              formControlName="mobileNumber"
+              placeholder="Mobile Number*"
+              class="form-input"
+              [class.is-invalid]="isFieldInvalid('mobileNumber')">
+            <div class="invalid-feedback" *ngIf="isFieldInvalid('mobileNumber')">
+              {{ getFieldError('mobileNumber') }}
+            </div>
+          </div>
+          
+          <div class="form-field">
+            <input 
+              type="email" 
+              formControlName="email"
+              placeholder="Email Address"
+              class="form-input"
+              [class.is-invalid]="isFieldInvalid('email')">
+            <div class="invalid-feedback" *ngIf="isFieldInvalid('email')">
+              {{ getFieldError('email') }}
+            </div>
+          </div>
+          
+          <button 
+            type="submit" 
+            class="submit-btn"
+            [disabled]="isInquirySubmitting">
+            <span *ngIf="isInquirySubmitting" class="spinner-border spinner-border-sm me-2"></span>
+            {{ isInquirySubmitting ? 'Submitting...' : 'Submit' }}
+          </button>
+        </form>
+        
+        <div class="form-message mt-3" *ngIf="inquiryMessage">
+          <div class="alert" [class.alert-success]="inquirySuccess" [class.alert-danger]="!inquirySuccess">
+            {{ inquiryMessage }}
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQs Section -->
+      <h4>FAQs:</h4>
+      <div class="faq-section">
+        <div class="faq-item" [class.expanded]="isFaqExpanded(0)" (click)="toggleFaq(0)">
+          <div class="faq-question">
+            <h5>Q: What is the cost of total knee replacement surgery?</h5>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer" [class.show]="isFaqExpanded(0)">
+            <p><strong>A:</strong> The cost of total knee replacement surgery is ₹1.5 lakhs. All inclusive. No hidden
+              cost. Includes Stryker implants, procedure charges, anesthesia charges, 2 days hospital stay, IP
+              medicines, IP Physiotherapy, Investigations, and 1st review in OPD.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" [class.expanded]="isFaqExpanded(1)" (click)="toggleFaq(1)">
+          <div class="faq-question">
+            <h5>Q: How long will it take to recover after surgery?</h5>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer" [class.show]="isFaqExpanded(1)">
+            <p><strong>A:</strong> Most patients return to normal routines in 6–8 weeks with proper care.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" [class.expanded]="isFaqExpanded(2)" (click)="toggleFaq(2)">
+          <div class="faq-question">
+            <h5>Q: Is partial knee replacement surgery effective?</h5>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer" [class.show]="isFaqExpanded(2)">
+            <p><strong>A:</strong> Yes, ideal for patients with damage limited to one part of the knee.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" [class.expanded]="isFaqExpanded(3)" (click)="toggleFaq(3)">
+          <div class="faq-question">
+            <h5>Q: How long does a knee implant last?</h5>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer" [class.show]="isFaqExpanded(3)">
+            <p><strong>A:</strong> Modern implants last 15–20 years with the right lifestyle and follow-up.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" [class.expanded]="isFaqExpanded(4)" (click)="toggleFaq(4)">
+          <div class="faq-question">
+            <h5>Q: Which is the best knee replacement hospital in India?</h5>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer" [class.show]="isFaqExpanded(4)">
+            <p><strong>A:</strong> Omni Hospitals is one of the best hospitals for total knee replacement surgery in
+              India, renowned for its advanced orthopedic care, experienced surgeons, and excellent patient outcomes.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

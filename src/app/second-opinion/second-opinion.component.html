@@ -35,7 +35,7 @@
      }">
 
                                 <div class="icon-circle">
-                                    <img src="assets/images/{{counter.img}}" alt="{{ counter.label }}" 
+                                    <img src="assets/images/{{counter.img}}" alt="{{ counter.label }}"
                                         class="counter-icon">
                                 </div>
                                 <div class="text-left ms-3">
@@ -59,13 +59,16 @@
                             <input type="text" class="form-control p-0 pt-2 pb-2 mb-3" name="fullName"
                                 [(ngModel)]="secondOpinionData.fullName" [ngClass]="{'placeholder-red': showNameError}"
                                 minlength="3" placeholder="Full Name">
-                            <div *ngIf="showNameError && !secondOpinionData.fullName" class="text-danger small mt-1">Please enter your full name.</div>
+                            <div *ngIf="showNameError && !secondOpinionData.fullName" class="text-danger small mt-1">
+                                Please enter your full name.</div>
                         </div>
                         <div class="">
                             <input type="text" class="form-control p-0 pb-2 pt-4 mb-3" name="phoneNumber"
-                                [(ngModel)]="secondOpinionData.phoneNumber" [ngClass]="{'placeholder-red': showPhoneError}"
-                                pattern="^[6-9]\d{9}$" placeholder="Phone Number">
-                            <div *ngIf="showPhoneError && !secondOpinionData.phoneNumber" class="text-danger small mt-1">Please enter a valid mobile number.</div>
+                                [(ngModel)]="secondOpinionData.phoneNumber"
+                                [ngClass]="{'placeholder-red': showPhoneError}" pattern="^[6-9]\d{9}$"
+                                placeholder="Phone Number">
+                            <div *ngIf="showPhoneError && !secondOpinionData.phoneNumber"
+                                class="text-danger small mt-1">Please enter a valid mobile number.</div>
                         </div>
                         <div class="">
                             <input type="text" class="form-control p-0 pb-2 pt-4 mb-3" name="emailId"
@@ -75,7 +78,7 @@
                             <select class="form-control p-0 pb-2 pt-4 mb-3" name="location"
                                 [(ngModel)]="secondOpinionData.location" required>
                                 <option selected disabled value="">Location</option>
-                                <option>Kukkatpally</option>
+                                <option>Kukatpally</option>
                                 <option>Kothapet</option>
                                 <option>Vizag</option>
                                 <option>Kurnool</option>
@@ -85,8 +88,20 @@
                             <select class="form-control p-0 pb-2 pt-4 mb-3" name="department"
                                 [(ngModel)]="secondOpinionData.department" required>
                                 <option selected disabled value="">Department</option>
-                                <option>Cardio</option>
-                                <option>Nephro</option>
+                                <option>Cardiology</option>
+                                <option>Dermatology</option>
+                                <option>Emergency Medicine & Critical Care</option>
+                                <option>ENT</option>
+                                <option>General Medicine</option>
+                                <option>General Surgery</option>
+                                <option>Gastroenterology</option>
+                                <option>Gynaecology</option>
+                                <option>Neurology</option>
+                                <option>Orthopedics</option>
+                                <option>Paediatrics</option>
+                                <option>Psychiatry</option>
+                                <option>Pulmonology</option>
+                                <option>Plastic Surgery</option>
                             </select>
                         </div>
                     </form>

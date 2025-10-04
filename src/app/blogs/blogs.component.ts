@@ -24,11 +24,17 @@ export class BlogsComponent {
   }
 
   goToBlogDetails(blog_name: any) {
-    this.router.navigate(['/blogs-details-data'], {
-      queryParams: {
-        blog_name: blog_name
-      }
-    });
+    const slug = this.generateSlug(blog_name);
+    this.router.navigate(['/blogs', slug]);
+  }
+
+  generateSlug(title: string): string {
+    return title
+      .toLowerCase()
+      .replace(/[^\w\s-]/g, '') // Remove special characters except spaces and hyphens
+      .replace(/\s+/g, '-') // Replace spaces with hyphens
+      .replace(/--+/g, '-') // Replace multiple hyphens with single hyphen
+      .trim(); // Remove leading/trailing spaces
   }
   getBlogsDetails(): void {
     this.http.get<any>('assets/json_data_files/main_blogs.json').subscribe((json_data)=>{

@@ -280,8 +280,8 @@ export class PackageDetailsComponent {
       { Attribute: 'Source', Value: 'Website - Package Booking' }
     ];
 
-    // SECURITY: LeadSquared API calls now go through backend proxy
-    const url = `${environment.leadsquared.baseUrl}/submit`;
+    // LeadSquared API call (matching working pages)
+    const url = `${environment.leadsquared.baseUrl}LeadManagement.svc/Lead.Capture?accessKey=${environment.leadsquared.accessKey}&secretKey=${environment.leadsquared.secretKey}`;
     this.http.post(url, payload, { headers: { 'Content-Type': 'application/json' } })
       .subscribe({
         next: (res) => {

@@ -24,6 +24,7 @@
     "@angular/router": "^16.2.0",
     "@angular/youtube-player": "^16.2.14",
     "@babel/runtime": "^7.28.4",
+    "aos": "^2.3.4",
     "bootstrap": "^5.3.7",
     "jquery": "^3.7.1",
     "leaflet": "^1.9.4",

@@ -1,0 +1,4 @@
+<!-- Placeholder for TKR Banner Image -->
+<!-- Replace this with actual banner image: assets/images/tkr-banner-placeholder.jpg -->
+<!-- Recommended dimensions: 1920x600px -->
+<!-- Image should show: Modern hospital environment, orthopaedic surgery, or knee replacement related imagery -->

@@ -33,6 +33,7 @@ import { PatientCareComponent } from './patient-care/patient-care.component';
 import { PrivacyPolocyComponent } from './privacy-polocy/privacy-polocy.component';
 import { TermsConditionsComponent } from './terms-conditions/terms-conditions.component';
 import { KeySurgeriesComponent } from './key-surgeries/key-surgeries.component';
+import { TotalKneeReplacementComponent } from './total-knee-replacement/total-knee-replacement.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -47,6 +48,7 @@ const routes: Routes = [
   { path: 'technologies', component: TechnologiesComponent },
   { path: 'news-media', component: NewsMediaComponent },
   { path: 'blogs', component: BlogsComponent },
+  { path: 'blogs/:slug', component: BlogDetailsDataComponent },
   { path: 'technologies-details', component: TechnologiesDetailsComponent },
   { path: 'our-branches', component: OurBranchesComponent },
   { path: 'our-branches/:location', component: OurBranchesComponent },
@@ -68,6 +70,7 @@ const routes: Routes = [
   { path: 'privacy-polocy', component: PrivacyPolocyComponent },
   { path: 'terms-conditions', component: TermsConditionsComponent },
   { path: 'key-surgeries', component:KeySurgeriesComponent},
+  { path: 'total-knee-replacement-surgery-kukatpally-hyderabad', component: TotalKneeReplacementComponent },
   { path: '**', component: NotFoundComponent }, // 👈 Show 404 page here
 ];
 
@@ -79,7 +82,8 @@ const routes: Routes = [
     RouterModule.forChild(routes)
   ],
   declarations: [
-     ],
+    TotalKneeReplacementComponent
+  ],
   providers: [DatePipe]
 })
 export class CommonPagesModule { }

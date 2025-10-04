@@ -10,7 +10,7 @@ declare var AOS: any;
 @Component({
   selector: 'app-total-knee-replacement',
   templateUrl: './total-knee-replacement.component.html',
-  styleUrls: ['./total-knee-replacement.component.scss']
+  styleUrls: ['./total-knee-replacement.component.css']
 })
 export class TotalKneeReplacementComponent implements OnInit, OnDestroy {
   consultationForm: FormGroup;

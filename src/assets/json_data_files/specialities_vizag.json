@@ -952,7 +952,7 @@
     {
       "name": "Urology",
       "short_description": "",
-      "img": "",
+      "img": "assets/our_specialities/urology.jpg",
       "meta_title": "Top Urology Doctor in Vizag for Kidney & Urinary Care | OMNI RK",
       "meta_description": "OMNI Hospitals is the leading urology center in Vizag, offering expert care for kidney, bladder, and all urinary tract conditions, including incontinence.",
       "details": [
@@ -1278,7 +1278,7 @@
     {
       "name": "Neonatology",
       "short_description": "",
-      "img": "",
+      "img": "assets/our_specialities/neonotlogy.jpg",
       "meta_title": "Top Neonatologist & Newborn Hospital in Vizag | OMNI Hospitals",
       "meta_description": "OMNI Hospitals is the best neonatal hospital in Vizag. Our expert neonatologists provide top-tier care and treatment for all medical conditions in newborns.",
       "details": [
@@ -1342,7 +1342,7 @@
     {
       "name": "Neuro & Spine Surgery",
       "short_description": "",
-      "img": "",
+      "img": "assets/our_specialities/nuerosurgery.jpg",
       "meta_title": "Best Neuro & Spine Surgeon in Vizag | OMNI Hospitals",
       "meta_description": "OMNI Hospitals is a top neurosurgery hospital in Vizag. Our expert surgeons provide advanced treatment for spine and brain conditions at an affordable cost.",
       "details": [
@@ -1541,7 +1541,7 @@
     {
       "name": "Oral & Maxillofacial Surgery",
       "short_description": "",
-      "img": "",
+      "img": "assets/our_specialities/orla.jpg",
       "meta_title": "Best Oral & Maxillofacial Surgery in Vizag | Omni Hospitals",
       "meta_description": "OMNI Hospitals is a leading center for oral & maxillofacial surgery in Vizag. Our expert surgeons provide advanced treatment for all face, jaw, and mouth conditions.",
       "details": [

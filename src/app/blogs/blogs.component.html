@@ -19,7 +19,7 @@
                 <h5 class="card-title">{{ blog.title }}</h5>
                 <p class="card-text m-0 clamp">{{ blog.description }}</p>
                 <p class="text-dark fw-medium mt-0 date_txt m-0 mt-1">{{ blog.date }}</p>
-                <a class="text-decoration-none m-0 read_txt">Read More</a>
+                <a class="read-more-btn" (click)="goToBlogDetails(blog['title'])">Read More</a>
               </div>
             </div>
           </div>

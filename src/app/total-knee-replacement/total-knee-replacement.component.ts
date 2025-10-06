@@ -67,7 +67,7 @@ export class TotalKneeReplacementComponent implements OnInit, OnDestroy {
     });
 
     // Set Open Graph tags
-    this.meta.updateTag({ property: 'og:title', content: 'Best Total Knee Replacement Surgery in Kukatpally, Hyderabad' });
+    this.meta.updateTag({ property: 'og:title', content: 'Best Hospital For Total Knee Replacement Surgery in Kukatpally, Hyderabad' });
     this.meta.updateTag({ property: 'og:description', content: 'Get Total Knee Replacement (TKR) in Kukatpally, Hyderabad, for an all-inclusive cost of ₹1.5 Lacs (Stryker implants included). Consult our expert orthopaedic team for minimal-invasive TKR and fast recovery.' });
     this.meta.updateTag({ property: 'og:url', content: 'https://omnihospitals.in/total-knee-replacement-surgery-kukatpally-hyderabad/' });
     this.meta.updateTag({ property: 'og:type', content: 'website' });
@@ -170,12 +170,6 @@ export class TotalKneeReplacementComponent implements OnInit, OnDestroy {
     this.router.navigate(['/key-surgeries']);
   }
 
-  // Phone call functionality
-  makeCall(): void {
-    // TODO: Replace with actual phone number
-    const phoneNumber = '+91-XXXXXXXXXX'; // Replace with actual Omni Hospitals phone number
-    window.open(`tel:${phoneNumber}`, '_self');
-  }
 
   // Scroll to form functionality
   scrollToForm(): void {

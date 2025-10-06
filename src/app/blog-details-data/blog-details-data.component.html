@@ -64,7 +64,7 @@
                             </ng-container>
                         </div>
                     </ng-container>
-                    <section class="related-posts-wrapper py-4">
+                    <section class="related-posts-wrapper py-4" *ngIf="selectedCategory?.related_blogs?.length">
                         <div class="container">
                             <h3 class="widget-title mb-4 fw-bold blue_heading">Related Blogs</h3>
                             <div class="row g-4">

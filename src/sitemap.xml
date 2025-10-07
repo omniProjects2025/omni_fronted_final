@@ -388,7 +388,7 @@
   </url>
 
   <url>
-    <loc>https://omnihospitals.in/our-branches</loc>
+    <loc>https://omnihospitals.in/locations</loc>
     <lastmod>2024-12-19T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -396,42 +396,42 @@
 
   <!-- Branch-specific Pages -->
   <url>
-    <loc>https://omnihospitals.in/our-branches/kothapet</loc>
+    <loc>https://omnihospitals.in/locations/kothapet</loc>
     <lastmod>2024-12-19T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://omnihospitals.in/our-branches/kukatpally</loc>
+    <loc>https://omnihospitals.in/locations/kukatpally</loc>
     <lastmod>2024-12-19T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://omnihospitals.in/our-branches/udai-omni-nampally</loc>
+    <loc>https://omnihospitals.in/locations/udai-omni-nampally</loc>
     <lastmod>2024-12-19T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://omnihospitals.in/our-branches/vizag</loc>
+    <loc>https://omnihospitals.in/locations/vizag</loc>
     <lastmod>2024-12-19T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://omnihospitals.in/our-branches/giggles-vizag</loc>
+    <loc>https://omnihospitals.in/locations/giggles-vizag</loc>
     <lastmod>2024-12-19T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://omnihospitals.in/our-branches/kurnool</loc>
+    <loc>https://omnihospitals.in/locations/kurnool</loc>
     <lastmod>2024-12-19T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -467,7 +467,7 @@
   </url>
 
   <url>
-    <loc>https://omnihospitals.in/second-opinion</loc>
+    <loc>https://omnihospitals.in/get-a-second-opinion</loc>
     <lastmod>2024-12-19T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

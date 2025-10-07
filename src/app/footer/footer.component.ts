@@ -46,7 +46,7 @@ export class FooterComponent {
   }
 
   goToSecondOpinion() {
-    this.router.navigate(['/second-opinion']).then(success => {
+    this.router.navigate(['/get-a-second-opinion']).then(success => {
       if (success) {
         console.log('Navigation to Second Opinion successful');
       } else {

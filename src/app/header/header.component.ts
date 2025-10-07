@@ -26,7 +26,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
     },
     { key: 'doctor', label: 'Find a Doctor', route: '/our-doctors' },
     {
-      key: 'specialities', label: 'Our Specialities', route: '/our-specialities',
+      key: 'specialities', label: 'Specialities', route: '/our-specialities',
       children: [
         { id: 'cardiology', label: 'Cardiology', route: '/speciality/cardiology' },
         { id: 'orthopedic', label: 'Orthopedics', route: '/speciality/orthopedic' },
@@ -45,7 +45,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
       ]
     },
     {
-      label: 'Our Branches', key: 'branches', modalTarget: '#branchesModal',
+      label: 'Locations', key: 'branches', modalTarget: '#branchesModal',
       children: [
         {
           id: 'Kothapet', label: 'Kothapet', img: 'omni_kothapet.png', route: ''
@@ -146,7 +146,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
       console.log('Set active tab to specialities based on route (specialty details)');
     }
     // Check if we're on a branch page
-    else if (currentUrl.includes('/our-branches/')) {
+    else if (currentUrl.includes('/locations/')) {
       this.activeTab = 'branches';
       console.log('Set active tab to branches based on route (branch details)');
     }
@@ -156,7 +156,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
       console.log('Set active tab to specialities based on route (main specialties)');
     }
     // Check if we're on the main branches page
-    else if (currentUrl === '/our-branches') {
+    else if (currentUrl === '/locations') {
       this.activeTab = 'branches';
       console.log('Set active tab to branches based on route (main branches)');
     }
@@ -165,7 +165,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
       this.activeTab = 'specialities';
       console.log('Set active tab to specialities based on route (starts with)');
     }
-    else if (currentUrl.startsWith('/our-branches')) {
+    else if (currentUrl.startsWith('/locations')) {
       this.activeTab = 'branches';
       console.log('Set active tab to branches based on route (starts with)');
     }
@@ -238,7 +238,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
         .replace(/-+/g, '-')    // Replace multiple hyphens with single hyphen
         .replace(/^-|-$/g, ''); // Remove leading/trailing hyphens
       
-      this.router.navigate(['/our-branches', urlFriendlyName]).then(() => {
+      this.router.navigate(['/locations', urlFriendlyName]).then(() => {
         // Set active state after navigation completes
         this.setActive('branches');
         console.log('Active state set to branches after modal navigation');
@@ -286,7 +286,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
         .replace(/[^a-z0-9-]/g, '') // Remove special characters except hyphens
         .replace(/-+/g, '-')    // Replace multiple hyphens with single hyphen
         .replace(/^-|-$/g, ''); // Remove leading/trailing hyphens
-      this.router.navigate(['/our-branches', urlFriendlyName]);
+      this.router.navigate(['/locations', urlFriendlyName]);
       this.setActive('branches'); // Set active state for branches
     } else if (key === 'specialities') {
       const urlFriendlyName = toUrlFriendly(label);

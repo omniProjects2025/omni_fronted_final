@@ -120,7 +120,7 @@
                 "qualification": [
                     "MBBS, DNB ( General  Medicine)"
                 ],
-                "depertment": "General Medicine & Diabetology",
+                "depertment": "General Physician & Diabetologist",
                 "specialization": "General Medicine",
                 "work_location": "kukatpally",
                 "experience": "15 Years",
@@ -139,26 +139,13 @@
                 "profile": "assets/kukatpally_doctors_profiles/dr_tagore_mohan_grandhi.png"
             },
             {
-                "name": "Dr. Anudeep",
-                "qualification": [
-                    "MBBS, MD (Internal Medicine-NIMS)",
-                    " DM (Neurology) NIMHANS",
-                    " Consultant Neurophysician"
-                ],
-                "depertment": "Neurophysician",
-                "specialization": "Neurology",
-                "work_location": "kukatpally",
-                "experience": "5 Years",
-                "profile": "assets/kukatpally_doctors_profiles/dr_anudeep.png"
-            },
-            {
                 "name": "Dr Chinthakunta Raghavendra Reddy",
                 "qualification": [
                     "MBBS, DNB General Medicine",
                     " DM Medical Oncology"
                 ],
-                "depertment": "General Medicine, Oncology",
-                "specialization": "Oncology",
+                "depertment": "Medical Oncologist",
+                "specialization": "Medical Oncology",
                 "work_location": "kukatpally",
                 "experience": "5 Years",
                 "profile": "assets/kukatpally_doctors_profiles/dr_chinthakunta_raghavendra_reddy.png"
@@ -224,7 +211,7 @@
             {
                 "name": "Dr. Ranjith Nellore Mahesh",
                 "qualification": [
-                    "MBBS, MS (Ortho",
+                    "MBBS, MS (Ortho)",
                     "FIPO (Paediatric Orthopaedics-IGICH)",
                     "FIJR (Joint Replacement Surgery)",
                     "FIRKR (Robotic Knee Replacement Surgery)"
@@ -234,20 +221,6 @@
                 "work_location": "kukatpally",
                 "experience": "8 years",
                 "profile": "assets/kukatpally_doctors_profiles/dr_ranjith_nellore_mahesh.png"
-            },
-            {
-                "name": "Dr. Naga Sudha Ashok",
-                "qualification": [
-                    "MBBS, MS - General Surgery,",
-                    "DNB - Surgical Gastroenterology Consultant - GI,",
-                    "GI Oncology,",
-                    "HPB, Bariatric & Minimal Access Surgery"
-                ],
-                "depertment": "Surgical Gastroenterologist",
-                "specialization": "Surgical Gastroenterology",
-                "work_location": "kukatpally",
-                "experience": "10 Years",
-                "profile": "assets/kukatpally_doctors_profiles/dr_naga_sudha_ashok.png"
             },
             {
                 "name": "Dr. Ragi Prasad",
@@ -260,6 +233,17 @@
                 "work_location": "kukatpally",
                 "experience": "21 Years",
                 "profile": "assets/kukatpally_doctors_profiles/ragi_prasad.png"
+            },
+            {
+                "name": "Dr.Kamala Priya",
+                "qualification": [
+                    "MBBS, MD, DrNB"
+                ],
+                "depertment": "Neuro Physician",
+                "specialization": "Neurology",
+                "work_location": "kukatpally",
+                "experience": "3 Years",
+                "profile": "assets/kukatpally_doctors_profiles/Dr_Kamala_priya.png"
             }
         ]
     },
@@ -945,34 +929,22 @@
         "location": "vizag",
         "doctors": [
             {
-                "name": "DR J N SRINIVASULU",
-                "qualification": [
-                    "MD GENERAL MEDICINE",
-                    "DM NEPHROLOGY"
-                ],
-                "depertment": "Nephrologist",
-                "specialization": "Nephrology",
-                "work_location": "vizag",
-                "experience": "10 Years",
-                "profile": "assets/vizag_doctors/DR_J_N_SRINIVASULU.png"
-            },
-            {
-                "name": "DR B MOHAN KALYAN PHANI TEJA",
+                "name": "Dr B Mohan Kalyan Phani Teja",
                 "qualification": [
                     "MBBS",
-                    "DNB ORTHO,FIJR"
+                    "DNB Ortho, FIJR"
                 ],
                 "depertment": "Orthopedic Surgeon",
-                "specialization": "Joint Replacement",
+                "specialization": "Orthopedics",
                 "work_location": "vizag",
                 "experience": "8 Years",
                 "profile": "assets/vizag_doctors/DR_B_MOHAN_KALYAN_PHANI_TEJA.png"
             },
             {
-                "name": "DR JADA AVINASH",
+                "name": "Dr Jada Avinash",
                 "qualification": [
                     "MBBS",
-                    "MD,DM-NEUROLOGY"
+                    " MD, DM-Neurology"
                 ],
                 "depertment": "Neurologist",
                 "specialization": "Neurologist",
@@ -981,32 +953,10 @@
                 "profile": "assets/vizag_doctors/DR_JADA_AVINASH.png"
             },
             {
-                "name": "DR THALLURI PRASHANTH",
-                "qualification": [
-                    "MBBS, MS, M CH"
-                ],
-                "depertment": "Neurosurgeon",
-                "specialization": "Neuro Surgery",
-                "work_location": "vizag",
-                "experience": "12 Years",
-                "profile": "assets/vizag_doctors/DR_THALLURI_PRASHANTH.png"
-            },
-            {
-                "name": "DR MUDDADA RAVI KIRAN",
-                "qualification": [
-                    "MD,DM CARDIOLOGY-CONSULTANT INTERVENTIONAL CARDIOLOGY"
-                ],
-                "depertment": "Cardiologist",
-                "specialization": "Interventional Cardiology",
-                "work_location": "vizag",
-                "experience": "10 Years",
-                "profile": "assets/vizag_doctors/DR_MUDDADA_RAVI_KIRAN.png"
-            },
-            {
-                "name": "DR SUBRAMANYAM S.S PENNERU",
+                "name": "Dr Subramanyam S.S Penneru",
                 "qualification": [
                     "MBBS,MD,",
-                    "DM(NIMS)GLOD MEDALIST"
+                    " DM(NIMS) Gold Medalist"
                 ],
                 "depertment": "Cardiologist",
                 "specialization": "Interventional Cardiologist & Endovascular Interventionist",
@@ -1015,46 +965,23 @@
                 "profile": "assets/vizag_doctors/DR_SUBRAMANYAM_S_S_PENNERU.png"
             },
             {
-                "name": "DR VIDYA SAGAR SAMANA",
+                "name": "Dr Vidya Sagar Samana",
                 "qualification": [
                     "MBBS",
-                    "MS GENERAL AND LAPARSCOPIC SURGEON"
+                    "MS General & Laparoscopic Surgery"
                 ],
-                "depertment": "General Surgery",
-                "specialization": " General and Laser & Laparoscopic Surgeon",
+                "depertment": "General Surgeon",
+                "specialization": " General and Laser & Laparoscopic Surgery",
                 "work_location": "vizag",
                 "experience": "6 Years",
                 "profile": "assets/vizag_doctors/DR_VIDYA_SAGAR_SAMANA.png"
             },
             {
-                "name": "DR L VENKATESH",
-                "qualification": [
-                    "M.D GEN. GENERAL MEDICINE"
-                ],
-                "depertment": "General Physician",
-                "specialization": "General Medicine",
-                "work_location": "vizag",
-                "experience": "20 Years",
-                "profile": "assets/vizag_doctors/DR_L_VENKATESH.png"
-            },
-            {
-                "name": "DR B V R N VARMA ",
-                "qualification": [
-                    "MBBS,D.ORTHO,",
-                    "MCH ORTHO"
-                ],
-                "depertment": "Orthopedic Surgeon",
-                "specialization": "Orthopedic Surgeon & Joint Replacement Surgeon",
-                "work_location": "vizag",
-                "experience": "25 Years",
-                "profile": "assets/vizag_doctors/DR_B_V_R_N _ARMA.png"
-            },
-            {
-                "name": "DR SRIDEVI NELLIMARLA",
+                "name": "Dr Sridevi Nellimarla",
                 "qualification": [
                     "MBBS",
                     " DGO,(DNB),",
-                    "DRM(GERMANY)"
+                    "DRM(Germany)"
                 ],
                 "depertment": "Chief Fertility Consultant",
                 "specialization": "Infertility Specialist",
@@ -1063,9 +990,9 @@
                 "profile": "assets/vizag_doctors/DR_SRIDEVI_NELLIMARLA.png"
             },
             {
-                "name": "DR M VIJAYKANTH",
+                "name": "Dr M Vijaykanth",
                 "qualification": [
-                    "MD(ANAESTHESIA)"
+                    "MD(Anaesthesia)"
                 ],
                 "depertment": "Chief Anaesthesiologist",
                 "specialization": "Anaesthesia",
@@ -1079,23 +1006,23 @@
         "location": "Giggles Vizag",
         "doctors": [
             {
-                "name": "Dr K RADHA KRISHNA",
+                "name": "Dr K Radha Krishna",
                 "qualification": [
-                    "MBBS,DCH,MD,",
-                    "CHIEF CONSULTANT PEDIATRICS"
+                    "MBBS, DCH, MD",
+                    " Chief Consultant Pediatrics"
                 ],
                 "depertment": "Pediatrician",
-                "specialization": "Pediatric",
+                "specialization": "Pediatrics",
                 "work_location": "Giggles Vizag",
                 "experience": "32 Years",
                 "profile": "assets/vizag_doctors/Dr_K_RADHA_KRISHNA.png"
             },
             {
-                "name": "Dr S V A S RAJU.K",
+                "name": "Dr S V A S Raju.K",
                 "qualification": [
-                    "MBBS,",
-                    "DCH(CMC VELLORE)",
-                    "DAA(CMC VELLORE)"
+                    "MBBS",
+                    " DCH(CMC VELLORE)",
+                    " DAA(CMC VELLORE)"
                 ],
                 "depertment": "Pediatrician",
                 "specialization": "Pediatrician, Asthma & Allergy Specialist",
@@ -1104,21 +1031,9 @@
                 "profile": "assets/vizag_doctors/Dr_SVAS_RAJU_K.png"
             },
             {
-                "name": "DR RUKMINI SOWMYA VELAGAPUDI",
+                "name": "Dr Kolla Pavani",
                 "qualification": [
-                    "MBBS,DNB,",
-                    "OBG,FMAS,FCG"
-                ],
-                "depertment": "Gynaecologist",
-                "specialization": "Obstetrics & Gynaecology",
-                "work_location": "Giggles Vizag",
-                "experience": "4.7 Years",
-                "profile": "assets/vizag_doctors/DR_RUKMINI_SOWMYA_VELAGAPUDI.png"
-            },
-            {
-                "name": "DR KOLLA PAVANI",
-                "qualification": [
-                    "MBBS,MS"
+                    "MBBS, MS"
                 ],
                 "depertment": " Gynaecologist",
                 "specialization": "Obstetrics & Gynaecology",
@@ -1127,11 +1042,11 @@
                 "profile": "assets/vizag_doctors/DR_KOLLA_PAVANI.png"
             },
             {
-                "name": "DR S SAI PRATYUSHA",
+                "name": "Dr S Sai Pratyusha",
                 "qualification": [
-                    "MBBS,",
-                    "DNB PEADIATRICS",
-                    "IFPCCM FELLOWSHIP"
+                    "MBBS",
+                    " DNB Pediatrics",
+                    " IFPCCM Fellowship"
                 ],
                 "depertment": "Pediatrician",
                 "specialization": "Pediatric Intensivist",
@@ -1140,10 +1055,10 @@
                 "profile": "assets/vizag_doctors/DR_S_SAI_PRATYUSHA.png"
             },
             {
-                "name": "DR B RAJSEKHAR",
+                "name": "Dr B Rajsekhar",
                 "qualification": [
-                    "MBBS,MD(PEDIATRICS),",
-                    "FIAP"
+                    "MBBS, MD(Pediatrics)",
+                    " FIAP"
                 ],
                 "depertment": "Pediatrician",
                 "specialization": "Pediatric",
@@ -1152,11 +1067,11 @@
                 "profile": "assets/vizag_doctors/DR_B_RAJSEKHAR.png"
             },
             {
-                "name": "DR SANDEEP ANAND CHINTALA",
+                "name": "Dr Sandeep Anand Chintala",
                 "qualification": [
                     "MBBS",
-                    "DEM",
-                    "DCH"
+                    " DEM",
+                    " DCH"
                 ],
                 "depertment": "Neonatalogist",
                 "specialization": "Neonatalogy",

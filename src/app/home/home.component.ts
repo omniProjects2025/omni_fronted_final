@@ -511,7 +511,7 @@ export class HomeComponent implements OnInit, OnDestroy {
 
 
   openSecondOpinion() {
-    this.router.navigate(['/second-opinion']).then(success => {
+    this.router.navigate(['/get-a-second-opinion']).then(success => {
       if (success) {
         console.log('Navigation to Second Opinion successful');
       } else {
@@ -705,7 +705,7 @@ export class HomeComponent implements OnInit, OnDestroy {
         .replace(/[^a-z0-9-]/g, '') // Remove special characters except hyphens
         .replace(/-+/g, '-')    // Replace multiple hyphens with single hyphen
         .replace(/^-|-$/g, ''); // Remove leading/trailing hyphens
-      this.router.navigate(['/our-branches', urlFriendlyName]);
+      this.router.navigate(['/locations', urlFriendlyName]);
     }, 300);
   }
   goToFixedSurgical() {

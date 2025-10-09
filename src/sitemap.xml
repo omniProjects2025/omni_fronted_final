@@ -27,350 +27,373 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- New SEO-friendly Specialities URLs with location -->
   <url>
-    <loc>https://omnihospitals.in/our-specialities</loc>
+    <loc>https://omnihospitals.in/specialities/kukatpally</loc>
     <lastmod>2024-12-19T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
+    <loc>https://omnihospitals.in/specialities/vizag</loc>
+    <lastmod>2024-12-19T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Old URLs for backward compatibility -->
+  <url>
+    <loc>https://omnihospitals.in/our-specialities</loc>
+    <lastmod>2024-12-19T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
     <loc>https://omnihospitals.in/our-specialities-details</loc>
     <lastmod>2024-12-19T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- New SEO-friendly Speciality Detail Pages (without location - general pages) -->
+  <url>
+    <loc>https://omnihospitals.in/specialities/cardiology</loc>
+    <lastmod>2024-12-19T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://omnihospitals.in/specialities/emergency-medicine-and-critical-care</loc>
+    <lastmod>2024-12-19T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://omnihospitals.in/specialities/ent</loc>
+    <lastmod>2024-12-19T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://omnihospitals.in/specialities/general-medicine</loc>
+    <lastmod>2024-12-19T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://omnihospitals.in/specialities/general-surgery</loc>
+    <lastmod>2024-12-19T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://omnihospitals.in/specialities/gastroenterology</loc>
+    <lastmod>2024-12-19T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://omnihospitals.in/specialities/nephrology</loc>
+    <lastmod>2024-12-19T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://omnihospitals.in/specialities/neurology</loc>
+    <lastmod>2024-12-19T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://omnihospitals.in/specialities/dermatology</loc>
+    <lastmod>2024-12-19T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://omnihospitals.in/specialities/obstetrics-and-gynaecology</loc>
+    <lastmod>2024-12-19T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://omnihospitals.in/specialities/orthopedics</loc>
+    <lastmod>2024-12-19T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://omnihospitals.in/specialities/psychiatry</loc>
+    <lastmod>2024-12-19T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://omnihospitals.in/specialities/pulmonology</loc>
+    <lastmod>2024-12-19T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://omnihospitals.in/specialities/plastic-surgery</loc>
+    <lastmod>2024-12-19T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Location-specific Speciality Pages - Kukatpally (New SEO-friendly URLs) -->
+  <url>
+    <loc>https://omnihospitals.in/specialities/cardiology/kukatpally</loc>
+    <lastmod>2024-12-19T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Speciality Detail Pages -->
   <url>
-    <loc>https://omnihospitals.in/our-specialities-details/cardiology</loc>
+    <loc>https://omnihospitals.in/specialities/orthopedics/kukatpally</loc>
     <lastmod>2024-12-19T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://omnihospitals.in/our-specialities-details/emergency-medicine-and-critical-care</loc>
+    <loc>https://omnihospitals.in/specialities/emergency-medicine-and-critical-care/kukatpally</loc>
     <lastmod>2024-12-19T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://omnihospitals.in/our-specialities-details/ent</loc>
+    <loc>https://omnihospitals.in/specialities/nephrology/kukatpally</loc>
     <lastmod>2024-12-19T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://omnihospitals.in/our-specialities-details/general-medicine</loc>
+    <loc>https://omnihospitals.in/specialities/neurology/kukatpally</loc>
     <lastmod>2024-12-19T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://omnihospitals.in/our-specialities-details/general-surgery</loc>
+    <loc>https://omnihospitals.in/specialities/general-surgery/kukatpally</loc>
     <lastmod>2024-12-19T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://omnihospitals.in/our-specialities-details/gastroenterology</loc>
+    <loc>https://omnihospitals.in/specialities/dermatology/kukatpally</loc>
     <lastmod>2024-12-19T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://omnihospitals.in/our-specialities-details/nephrology</loc>
+    <loc>https://omnihospitals.in/specialities/obstetrics-and-gynaecology/kukatpally</loc>
     <lastmod>2024-12-19T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://omnihospitals.in/our-specialities-details/neurology</loc>
+    <loc>https://omnihospitals.in/specialities/psychiatry/kukatpally</loc>
     <lastmod>2024-12-19T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://omnihospitals.in/our-specialities-details/dermatology</loc>
+    <loc>https://omnihospitals.in/specialities/plastic-surgery/kukatpally</loc>
     <lastmod>2024-12-19T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://omnihospitals.in/our-specialities-details/obstetrics-and-gynaecology</loc>
+    <loc>https://omnihospitals.in/specialities/pulmonology/kukatpally</loc>
     <lastmod>2024-12-19T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://omnihospitals.in/our-specialities-details/orthopedics</loc>
+    <loc>https://omnihospitals.in/specialities/general-medicine/kukatpally</loc>
     <lastmod>2024-12-19T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://omnihospitals.in/our-specialities-details/psychiatry</loc>
+    <loc>https://omnihospitals.in/specialities/gastroenterology/kukatpally</loc>
     <lastmod>2024-12-19T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://omnihospitals.in/our-specialities-details/pulmonology</loc>
+    <loc>https://omnihospitals.in/specialities/ent/kukatpally</loc>
     <lastmod>2024-12-19T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Location-specific Speciality Pages - Vizag (New SEO-friendly URLs) -->
+  <url>
+    <loc>https://omnihospitals.in/specialities/cardiology/vizag</loc>
+    <lastmod>2024-12-19T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://omnihospitals.in/our-specialities-details/plastic-surgery</loc>
+    <loc>https://omnihospitals.in/specialities/orthopedics/vizag</loc>
     <lastmod>2024-12-19T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- Location-specific Speciality Pages - Kukatpally -->
-  <url>
-    <loc>https://omnihospitals.in/our-specialities-details/cardiology?location=kukatpally</loc>
-    <lastmod>2024-12-19T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://omnihospitals.in/our-specialities-details/orthopedics?location=kukatpally</loc>
+    <loc>https://omnihospitals.in/specialities/emergency-medicine-and-critical-care/vizag</loc>
     <lastmod>2024-12-19T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://omnihospitals.in/our-specialities-details/emergency-medicine-and-critical-care?location=kukatpally</loc>
+    <loc>https://omnihospitals.in/specialities/nephrology/vizag</loc>
     <lastmod>2024-12-19T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://omnihospitals.in/our-specialities-details/nephrology?location=kukatpally</loc>
+    <loc>https://omnihospitals.in/specialities/ent/vizag</loc>
     <lastmod>2024-12-19T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://omnihospitals.in/our-specialities-details/neurology?location=kukatpally</loc>
+    <loc>https://omnihospitals.in/specialities/neurology/vizag</loc>
     <lastmod>2024-12-19T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://omnihospitals.in/our-specialities-details/general-surgery?location=kukatpally</loc>
+    <loc>https://omnihospitals.in/specialities/general-surgery/vizag</loc>
     <lastmod>2024-12-19T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://omnihospitals.in/our-specialities-details/dermatology?location=kukatpally</loc>
+    <loc>https://omnihospitals.in/specialities/dermatology/vizag</loc>
     <lastmod>2024-12-19T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://omnihospitals.in/our-specialities-details/obstetrics-and-gynaecology?location=kukatpally</loc>
+    <loc>https://omnihospitals.in/specialities/gastroenterology/vizag</loc>
     <lastmod>2024-12-19T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://omnihospitals.in/our-specialities-details/psychiatry?location=kukatpally</loc>
+    <loc>https://omnihospitals.in/specialities/obstetrics-and-gynaecology/vizag</loc>
     <lastmod>2024-12-19T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://omnihospitals.in/our-specialities-details/plastic-surgery?location=kukatpally</loc>
+    <loc>https://omnihospitals.in/specialities/psychiatry/vizag</loc>
     <lastmod>2024-12-19T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://omnihospitals.in/our-specialities-details/pulmonology?location=kukatpally</loc>
+    <loc>https://omnihospitals.in/specialities/plastic-surgery/vizag</loc>
     <lastmod>2024-12-19T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://omnihospitals.in/our-specialities-details/general-medicine?location=kukatpally</loc>
+    <loc>https://omnihospitals.in/specialities/pulmonology/vizag</loc>
     <lastmod>2024-12-19T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://omnihospitals.in/our-specialities-details/gastroenterology?location=kukatpally</loc>
+    <loc>https://omnihospitals.in/specialities/general-medicine/vizag</loc>
     <lastmod>2024-12-19T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <!-- Location-specific Speciality Pages - Vizag -->
-  <url>
-    <loc>https://omnihospitals.in/our-specialities-details/cardiology?location=vizag</loc>
-    <lastmod>2024-12-19T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://omnihospitals.in/our-specialities-details/orthopedics?location=vizag</loc>
+    <loc>https://omnihospitals.in/specialities/paediatrics/vizag</loc>
     <lastmod>2024-12-19T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://omnihospitals.in/our-specialities-details/emergency-medicine-and-critical-care?location=vizag</loc>
+    <loc>https://omnihospitals.in/specialities/vascular-surgery/vizag</loc>
     <lastmod>2024-12-19T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://omnihospitals.in/our-specialities-details/nephrology?location=vizag</loc>
+    <loc>https://omnihospitals.in/specialities/urology/vizag</loc>
     <lastmod>2024-12-19T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://omnihospitals.in/our-specialities-details/ent?location=vizag</loc>
+    <loc>https://omnihospitals.in/specialities/oncology/vizag</loc>
     <lastmod>2024-12-19T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://omnihospitals.in/our-specialities-details/neurology?location=vizag</loc>
+    <loc>https://omnihospitals.in/specialities/anaesthesiology-and-critical-care/vizag</loc>
     <lastmod>2024-12-19T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://omnihospitals.in/our-specialities-details/general-surgery?location=vizag</loc>
+    <loc>https://omnihospitals.in/specialities/ivf-and-fertility/vizag</loc>
     <lastmod>2024-12-19T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://omnihospitals.in/our-specialities-details/dermatology?location=vizag</loc>
-    <lastmod>2024-12-19T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://omnihospitals.in/our-specialities-details/gastroenterology?location=vizag</loc>
-    <lastmod>2024-12-19T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://omnihospitals.in/our-specialities-details/obstetrics-and-gynaecology?location=vizag</loc>
-    <lastmod>2024-12-19T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://omnihospitals.in/our-specialities-details/psychiatry?location=vizag</loc>
-    <lastmod>2024-12-19T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://omnihospitals.in/our-specialities-details/plastic-surgery?location=vizag</loc>
-    <lastmod>2024-12-19T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://omnihospitals.in/our-specialities-details/pulmonology?location=vizag</loc>
-    <lastmod>2024-12-19T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://omnihospitals.in/our-specialities-details/general-medicine?location=vizag</loc>
-    <lastmod>2024-12-19T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://omnihospitals.in/our-specialities-details/paediatrics?location=vizag</loc>
-    <lastmod>2024-12-19T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://omnihospitals.in/our-specialities-details/vascular-surgery?location=vizag</loc>
-    <lastmod>2024-12-19T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://omnihospitals.in/our-specialities-details/urology?location=vizag</loc>
-    <lastmod>2024-12-19T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://omnihospitals.in/our-specialities-details/oncology?location=vizag</loc>
-    <lastmod>2024-12-19T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://omnihospitals.in/our-specialities-details/anaesthesiology-and-critical-care?location=vizag</loc>
-    <lastmod>2024-12-19T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://omnihospitals.in/our-specialities-details/ivf-and-fertility?location=vizag</loc>
-    <lastmod>2024-12-19T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
 
   <url>

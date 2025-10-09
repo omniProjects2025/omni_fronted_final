@@ -49,12 +49,26 @@ export class OurSpecialitiesDetailsComponent implements OnInit {
       this.route.params,
       this.route.queryParams
     ]).subscribe(([params, queryParams]) => {
-      const departmentParam = params['department'] || '';
+      // Try to get department/speciality from params (could be 'department' or 'speciality' depending on route)
+      const departmentParam = params['department'] || params['speciality'] || '';
       // Convert URL-friendly format back to original name
       this.departmentName = fromUrlFriendly(departmentParam);
       
-      // Get location from query parameters
-      this.selectedLocation = queryParams['location'] || 'kukatpally';
+      // Get location from route params (new format) or query parameters (old format for backward compatibility)
+      if (params['location']) {
+        this.selectedLocation = params['location'];
+      } else if (queryParams['location']) {
+        // Old format - redirect to new format
+        this.selectedLocation = queryParams['location'];
+        // Redirect to new URL format
+        if (this.departmentName) {
+          const urlFriendlyName = departmentParam;
+          this.router.navigate(['/specialities', urlFriendlyName, this.selectedLocation], { replaceUrl: true });
+          return;
+        }
+      } else {
+        this.selectedLocation = 'kukatpally'; // Default location
+      }
       
       console.log('departmentName', this.departmentName);
       console.log('selectedLocation', this.selectedLocation);
@@ -257,8 +271,11 @@ export class OurSpecialitiesDetailsComponent implements OnInit {
       this.setDefaultMetaTags();
     }
     
-    // Set canonical URL
-    const canonicalPath = `/our-specialities-details/${this.departmentName.toLowerCase().replace(/\s+/g, '-')}`;
+    // Set canonical URL using new format
+    const urlFriendlyDept = this.departmentName.toLowerCase().replace(/\s+/g, '-').replace(/&/g, 'and');
+    const canonicalPath = this.selectedLocation 
+      ? `/specialities/${urlFriendlyDept}/${this.selectedLocation.toLowerCase()}`
+      : `/specialities/${urlFriendlyDept}`;
     this.canonicalService.setCanonicalUrl(canonicalPath);
     
     // Set keywords

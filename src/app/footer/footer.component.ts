@@ -42,7 +42,8 @@ export class FooterComponent {
 
   goToSPeciality(speciality: string) {
     const urlFriendlyName = toUrlFriendly(speciality);
-    this.router.navigate(['/our-specialities-details', urlFriendlyName]);
+    // Navigate to new URL format (without location defaults to showing all)
+    this.router.navigate(['/specialities', urlFriendlyName]);
   }
 
   goToSecondOpinion() {

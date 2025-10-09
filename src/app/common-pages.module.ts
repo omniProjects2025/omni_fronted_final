@@ -42,9 +42,23 @@ const routes: Routes = [
   { path: 'about-us', component: AboutUsComponent },
   { path: 'health-checkup', component: HealthCheckupComponent },
   { path: 'package-details', component: PackageDetailsComponent },
+  
+  // New SEO-friendly routes - Order matters! Static routes MUST come before parameterized routes
+  // Location-only routes (static) - most specific first
+  { path: 'specialities/kukatpally', component: OurSpecialitiesComponent },
+  { path: 'specialities/vizag', component: OurSpecialitiesComponent },
+  { path: 'specialities/kothapet', component: OurSpecialitiesComponent },
+  { path: 'specialities/nampally', component: OurSpecialitiesComponent },
+  { path: 'specialities/kurnool', component: OurSpecialitiesComponent },
+  // Parameterized routes - these come after static routes to avoid conflicts
+  { path: 'specialities/:speciality/:location', component: OurSpecialitiesDetailsComponent },
+  { path: 'specialities/:speciality', component: OurSpecialitiesDetailsComponent },
+  
+  // Old routes with redirects for backward compatibility
   { path: 'our-specialities', component: OurSpecialitiesComponent },
   { path: 'our-specialities-details', component: OurSpecialitiesDetailsComponent },
   { path: 'our-specialities-details/:department', component: OurSpecialitiesDetailsComponent },
+  
   { path: 'technologies', component: TechnologiesComponent },
   { path: 'news-media', component: NewsMediaComponent },
   { path: 'blogs', component: BlogsComponent },

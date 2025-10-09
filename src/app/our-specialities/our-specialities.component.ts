@@ -41,18 +41,47 @@ export class OurSpecialitiesComponent implements OnInit {
   ) {
     window.scrollTo(0, 0);
     this.setDefaultMetaTags();
-    this.setCanonicalUrl();
+    // Canonical URL will be set after location is detected in ngOnInit
   }
 
   ngOnInit() {
-    // Check for location parameter from query params to restore tab state
-    this.route.queryParams.subscribe(params => {
+    // Detect location from URL path (for routes like /specialities/kukatpally)
+    const currentUrl = this.router.url;
+    const urlSegments = currentUrl.split('/').filter(segment => segment && segment !== '?');
+    
+    // Check if URL is /specialities/:location format
+    if (urlSegments.length >= 2 && urlSegments[0] === 'specialities') {
+      const possibleLocation = urlSegments[1].split('?')[0]; // Remove query params
+      const properCaseLocation = this.convertToProperCase(possibleLocation);
+      
+      if (this.locations.includes(properCaseLocation)) {
+        this.selectedLocation = properCaseLocation;
+      }
+    }
+    
+    // Also check for location parameter from route params (for backward compatibility with old routes)
+    this.route.params.subscribe(params => {
       if (params['location']) {
         const locationFromParams = params['location'];
         // Convert lowercase to proper case for display
         const properCaseLocation = this.convertToProperCase(locationFromParams);
         if (this.locations.includes(properCaseLocation)) {
           this.selectedLocation = properCaseLocation;
+        }
+      }
+    });
+    
+    // Fallback to query params for backward compatibility
+    this.route.queryParams.subscribe(queryParams => {
+      if (queryParams['location']) {
+        const locationFromParams = queryParams['location'];
+        // Convert lowercase to proper case for display
+        const properCaseLocation = this.convertToProperCase(locationFromParams);
+        if (this.locations.includes(properCaseLocation)) {
+          this.selectedLocation = properCaseLocation;
+          // Redirect to new URL format
+          this.router.navigate(['/specialities', locationFromParams.toLowerCase()], { replaceUrl: true });
+          return;
         }
       }
     });
@@ -70,7 +99,9 @@ export class OurSpecialitiesComponent implements OnInit {
   }
 
   private setCanonicalUrl() {
-    this.canonicalService.setCanonicalUrl('/our-specialities');
+    // Use the new URL format for canonical
+    const location = this.selectedLocation ? this.selectedLocation.toLowerCase() : 'kukatpally';
+    this.canonicalService.setCanonicalUrl(`/specialities/${location}`);
   }
 
   private loadSpecialties() {
@@ -84,7 +115,8 @@ export class OurSpecialitiesComponent implements OnInit {
         // Extract specialties data from API response
         if (response?.SpecialtyData?.[0]) {
           this.specialtiesData = response.SpecialtyData[0];
-          this.filterByLocation(this.selectedLocation);
+          // Just filter data without navigation (component already on correct route)
+          this.applyLocationFilter(this.selectedLocation);
         } else {
           this.errorMessage = 'No specialties data found';
           console.error('Invalid API response structure');
@@ -98,16 +130,19 @@ export class OurSpecialitiesComponent implements OnInit {
     });
   }
 
+  // Called when user clicks a location tab - includes navigation
   filterByLocation(location: string) {
     this.selectedLocation = location;
     
-    // Update URL query parameters to preserve tab state
-    this.router.navigate([], {
-      relativeTo: this.route,
-      queryParams: { location: location.toLowerCase() },
-      queryParamsHandling: 'merge'
-    });
+    // Navigate to new URL format with location as route param
+    this.router.navigate(['/specialities', location.toLowerCase()]);
     
+    // Apply the filter
+    this.applyLocationFilter(location);
+  }
+
+  // Private method to just filter data without navigation
+  private applyLocationFilter(location: string) {
     // Filter specialties by location
     const specialties = this.specialtiesData[location] || [];
     this.filteredSpecialties = specialties.map(specialty => ({
@@ -116,6 +151,7 @@ export class OurSpecialitiesComponent implements OnInit {
     }));
     
     this.updateMetaTagsForLocation(location);
+    this.setCanonicalUrl();
   }
 
   private updateMetaTagsForLocation(location: string) {
@@ -150,9 +186,8 @@ export class OurSpecialitiesComponent implements OnInit {
 
   goToDetails(speciality: string) {
     const urlFriendlyName = toUrlFriendly(speciality);
-    this.router.navigate(['/our-specialities-details', urlFriendlyName], {
-      queryParams: { location: this.selectedLocation.toLowerCase() }
-    });
+    // Navigate to new URL format with location as route param
+    this.router.navigate(['/specialities', urlFriendlyName, this.selectedLocation.toLowerCase()]);
   }
 
   private convertToProperCase(location: string): string {

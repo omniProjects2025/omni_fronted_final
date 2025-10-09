@@ -26,22 +26,22 @@ export class HeaderComponent implements OnInit, OnDestroy {
     },
     { key: 'doctor', label: 'Find a Doctor', route: '/our-doctors' },
     {
-      key: 'specialities', label: 'Specialities', route: '/our-specialities',
+      key: 'specialities', label: 'Specialities', route: '/specialities/kukatpally',
       children: [
-        { id: 'cardiology', label: 'Cardiology', route: '/speciality/cardiology' },
-        { id: 'orthopedic', label: 'Orthopedics', route: '/speciality/orthopedic' },
-        { id: 'neurology', label: 'Neurology', route: '/speciality/neurology' },
-        { id: 'emergency-medicine', label: 'Emergency Medicine & Critical Care', route: '/speciality/emergency-medicine' },
-        { id: 'general-medicine', label: 'General Medicine', route: '/speciality/general-medicine' },
-        { id: 'general-surgery', label: 'General Surgery', route: '/speciality/general-surgery' },
-        { id: 'gastroenterology', label: 'Gastroenterology', route: '/speciality/gastroenterology' },
-        { id: 'obstetrics-gynaecology', label: 'Obstetrics & Gynaecology', route: '/speciality/obstetrics-gynaecology' },
-        { id: 'ent', label: 'ENT', route: '/speciality/ent' },
-        { id: 'nephrology', label: 'Nephrology', route: '/speciality/nephrology' },
-        { id: 'pulmonology', label: 'Pulmonology', route: '/speciality/pulmonology' },
-        { id: 'dermatology', label: 'Dermatology', route: '/speciality/dermatology' },
-        { id: 'psychiatry', label: 'Psychiatry', route: '/speciality/psychiatry' },
-        { id: 'plastic-surgery', label: 'Plastic Surgery', route: '/speciality/plastic-surgery' },
+        { id: 'cardiology', label: 'Cardiology', route: '/specialities/cardiology' },
+        { id: 'orthopedic', label: 'Orthopedics', route: '/specialities/orthopedic' },
+        { id: 'neurology', label: 'Neurology', route: '/specialities/neurology' },
+        { id: 'emergency-medicine', label: 'Emergency Medicine & Critical Care', route: '/specialities/emergency-medicine' },
+        { id: 'general-medicine', label: 'General Medicine', route: '/specialities/general-medicine' },
+        { id: 'general-surgery', label: 'General Surgery', route: '/specialities/general-surgery' },
+        { id: 'gastroenterology', label: 'Gastroenterology', route: '/specialities/gastroenterology' },
+        { id: 'obstetrics-gynaecology', label: 'Obstetrics & Gynaecology', route: '/specialities/obstetrics-gynaecology' },
+        { id: 'ent', label: 'ENT', route: '/specialities/ent' },
+        { id: 'nephrology', label: 'Nephrology', route: '/specialities/nephrology' },
+        { id: 'pulmonology', label: 'Pulmonology', route: '/specialities/pulmonology' },
+        { id: 'dermatology', label: 'Dermatology', route: '/specialities/dermatology' },
+        { id: 'psychiatry', label: 'Psychiatry', route: '/specialities/psychiatry' },
+        { id: 'plastic-surgery', label: 'Plastic Surgery', route: '/specialities/plastic-surgery' },
       ]
     },
     {
@@ -140,8 +140,8 @@ export class HeaderComponent implements OnInit, OnDestroy {
     const currentUrl = this.router.url;
     console.log('setActiveBasedOnRoute called - Current URL:', currentUrl);
     
-    // Check if we're on a specialty details page
-    if (currentUrl.includes('/our-specialities-details/')) {
+    // Check if we're on a specialty details page (both old and new format)
+    if (currentUrl.includes('/our-specialities-details/') || currentUrl.includes('/specialities/')) {
       this.activeTab = 'specialities';
       console.log('Set active tab to specialities based on route (specialty details)');
     }
@@ -150,7 +150,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
       this.activeTab = 'branches';
       console.log('Set active tab to branches based on route (branch details)');
     }
-    // Check if we're on the main specialties page
+    // Check if we're on the main specialties page (old format)
     else if (currentUrl === '/our-specialities') {
       this.activeTab = 'specialities';
       console.log('Set active tab to specialities based on route (main specialties)');
@@ -290,7 +290,8 @@ export class HeaderComponent implements OnInit, OnDestroy {
       this.setActive('branches'); // Set active state for branches
     } else if (key === 'specialities') {
       const urlFriendlyName = toUrlFriendly(label);
-      this.router.navigate(['/our-specialities-details', urlFriendlyName]);
+      // Navigate to new URL format (without location defaults to showing all)
+      this.router.navigate(['/specialities', urlFriendlyName]);
       // routerLinkActive will handle the active state automatically
     }
     this.hoveredItem = null;

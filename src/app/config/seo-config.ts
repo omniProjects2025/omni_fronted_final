@@ -25,6 +25,19 @@ export const SEO_CONFIG: { [key: string]: SEOData } = {
     keywords: 'medical specialty details, expert doctors, specialist care, OMNI hospitals specialties',
     canonicalPath: '/our-specialities-details'
   },
+  // New SEO-friendly specialities routes
+  'specialities-kukatpally': {
+    title: 'Specialities in Kukatpally - OMNI Hospitals | Best Medical Care in Hyderabad',
+    description: 'Comprehensive medical specialties at OMNI Hospitals Kukatpally. Expert care in cardiology, orthopedics, neurology, and more.',
+    keywords: 'Kukatpally specialties, medical care Kukatpally, OMNI hospitals Kukatpally, Hyderabad hospital specialties',
+    canonicalPath: '/specialities/kukatpally'
+  },
+  'specialities-vizag': {
+    title: 'Specialities in Vizag - OMNI Hospitals | Best Medical Care in Visakhapatnam',
+    description: 'Comprehensive medical specialties at OMNI Hospitals Vizag. Expert care in cardiology, orthopedics, neurology, and more.',
+    keywords: 'Vizag specialties, medical care Vizag, OMNI hospitals Vizag, Visakhapatnam hospital specialties',
+    canonicalPath: '/specialities/vizag'
+  },
   'our-doctors': {
     title: 'Our Doctors - OMNI Hospitals | Expert Medical Professionals',
     description: 'Meet our team of expert doctors and medical professionals at OMNI Hospitals. Highly qualified specialists providing world-class healthcare services.',

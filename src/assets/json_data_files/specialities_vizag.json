@@ -1020,7 +1020,7 @@
     {
       "name": "Vascular Surgery",
       "short_description": "",
-      "img": "",
+      "img": "assets/our_specialities/vascular.jpg",
       "meta_title": "Best Vascular Surgery Hospital in Vizag | OMNI Hospitals",
       "meta_description": "OMNI Hospitals is a leading vascular surgery hospital in Vizag. Our expert vascular surgeons offer advanced treatment for all vascular conditions at an affordable cost.",
       "details": [
@@ -1218,7 +1218,7 @@
     {
       "name": "Paediatrics",
       "short_description": "",
-      "img": "",
+      "img": "assets/our_specialities/paediatrics.jpg",
       "meta_title": "OMNI Hospitals: Best Pediatric & Child Care in Vizag | RK",
       "meta_description": "OMNI Hospitals is a top pediatric hospital in Vizag with expert doctors & surgeons. We offer advanced care for children, including pediatric orthopedics.",
       "details": [

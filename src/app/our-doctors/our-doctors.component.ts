@@ -51,13 +51,22 @@ export class OurDoctorsComponent implements OnInit, AfterViewInit, OnDestroy {
     this.route.queryParams.subscribe(params => {
       this.isRestoringFromUrl = true;
       
-      if (params['location']) {
+      // Reset filters if no params present
+      if (!params['location']) {
+        this.selectedLocation = '';
+      } else {
         this.selectedLocation = params['location'];
       }
-      if (params['speciality']) {
+      
+      if (!params['speciality']) {
+        this.selectedSpeciality = '';
+      } else {
         this.selectedSpeciality = params['speciality'];
       }
-      if (params['search']) {
+      
+      if (!params['search']) {
+        this.searchTerm = '';
+      } else {
         this.searchTerm = params['search'];
       }
       
@@ -65,6 +74,9 @@ export class OurDoctorsComponent implements OnInit, AfterViewInit, OnDestroy {
       if (this.allDoctorsFlat.length > 0) {
         this.runFilters();
       }
+      
+      // Mark for check to ensure UI updates with new filter values
+      this.cdr.markForCheck();
       
       this.isRestoringFromUrl = false;
     });
@@ -304,10 +316,11 @@ export class OurDoctorsComponent implements OnInit, AfterViewInit, OnDestroy {
       queryParams.search = this.searchTerm;
     }
     
+    // Use replaceUrl to avoid creating multiple history entries for each filter change
     this.router.navigate([], {
       relativeTo: this.route,
       queryParams: queryParams,
-      queryParamsHandling: 'merge'
+      replaceUrl: true
     });
   }
 

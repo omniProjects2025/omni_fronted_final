@@ -39,6 +39,7 @@ const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'get-a-second-opinion', component: SecondOpinionComponent },
+  { path: 'about-us/leadership-team', component: AboutUsComponent },
   { path: 'about-us', component: AboutUsComponent },
   { path: 'health-checkup', component: HealthCheckupComponent },
   { path: 'package-details', component: PackageDetailsComponent },

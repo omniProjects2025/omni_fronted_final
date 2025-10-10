@@ -15,24 +15,48 @@ export class AboutUsComponent implements OnInit {
   constructor(
     private titleService: Title,
     private metaService: Meta,
-    private canonicalService: CanonicalService
+    private canonicalService: CanonicalService,
+    private router: Router,
+    private route: ActivatedRoute
   ) {}
 
   ngOnInit(): void {
+    // Check the current route to determine which view to show
+    const currentUrl = this.router.url;
+    if (currentUrl.includes('/leadership-team')) {
+      this.selected_team = 2;
+    } else {
+      this.selected_team = 1;
+    }
     this.setSEOTags();
   }
 
   private setSEOTags(): void {
-    this.titleService.setTitle('About Us - OMNI Hospitals | Leading Healthcare Provider in Hyderabad');
-    this.metaService.updateTag({ 
-      name: 'description', 
-      content: 'Learn about OMNI Hospitals - our mission, vision, and commitment to providing world-class healthcare services across multiple locations in Andhra Pradesh and Telangana.' 
-    });
-    this.metaService.updateTag({ 
-      name: 'keywords', 
-      content: 'about OMNI hospitals, healthcare provider Hyderabad, hospital mission vision, medical excellence, Andhra Pradesh Telangana healthcare' 
-    });
-    this.canonicalService.setCanonicalUrl('/about-us');
+    if (this.selected_team === 2) {
+      // SEO tags for Leadership Team page
+      this.titleService.setTitle('Leadership Team - OMNI Hospitals | Executive Management');
+      this.metaService.updateTag({ 
+        name: 'description', 
+        content: 'Meet the leadership team at OMNI Hospitals - our Group CEO, Chief Growth Officer, and Chief Financial Officer driving healthcare excellence.' 
+      });
+      this.metaService.updateTag({ 
+        name: 'keywords', 
+        content: 'OMNI hospitals leadership, healthcare executives, hospital management team, Group CEO, CFO, CGO' 
+      });
+      this.canonicalService.setCanonicalUrl('/about-us/leadership-team');
+    } else {
+      // SEO tags for main About Us page
+      this.titleService.setTitle('About Us - OMNI Hospitals | Leading Healthcare Provider in Hyderabad');
+      this.metaService.updateTag({ 
+        name: 'description', 
+        content: 'Learn about OMNI Hospitals - our mission, vision, and commitment to providing world-class healthcare services across multiple locations in Andhra Pradesh and Telangana.' 
+      });
+      this.metaService.updateTag({ 
+        name: 'keywords', 
+        content: 'about OMNI hospitals, healthcare provider Hyderabad, hospital mission vision, medical excellence, Andhra Pradesh Telangana healthcare' 
+      });
+      this.canonicalService.setCanonicalUrl('/about-us');
+    }
   }
 
   selectedIndex: number = 0;
@@ -116,12 +140,21 @@ export class AboutUsComponent implements OnInit {
   }
 
   selectedTeam(index: number) {
-    this.selected_team = index
+    this.selected_team = index;
+    if (index === 2) {
+      // Navigate to leadership-team URL
+      this.router.navigate(['/about-us/leadership-team']);
+    } else {
+      // Navigate to main about-us page
+      this.router.navigate(['/about-us']);
+    }
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
   resetSelectedTeam() {
-    this.selected_team = 1
+    this.selected_team = 1;
+    // Navigate back to main about-us page
+    this.router.navigate(['/about-us']);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 }

@@ -23,8 +23,18 @@ export class HeaderComponent implements OnInit, OnDestroy {
     { key: 'home', label: '', route: '/home' },
     {
       key: 'about', label: 'About us', route: '/about-us',
+      children: [
+        {
+          id: 'about-us', label: 'About Us', route: '/about-us'
+        },
+        {
+          id: 'leadership-team', label: 'Leadership Team', route: '/about-us/leadership-team'
+        }
+      ]
     },
-    { key: 'doctor', label: 'Find a Doctor', route: '/our-doctors' },
+    {
+      key: 'doctor', label: 'Find a Doctor', route: '/our-doctors'
+    },
     {
       key: 'specialities', label: 'Specialities', route: '/specialities/kukatpally',
       children: [
@@ -127,7 +137,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.activeTab = 'home';
     this.setActiveBasedOnRoute();
-    
+
     // Listen to route changes
     this.router.events
       .pipe(filter(event => event instanceof NavigationEnd))
@@ -139,9 +149,14 @@ export class HeaderComponent implements OnInit, OnDestroy {
   setActiveBasedOnRoute() {
     const currentUrl = this.router.url;
     console.log('setActiveBasedOnRoute called - Current URL:', currentUrl);
-    
+
+    // Check if we're on an About Us page
+    if (currentUrl.startsWith('/about-us')) {
+      this.activeTab = 'about';
+      console.log('Set active tab to about based on route');
+    }
     // Check if we're on a specialty details page (both old and new format)
-    if (currentUrl.includes('/our-specialities-details/') || currentUrl.includes('/specialities/')) {
+    else if (currentUrl.includes('/our-specialities-details/') || currentUrl.includes('/specialities/')) {
       this.activeTab = 'specialities';
       console.log('Set active tab to specialities based on route (specialty details)');
     }
@@ -171,7 +186,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
     }
     else {
       // For other routes, try to match with navigation items
-      const matchedItem = this.navItems.find(item => 
+      const matchedItem = this.navItems.find(item =>
         item.route && currentUrl.startsWith(item.route)
       );
       if (matchedItem) {
@@ -197,7 +212,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
     // Check if page is scrolled more than 50px
     const wasScrolled = this.isScrolled;
     this.isScrolled = window.scrollY > 50;
-    
+
     // Add/remove body class for proper spacing
     if (this.isScrolled !== wasScrolled) {
       if (this.isScrolled) {
@@ -237,7 +252,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
         .replace(/[^a-z0-9-]/g, '') // Remove special characters except hyphens
         .replace(/-+/g, '-')    // Replace multiple hyphens with single hyphen
         .replace(/^-|-$/g, ''); // Remove leading/trailing hyphens
-      
+
       this.router.navigate(['/locations', urlFriendlyName]).then(() => {
         // Set active state after navigation completes
         this.setActive('branches');
@@ -275,8 +290,13 @@ export class HeaderComponent implements OnInit, OnDestroy {
     console.log('onChildClick called with key:', key, 'id:', id);
 
     if (key === 'about') {
-      this.router.navigate(['/about-us'], { queryParams: { id: id } });
-      this.setActiveSection(id);
+      // Navigate based on the id
+      if (id === 'about-us') {
+        this.router.navigate(['/about-us']);
+      } else if (id === 'leadership-team') {
+        this.router.navigate(['/about-us/leadership-team']);
+      }
+      this.setActive('about');
     } else if (key == 'branches') {
       // Convert location name to URL-friendly format
       const urlFriendlyName = id

@@ -70,13 +70,13 @@ export class AboutUsComponent implements OnInit {
     }
   ]
   boardMembers = [
-    { name: 'Dr M Goutham Reddy', image: 'assets/about_us/dr_goutham_reddy.jpg', label: 'Medical Director' },
-    { name: 'Dr E Venkat Ramana Reddy', image: 'assets/about_us/dr_venkat_ramana_reddy.jpg', label: 'Medical Director' },
-    { name: 'Dr Y Sandeep Reddy', image: 'assets/about_us/dr.y.sandeep_reddy.jpg', label: 'Medical Director' },
-    { name: 'Dr Radha Krishna', image: 'assets/about_us/dr_radha_krishna.jpg', label: 'Medical Director' },
-    { name: 'Dr Ved Prakash', image: 'assets/about_us/dr_ved_prakash.jpg', label: 'Medical Director' },
-    { name: 'Dr Raghava Dutt M', image: 'assets/about_us/dr_raghava_dutt_mulukutla.jpg', label: 'Medical Director' },
-    { name: 'Dr Udai Prakash', image: 'assets/about_us/dr_udai_prakash.jpg', label: 'Medical Director' }
+    { name: 'Dr M Goutham Reddy', image: 'assets/about_us/dr_goutham_reddy.jpg', label: 'Director - Omni Kothapet' },
+    { name: 'Dr E Venkat Ramana Reddy', image: 'assets/about_us/dr_venkat_ramana_reddy.jpg', label: 'Director - Omni Kothapet' },
+    { name: 'Dr Y Sandeep Reddy', image: 'assets/about_us/dr.y.sandeep_reddy.jpg', label: 'Director - Omni Kothapet' },
+    { name: 'Dr Radha Krishna', image: 'assets/about_us/dr_radha_krishna.jpg', label: 'Director - Giggles' },
+    { name: 'Dr Ved Prakash', image: 'assets/about_us/dr_ved_prakash.jpg', label: 'Director - Udai Omni' },
+    { name: 'Dr Raghava Dutt M', image: 'assets/about_us/dr_raghava_dutt_mulukutla.jpg', label: 'Director - Udai Omni' },
+    { name: 'Dr Udai Prakash', image: 'assets/about_us/dr_udai_prakash.jpg', label: 'Director - Udai Omni' }
   ];
   managementteam = [
     {
@@ -103,7 +103,7 @@ export class AboutUsComponent implements OnInit {
       name: 'Ankit Shah',
       designation: 'Group Chief Financial Officer',
       img: 'assets/about_us/anki_shah.svg',
-      description: `Mr. Shah is an accomplished finance and strategy leader with over 20 years of experience across healthcare, life sciences, biotech, and infrastructure. His expertise includes risk management, investment planning, and strategic business development. He has held leadership roles at Alexandria Real Estate Equities Inc. and Ernst & Young. A Chartered Accountant (ICAI), Mr. Shah leads Omni’s financial strategy and governance.`
+      description: `Mr. Shah is an accomplished finance and Investment professional with over 24 years of experience across healthcare, life sciences, biotech, and infrastructure. His expertise includes fund raise, investor relations, investment planning, risk management, business strategy, assurance and taxation. He has held leadership roles at NYSE-listed REIT, Alexandria Real Estate Equities Inc. and Ernst & Young. A Chartered Accountant (ICAI), Mr. Shah leads Omni's growth, financial strategy, investor relations and governance.`
     }
   ];
   ngAfterViewInit(): void {

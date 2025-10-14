@@ -116,17 +116,6 @@
                 "profile": "assets/kukatpally_doctors_profiles/dr_varaprasad.png"
             },
             {
-                "name": "Dr. Vinay",
-                "qualification": [
-                    "MBBS, DNB ( General  Medicine)"
-                ],
-                "depertment": "General Physician & Diabetologist",
-                "specialization": "General Medicine",
-                "work_location": "kukatpally",
-                "experience": "15 Years",
-                "profile": "assets/kukatpally_doctors_profiles/dr_vinay.png"
-            },
-            {
                 "name": "Dr. Tagore Mohan Grandhi",
                 "qualification": [
                     "MBBS, MS, FRCS (UK)",
@@ -149,17 +138,6 @@
                 "work_location": "kukatpally",
                 "experience": "5 Years",
                 "profile": "assets/kukatpally_doctors_profiles/dr_chinthakunta_raghavendra_reddy.png"
-            },
-            {
-                "name": "Dr. Rajendar Byshetty",
-                "qualification": [
-                    "MBBS, MS,DNB, Mch(AIIMS)"
-                ],
-                "depertment": "Surgical Oncologist",
-                "specialization": "Surgical Oncology",
-                "work_location": "kukatpally",
-                "experience": "5 Years",
-                "profile": "assets/kukatpally_doctors_profiles/dr_rajendar_byshetty.png"
             },
             {
                 "name": "Dr. Sandeep Pemira",
@@ -221,18 +199,6 @@
                 "work_location": "kukatpally",
                 "experience": "8 years",
                 "profile": "assets/kukatpally_doctors_profiles/dr_ranjith_nellore_mahesh.png"
-            },
-            {
-                "name": "Dr. Ragi Prasad",
-                "qualification": [
-                    "MBBS, MS (Ortho),",
-                    "FIHRS, FIJR (Germany)"
-                ],
-                "depertment": "Orthopaedic Surgeon",
-                "specialization": "Orthopaedics",
-                "work_location": "kukatpally",
-                "experience": "21 Years",
-                "profile": "assets/kukatpally_doctors_profiles/ragi_prasad.png"
             },
             {
                 "name": "Dr.Kamala Priya",

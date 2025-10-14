@@ -98,14 +98,14 @@
         <li class="nav-item" *ngFor="let item of navItems" [class.dropdown]="item.children"
           [class.show]="hoveredItem === item.key" (mouseenter)="hoveredItem = item.key"
           (mouseleave)="hoveredItem = null">
-          <a *ngIf="item.route && item.key !== 'bookAppointment' && item.key !== 'branches' && item.key !== 'specialities'" class="nav-link" [routerLink]="item.route" routerLinkActive="active"
+          <a *ngIf="item.route && item.key !== 'bookAppointment' && item.key !== 'branches' && item.key !== 'specialities' && item.key !== 'about'" class="nav-link" [routerLink]="item.route" routerLinkActive="active"
             [routerLinkActiveOptions]="{ exact: false }" (click)="setActive(item.key)">
             <ng-container *ngIf="item.key === 'home'">
               <img src="assets/icons/home_page_btn.svg" class="me-1" alt="" width="25px" height="25px" />
             </ng-container>
             {{ item.label }}
           </a>
-          <a *ngIf="item.modalTarget || item.key === 'specialities'" class="nav-link" 
+          <a *ngIf="item.modalTarget || item.key === 'specialities' || item.key === 'about'" class="nav-link" 
             [attr.data-bs-toggle]="item.modalTarget ? 'modal' : null"
             [attr.data-bs-target]="item.modalTarget"
             [routerLink]="item.route"
@@ -115,9 +115,11 @@
           </a>
 
           <!-- Submenu -->
-          <ul class="dropdown-menu p-3 mega-menu" *ngIf="item.children && hoveredItem === item.key">
+          <ul class="dropdown-menu p-3" 
+              [ngClass]="{'mega-menu': item.key === 'specialities' || item.key === 'branches', 'about-dropdown': item.key === 'about'}" 
+              *ngIf="item.children && hoveredItem === item.key">
             <div class="row">
-              <div class="col-md-6" *ngFor="let child of item.children">
+              <div [ngClass]="item.key === 'about' ? 'col-md-12' : 'col-md-6'" *ngFor="let child of item.children">
                 <a class="dropdown-item py-2 border-bottom" (click)="onChildClick(item.key, child.id,child.label)">
                   {{ child.label }}
                 </a>

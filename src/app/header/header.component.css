@@ -23,13 +23,28 @@
   min-width: 600px;
 }
 
+.about-dropdown {
+  min-width: 250px;
+  max-width: 300px;
+}
+
 .mega-menu .dropdown-item:last-child {
+  border-bottom: none;
+}
+
+.about-dropdown .dropdown-item:last-child {
   border-bottom: none;
 }
 
 .mega-menu .dropdown-item:hover {
   background-color: transparent;
   color: #000 !important; /* Changed from #007bff to black */
+  cursor: pointer;
+}
+
+.about-dropdown .dropdown-item:hover {
+  background-color: transparent;
+  color: #000 !important;
   cursor: pointer;
 }
 

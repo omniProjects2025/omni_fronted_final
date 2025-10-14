@@ -22,6 +22,7 @@ export class OurDoctorsComponent implements OnInit, AfterViewInit, OnDestroy {
   specialities: string[] = [];
   locations: string[] = [];
   private filterDebounce: any;
+  private urlUpdateDebounce: any;
   pageSize = 20;
   private io?: IntersectionObserver;
   isAppending = false;
@@ -48,7 +49,8 @@ export class OurDoctorsComponent implements OnInit, AfterViewInit, OnDestroy {
     console.log('OurDoctorsComponent ngOnInit() called');
     
     // Check for filter parameters from query params to restore filter state
-    this.route.queryParams.subscribe(params => {
+    // Only on initial load, not on every URL change
+    this.route.queryParams.pipe(take(1)).subscribe(params => {
       this.isRestoringFromUrl = true;
       
       // Reset filters if no params present
@@ -294,13 +296,19 @@ export class OurDoctorsComponent implements OnInit, AfterViewInit, OnDestroy {
 
   applyFilters() {
     clearTimeout(this.filterDebounce);
+    clearTimeout(this.urlUpdateDebounce);
+    
+    // Apply filters immediately for better UX
     this.filterDebounce = setTimeout(() => {
       this.runFilters();
-      // Only update URL if not restoring from URL parameters
+    }, 150);
+    
+    // Update URL after user stops typing (longer debounce to prevent focus loss)
+    this.urlUpdateDebounce = setTimeout(() => {
       if (!this.isRestoringFromUrl) {
         this.updateUrlWithFilters();
       }
-    }, 100); // Reduced debounce time
+    }, 1000); // Wait 1 second after user stops typing before updating URL
   }
 
   private updateUrlWithFilters() {
@@ -430,6 +438,8 @@ export class OurDoctorsComponent implements OnInit, AfterViewInit, OnDestroy {
 
   ngOnDestroy(): void {
     try { this.io?.disconnect(); } catch {}
+    clearTimeout(this.filterDebounce);
+    clearTimeout(this.urlUpdateDebounce);
   }
 
   // Fallback lazy loading for environments where IO might not trigger reliably

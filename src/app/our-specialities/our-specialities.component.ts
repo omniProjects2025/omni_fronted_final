@@ -233,4 +233,9 @@ export class OurSpecialitiesComponent implements OnInit {
   onImageError(event: any) {
     event.target.src = 'assets/our_specialities/default_specialty.svg';
   }
+
+  navigateToSecondOpinion() {
+    // Navigate to second opinion page
+    this.router.navigate(['/get-a-second-opinion']);
+  }
 }

@@ -108,7 +108,7 @@
                     <div class="text-center px-3">
                         <select class="form-select mb-3" [(ngModel)]="selectedLocation" (change)="onLocationChange()">
                             <option value="">All Locations</option>
-                            <option *ngFor="let loc of locations" [value]="loc">{{ loc }}</option>
+                            <option *ngFor="let loc of locations" [value]="loc" style="text-transform: capitalize;">{{ loc }}</option>
                         </select>
 
                         <select class="form-select mb-3" [(ngModel)]="selectedSpeciality" (change)="applyFilters()">

@@ -3,15 +3,18 @@
         "location": "kukatpally",
         "doctors": [
             {
-                "name": "Dr. Padmaja Subrahmanyam",
+                "name": "Dr. Ranjith Nellore Mahesh",
                 "qualification": [
-                    "MBBS, DGO(MRCOG) OBSTETRICS & GYNAECOLOGY"
+                    "MBBS, MS (Ortho)",
+                    "FIPO (Paediatric Orthopaedics-IGICH)",
+                    "FIJR (Joint Replacement Surgery)",
+                    "FIRKR (Robotic Knee Replacement Surgery)"
                 ],
-                "depertment": "Gynaecologist",
-                "specialization": "Gynecology And Obstetrics",
+                "depertment": "Orthopaedic Surgeon",
+                "specialization": "Orthopaedics",
                 "work_location": "kukatpally",
-                "experience": "25 Years",
-                "profile": "assets/kukatpally_doctors_profiles/padmaja_subramanium.png"
+                "experience": "8 years",
+                "profile": "assets/kukatpally_doctors_profiles/dr_ranjith_nellore_mahesh.png"
             },
             {
                 "name": "Dr. Pramod Kumar Rao T",
@@ -26,15 +29,83 @@
                 "profile": "assets/kukatpally_doctors_profiles/pramod_kumar_rao.png"
             },
             {
-                "name": "Dr Payal Chitransi",
+                "name": "Dr.Kamala Priya",
                 "qualification": [
-                    "MBBS, MS-ENT"
+                    "MBBS, MD, DrNB"
                 ],
-                "depertment": "ENT",
-                "specialization": "ENT",
+                "depertment": "Neuro Physician",
+                "specialization": "Neurology",
                 "work_location": "kukatpally",
-                "experience": "22 Years",
-                "profile": "assets/kukatpally_doctors_profiles/payal_chitransi.png"
+                "experience": "3 Years",
+                "profile": "assets/kukatpally_doctors_profiles/Dr_Kamala_priya.png"
+            },
+            {
+                "name": "Dr. T. Y. Sri Hari",
+                "qualification": [
+                    "MBBS, DNB (Family Medicine), MNAMS"
+                ],
+                "depertment": "Medical Head & Critical Care In-Charge",
+                "specialization": "Emergency Medicine",
+                "work_location": "kukatpally",
+                "experience": "12 Years",
+                "profile": "assets/kukatpally_doctors_profiles/dr_srihari.png"
+            },
+            {
+                "name": "Dr. Varaprasad ",
+                "qualification": [
+                    "MBBS, DNB( Neurosurgery)"
+                ],
+                "depertment": "Neurosurgeon",
+                "specialization": "Neurosurgery",
+                "work_location": "kukatpally",
+                "experience": "12 Years",
+                "profile": "assets/kukatpally_doctors_profiles/dr_varaprasad.png"
+            },
+            {
+                "name": "Dr Nagavender Rao M",
+                "qualification": [
+                    "MBBS, MD ( General Medicine )"
+                ],
+                "depertment": "General Physician",
+                "specialization": "General Medicine",
+                "work_location": "kukatpally",
+                "experience": "24 Years",
+                "profile": "assets/kukatpally_doctors_profiles/nagavender_rao_m.png"
+            },
+            {
+                "name": "Dr. Saidulu",
+                "qualification": [
+                    "MBBS, MD - General Medicine,",
+                    "DrNB - Medical Gastroenterology"
+                ],
+                "depertment": "Medical Gastroenterologist",
+                "specialization": "Medical Gastroenterology",
+                "work_location": "kukatpally",
+                "experience": "6 Years",
+                "profile": "assets/kukatpally_doctors_profiles/ch.saidulu.png"
+            },
+            {
+                "name": "Dr. Tagore Mohan Grandhi",
+                "qualification": [
+                    "MBBS, MS, FRCS (UK)",
+                    " DLS (France)"
+                ],
+                "depertment": "Surgical Gastroenterologist",
+                "specialization": "Surgical Gastroenterology",
+                "work_location": "kukatpally",
+                "experience": "25 Years",
+                "profile": "assets/kukatpally_doctors_profiles/dr_tagore_mohan_grandhi.png"
+            },
+            {
+                "name": "Dr. Padmaja Subrahmanyam",
+                "qualification": [
+                    "MBBS, DGO(MRCOG) OBSTETRICS & GYNAECOLOGY"
+                ],
+                "depertment": "Gynaecologist",
+                "specialization": "Gynecology And Obstetrics",
+                "work_location": "kukatpally",
+                "experience": "25 Years",
+                "profile": "assets/kukatpally_doctors_profiles/padmaja_subramanium.png"
             },
             {
                 "name": "Dr. Chirra Raveendra Reddy",
@@ -59,17 +130,6 @@
                 "work_location": "kukatpally",
                 "experience": "23 Years",
                 "profile": "assets/kukatpally_doctors_profiles/S.kiran.png"
-            },
-            {
-                "name": "Dr Nagavender Rao M",
-                "qualification": [
-                    "MBBS, MD ( General Medicine )"
-                ],
-                "depertment": "General Physician",
-                "specialization": "General Medicine",
-                "work_location": "kukatpally",
-                "experience": "24 Years",
-                "profile": "assets/kukatpally_doctors_profiles/nagavender_rao_m.png"
             },
             {
                 "name": "Dr. Lokesh Kumar K",
@@ -103,29 +163,6 @@
                 "work_location": "kukatpally",
                 "experience": "20 Years",
                 "profile": "assets/kukatpally_doctors_profiles/M.rama_krishna_reddy.png"
-            },
-            {
-                "name": "Dr. Varaprasad ",
-                "qualification": [
-                    "MBBS, DNB( Neurosurgery)"
-                ],
-                "depertment": "Neurosurgeon",
-                "specialization": "Neurosurgery",
-                "work_location": "kukatpally",
-                "experience": "12 Years",
-                "profile": "assets/kukatpally_doctors_profiles/dr_varaprasad.png"
-            },
-            {
-                "name": "Dr. Tagore Mohan Grandhi",
-                "qualification": [
-                    "MBBS, MS, FRCS (UK)",
-                    " DLS (France)"
-                ],
-                "depertment": "Surgical Gastroenterologist",
-                "specialization": "Surgical Gastroenterology",
-                "work_location": "kukatpally",
-                "experience": "25 Years",
-                "profile": "assets/kukatpally_doctors_profiles/dr_tagore_mohan_grandhi.png"
             },
             {
                 "name": "Dr Chinthakunta Raghavendra Reddy",
@@ -175,41 +212,26 @@
                 "profile": "assets/kukatpally_doctors_profiles/dr_neelima_m.png"
             },
             {
-                "name": "Dr. Saidulu",
+                "name": "Dr. Seetha Katta",
                 "qualification": [
-                    "MBBS, MD - General Medicine,",
-                    "DrNB - Medical Gastroenterology"
+                    "MBBS, MD General Medicine"
                 ],
-                "depertment": "Medical Gastroenterologist",
-                "specialization": "Medical Gastroenterology",
+                "depertment": "Consultant Physician",
+                "specialization": "General Medicine",
                 "work_location": "kukatpally",
-                "experience": "6 Years",
-                "profile": "assets/kukatpally_doctors_profiles/ch.saidulu.png"
+                "experience": "8 Years",
+                "profile": "assets/kukatpally_doctors_profiles/dr_seetha_general_medicine.png"
             },
             {
-                "name": "Dr. Ranjith Nellore Mahesh",
+                "name": "Dr Payal Chitransi",
                 "qualification": [
-                    "MBBS, MS (Ortho)",
-                    "FIPO (Paediatric Orthopaedics-IGICH)",
-                    "FIJR (Joint Replacement Surgery)",
-                    "FIRKR (Robotic Knee Replacement Surgery)"
+                    "MBBS, MS-ENT"
                 ],
-                "depertment": "Orthopaedic Surgeon",
-                "specialization": "Orthopaedics",
+                "depertment": "ENT",
+                "specialization": "ENT",
                 "work_location": "kukatpally",
-                "experience": "8 years",
-                "profile": "assets/kukatpally_doctors_profiles/dr_ranjith_nellore_mahesh.png"
-            },
-            {
-                "name": "Dr.Kamala Priya",
-                "qualification": [
-                    "MBBS, MD, DrNB"
-                ],
-                "depertment": "Neuro Physician",
-                "specialization": "Neurology",
-                "work_location": "kukatpally",
-                "experience": "3 Years",
-                "profile": "assets/kukatpally_doctors_profiles/Dr_Kamala_priya.png"
+                "experience": "22 Years",
+                "profile": "assets/kukatpally_doctors_profiles/payal_chitransi.png"
             }
         ]
     },
@@ -226,6 +248,18 @@
                 "work_location": "Nampally",
                 "experience": "28 Years",
                 "profile": "assets/udai_omni_doctor_profiles/Dr_Ved_Prakash.png"
+            },
+            {
+                "name": "Dr M Srinivasa Rao",
+                "qualification": [
+                    "MD (Internal Medicine),",
+                    "DM (Cardiology)"
+                ],
+                "depertment": "Consultant Cardiologist",
+                "specialization": "cardiology",
+                "work_location": "Nampally",
+                "experience": "30 Years",
+                "profile": "assets/udai_omni_doctor_profiles/Dr_M_Srinivasa_Rao.png"
             },
             {
                 "name": "DR. RAGHAVA DUTT MULUKUTLA",
@@ -249,7 +283,7 @@
                     "FRCS (Tr & Ortho.)UK."
                 ],
                 "depertment": "Director and Joint Replacement Surgeon",
-                "specialization": "Joint Replacement",
+                "specialization": "Orthopaedics",
                 "work_location": "Nampally",
                 "experience": "26 Years",
                 "profile": "assets/udai_omni_doctor_profiles/Dr_Udai_Prakash.png"
@@ -343,18 +377,6 @@
                 "work_location": "Nampally",
                 "experience": "",
                 "profile": "assets/udai_omni_doctor_profiles/Dr_Gandhi_Govind_Jugalkishor.png"
-            },
-            {
-                "name": "Dr M Srinivasa Rao",
-                "qualification": [
-                    "MD (Internal Medicine),",
-                    "DM (Cardiology)"
-                ],
-                "depertment": "Consultant Cardiologist",
-                "specialization": "cardiology",
-                "work_location": "Nampally",
-                "experience": "30 Years",
-                "profile": "assets/udai_omni_doctor_profiles/Dr_M_Srinivasa_Rao.png"
             },
             {
                 "name": "Dr Mohammed Touseef Raza",
@@ -477,39 +499,16 @@
         "location": "kothapet",
         "doctors": [
             {
-                "name": "Dr.Ch.Nagaraj",
+                "name": "Dr.Kotha Shyam Sunder Reddy",
                 "qualification": [
-                    "MBBS,M.D.- Anaesthesiology"
+                    "MBBS,",
+                    "DNB - Orthopaedic Surgery"
                 ],
-                "depertment": "Senior consultant and HOD Anaesthesiology",
-                "specialization": "Anaesthesiology",
+                "depertment": "Orthopaedic Surgeon",
+                "specialization": "Orthopaedics",
                 "work_location": "kothapet",
-                "experience": "26 Years",
-                "profile": "assets/kothapet_doctor_profiles_new/Dr_Ch_Nagaraj.png"
-            },
-            {
-                "name": "V.A VANI",
-                "qualification": [
-                    "MBBS,DA,",
-                    "FCCM-Anaesthesiology"
-                ],
-                "depertment": "Anaesthesia",
-                "specialization": "Anaesthesiology",
-                "work_location": "kothapet",
-                "experience": "12 Years",
-                "profile": "assets/kothapet_doctor_profiles_new/Dr_V_A_Vani.png"
-            },
-            {
-                "name": "Dr.N.Surya",
-                "qualification": [
-                    "MBBS,MD,",
-                    "Anaesthesiology"
-                ],
-                "depertment": "Anaesthesia",
-                "specialization": "Anaesthesiology",
-                "work_location": "kothapet",
-                "experience": "25 Years",
-                "profile": "assets/kothapet_doctor_profiles_new/Dr_N_Surya.png"
+                "experience": "13 Years",
+                "profile": "assets/kothapet_doctor_profiles_new/Dr_Kotha_Shyam_Sunder_Reddy.png"
             },
             {
                 "name": "Dr.Sudharshana reddy.g",
@@ -524,6 +523,31 @@
                 "profile": "assets/kothapet_doctor_profiles_new/Dr_Sudharshana_reddy.g.png"
             },
             {
+                "name": "Dr.Umesh Prasad Sharma",
+                "qualification": [
+                    "MBBS, M.D;",
+                    "DM.Neurology"
+                ],
+                "depertment": "Neurologist",
+                "specialization": "Neurology",
+                "work_location": "kothapet",
+                "experience": "19 Years",
+                "profile": "assets/kothapet_doctor_profiles_new/Dr_Umesh_Prasad_Sharma.png"
+            },
+            {
+                "name": "Dr.A.Masthan Reddy",
+                "qualification": [
+                    "MBBS,",
+                    "M.S.General Surgery,",
+                    "M.Ch.Neuro Surgery"
+                ],
+                "depertment": "Neuro Surgeon",
+                "specialization": "Neuro Surgery",
+                "work_location": "kothapet",
+                "experience": "25 Years",
+                "profile": "assets/kothapet_doctor_profiles_new/Dr_A_Masthan_Reddy.png"
+            },
+            {
                 "name": "Dr.Leela Krishna Kaku",
                 "qualification": [
                     "MBBS,MD-GENERAL Medicine,",
@@ -534,29 +558,6 @@
                 "work_location": "kothapet",
                 "experience": "",
                 "profile": ""
-            },
-            {
-                "name": "Dr.Vijaya Bhaskar Mallela ",
-                "qualification": [
-                    "MBBS,M.D-D.V.L "
-                ],
-                "depertment": "Dermatologist",
-                "specialization": "Dermatology",
-                "work_location": "kothapet",
-                "experience": "8 Years",
-                "profile": "assets/kothapet_doctor_profiles_new/Dr_Vijaya_Bhaskar_Mallela.png"
-            },
-            {
-                "name": "Dr.Kolloju Srikanth ",
-                "qualification": [
-                    "MBBS,",
-                    "DNB (Otorhinolaryngology)"
-                ],
-                "depertment": "ENT",
-                "specialization": "ENT",
-                "work_location": "kothapet",
-                "experience": "18 Years",
-                "profile": "assets/kothapet_doctor_profiles_new/Dr_Kolloju_Srikanth.png"
             },
             {
                 "name": "Dr .Katikareddy V .Venugopal Reddy",
@@ -643,40 +644,50 @@
                 "profile": "assets/kothapet_doctor_profiles_new/Dr_Radlam_Padma_Kumari.png"
             },
             {
-                "name": "Dr.Ch.Ranjith Kumar",
+                "name": "Dr.Ch.Nagaraj",
                 "qualification": [
-                    "MBBS,MD,",
-                    "Anaesthesiology"
+                    "MBBS,M.D.- Anaesthesiology"
                 ],
-                "depertment": "ICU",
-                "specialization": "ICU",
+                "depertment": "Senior consultant and HOD Anaesthesiology",
+                "specialization": "Anaesthesiology",
                 "work_location": "kothapet",
-                "experience": "3 Years",
-                "profile": "assets/kothapet_doctor_profiles_new/Dr_Ch_Ranjith_Kumar.png"
+                "experience": "26 Years",
+                "profile": "assets/kothapet_doctor_profiles_new/Dr_Ch_Nagaraj.png"
             },
             {
-                "name": "Dr.Nallola Rahul Dev",
+                "name": "V.A VANI",
                 "qualification": [
-                    "MBBS,MD,",
-                    "Anaesthesiology"
+                    "MBBS,DA,",
+                    "FCCM-Anaesthesiology"
                 ],
-                "depertment": "ICU",
-                "specialization": "ICU",
+                "depertment": "Anaesthesia",
+                "specialization": "Anaesthesiology",
                 "work_location": "kothapet",
-                "experience": "",
-                "profile": ""
+                "experience": "12 Years",
+                "profile": "assets/kothapet_doctor_profiles_new/Dr_V_A_Vani.png"
             },
             {
-                "name": "Dr.Konne Rekha",
+                "name": "Dr.N.Surya",
                 "qualification": [
                     "MBBS,MD,",
                     "Anaesthesiology"
                 ],
-                "depertment": "ICU",
-                "specialization": "ICU",
+                "depertment": "Anaesthesia",
+                "specialization": "Anaesthesiology",
                 "work_location": "kothapet",
-                "experience": "",
-                "profile": ""
+                "experience": "25 Years",
+                "profile": "assets/kothapet_doctor_profiles_new/Dr_N_Surya.png"
+            },
+            {
+                "name": "Dr.Vijaya Bhaskar Mallela ",
+                "qualification": [
+                    "MBBS,M.D-D.V.L "
+                ],
+                "depertment": "Dermatologist",
+                "specialization": "Dermatology",
+                "work_location": "kothapet",
+                "experience": "8 Years",
+                "profile": "assets/kothapet_doctor_profiles_new/Dr_Vijaya_Bhaskar_Mallela.png"
             },
             {
                 "name": "Dr.Ruturaj Maniklal Kolhapure",
@@ -716,31 +727,6 @@
                 "profile": ""
             },
             {
-                "name": "Dr.A.Masthan Reddy",
-                "qualification": [
-                    "MBBS,",
-                    "M.S.General Surgery,",
-                    "M.Ch.Neuro Surgery"
-                ],
-                "depertment": "Neuro Surgeon",
-                "specialization": "Neuro Surgery",
-                "work_location": "kothapet",
-                "experience": "25 Years",
-                "profile": "assets/kothapet_doctor_profiles_new/Dr_A_Masthan_Reddy.png"
-            },
-            {
-                "name": "Dr.Umesh Prasad Sharma",
-                "qualification": [
-                    "MBBS, M.D;",
-                    "DM.Neurology"
-                ],
-                "depertment": "Neurologist",
-                "specialization": "Neurology",
-                "work_location": "kothapet",
-                "experience": "19 Years",
-                "profile": "assets/kothapet_doctor_profiles_new/Dr_Umesh_Prasad_Sharma.png"
-            },
-            {
                 "name": "Dr.Neela Madhavi",
                 "qualification": [
                     "MBBS,DCH "
@@ -750,18 +736,6 @@
                 "work_location": "kothapet",
                 "experience": "",
                 "profile": ""
-            },
-            {
-                "name": "Dr.Kotha Shyam Sunder Reddy",
-                "qualification": [
-                    "MBBS,",
-                    "DNB - Orthopaedic Surgery"
-                ],
-                "depertment": "Orthopaedic Surgeon",
-                "specialization": "Orthopaedics",
-                "work_location": "kothapet",
-                "experience": "13 Years",
-                "profile": "assets/kothapet_doctor_profiles_new/Dr_Kotha_Shyam_Sunder_Reddy.png"
             },
             {
                 "name": "Dr.Vamshi Krishna Reddy .C",
@@ -858,12 +832,72 @@
                 "work_location": "kothapet",
                 "experience": "",
                 "profile": ""
+            },
+            {
+                "name": "Dr.Kolloju Srikanth ",
+                "qualification": [
+                    "MBBS,",
+                    "DNB (Otorhinolaryngology)"
+                ],
+                "depertment": "ENT",
+                "specialization": "ENT",
+                "work_location": "kothapet",
+                "experience": "18 Years",
+                "profile": "assets/kothapet_doctor_profiles_new/Dr_Kolloju_Srikanth.png"
+            },
+            {
+                "name": "Dr.Ch.Ranjith Kumar",
+                "qualification": [
+                    "MBBS,MD,",
+                    "Anaesthesiology"
+                ],
+                "depertment": "ICU",
+                "specialization": "ICU",
+                "work_location": "kothapet",
+                "experience": "3 Years",
+                "profile": "assets/kothapet_doctor_profiles_new/Dr_Ch_Ranjith_Kumar.png"
+            },
+            {
+                "name": "Dr.Nallola Rahul Dev",
+                "qualification": [
+                    "MBBS,MD,",
+                    "Anaesthesiology"
+                ],
+                "depertment": "ICU",
+                "specialization": "ICU",
+                "work_location": "kothapet",
+                "experience": "",
+                "profile": ""
+            },
+            {
+                "name": "Dr.Konne Rekha",
+                "qualification": [
+                    "MBBS,MD,",
+                    "Anaesthesiology"
+                ],
+                "depertment": "ICU",
+                "specialization": "ICU",
+                "work_location": "kothapet",
+                "experience": "",
+                "profile": ""
             }
         ]
     },
     {
         "location": "Kurnool",
         "doctors": [
+            {
+                "name": "Dr. C Indhu Prakash Reddy",
+                "qualification": [
+                    "MBBS, MD (GENERAL MEDICINE)",
+                    "DM (CARDIOLOGY)"
+                ],
+                "depertment": "Consultant Interventional Cardiologist",
+                "specialization": "Cardiology",
+                "work_location": "Kurnool",
+                "experience": "2 Years",
+                "profile": "assets/kurnool_doctor_profiles/Dr_C_Indhu_Prakash_Reddy.png"
+            },
             {
                 "name": "Dr K. G. Govinda Reddy",
                 "qualification": [
@@ -876,18 +910,6 @@
                 "work_location": "Kurnool",
                 "experience": "",
                 "profile": "assets/kurnool_doctor_profiles/Dr_K_G_Govinda Reddy.png"
-            },
-            {
-                "name": "Dr. C Indhu Prakash Reddy",
-                "qualification": [
-                    "MBBS, MD (GENERAL MEDICINE)",
-                    "DM (CARDIOLOGY)"
-                ],
-                "depertment": "Consultant Interventional Cardiologist",
-                "specialization": "Cardiology",
-                "work_location": "Kurnool",
-                "experience": "2 Years",
-                "profile": "assets/kurnool_doctor_profiles/Dr_C_Indhu_Prakash_Reddy.png"
             }
         ]
     },

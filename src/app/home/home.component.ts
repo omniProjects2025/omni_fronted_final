@@ -609,7 +609,7 @@ export class HomeComponent implements OnInit, OnDestroy {
       nav: false,
       dots: false,
       autoplay: true,
-      autoplayTimeout: 3000,
+      autoplayTimeout: 4000,
       autoplayHoverPause: true,
       items: 1,
       responsive: {

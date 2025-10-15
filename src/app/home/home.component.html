@@ -2,19 +2,33 @@
 <header class="container-fluid p-0 position-relative bg-white">
   <div class="owl-carousel banner-slider owl-theme position-relative m-0" style="margin: 0px !important;">
     <div class="banner-item position-relative">
-      <img src="assets/images/not_sure_about_surgery.jpg" class="w-100 d-none d-md-block" alt="Banner 1">
-            <img src="assets/images/not_sure_about_surgery_mobile.jpg" class="d-block d-md-none" alt="Banner 1">
+      <a href="specialities/kukatpally" target="_blank" rel="noopener noreferrer">
+        <img src="assets/images/not_sure_about_surgery.jpg" class="w-100 d-none d-md-block" alt="Banner 1">
+        <img src="assets/images/not_sure_about_surgery_mobile.jpg" class="d-block d-md-none" alt="Banner 1">
+      </a>
     </div>
     <div class="banner-item position-relative">
-      <img src="assets/images/TKR_Website_banner.jpg" class=" img-fluid d-none d-md-block" alt="Banner 2">
-            <img src="assets/images/TKR_Website_banner_mobile.jpg" class="d-block d-md-none" alt="Banner 2">
+      <a href="total-knee-replacement-surgery-kukatpally-hyderabad" target="_blank" rel="noopener noreferrer">
+        <img src="assets/images/TKR_Website_banner.jpg" class=" img-fluid d-none d-md-block" alt="Banner 2">
+        <img src="assets/images/TKR_Website_banner_mobile.jpg" class="d-block d-md-none" alt="Banner 2">
+      </a>
     </div>
     <div class="banner-item position-relative">
+      <a href="specialities/orthopedics/kukatpally" target="_blank" rel="noopener noreferrer">
       <img src="assets/images/free_bmd_camp.jpeg" class="img-fluid d-none d-md-block" alt="Banner Desktop" />
-      <img src="assets/images/free_bmd_camp_mobile.jpeg" class="d-block d-md-none"
-        alt="Banner Mobile" />
+      <img src="assets/images/free_bmd_camp_mobile.jpeg" class="d-block d-md-none" alt="Banner Mobile" />
+      </a>
     </div>
-
+    <div class="banner-item position-relative">
+      <img src="assets/images/locations_fourth.jpg" class="img-fluid d-none d-md-block" alt="Banner Desktop" />
+      <img src="assets/images/locations_fourth_mobile.jpg" class="d-block d-md-none" alt="Banner Mobile" />
+    </div>
+    <div class="banner-item position-relative">
+      <a href="locations/kukatpally">
+      <img src="assets/images/ranks_banner.jpg" class="img-fluid d-none d-md-block" alt="Banner Desktop" />
+      <img src="assets/images/ranks_banner_mobile.jpg" class="d-block d-md-none" alt="Banner Mobile" />
+      </a>
+    </div>
   </div>
 </header>
 
@@ -48,8 +62,8 @@
 
 <div class="d-flex speciality-container px-2 gap-4 justify-content-center mt-4"
   style="overflow-x: auto; white-space: nowrap; -webkit-overflow-scrolling: touch;">
-  <div *ngFor="let spe of specialities; index as i" (click)="ourSpecialities(i)"
-    class="speciality-item px-3 py-2" [ngClass]="i == active_button ? 'btn_active' : 'text_gray'">
+  <div *ngFor="let spe of specialities; index as i" (click)="ourSpecialities(i)" class="speciality-item px-3 py-2"
+    [ngClass]="i == active_button ? 'btn_active' : 'text_gray'">
     <span>{{ spe.spe_name }}</span>
   </div>
 </div>
@@ -162,25 +176,22 @@
     <div class="row g-2 g-md-3">
       <div class="col-md-5 col-sm-12 col-xs-12">
         <div class="owl-carousel" #owlCarousel>
-          <div *ngFor="let testimonial of testimonials; let idx = index; trackBy: trackByTestimonial" class="testimonial-item card">
+          <div *ngFor="let testimonial of testimonials; let idx = index; trackBy: trackByTestimonial"
+            class="testimonial-item card">
             <div class="row g-0">
               <!-- Video on left -->
               <div class="col-md-4 d-flex align-items-center justify-content-center">
                 <div class="video-embed-wrapper">
                   <div *ngIf="!isVideoPlaying(idx)" class="video-thumbnail" (click)="playTestimonialVideo(idx)">
-                    <img [src]="'https://img.youtube.com/vi/' + testimonial.thumbnailUrl + '/hqdefault.jpg'" class="w-100 h-100 object-fit-cover" [alt]="'Video thumbnail for ' + testimonial.thumbnailUrl" />
+                    <img [src]="'https://img.youtube.com/vi/' + testimonial.thumbnailUrl + '/hqdefault.jpg'"
+                      class="w-100 h-100 object-fit-cover" [alt]="'Video thumbnail for ' + testimonial.thumbnailUrl" />
                     <div class="play-button">&#9654;</div>
                   </div>
                   <div *ngIf="isVideoPlaying(idx)" class="video-iframe-container">
-                    <iframe 
-                      [src]="testimonial.videoUrl | videoUrl:true" 
+                    <iframe [src]="testimonial.videoUrl | videoUrl:true"
                       allow="autoplay; encrypted-media; fullscreen; picture-in-picture; accelerometer; gyroscope; clipboard-write; web-share"
-                      allowfullscreen
-                      webkitallowfullscreen
-                      mozallowfullscreen
-                      frameborder="0" 
-                      title="YouTube video player" 
-                      referrerpolicy="strict-origin-when-cross-origin">
+                      allowfullscreen webkitallowfullscreen mozallowfullscreen frameborder="0"
+                      title="YouTube video player" referrerpolicy="strict-origin-when-cross-origin">
                     </iframe>
                   </div>
                 </div>
@@ -300,74 +311,57 @@
 
 
 
-<!-- contact-form.component.html -->
-<div class="py-5 px-3 px-md-5">
-  <div class="row">
-    <h5 class="fw-bold mb-3 text-center">Have Questions Or Need Assistance?</h5>
+  <!-- contact-form.component.html -->
+  <div class="py-5 px-3 px-md-5">
+    <div class="row">
+      <h5 class="fw-bold mb-3 text-center">Have Questions Or Need Assistance?</h5>
 
-    <!-- Left Text -->
-    <h2 class="col-md-2 fw-bold lh-sm m-0 fs-4 text-center text-md-start">
-      WE'RE HERE FOR YOU, ANYTIME!
-    </h2>
+      <!-- Left Text -->
+      <h2 class="col-md-2 fw-bold lh-sm m-0 fs-4 text-center text-md-start">
+        WE'RE HERE FOR YOU, ANYTIME!
+      </h2>
 
-    <div class="col-md-10">
-      <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)" class="row g-3">
+      <div class="col-md-10">
+        <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)" class="row g-3">
 
-        <!-- Name Field -->
-        <div class="col-12 col-md-4">
-          <input type="text"
-                 class="form-control"
-                 name="name"
-                 placeholder="Name*"
-                 [(ngModel)]="formData.name"
-                 required
-                 #name="ngModel">
-          <div *ngIf="name.invalid && name.touched" class="text-danger mt-1">
-            Name is required
+          <!-- Name Field -->
+          <div class="col-12 col-md-4">
+            <input type="text" class="form-control" name="name" placeholder="Name*" [(ngModel)]="formData.name" required
+              #name="ngModel">
+            <div *ngIf="name.invalid && name.touched" class="text-danger mt-1">
+              Name is required
+            </div>
           </div>
-        </div>
 
-        <!-- Phone Field -->
-        <div class="col-12 col-md-4">
-          <input type="text"
-                 class="form-control"
-                 name="phone"
-                 placeholder="Phone Number*"
-                 [(ngModel)]="formData.phone"
-                 required
-                 #phone="ngModel">
-          <div *ngIf="phone.invalid && phone.touched" class="text-danger mt-1">
-            Phone number is required
+          <!-- Phone Field -->
+          <div class="col-12 col-md-4">
+            <input type="text" class="form-control" name="phone" placeholder="Phone Number*"
+              [(ngModel)]="formData.phone" required #phone="ngModel">
+            <div *ngIf="phone.invalid && phone.touched" class="text-danger mt-1">
+              Phone number is required
+            </div>
           </div>
-        </div>
 
-        <!-- Email Field -->
-        <div class="col-12 col-md-4">
-          <input type="email"
-                 class="form-control"
-                 name="email"
-                 placeholder="Email"
-                 [(ngModel)]="formData.email"
-                 email
-                 #email="ngModel">
-          <div *ngIf="email.invalid && email.touched" class="text-danger mt-1">
-            Enter a valid email
+          <!-- Email Field -->
+          <div class="col-12 col-md-4">
+            <input type="email" class="form-control" name="email" placeholder="Email" [(ngModel)]="formData.email" email
+              #email="ngModel">
+            <div *ngIf="email.invalid && email.touched" class="text-danger mt-1">
+              Enter a valid email
+            </div>
           </div>
-        </div>
 
-        <!-- Submit button -->
-        <div class="col-12 text-center text-md-start">
-          <button type="submit"
-                  class="btn px-5 py-2 mt-3"
-                  style="background-color: #0291D5; color: white;">
-            Submit
-          </button>
-        </div>
+          <!-- Submit button -->
+          <div class="col-12 text-center text-md-start">
+            <button type="submit" class="btn px-5 py-2 mt-3" style="background-color: #0291D5; color: white;">
+              Submit
+            </button>
+          </div>
 
-      </form>
+        </form>
+      </div>
     </div>
   </div>
-</div>
 
 
 </div>
@@ -410,7 +404,8 @@
 </div>
 
 
-<div class="modal fade appointment-modal" id="appointmentModal" tabindex="-1" aria-hidden="true" data-bs-backdrop="static">
+<div class="modal fade appointment-modal" id="appointmentModal" tabindex="-1" aria-hidden="true"
+  data-bs-backdrop="static">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <!-- Modal Header -->
@@ -434,10 +429,13 @@
             <!-- Full Name -->
             <div class="col-12">
               <div class="form-group">
-                <label for="fullName" class="form-label" [class.error-label]="!appointmentForm.form.get('fullName')?.valid && appointmentForm.form.get('fullName')?.touched">Full Name *</label>
-                <input type="text" class="form-control" id="fullName" name="fullName" 
-                       [(ngModel)]="appointmentFormData.fullName" placeholder="Enter your full name" required>
-                <div class="error-message" *ngIf="!appointmentForm.form.get('fullName')?.valid && appointmentForm.form.get('fullName')?.touched">
+                <label for="fullName" class="form-label"
+                  [class.error-label]="!appointmentForm.form.get('fullName')?.valid && appointmentForm.form.get('fullName')?.touched">Full
+                  Name *</label>
+                <input type="text" class="form-control" id="fullName" name="fullName"
+                  [(ngModel)]="appointmentFormData.fullName" placeholder="Enter your full name" required>
+                <div class="error-message"
+                  *ngIf="!appointmentForm.form.get('fullName')?.valid && appointmentForm.form.get('fullName')?.touched">
                   Full Name is required
                 </div>
               </div>
@@ -446,10 +444,13 @@
             <!-- Phone Number -->
             <div class="col-12">
               <div class="form-group">
-                <label for="phoneNumber" class="form-label" [class.error-label]="!appointmentForm.form.get('phoneNumber')?.valid && appointmentForm.form.get('phoneNumber')?.touched">Phone Number *</label>
-                <input type="tel" class="form-control" id="phoneNumber" name="phoneNumber" 
-                       [(ngModel)]="appointmentFormData.phoneNumber" placeholder="Enter your phone number" required>
-                <div class="error-message" *ngIf="!appointmentForm.form.get('phoneNumber')?.valid && appointmentForm.form.get('phoneNumber')?.touched">
+                <label for="phoneNumber" class="form-label"
+                  [class.error-label]="!appointmentForm.form.get('phoneNumber')?.valid && appointmentForm.form.get('phoneNumber')?.touched">Phone
+                  Number *</label>
+                <input type="tel" class="form-control" id="phoneNumber" name="phoneNumber"
+                  [(ngModel)]="appointmentFormData.phoneNumber" placeholder="Enter your phone number" required>
+                <div class="error-message"
+                  *ngIf="!appointmentForm.form.get('phoneNumber')?.valid && appointmentForm.form.get('phoneNumber')?.touched">
                   Phone Number is required
                 </div>
               </div>
@@ -459,17 +460,19 @@
             <div class="col-12">
               <div class="form-group">
                 <label for="email" class="form-label">Email ID</label>
-                <input type="email" class="form-control" id="email" name="email" 
-                       [(ngModel)]="appointmentFormData.email" placeholder="Enter your email">
+                <input type="email" class="form-control" id="email" name="email" [(ngModel)]="appointmentFormData.email"
+                  placeholder="Enter your email">
               </div>
             </div>
 
             <!-- Location -->
             <div class="col-12">
               <div class="form-group">
-                <label for="location" class="form-label" [class.error-label]="!appointmentForm.form.get('location')?.valid && appointmentForm.form.get('location')?.touched">Preferred Location *</label>
-                <select class="form-select" id="location" name="location" 
-                        [(ngModel)]="appointmentFormData.location" required>
+                <label for="location" class="form-label"
+                  [class.error-label]="!appointmentForm.form.get('location')?.valid && appointmentForm.form.get('location')?.touched">Preferred
+                  Location *</label>
+                <select class="form-select" id="location" name="location" [(ngModel)]="appointmentFormData.location"
+                  required>
                   <option value="" disabled selected>Select Location</option>
                   <option value="Kothapet">Kothapet</option>
                   <option value="Kukatpally">Kukatpally</option>
@@ -477,7 +480,8 @@
                   <option value="Vizag">Vizag</option>
                   <option value="Kurnool">Kurnool</option>
                 </select>
-                <div class="error-message" *ngIf="!appointmentForm.form.get('location')?.valid && appointmentForm.form.get('location')?.touched">
+                <div class="error-message"
+                  *ngIf="!appointmentForm.form.get('location')?.valid && appointmentForm.form.get('location')?.touched">
                   Please select a location
                 </div>
               </div>
@@ -486,9 +490,11 @@
             <!-- Department -->
             <div class="col-12">
               <div class="form-group">
-                <label for="department" class="form-label" [class.error-label]="!appointmentForm.form.get('department')?.valid && appointmentForm.form.get('department')?.touched">Department *</label>
-                <select class="form-select" id="department" name="department" 
-                        [(ngModel)]="appointmentFormData.department" required>
+                <label for="department" class="form-label"
+                  [class.error-label]="!appointmentForm.form.get('department')?.valid && appointmentForm.form.get('department')?.touched">Department
+                  *</label>
+                <select class="form-select" id="department" name="department"
+                  [(ngModel)]="appointmentFormData.department" required>
                   <option value="" disabled selected>Select Department</option>
                   <option value="Cardiology">Cardiology</option>
                   <option value="Neurology">Neurology</option>
@@ -497,7 +503,8 @@
                   <option value="Gastroenterology">Gastroenterology</option>
                   <option value="Pediatrics">Pediatrics</option>
                 </select>
-                <div class="error-message" *ngIf="!appointmentForm.form.get('department')?.valid && appointmentForm.form.get('department')?.touched">
+                <div class="error-message"
+                  *ngIf="!appointmentForm.form.get('department')?.valid && appointmentForm.form.get('department')?.touched">
                   Please select a department
                 </div>
               </div>
@@ -507,8 +514,9 @@
             <div class="col-12">
               <div class="form-group">
                 <label for="message" class="form-label">Additional Message</label>
-                <textarea class="form-control" id="message" name="message" rows="2" 
-                          [(ngModel)]="appointmentFormData.message" placeholder="Any specific requirements or concerns..."></textarea>
+                <textarea class="form-control" id="message" name="message" rows="2"
+                  [(ngModel)]="appointmentFormData.message"
+                  placeholder="Any specific requirements or concerns..."></textarea>
               </div>
             </div>
           </div>

@@ -133,10 +133,10 @@ export class HomeComponent implements OnInit, OnDestroy {
   fullText = 'OMNI hospitals was established with an intention of being a comprehensive & cost-effective chain of hospitals that provides super-specialty services with warmth and care. Omni hospitals is Owned by the healthcare division of incor group. OMNI hospitals was established with an intention of being a comprehensive & cost-effective chain of hospitals that provides super-specialty services with warmth and care. Omni hospitals is Owned by the healthcare division of incor group.';
 
   why_choose_omni = [
-    { title: 'Hospitals', value: '6+', img: 'assets/icons/hospitals.svg' },
-    { title: 'Beds', value: '750+', img: 'assets/icons/beds.svg' },
+    { title: 'Hospitals', value: '6', img: 'assets/icons/hospitals.svg' },
+    { title: 'Beds', value: '800+', img: 'assets/icons/beds.svg' },
     { title: 'Doctors', value: '450+', img: 'assets/icons/doctors.svg' },
-    { title: 'Pharmacies', value: '10+', img: 'assets/icons/pharmacies.svg' }
+    { title: 'Pharmacies', value: '6', img: 'assets/icons/pharmacies.svg' }
   ];
 
   technologies = [

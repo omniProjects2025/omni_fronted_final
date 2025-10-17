@@ -11,8 +11,8 @@ import { environment } from '../../environments/environment';
 export class SecondOpinionComponent{
   counters = [
     { id: 1, img: 'branches_counter.svg', label: 'Hospitals', target: 6, value: 0 },
-    { id: 2, img: 'beds_counter.svg', label: 'Beds', target: 1200, value: 0 },
-    { id: 3, img: 'doctor_counter.svg', label: 'Doctors', target: 200, value: 0 },
+    { id: 2, img: 'beds_counter.svg', label: 'Beds', target: 800, value: 0 },
+    { id: 3, img: 'doctor_counter.svg', label: 'Doctors', target: 450, value: 0 },
     { id: 4, img: 'pharmacy_counter.svg', label: 'Pharmacy', target: 6, value: 0 }
   ];
   secondOpinionData = {

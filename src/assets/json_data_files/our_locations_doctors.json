@@ -987,6 +987,17 @@
                 "work_location": "vizag",
                 "experience": "22 Years",
                 "profile": "assets/vizag_doctors/DR_M_VIJAYKANTH.png"
+            },
+            {
+                "name": "Dr. Lagudu Naresh",
+                "qualification": [
+                    "MBBS ,FCCCM"
+                ],
+                "depertment": "Intensivist",
+                "specialization": "Emergency Medicine",
+                "work_location": "vizag",
+                "experience": "6 Years",
+                "profile": "assets/vizag_doctors/dr_lagudu_naresh.png"
             }
         ]
     },

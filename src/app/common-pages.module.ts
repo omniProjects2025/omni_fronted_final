@@ -45,6 +45,9 @@ const routes: Routes = [
   { path: 'package-details', component: PackageDetailsComponent },
   
   // New SEO-friendly routes - Order matters! Static routes MUST come before parameterized routes
+  // Cardiology sub-department routes (most specific first)
+  { path: 'specialities/cardiology', loadChildren: () => import('./cardiology-sub-departments/cardiology-sub-departments.module').then(m => m.CardiologySubDepartmentsModule) },
+  
   // Location-only routes (static) - most specific first
   { path: 'specialities/kukatpally', component: OurSpecialitiesComponent },
   { path: 'specialities/vizag', component: OurSpecialitiesComponent },

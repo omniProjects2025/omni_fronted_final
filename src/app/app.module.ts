@@ -2,6 +2,7 @@ import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
+import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HeaderComponent } from './header/header.component';
@@ -49,15 +50,14 @@ import { NewlineToBrPipe } from './pipes/newline-to-br.pipe';
 import { PrivacyPolocyComponent } from './privacy-polocy/privacy-polocy.component';
 import { TermsConditionsComponent } from './terms-conditions/terms-conditions.component';
 import { KeySurgeriesComponent } from './key-surgeries/key-surgeries.component';
+import { CardiologySubDepartmentsModule } from './cardiology-sub-departments/cardiology-sub-departments.module';
 
 @NgModule({
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   declarations: [
     AppComponent,
-    HeaderComponent,
     OurDoctorsComponent,
     HomeComponent,
-    FooterComponent,
     SecondOpinionComponent,
     AboutUsComponent,
     HealthCheckupComponent,
@@ -96,13 +96,18 @@ import { KeySurgeriesComponent } from './key-surgeries/key-surgeries.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    RouterModule,
     FormsModule,
     // CarouselModule,
     HttpClientModule,
     CommonModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    YouTubePlayerModule
+    YouTubePlayerModule,
+    CardiologySubDepartmentsModule
+  ],
+  exports: [
+    // HeaderComponent and FooterComponent are now declared in CardiologySubDepartmentsModule
   ],
   providers: [
     { provide: RouteReuseStrategy, useClass: CustomRouteReuseStrategy },

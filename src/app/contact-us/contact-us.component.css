@@ -312,3 +312,101 @@ input{
     padding-bottom: 50%; /* More compact on small mobile screens */
   }
 }
+
+/* Rating styles */
+.rating-container {
+  font-family: 'Roboto', sans-serif;
+}
+
+.rating-text {
+  font-weight: 600;
+  font-size: 16px;
+  color: #333;
+}
+
+.stars {
+  font-size: 16px;
+}
+
+.star-filled {
+  color: #ffa500; /* Orange color for filled stars */
+}
+
+.star-empty {
+  color: #ddd; /* Light gray for empty stars */
+}
+
+.review-count {
+  font-size: 14px;
+  color: #666;
+  font-weight: 400;
+}
+
+.clickable-reviews {
+  cursor: pointer;
+  color: #008FD5 !important;
+  text-decoration: underline;
+  transition: all 0.3s ease;
+}
+
+.clickable-reviews:hover {
+  color: #0066a3 !important;
+  text-decoration: none;
+}
+
+/* Mobile-specific rating styles */
+@media (max-width: 768px) {
+  .rating-container {
+    margin-bottom: 0.75rem;
+  }
+  
+  .rating-text {
+    font-size: 18px;
+    font-weight: 700;
+  }
+  
+  .stars {
+    font-size: 18px;
+  }
+  
+  .review-count {
+    font-size: 15px;
+    font-weight: 500;
+  }
+  
+  .clickable-reviews {
+    font-size: 15px;
+    font-weight: 500;
+  }
+}
+
+@media (max-width: 576px) {
+  .rating-container {
+    margin-bottom: 0.5rem;
+  }
+  
+  .rating-text {
+    font-size: 16px;
+    font-weight: 700;
+  }
+  
+  .stars {
+    font-size: 16px;
+  }
+  
+  .review-count {
+    font-size: 14px;
+    font-weight: 500;
+  }
+  
+  .clickable-reviews {
+    font-size: 14px;
+    font-weight: 500;
+  }
+  
+  /* Make rating more prominent on mobile */
+  .rating-container .d-flex {
+    flex-wrap: wrap;
+    gap: 0.25rem;
+  }
+}

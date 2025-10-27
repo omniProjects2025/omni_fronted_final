@@ -1,0 +1,567 @@
+{
+  "speciality": "Cardiology",
+  "location": "Kukatpally",
+  "sub_departments": [
+    {
+      "slug": "treatment-for-heart-failure-in-kukatpally",
+      "name": "Heart Failure",
+      "url": "/specialities/cardiology/treatment-for-heart-failure-in-kukatpally",
+      "meta_title": "Heart Failure Treatment in Kukatpally | Omni Hospitals",
+      "meta_description": "Get advanced Heart Failure Treatment at OMNI Hospitals Kukatpally. Specialized diagnosis and personalized care for congestive and chronic diastolic heart failure (Medications, ICDs, CRT).",
+      "canonical_url": "https://omnihospitals.in/specialities/cardiology/treatment-for-heart-failure-in-kukatpally/",
+      "image": "assets/our_specialities_new/heart_failure.jpg",
+      "content": {
+        "h1": "Heart Failure Treatment in Hyderabad",
+        "intro": "Heart failure is a condition where the heart cannot pump enough blood to meet the body's needs. It often develops over time due to conditions like high blood pressure, coronary artery disease, or previous heart attacks that weaken the heart muscle. At OMNI Hospitals, our expert heart failure doctors provide advanced diagnosis, effective congestive heart failure treatment, and long-term management plans for patients with chronic or acute heart failure, including chronic diastolic heart failure.",
+        "sections": [
+          {
+            "h2": "Common Causes of Heart Failure",
+            "description": "Heart failure may result from several heart and systemic conditions:",
+            "subsections": [
+              {
+                "h3": "Coronary Artery Disease (CAD)",
+                "description": "Narrowed or blocked arteries reduce blood supply to the heart."
+              },
+              {
+                "h3": "Congenital Heart Defects",
+                "description": "Structural issues present from birth."
+              },
+              {
+                "h3": "Heart Attack",
+                "description": "Damage from a past attack can impair heart function."
+              },
+              {
+                "h3": "Cardiomyopathy",
+                "description": "Weakened heart muscles due to infections, alcohol, genetics, or drug abuse."
+              },
+              {
+                "h3": "Other Conditions",
+                "description": "Hypertension, diabetes, kidney disease, thyroid disorders, and valve disease."
+              }
+            ]
+          },
+          {
+            "h2": "Congestive Heart Failure Symptoms to Watch For",
+            "description": "Early recognition of heart failure symptoms is essential for timely treatment. Key signs include:",
+            "list": [
+              "Shortness of breath (during activity or at rest)",
+              "Fatigue and weakness",
+              "Swelling in feet or ankles (pedal edema)",
+              "Nocturnal coughing or breathing difficulty (PND)",
+              "Frequent urination at night",
+              "Chest pain or pressure",
+              "Loss of appetite, indigestion",
+              "Dizziness or giddiness",
+              "Persistent dry cough"
+            ]
+          },
+          {
+            "h2": "Diagnosis of Heart Failure at OMNI Hospitals",
+            "description": "Our heart failure doctors in Hyderabad use a combination of clinical evaluation and advanced diagnostics:",
+            "subsections": [
+              {
+                "h3": "2D Echo",
+                "description": "Assesses heart pumping, valve function, and chamber size"
+              },
+              {
+                "h3": "ECG (Electrocardiogram)",
+                "description": "Identifies rhythm abnormalities or heart attack history"
+              },
+              {
+                "h3": "Chest X-ray",
+                "description": "Checks for heart enlargement and fluid in the lungs"
+              },
+              {
+                "h3": "BNP / NT-proBNP Blood Test",
+                "description": "Indicates the presence and severity of heart failure"
+              },
+              {
+                "h3": "Advanced Tests",
+                "description": "CT scan, MRI, coronary angiogram, stress tests, or myocardial biopsy if needed"
+              }
+            ]
+          },
+          {
+            "h2": "Heart Failure Treatment Options in Hyderabad",
+            "description": "OMNI Hospitals offers personalized heart failure treatment based on severity and patient needs:",
+            "subsections": [
+              {
+                "h3": "Lifestyle Modifications",
+                "description": "Weight management, salt and fluid restriction, cardiac rehabilitation and low-impact exercise, complete avoidance of smoking, alcohol, and substance abuse"
+              },
+              {
+                "h3": "Medications",
+                "description": "Diuretics to prevent fluid retention, ACE inhibitors, beta-blockers, and other heart medications to improve heart function"
+              },
+              {
+                "h3": "Surgical Interventions",
+                "description": "Bypass surgery, valve repair, or replacement, heart transplant in end-stage heart failure"
+              },
+              {
+                "h3": "Implantable Cardiac Devices",
+                "description": "ICDs (Implantable Cardioverter Defibrillators): Correct dangerous arrhythmias, CRT (Cardiac Resynchronization Therapy): Synchronizes heartbeats and improves pump function"
+              }
+            ]
+          }
+        ],
+        "why_choose_us": {
+          "title": "Why Choose OMNI Hospitals for Heart Failure Treatment in Hyderabad?",
+          "cards": [
+            {
+              "icon": "fas fa-user-md",
+              "title": "Experienced cardiologists and heart failure specialists",
+              "description": ""
+            },
+            {
+              "icon": "fas fa-heartbeat",
+              "title": "Advanced diagnostics and state-of-the-art cardiac care units",
+              "description": ""
+            },
+            {
+              "icon": "fas fa-hospital",
+              "title": "Personalized treatment plans and rehabilitation support",
+              "description": ""
+            },
+            {
+              "icon": "fas fa-clock",
+              "title": "24/7 emergency cardiac care",
+              "description": ""
+            }
+          ],
+          "paragraphs": [
+            {
+              "icon": "fas fa-users",
+              "text": "Book an appointment today with a leading heart failure doctor in Hyderabad to get evaluated for congestive heart failure symptoms or ongoing management of chronic diastolic heart failure."
+            }
+          ]
+        },
+        "faqs": [
+          {
+            "question": "Which is the best hospital for heart failure treatment in Hyderabad?",
+            "answer": "OMNI Hospitals is the best hospital for heart failure treatment in Hyderabad, offering advanced cardiac care and personalized treatment plans by experienced cardiologists."
+          },
+          {
+            "question": "What are the common symptoms of heart failure?",
+            "answer": "Common symptoms include shortness of breath, swelling in the legs or ankles, fatigue, irregular heartbeat, and persistent coughing or wheezing."
+          },
+          {
+            "question": "How is heart failure diagnosed?",
+            "answer": "Heart failure is diagnosed using tests such as echocardiogram, ECG, chest X-ray, blood tests, and cardiac MRI to assess heart function and structure."
+          }
+        ]
+      }
+    },
+    {
+      "slug": "best-hospital-for-angiography-in-hyderabad",
+      "name": "Coronary Angiogram",
+      "url": "/specialities/cardiology/best-hospital-for-angiography-in-hyderabad",
+      "meta_title": "Coronary Angiogram in kukatpally, hyderabad | Omni Hospitals",
+      "meta_description": "OMNI Hospitals offers the best Coronary Angiogram (Cardiac Catheterization) in Hyderabad. Get accurate diagnosis of CAD, heart blockages, and chest pain using advanced Cath Lab facilities.",
+      "canonical_url": "https://omnihospitals.in/specialities/cardiology/best-hospital-for-angiography-in-hyderabad/",
+      "image": "assets/our_specialities_new/angiogram.jpg",
+      "content": {
+        "h1": "Coronary Angiogram in Hyderabad",
+        "intro": "A Coronary Angiogram, also called Cardiac Catheterization, is a specialized diagnostic procedure used to detect blockages in the coronary arteries. This test helps identify Coronary Artery Disease (CAD), a condition where cholesterol, plaque, or fat deposits restrict blood flow to the heart, potentially leading to a heart attack. OMNI Hospitals is the best hospital for angiogram in Hyderabad, providing accurate diagnosis and expert cardiac care from the city's top angiogram specialists.",
+        "sections": [
+          {
+            "h2": "Accurate Diagnosis of Coronary Artery Disease (CAD) at OMNI Hospitals",
+            "description": "A Coronary Angiogram, also called Cardiac Catheterization, is a specialized diagnostic procedure used to detect blockages in the coronary arteries. This test helps identify Coronary Artery Disease (CAD), a condition where cholesterol, plaque, or fat deposits restrict blood flow to the heart, potentially leading to a heart attack. OMNI Hospitals is the best hospital for angiogram in Hyderabad, providing accurate diagnosis and expert cardiac care from the city's top angiogram specialists."
+          },
+          {
+            "h2": "How a Coronary Angiogram Works",
+            "description": "During the procedure, a thin, flexible tube called a catheter is inserted into a blood vessel, usually through the wrist or groin. A contrast dye (safe for medical use) is injected into the coronary arteries. As the dye flows through the heart's arteries, it becomes visible under real-time X-ray imaging (fluoroscopy). The resulting images, known as an angiogram, allow cardiologists to identify the location and severity of blockages, a crucial step before treatments such as angioplasty or stent placement."
+          },
+          {
+            "h2": "When Is a Coronary Angiogram Recommended?",
+            "list": [
+              "Chest pain or angina (tightness, pressure, or burning sensation)",
+              "Abnormal ECG, stress test, or echocardiogram results",
+              "Unexplained pain in the jaw, neck, shoulder or arm",
+              "Suspected coronary artery disease (CAD)",
+              "Congenital heart defects (CHDs)",
+              "History of chest trauma or heart injury",
+              "Preoperative cardiac evaluation before surgery"
+            ]
+          },
+          {
+            "h2": "Duration of the Procedure",
+            "description": "A coronary angiogram typically takes between 30 minutes to 1 hour. If angioplasty or stent placement is performed in the same session, the duration may extend depending on the patient's condition."
+          },
+          {
+            "h2": "Post-Angiogram Care and Recovery",
+            "description": "After the procedure, patients are observed for a few hours to ensure stable recovery. Most individuals can return home the same day or within 24 hours. Follow-up visits help review the angiogram results and plan further treatment if needed.",
+            "subsections": [
+              {
+                "h3": "Post-procedure care includes:",
+                "description": "Following a heart-healthy lifestyle, avoiding smoking, alcohol, and tobacco, maintaining optimal cholesterol and blood pressure levels, regular exercise as recommended by the cardiologist"
+              }
+            ]
+          }
+        ],
+        "why_choose_us": {
+          "title": "Why Choose OMNI Hospitals for Coronary Angiogram in Hyderabad?",
+          "paragraphs": [
+            {
+              "icon": "fas fa-hospital",
+              "text": "OMNI Hospitals is the best coronary angiogram hospital in Hyderabad, offering:"
+            }
+          ],
+          "cards": [
+            {
+              "icon": "fas fa-user-md",
+              "title": "Advanced Cath Lab facilities for precision diagnostics",
+              "description": ""
+            },
+            {
+              "icon": "fas fa-heartbeat",
+              "title": "Expert interventional cardiologists with years of experience",
+              "description": ""
+            },
+            {
+              "icon": "fas fa-hospital",
+              "title": "Quick and accurate detection of heart blockages",
+              "description": ""
+            },
+            {
+              "icon": "fas fa-clock",
+              "title": "24/7 emergency cardiac care and support",
+              "description": ""
+            }
+          ],
+          "paragraphs_after": [
+            {
+              "icon": "fas fa-chart-line",
+              "text": "Patients often ask about the coronary angiogram cost in Hyderabad. At OMNI Hospitals, the procedure is priced transparently and competitively, ensuring affordable cardiac diagnostics without compromising quality. If you're looking for the best hospital for angiogram in Hyderabad or want to consult a leading angiogram specialist, OMNI Hospitals provides comprehensive cardiac care under one roof."
+            }
+          ]
+        },
+        "faqs": [
+          {
+            "question": "Which is the best hospital for a coronary angiogram in Hyderabad?",
+            "answer": "OMNI Hospitals is the best for a coronary angiogram in Hyderabad, offering precise diagnosis through advanced imaging and expert cardiac specialists."
+          },
+          {
+            "question": "What is a coronary angiogram?",
+            "answer": "A coronary angiogram is a diagnostic test that uses contrast dye and X-rays to check for blockages or narrowing in the coronary arteries."
+          },
+          {
+            "question": "Is a coronary angiogram a painful procedure?",
+            "answer": "No, it is a minimally invasive and generally painless procedure done under local anaesthesia."
+          }
+        ]
+      }
+    },
+    {
+      "slug": "best-hospital-for-angioplasty-in-hyderabad",
+      "name": "Angioplasty",
+      "url": "/specialities/cardiology/best-hospital-for-angioplasty-in-hyderabad",
+      "meta_title": "Coronary Angioplasty (PCI) in Hyderabad | Omni hospitals",
+      "meta_description": "Get advanced Angioplasty (PCI) at OMNI Hospitals Hyderabad. We use Stent placement and Laser Angioplasty to treat heart blockages and Coronary Artery Disease (CAD).",
+      "canonical_url": "https://omnihospitals.in/specialities/cardiology/best-hospital-for-angioplasty-in-hyderabad/",
+      "image": "assets/our_specialities_new/angioplasty.jpg",
+      "content": {
+        "h1": "Coronary Angioplasty in Hyderabad",
+        "intro": "Coronary Angioplasty, also known as Percutaneous Coronary Intervention (PCI), is a minimally invasive cardiac procedure used to open blocked or narrowed arteries and restore normal blood flow to the heart. This treatment helps prevent serious complications like heart attacks and improves heart function. OMNI Hospitals is the best hospital for angioplasty in Hyderabad. Our expert cardiologists specialize in both conventional and laser angioplasty techniques to ensure safe, effective, and lasting results.",
+        "sections": [
+          {
+            "h2": "Who Needs Coronary Angioplasty?",
+            "description": "Angioplasty in Hyderabad is usually recommended for individuals experiencing:",
+            "list": [
+              "Acute myocardial infarction (heart attack)",
+              "Severe chest pain (angina)",
+              "Coronary artery blockages (atherosclerosis)",
+              "Abnormal stress test or angiogram results",
+              "Reduced blood supply to the heart muscle",
+              "Physician recommendation based on cardiac risk profile"
+            ]
+          },
+          {
+            "h2": "Angioplasty Procedure at OMNI Hospitals",
+            "description": "The procedure begins after diagnostic imaging, such as a coronary angiogram, confirms the presence of arterial blockages. Under local anesthesia, a catheter is inserted through the groin or wrist and guided to the affected artery. A small balloon at the catheter tip is inflated to compress the plaque against the arterial wall, improving blood flow. In most cases, a drug-eluting stent (DES) is placed to keep the artery open long-term. OMNI Hospitals also offers laser angioplasty in Hyderabad, a cutting-edge method that uses laser energy to remove plaque buildup and restore artery patency with precision.",
+            "subsections": [
+              {
+                "h3": "Procedure Duration",
+                "description": "Depending on the number and location of blockages, angioplasty surgery may take 30 minutes to a few hours. If multiple arteries are involved, your cardiologist may perform the procedures in separate sessions for safety."
+              }
+            ]
+          },
+          {
+            "h2": "Post-Angioplasty Recovery and Care",
+            "description": "After the procedure, our cardiac team ensures personalized follow-up and rehabilitation. Patients are advised to:",
+            "list": [
+              "Follow a heart-healthy diet and lifestyle",
+              "Quit smoking, alcohol, and tobacco",
+              "Manage cholesterol (LDL/HDL) and blood pressure levels",
+              "Participate in a doctor-guided cardiac rehab or exercise program"
+            ],
+            "subsections": [
+              {
+                "h3": "Recovery Time After Angioplasty",
+                "subsections": [
+                  {
+                    "h4": "Elective (planned) angioplasty",
+                    "description": "Return to work within 5–7 days"
+                  },
+                  {
+                    "h4": "Emergency angioplasty (after a heart attack)",
+                    "description": "Recovery may take a few weeks to months, depending on overall health and heart function"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "h2": "Cost of Angioplasty in Hyderabad",
+            "description": "The angioplasty surgery cost in Hyderabad varies based on the complexity of the case, the number of stents used, and whether laser angioplasty is performed. At OMNI Hospitals, the cost of angioplasty in Hyderabad is kept transparent and affordable, with flexible options for both planned and emergency cases."
+          }
+        ],
+        "why_choose_us": {
+          "title": "Why Choose OMNI Hospitals for Angioplasty in Hyderabad?",
+          "cards": [
+            {
+              "icon": "fas fa-user-md",
+              "title": "Highly experienced interventional cardiologists",
+              "description": ""
+            },
+            {
+              "icon": "fas fa-heartbeat",
+              "title": "Advanced Cath Lab with 24/7 emergency cardiac support",
+              "description": ""
+            },
+            {
+              "icon": "fas fa-hospital",
+              "title": "Expertise in laser angioplasty and stent procedures",
+              "description": ""
+            },
+            {
+              "icon": "fas fa-clock",
+              "title": "Proven success rates in treating heart blockages and CAD",
+              "description": ""
+            },
+            {
+              "icon": "fas fa-users",
+              "title": "Recognized as the best hospital for angioplasty in Hyderabad.",
+              "description": ""
+            }
+          ]
+        },
+        "faqs": [
+          {
+            "question": "What is coronary angioplasty?",
+            "answer": "Coronary angioplasty is a procedure used to open narrowed or blocked arteries in the heart using a balloon and a stent to restore normal blood flow."
+          },
+          {
+            "question": "Which hospital offers the best coronary angioplasty in Hyderabad?",
+            "answer": "OMNI Hospitals provides advanced coronary angioplasty treatment with skilled interventional cardiologists and modern cath lab facilities."
+          },
+          {
+            "question": "What is the recovery time after angioplasty?",
+            "answer": "Most patients can return to normal activities within a week, depending on their overall health and the doctor's advice"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "hospital-for-permanent-pacemaker-implantation-in-kukatpally",
+      "name": "Permanent Pacemaker Implantation",
+      "url": "/specialities/cardiology/hospital-for-permanent-pacemaker-implantation-in-kukatpally",
+      "meta_title": "Permanent Pacemaker Implantation in Hyderabad | Omni Hospitals",
+      "meta_description": "Get Permanent Pacemaker Implantation (PPI) at OMNI Hospitals Hyderabad. We offer single, dual, and biventricular devices with transparent pricing and expert care.",
+      "canonical_url": "https://omnihospitals.in/specialities/cardiology/hospital-for-permanent-pacemaker-implantation-in-kukatpally/",
+      "image": "assets/our_specialities_new/permanent_pacemaker_implantation.jpg",
+      "content": {
+        "h1": "Permanent Cardiac Pacemaker Implantation in Hyderabad",
+        "intro": "At OMNI Hospitals, we specialize in Permanent Pacemaker Implantation (PPI), a life-saving procedure for patients suffering from bradycardia (slow heart rate) or irregular heart rhythms such as ventricular dyssynchrony. Our expert cardiologists provide advanced, safe, and effective pacemaker treatment in Hyderabad, ensuring every patient receives personalized cardiac care with modern technology.",
+        "sections": [
+          {
+            "h2": "What Is a Permanent Pacemaker?",
+            "description": "A permanent pacemaker is a small, battery-powered electronic device implanted under the collarbone. It helps maintain a steady heart rhythm by sending tiny electrical impulses to the heart whenever it beats too slowly or irregularly."
+          },
+          {
+            "h2": "How Does a Pacemaker Work?",
+            "description": "The device consists of:",
+            "subsections": [
+              {
+                "h3": "Pulse Generator",
+                "description": "Contains the battery and electrical circuit."
+              },
+              {
+                "h3": "Leads (Electrodes)",
+                "description": "Placed in specific heart chambers to deliver electrical signals."
+              }
+            ],
+            "conclusion": "The pacemaker continuously monitors the heart's rhythm. When it detects an abnormal heartbeat, it sends signals to correct it, ensuring smooth blood circulation and stable heart function."
+          },
+          {
+            "h2": "Types of Cardiac Pacemakers",
+            "subsections": [
+              {
+                "h3": "Single-Chamber Pacemaker",
+                "description": "Sends signals to one heart chamber (usually the right atrium or ventricle)."
+              },
+              {
+                "h3": "Dual-Chamber Pacemaker",
+                "description": "Coordinates activity between the atrium and ventricle for a more natural rhythm."
+              },
+              {
+                "h3": "Biventricular Pacemaker",
+                "description": "Used in heart failure patients to improve pumping efficiency and overall heart performance."
+              }
+            ]
+          },
+          {
+            "h2": "Pacemaker Implantation Procedure at OMNI Hospitals",
+            "description": "As one of the leading centers for Permanent Pacemaker Implantation in Hyderabad, OMNI Hospitals follows a precise and patient-friendly process:",
+            "subsections": [
+              {
+                "h3": "Pre-procedure Evaluation",
+                "description": "Includes medical history, ECG, echocardiogram, and other heart function tests."
+              },
+              {
+                "h3": "Implantation",
+                "description": "Performed under local anesthesia using a minimally invasive technique. The lead is guided through a vein into the heart, and the pacemaker is positioned under the skin near the collarbone."
+              },
+              {
+                "h3": "Fluoroscopy",
+                "description": "Used for real-time imaging to ensure accurate lead placement."
+              },
+              {
+                "h3": "Post-procedure Monitoring",
+                "description": "Continuous observation to ensure heart rhythm stability before discharge."
+              }
+            ]
+          },
+          {
+            "h2": "Benefits of Pacemaker Implantation",
+            "list": [
+              "Restores normal heart rhythm",
+              "Improves breathing and energy levels",
+              "Reduces dizziness and fatigue",
+              "Enhances quality of life and cardiac efficiency"
+            ]
+          },
+          {
+            "h2": "Pacemaker Cost in Hyderabad",
+            "description": "The pacemaker surgery cost in Hyderabad depends on the type of device used (single, dual, or biventricular), the patient's condition, and the hospital facilities. At OMNI Hospitals, we offer transparent and affordable pacemaker costs in Hyderabad, ensuring high-quality treatment at affordable prices. For residents seeking reliable pacemaker treatment in Kukatpally, OMNI Hospitals provides expert care, with advanced cardiac facilities and round-the-clock support."
+          }
+        ],
+        "why_choose_us": {
+          "title": "Why Choose OMNI Hospitals for Permanent Pacemaker Implantation in Hyderabad?",
+          "cards": [
+            {
+              "icon": "fas fa-user-md",
+              "title": "Experienced team of interventional cardiologists and electrophysiologists",
+              "description": ""
+            },
+            {
+              "icon": "fas fa-heartbeat",
+              "title": "State-of-the-art Cath Lab and cardiac monitoring technology",
+              "description": ""
+            },
+            {
+              "icon": "fas fa-hospital",
+              "title": "Comprehensive post-surgical care and regular follow-up",
+              "description": ""
+            },
+            {
+              "icon": "fas fa-clock",
+              "title": "24/7 emergency cardiac care and rehabilitation support",
+              "description": ""
+            }
+          ]
+        },
+        "faqs": [
+          {
+            "question": "Which is the best hospital for permanent pacemaker implantation in Hyderabad?",
+            "answer": "OMNI Hospitals is the best hospital for permanent pacemaker implantation in Hyderabad, offering advanced cardiac care with highly skilled electrophysiologists and cardiologists."
+          },
+          {
+            "question": "What is a permanent pacemaker?",
+            "answer": "A permanent pacemaker is a small electronic device implanted under the skin of the chest to help regulate abnormal heart rhythms by sending electrical impulses to the heart."
+          },
+          {
+            "question": "When is a pacemaker needed?",
+            "answer": "A pacemaker is recommended for patients with slow or irregular heartbeats (bradycardia), heart block, or conditions where the heart's natural electrical system is not functioning properly."
+          }
+        ]
+      }
+    },
+    {
+      "slug": "best-hospital-for-bypass-surgery-in-hyderabad",
+      "name": "Bypass Surgery",
+      "url": "/specialities/cardiology/best-hospital-for-bypass-surgery-in-hyderabad",
+      "meta_title": "Best Hospital for Bypass Surgery in Hyderabad | Omni Hospitals",
+      "meta_description": "Expert coronary artery bypass surgery at OMNI Hospitals Hyderabad. Advanced CABG procedures performed by experienced cardiac surgeons for severe coronary artery disease.",
+      "canonical_url": "https://omnihospitals.in/specialities/cardiology/best-hospital-for-bypass-surgery-in-hyderabad/",
+      "image": "assets/our_specialities_new/bypass_surgery.jpg",
+      "content": {
+        "h1": "Best Hospital for Bypass Surgery in Hyderabad",
+        "intro": "When it comes to bypass surgery in Hyderabad, OMNI Hospitals is the best hospital for cardiac care. Our expert team of cardiac specialists in Kukatpally offers world-class treatment using advanced surgical techniques and modern technology to ensure precise, safe, and effective results.",
+        "sections": [
+          {
+            "h2": "What is Heart Bypass Surgery?",
+            "description": "Heart bypass surgery, also known as coronary artery bypass grafting (CABG), is a procedure that improves blood flow to the heart. It is performed when the coronary arteries become blocked or narrowed due to plaque buildup, restricting oxygen supply. During the bypass surgery procedure, a healthy blood vessel is taken from another part of the body and connected to the heart to create a new pathway for blood flow."
+          },
+          {
+            "h2": "Best Bypass Surgery Treatment in Kukatpally",
+            "description": "At OMNI Hospitals Kukatpally, our team of highly experienced cardiac specialists and cardiac surgeons provides personalized care before, during, and after surgery. From advanced diagnostic evaluations to post-operative rehabilitation, every step is handled with precision and compassion. Our state-of-the-art cardiac care unit ensures patients receive the best bypass surgery treatment in Kukatpally with the highest standards of safety and success."
+          },
+          {
+            "h2": "Bypass Surgery Cost in Hyderabad",
+            "description": "The bypass surgery cost in Hyderabad varies depending on the patient's condition, type of surgery, and overall health requirements. At OMNI Hospitals, we offer transparent and affordable pricing without compromising on quality care. Our medical team helps you understand all aspects of the procedure and cost involved, ensuring a stress-free experience."
+          }
+        ],
+        "why_choose_us": {
+          "title": "Why Choose OMNI Hospitals?",
+          "cards": [
+            {
+              "icon": "fas fa-user-md",
+              "title": "Experienced cardiac specialists and surgeons",
+              "description": ""
+            },
+            {
+              "icon": "fas fa-heartbeat",
+              "title": "Advanced operating theatres and cardiac ICU",
+              "description": ""
+            },
+            {
+              "icon": "fas fa-hospital",
+              "title": "Affordable bypass surgery cost in Hyderabad",
+              "description": ""
+            },
+            {
+              "icon": "fas fa-clock",
+              "title": "Comprehensive post-surgery care and rehabilitation",
+              "description": ""
+            },
+            {
+              "icon": "fas fa-users",
+              "title": "24/7 emergency and cardiac support",
+              "description": ""
+            }
+          ],
+          "paragraphs": [
+            {
+              "icon": "fas fa-chart-line",
+              "text": "If you're searching for the best hospital for bypass surgery in Hyderabad or expert cardiac specialists in Kukatpally, visit OMNI Hospitals today for comprehensive heart care and long-term wellness."
+            }
+          ]
+        },
+        "faqs": [
+          {
+            "question": "Which is the best hospital for bypass surgery in Hyderabad?",
+            "answer": "OMNI Hospitals is the best hospital for bypass surgery (CABG) in Hyderabad, with highly skilled cardiac surgeons and advanced infrastructure."
+          },
+          {
+            "question": "What is the cost of bypass surgery in Hyderabad?",
+            "answer": "The bypass surgery cost in Hyderabad varies depending on the patient's condition, type of surgery, and post-operative care, but OMNI Hospitals offers affordable and transparent pricing."
+          },
+          {
+            "question": "When is bypass surgery needed?",
+            "answer": "Bypass surgery is recommended when the coronary arteries are severely blocked and cannot be treated effectively with angioplasty or medications."
+          }
+        ]
+      }
+    }
+  ]
+}

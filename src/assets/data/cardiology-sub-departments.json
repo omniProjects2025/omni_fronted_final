@@ -87,19 +87,32 @@
             "subsections": [
               {
                 "h3": "Lifestyle Modifications",
-                "description": "Weight management, salt and fluid restriction, cardiac rehabilitation and low-impact exercise, complete avoidance of smoking, alcohol, and substance abuse"
+                "list": [
+                  "Weight management, salt and fluid restriction",
+                  "Cardiac rehabilitation and low-impact exercise",
+                  "Complete avoidance of smoking, alcohol, and substance abuse"
+                ]
               },
               {
                 "h3": "Medications",
-                "description": "Diuretics to prevent fluid retention, ACE inhibitors, beta-blockers, and other heart medications to improve heart function"
+                "list": [
+                  "Diuretics to prevent fluid retention",
+                  "ACE inhibitors, beta-blockers, and other heart medications to improve heart function"
+                ]
               },
               {
                 "h3": "Surgical Interventions",
-                "description": "Bypass surgery, valve repair, or replacement, heart transplant in end-stage heart failure"
+                "list": [
+                  "Bypass surgery, valve repair, or replacement",
+                  "Heart transplant in end-stage heart failure"
+                ]
               },
               {
                 "h3": "Implantable Cardiac Devices",
-                "description": "ICDs (Implantable Cardioverter Defibrillators): Correct dangerous arrhythmias, CRT (Cardiac Resynchronization Therapy): Synchronizes heartbeats and improves pump function"
+                "list": [
+                  "ICDs (Implantable Cardioverter Defibrillators): Correct dangerous arrhythmias",
+                  "CRT (Cardiac Resynchronization Therapy): Synchronizes heartbeats and improves pump function"
+                ]
               }
             ]
           }
@@ -164,12 +177,9 @@
         "intro": "A Coronary Angiogram, also called Cardiac Catheterization, is a specialized diagnostic procedure used to detect blockages in the coronary arteries. This test helps identify Coronary Artery Disease (CAD), a condition where cholesterol, plaque, or fat deposits restrict blood flow to the heart, potentially leading to a heart attack. OMNI Hospitals is the best hospital for angiogram in Hyderabad, providing accurate diagnosis and expert cardiac care from the city's top angiogram specialists.",
         "sections": [
           {
-            "h2": "Accurate Diagnosis of Coronary Artery Disease (CAD) at OMNI Hospitals",
-            "description": "A Coronary Angiogram, also called Cardiac Catheterization, is a specialized diagnostic procedure used to detect blockages in the coronary arteries. This test helps identify Coronary Artery Disease (CAD), a condition where cholesterol, plaque, or fat deposits restrict blood flow to the heart, potentially leading to a heart attack. OMNI Hospitals is the best hospital for angiogram in Hyderabad, providing accurate diagnosis and expert cardiac care from the city's top angiogram specialists."
-          },
-          {
             "h2": "How a Coronary Angiogram Works",
-            "description": "During the procedure, a thin, flexible tube called a catheter is inserted into a blood vessel, usually through the wrist or groin. A contrast dye (safe for medical use) is injected into the coronary arteries. As the dye flows through the heart's arteries, it becomes visible under real-time X-ray imaging (fluoroscopy). The resulting images, known as an angiogram, allow cardiologists to identify the location and severity of blockages, a crucial step before treatments such as angioplasty or stent placement."
+            "description": "During the procedure, a thin, flexible tube called a catheter is inserted into a blood vessel, usually through the wrist or groin. A contrast dye (safe for medical use) is injected into the coronary arteries. As the dye flows through the heart's arteries, it becomes visible under real-time X-ray imaging (fluoroscopy).",
+            "conclusion": "The resulting images, known as an angiogram, allow cardiologists to identify the location and severity of blockages, a crucial step before treatments such as angioplasty or stent placement."
           },
           {
             "h2": "When Is a Coronary Angiogram Recommended?",
@@ -193,7 +203,12 @@
             "subsections": [
               {
                 "h3": "Post-procedure care includes:",
-                "description": "Following a heart-healthy lifestyle, avoiding smoking, alcohol, and tobacco, maintaining optimal cholesterol and blood pressure levels, regular exercise as recommended by the cardiologist"
+                "list": [
+                  "Following a heart-healthy lifestyle",
+                  "Avoiding smoking, alcohol, and tobacco",
+                  "Maintaining optimal cholesterol and blood pressure levels",
+                  "Regular exercise as recommended by the cardiologist"
+                ]
               }
             ]
           }
@@ -277,7 +292,8 @@
           },
           {
             "h2": "Angioplasty Procedure at OMNI Hospitals",
-            "description": "The procedure begins after diagnostic imaging, such as a coronary angiogram, confirms the presence of arterial blockages. Under local anesthesia, a catheter is inserted through the groin or wrist and guided to the affected artery. A small balloon at the catheter tip is inflated to compress the plaque against the arterial wall, improving blood flow. In most cases, a drug-eluting stent (DES) is placed to keep the artery open long-term. OMNI Hospitals also offers laser angioplasty in Hyderabad, a cutting-edge method that uses laser energy to remove plaque buildup and restore artery patency with precision.",
+            "description": "The procedure begins after diagnostic imaging, such as a coronary angiogram, confirms the presence of arterial blockages.",
+            "conclusion": "Under local anesthesia, a catheter is inserted through the groin or wrist and guided to the affected artery. A small balloon at the catheter tip is inflated to compress the plaque against the arterial wall, improving blood flow. In most cases, a drug-eluting stent (DES) is placed to keep the artery open long-term. OMNI Hospitals also offers laser angioplasty in Hyderabad, a cutting-edge method that uses laser energy to remove plaque buildup and restore artery patency with precision.",
             "subsections": [
               {
                 "h3": "Procedure Duration",

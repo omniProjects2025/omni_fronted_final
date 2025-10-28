@@ -303,6 +303,27 @@
   font-size: 1rem;
 }
 
+.subsection-item-nested {
+  margin-left: 1.5rem;
+  margin-top: 0.75rem;
+  padding: 0.75rem;
+  background: #fff;
+  border-radius: 6px;
+  border-left: 3px solid #17a2b8;
+}
+
+.subsection-title-nested {
+  color: #008fd5;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.subsection-list ul {
+  margin: 0.5rem 0;
+  padding-left: 1.25rem;
+}
+
 .content-list {
   padding-left: 1.5rem;
   margin: 0.75rem 0;

@@ -131,8 +131,21 @@
               <!-- Subsections -->
               <div class="subsections-container" *ngIf="section.subsections">
                 <div class="subsection-item mb-4" *ngFor="let subsection of section.subsections">
-                  <h3 class="subsection-title">{{ subsection.h3 }}</h3>
-                  <p class="subsection-description">{{ subsection.description }}</p>
+                  <h3 class="subsection-title" *ngIf="subsection.h3">{{ subsection.h3 }}</h3>
+                  <h4 class="subsection-title" *ngIf="subsection.h4">{{ subsection.h4 }}</h4>
+                  <p class="subsection-description" *ngIf="subsection.description">{{ subsection.description }}</p>
+                  <div class="subsection-list" *ngIf="subsection.list">
+                    <ul class="content-list">
+                      <li *ngFor="let item of subsection.list" [innerHTML]="item"></li>
+                    </ul>
+                  </div>
+                  <!-- Nested subsections -->
+                  <div class="subsections-container" *ngIf="subsection.subsections">
+                    <div class="subsection-item-nested mb-3" *ngFor="let nestedSubsection of subsection.subsections">
+                      <h4 class="subsection-title-nested" *ngIf="nestedSubsection.h4">{{ nestedSubsection.h4 }}</h4>
+                      <p class="subsection-description" *ngIf="nestedSubsection.description">{{ nestedSubsection.description }}</p>
+                    </div>
+                  </div>
                 </div>
               </div>
               

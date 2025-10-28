@@ -698,3 +698,73 @@ h5 {
     margin-bottom: 1rem;
   }
 }
+
+/* Sub-department border box styling */
+.sub-dept-border-box {
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  padding: 16px 20px;
+  transition: all 0.3s ease;
+  background-color: #fff;
+  min-height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.sub-dept-border-box:hover {
+  border-color: #008FD5;
+  box-shadow: 0 3px 8px rgba(0, 143, 213, 0.12);
+  transform: translateY(-1px);
+}
+
+.sub-dept-link-text {
+  color: #008FD5;
+  text-decoration: none !important;
+  font-weight: 500;
+  font-size: 16px;
+  transition: color 0.3s ease;
+  line-height: 1.4;
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+.sub-dept-link-text:hover {
+  color: #8CC63F;
+  text-decoration: none !important;
+}
+
+@media (max-width: 991px) {
+  .sub-dept-border-box {
+    padding: 14px 16px;
+    min-height: 50px;
+  }
+  
+  .sub-dept-link-text {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sub-dept-border-box {
+    padding: 12px 14px;
+    min-height: 48px;
+  }
+  
+  .sub-dept-link-text {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 576px) {
+  .sub-dept-border-box {
+    padding: 10px 12px;
+    min-height: 45px;
+  }
+  
+  .sub-dept-link-text {
+    font-size: 13px;
+  }
+}

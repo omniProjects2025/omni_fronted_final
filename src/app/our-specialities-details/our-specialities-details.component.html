@@ -8,7 +8,7 @@
           <div class="col-lg-7 col-md-12 mb-4">
             <div class="card">
               <img [src]="selectedDepartment['img']" class="border_rad img-fluid w-100" alt="Medical Image">
-              
+
             </div>
           </div>
           <!-- Right Enquiry Form -->
@@ -61,8 +61,8 @@
                 <h6 *ngIf="desc.subtitle" [innerHTML]="desc.subtitle"></h6>
                 <p *ngFor="let data of desc.description" [innerHTML]="data"></p>
                 <ng-container *ngIf="desc.para">
-                <p *ngFor="let desc_para of desc.para" [innerHTML]="desc_para"></p>
-              </ng-container>
+                  <p *ngFor="let desc_para of desc.para" [innerHTML]="desc_para"></p>
+                </ng-container>
                 <ul>
                   <li *ngFor="let item of desc.list" [innerHTML]="item"></li>
                 </ul>
@@ -76,69 +76,21 @@
                 </ng-container>
                 <p>{{desc.conclusion}}</p>
               </ng-container>
-  
+
             </div>
           </div>
 
         </div>
         <ng-container *ngIf="selectedDepartment?.sub_departments && selectedDepartment?.sub_departments.length > 0">
           <section>
-            <div class="row pt-4">
-              <div class="col-lg-3 col-md-12">
-                <div class="sub-dept-sidebar">
-                  <ng-container *ngFor="let sub_dept of selectedDepartment.sub_departments">
-                    <div class="sub-dept-item" (click)="onSelectSubDept(sub_dept.name)" [ngClass]="{'active-subdept': selectedSubDept === sub_dept.name}">
-                      {{ sub_dept.name }}
-                    </div>
-                  </ng-container>
+            <div class="row">
+              <div class="col-lg-4 col-md-6 mb-4" *ngFor="let subDept of selectedDepartment.sub_departments">
+                <div class="sub-dept-border-box">
+                  <a [href]="subDept.url" class="sub-dept-link-text">{{subDept.name}}</a>
                 </div>
-              </div>
-
-              <div class="col-lg-9 col-md-12 d-flex flex-column align-items-start">
-                <!-- <ng-container *ngFor="let sub_dept of selectedDepartment.sub_departments">
-                  <ng-container  *ngFor="let sub_dept of sub_dept.details">
-                    <h5 [innerHTML]="sub_dept.title"></h5>
-                    <p *ngIf="sub_dept.description" [innerHTML]="sub_dept.description"></p>
-
-                    <ng-container *ngFor="let data of sub_dept.sections">
-                      <h6 *ngIf="data?.subtitle" [innerHTML]="data?.subtitle"></h6>
-                      <p  *ngIf="data?.description" [innerHTML]="data?.description"></p>
-                    </ng-container>
-                  </ng-container>
-                </ng-container> -->
-                <h5>{{subDepartmentData?.name}}</h5>
-                <p *ngIf="subDepartmentData?.title" [innerHTML]="subDepartmentData.title"></p>
-                <p *ngIf="subDepartmentData?.subtitle" [innerHTML]="subDepartmentData?.subtitle"></p>
-                <ng-container *ngIf="subDepartmentData?.description">
-                <p *ngFor="let desc_data of subDepartmentData?.description" [innerHTML]="desc_data"></p>
-              </ng-container>
-                <ng-container *ngIf="subDepartmentData?.sections">
-                  <ng-container *ngFor="let ques of subDepartmentData.sections">
-                    <h6 *ngIf="ques?.subtitle" class="text-align-left" [innerHTML]="ques.subtitle"></h6>
-                    <ng-container *ngIf="ques?.description">
-                      <p *ngFor="let que_data of ques.description" [innerHTML]="que_data"></p>
-                    </ng-container>
-                    <ng-container *ngIf="ques?.para">
-                      <ng-container *ngFor="let para of ques.para">
-                        <p *ngIf="para" [innerHTML]="para"></p>
-                      </ng-container>
-                    </ng-container>
-                    <ul *ngIf="ques?.list">
-                      <ng-container  *ngFor="let list of ques.list">
-                        <li *ngIf="list" [innerHTML]="list"></li>
-                      </ng-container>
-                    </ul>
-                    <ng-container *ngIf="ques?.sub_para">
-                      <ng-container *ngFor="let para of ques.sub_para">
-                        <p *ngIf="para" [innerHTML]="para"></p>
-                      </ng-container>
-                    </ng-container>
-                  </ng-container>
-                </ng-container>
               </div>
             </div>
           </section>
-
         </ng-container>
       </ng-container>
     </div>

@@ -16,7 +16,7 @@ import { FooterComponent } from '../footer/footer.component';
 
 const routes: Routes = [
   {
-    path: ':slug',
+    path: '',
     component: CardiologySubDepartmentComponent
   }
 ];

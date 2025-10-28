@@ -108,11 +108,49 @@ export class OurSpecialitiesDetailsComponent implements OnInit {
     this.http.get<any>(jsonFilePath)
       .subscribe({
         next: (data) => {
-          this.selectedDepartment = (data.departments.filter((dept: any) => this.departmentName.toLocaleLowerCase() == dept.name.toLocaleLowerCase()))[0]
+          console.log('Loaded data from JSON:', data);
+          console.log('Total departments:', data.departments?.length);
+          
+          // Search for department with flexible matching
+          const departments = data.departments || [];
+          console.log('Searching for department:', this.departmentName);
+          console.log('Available departments:', departments.map((d: any) => d.name));
+          
+          // Try exact match first
+          this.selectedDepartment = departments.find((dept: any) => 
+            dept.name.toLowerCase() === this.departmentName.toLowerCase()
+          );
+          
+          // If no exact match, try partial match
+          if (!this.selectedDepartment) {
+            this.selectedDepartment = departments.find((dept: any) => 
+              dept.name.toLowerCase().includes(this.departmentName.toLowerCase()) ||
+              this.departmentName.toLowerCase().includes(dept.name.toLowerCase())
+            );
+          }
+          
+          console.log('Selected department:', this.selectedDepartment);
+          
+          if (!this.selectedDepartment) {
+            console.error('Department not found:', this.departmentName);
+            // Set a default to prevent errors
+            this.selectedDepartment = { 
+              name: this.departmentName, 
+              details: [{ title: 'Department Information Coming Soon', description: ['We are working on updating this information.'] }],
+              img: 'assets/our_specialities/default.jpg'
+            };
+          }
+          
+          // Only set sub-department data if sub-departments exist
           if (this.selectedDepartment && this.selectedDepartment.sub_departments && this.selectedDepartment.sub_departments.length > 0) {
+            console.log('Found sub-departments:', this.selectedDepartment.sub_departments.length);
             this.subDepartmentData = this.selectedDepartment.sub_departments[0];
             this.selectedSubDept = this.subDepartmentData.name;
             this.onSelectSubDept(this.subDepartmentData.name);
+          } else {
+            console.log('No sub-departments found or empty array');
+            this.subDepartmentData = {};
+            this.selectedSubDept = null;
           }
           
           // Set meta tags from the department data
@@ -126,11 +164,36 @@ export class OurSpecialitiesDetailsComponent implements OnInit {
             this.http.get<any>('assets/json_data_files/specialities.json')
               .subscribe({
                 next: (data) => {
-                  this.selectedDepartment = (data.departments.filter((dept: any) => this.departmentName.toLocaleLowerCase() == dept.name.toLocaleLowerCase()))[0]
+                  console.log('Loaded fallback data from JSON:', data);
+                  
+                  const fallbackDepartments = data.departments || [];
+                  console.log('Fallback departments:', fallbackDepartments.map((d: any) => d.name));
+                  
+                  // Try exact match first
+                  this.selectedDepartment = fallbackDepartments.find((dept: any) => 
+                    dept.name.toLowerCase() === this.departmentName.toLowerCase()
+                  );
+                  
+                  // If no exact match, try partial match
+                  if (!this.selectedDepartment) {
+                    this.selectedDepartment = fallbackDepartments.find((dept: any) => 
+                      dept.name.toLowerCase().includes(this.departmentName.toLowerCase()) ||
+                      this.departmentName.toLowerCase().includes(dept.name.toLowerCase())
+                    );
+                  }
+                  
+                  console.log('Selected department from fallback:', this.selectedDepartment);
+                  
+                  // Only set sub-department data if sub-departments exist
                   if (this.selectedDepartment && this.selectedDepartment.sub_departments && this.selectedDepartment.sub_departments.length > 0) {
+                    console.log('Found sub-departments in fallback:', this.selectedDepartment.sub_departments.length);
                     this.subDepartmentData = this.selectedDepartment.sub_departments[0];
                     this.selectedSubDept = this.subDepartmentData.name;
                     this.onSelectSubDept(this.subDepartmentData.name);
+                  } else {
+                    console.log('No sub-departments in fallback data');
+                    this.subDepartmentData = {};
+                    this.selectedSubDept = null;
                   }
                   
                   // Set meta tags from the fallback department data
@@ -140,6 +203,8 @@ export class OurSpecialitiesDetailsComponent implements OnInit {
                   console.error('Failed to load fallback departments JSON:', fallbackErr);
                 }
               });
+          } else {
+            console.error('Could not load default JSON file');
           }
         }
       });

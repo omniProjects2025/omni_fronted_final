@@ -45,15 +45,32 @@ const routes: Routes = [
   { path: 'package-details', component: PackageDetailsComponent },
   
   // New SEO-friendly routes - Order matters! Static routes MUST come before parameterized routes
-  // Cardiology sub-department routes (most specific first)
-  { path: 'specialities/cardiology', loadChildren: () => import('./cardiology-sub-departments/cardiology-sub-departments.module').then(m => m.CardiologySubDepartmentsModule) },
   
-  // Location-only routes (static) - most specific first
+  // Cardiology routes - Order matters!
+  // 1. Location-specific routes (most specific first)
+  { path: 'specialities/cardiology/kukatpally', component: OurSpecialitiesDetailsComponent },
+  { path: 'specialities/cardiology/vizag', component: OurSpecialitiesDetailsComponent },
+  { path: 'specialities/cardiology/kothapet', component: OurSpecialitiesDetailsComponent },
+  { path: 'specialities/cardiology/nampally', component: OurSpecialitiesDetailsComponent },
+  { path: 'specialities/cardiology/kurnool', component: OurSpecialitiesDetailsComponent },
+  
+  // 2. Sub-department detail pages (for slugs like treatment-for-heart-failure-in-kukatpally)
+  // This route must come after location-specific routes but handles other paths
+  { path: 'specialities/cardiology/:slug', loadChildren: () => import('./cardiology-sub-departments/cardiology-sub-departments.module').then(m => m.CardiologySubDepartmentsModule) },
+  
+  // 3. Base cardiology route (without location/slug - shows Kukatpally by default)
+  { path: 'specialities/cardiology', component: OurSpecialitiesDetailsComponent },
+  
+  // Specialities base route (first visit - no location in URL, defaults to Kukatpally)
+  { path: 'specialities', component: OurSpecialitiesComponent },
+  
+  // Location-specific routes (when location is clicked)
   { path: 'specialities/kukatpally', component: OurSpecialitiesComponent },
   { path: 'specialities/vizag', component: OurSpecialitiesComponent },
   { path: 'specialities/kothapet', component: OurSpecialitiesComponent },
   { path: 'specialities/nampally', component: OurSpecialitiesComponent },
   { path: 'specialities/kurnool', component: OurSpecialitiesComponent },
+  
   // Parameterized routes - these come after static routes to avoid conflicts
   { path: 'specialities/:speciality/:location', component: OurSpecialitiesDetailsComponent },
   { path: 'specialities/:speciality', component: OurSpecialitiesDetailsComponent },

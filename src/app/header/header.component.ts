@@ -36,7 +36,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
       key: 'doctor', label: 'Find a Doctor', route: '/our-doctors'
     },
     {
-      key: 'specialities', label: 'Specialities', route: '/specialities/kukatpally',
+      key: 'specialities', label: 'Specialities', route: '/specialities',
       children: [
         { id: 'cardiology', label: 'Cardiology', route: '/specialities/cardiology' },
         { id: 'orthopedic', label: 'Orthopedics', route: '/specialities/orthopedic' },

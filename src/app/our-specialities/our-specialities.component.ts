@@ -59,6 +59,9 @@ export class OurSpecialitiesComponent implements OnInit {
       }
     }
     
+    // If URL is just /specialities (without location), keep default 'Kukatpally'
+    // but don't navigate - just show Kukatpally data with /specialities/ URL
+    
     // Also check for location parameter from route params (for backward compatibility with old routes)
     this.route.params.subscribe(params => {
       if (params['location']) {
@@ -101,7 +104,18 @@ export class OurSpecialitiesComponent implements OnInit {
   private setCanonicalUrl() {
     // Use the new URL format for canonical
     const location = this.selectedLocation ? this.selectedLocation.toLowerCase() : 'kukatpally';
-    this.canonicalService.setCanonicalUrl(`/specialities/${location}`);
+    
+    // Check if current URL is /specialities (base route)
+    const currentUrl = this.router.url;
+    const urlSegments = currentUrl.split('/').filter(segment => segment && segment !== '?');
+    
+    // If URL is just /specialities, set canonical to /specialities/
+    // Otherwise, set to /specialities/{location}
+    if (urlSegments.length === 1 && urlSegments[0] === 'specialities') {
+      this.canonicalService.setCanonicalUrl('/specialities');
+    } else {
+      this.canonicalService.setCanonicalUrl(`/specialities/${location}`);
+    }
   }
 
   private loadSpecialties() {
@@ -135,6 +149,7 @@ export class OurSpecialitiesComponent implements OnInit {
     this.selectedLocation = location;
     
     // Navigate to new URL format with location as route param
+    // Only navigate if clicking a different location to preserve /specialities/ URL on first load
     this.router.navigate(['/specialities', location.toLowerCase()]);
     
     // Apply the filter

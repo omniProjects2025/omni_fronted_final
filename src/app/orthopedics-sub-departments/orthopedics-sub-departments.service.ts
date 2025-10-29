@@ -217,7 +217,7 @@ export class OrthopedicsSubDepartmentsService {
           "slug": "total-knee-replacement",
           "name": "Total Knee Replacement",
           "url": "/specialities/orthopaedics/total-knee-replacement",
-          "meta_title": "Total Knee Replacement (TKR) Surgery in Kukatpally, Hyderabad",
+          "meta_title": "Total Knee Replacement (TKR) Surgery in Kukatpally | Omni Hospitals",
           "meta_description": "Get expert Total Knee Replacement (TKR) in Kukatpally, Hyderabad. We offer partial and full TKR to relieve chronic pain, restore mobility, and ensure fast recovery.",
           "canonical_url": "https://omnihospitals.in/specialities/orthopaedics/total-knee-replacement/",
           "image": "assets/our_specialities_new/total_knee_replacement.jpg",

@@ -40,27 +40,40 @@ export class OrthopedicsSubDepartmentComponent implements OnInit {
     this.orthopedicsService.initializeData().subscribe((data) => {
       console.log('Orthopedics data initialized:', data);
       
-      // Get the slug from the route - exactly like cardiology but also check parent for lazy routes
-      // In lazy-loaded child routes, params might be on parent
+      // Get the slug from the route
+      // For lazy-loaded routes, the slug param is on the parent route (common-pages.module)
+      // Check parent route first for lazy-loaded modules
       let slug: string | null = null;
       
-      // First check current route params
-      if (this.route.snapshot.params['slug']) {
-        slug = this.route.snapshot.params['slug'];
-        console.log('Slug from route.snapshot:', slug);
-      } 
-      // Then check parent route params (for lazy-loaded routes)
-      else if (this.route.parent?.snapshot?.params?.['slug']) {
+      // First check parent route params (for lazy-loaded routes) - this is where the slug comes from
+      if (this.route.parent?.snapshot?.params?.['slug']) {
         slug = this.route.parent.snapshot.params['slug'];
         console.log('Slug from parent route.snapshot:', slug);
+      } 
+      // Then check current route params (for non-lazy routes)
+      else if (this.route.snapshot.params['slug']) {
+        slug = this.route.snapshot.params['slug'];
+        console.log('Slug from route.snapshot:', slug);
       }
       
-      // If found in snapshot, use it immediately
+      // Also try to get from URL path segments as fallback
+      if (!slug) {
+        const urlSegments = this.router.url.split('/').filter(segment => segment && segment !== '?');
+        // Pattern: specialities/orthopedics/{slug}
+        if (urlSegments.length >= 3 && urlSegments[0] === 'specialities' && urlSegments[1] === 'orthopedics') {
+          slug = urlSegments[2].split('?')[0]; // Remove query params
+          console.log('Slug extracted from URL segments:', slug);
+        }
+      }
+      
+      // If found, load the data immediately
       if (slug) {
         this.loadSubDepartmentData(slug);
+      } else {
+        console.error('Could not extract slug from route. Current URL:', this.router.url);
       }
       
-      // Also subscribe to params changes (like cardiology does)
+      // Also subscribe to params changes for navigation within the same component
       this.route.params.subscribe(params => {
         const routeSlug = params['slug'];
         console.log('Slug from route.params subscription:', routeSlug);
@@ -69,7 +82,7 @@ export class OrthopedicsSubDepartmentComponent implements OnInit {
         }
       });
       
-      // Also check parent params subscription
+      // Subscribe to parent params changes (important for lazy-loaded routes)
       if (this.route.parent) {
         this.route.parent.params.subscribe(parentParams => {
           const parentSlug = parentParams['slug'];

@@ -36,7 +36,65 @@ export class OrthopedicsSubDepartmentsService {
   // Get sub-department by slug
   getSubDepartmentBySlug(slug: string): any {
     if (this.orthopedicsData) {
-      return this.orthopedicsData.sub_departments.find((dept: any) => dept.slug === slug);
+      // First try exact match
+      let found = this.orthopedicsData.sub_departments.find((dept: any) => dept.slug === slug);
+      if (found) {
+        return found;
+      }
+      
+      // Try flexible matching - remove location suffixes and variations
+      // Handle slugs like "golfers-elbow-treatment-in-kukatpally" -> "treatment-for-golfers-elbow"
+      // Handle slugs like "total-knee-replacement-surgery-in-kukatpally" -> "total-knee-replacement"
+      const slugLower = slug.toLowerCase();
+      
+      // Create slug mappings for known variations
+      const slugMappings: { [key: string]: string } = {
+        'golfers-elbow-treatment-in-kukatpally': 'treatment-for-golfers-elbow',
+        'golfers-elbow-treatment': 'treatment-for-golfers-elbow',
+        'total-knee-replacement-surgery-in-kukatpally': 'total-knee-replacement',
+        'total-knee-replacement-surgery': 'total-knee-replacement',
+        'knee-replacement-surgery-in-kukatpally': 'total-knee-replacement',
+        'knee-replacement-in-kukatpally': 'total-knee-replacement'
+      };
+      
+      // Check if there's a direct mapping
+      if (slugMappings[slugLower]) {
+        found = this.orthopedicsData.sub_departments.find((dept: any) => dept.slug === slugMappings[slugLower]);
+        if (found) {
+          return found;
+        }
+      }
+      
+      // Try partial matching - if slug contains key terms
+      // For "golfers-elbow-treatment-in-kukatpally", try to find "treatment-for-golfers-elbow"
+      if (slugLower.includes('golfers-elbow')) {
+        found = this.orthopedicsData.sub_departments.find((dept: any) => 
+          dept.slug.includes('golfers-elbow') || dept.name.toLowerCase().includes('golfers elbow')
+        );
+        if (found) {
+          return found;
+        }
+      }
+      
+      // For "total-knee-replacement-surgery-in-kukatpally", try to find "total-knee-replacement"
+      if (slugLower.includes('knee-replacement') || slugLower.includes('knee replacement')) {
+        found = this.orthopedicsData.sub_departments.find((dept: any) => 
+          dept.slug.includes('knee-replacement') || dept.name.toLowerCase().includes('knee replacement')
+        );
+        if (found) {
+          return found;
+        }
+      }
+      
+      // Last resort: try finding by name (case-insensitive, flexible matching)
+      const normalizedSlug = slugLower.replace(/-in-\w+/g, '').replace(/[^a-z0-9]/g, ' ');
+      found = this.orthopedicsData.sub_departments.find((dept: any) => {
+        const normalizedName = dept.name.toLowerCase().replace(/[^a-z0-9]/g, ' ');
+        return normalizedSlug.includes(normalizedName.substring(0, 20)) || 
+               normalizedName.includes(normalizedSlug.substring(0, 20));
+      });
+      
+      return found || null;
     }
     return null;
   }

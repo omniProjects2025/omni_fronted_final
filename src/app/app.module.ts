@@ -5,10 +5,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HeaderComponent } from './header/header.component';
 import { OurDoctorsComponent } from './our-doctors/our-doctors.component';
 import { HomeComponent } from './home/home.component';
-import { FooterComponent } from './footer/footer.component';
+import { SharedModule } from './shared.module';
 import { SecondOpinionComponent } from './second-opinion/second-opinion.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 // import { CarouselModule } from 'ngx-owl-carousel-o';
@@ -51,6 +50,7 @@ import { PrivacyPolocyComponent } from './privacy-polocy/privacy-polocy.componen
 import { TermsConditionsComponent } from './terms-conditions/terms-conditions.component';
 import { KeySurgeriesComponent } from './key-surgeries/key-surgeries.component';
 import { CardiologySubDepartmentsModule } from './cardiology-sub-departments/cardiology-sub-departments.module';
+import { OrthopedicsSubDepartmentsModule } from './orthopedics-sub-departments/orthopedics-sub-departments.module';
 
 @NgModule({
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
@@ -104,7 +104,9 @@ import { CardiologySubDepartmentsModule } from './cardiology-sub-departments/car
     ReactiveFormsModule,
     BrowserAnimationsModule,
     YouTubePlayerModule,
-    CardiologySubDepartmentsModule
+    SharedModule,
+    CardiologySubDepartmentsModule,
+    OrthopedicsSubDepartmentsModule
   ],
   exports: [
     // HeaderComponent and FooterComponent are now declared in CardiologySubDepartmentsModule

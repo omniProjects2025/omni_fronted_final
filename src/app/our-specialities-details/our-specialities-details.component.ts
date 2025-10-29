@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
-import { fromUrlFriendly } from '../utils/url-helper.util';
+import { fromUrlFriendly, toUrlFriendly } from '../utils/url-helper.util';
 import { environment } from '../../environments/environment';
 import { combineLatest } from 'rxjs';
 import { Title, Meta } from '@angular/platform-browser';
@@ -49,20 +49,53 @@ export class OurSpecialitiesDetailsComponent implements OnInit {
       this.route.params,
       this.route.queryParams
     ]).subscribe(([params, queryParams]) => {
-      // Try to get department/speciality from params (could be 'department' or 'speciality' depending on route)
-      const departmentParam = params['department'] || params['speciality'] || '';
-      // Convert URL-friendly format back to original name
-      this.departmentName = fromUrlFriendly(departmentParam);
+      // Parse URL path to extract department and location for static routes
+      const currentUrl = this.router.url;
+      const urlSegments = currentUrl.split('/').filter(segment => segment && segment !== '?');
       
-      // Get location from route params (new format) or query parameters (old format for backward compatibility)
+      // Check if URL matches pattern: /specialities/{department}/{location}
+      // Examples: /specialities/orthopedics/kukatpally, /specialities/cardiology/kukatpally
+      let departmentParam = '';
+      let locationFromUrl = '';
+      
+      if (urlSegments.length >= 3 && urlSegments[0] === 'specialities') {
+        // Pattern: specialities/{department}/{location}
+        departmentParam = urlSegments[1];
+        locationFromUrl = urlSegments[2].split('?')[0]; // Remove query params if any
+        
+        // Validate if location matches known locations (case-insensitive)
+        const validLocations = ['kukatpally', 'vizag', 'kothapet', 'nampally', 'kurnool'];
+        if (!validLocations.includes(locationFromUrl.toLowerCase())) {
+          // If third segment is not a valid location, treat it as a slug/sub-department
+          locationFromUrl = '';
+          departmentParam = urlSegments[1];
+        }
+      } else if (urlSegments.length === 2 && urlSegments[0] === 'specialities') {
+        // Pattern: specialities/{department} (no location)
+        departmentParam = urlSegments[1];
+        locationFromUrl = ''; // Will default to kukatpally
+      }
+      
+      // Try to get department/speciality from params first (for parameterized routes), then from URL
+      const paramDepartment = params['department'] || params['speciality'] || '';
+      if (paramDepartment) {
+        departmentParam = paramDepartment;
+      }
+      
+      // Convert URL-friendly format back to original name
+      this.departmentName = departmentParam ? fromUrlFriendly(departmentParam) : '';
+      
+      // Get location from route params (new format), URL path, or query parameters (old format for backward compatibility)
       if (params['location']) {
         this.selectedLocation = params['location'];
+      } else if (locationFromUrl) {
+        this.selectedLocation = locationFromUrl.toLowerCase();
       } else if (queryParams['location']) {
         // Old format - redirect to new format
         this.selectedLocation = queryParams['location'];
         // Redirect to new URL format
         if (this.departmentName) {
-          const urlFriendlyName = departmentParam;
+          const urlFriendlyName = departmentParam || toUrlFriendly(this.departmentName);
           this.router.navigate(['/specialities', urlFriendlyName, this.selectedLocation], { replaceUrl: true });
           return;
         }

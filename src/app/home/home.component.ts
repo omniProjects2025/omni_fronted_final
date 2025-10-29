@@ -16,7 +16,8 @@ declare var $: any;
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  styleUrls: ['./home.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HomeComponent implements OnInit, OnDestroy {
   private videoSubscription: Subscription = new Subscription();
@@ -426,6 +427,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     // Subscribe to video state changes
     this.videoSubscription = this.videoStateService.currentlyPlayingVideo$.subscribe(videoId => {
       this.updateVideoStates(videoId);
+      this.cdr.markForCheck();
     });
 
     this.updateSlidesPerView();
@@ -441,6 +443,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     this.testowl();
     setTimeout(() => {
       this.initSwiper();
+      this.cdr.markForCheck();
     }, 100);
   }
 
@@ -452,6 +455,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     } else {
       // Show Our Specialities section
       this.active_button = index;
+      this.cdr.markForCheck();
     }
   }
 
@@ -547,6 +551,7 @@ export class HomeComponent implements OnInit, OnDestroy {
       this.lastWindowWidth = currentWidth;
       this.videoStateService.stopAllVideos();
       this.updateSlidesPerView();
+      this.cdr.markForCheck();
     }
     // Small changes are ignored to prevent unnecessary video stops
   }
@@ -599,7 +604,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   updateArrowStates(swiper: any) {
     this.canSlidePrev = !swiper.isBeginning;
     this.canSlideNext = !swiper.isEnd;
-    this.cdr.detectChanges();
+    this.cdr.markForCheck();
   }
 
   bannerImagesSlides() {
@@ -690,6 +695,38 @@ export class HomeComponent implements OnInit, OnDestroy {
     return testimonial.name + testimonial.videoUrl;
   }
 
+  trackByUserTestimonial(index: number, testimonial: any): string {
+    return testimonial.name + testimonial.location;
+  }
+
+  trackBySpeciality(index: number, item: any): any {
+    return item.dep_name;
+  }
+
+  trackByBlog(index: number, blog: any): string {
+    return blog.title;
+  }
+
+  trackByTech(index: number, tech: any): number {
+    return tech.id;
+  }
+
+  trackByWhyChoose(index: number, item: any): string {
+    return item.title;
+  }
+
+  trackByAward(index: number, award: any): string {
+    return award.img;
+  }
+
+  trackByLocation(index: number, location: any): number {
+    return location.id;
+  }
+
+  trackByFaq(index: number, faq: any): number {
+    return index;
+  }
+
   routeToLocation(location: string, selected_image: string) {
     const modalElement = document.getElementById('locationModal');
     const modalInstance = bootstrap.Modal.getInstance(modalElement);
@@ -723,11 +760,13 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   toggleFaq(index: number) {
     this.faqs.forEach((faq, i) => faq.expanded = i === index ? !faq.expanded : false);
+    this.cdr.markForCheck();
   }
 
   onSubmit(form: any) {
     if (!form.valid) {
       Object.keys(form.controls).forEach((field: string) => form.controls[field].markAsTouched());
+      this.cdr.markForCheck();
       return;
     }
 
@@ -764,6 +803,7 @@ export class HomeComponent implements OnInit, OnDestroy {
           time: Date.now()
         }));
         this.formData = { name: '', phone: '', email: '' } as any;
+        this.cdr.markForCheck();
         this.router.navigate(['/thank-you']);
       },
       error: (err) => {
@@ -781,18 +821,22 @@ export class HomeComponent implements OnInit, OnDestroy {
     // Basic validation
     if (!this.appointmentFormData.fullName.trim()) {
       alert('Full Name is required.');
+      this.cdr.markForCheck();
       return;
     }
     if (!this.appointmentFormData.phoneNumber.trim()) {
       alert('Phone Number is required.');
+      this.cdr.markForCheck();
       return;
     }
     if (!this.appointmentFormData.location) {
       alert('Please select a location.');
+      this.cdr.markForCheck();
       return;
     }
     if (!this.appointmentFormData.department) {
       alert('Please select a department.');
+      this.cdr.markForCheck();
       return;
     }
 
@@ -812,6 +856,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     }
 
     this.isSubmitting = true;
+    this.cdr.markForCheck();
 
     const payload = [
       { Attribute: "FirstName", Value: this.appointmentFormData.fullName },
@@ -863,6 +908,7 @@ export class HomeComponent implements OnInit, OnDestroy {
         console.error('LeadSquared Error:', err);
         alert('There was a problem submitting your appointment request.');
         this.isSubmitting = false;
+        this.cdr.markForCheck();
       }
     });
   }

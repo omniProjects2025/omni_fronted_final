@@ -5,10 +5,10 @@ import { RouterModule, Routes } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 
 // Import the single reusable component
-import { CardiologySubDepartmentComponent } from './cardiology-sub-department.component';
+import { OrthopedicsSubDepartmentComponent } from './orthopedics-sub-department.component';
 
 // Import service
-import { CardiologySubDepartmentsService } from './cardiology-sub-departments.service';
+import { OrthopedicsSubDepartmentsService } from './orthopedics-sub-departments.service';
 
 // Import SharedModule for Header and Footer components
 import { SharedModule } from '../shared.module';
@@ -16,14 +16,14 @@ import { SharedModule } from '../shared.module';
 const routes: Routes = [
   {
     path: '',
-    component: CardiologySubDepartmentComponent
+    component: OrthopedicsSubDepartmentComponent
   }
 ];
 
 @NgModule({
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   declarations: [
-    CardiologySubDepartmentComponent
+    OrthopedicsSubDepartmentComponent
   ],
   imports: [
     CommonModule,
@@ -33,10 +33,11 @@ const routes: Routes = [
     SharedModule
   ],
   providers: [
-    CardiologySubDepartmentsService
+    OrthopedicsSubDepartmentsService
   ],
   exports: [
-    CardiologySubDepartmentComponent
+    OrthopedicsSubDepartmentComponent
   ]
 })
-export class CardiologySubDepartmentsModule { }
+export class OrthopedicsSubDepartmentsModule { }
+

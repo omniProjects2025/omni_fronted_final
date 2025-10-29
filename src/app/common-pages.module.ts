@@ -61,6 +61,24 @@ const routes: Routes = [
   // 3. Base cardiology route (without location/slug - shows Kukatpally by default)
   { path: 'specialities/cardiology', component: OurSpecialitiesDetailsComponent },
   
+  // Orthopedics routes - Order matters!
+  // 1. Location-specific routes (most specific first)
+  { path: 'specialities/orthopedics/kukatpally', component: OurSpecialitiesDetailsComponent },
+  { path: 'specialities/orthopedics/vizag', component: OurSpecialitiesDetailsComponent },
+  { path: 'specialities/orthopedics/kothapet', component: OurSpecialitiesDetailsComponent },
+  { path: 'specialities/orthopedics/nampally', component: OurSpecialitiesDetailsComponent },
+  { path: 'specialities/orthopedics/kurnool', component: OurSpecialitiesDetailsComponent },
+  
+  // 2. Sub-department detail pages (for slugs like total-knee-replacement-in-kukatpally)
+  // This route must come after location-specific routes but handles other paths
+  { 
+    path: 'specialities/orthopedics/:slug', 
+    loadChildren: () => import('./orthopedics-sub-departments/orthopedics-sub-departments.module').then(m => m.OrthopedicsSubDepartmentsModule)
+  },
+  
+  // 3. Base orthopedics route (without location/slug - shows Kukatpally by default)
+  { path: 'specialities/orthopedics', component: OurSpecialitiesDetailsComponent },
+  
   // Specialities base route (first visit - no location in URL, defaults to Kukatpally)
   { path: 'specialities', component: OurSpecialitiesComponent },
   

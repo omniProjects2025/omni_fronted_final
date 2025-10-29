@@ -224,7 +224,6 @@
 .main-description {
   background: #f8f9fa;
   border-radius: 10px;
-  border-left: 4px solid #008fd5;
   padding: 1.5rem;
   margin-top: 0.5rem;
 }
@@ -246,7 +245,6 @@
   padding: 1.5rem;
   background: #f8f9fa;
   border-radius: 10px;
-  border-left: 4px solid #008fd5;
   margin-bottom: 2rem;
 }
 
@@ -285,7 +283,6 @@
   background: #f8f9fa;
   padding: 1rem;
   border-radius: 8px;
-  border-left: 4px solid #008fd5;
   margin-bottom: 0.75rem;
 }
 
@@ -309,7 +306,6 @@
   padding: 0.75rem;
   background: #fff;
   border-radius: 6px;
-  border-left: 3px solid #17a2b8;
 }
 
 .subsection-title-nested {
@@ -344,7 +340,6 @@
   background: #f8f9fa;
   padding: 1rem;
   border-radius: 8px;
-  border-left: 4px solid #28a745;
   margin-top: 1rem;
 }
 
@@ -508,7 +503,6 @@
   background: #f8f9fa;
   padding: 1.5rem;
   border-radius: 8px;
-  border-left: 4px solid #008fd5;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 

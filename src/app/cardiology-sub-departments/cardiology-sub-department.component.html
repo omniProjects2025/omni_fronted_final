@@ -28,6 +28,8 @@
                [alt]="subDepartment.name + ' Treatment'" 
                class="img-fluid rounded medical-image">
         </div>
+        <span *ngIf="subDepartment.name=='Heart Failure'">©<a href="https://www.mayoclinic.org/diseases-conditions/heart-failure/symptoms-causes/syc-20373142" target="_blank">MayoClinic</a></span>
+        <span *ngIf="subDepartment.name=='Coronary Angiogram'">©<a href="https://my.clevelandclinic.org/health/diagnostics/22164-coronary-angiogram" target="_blank">Cleveland Clinic</a></span>
       </div>
       
       <!-- Right Appointment Form -->

@@ -141,7 +141,7 @@
               "description": ""
             }
           ],
-          "paragraphs": [
+          "paragraphs_after": [
             {
               "icon": "fas fa-users",
               "text": "Book an appointment today with a leading heart failure doctor in Hyderabad to get evaluated for congestive heart failure symptoms or ongoing management of chronic diastolic heart failure."
@@ -174,8 +174,11 @@
       "image": "assets/our_specialities_new/angiogram.jpg",
       "content": {
         "h1": "Coronary Angiogram in Hyderabad",
-        "intro": "A Coronary Angiogram, also called Cardiac Catheterization, is a specialized diagnostic procedure used to detect blockages in the coronary arteries. This test helps identify Coronary Artery Disease (CAD), a condition where cholesterol, plaque, or fat deposits restrict blood flow to the heart, potentially leading to a heart attack. OMNI Hospitals is the best hospital for angiogram in Hyderabad, providing accurate diagnosis and expert cardiac care from the city's top angiogram specialists.",
         "sections": [
+          {
+            "h2": "Accurate Diagnosis of Coronary Artery Disease (CAD) at OMNI Hospitals",
+            "description": "A Coronary Angiogram, also called Cardiac Catheterization, is a specialized diagnostic procedure used to detect blockages in the coronary arteries. This test helps identify Coronary Artery Disease (CAD), a condition where cholesterol, plaque, or fat deposits restrict blood flow to the heart, potentially leading to a heart attack. OMNI Hospitals is the best hospital for angiogram in Hyderabad, providing accurate diagnosis and expert cardiac care from the city's top angiogram specialists."
+          },
           {
             "h2": "How a Coronary Angiogram Works",
             "description": "During the procedure, a thin, flexible tube called a catheter is inserted into a blood vessel, usually through the wrist or groin. A contrast dye (safe for medical use) is injected into the coronary arteries. As the dye flows through the heart's arteries, it becomes visible under real-time X-ray imaging (fluoroscopy).",
@@ -246,7 +249,11 @@
           "paragraphs_after": [
             {
               "icon": "fas fa-chart-line",
-              "text": "Patients often ask about the coronary angiogram cost in Hyderabad. At OMNI Hospitals, the procedure is priced transparently and competitively, ensuring affordable cardiac diagnostics without compromising quality. If you're looking for the best hospital for angiogram in Hyderabad or want to consult a leading angiogram specialist, OMNI Hospitals provides comprehensive cardiac care under one roof."
+              "text": "Patients often ask about the coronary angiogram cost in Hyderabad. At OMNI Hospitals, the procedure is priced transparently and competitively, ensuring affordable cardiac diagnostics without compromising quality."
+            },
+            {
+              "icon": "fas fa-chart-line",
+              "text": "If you're looking for the best hospital for angiogram in Hyderabad or want to consult a leading angiogram specialist, OMNI Hospitals provides comprehensive cardiac care under one roof."
             }
           ]
         },
@@ -458,7 +465,10 @@
           },
           {
             "h2": "Pacemaker Cost in Hyderabad",
-            "description": "The pacemaker surgery cost in Hyderabad depends on the type of device used (single, dual, or biventricular), the patient's condition, and the hospital facilities. At OMNI Hospitals, we offer transparent and affordable pacemaker costs in Hyderabad, ensuring high-quality treatment at affordable prices. For residents seeking reliable pacemaker treatment in Kukatpally, OMNI Hospitals provides expert care, with advanced cardiac facilities and round-the-clock support."
+            "description": "The pacemaker surgery cost in Hyderabad depends on the type of device used (single, dual, or biventricular), the patient's condition, and the hospital facilities. At OMNI Hospitals, we offer transparent and affordable pacemaker costs in Hyderabad, ensuring high-quality treatment at affordable prices."
+          },
+          {
+            "description": "For residents seeking reliable pacemaker treatment in Kukatpally, OMNI Hospitals provides expert care, with advanced cardiac facilities and round-the-clock support."
           }
         ],
         "why_choose_us": {
@@ -507,7 +517,7 @@
       "name": "Bypass Surgery",
       "url": "/specialities/cardiology/best-hospital-for-bypass-surgery-in-hyderabad",
       "meta_title": "Best Hospital for Bypass Surgery in Hyderabad | Omni Hospitals",
-      "meta_description": "Expert coronary artery bypass surgery at OMNI Hospitals Hyderabad. Advanced CABG procedures performed by experienced cardiac surgeons for severe coronary artery disease.",
+      "meta_description": "OMNI Hospitals is the best choice for Bypass Surgery (CABG) in Kukatpally, Hyderabad. Get expert care from cardiac specialists, advanced surgery, and transparent, affordable cost.",
       "canonical_url": "https://omnihospitals.in/specialities/cardiology/best-hospital-for-bypass-surgery-in-hyderabad/",
       "image": "assets/our_specialities_new/bypass_surgery.jpg",
       "content": {
@@ -556,7 +566,7 @@
               "description": ""
             }
           ],
-          "paragraphs": [
+          "paragraphs_after": [
             {
               "icon": "fas fa-chart-line",
               "text": "If you're searching for the best hospital for bypass surgery in Hyderabad or expert cardiac specialists in Kukatpally, visit OMNI Hospitals today for comprehensive heart care and long-term wellness."

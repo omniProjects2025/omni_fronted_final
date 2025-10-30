@@ -352,10 +352,12 @@ export class OrthopedicsSubDepartmentsService {
                 "subsections": [
                   {
                     "h3": "Dr. Praneeth Reddy",
+                    "profile_url": "https://omnihospitals.in/doctor-details/dr-praneeth-reddy?location=kukatpally",
                     "description": "MBBS, MS(Ortho) Fellow in Joint Replacement, Fellow in Shoulder & Elbow Surgery (Italy) Senior Consultant Arthroscopy & Joint Replacement Surgeon"
                   },
                   {
                     "h3": "Dr. Ranjith Nellore Mahesh",
+                    "profile_url": "https://omnihospitals.in/doctor-details/dr-ranjith-nellore-mahesh?location=kukatpally",
                     "description": "MBBS, MS (Ortho) FIPO (Paediatric Orthopaedics-IGICH) FIJR (Joint Replacement Surgery) FIRKR (Robotic Knee Replacement Surgery) Orthopaedic Surgeon"
                   }
                 ]

@@ -103,9 +103,6 @@
       <div class="col-12">
         <div class="main-heading-container text-center">
           <h1 class="main-heading">{{ subDepartment.content?.h1 || subDepartment.name + ' Treatment in Hyderabad' }}</h1>
-          <div class="main-description" *ngIf="subDepartment.content?.intro">
-            <p class="description-text">{{ subDepartment.content.intro }}</p>
-          </div>
         </div>
       </div>
     </div>
@@ -113,7 +110,7 @@
 </section>
 
 <!-- Section 4: Main Content -->
-<section class="content-section py-5">
+<section class="content-section">
   <div class="container">
     <div class="row">
       <div class="col-12">
@@ -128,20 +125,18 @@
                 <p>{{ section.description }}</p>
               </div>
               
-              <!-- Description after (before subsections/list if no list exists) -->
-              <div class="section-description" *ngIf="section.description_after && !section.list && !section.subsections">
-                <p>{{ section.description_after }}</p>
-              </div>
-              
               <!-- Subsections -->
               <div class="subsections-container" *ngIf="section.subsections">
                 <div class="subsection-item mb-4" *ngFor="let subsection of section.subsections">
-                  <h3 class="subsection-title" *ngIf="subsection.h3">{{ subsection.h3 }}</h3>
+                  <h3 class="subsection-title" *ngIf="subsection.h3 && !subsection.profile_url">{{ subsection.h3 }}</h3>
+                  <h3 class="subsection-title" *ngIf="subsection.h3 && subsection.profile_url">
+                    <a [href]="subsection.profile_url" target="_blank" rel="noopener">{{ subsection.h3 }}</a>
+                  </h3>
                   <h4 class="subsection-title" *ngIf="subsection.h4">{{ subsection.h4 }}</h4>
-                  <p class="subsection-description" *ngIf="subsection.description">{{ subsection.description }}</p>
+                  <p class="subsection-description" *ngIf="subsection.description" [innerHTML]="formatDescription(subsection.description)"></p>
                   <div class="subsection-list" *ngIf="subsection.list">
                     <ul class="content-list">
-                      <li *ngFor="let item of subsection.list" [innerHTML]="item"></li>
+                      <li *ngFor="let item of subsection.list" [innerHTML]="formatListItem(item)"></li>
                     </ul>
                   </div>
                   <!-- Nested subsections -->
@@ -154,15 +149,10 @@
                 </div>
               </div>
               
-              <!-- Description after (when it appears before a list) -->
-              <div class="section-description" *ngIf="section.description_after && section.list">
-                <p>{{ section.description_after }}</p>
-              </div>
-              
               <!-- Lists -->
               <div class="section-list" *ngIf="section.list">
                 <ul class="content-list">
-                  <li *ngFor="let item of section.list" [innerHTML]="item"></li>
+                  <li *ngFor="let item of section.list" [innerHTML]="formatListItem(item)"></li>
                 </ul>
               </div>
               
@@ -208,7 +198,7 @@
 </section>
 
 <!-- Section 6: Why Choose Us -->
-<section class="why-choose-us-section py-5 bg-light" *ngIf="subDepartment.content?.why_choose_us">
+<section class="why-choose-us-section pt-5 bg-light" *ngIf="subDepartment.content?.why_choose_us">
   <div class="container">
     <div class="row">
       <div class="col-12">
@@ -255,7 +245,7 @@
 </section>
 
 <!-- Section 7: FAQs -->
-<section class="faqs-section py-5">
+<section class="faqs-section">
   <div class="container">
     <div class="row">
       <div class="col-12">

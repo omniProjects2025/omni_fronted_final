@@ -192,5 +192,25 @@ export class OrthopedicsSubDepartmentComponent implements OnInit {
   navigateToSecondOpinion() {
     this.router.navigate(['/get-a-second-opinion']);
   }
+
+  formatListItem(item: string): string {
+    if (!item) return '';
+    // Check if item contains a colon
+    const colonIndex = item.indexOf(':');
+    if (colonIndex > 0) {
+      // Split at the colon
+      const beforeColon = item.substring(0, colonIndex);
+      const afterColon = item.substring(colonIndex);
+      // Return with bold formatting for before colon
+      return `<strong>${beforeColon}</strong>${afterColon}`;
+    }
+    return item;
+  }
+
+  formatDescription(description: string): string {
+    if (!description) return '';
+    // Replace newlines with <br> tags for HTML rendering
+    return description.replace(/\n/g, '<br>');
+  }
 }
 

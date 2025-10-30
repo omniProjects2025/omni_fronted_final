@@ -168,22 +168,24 @@ export class OurDoctorsComponent implements OnInit, AfterViewInit, OnDestroy {
     // Optimize data processing with single pass
     this.allDoctorsFlat = this.allDoctorData.flatMap(loc =>
       (loc.doctors || []).map((doc: any) => {
-        const doctor_location = (doc.work_location || '').trim();
-        const doctor_designation = (doc.specialization || '').trim();
+        const doctor_location = (doc.work_location || '');
+        const doctor_designation = doc.specialization;
+        const doctor_filter_speciality = doc.filter_by_speciality;
         const doctor_name = doc.name || '';
         return {
           ...doc,
           doctor_name,
           doctor_location,
           doctor_designation,
+          doctor_filter_speciality,
           profile: doc.profile,
           qualification: doc.qualification,
           experience: doc.experience,
           id: doc.id,
-          // normalized for faster filters
+          // normalized for faster filters (based on filter_by_speciality)
           _name_lc: doctor_name.toLowerCase(),
-          _loc_lc: doctor_location.toLowerCase(),
-          _spec_lc: doctor_designation.toLowerCase()
+          _loc_lc: (doctor_location || '').toLowerCase(),
+          _spec_lc: (doctor_filter_speciality || '').toLowerCase()
         };
       })
     );
@@ -193,7 +195,7 @@ export class OurDoctorsComponent implements OnInit, AfterViewInit, OnDestroy {
     
     // Extract unique values more efficiently
     this.locations = [...new Set(this.allDoctorsFlat.map(d => d.doctor_location).filter(Boolean))];
-    this.specialities = [...new Set(this.allDoctorsFlat.map(d => d.doctor_designation).filter(Boolean))];
+    this.specialities = [...new Set(this.allDoctorsFlat.map(d => d.doctor_filter_speciality).filter(Boolean))];
     
     this.cdr.markForCheck();
     this.ensureFilledView();
@@ -213,7 +215,7 @@ export class OurDoctorsComponent implements OnInit, AfterViewInit, OnDestroy {
     this.visibleDoctors = this.doctors.slice(0, this.pageSize);
     
     this.locations = [...new Set(this.allDoctorsFlat.map(d => d.doctor_location).filter(Boolean))];
-    this.specialities = [...new Set(this.allDoctorsFlat.map(d => d.doctor_designation).filter(Boolean))];
+    this.specialities = [...new Set(this.allDoctorsFlat.map(d => d.doctor_filter_speciality).filter(Boolean))];
     
     this.ensureFilledView();
     setTimeout(() => this.observeSentinel(), 0);
@@ -227,7 +229,9 @@ export class OurDoctorsComponent implements OnInit, AfterViewInit, OnDestroy {
 
   private cacheData(data: any[]) {
     try {
-      localStorage.setItem('doctors_cache', JSON.stringify({
+      // Use a versioned cache key to avoid stale cached data from previous mapping
+      localStorage.removeItem('doctors_cache_v2');
+      localStorage.setItem('doctors_cache_v3', JSON.stringify({
         data: data,
         timestamp: Date.now()
       }));
@@ -238,7 +242,10 @@ export class OurDoctorsComponent implements OnInit, AfterViewInit, OnDestroy {
 
   private getCachedData(): any[] {
     try {
-      const cached = localStorage.getItem('doctors_cache');
+      // Cleanup old cache keys
+      try { localStorage.removeItem('doctors_cache'); } catch {}
+      try { localStorage.removeItem('doctors_cache_v2'); } catch {}
+      const cached = localStorage.getItem('doctors_cache_v3');
       if (cached) {
         const parsed = JSON.parse(cached);
         // Cache valid for 1 hour (3600000ms)
@@ -250,13 +257,13 @@ export class OurDoctorsComponent implements OnInit, AfterViewInit, OnDestroy {
         } else {
           console.log('Cache expired, will make API call');
           // Clean up expired cache
-          localStorage.removeItem('doctors_cache');
+          localStorage.removeItem('doctors_cache_v3');
         }
       }
     } catch (error) {
       console.warn('Failed to retrieve cached data:', error);
       // Clean up corrupted cache
-      localStorage.removeItem('doctors_cache');
+      localStorage.removeItem('doctors_cache_v3');
     }
     return [];
   }
@@ -266,6 +273,8 @@ export class OurDoctorsComponent implements OnInit, AfterViewInit, OnDestroy {
     console.log('Clearing all caches to force API call');
     try {
       localStorage.removeItem('doctors_cache');
+      localStorage.removeItem('doctors_cache_v2');
+      localStorage.removeItem('doctors_cache_v3');
       this.doctorservice.clearCache();
     } catch (error) {
       console.warn('Failed to clear caches:', error);
@@ -286,7 +295,7 @@ export class OurDoctorsComponent implements OnInit, AfterViewInit, OnDestroy {
     const locationLc = this.selectedLocation.toLowerCase().trim();
     const filteredByLocation = this.allDoctorsFlat
       .filter(d => !locationLc || d._loc_lc === locationLc)
-      .map(d => d.doctor_designation)
+      .map(d => d.doctor_filter_speciality)
       .filter(Boolean);
     this.specialities = [...new Set(filteredByLocation)];
     if (!this.specialities.includes(this.selectedSpeciality)) {

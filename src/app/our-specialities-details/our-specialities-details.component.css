@@ -768,3 +768,59 @@ h5 {
     font-size: 13px;
   }
 }
+
+/* FAQ specific styling */
+.faqs-section .section-title { color: #212529; }
+.faqs-section .accordion-button {
+  background: transparent;
+  border: none;
+  padding: 1rem 1.25rem;
+}
+.faqs-section .accordion-button:focus {
+  box-shadow: none;
+}
+.faqs-section .accordion-button .faq-question {
+  font-weight: 700;
+  font-size: 1.18rem; /* slightly larger */
+  color: #212529; /* question color */
+}
+.faqs-section .accordion-button.collapsed { /* collapsed state */
+  color: #212529;
+}
+.faqs-section .accordion-button:not(.collapsed) {
+  color: #007bff; /* primary when active */
+}
+
+.faqs-section .accordion-body {
+  padding: 0.75rem 1.25rem 1.25rem 1.25rem;
+  color: #6c757d; /* default body text color for answers */
+}
+.faqs-section .faq-answer {
+  color: #212529; /* answer text color - made darker per request */
+  font-size: 1.06rem; /* slightly increased for readability */
+  font-weight: 400;
+  line-height: 1.7;
+  transition: opacity 0.35s ease, transform 0.35s ease;
+  opacity: 0; /* start hidden for animation */
+  transform: translateY(-6px);
+}
+
+.faqs-section .accordion-collapse.show .faq-answer {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Smooth collapse transition support (complements Bootstrap's collapse) */
+.faqs-section .accordion-collapse {
+  transition: height 0.35s ease;
+}
+
+/* Hover/active states using brand secondary color */
+.faqs-section .accordion-button:hover {
+  color: #0056b3;
+}
+
+@media (max-width: 768px) {
+  .faqs-section .faq-question { font-size: 1.05rem; }
+  .faqs-section .faq-answer { font-size: 0.98rem; }
+}

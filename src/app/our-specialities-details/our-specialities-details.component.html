@@ -81,7 +81,7 @@
           </div>
 
         </div>
-        <ng-container *ngIf="selectedDepartment?.sub_departments && selectedDepartment?.sub_departments.length > 0">
+                <ng-container *ngIf="selectedDepartment?.sub_departments && selectedDepartment?.sub_departments.length > 0">
           <section>
             <div class="row">
               <div class="col-lg-4 col-md-6 mb-4" *ngFor="let subDept of selectedDepartment.sub_departments">
@@ -92,6 +92,42 @@
             </div>
           </section>
         </ng-container>
+        
+                <!-- FAQs: Render only when faqs array exists and has items -->
+                <section class="faqs-section py-5" *ngIf="selectedDepartment?.faqs && selectedDepartment?.faqs.length > 0">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-12">
+                        <h2 class="section-title text-center mb-5">Frequently Asked Questions</h2>
+                        <div class="accordion" id="specialityFaqAccordion">
+                          <div class="accordion-item" *ngFor="let faq of selectedDepartment.faqs; let i = index">
+                            <h3 class="accordion-header" [id]="'headingSpec' + i">
+                              <button
+                                class="accordion-button" 
+                                [class.collapsed]="i !== 0"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                [attr.data-bs-target]="'#specCollapse' + i"
+                                [attr.aria-expanded]="i === 0 ? 'true' : 'false'"
+                                [attr.aria-controls]="'specCollapse' + i">
+                                <span class="faq-question">{{ faq.question }}</span>
+                              </button>
+                            </h3>
+                            <div [id]="'specCollapse' + i"
+                                 class="accordion-collapse collapse"
+                                 [class.show]="i === 0"
+                                 [attr.aria-labelledby]="'headingSpec' + i"
+                                 data-bs-parent="#specialityFaqAccordion">
+                              <div class="accordion-body">
+                                <div class="faq-answer">{{ faq.answer }}</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
       </ng-container>
     </div>
   </section>

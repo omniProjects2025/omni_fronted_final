@@ -170,8 +170,8 @@ export class OurBranchesComponent {
         );
         this.doctors = selectedLocation ? selectedLocation.doctors : [];
 
-        // ✅ Extract unique specializations for departments
-        this.departments = [...new Set(this.doctors.map(d => d.specialization))];
+        // ✅ Extract unique departments from filter_by_speciality
+        this.departments = [...new Set(this.doctors.map(d => d.filter_by_speciality))];
       },
       error: (err) => {
         console.error('Error loading doctors:', err);
@@ -185,7 +185,7 @@ export class OurBranchesComponent {
 
   filteredDoctors() {
     return this.selectedDepartment
-      ? this.doctors.filter(d => d.specialization === this.selectedDepartment)
+      ? this.doctors.filter(d => d.filter_by_speciality === this.selectedDepartment)
       : this.doctors;
   }
   openDirections(location: string) {

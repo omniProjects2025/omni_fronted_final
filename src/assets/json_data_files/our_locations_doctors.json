@@ -12,6 +12,7 @@
                 ],
                 "depertment": "Orthopaedic Surgeon",
                 "specialization": "Orthopaedics",
+                "filter_by_speciality": "Orthopedics",
                 "work_location": "kukatpally",
                 "experience": "8 years",
                 "profile": "assets/kukatpally_doctors_profiles/dr_ranjith_nellore_mahesh.png"
@@ -24,6 +25,7 @@
                 ],
                 "depertment": "Cardiologist",
                 "specialization": "Cardiology",
+                "filter_by_speciality": "Cardiology",
                 "work_location": "kukatpally",
                 "experience": "18 Years",
                 "profile": "assets/kukatpally_doctors_profiles/pramod_kumar_rao.png"
@@ -35,6 +37,7 @@
                 ],
                 "depertment": "Neuro Physician",
                 "specialization": "Neurology",
+                "filter_by_speciality": "Neurology",
                 "work_location": "kukatpally",
                 "experience": "3 Years",
                 "profile": "assets/kukatpally_doctors_profiles/Dr_Kamala_priya.png"
@@ -46,6 +49,7 @@
                 ],
                 "depertment": "Medical Head & Critical Care In-Charge",
                 "specialization": "Emergency Medicine",
+                "filter_by_speciality": "Emergency and Critical Care",
                 "work_location": "kukatpally",
                 "experience": "12 Years",
                 "profile": "assets/kukatpally_doctors_profiles/dr_srihari.png"
@@ -57,6 +61,7 @@
                 ],
                 "depertment": "Neurosurgeon",
                 "specialization": "Neurosurgery",
+                "filter_by_speciality": "Neurology",
                 "work_location": "kukatpally",
                 "experience": "12 Years",
                 "profile": "assets/kukatpally_doctors_profiles/dr_varaprasad.png"
@@ -68,6 +73,7 @@
                 ],
                 "depertment": "General Physician",
                 "specialization": "General Medicine",
+                "filter_by_speciality": "General Medicine",
                 "work_location": "kukatpally",
                 "experience": "24 Years",
                 "profile": "assets/kukatpally_doctors_profiles/nagavender_rao_m.png"
@@ -80,6 +86,7 @@
                 ],
                 "depertment": "Medical Gastroenterologist",
                 "specialization": "Medical Gastroenterology",
+                "filter_by_speciality": "Gastroenterology",
                 "work_location": "kukatpally",
                 "experience": "6 Years",
                 "profile": "assets/kukatpally_doctors_profiles/ch.saidulu.png"
@@ -92,6 +99,7 @@
                 ],
                 "depertment": "Surgical Gastroenterologist",
                 "specialization": "Surgical Gastroenterology",
+                "filter_by_speciality": "Gastroenterology",
                 "work_location": "kukatpally",
                 "experience": "25 Years",
                 "profile": "assets/kukatpally_doctors_profiles/dr_tagore_mohan_grandhi.png"
@@ -103,6 +111,7 @@
                 ],
                 "depertment": "Gynaecologist",
                 "specialization": "Gynecology And Obstetrics",
+                "filter_by_speciality": "Obstetrics and Gynecology",
                 "work_location": "kukatpally",
                 "experience": "25 Years",
                 "profile": "assets/kukatpally_doctors_profiles/padmaja_subramanium.png"
@@ -114,6 +123,7 @@
                 ],
                 "depertment": "Urologist",
                 "specialization": "Urology",
+                "filter_by_speciality": "Urology",
                 "work_location": "kukatpally",
                 "experience": "23 Years",
                 "profile": "assets/kukatpally_doctors_profiles/ravinder_reddy.png"
@@ -127,6 +137,7 @@
                 ],
                 "depertment": "Dermatologist",
                 "specialization": "Dermatology & Cosmetology",
+                "filter_by_speciality": "Dermatology",
                 "work_location": "kukatpally",
                 "experience": "23 Years",
                 "profile": "assets/kukatpally_doctors_profiles/S.kiran.png"
@@ -138,6 +149,7 @@
                 ],
                 "depertment": "Psychiatrist",
                 "specialization": "Psychiatry",
+                "filter_by_speciality": "Psychiatry",
                 "work_location": "kukatpally",
                 "experience": "14 Years",
                 "profile": "assets/kukatpally_doctors_profiles/lokesh_kumar.png"
@@ -149,6 +161,7 @@
                 ],
                 "depertment": "Pulmonologist",
                 "specialization": "Pulmonology",
+                "filter_by_speciality": "Pulmonology",
                 "work_location": "kukatpally",
                 "experience": "6 Years",
                 "profile": "assets/kukatpally_doctors_profiles/g.uma_sri.png"
@@ -160,6 +173,7 @@
                 ],
                 "depertment": "Pulmonologist",
                 "specialization": "Pulmonology",
+                "filter_by_speciality": "Pulmonology",
                 "work_location": "kukatpally",
                 "experience": "20 Years",
                 "profile": "assets/kukatpally_doctors_profiles/M.rama_krishna_reddy.png"
@@ -172,6 +186,7 @@
                 ],
                 "depertment": "Medical Oncologist",
                 "specialization": "Medical Oncology",
+                "filter_by_speciality": "Oncology",
                 "work_location": "kukatpally",
                 "experience": "5 Years",
                 "profile": "assets/kukatpally_doctors_profiles/dr_chinthakunta_raghavendra_reddy.png"
@@ -184,6 +199,7 @@
                 ],
                 "depertment": "Nephrologist",
                 "specialization": "Nephrology",
+                "filter_by_speciality": "Nephrology",
                 "work_location": "kukatpally",
                 "experience": "7 Years",
                 "profile": "assets/kukatpally_doctors_profiles/dr_sandeep_pemira.png"
@@ -195,6 +211,7 @@
                 ],
                 "depertment": "Orthopaedic Surgeon",
                 "specialization": "Orthopaedics",
+                "filter_by_speciality": "Orthopedics",
                 "work_location": "kukatpally",
                 "experience": "14 Years",
                 "profile": "assets/kukatpally_doctors_profiles/dr_praneeth_reddy.png"
@@ -207,6 +224,7 @@
                 ],
                 "depertment": "Plastic surgeon",
                 "specialization": "Plastic & Reconstructive Surgery",
+                "filter_by_speciality": "Plastic Surgery",
                 "work_location": "kukatpally",
                 "experience": "13 Years",
                 "profile": "assets/kukatpally_doctors_profiles/dr_neelima_m.png"
@@ -218,6 +236,7 @@
                 ],
                 "depertment": "Consultant Physician",
                 "specialization": "General Medicine",
+                "filter_by_speciality": "General Medicine",
                 "work_location": "kukatpally",
                 "experience": "8 Years",
                 "profile": "assets/kukatpally_doctors_profiles/dr_seetha_general_medicine.png"
@@ -229,6 +248,7 @@
                 ],
                 "depertment": "ENT",
                 "specialization": "ENT",
+                "filter_by_speciality": "ENT",
                 "work_location": "kukatpally",
                 "experience": "22 Years",
                 "profile": "assets/kukatpally_doctors_profiles/payal_chitransi.png"
@@ -245,6 +265,7 @@
                 ],
                 "depertment": "Consultant Orthopaedic Surgeon",
                 "specialization": "Orthopaedics",
+                "filter_by_speciality": "Orthopedics",
                 "work_location": "Nampally",
                 "experience": "28 Years",
                 "profile": "assets/udai_omni_doctor_profiles/Dr_Ved_Prakash.png"
@@ -257,6 +278,7 @@
                 ],
                 "depertment": "Consultant Cardiologist",
                 "specialization": "cardiology",
+                "filter_by_speciality": "Cardiology",
                 "work_location": "Nampally",
                 "experience": "30 Years",
                 "profile": "assets/udai_omni_doctor_profiles/Dr_M_Srinivasa_Rao.png"
@@ -271,6 +293,7 @@
                 ],
                 "depertment": "Director and Chief of Spine Surgery",
                 "specialization": "Orthopaedics",
+                "filter_by_speciality": "Orthopedics",
                 "work_location": "Nampally",
                 "experience": "",
                 "profile": "assets/udai_omni_doctor_profiles/Dr_M_Raghava_Dutt.png"
@@ -284,6 +307,7 @@
                 ],
                 "depertment": "Director and Joint Replacement Surgeon",
                 "specialization": "Orthopaedics",
+                "filter_by_speciality": "Orthopedics",
                 "work_location": "Nampally",
                 "experience": "26 Years",
                 "profile": "assets/udai_omni_doctor_profiles/Dr_Udai_Prakash.png"
@@ -295,6 +319,7 @@
                 ],
                 "depertment": "Consultant General Physician",
                 "specialization": "General Medicine",
+                "filter_by_speciality": "General Medicine",
                 "work_location": "Nampally",
                 "experience": "35 Years",
                 "profile": "assets/udai_omni_doctor_profiles/Dr_Vimal_Rai.png"
@@ -306,6 +331,7 @@
                 ],
                 "depertment": "Consultant Orthopaedic Surgeon",
                 "specialization": "Orthopaedics",
+                "filter_by_speciality": "Orthopedics",
                 "work_location": "Nampally",
                 "experience": "",
                 "profile": "assets/udai_omni_doctor_profiles/Dr_STR_Chari.png"
@@ -317,6 +343,7 @@
                 ],
                 "depertment": "Consultant Orthopaedic Surgeon",
                 "specialization": "Orthopaedics",
+                "filter_by_speciality": "Orthopedics",
                 "work_location": "Nampally",
                 "experience": "",
                 "profile": "assets/udai_omni_doctor_profiles/Dr_Pavan_Kumar_Goud.png"
@@ -330,6 +357,7 @@
                 ],
                 "depertment": "Consultant Plastic & Cosmetic Surgeon",
                 "specialization": "Plastic & Cosmetic Surgery",
+                "filter_by_speciality": "Plastic Surgery",
                 "work_location": "Nampally",
                 "profile": "assets/udai_omni_doctor_profiles/Dr_A_Ravi_Chander_Rao.png"
             },
@@ -340,6 +368,7 @@
                 ],
                 "depertment": "Consultant Radiation Oncologist",
                 "specialization": "Oncology",
+                "filter_by_speciality": "Oncology",
                 "work_location": "Nampally",
                 "experience": "30 Years",
                 "profile": "assets/udai_omni_doctor_profiles/Dr_C_Sai_Ram.png"
@@ -352,6 +381,7 @@
                 ],
                 "depertment": "Consultant Family Physician",
                 "specialization": "General Medicine",
+                "filter_by_speciality": "General Medicine",
                 "work_location": "Nampally",
                 "experience": "40 Years",
                 "profile": "assets/udai_omni_doctor_profiles/Dr_Dilip_P_Bhanushali.png"
@@ -363,6 +393,7 @@
                 ],
                 "depertment": "Consultant Shoulder and Upper Limb",
                 "specialization": "Orthopaedics",
+                "filter_by_speciality": "Orthopedics",
                 "work_location": "Nampally",
                 "experience": "24 Years",
                 "profile": "assets/udai_omni_doctor_profiles/Dr_Deepthi_Nandan.png"
@@ -374,6 +405,7 @@
                 ],
                 "depertment": "Consultant Trauma and Joint Replacement Surgeon",
                 "specialization": "Trauma and Joint Replacement Surgery",
+                "filter_by_speciality": "Orthopedics",
                 "work_location": "Nampally",
                 "experience": "",
                 "profile": "assets/udai_omni_doctor_profiles/Dr_Gandhi_Govind_Jugalkishor.png"
@@ -386,6 +418,7 @@
                 ],
                 "depertment": "Consultant Rheumatologist",
                 "specialization": "Rheumatology",
+                "filter_by_speciality": "Orthopedics",
                 "work_location": "Nampally",
                 "experience": "6 Years",
                 "profile": "assets/udai_omni_doctor_profiles/Dr_Mohammed_Touseef_Raza.png"
@@ -399,6 +432,7 @@
                 ],
                 "depertment": "Consultant Vascular Surgeon",
                 "specialization": "Vascular Surgery",
+                "filter_by_speciality": "General Surgery",
                 "work_location": "Nampally",
                 "experience": "",
                 "profile": "assets/udai_omni_doctor_profiles/Dr_Pritee_Sharma.png"
@@ -412,6 +446,7 @@
                 ],
                 "depertment": "Head of Department Nephrology",
                 "specialization": "Nephrology",
+                "filter_by_speciality": "Nephrology",
                 "work_location": "Nampally",
                 "experience": "",
                 "profile": "assets/udai_omni_doctor_profiles/Dr_Girish_Narayan.png"
@@ -426,6 +461,7 @@
                 ],
                 "depertment": "Consultant Spine & Orthopedic Surgeon",
                 "specialization": "Spine & Orthopedic Surgery",
+                "filter_by_speciality": "Orthopedics",
                 "work_location": "Nampally",
                 "experience": "",
                 "profile": "assets/udai_omni_doctor_profiles/Dr_P_K_Kartik_Yelamarthy.png"
@@ -441,6 +477,7 @@
                 ],
                 "depertment": "Consultant Orthopaedic Surgeon",
                 "specialization": "Orthopaedics",
+                "filter_by_speciality": "Orthopedics",
                 "work_location": "Nampally",
                 "experience": "15 Years",
                 "profile": "assets/udai_omni_doctor_profiles/Dr_Pradeep_Monoot.png"
@@ -453,6 +490,7 @@
                 ],
                 "depertment": "Consultant General & Laparoscopic Surgeon",
                 "specialization": "General & Laparoscopic Surgery",
+                "filter_by_speciality": "General Surgery",
                 "work_location": "Nampally",
                 "experience": "",
                 "profile": "assets/udai_omni_doctor_profiles/Dr_Khaja_Abdul_Muqeet.png"
@@ -467,6 +505,7 @@
                 ],
                 "depertment": "Consultant Orthopaedic Oncosurgeon",
                 "specialization": "Orthopaedic Oncology",
+                "filter_by_speciality": "Orthopedics",
                 "work_location": "Nampally",
                 "experience": "",
                 "profile": "assets/udai_omni_doctor_profiles/Dr_Rajeev_Reddy.png"
@@ -478,6 +517,7 @@
                 ],
                 "depertment": "Consultant General Physician",
                 "specialization": "General Medicine",
+                "filter_by_speciality": "General Medicine",
                 "work_location": "Nampally",
                 "experience": "",
                 "profile": "assets/udai_omni_doctor_profiles/Dr_Srirang_Abkari.png"
@@ -489,6 +529,7 @@
                 ],
                 "depertment": "Consultant Pediatric Orthopedic Surgeon",
                 "specialization": "Pediatric Orthopaedic Surgery",
+                "filter_by_speciality": "Orthopedics",
                 "work_location": "Nampally",
                 "experience": "",
                 "profile": "assets/udai_omni_doctor_profiles/Dr_Vidyasagar_Chandankere.png"
@@ -506,6 +547,7 @@
                 ],
                 "depertment": "Orthopaedic Surgeon",
                 "specialization": "Orthopaedics",
+                "filter_by_speciality": "Orthopedics",
                 "work_location": "kothapet",
                 "experience": "13 Years",
                 "profile": "assets/kothapet_doctor_profiles_new/Dr_Kotha_Shyam_Sunder_Reddy.png"
@@ -518,6 +560,7 @@
                 ],
                 "depertment": "Cardiologist",
                 "specialization": "Cardiology",
+                "filter_by_speciality": "Cardiology",
                 "work_location": "kothapet",
                 "experience": "43 Years",
                 "profile": "assets/kothapet_doctor_profiles_new/Dr_Sudharshana_reddy.g.png"
@@ -530,6 +573,7 @@
                 ],
                 "depertment": "Neurologist",
                 "specialization": "Neurology",
+                "filter_by_speciality": "Neurology",
                 "work_location": "kothapet",
                 "experience": "19 Years",
                 "profile": "assets/kothapet_doctor_profiles_new/Dr_Umesh_Prasad_Sharma.png"
@@ -543,6 +587,7 @@
                 ],
                 "depertment": "Neuro Surgeon",
                 "specialization": "Neuro Surgery",
+                "filter_by_speciality": "Neurology",
                 "work_location": "kothapet",
                 "experience": "25 Years",
                 "profile": "assets/kothapet_doctor_profiles_new/Dr_A_Masthan_Reddy.png"
@@ -555,6 +600,7 @@
                 ],
                 "depertment": "Cardiologist",
                 "specialization": "Cardiology",
+                "filter_by_speciality": "Cardiology",
                 "work_location": "kothapet",
                 "experience": "",
                 "profile": ""
@@ -567,6 +613,7 @@
                 ],
                 "depertment": "Gastroenterology",
                 "specialization": "Gastroenterology",
+                "filter_by_speciality": "Gastroenterology",
                 "work_location": "kothapet",
                 "experience": "15 Years",
                 "profile": "assets/kothapet_doctor_profiles_new/Dr_Katikareddy_V_Venugopal_Reddy.png"
@@ -578,7 +625,8 @@
                     "DNB General Surgery"
                 ],
                 "depertment": "General Surgeon",
-                "specialization": "General surgery",
+                "specialization": "General Surgery",
+                "filter_by_speciality": "General Surgery",
                 "work_location": "kothapet",
                 "experience": "13 Years",
                 "profile": "assets/kothapet_doctor_profiles_new/Dr_Jayasimha_N.png"
@@ -591,6 +639,7 @@
                 ],
                 "depertment": "General surgeon",
                 "specialization": "General surgery",
+                "filter_by_speciality": "General Surgery",
                 "work_location": "kothapet",
                 "experience": "",
                 "profile": "assets/kothapet_doctor_profiles_new/dr_gopireddy_pavan_kumar_reddy.png"
@@ -603,6 +652,7 @@
                 ],
                 "depertment": "General Physician",
                 "specialization": "General Medicine",
+                "filter_by_speciality": "General Medicine",
                 "work_location": "kothapet",
                 "experience": "19 Years",
                 "profile": "assets/kothapet_doctor_profiles_new/Dr_B_Jaipal_Reddy.png"
@@ -615,6 +665,7 @@
                 ],
                 "depertment": "General Physician",
                 "specialization": "General Medicine",
+                "filter_by_speciality": "General Medicine",
                 "work_location": "kothapet",
                 "experience": "18 Years",
                 "profile": "assets/kothapet_doctor_profiles_new/dr_gopireddy_pavan_kumar_reddy.png"
@@ -627,6 +678,7 @@
                 ],
                 "depertment": "General Physician",
                 "specialization": "General Medicine",
+                "filter_by_speciality": "General Medicine",
                 "work_location": "kothapet",
                 "experience": "",
                 "profile": ""
@@ -639,6 +691,7 @@
                 ],
                 "depertment": "Gynaecologist",
                 "specialization": "Gynaecology",
+                "filter_by_speciality": "Obstetrics and Gynecology",
                 "work_location": "kothapet",
                 "experience": "26 Years",
                 "profile": "assets/kothapet_doctor_profiles_new/Dr_Radlam_Padma_Kumari.png"
@@ -650,6 +703,7 @@
                 ],
                 "depertment": "Senior consultant and HOD Anaesthesiology",
                 "specialization": "Anaesthesiology",
+                "filter_by_speciality": "Emergency and Critical Care",
                 "work_location": "kothapet",
                 "experience": "26 Years",
                 "profile": "assets/kothapet_doctor_profiles_new/Dr_Ch_Nagaraj.png"
@@ -662,6 +716,7 @@
                 ],
                 "depertment": "Anaesthesia",
                 "specialization": "Anaesthesiology",
+                "filter_by_speciality": "Emergency and Critical Care",
                 "work_location": "kothapet",
                 "experience": "12 Years",
                 "profile": "assets/kothapet_doctor_profiles_new/Dr_V_A_Vani.png"
@@ -674,6 +729,7 @@
                 ],
                 "depertment": "Anaesthesia",
                 "specialization": "Anaesthesiology",
+                "filter_by_speciality": "Emergency and Critical Care",
                 "work_location": "kothapet",
                 "experience": "25 Years",
                 "profile": "assets/kothapet_doctor_profiles_new/Dr_N_Surya.png"
@@ -685,6 +741,7 @@
                 ],
                 "depertment": "Dermatologist",
                 "specialization": "Dermatology",
+                "filter_by_speciality": "Dermatology",
                 "work_location": "kothapet",
                 "experience": "8 Years",
                 "profile": "assets/kothapet_doctor_profiles_new/Dr_Vijaya_Bhaskar_Mallela.png"
@@ -697,6 +754,7 @@
                 ],
                 "depertment": "Microbiologist",
                 "specialization": "Microbiology",
+                "filter_by_speciality": "Microbiology",
                 "work_location": "kothapet",
                 "experience": "",
                 "profile": ""
@@ -709,6 +767,7 @@
                 ],
                 "depertment": "Nephrologist",
                 "specialization": "Nephrology ",
+                "filter_by_speciality": "Nephrology",
                 "work_location": "kothapet",
                 "experience": "14 Years",
                 "profile": ""
@@ -722,6 +781,7 @@
                 ],
                 "depertment": "Nephrologist",
                 "specialization": "Nephrology ",
+                "filter_by_speciality": "Nephrology",
                 "work_location": "kothapet",
                 "experience": "",
                 "profile": ""
@@ -733,6 +793,7 @@
                 ],
                 "depertment": "Nicu",
                 "specialization": "Nicu",
+                "filter_by_speciality": "Neonatology",
                 "work_location": "kothapet",
                 "experience": "",
                 "profile": ""
@@ -745,6 +806,7 @@
                 ],
                 "depertment": "Orthopaedic Surgeon",
                 "specialization": "Orthopaedics",
+                "filter_by_speciality": "Orthopedics",
                 "work_location": "kothapet",
                 "experience": "14 Years",
                 "profile": "assets/kothapet_doctor_profiles_new/Dr_Vamshi_Krishna_Reddy_C.png"
@@ -757,6 +819,7 @@
                 ],
                 "depertment": "Pathologist",
                 "specialization": "Pathology",
+                "filter_by_speciality": "Pathology",
                 "work_location": "kothapet",
                 "experience": "",
                 "profile": ""
@@ -769,6 +832,7 @@
                 ],
                 "depertment": "Pathologist",
                 "specialization": "Pathology",
+                "filter_by_speciality": "Pathology",
                 "work_location": "kothapet",
                 "experience": "",
                 "profile": ""
@@ -781,6 +845,7 @@
                 ],
                 "depertment": "Plastic Surgeon",
                 "specialization": "Plastic Surgery",
+                "filter_by_speciality": "Plastic Surgery",
                 "work_location": "kothapet",
                 "experience": "",
                 "profile": ""
@@ -793,6 +858,7 @@
                 ],
                 "depertment": "Pulmonogist",
                 "specialization": "Pulmonogy",
+                "filter_by_speciality": "Pulmonology",
                 "work_location": "kothapet",
                 "experience": "",
                 "profile": ""
@@ -805,6 +871,7 @@
                 ],
                 "depertment": "Radiologist",
                 "specialization": "Radiology",
+                "filter_by_speciality": "Radiology",
                 "work_location": "kothapet",
                 "experience": "",
                 "profile": ""
@@ -817,6 +884,7 @@
                 ],
                 "depertment": "Radiologist",
                 "specialization": "Radiology",
+                "filter_by_speciality": "Radiology",
                 "work_location": "kothapet",
                 "experience": "",
                 "profile": ""
@@ -829,6 +897,7 @@
                 ],
                 "depertment": "Urologist",
                 "specialization": "Urology",
+                "filter_by_speciality": "Urology",
                 "work_location": "kothapet",
                 "experience": "",
                 "profile": ""
@@ -841,6 +910,7 @@
                 ],
                 "depertment": "ENT",
                 "specialization": "ENT",
+                "filter_by_speciality": "ENT",
                 "work_location": "kothapet",
                 "experience": "18 Years",
                 "profile": "assets/kothapet_doctor_profiles_new/Dr_Kolloju_Srikanth.png"
@@ -853,6 +923,7 @@
                 ],
                 "depertment": "ICU",
                 "specialization": "ICU",
+                "filter_by_speciality": "Emergency and Critical Care",
                 "work_location": "kothapet",
                 "experience": "3 Years",
                 "profile": "assets/kothapet_doctor_profiles_new/Dr_Ch_Ranjith_Kumar.png"
@@ -865,6 +936,7 @@
                 ],
                 "depertment": "ICU",
                 "specialization": "ICU",
+                "filter_by_speciality": "Emergency and Critical Care",
                 "work_location": "kothapet",
                 "experience": "",
                 "profile": ""
@@ -877,6 +949,7 @@
                 ],
                 "depertment": "ICU",
                 "specialization": "ICU",
+                "filter_by_speciality": "Emergency and Critical Care",
                 "work_location": "kothapet",
                 "experience": "",
                 "profile": ""
@@ -894,6 +967,7 @@
                 ],
                 "depertment": "Consultant Interventional Cardiologist",
                 "specialization": "Cardiology",
+                "filter_by_speciality": "Cardiology",
                 "work_location": "Kurnool",
                 "experience": "2 Years",
                 "profile": "assets/kurnool_doctor_profiles/Dr_C_Indhu_Prakash_Reddy.png"
@@ -907,6 +981,7 @@
                 ],
                 "depertment": "Urologist",
                 "specialization": "Urology",
+                "filter_by_speciality": "Urology",
                 "work_location": "Kurnool",
                 "experience": "",
                 "profile": "assets/kurnool_doctor_profiles/Dr_K_G_Govinda Reddy.png"
@@ -924,6 +999,7 @@
                 ],
                 "depertment": "Orthopedic Surgeon",
                 "specialization": "Orthopedics",
+                "filter_by_speciality": "Orthopedics",
                 "work_location": "vizag",
                 "experience": "8 Years",
                 "profile": "assets/vizag_doctors/DR_B_MOHAN_KALYAN_PHANI_TEJA.png"
@@ -936,6 +1012,7 @@
                 ],
                 "depertment": "Neurologist",
                 "specialization": "Neurologist",
+                "filter_by_speciality": "Neurology",
                 "work_location": "vizag",
                 "experience": "4 Years",
                 "profile": "assets/vizag_doctors/DR_JADA_AVINASH.png"
@@ -948,6 +1025,7 @@
                 ],
                 "depertment": "Cardiologist",
                 "specialization": "Interventional Cardiologist & Endovascular Interventionist",
+                "filter_by_speciality": "Cardiology",
                 "work_location": "vizag",
                 "experience": "20 Years",
                 "profile": "assets/vizag_doctors/DR_SUBRAMANYAM_S_S_PENNERU.png"
@@ -959,6 +1037,7 @@
                     "MS General & Laparoscopic Surgery"
                 ],
                 "depertment": "General Surgeon",
+                "filter_by_speciality": "General Surgery",
                 "specialization": " General and Laser & Laparoscopic Surgery",
                 "work_location": "vizag",
                 "experience": "6 Years",
@@ -973,6 +1052,7 @@
                 ],
                 "depertment": "Chief Fertility Consultant",
                 "specialization": "Infertility Specialist",
+                "filter_by_speciality": "Obstetrics and Gynecology",
                 "work_location": "vizag",
                 "experience": "26 Years",
                 "profile": "assets/vizag_doctors/DR_SRIDEVI_NELLIMARLA.png"
@@ -984,6 +1064,7 @@
                 ],
                 "depertment": "Chief Anaesthesiologist",
                 "specialization": "Anaesthesia",
+                "filter_by_speciality": "Emergency and Critical Care",
                 "work_location": "vizag",
                 "experience": "22 Years",
                 "profile": "assets/vizag_doctors/DR_M_VIJAYKANTH.png"
@@ -995,6 +1076,7 @@
                 ],
                 "depertment": "Intensivist",
                 "specialization": "Emergency Medicine",
+                "filter_by_speciality": "Emergency and Critical Care",
                 "work_location": "vizag",
                 "experience": "6 Years",
                 "profile": "assets/vizag_doctors/dr_lagudu_naresh.png"
@@ -1012,6 +1094,7 @@
                 ],
                 "depertment": "Pediatrician",
                 "specialization": "Pediatrics",
+                "filter_by_speciality": "Pediatrics",
                 "work_location": "Giggles Vizag",
                 "experience": "32 Years",
                 "profile": "assets/vizag_doctors/Dr_K_RADHA_KRISHNA.png"
@@ -1025,6 +1108,7 @@
                 ],
                 "depertment": "Pediatrician",
                 "specialization": "Pediatrician, Asthma & Allergy Specialist",
+                "filter_by_speciality": "Pediatrics",
                 "work_location": "Giggles Vizag",
                 "experience": "13 Years",
                 "profile": "assets/vizag_doctors/Dr_SVAS_RAJU_K.png"
@@ -1036,6 +1120,7 @@
                 ],
                 "depertment": " Gynaecologist",
                 "specialization": "Obstetrics & Gynaecology",
+                "filter_by_speciality": "Obstetrics and Gynecology",
                 "work_location": "Giggles Vizag",
                 "experience": "5 Years",
                 "profile": "assets/vizag_doctors/DR_KOLLA_PAVANI.png"
@@ -1049,6 +1134,7 @@
                 ],
                 "depertment": "Pediatrician",
                 "specialization": "Pediatric Intensivist",
+                "filter_by_speciality": "Pediatrics",
                 "work_location": "Giggles Vizag",
                 "experience": "6 Years",
                 "profile": "assets/vizag_doctors/DR_S_SAI_PRATYUSHA.png"
@@ -1061,6 +1147,7 @@
                 ],
                 "depertment": "Pediatrician",
                 "specialization": "Pediatric",
+                "filter_by_speciality": "Pediatrics",
                 "work_location": "Giggles Vizag",
                 "experience": "30 Years",
                 "profile": "assets/vizag_doctors/DR_B_RAJSEKHAR.png"
@@ -1074,6 +1161,7 @@
                 ],
                 "depertment": "Neonatalogist",
                 "specialization": "Neonatalogy",
+                "filter_by_speciality": "Neonatology",
                 "work_location": "Giggles Vizag",
                 "experience": "",
                 "profile": "assets/vizag_doctors/DR_SANDEEP_ANAND_CHINTALA.png"

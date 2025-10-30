@@ -24,12 +24,21 @@
       <!-- Left Image -->
       <div class="col-lg-6 col-md-12 mb-4">
         <div class="medical-image-container">
-          <img [src]="subDepartment.image || 'assets/our_specialities_new/heart_failure.jpg'" 
-               [alt]="subDepartment.name + ' Treatment'" 
-               class="img-fluid rounded medical-image">
+          <img [src]="subDepartment.image || 'assets/our_specialities_new/heart_failure.jpg'"
+            [alt]="subDepartment.name + ' Treatment'" class="img-fluid rounded medical-image">
         </div>
+        <span *ngIf="subDepartment.name=='Hip Replacement Surgery'">©<a
+            href="https://www.stepaheadclinic.com/restore-mobility-and-relieve-pain-with-expert-hip-replacement-surgery/">
+            stepaheadclinic</a></span>
+        <span *ngIf="subDepartment.name=='Total Knee Replacement'">©<a
+            href='https://www.drhc.ae/orthopedics/joint-replacement/total-knee-replacement'> drhc.ae</a></span>
+        <span *ngIf="subDepartment.name=='Sports Injury'">©<a
+            href="https://www.nmcpondy.com/articles/orthopaedics-spine/treating-sports-injuries/">nmcpondy</a></span>
+        <span *ngIf="subDepartment.name == 'Golfer\'s Elbow Treatment'">©<a href="https://mybackinline.com/blog/golfer-s-elbow-how-active-release-technique-art-can-get-you-back-in-the-game">mybackinline</a></span>
+        <span *ngIf="subDepartment.name=='Arthroscopy Surgery'">©<a
+            href='https://www.tadjeortho.com/blog/am-i-a-candidate-for-arthroscopic-surgery'>tadjeortho</a></span>
       </div>
-      
+
       <!-- Right Appointment Form -->
       <div class="col-lg-6 col-md-12">
         <div class="appointment-form-container">
@@ -37,55 +46,38 @@
             <h3 class="form-title">Book an Appointment</h3>
             <p class="form-subtitle">Get expert consultation for {{ subDepartment.name }} Treatment</p>
           </div>
-          
+
           <form class="appointment-form">
             <div class="form-fields">
               <!-- Name Field -->
               <div class="form-group mb-3">
                 <label for="name" class="form-label">Name <span class="required">*</span></label>
-                <input type="text" 
-                       class="form-control" 
-                       id="name" 
-                       name="name"
-                       [(ngModel)]="appointmentForm.name"
-                       placeholder="Enter your full name"
-                       required>
+                <input type="text" class="form-control" id="name" name="name" [(ngModel)]="appointmentForm.name"
+                  placeholder="Enter your full name" required>
                 <div class="error-message" *ngIf="formErrors.name">{{ formErrors.name }}</div>
               </div>
-              
+
               <!-- Mobile Field -->
               <div class="form-group mb-3">
                 <label for="mobile" class="form-label">Mobile Number <span class="required">*</span></label>
-                <input type="tel" 
-                       class="form-control" 
-                       id="mobile" 
-                       name="mobile"
-                       [(ngModel)]="appointmentForm.mobile"
-                       placeholder="Enter 10-digit mobile number"
-                       maxlength="10"
-                       required>
+                <input type="tel" class="form-control" id="mobile" name="mobile" [(ngModel)]="appointmentForm.mobile"
+                  placeholder="Enter 10-digit mobile number" maxlength="10" required>
                 <div class="error-message" *ngIf="formErrors.mobile">{{ formErrors.mobile }}</div>
               </div>
-              
+
               <!-- Email Field -->
               <div class="form-group mb-4">
                 <label for="email" class="form-label">Email</label>
-                <input type="email" 
-                       class="form-control" 
-                       id="email" 
-                       name="email"
-                       [(ngModel)]="appointmentForm.email"
-                       placeholder="Enter your email address">
+                <input type="email" class="form-control" id="email" name="email" [(ngModel)]="appointmentForm.email"
+                  placeholder="Enter your email address">
                 <div class="error-message" *ngIf="formErrors.email">{{ formErrors.email }}</div>
               </div>
             </div>
-            
+
             <!-- Submit Button -->
             <div class="text-center submit-btn-container">
-              <button type="button" 
-                      class="btn btn-primary btn-lg submit-btn"
-                      [disabled]="!isFormValid()"
-                      (click)="onSubmit()">
+              <button type="button" class="btn btn-primary btn-lg submit-btn" [disabled]="!isFormValid()"
+                (click)="onSubmit()">
                 Book Appointment
               </button>
             </div>
@@ -102,7 +94,8 @@
     <div class="row">
       <div class="col-12">
         <div class="main-heading-container text-center">
-          <h1 class="main-heading">{{ subDepartment.content?.h1 || subDepartment.name + ' Treatment in Hyderabad' }}</h1>
+          <h1 class="main-heading">{{ subDepartment.content?.h1 || subDepartment.name + ' Treatment in Hyderabad' }}
+          </h1>
         </div>
       </div>
     </div>
@@ -120,11 +113,11 @@
           <div class="sections-container" *ngFor="let section of subDepartment.content.sections">
             <div class="section-item mb-5">
               <h2 class="section-title">{{ section.h2 }}</h2>
-              
+
               <div class="section-description" *ngIf="section.description">
                 <p>{{ section.description }}</p>
               </div>
-              
+
               <!-- Subsections -->
               <div class="subsections-container" *ngIf="section.subsections">
                 <div class="subsection-item mb-4" *ngFor="let subsection of section.subsections">
@@ -133,7 +126,8 @@
                     <a [href]="subsection.profile_url" target="_blank" rel="noopener">{{ subsection.h3 }}</a>
                   </h3>
                   <h4 class="subsection-title" *ngIf="subsection.h4">{{ subsection.h4 }}</h4>
-                  <p class="subsection-description" *ngIf="subsection.description" [innerHTML]="formatDescription(subsection.description)"></p>
+                  <p class="subsection-description" *ngIf="subsection.description"
+                    [innerHTML]="formatDescription(subsection.description)"></p>
                   <div class="subsection-list" *ngIf="subsection.list">
                     <ul class="content-list">
                       <li *ngFor="let item of subsection.list" [innerHTML]="formatListItem(item)"></li>
@@ -143,19 +137,20 @@
                   <div class="subsections-container" *ngIf="subsection.subsections">
                     <div class="subsection-item-nested mb-3" *ngFor="let nestedSubsection of subsection.subsections">
                       <h4 class="subsection-title-nested" *ngIf="nestedSubsection.h4">{{ nestedSubsection.h4 }}</h4>
-                      <p class="subsection-description" *ngIf="nestedSubsection.description">{{ nestedSubsection.description }}</p>
+                      <p class="subsection-description" *ngIf="nestedSubsection.description">{{
+                        nestedSubsection.description }}</p>
                     </div>
                   </div>
                 </div>
               </div>
-              
+
               <!-- Lists -->
               <div class="section-list" *ngIf="section.list">
                 <ul class="content-list">
                   <li *ngFor="let item of section.list" [innerHTML]="formatListItem(item)"></li>
                 </ul>
               </div>
-              
+
               <!-- Conclusion -->
               <div class="section-conclusion" *ngIf="section.conclusion">
                 <p class="conclusion-text">{{ section.conclusion }}</p>
@@ -163,9 +158,10 @@
             </div>
           </div>
         </div>
-        
+
         <!-- Fallback Content -->
-        <div *ngIf="!subDepartment?.content" style="background: #fff3cd; padding: 20px; margin: 20px 0; border: 2px solid #ffc107;">
+        <div *ngIf="!subDepartment?.content"
+          style="background: #fff3cd; padding: 20px; margin: 20px 0; border: 2px solid #ffc107;">
           <h2 style="color: #856404;">Content Not Loaded</h2>
           <p>Sub-department data is not loading properly. Please check the console for errors.</p>
         </div>
@@ -182,7 +178,7 @@
         <div class="bullet-points-container" *ngFor="let bulletSection of subDepartment.content.bullet_points">
           <h2 class="bullet-section-title">{{ bulletSection.title }}</h2>
           <p class="bullet-section-intro" *ngIf="bulletSection.intro">{{ bulletSection.intro }}</p>
-          
+
           <div class="bullet-points-list">
             <div class="bullet-point-item" *ngFor="let point of bulletSection.points">
               <div class="bullet-point-content">
@@ -253,19 +249,14 @@
         <div class="accordion" id="faqAccordion" *ngIf="subDepartment.content?.faqs">
           <div class="accordion-item" *ngFor="let faq of subDepartment.content.faqs; let i = index">
             <h3 class="accordion-header" [id]="'heading' + i">
-              <button class="accordion-button collapsed" 
-                      type="button" 
-                      data-bs-toggle="collapse" 
-                      [attr.data-bs-target]="'#collapse' + i" 
-                      [attr.aria-expanded]="false" 
-                      [attr.aria-controls]="'collapse' + i">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                [attr.data-bs-target]="'#collapse' + i" [attr.aria-expanded]="false"
+                [attr.aria-controls]="'collapse' + i">
                 {{ faq.question }}
               </button>
             </h3>
-            <div [id]="'collapse' + i" 
-                 class="accordion-collapse collapse" 
-                 [attr.aria-labelledby]="'heading' + i" 
-                 data-bs-parent="#faqAccordion">
+            <div [id]="'collapse' + i" class="accordion-collapse collapse" [attr.aria-labelledby]="'heading' + i"
+              data-bs-parent="#faqAccordion">
               <div class="accordion-body">
                 {{ faq.answer }}
               </div>
@@ -278,4 +269,3 @@
 </section>
 
 <app-footer></app-footer>
-

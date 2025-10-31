@@ -157,6 +157,28 @@
             "Regain your hearing, breathing, or voice clarity today. Schedule a consultation with the top ENT surgeons in Hyderabad at Omni Hospitals, the best ENT hospital near Kukatpally Hyderabad, and take the first step toward lasting wellness."
           ]
         }
+      ],
+      "faqs": [
+        {
+          "question": "Which is the best hospital for ENT treatment in Hyderabad?",
+          "answer": "Omni Hospitals is the best hospital for ENT care in Hyderabad, offering advanced treatments for ear, nose, throat, and sinus-related problems."
+        },
+        {
+          "question": "When should I visit an ENT specialist?",
+          "answer": "You should see an ENT doctor if you experience ear pain, hearing loss, sinus infections, sore throat, dizziness, or frequent nosebleeds."
+        },
+        {
+          "question": "What ENT treatments are available at Omni Hospitals?",
+          "answer": "Omni Hospitals provides treatments for sinusitis, tonsillitis, ear infections, voice disorders, hearing loss, and nasal allergies. Advanced endoscopic and microscopic ENT surgeries are also offered."
+        },
+        {
+          "question": "Does Omni Hospitals perform hearing and balance tests?",
+          "answer": "Yes. Comprehensive hearing assessments, audiometry tests, and balance evaluations are available to diagnose and treat hearing and vestibular issues."
+        },
+        {
+          "question": "How can I prevent common ENT problems?",
+          "answer": "Avoid exposure to loud noise, maintain good ear hygiene, stay hydrated, avoid smoking, and treat allergies promptly to prevent ear, nose, and throat complications."
+        }
       ]
     },
     {
@@ -219,8 +241,24 @@
       ],
       "faqs": [
         {
-          "question": "",
-          "answer": ""
+          "question": "Which is the best hospital for general medicine in Hyderabad?",
+          "answer": "Omni Hospitals is the best hospital for general medicine, providing expert care for fever, infections, diabetes, hypertension, and lifestyle-related disorders."
+        },
+        {
+          "question": "When should I consult a general physician?",
+          "answer": "Consult a general physician if you have a fever, fatigue, body pain, chronic cough, digestive issues, or any persistent health problem that needs medical attention."
+        },
+        {
+          "question": "What conditions are treated under general medicine at Omni Hospitals?",
+          "answer": "Omni Hospitals offers diagnosis and treatment for diabetes, thyroid disorders, hypertension, infections, respiratory illnesses, and metabolic conditions."
+        },
+        {
+          "question": "Does Omni Hospitals offer preventive health check-ups?",
+          "answer": "Yes. Regular health check-ups help detect early signs of disease and promote overall wellness through timely diagnosis and management."
+        },
+        {
+          "question": "How can I maintain good general health?",
+          "answer": "Eat a balanced diet, stay hydrated, exercise regularly, get enough sleep, and schedule regular health check-ups to maintain long-term wellness."
         }
       ]
     },
@@ -250,7 +288,7 @@
           ]
         }
       ],
-           "sub_departments": [
+      "sub_departments": [
         {
           "name": "Hip Replacement Surgery",
           "url": "specialities/orthopedics/best-hospital-for-hip-replacement-in-hyderabad"

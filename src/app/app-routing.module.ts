@@ -33,7 +33,6 @@ import { ExtraOptions, PreloadAllModules, RouterModule, Routes } from '@angular/
 
 
 const routes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
   {
     path: 'our-doctors',
     loadChildren: () => import('./our-doctors/our-doctors/our-doctors.module').then(m => m.OurDoctorsModule)

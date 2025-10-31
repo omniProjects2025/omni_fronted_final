@@ -36,8 +36,8 @@ import { KeySurgeriesComponent } from './key-surgeries/key-surgeries.component';
 import { TotalKneeReplacementComponent } from './total-knee-replacement/total-knee-replacement.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: 'home', component: HomeComponent },
+  { path: '', component: HomeComponent },
+  { path: 'home', redirectTo: '', pathMatch: 'full' },
   { path: 'get-a-second-opinion', component: SecondOpinionComponent },
   { path: 'about-us/leadership-team', component: AboutUsComponent },
   { path: 'about-us', component: AboutUsComponent },

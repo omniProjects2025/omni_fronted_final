@@ -250,6 +250,28 @@
           ]
         }
       ],
+           "sub_departments": [
+        {
+          "name": "Hip Replacement Surgery",
+          "url": "specialities/orthopedics/best-hospital-for-hip-replacement-in-hyderabad"
+        },
+        {
+          "name": "Total Knee Replacement",
+          "url": "specialities/orthopedics/total-knee-replacement-surgery-in-kukatpally"
+        },
+        {
+          "name": "Sports Injury Treatment",
+          "url": "specialities/orthopedics/sports-injury-hospital-in-kukatpally"
+        },
+        {
+          "name": "Golfer's Elbow Treatment",
+          "url": "specialities/orthopedics/golfers-elbow-treatment-in-kukatpally"
+        },
+        {
+          "name": "Arthroscopy Surgery",
+          "url": "specialities/orthopedics/arthroscopy-surgeon-in-hyderabad"
+        }
+      ],
       "faqs": [
         {
           "question": "Which is the best hospital for bone and joint treatment in Hyderabad?",

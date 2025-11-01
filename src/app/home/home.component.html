@@ -312,11 +312,10 @@
 
 
   <!-- contact-form.component.html -->
-  <div class="py-5 px-3 px-md-5">
+  <div class="py-5 px-3 px-md-5" *ngIf="false">
     <div class="row">
       <h5 class="fw-bold mb-3 text-center">Have Questions Or Need Assistance?</h5>
 
-      <!-- Left Text -->
       <h2 class="col-md-2 fw-bold lh-sm m-0 fs-4 text-center text-md-start">
         WE'RE HERE FOR YOU, ANYTIME!
       </h2>
@@ -324,7 +323,6 @@
       <div class="col-md-10">
         <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)" class="row g-3">
 
-          <!-- Name Field -->
           <div class="col-12 col-md-4">
             <input type="text" class="form-control" name="name" placeholder="Name*" [(ngModel)]="formData.name" required
               #name="ngModel">
@@ -333,7 +331,6 @@
             </div>
           </div>
 
-          <!-- Phone Field -->
           <div class="col-12 col-md-4">
             <input type="text" class="form-control" name="phone" placeholder="Phone Number*"
               [(ngModel)]="formData.phone" required #phone="ngModel">
@@ -342,7 +339,6 @@
             </div>
           </div>
 
-          <!-- Email Field -->
           <div class="col-12 col-md-4">
             <input type="email" class="form-control" name="email" placeholder="Email" [(ngModel)]="formData.email" email
               #email="ngModel">
@@ -351,7 +347,6 @@
             </div>
           </div>
 
-          <!-- Submit button -->
           <div class="col-12 text-center text-md-start">
             <button type="submit" class="btn px-5 py-2 mt-3" style="background-color: #0291D5; color: white;">
               Submit

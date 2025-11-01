@@ -20,32 +20,22 @@
         <p class="mb-1"><img src="assets/icons/email.png" alt=""> Email us at<br><a
             href="mailto:info@omnihospitals.in">{{email}}</a></p>
         <div class="d-flex gap-3 pt-3">
-          <!-- <div class="d-flex gap-2 text_center"> -->
           <a href="https://www.facebook.com/INCORHospitals" target="_blank"> <img
-              [src]="hoveredIcon === 'fb' ? 'assets/images/social_media/facebook.svg':'assets/icons/fac_white.svg' "
-              alt="Facebook" (mouseenter)="hoveredIcon = 'fb'" (mouseleave)="hoveredIcon = ''" class="img-fluid"
+              src="assets/images/social_media/facebook.svg" alt="Facebook" class="img-fluid"
               style="width: 30px; height: 30px;"></a>
-
-          <a href="https://x.com/INCORHospitals" target="_blank"> <img
-              [src]="hoveredIcon === 'tw' ? 'assets/images/social_media/cross_icon.svg':'assets/icons/twite_white.svg' "
-              alt="Twitter" (mouseenter)="hoveredIcon = 'tw'" (mouseleave)="hoveredIcon = ''" class="img-fluid"
-              style="width: 30px; height: 30px;">
-          </a>
           <a href="https://www.instagram.com/omni_hospitals/" target="_blank"> <img
-              [src]="hoveredIcon === 'ig' ? 'assets/images/social_media/instagram.svg':'assets/icons/inst_white.svg' "
-              alt="Instagram" (mouseenter)="hoveredIcon = 'ig'" (mouseleave)="hoveredIcon = ''" class="img-fluid"
+              src="assets/images/social_media/instagram.svg" alt="Instagram" class="img-fluid"
               style="width: 30px; height: 30px;">
           </a>
           <a href="https://www.youtube.com/channel/UCLaU7cDfvVTbh4PO6GDI0ew" target="_blank"><img
-              [src]="hoveredIcon === 'yt' ? 'assets/images/social_media/youtube.svg':'assets/icons/you_white.svg' "
-              alt="YouTube" (mouseenter)="hoveredIcon = 'yt'" (mouseleave)="hoveredIcon = ''" class="img-fluid"
+              src="assets/images/social_media/youtube.svg"
+              alt="YouTube" class="img-fluid"
               style="width: 30px; height: 30px;"></a>
           <a href="https://www.linkedin.com/company/30885967/admin/dashboard/" target="_blank"> <img
-              [src]="hoveredIcon === 'ln' ? 'assets/images/social_media/linkedin.svg':'assets/icons/link_white.svg' "
+              src="assets/images/social_media/linkedin.svg"
               alt="LinkedIn" (mouseenter)="hoveredIcon = 'ln'" (mouseleave)="hoveredIcon = ''" class="img-fluid"
               style="width: 30px; height: 30px;">
           </a>
-          <!-- </div> -->
         </div>
       </div>
     </div>
@@ -53,10 +43,10 @@
     <!-- Center of Excellence -->
     <div class="footer-col">
 
-      <h6 class="footer-heading"><img class="me-2" src="assets/icons/right_arrow.svg" alt="" width="18">Center Of
-        Excellence</h6>
+      <h6 class="footer-heading"><img class="me-2" src="assets/icons/right_arrow.svg" alt="" width="18">Specialities & Centers of Excellence</h6>
       <ul class="ms-4">
-        <li style="cursor: pointer;" *ngFor="let specialty of specialties" (click)="goToSPeciality(specialty)">{{ specialty }}</li>
+        <li style="cursor: pointer;" *ngFor="let specialty of specialties" (click)="goToSPeciality(specialty)">{{
+          specialty }}</li>
       </ul>
 
     </div>
@@ -67,10 +57,10 @@
       </h6>
       <ul>
         <a href="locations/kukatpally">
-          <li>OMNI Hospitals, Kukatpally</li>
+          <li>OMNI Hospitals, Kukatpally, Hyderabad</li>
         </a>
         <a href="locations/udai-omni-nampally">
-          <li>UDAI OMNI Hospitals, Chapel Road</li>
+          <li>UDAI OMNI Hospitals, Nampally</li>
         </a>
         <a href="locations/kothapet">
           <li>OMNI Hospitals, Kothapet</li>
@@ -150,7 +140,7 @@
           <span>Committed to Excellence in Healthcare</span>
         </div>
       </div>
-      
+
       <div class="footer-links-section">
         <div class="legal-links">
           <a href="terms-conditions" class="footer-link">
@@ -162,9 +152,9 @@
             <span>Privacy Policy</span>
           </a>
         </div>
-        
+
         <div class="footer-divider"></div>
-        
+
         <div class="footer-info">
           <div class="info-item">
             <i class="fas fa-map-marker-alt"></i>

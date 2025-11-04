@@ -756,6 +756,15 @@ export class HomeComponent implements OnInit, OnDestroy {
     }).catch(error => console.error('Navigation error:', error));
   }
 
+  goToSpecialities() {
+    this.router.navigate(['/specialities']).then(success => {
+      if (success) {
+        console.log('Navigation to technologies successful');
+      } else {
+        console.log('Navigation failed');
+      }
+    }).catch(error => console.error('Navigation error:', error));
+  }
 
 
   toggleFaq(index: number) {

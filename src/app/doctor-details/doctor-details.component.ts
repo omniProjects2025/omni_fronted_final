@@ -1,6 +1,7 @@
 import { Component, OnDestroy } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
+import { NotificationService } from '../services/notification.service';
 import { DoctorDetailsService } from '../services/doctor-details.service';
 import { Title, Meta } from '@angular/platform-browser';
 import { environment } from '../../environments/environment';
@@ -42,7 +43,8 @@ export class DoctorDetailsComponent implements OnDestroy {
     private activated_routes: ActivatedRoute, 
     private http: HttpClient,
     private titleService: Title,
-    private metaService: Meta
+    private metaService: Meta,
+    private notification: NotificationService
   ) {
 
   }
@@ -101,12 +103,12 @@ export class DoctorDetailsComponent implements OnDestroy {
 
     // Form validation
     if (!this.appointmentData.fullName.trim()) {
-      alert('Full Name is required.');
+      this.notification.error('Full Name is required.');
       this.isSubmitting = false;
       return;
     }
     if (!this.appointmentData.mobileNumber.trim()) {
-      alert('Mobile Number is required.');
+      this.notification.error('Mobile Number is required.');
       this.isSubmitting = false;
       return;
     }
@@ -118,12 +120,12 @@ export class DoctorDetailsComponent implements OnDestroy {
       const thirtyMinutes = 30 * 60 * 1000;
       const now = Date.now();
 
-      if (
+        if (
         name === this.appointmentData.fullName.trim() &&
         phone === this.appointmentData.mobileNumber.trim() &&
         now - time < thirtyMinutes
       ) {
-        alert('You have already submitted an appointment request with this name and phone number in the last 30 minutes.');
+        this.notification.info('You have already submitted an appointment request with this name and phone number in the last 30 minutes.');
         this.isSubmitting = false;
         return;
       }
@@ -147,8 +149,6 @@ export class DoctorDetailsComponent implements OnDestroy {
       .subscribe({
         next: (res) => {
           console.log('LeadSquared Success:', res);
-          alert('Your appointment request has been submitted successfully! Our team will contact you soon.');
-
           // Save last submission info for 30-minute check
           localStorage.setItem('lastAppointmentSubmission', JSON.stringify({
             name: this.appointmentData.fullName.trim(),
@@ -163,7 +163,7 @@ export class DoctorDetailsComponent implements OnDestroy {
         },
         error: (err) => {
           console.error('LeadSquared Error:', err);
-          alert('There was a problem submitting your appointment request. Please try again or call us directly.');
+          this.notification.error('There was a problem submitting your appointment request. Please try again or call us directly.');
           this.isSubmitting = false;
         }
       });

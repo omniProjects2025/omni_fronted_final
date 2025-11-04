@@ -4,6 +4,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { HttpClient } from '@angular/common/http';
+import { NotificationService } from '../services/notification.service';
 import { environment } from '../../environments/environment';
 declare var $: any;
 interface HealthPackage {
@@ -106,6 +107,8 @@ export class PackageDetailsComponent {
     private http: HttpClient,
     private cdr: ChangeDetectorRef,
     private router: Router
+    ,
+    private notification: NotificationService
   ) {
     this.valiDations()
   }
@@ -247,11 +250,11 @@ export class PackageDetailsComponent {
     }
     // 1️⃣ Validation
     if (!this.packageData.fullName.trim()) {
-      alert('Full Name is required.');
+      this.notification.error('Full Name is required.');
       return;
     }
     if (!this.packageData.phoneNumber.trim()) {
-      alert('Phone Number is required.');
+      this.notification.error('Phone Number is required.');
       return;
     }
 
@@ -265,7 +268,7 @@ export class PackageDetailsComponent {
         phone === this.packageData.phoneNumber.trim() &&
         Date.now() - time < thirtyMinutes
       ) {
-        alert('You already submitted a booking with this name and phone in the last 30 minutes.');
+        this.notification.info('You already submitted a booking with this name and phone in the last 30 minutes.');
         return;
       }
     }
@@ -296,7 +299,7 @@ export class PackageDetailsComponent {
         },
         error: (err) => {
           console.error('LeadSquared Error:', err);
-          alert('There was a problem submitting your booking.');
+          this.notification.error('There was a problem submitting your booking.');
         }
       });
   }

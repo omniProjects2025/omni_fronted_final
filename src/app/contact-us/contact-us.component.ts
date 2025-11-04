@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { ActivatedRoute, Router } from '@angular/router';
+import { NotificationService } from '../services/notification.service';
 import * as L from 'leaflet';
 import { environment } from '../../environments/environment';
 @Component({
@@ -105,7 +106,7 @@ export class ContactUsComponent {
     }
   ]
 
-  constructor(private sanitizer: DomSanitizer, private acive_route: ActivatedRoute, private http: HttpClient, private router: Router) { }
+  constructor(private sanitizer: DomSanitizer, private acive_route: ActivatedRoute, private http: HttpClient, private router: Router, private notification: NotificationService) { }
 
   ngOnInit() {
     this.filteredBranches = [...this.BRANCH_LOCATIONS]; // show all by default
@@ -257,14 +258,14 @@ export class ContactUsComponent {
   submitContactForm(form: any) {
     // Full Name validation
     if (!form.name || form.name.trim().length < 3) {
-      alert('Please enter a valid full name (at least 3 characters).');
+      this.notification.error('Please enter a valid full name (at least 3 characters).');
       return;
     }
 
     // Mobile Number validation
     const phonePattern = /^[6-9]\d{9}$/;
     if (!form.phone || !phonePattern.test(form.phone)) {
-      alert('Please enter a valid 10-digit mobile number starting with 6, 7, 8, or 9.');
+      this.notification.error('Please enter a valid 10-digit mobile number starting with 6, 7, 8, or 9.');
       return;
     }
 
@@ -275,12 +276,12 @@ export class ContactUsComponent {
       const thirtyMinutes = 30 * 60 * 1000;
       const now = Date.now();
 
-      if (
+        if (
         name === form.name.trim() &&
         phone === form.phone.trim() &&
         now - time < thirtyMinutes
       ) {
-        alert('You have already submitted a request with this name and phone number in the last 30 minutes.');
+        this.notification.info('You have already submitted a request with this name and phone number in the last 30 minutes.');
         return;
       }
     }
@@ -301,7 +302,6 @@ export class ContactUsComponent {
     this.http.post(url, payload, { headers: { 'Content-Type': 'application/json' } })
       .subscribe({
         next: (res) => {
-          alert('Thank you! Your enquiry has been submitted.');
           localStorage.setItem('contactUsSubmission', JSON.stringify({
             name: form.name.trim(),
             phone: form.phone.trim(),
@@ -311,7 +311,7 @@ export class ContactUsComponent {
           this.router.navigate(['/thank-you']);
         },
         error: (err) => {
-          alert('Submission failed. Please try again.');
+          this.notification.error('Submission failed. Please try again.');
           console.error(err);
         }
       });

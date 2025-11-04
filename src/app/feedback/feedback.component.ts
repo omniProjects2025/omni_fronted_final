@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
+import { NotificationService } from '../services/notification.service';
 import { environment } from '../../environments/environment';
 
 @Component({
@@ -39,7 +40,7 @@ export class FeedbackComponent {
   // Track if user is a patient
   isPatientValue: string = '';
 
-  constructor(private fb: FormBuilder, private http: HttpClient, private router: Router) {
+  constructor(private fb: FormBuilder, private http: HttpClient, private router: Router, private notification: NotificationService) {
     this.feedbackForm = this.fb.group({
       name: ['', Validators.required],
       isPatient: ['', Validators.required],
@@ -72,7 +73,7 @@ export class FeedbackComponent {
     this.submitted = true;
     if (this.f['phone'].valid) {
       this.otpSent = true;
-      alert('OTP sent to your phone');
+      this.notification.info('OTP sent to your phone');
     }
   }
 
@@ -110,13 +111,12 @@ export class FeedbackComponent {
         .subscribe({
           next: (res) => {
             console.log('LeadSquared Feedback Success:', res);
-            alert('Your feedback has been submitted successfully!');
             this.feedbackForm.reset();
             this.router.navigate(['/thank-you']);
           },
           error: (err) => {
             console.error('LeadSquared Feedback Error:', err);
-            alert('There was a problem submitting your feedback.');
+            this.notification.error('There was a problem submitting your feedback.');
           }
         });
     }

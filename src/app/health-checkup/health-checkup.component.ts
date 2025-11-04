@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, Renderer2 } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { NotificationService } from '../services/notification.service';
 import { environment } from '../../environments/environment';
 import { HealthPackageService } from '../services/health-package.service';
 import { take } from 'rxjs/operators';
@@ -26,7 +27,7 @@ export class HealthCheckupComponent {
     phoneNumber: '',
     appointmentDate: ''
   };
-  constructor(private router: Router, private renderer: Renderer2, private fb: FormBuilder, private http: HttpClient, private healthpackagesdetails: HealthPackageService) {
+  constructor(private router: Router, private renderer: Renderer2, private fb: FormBuilder, private http: HttpClient, private healthpackagesdetails: HealthPackageService, private notification: NotificationService) {
     this.valiDations()
   }
   ngOnInit() {
@@ -206,7 +207,7 @@ submitPackageForm() {
       phone === this.packageData.phoneNumber.trim() &&
       Date.now() - time < thirtyMinutes
     ) {
-      alert('You already submitted a booking with this name and phone in the last 30 minutes.');
+      this.notification.info('You already submitted a booking with this name and phone in the last 30 minutes.');
       return;
     }
   }
@@ -237,7 +238,7 @@ submitPackageForm() {
       },
       error: (err) => {
         console.error('LeadSquared Error:', err);
-        alert('There was a problem submitting your booking.');
+        this.notification.error('There was a problem submitting your booking.');
       }
     });
 }

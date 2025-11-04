@@ -42,20 +42,28 @@
               <h5 class="m-0 text-center py-1 contact_txt">Contact Us</h5>
             </div>
 
-            <form class="pt-4" (ngSubmit)="submitForm()" #form="ngForm">
+            <form class="pt-4" (ngSubmit)="submitForm(form)" #form="ngForm" novalidate>
               <div class="mb-3" data-animation="fadeInUp">
-                <label class="form-label">Full Name*</label>
+                <label class="form-label">Full Name <span class="text-danger">*</span></label>
                 <input type="text" class="form-control hover-glow" name="fullName" [(ngModel)]="formData.fullName"
-                  required (focus)="onFormInputFocus($event)" (blur)="onFormInputBlur($event)" />
+                  #fullName="ngModel" required minlength="2" (focus)="onFormInputFocus($event)" (blur)="onFormInputBlur($event)" />
+                <div class="text-danger small mt-1" *ngIf="fullName.invalid && (fullName.touched || form.submitted)">
+                  <div *ngIf="fullName.errors?.['required']">Full Name is required.</div>
+                  <div *ngIf="fullName.errors?.['minlength']">Full Name must be at least 2 characters.</div>
+                </div>
               </div>
 
               <div class="mb-3" data-animation="fadeInUp">
-                <label class="form-label">Phone Number*</label>
+                <label class="form-label">Phone Number <span class="text-danger">*</span></label>
                 <div class="input-group">
                   <span class="input-group-text">+91</span>
-                  <input type="tel" class="form-control hover-glow" name="phoneNumber"
-                    [(ngModel)]="formData.phoneNumber" required (focus)="onFormInputFocus($event)"
+                  <input type="tel" inputmode="numeric" pattern="[0-9]{10}" maxlength="10" minlength="10" class="form-control hover-glow" name="phoneNumber"
+                    [(ngModel)]="formData.phoneNumber" #phoneNumber="ngModel" required (focus)="onFormInputFocus($event)"
                     (blur)="onFormInputBlur($event)" />
+                </div>
+                <div class="text-danger small mt-1" *ngIf="phoneNumber.invalid && (phoneNumber.touched || form.submitted)">
+                  <div *ngIf="phoneNumber.errors?.['required']">Phone Number is required.</div>
+                  <div *ngIf="phoneNumber.errors?.['pattern'] || phoneNumber.errors?.['minlength']">Please enter a valid 10 digit mobile number.</div>
                 </div>
               </div>
 
@@ -66,16 +74,19 @@
               </div>
 
               <div class="mb-3" data-animation="fadeInUp">
-                <label class="form-label">Location*</label>
-                <select class="form-select hover-glow" name="location" [(ngModel)]="formData.location" required
+                <label class="form-label">Location <span class="text-danger">*</span></label>
+                <select class="form-select hover-glow" name="location" [(ngModel)]="formData.location" #location="ngModel" required
                   (focus)="onFormInputFocus($event)" (blur)="onFormInputBlur($event)">
-                  <option disabled selected>Select Location</option>
+                  <option value="" disabled selected>Select Location</option>
                   <option>Kukatpally</option>
                   <option>Kothapet</option>
                   <option>Nampally</option>
                   <option>Vizag</option>
                   <option>Kurnool</option>
                 </select>
+                <div class="text-danger small mt-1" *ngIf="location.invalid && (location.touched || form.submitted)">
+                  <div *ngIf="location.errors?.['required']">Location is required.</div>
+                </div>
               </div>
 
               <div class="mb-3" data-animation="fadeInUp">

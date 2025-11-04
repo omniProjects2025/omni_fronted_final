@@ -1,8 +1,10 @@
 import { Component, ViewChild, ElementRef, Renderer2, HostListener, ChangeDetectorRef, SimpleChanges, ChangeDetectionStrategy, OnDestroy, OnInit } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
+import { NgForm } from '@angular/forms';
 import { register } from 'swiper/element/bundle';
 import { DomSanitizer, SafeResourceUrl, Title, Meta } from '@angular/platform-browser';
 import { HttpClient } from '@angular/common/http';
+import { NotificationService } from '../services/notification.service';
 import 'owl.carousel';
 import { firstValueFrom, Observable, Subscription } from 'rxjs';
 import { UsersService } from '../services/users.service';
@@ -391,6 +393,8 @@ export class HomeComponent implements OnInit, OnDestroy {
     private titleService: Title,
     private metaService: Meta,
     private canonicalService: CanonicalService
+    ,
+    private notification: NotificationService
   ) { }
 
   private resizeListener: (() => void) | undefined;
@@ -772,23 +776,36 @@ export class HomeComponent implements OnInit, OnDestroy {
     this.cdr.markForCheck();
   }
 
-  onSubmit(form: any) {
-    if (!form.valid) {
-      Object.keys(form.controls).forEach((field: string) => form.controls[field].markAsTouched());
+  onSubmit(form: NgForm) {
+    if (form.invalid) {
+      // Mark all fields as touched to trigger validation display
+      Object.values(form.controls).forEach((control: any) => {
+        control.markAsTouched();
+      });
+      this.notification.info('Please fill the required fields correctly.');
       this.cdr.markForCheck();
       return;
     }
 
+    // Validate phone number (must be 10 digits)
+    const phone = (this.formData.phone || '').toString().trim();
+    if (!/^[0-9]{10}$/.test(phone)) {
+      this.notification.info('Please enter a valid 10 digit phone number.');
+      return;
+    }
+
+    // Check for duplicate submission
     const lastSubmission = localStorage.getItem('homeContactLastSubmission');
     if (lastSubmission) {
       const { name, phone, time } = JSON.parse(lastSubmission);
       const thirtyMinutes = 30 * 60 * 1000;
+      const now = Date.now();
       if (
         name === (this.formData.name || '').trim() &&
         phone === (this.formData.phone || '').trim() &&
-        Date.now() - time < thirtyMinutes
+        now - time < thirtyMinutes
       ) {
-        alert('You already submitted this enquiry within the last 30 minutes.');
+        this.notification.info('You already submitted this enquiry within the last 30 minutes.');
         return;
       }
     }
@@ -805,7 +822,7 @@ export class HomeComponent implements OnInit, OnDestroy {
 
     this.http.post(url, payload, { headers: { 'Content-Type': 'application/json' } }).subscribe({
       next: () => {
-        alert('Your enquiry has been submitted successfully!');
+        // alert('Your enquiry has been submitted successfully!');
         localStorage.setItem('homeContactLastSubmission', JSON.stringify({
           name: (this.formData.name || '').trim(),
           phone: (this.formData.phone || '').trim(),
@@ -817,35 +834,30 @@ export class HomeComponent implements OnInit, OnDestroy {
       },
       error: (err) => {
         console.error('LeadSquared Error:', err);
-        alert('There was a problem submitting your enquiry.');
+        this.notification.error('There was a problem submitting your enquiry.');
       }
     });
   }
 
-  onSubmitAppointment(event: Event) {
+  onSubmitAppointment(event: Event, form?: NgForm) {
     event.preventDefault();
 
     if (this.isSubmitting) return;
 
-    // Basic validation
-    if (!this.appointmentFormData.fullName.trim()) {
-      alert('Full Name is required.');
+    // Use Angular's form validation
+    if (form?.invalid) {
+      Object.values(form.controls).forEach((control: any) => {
+        control.markAsTouched();
+      });
+      this.notification.info('Please fill the required fields correctly.');
       this.cdr.markForCheck();
       return;
     }
-    if (!this.appointmentFormData.phoneNumber.trim()) {
-      alert('Phone Number is required.');
-      this.cdr.markForCheck();
-      return;
-    }
-    if (!this.appointmentFormData.location) {
-      alert('Please select a location.');
-      this.cdr.markForCheck();
-      return;
-    }
-    if (!this.appointmentFormData.department) {
-      alert('Please select a department.');
-      this.cdr.markForCheck();
+
+    // Validate phone number (must be 10 digits)
+    const phone = (this.appointmentFormData.phoneNumber || '').toString().trim();
+    if (!/^[0-9]{10}$/.test(phone)) {
+      this.notification.info('Please enter a valid 10 digit phone number.');
       return;
     }
 
@@ -859,7 +871,7 @@ export class HomeComponent implements OnInit, OnDestroy {
         phone === this.appointmentFormData.phoneNumber.trim() &&
         Date.now() - time < thirtyMinutes
       ) {
-        alert('You have already submitted an appointment request with this name and phone number in the last 30 minutes.');
+        this.notification.info('You have already submitted an appointment request with this name and phone number in the last 30 minutes.');
         return;
       }
     }
@@ -873,7 +885,7 @@ export class HomeComponent implements OnInit, OnDestroy {
       { Attribute: "EmailAddress", Value: this.appointmentFormData.email },
       { Attribute: "mx_City", Value: this.appointmentFormData.location },
       { Attribute: "mx_Department", Value: this.appointmentFormData.department },
-      { Attribute: "Description", Value: this.appointmentFormData.message },
+      { Attribute: "mx_Comments", Value: this.appointmentFormData.message },
       { Attribute: "Source", Value: "Website - Home Appointment Modal" }
     ];
 
@@ -883,7 +895,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     this.http.post(url, payload, { headers: { 'Content-Type': 'application/json' } }).subscribe({
       next: (res) => {
         console.log('LeadSquared Success:', res);
-        alert('Your appointment request has been submitted successfully!');
+        // alert('Your appointment request has been submitted successfully!');
 
         // Save last submission info for 30-minute check
         localStorage.setItem('appointmentLastSubmission', JSON.stringify({
@@ -915,7 +927,7 @@ export class HomeComponent implements OnInit, OnDestroy {
       },
       error: (err) => {
         console.error('LeadSquared Error:', err);
-        alert('There was a problem submitting your appointment request.');
+        this.notification.error('There was a problem submitting your appointment request.');
         this.isSubmitting = false;
         this.cdr.markForCheck();
       }

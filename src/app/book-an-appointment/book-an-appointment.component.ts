@@ -1,6 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit, HostListener } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { NavigationEnd, Router } from '@angular/router';
+import { NotificationService } from '../services/notification.service';
 import { environment } from '../../environments/environment';
 
 @Component({
@@ -53,7 +55,7 @@ export class BookAnAppointmentComponent implements OnInit {
     message: ''
   };
 
-  constructor(private router: Router, private http: HttpClient) {
+  constructor(private router: Router, private http: HttpClient, private notification: NotificationService) {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
         window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -181,14 +183,19 @@ export class BookAnAppointmentComponent implements OnInit {
     }
   }
 
-  submitForm() {
-    // Form validation and submission logic
-    if (!this.formData.fullName.trim()) {
-      alert('Full Name is required.');
+  submitForm(form?: NgForm) {
+    // Disable native browser validation and rely on Angular template-driven validation
+    if (form && form.invalid) {
+      // mark all controls as touched so inline errors appear
+      Object.values((form.controls)).forEach((control: any) => control.markAsTouched && control.markAsTouched());
+      this.notification.info('Please fill the required fields correctly.');
       return;
     }
-    if (!this.formData.phoneNumber.trim()) {
-      alert('Phone Number is required.');
+
+    // Extra phone validation: ensure 10 digits numeric
+    const phone = (this.formData.phoneNumber || '').toString().trim();
+    if (!/^[0-9]{10}$/.test(phone)) {
+      this.notification.info('Please enter a valid 10 digit mobile number.');
       return;
     }
 
@@ -204,7 +211,7 @@ export class BookAnAppointmentComponent implements OnInit {
         phone === this.formData.phoneNumber.trim() &&
         now - time < thirtyMinutes
       ) {
-        alert('You have already submitted a request with this name and phone number in the last 30 minutes.');
+        this.notification.info('You have already submitted a request with this name and phone number in the last 30 minutes.');
         return;
       }
     }
@@ -215,7 +222,7 @@ export class BookAnAppointmentComponent implements OnInit {
       { Attribute: "EmailAddress", Value: this.formData.emailId },
       { Attribute: "mx_City", Value: this.formData.location },
       { Attribute: "mx_Department", Value: this.formData.department },
-      { Attribute: "Description", Value: this.formData.message },
+      { Attribute: "mx_Comments", Value: this.formData.message },
       { Attribute: "Source", Value: "Website - Book An Appointment" }
     ];
 
@@ -228,7 +235,7 @@ export class BookAnAppointmentComponent implements OnInit {
       .subscribe({
         next: (res) => {
           console.log('LeadSquared Success:', res);
-          alert('Your appointment request has been submitted successfully!');
+          // alert('Your appointment request has been submitted successfully!');
 
           // Save last submission info for 30-minute check
           localStorage.setItem('lastSubmission', JSON.stringify({
@@ -250,7 +257,7 @@ export class BookAnAppointmentComponent implements OnInit {
         },
         error: (err) => {
           console.error('LeadSquared Error:', err);
-          alert('There was a problem submitting your request.');
+          this.notification.error('There was a problem submitting your request.');
         }
       });
   }

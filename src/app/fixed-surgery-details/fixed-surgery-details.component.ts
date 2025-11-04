@@ -2,6 +2,7 @@ import { ChangeDetectorRef, Component, Renderer2, AfterViewInit } from '@angular
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
+import { NotificationService } from '../services/notification.service';
 import { FixedPackagesService } from '../services/fixed-packages.service';
 import { UsersService } from '../services/users.service';
 declare var $: any;
@@ -144,7 +145,8 @@ export class FixedSurgeryDetailsComponent implements AfterViewInit {
     private sanitizer: DomSanitizer,
     private cdr: ChangeDetectorRef,
     private fixedPackagesService: FixedPackagesService,
-    private userservice: UsersService
+    private userservice: UsersService,
+    private notification: NotificationService
   ) {
   }
 
@@ -297,17 +299,17 @@ export class FixedSurgeryDetailsComponent implements AfterViewInit {
     if (this.appointmentForm.valid) {
       this.userservice.signupUser(this.appointmentForm.value).subscribe({
         next: (res) => {
-          alert('Appointment Booked Successfully!');
+          this.notification.success('Appointment booked successfully!');
           console.log('Form Data:', this.appointmentForm.value);
           this.appointmentForm.reset();
         },
         error: (err) => {
-          alert('Something went wrong while booking the appointment.');
+          this.notification.error('Something went wrong while booking the appointment.');
           console.error(err);
         }
       });
     } else {
-      alert('Please fill in all required fields correctly.');
+      this.notification.error('Please fill in all required fields correctly.');
     }
   }
   capitalizeText(text: string): string {

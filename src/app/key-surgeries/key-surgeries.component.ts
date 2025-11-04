@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Title, Meta } from '@angular/platform-browser';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
+import { NotificationService } from '../services/notification.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { environment } from '../../environments/environment';
 
@@ -379,7 +380,8 @@ export class KeySurgeriesComponent implements OnInit {
     private metaService: Meta,
     private http: HttpClient,
     private router: Router,
-    private fb: FormBuilder
+    private fb: FormBuilder,
+    private notification: NotificationService
   ) {
     window.scrollTo(0, 0);
     this.initializeForm();
@@ -465,7 +467,7 @@ export class KeySurgeriesComponent implements OnInit {
 
   submitAppointmentForm() {
     if (this.appointmentForm.invalid) {
-      alert('Please fill in all required fields.');
+      this.notification.error('Please fill in all required fields.');
       return;
     }
 
@@ -483,7 +485,7 @@ export class KeySurgeriesComponent implements OnInit {
         phone === formData.phoneNumber.trim() &&
         now - time < thirtyMinutes
       ) {
-        alert('You have already submitted a request with this name and phone number in the last 30 minutes.');
+        this.notification.info('You have already submitted a request with this name and phone number in the last 30 minutes.');
         return;
       }
     }
@@ -507,7 +509,7 @@ export class KeySurgeriesComponent implements OnInit {
       .subscribe({
         next: (res) => {
           console.log('LeadSquared Success:', res);
-          alert('Your appointment request has been submitted successfully!');
+          // alert('Your appointment request has been submitted successfully!');
 
           // Save last submission info for 30-minute check
           localStorage.setItem('lastSubmission', JSON.stringify({
@@ -523,7 +525,7 @@ export class KeySurgeriesComponent implements OnInit {
         },
         error: (err) => {
           console.error('LeadSquared Error:', err);
-          alert('There was a problem submitting your request.');
+          this.notification.error('There was a problem submitting your request.');
         }
       });
   }

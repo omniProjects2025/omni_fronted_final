@@ -40,33 +40,45 @@
             <p class="form-subtitle">Get expert consultation for {{ subDepartment.name }} Treatment</p>
           </div>
           
-          <form class="appointment-form">
+          <form class="appointment-form" #appointmentFormDir="ngForm" (ngSubmit)="onSubmit(appointmentFormDir)" novalidate>
             <div class="form-fields">
               <!-- Name Field -->
               <div class="form-group mb-3">
-                <label for="name" class="form-label">Name <span class="required">*</span></label>
+                <label for="name" class="form-label">Name <span class="text-danger">*</span></label>
                 <input type="text" 
                        class="form-control" 
                        id="name" 
                        name="name"
-                       [(ngModel)]="appointmentForm.name"
+                       [(ngModel)]="formData.name"
                        placeholder="Enter your full name"
-                       required>
-                <div class="error-message" *ngIf="formErrors.name">{{ formErrors.name }}</div>
+                       required
+                       minlength="2"
+                       #name="ngModel">
+                <div class="text-danger small mt-1" *ngIf="name.invalid && (name.touched || appointmentFormDir.submitted)">
+                  <div *ngIf="name.errors?.['required']">Name is required</div>
+                  <div *ngIf="name.errors?.['minlength']">Name must be at least 2 characters</div>
+                </div>
               </div>
               
               <!-- Mobile Field -->
               <div class="form-group mb-3">
-                <label for="mobile" class="form-label">Mobile Number <span class="required">*</span></label>
+                <label for="mobile" class="form-label">Mobile Number <span class="text-danger">*</span></label>
                 <input type="tel" 
                        class="form-control" 
                        id="mobile" 
                        name="mobile"
-                       [(ngModel)]="appointmentForm.mobile"
+                       [(ngModel)]="formData.mobile"
                        placeholder="Enter 10-digit mobile number"
+                       required
+                       pattern="[0-9]{10}"
                        maxlength="10"
-                       required>
-                <div class="error-message" *ngIf="formErrors.mobile">{{ formErrors.mobile }}</div>
+                       minlength="10"
+                       inputmode="numeric"
+                       #mobile="ngModel">
+                <div class="text-danger small mt-1" *ngIf="mobile.invalid && (mobile.touched || appointmentFormDir.submitted)">
+                  <div *ngIf="mobile.errors?.['required']">Mobile number is required</div>
+                  <div *ngIf="mobile.errors?.['pattern'] || mobile.errors?.['minlength']">Please enter a valid 10-digit mobile number</div>
+                </div>
               </div>
               
               <!-- Email Field -->
@@ -76,18 +88,20 @@
                        class="form-control" 
                        id="email" 
                        name="email"
-                       [(ngModel)]="appointmentForm.email"
-                       placeholder="Enter your email address">
-                <div class="error-message" *ngIf="formErrors.email">{{ formErrors.email }}</div>
+                       [(ngModel)]="formData.email"
+                       placeholder="Enter your email address"
+                       email
+                       #email="ngModel">
+                <div class="text-danger small mt-1" *ngIf="email.invalid && (email.touched || appointmentFormDir.submitted)">
+                  <div *ngIf="email.errors?.['email']">Please enter a valid email address</div>
+                </div>
               </div>
             </div>
             
             <!-- Submit Button -->
             <div class="text-center submit-btn-container">
-              <button type="button" 
-                      class="btn btn-primary btn-lg submit-btn"
-                      [disabled]="!isFormValid()"
-                      (click)="onSubmit()">
+              <button type="submit" 
+                      class="btn btn-primary btn-lg submit-btn">
                 Book Appointment
               </button>
             </div>

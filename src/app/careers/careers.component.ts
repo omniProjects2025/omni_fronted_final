@@ -4,6 +4,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { DatePipe } from '@angular/common';
 import { environment } from '../../environments/environment';
+import { NotificationService } from '../services/notification.service';
 
 @Component({
   selector: 'app-careers',
@@ -55,7 +56,7 @@ export class CareersComponent {
     {id:10, title: 'Housekeeping Staff', location: 'Vizag', department: 'Housekeeping', postedDate: '2025-09-20', lastDate: '2025-10-01' },
   ];
 
-  constructor(private fb: FormBuilder, private http: HttpClient, private route: ActivatedRoute, private datePipe: DatePipe) {
+  constructor(private fb: FormBuilder, private http: HttpClient, private route: ActivatedRoute, private datePipe: DatePipe, private notification: NotificationService) {
     this.applyForm = this.fb.group({
       firstName: ['', Validators.required],
       lastName: [''],
@@ -89,9 +90,9 @@ this.socialShare();
       // Fallback: copy to clipboard
       try {
         navigator.clipboard.writeText(url);
-        alert('Link copied to clipboard');
+        this.notification.info('Link copied to clipboard');
       } catch {
-        alert(url);
+        this.notification.info(url);
       }
     }
   }
@@ -269,8 +270,8 @@ socialShare(){
 
       // Send FormData in the request
       this.http.post('http://localhost:3000/api/send-email', formData).subscribe(
-        res => alert('Email sent successfully!'),
-        err => alert('Failed to send email.')
+        res => this.notification.success('Email sent successfully!'),
+        err => this.notification.error('Failed to send email.')
       );
 
       this.applyForm.reset();

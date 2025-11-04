@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { Title, Meta } from '@angular/platform-browser';
 import { Router, ActivatedRoute } from '@angular/router';
+import { NgForm } from '@angular/forms';
 import { CanonicalService } from '../services/canonical.service';
 import { CardiologySubDepartmentsService } from './cardiology-sub-departments.service';
 import { LeadSquaredService } from '../services/leadsquared.service';
+import { NotificationService } from '../services/notification.service';
 
 @Component({
   selector: 'app-cardiology-sub-department',
@@ -12,12 +14,7 @@ import { LeadSquaredService } from '../services/leadsquared.service';
 })
 export class CardiologySubDepartmentComponent implements OnInit {
   subDepartment: any = {};
-  appointmentForm = {
-    name: '',
-    mobile: '',
-    email: ''
-  };
-  formErrors = {
+  formData = {
     name: '',
     mobile: '',
     email: ''
@@ -30,7 +27,8 @@ export class CardiologySubDepartmentComponent implements OnInit {
     private cardiologyService: CardiologySubDepartmentsService,
     private leadSquaredService: LeadSquaredService,
     private router: Router,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private notification: NotificationService
   ) { }
 
   ngOnInit() {
@@ -63,72 +61,44 @@ export class CardiologySubDepartmentComponent implements OnInit {
     });
   }
 
-  validateForm(): boolean {
-    let isValid = true;
-    
-    // Reset errors
-    this.formErrors = { name: '', mobile: '', email: '' };
-    
-    // Validate name
-    if (!this.appointmentForm.name.trim()) {
-      this.formErrors.name = 'Name is required';
-      isValid = false;
-    }
-    
-    // Validate mobile
-    if (!this.appointmentForm.mobile.trim()) {
-      this.formErrors.mobile = 'Mobile number is required';
-      isValid = false;
-    } else if (!/^\d{10}$/.test(this.appointmentForm.mobile)) {
-      this.formErrors.mobile = 'Please enter a valid 10-digit mobile number';
-      isValid = false;
-    }
-    
-    // Validate email (optional)
-    if (this.appointmentForm.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(this.appointmentForm.email)) {
-      this.formErrors.email = 'Please enter a valid email address';
-      isValid = false;
-    }
-    
-    return isValid;
-  }
-
-  onSubmit() {
-    if (this.validateForm()) {
-      console.log('Appointment form submitted:', this.appointmentForm);
-      
-      // Prepare data for LeadSquare
-      const leadData = {
-        fullName: this.appointmentForm.name,
-        phoneNumber: this.appointmentForm.mobile,
-        emailId: this.appointmentForm.email || '',
-        department: this.subDepartment.name || 'Cardiology',
-        location: 'Hyderabad',
-        message: `Appointment request for ${this.subDepartment.name || 'Cardiology'} Treatment`
-      };
-
-      // Submit to LeadSquare
-      this.leadSquaredService.submitAppointment(leadData).subscribe({
-        next: (response) => {
-          console.log('LeadSquare response:', response);
-          alert('Appointment request submitted successfully! We will contact you soon.');
-          
-          // Reset form
-          this.appointmentForm = { name: '', mobile: '', email: '' };
-        },
-        error: (error) => {
-          console.error('LeadSquare error:', error);
-          alert('There was an error submitting your request. Please try again or contact us directly.');
-        }
+  onSubmit(form: NgForm) {
+    if (form.invalid) {
+      // Mark all fields as touched to trigger validation display
+      Object.values(form.controls).forEach((control: any) => {
+        control.markAsTouched();
       });
+      this.notification.info('Please fill the required fields correctly.');
+      return;
     }
-  }
 
-  isFormValid(): boolean {
-    return this.appointmentForm.name.trim() !== '' && 
-           this.appointmentForm.mobile.trim() !== '' && 
-           /^\d{10}$/.test(this.appointmentForm.mobile) &&
-           (this.appointmentForm.email === '' || /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(this.appointmentForm.email));
+    const phone = (this.formData.mobile || '').toString().trim();
+    if (!/^[0-9]{10}$/.test(phone)) {
+      this.notification.info('Please enter a valid 10-digit mobile number.');
+      return;
+    }
+
+    // Prepare data for LeadSquare
+    const leadData = {
+      fullName: this.formData.name,
+      phoneNumber: this.formData.mobile,
+      emailId: this.formData.email || '',
+      department: this.subDepartment.name || 'Cardiology',
+      location: 'Hyderabad',
+      message: `Appointment request for ${this.subDepartment.name || 'Cardiology'} Treatment`
+    };
+
+    // Submit to LeadSquare
+    this.leadSquaredService.submitAppointment(leadData).subscribe({
+      next: (response) => {
+        console.log('LeadSquare response:', response);
+        this.formData = { name: '', mobile: '', email: '' };
+        this.router.navigate(['/thank-you']);
+      },
+      error: (error) => {
+        console.error('LeadSquare error:', error);
+        this.notification.error('There was an error submitting your request. Please try again or contact us directly.');
+      }
+    });
   }
 
   navigateToSecondOpinion() {

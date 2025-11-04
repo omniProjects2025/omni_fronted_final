@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { NotificationService } from '../services/notification.service';
 import { environment } from '../../environments/environment';
 
 @Component({
@@ -25,7 +26,7 @@ export class SecondOpinionComponent{
   showNameError = false;
   showPhoneError = false;
 
-  constructor(private http: HttpClient, private router: Router) { }
+  constructor(private http: HttpClient, private router: Router, private notification: NotificationService) { }
 
   ngAfterViewInit(): void {
     this.observeCounters();
@@ -89,7 +90,7 @@ export class SecondOpinionComponent{
         phone === form.phoneNumber.trim() &&
         now - time < thirtyMinutes
       ) {
-        alert('You have already submitted a request with this name and phone number in the last 30 minutes.');
+        this.notification.info('You have already submitted a request with this name and phone number in the last 30 minutes.');
         return;
       }
     }
@@ -108,7 +109,6 @@ export class SecondOpinionComponent{
     this.http.post(url, payload, { headers: { 'Content-Type': 'application/json' } })
       .subscribe({
         next: (res) => {
-          alert('Thank you! Your enquiry has been submitted.');
           localStorage.setItem('secondOpinionSubmission', JSON.stringify({
             name: form.fullName.trim(),
             phone: form.phoneNumber.trim(),
@@ -124,7 +124,7 @@ export class SecondOpinionComponent{
           this.router.navigate(['/thank-you']);
         },
         error: (err) => {
-          alert('Submission failed. Please try again.');
+          this.notification.error('Submission failed. Please try again.');
           console.error(err);
         }
       });

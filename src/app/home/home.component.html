@@ -341,29 +341,32 @@
       </h2>
 
       <div class="col-md-10">
-        <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)" class="row g-3">
+        <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)" class="row g-3" novalidate>
 
           <div class="col-12 col-md-4">
             <input type="text" class="form-control" name="name" placeholder="Name*" [(ngModel)]="formData.name" required
-              #name="ngModel">
-            <div *ngIf="name.invalid && name.touched" class="text-danger mt-1">
-              Name is required
+              #name="ngModel" minlength="2">
+            <div class="text-danger small mt-1" *ngIf="name.invalid && (name.touched || contactForm.submitted)">
+              <div *ngIf="name.errors?.['required']">Name is required</div>
+              <div *ngIf="name.errors?.['minlength']">Name must be at least 2 characters</div>
             </div>
           </div>
 
           <div class="col-12 col-md-4">
-            <input type="text" class="form-control" name="phone" placeholder="Phone Number*"
-              [(ngModel)]="formData.phone" required #phone="ngModel">
-            <div *ngIf="phone.invalid && phone.touched" class="text-danger mt-1">
-              Phone number is required
+            <input type="tel" class="form-control" name="phone" placeholder="Phone Number*"
+              [(ngModel)]="formData.phone" required #phone="ngModel"
+              pattern="[0-9]{10}" maxlength="10" minlength="10" inputmode="numeric">
+            <div class="text-danger small mt-1" *ngIf="phone.invalid && (phone.touched || contactForm.submitted)">
+              <div *ngIf="phone.errors?.['required']">Phone number is required</div>
+              <div *ngIf="phone.errors?.['pattern'] || phone.errors?.['minlength']">Please enter a valid 10 digit number</div>
             </div>
           </div>
 
           <div class="col-12 col-md-4">
             <input type="email" class="form-control" name="email" placeholder="Email" [(ngModel)]="formData.email" email
               #email="ngModel">
-            <div *ngIf="email.invalid && email.touched" class="text-danger mt-1">
-              Enter a valid email
+            <div class="text-danger small mt-1" *ngIf="email.invalid && (email.touched || contactForm.submitted)">
+              <div *ngIf="email.errors?.['email']">Enter a valid email</div>
             </div>
           </div>
 
@@ -439,19 +442,18 @@
 
       <!-- Modal Body -->
       <div class="modal-body">
-        <form class="appointment-form" (ngSubmit)="onSubmitAppointment($event)" #appointmentForm="ngForm">
+        <form class="appointment-form" (ngSubmit)="onSubmitAppointment($event, appointmentForm)" #appointmentForm="ngForm" novalidate>
           <div class="row g-2">
             <!-- Full Name -->
             <div class="col-12">
               <div class="form-group">
-                <label for="fullName" class="form-label"
-                  [class.error-label]="!appointmentForm.form.get('fullName')?.valid && appointmentForm.form.get('fullName')?.touched">Full
-                  Name *</label>
+                <label for="fullName" class="form-label">Full Name <span class="text-danger">*</span></label>
                 <input type="text" class="form-control" id="fullName" name="fullName"
-                  [(ngModel)]="appointmentFormData.fullName" placeholder="Enter your full name" required>
-                <div class="error-message"
-                  *ngIf="!appointmentForm.form.get('fullName')?.valid && appointmentForm.form.get('fullName')?.touched">
-                  Full Name is required
+                  [(ngModel)]="appointmentFormData.fullName" #fullName="ngModel"
+                  placeholder="Enter your full name" required minlength="2">
+                <div class="error-message text-danger small mt-1" *ngIf="fullName.invalid && (fullName.touched || appointmentForm.submitted)">
+                  <div *ngIf="fullName.errors?.['required']">Full name is required</div>
+                  <div *ngIf="fullName.errors?.['minlength']">Full name must be at least 2 characters</div>
                 </div>
               </div>
             </div>
@@ -459,14 +461,14 @@
             <!-- Phone Number -->
             <div class="col-12">
               <div class="form-group">
-                <label for="phoneNumber" class="form-label"
-                  [class.error-label]="!appointmentForm.form.get('phoneNumber')?.valid && appointmentForm.form.get('phoneNumber')?.touched">Phone
-                  Number *</label>
+                <label for="phoneNumber" class="form-label">Phone Number <span class="text-danger">*</span></label>
                 <input type="tel" class="form-control" id="phoneNumber" name="phoneNumber"
-                  [(ngModel)]="appointmentFormData.phoneNumber" placeholder="Enter your phone number" required>
-                <div class="error-message"
-                  *ngIf="!appointmentForm.form.get('phoneNumber')?.valid && appointmentForm.form.get('phoneNumber')?.touched">
-                  Phone Number is required
+                  [(ngModel)]="appointmentFormData.phoneNumber" #phone="ngModel"
+                  placeholder="Enter your phone number" required
+                  pattern="[0-9]{10}" maxlength="10" minlength="10" inputmode="numeric">
+                <div class="error-message text-danger small mt-1" *ngIf="phone.invalid && (phone.touched || appointmentForm.submitted)">
+                  <div *ngIf="phone.errors?.['required']">Phone number is required</div>
+                  <div *ngIf="phone.errors?.['pattern'] || phone.errors?.['minlength']">Please enter a valid 10 digit number</div>
                 </div>
               </div>
             </div>
@@ -483,11 +485,9 @@
             <!-- Location -->
             <div class="col-12">
               <div class="form-group">
-                <label for="location" class="form-label"
-                  [class.error-label]="!appointmentForm.form.get('location')?.valid && appointmentForm.form.get('location')?.touched">Preferred
-                  Location *</label>
+                <label for="location" class="form-label">Preferred Location <span class="text-danger">*</span></label>
                 <select class="form-select" id="location" name="location" [(ngModel)]="appointmentFormData.location"
-                  required>
+                  #location="ngModel" required>
                   <option value="" disabled selected>Select Location</option>
                   <option value="Kothapet">Kothapet</option>
                   <option value="Kukatpally">Kukatpally</option>
@@ -495,9 +495,8 @@
                   <option value="Vizag">Vizag</option>
                   <option value="Kurnool">Kurnool</option>
                 </select>
-                <div class="error-message"
-                  *ngIf="!appointmentForm.form.get('location')?.valid && appointmentForm.form.get('location')?.touched">
-                  Please select a location
+                <div class="error-message text-danger small mt-1" *ngIf="location.invalid && (location.touched || appointmentForm.submitted)">
+                  <div *ngIf="location.errors?.['required']">Please select a location</div>
                 </div>
               </div>
             </div>
@@ -505,11 +504,9 @@
             <!-- Department -->
             <div class="col-12">
               <div class="form-group">
-                <label for="department" class="form-label"
-                  [class.error-label]="!appointmentForm.form.get('department')?.valid && appointmentForm.form.get('department')?.touched">Department
-                  *</label>
+                <label for="department" class="form-label">Department <span class="text-danger">*</span></label>
                 <select class="form-select" id="department" name="department"
-                  [(ngModel)]="appointmentFormData.department" required>
+                  [(ngModel)]="appointmentFormData.department" #department="ngModel" required>
                   <option value="" disabled selected>Select Department</option>
                   <option value="Cardiology">Cardiology</option>
                   <option value="Neurology">Neurology</option>
@@ -518,9 +515,8 @@
                   <option value="Gastroenterology">Gastroenterology</option>
                   <option value="Pediatrics">Pediatrics</option>
                 </select>
-                <div class="error-message"
-                  *ngIf="!appointmentForm.form.get('department')?.valid && appointmentForm.form.get('department')?.touched">
-                  Please select a department
+                <div class="error-message text-danger small mt-1" *ngIf="department.invalid && (department.touched || appointmentForm.submitted)">
+                  <div *ngIf="department.errors?.['required']">Please select a department</div>
                 </div>
               </div>
             </div>
@@ -528,7 +524,7 @@
             <!-- Message -->
             <div class="col-12">
               <div class="form-group">
-                <label for="message" class="form-label">Additional Message</label>
+                <label for="message" class="form-label">Message</label>
                 <textarea class="form-control" id="message" name="message" rows="2"
                   [(ngModel)]="appointmentFormData.message"
                   placeholder="Any specific requirements or concerns..."></textarea>

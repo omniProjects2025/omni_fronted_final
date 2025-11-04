@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { NotificationService } from '../services/notification.service';
 import { HttpClient } from '@angular/common/http';
 import { fromUrlFriendly, toUrlFriendly } from '../utils/url-helper.util';
 import { environment } from '../../environments/environment';
@@ -38,7 +39,8 @@ export class OurSpecialitiesDetailsComponent implements OnInit {
     private router: Router,
     private titleService: Title,
     private metaService: Meta,
-    private canonicalService: CanonicalService
+    private canonicalService: CanonicalService,
+    private notification: NotificationService
   ) { }
 
   ngOnInit() {
@@ -251,30 +253,30 @@ export class OurSpecialitiesDetailsComponent implements OnInit {
   submitEnquiry() {
     // Enhanced validation
     if (!this.enquiry.fullName.trim()) { 
-      alert('Full Name is required.'); 
+      this.notification.error('Full Name is required.'); 
       return; 
     }
     
     if (this.enquiry.fullName.trim().length < 3) {
-      alert('Full Name must be at least 3 characters long.');
+      this.notification.error('Full Name must be at least 3 characters long.');
       return;
     }
     
     if (!this.enquiry.phoneNumber.trim()) { 
-      alert('Phone Number is required.'); 
+      this.notification.error('Phone Number is required.'); 
       return; 
     }
     
     // Phone number validation (Indian format)
     const phonePattern = /^[6-9]\d{9}$/;
     if (!phonePattern.test(this.enquiry.phoneNumber.trim())) {
-      alert('Please enter a valid 10-digit mobile number starting with 6, 7, 8, or 9.');
+      this.notification.error('Please enter a valid 10-digit mobile number starting with 6, 7, 8, or 9.');
       return;
     }
     
     // Email validation (optional but if provided, should be valid)
     if (this.enquiry.emailId.trim() && !this.isValidEmail(this.enquiry.emailId.trim())) {
-      alert('Please enter a valid email address.');
+      this.notification.error('Please enter a valid email address.');
       return;
     }
 
@@ -284,7 +286,7 @@ export class OurSpecialitiesDetailsComponent implements OnInit {
       if (name === this.enquiry.fullName.trim() &&
         phone === this.enquiry.phoneNumber.trim() &&
         Date.now() - time < 30 * 60 * 1000) {
-        alert('You already submitted this enquiry within the last 30 minutes.');
+        this.notification.info('You already submitted this enquiry within the last 30 minutes.');
         return;
       }
     }
@@ -305,7 +307,6 @@ export class OurSpecialitiesDetailsComponent implements OnInit {
     this.http.post(url, payload, { headers: { 'Content-Type': 'application/json' } })
       .subscribe({
         next: () => {
-          alert('Your enquiry has been submitted successfully!');
           localStorage.setItem('lastEnquiry', JSON.stringify({
             name: this.enquiry.fullName.trim(),
             phone: this.enquiry.phoneNumber.trim(),
@@ -316,7 +317,7 @@ export class OurSpecialitiesDetailsComponent implements OnInit {
         },
         error: (err) => {
           console.error('LeadSquared Error:', err);
-          alert('There was a problem submitting your enquiry.');
+          this.notification.error('There was a problem submitting your enquiry.');
         }
       });
   }

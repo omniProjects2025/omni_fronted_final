@@ -504,9 +504,9 @@
             <!-- Department -->
             <div class="col-12">
               <div class="form-group">
-                <label for="department" class="form-label">Department <span class="text-danger">*</span></label>
+                <label for="department" class="form-label">Department <span class="text-danger"></span></label>
                 <select class="form-select" id="department" name="department"
-                  [(ngModel)]="appointmentFormData.department" #department="ngModel" required>
+                  [(ngModel)]="appointmentFormData.department" #department="ngModel">
                   <option value="" disabled selected>Select Department</option>
                   <option value="Cardiology">Cardiology</option>
                   <option value="Neurology">Neurology</option>
@@ -516,7 +516,7 @@
                   <option value="Pediatrics">Pediatrics</option>
                 </select>
                 <div class="error-message text-danger small mt-1" *ngIf="department.invalid && (department.touched || appointmentForm.submitted)">
-                  <div *ngIf="department.errors?.['required']">Please select a department</div>
+                  <!-- <div *ngIf="department.errors?.['required']">Please select a department</div> -->
                 </div>
               </div>
             </div>

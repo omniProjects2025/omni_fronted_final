@@ -40,7 +40,7 @@ export class ContactUsComponent {
       phone: '888 0101 000',
       img: "omni_kukkatpally_contact_us.svg",
       rating: 4.5,
-      reviewCount: 5130,
+      reviewCount: 5142,
       reviewsUrl: 'https://www.google.com/search?hl=en-IN&gl=in&q=OMNI+Hospitals+%7C+Best+Multi+Speciality+Hospital+in+Kukatpally,+Mumbai+Highway+Rd,+opp.+BIG+BAZAR,+Balaji+Nagar,+Kukatpally,+Hyderabad,+Telangana+500072&ludocid=13361647533386732115&lsig=AB86z5VaL4xoUCUUipWsuXSHLIlT&hl=en&gl=IN#lrd=0x3bcb91bc5cdb9fbd:0xb96e1ba3797d9253,1'
     },
     {
@@ -52,7 +52,7 @@ export class ContactUsComponent {
       phone: '888 0101 000',
       img: "udai_omni.svg",
       rating: 4.4,
-      reviewCount: 2514,
+      reviewCount: 2517,
       reviewsUrl: 'https://www.google.com/search?hl=en-IN&gl=in&q=Udai+Omni+Hospital+-+Orthopedics+%7C+Multispeciality+%7C+Trauma,+5-9-92/A/1,+Chapel+Rd,+near+Fateh+Maidan,+Fateh+Maidan,+Abids,+Hyderabad,+Telangana+500001&ludocid=14772628000669664513&lsig=AB86z5WUfRzMeit0e7X9MxbzvgQ5&hl=en&gl=IN#lrd=0x3bcb9762f7471823:0xcd02eae5dae78501,1'
     },
     {
@@ -64,7 +64,7 @@ export class ContactUsComponent {
       phone: '888 0101 000',
       img: "kothapet_location_image.svg",
       rating: 4.3,
-      reviewCount: 3428,
+      reviewCount: 3427,
       reviewsUrl: 'https://www.google.com/search?hl=en-IN&gl=in&q=OMNI+Hospitals,+Plot+No.W-11,B-9,+Sy.+No.9/1/A+Near+SVC+Cinema+Theatre+opp+PVT+Market+Building+Kothapet,+Dilsukhnagar,+Hyderabad,+Telangana+500102&ludocid=11369620307516432253&lsig=AB86z5X76sxgP1FsrwjYK-6IT_Se&hl=en&gl=IN#lrd=0x3bcb98e93eec1a2f:0x9dc9016e4c959f7d,1'
     },
     {
@@ -101,7 +101,7 @@ export class ContactUsComponent {
       phone: '888 0101 000',
       img: "giggles_vizag_location.svg",
       rating: 4.7,
-      reviewCount: 3165,
+      reviewCount: 3162,
       reviewsUrl: 'https://www.google.com/search?hl=en-IN&gl=in&q=Giggles+by+Omni+RK,+Beside+Omni+Hospitals,+Waltair+Main+Rd,+Opp+Lions+Club+Of,+Ram+Nagar,+Visakhapatnam,+Andhra+Pradesh+530002&ludocid=1512469724875382304&lsig=AB86z5UWqvAZNSi-zmI4oGuBqaH2&hl=en&gl=IN#lrd=0x3a39438ce00efc2f:0x14fd5f338cbade20,1'
     }
   ]

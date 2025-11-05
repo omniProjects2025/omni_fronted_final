@@ -21,63 +21,6 @@ export class OurBranchesComponent {
   ];
   doctors: any[] = [];
 
-  // doctors = [
-  //   {
-  //     name: 'Dr R Naga Sudha Ashok',
-  //     experience: '18+ Years',
-  //     timings: '9am to 4pm',
-  //     location: 'Kukatpally',
-  //     image: 'assets/our_doctors/doctor_naga_sudha_ashok.png',
-  //     specialization: 'Surgical Gastroenterologist',
-  //     department: 'General Medicine'
-  //   },
-  //   {
-  //     name: 'Doctor one',
-  //     experience: '18+ Years',
-  //     timings: '9am to 4pm',
-  //     location: 'Kukatpally',
-  //     image: 'assets/our_doctors/doctor_naga_sudha_ashok.png',
-  //     specialization: 'Surgical Gastroenterologist',
-  //     department: 'Cardiology'
-  //   },
-  //   {
-  //     name: 'Doctor two',
-  //     experience: '18+ Years',
-  //     timings: '9am to 4pm',
-  //     location: 'Kukatpally',
-  //     image: 'assets/our_doctors/doctor_naga_sudha_ashok.png',
-  //     specialization: 'Surgical Gastroenterologist',
-  //     department: 'ENT'
-  //   },
-  //   {
-  //     name: 'Doctor three',
-  //     experience: '18+ Years',
-  //     timings: '9am to 4pm',
-  //     location: 'Kukatpally',
-  //     image: 'assets/our_doctors/doctor_naga_sudha_ashok.png',
-  //     specialization: 'Surgical Gastroenterologist',
-  //     department: 'Nephrology'
-  //   },
-  //   {
-  //     name: 'Doctor four',
-  //     experience: '18+ Years',
-  //     timings: '9am to 4pm',
-  //     location: 'Kukatpally',
-  //     image: 'assets/our_doctors/doctor_naga_sudha_ashok.png',
-  //     specialization: 'Surgical Gastroenterologist',
-  //     department: 'Urology'
-  //   },
-  //   {
-  //     name: 'Doctor five',
-  //     experience: '18+ Years',
-  //     timings: '9am to 4pm',
-  //     location: 'Kukatpally',
-  //     image: 'assets/our_doctors/doctor_naga_sudha_ashok.png',
-  //     specialization: 'Surgical Gastroenterologist',
-  //     department: 'Dermatology'
-  //   },
-  //   ];
-
   constructor(private router: Router, private activated_routes: ActivatedRoute, private http: HttpClient) {}
 
   ngOnInit(): void {
@@ -113,7 +56,10 @@ export class OurBranchesComponent {
       lat: 17.485269683418686,
       lng: 78.4083654749371,
       address: 'OMNI Hospitals, Kukatpally, Hyderabad, Telangana 500072',
-      phone: '1234567889'
+      phone: '888 0101 000',
+      rating: 4.5,
+      reviewCount: 5142,
+      reviewsUrl: 'https://www.google.com/search?hl=en-IN&gl=in&q=OMNI+Hospitals+%7C+Best+Multi+Speciality+Hospital+in+Kukatpally,+Mumbai+Highway+Rd,+opp.+BIG+BAZAR,+Balaji+Nagar,+Kukatpally,+Hyderabad,+Telangana+500072&ludocid=13361647533386732115&lsig=AB86z5VaL4xoUCUUipWsuXSHLIlT&hl=en&gl=IN#lrd=0x3bcb91bc5cdb9fbd:0xb96e1ba3797d9253,1'
     },
     {
       key: 'udai',
@@ -121,7 +67,10 @@ export class OurBranchesComponent {
       lat: 17.3969257,
       lng: 78.472412,
       address: '5-9-92/A/1, Chapel Rd, near Fateh Maidan, Fateh Maidan, Abids, Hyderabad, Telangana 500001',
-      phone: '1234567889'
+      phone: '888 0101 000',
+      rating: 4.4,
+      reviewCount: 2517,
+      reviewsUrl: 'https://www.google.com/search?hl=en-IN&gl=in&q=Udai+Omni+Hospital+-+Orthopedics+%7C+Multispeciality+%7C+Trauma,+5-9-92/A/1,+Chapel+Rd,+near+Fateh+Maidan,+Fateh+Maidan,+Abids,+Hyderabad,+Telangana+500001&ludocid=14772628000669664513&lsig=AB86z5WUfRzMeit0e7X9MxbzvgQ5&hl=en&gl=IN#lrd=0x3bcb9762f7471823:0xcd02eae5dae78501,1'
     },
     {
       key: 'kothapet',
@@ -129,7 +78,10 @@ export class OurBranchesComponent {
       lat: 17.3686691,
       lng: 78.538822,
       address: 'Plot No.W-11,B-9, Sy. No.9/1/A Near SVC Cinema Theatre opp PVT Market Building Kothapet, Dilsukhnagar, Hyderabad, Telangana 500036',
-      phone: '1234567889'
+      phone: '888 0101 000',
+      rating: 4.3,
+      reviewCount: 3427,
+      reviewsUrl: 'https://www.google.com/search?hl=en-IN&gl=in&q=OMNI+Hospitals,+Plot+No.W-11,B-9,+Sy.+No.9/1/A+Near+SVC+Cinema+Theatre+opp+PVT+Market+Building+Kothapet,+Dilsukhnagar,+Hyderabad,+Telangana+500102&ludocid=11369620307516432253&lsig=AB86z5X76sxgP1FsrwjYK-6IT_Se&hl=en&gl=IN#lrd=0x3bcb98e93eec1a2f:0x9dc9016e4c959f7d,1'
     },
     {
       key: 'kurnool',
@@ -137,7 +89,21 @@ export class OurBranchesComponent {
       lat: 15.823561600000001,
       lng: 78.0415378,
       address: '46/679-C, NH40, Budhawara Peta, Alluri Sitarama Raju Nagar, Kurnool, Andhra Pradesh 518002',
-      phone: '1234567889'
+      phone: '888 0101 000',
+      rating: 4.7,
+      reviewCount: 2047,
+      reviewsUrl: 'https://www.google.com/search?hl=en-IN&gl=in&q=OMNI+Hospitals+Kurnool,+46/679-C,+NH40,+Budhawara+Peta,+Alluri+Sitarama+Raju+Nagar,+Kurnool,+Andhra+Pradesh+518002&ludocid=6291900437469527256&lsig=AB86z5X5KmZjkBCwiqJm5b0m-wIN&hl=en&gl=IN#lrd=0x3bb5ddf5391420ef:0x5751521ca97efcd8,1'
+    },
+    {
+      key: 'vizag',
+      name: 'OMNI RK Multi Specialty Hospital',
+      lat: 17.7183946,
+      lng: 83.3111361,
+      address: 'RK Beach Rd, Pandurangapuram, Visakhapatnam, Andhra Pradesh 530003',
+      phone: '888 0101 000',
+      rating: 4.2,
+      reviewCount: 2138,
+      reviewsUrl: 'https://www.google.com/search?hl=en-IN&gl=in&q=OMNI+RK+Multi+Specialty+Hospital,+Waltair+Main+Rd,+opp.+Lions+Club,+Ram+Nagar,+Visakhapatnam,+Andhra+Pradesh+530002&ludocid=3934366984762721501&lsig=AB86z5UkIYNyAXmFFch47gz2OzGF&hl=en&gl=IN#lrd=0x3a394315b6aa6577:0x3699aded6ece84dd,1'
     },
     {
       key: 'giggles',
@@ -145,7 +111,10 @@ export class OurBranchesComponent {
       lat: 17.718362979950925,
       lng: 83.31482030053034,
       address: 'Beside Omni Hospitals, Waltair Main Rd, Opp Lions Club Of, Ram Nagar, Visakhapatnam, Andhra Pradesh 530002',
-      phone: '1234567889'
+      phone: '888 0101 000',
+      rating: 4.7,
+      reviewCount: 3162,
+      reviewsUrl: 'https://www.google.com/search?hl=en-IN&gl=in&q=Giggles+by+Omni+RK,+Beside+Omni+Hospitals,+Waltair+Main+Rd,+Opp+Lions+Club+Of,+Ram+Nagar,+Visakhapatnam,+Andhra+Pradesh+530002&ludocid=1512469724875382304&lsig=AB86z5UWqvAZNSi-zmI4oGuBqaH2&hl=en&gl=IN#lrd=0x3a39438ce00efc2f:0x14fd5f338cbade20,1'
     }
   ]
 
@@ -288,6 +257,27 @@ export class OurBranchesComponent {
         console.log('Navigation failed');
       }
     }).catch(error => console.error('Navigation error:', error));
+  }
+
+  openReviews() {
+    // Get current location data and open reviews
+    const currentLocationData = this.getCurrentLocationData();
+    if (currentLocationData && currentLocationData.reviewsUrl) {
+      window.open(currentLocationData.reviewsUrl, '_blank');
+    }
+  }
+
+  getCurrentLocationData() {
+    // Find the location data based on getting_location
+    const loc = this.getting_location.trim().toLowerCase();
+    
+    const locationData = this.BRANCH_LOCATIONS.find((branch: any) => 
+      branch.key.toLowerCase() === loc || 
+      branch.name.toLowerCase().includes(loc) ||
+      loc.includes(branch.key.toLowerCase())
+    );
+    
+    return locationData || null;
   }
 
 }

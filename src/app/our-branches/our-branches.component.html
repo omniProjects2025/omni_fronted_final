@@ -55,18 +55,61 @@
                 Gastroenterology, Orthopedics, and more. Conveniently located and supported by a dedicated staff, OMNI
                 Kukatpally continues to set new benchmarks in quality healthcare for the region.
               </p>
-              <div class="col-md-3 p-0 m-0" (click)="openDirections(getting_location)"
-                *ngIf="(getting_location != 'Vizag' || '')">
-                <button class="direction_btn"><img class="" src="assets/locations/location_icon.svg" alt="">Get
-                  Direction</button>
+              <!-- Direction button and reviews for non-Vizag locations -->
+              <div class="d-flex flex-row align-items-center mt-3 flex-wrap" *ngIf="(getting_location != 'Vizag' || '')">
+                <div (click)="openDirections(getting_location)">
+                  <button class="direction_btn">
+                    <img class="" src="assets/locations/location_icon.svg" alt="">Get Direction
+                  </button>
+                </div>
+                <div class="ms-3">
+                  <div class="rating-container-branch">
+                    <div class="d-flex align-items-center">
+                      <span class="rating-text me-2">{{ getCurrentLocationData()?.rating || 0 }}</span>
+                      <div class="stars me-2">
+                        <span *ngFor="let star of [1,2,3,4,5]" 
+                              [class]="star <= (getCurrentLocationData()?.rating || 0) ? 'star-filled' : 'star-empty'">★</span>
+                      </div>
+                      <span class="review-count clickable-reviews" 
+                            (click)="openReviews()"
+                            title="View reviews on Google Maps">
+                        {{ getCurrentLocationData()?.reviewCount | number }} reviews
+                      </span>
+                    </div>
+                  </div>
+                </div>
               </div>
+
+              <!-- Direction button and reviews for Vizag location -->
               <div class="row mt-3  mx-1" *ngIf="(getting_location == 'Vizag' || '')">
+                <!-- Direction and Reviews in horizontal layout -->
+                <div class="d-flex flex-row align-items-center mb-3 flex-wrap">
+                  <div (click)="openDirections(getting_location)">
+                    <button class="direction_btn">
+                      <img class="" src="assets/locations/location_icon.svg" alt="">Get Direction
+                    </button>
+                  </div>
+                  <div class="ms-3">
+                    <div class="rating-container-branch">
+                      <div class="d-flex align-items-center">
+                        <span class="rating-text me-2">{{ getCurrentLocationData()?.rating || 0 }}</span>
+                        <div class="stars me-2">
+                          <span *ngFor="let star of [1,2,3,4,5]" 
+                                [class]="star <= (getCurrentLocationData()?.rating || 0) ? 'star-filled' : 'star-empty'">★</span>
+                        </div>
+                        <span class="review-count clickable-reviews" 
+                              (click)="openReviews()"
+                              title="View reviews on Google Maps">
+                          {{ getCurrentLocationData()?.reviewCount | number }} reviews
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <!-- Sub Branches -->
                 <div class="sub_branches">
                   <div class="row justify-content-start text-start align-items-end">
-                    <div class="col-md-3 p-0 m-0 pb-4" (click)="openDirections(getting_location)">
-                      <button class="direction_btn"><img class="" src="assets/locations/location_icon.svg" alt="">Get
-                        Direction</button>
-                    </div>
                     <div class="col-md-5 col-lg-5 mb-4 mb-md-0">
                       <div class="p-4 border_sub rounded-4 d-flex justify-content-center">
                         <div>

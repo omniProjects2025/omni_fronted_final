@@ -113,3 +113,143 @@ background-color: #d1e4ee8a;
   width: 1px;
   background-color: #ccc;
 }
+
+/* Rating styles for branches page */
+.rating-container-branch {
+  font-family: 'Roboto', sans-serif;
+  display: inline-flex;
+}
+
+.rating-text {
+  font-weight: 600;
+  font-size: 16px;
+  color: #333;
+  white-space: nowrap;
+}
+
+.stars {
+  font-size: 16px;
+  white-space: nowrap;
+}
+
+.star-filled {
+  color: #ffa500; /* Orange color for filled stars */
+}
+
+.star-empty {
+  color: #ddd; /* Light gray for empty stars */
+}
+
+.review-count {
+  font-size: 14px;
+  color: #666;
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+.clickable-reviews {
+  cursor: pointer;
+  color: #008FD5 !important;
+  text-decoration: underline;
+  transition: all 0.3s ease;
+}
+
+.clickable-reviews:hover {
+  color: #0066a3 !important;
+  text-decoration: none;
+}
+
+/* Ensure direction button and reviews stay horizontal */
+.direction_btn {
+  white-space: nowrap;
+}
+
+/* Hide specialties filter on mobile, show on desktop */
+@media (max-width: 991px) {
+  .col-md-3.mb-4 {
+    display: none !important;
+  }
+  
+  /* Make doctor list full width on mobile */
+  .col-md-9 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+/* Mobile-specific rating styles */
+@media (max-width: 768px) {
+  .rating-container-branch {
+    margin-top: 0;
+    display: inline-flex;
+  }
+  
+  .rating-text {
+    font-size: 15px;
+    font-weight: 700;
+  }
+  
+  .stars {
+    font-size: 15px;
+  }
+  
+  .review-count {
+    font-size: 13px;
+    font-weight: 500;
+  }
+  
+  .clickable-reviews {
+    font-size: 13px;
+    font-weight: 500;
+  }
+  
+  /* Ensure horizontal alignment on mobile */
+  .rating-container-branch .d-flex {
+    flex-wrap: nowrap;
+    gap: 0.25rem;
+  }
+
+  /* Adjust direction button for mobile */
+  .direction_btn {
+    font-size: 14px;
+    padding: 8px 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .rating-container-branch {
+    margin-top: 0;
+    display: inline-flex;
+  }
+  
+  .rating-text {
+    font-size: 14px;
+    font-weight: 700;
+  }
+  
+  .stars {
+    font-size: 14px;
+  }
+  
+  .review-count {
+    font-size: 12px;
+    font-weight: 500;
+  }
+  
+  .clickable-reviews {
+    font-size: 12px;
+    font-weight: 500;
+  }
+  
+  /* Keep horizontal on small screens */
+  .rating-container-branch .d-flex {
+    flex-wrap: nowrap;
+    gap: 0.2rem;
+  }
+
+  /* Adjust direction button for small mobile */
+  .direction_btn {
+    font-size: 13px;
+    padding: 7px 18px;
+  }
+}

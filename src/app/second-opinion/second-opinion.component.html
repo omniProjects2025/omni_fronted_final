@@ -25,7 +25,7 @@
                 </div>
                 <div class="text-center mt-4 counter_bg py-3">
                     <div class="row">
-                        <div class="col-md-6 col-12 mb-4" *ngFor="let counter of counters">
+                        <div class="col-md-6 col-6 mb-4" *ngFor="let counter of counters">
                             <div class="info-box d-flex align-items-center flex-column flex-md-row text-center text-md-start"
                                 [ngClass]="{
        'justify-content-md-start': counter.id === 2 || counter.id === 4,
@@ -105,10 +105,16 @@
                                 <option>Plastic Surgery</option>
                             </select>
                         </div>
+                        <div class="">
+                            <label class="form-label">Health Concern/Message</label>
+                            <textarea class="form-control p-2" name="comments"
+                                [(ngModel)]="secondOpinionData.comments" rows="" 
+                                placeholder=""></textarea>
+                        </div>
                     </form>
-                    <div class="text-center my-4 d-flex align-items-center justify-content-center"
+                    <div class="text-center d-flex align-items-center justify-content-center"
                         (click)="submitSecondOpinion(secondOpinionData)">
-                        <button type="submit" class="btn btn-submit">Submit</button>
+                        <button type="submit" class="btn btn-submit mb-3 mb-md-0">Submit</button>
                     </div>
                 </div>
             </div>

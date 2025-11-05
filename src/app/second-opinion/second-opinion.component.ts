@@ -21,7 +21,8 @@ export class SecondOpinionComponent{
     phoneNumber: '',
     emailId: '',
     location: '',
-    department: ''
+    department: '',
+    comments: ''
   };
   showNameError = false;
   showPhoneError = false;
@@ -100,6 +101,7 @@ export class SecondOpinionComponent{
       { Attribute: "EmailAddress", Value: form.emailId },
       { Attribute: "mx_City", Value: form.location },
       { Attribute: "mx_Department", Value: form.department },
+      { Attribute: "mx_Comments", Value: form.comments || '' },
       { Attribute: "Source", Value: "Website - Second Opinion" }
     ];
     const accessKey = environment.leadsquared.accessKey;
@@ -119,7 +121,8 @@ export class SecondOpinionComponent{
             phoneNumber: '',
             emailId: '',
             location: '',
-            department: ''
+            department: '',
+            comments: ''
           };
           this.router.navigate(['/thank-you']);
         },

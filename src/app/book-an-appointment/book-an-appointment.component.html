@@ -173,27 +173,25 @@
   <div class="container-fluid" style="margin-bottom: 2px;">
     <div class="row">
       <div class="col-md-4 bg_success p-3 d-flex align-items-center justify-content-start gap-3 hover-lift"
-        data-button="book-appointment" (mousedown)="onButtonPress('book-appointment')">
+        data-button="book-appointment" (mousedown)="onButtonPress('book-appointment')" style="cursor: pointer;">
         <div class="d-flex align-items-center">
           <img class="ms-1 me-2 ms-4 hover-rotate" src="assets/icons/book_appointment_black_bg.svg" alt="">
           <h6 class="mb-0 strip_book">Book An Appointment<br /><small class="small_para">888 0101 000</small></h6>
         </div>
       </div>
       <div class="col-md-4 bg_primary p-3 d-flex align-items-center justify-content-start gap-3 hover-lift"
-        (click)="goToHealthPackages()" data-button="health-packages" (mousedown)="onButtonPress('health-packages')">
+        (click)="goToHealthPackages()" data-button="health-packages" (mousedown)="onButtonPress('health-packages')" style="cursor: pointer;">
         <div class="d-flex align-items-center">
           <img class="ms-1 me-2 ms-4 hover-rotate" src="assets/icons/book_appointment_white_bg.svg" alt="">
-          <h6 class="mb-0 strip_book p-0">Health Check Packages<br /><small class="small_para p-0">Simply Dummy Text Of
-              The Printing</small></h6>
+          <h6 class="mb-0 strip_book p-0">Health Check Packages<br /><small class="small_para p-0">Preventive health checks for every age group</small></h6>
         </div>
       </div>
       <div class="col-md-4 bg_success p-3 d-flex align-items-center justify-content-start gap-3 hover-lift"
         data-bs-toggle="modal" data-bs-target="#branchesModal" data-button="locations"
-        (mousedown)="onButtonPress('locations')">
+        (mousedown)="onButtonPress('locations')" style="cursor: pointer;">
         <div class="d-flex align-items-center">
           <img class="ms-1 me-2 ms-4 hover-rotate" src="assets/icons/book_appointment_black_bg.svg" alt="">
-          <h6 class="mb-0 strip_loc">Our Locations<br /><small class="small_loc">Simply Dummy Text Of
-              The Printing</small></h6>
+          <h6 class="mb-0 strip_loc">Our Locations<br /><small class="small_loc">Find the OMNI Hospitals branch nearest to you</small></h6>
         </div>
       </div>
     </div>

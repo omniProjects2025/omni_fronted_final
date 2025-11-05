@@ -152,16 +152,16 @@
     }
     
     .counter {
-        font-size: 35px !important;
+        font-size: 30px !important;
     }
     
     .counter-label {
-        font-size: 16px;
+        font-size: 14px;
     }
     
     .info-box {
         margin-bottom: 20px;
-        padding: 20px;
+        padding: 15px 10px;
         background: rgba(255, 255, 255, 0.9);
         border-radius: 15px;
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
@@ -169,13 +169,17 @@
     }
     
     .info-box .icon-circle {
-        min-width: 100px;
-        min-height: 100px;
+        min-width: 80px;
+        min-height: 80px;
     }
     
     .info-box .icon-circle img {
-        width: 100px !important;
-        height: 100px !important;
+        width: 80px !important;
+        height: 80px !important;
+    }
+    
+    .info-box .text-left {
+        margin-left: 0 !important;
     }
     
     .form-container {
@@ -223,21 +227,25 @@
     }
     
     .counter {
-        font-size: 28px !important;
+        font-size: 24px !important;
     }
     
     .counter-label {
-        font-size: 14px;
+        font-size: 12px;
+    }
+    
+    .info-box {
+        padding: 12px 8px;
     }
     
     .info-box .icon-circle {
-        min-width: 80px;
-        min-height: 80px;
+        min-width: 60px;
+        min-height: 60px;
     }
     
     .info-box .icon-circle img {
-        width: 80px !important;
-        height: 80px !important;
+        width: 60px !important;
+        height: 60px !important;
     }
     
     .form-container {
@@ -293,8 +301,8 @@
     }
     
     .info-box {
-        padding: 15px;
-        margin-bottom: 15px;
+        padding: 10px 5px;
+        margin-bottom: 12px;
         background: rgba(255, 255, 255, 0.95);
         border-radius: 12px;
         box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
@@ -302,21 +310,21 @@
     }
     
     .info-box .icon-circle {
-        min-width: 70px;
-        min-height: 70px;
+        min-width: 55px;
+        min-height: 55px;
     }
     
     .info-box .icon-circle img {
-        width: 70px !important;
-        height: 70px !important;
+        width: 55px !important;
+        height: 55px !important;
     }
     
     .counter {
-        font-size: 24px !important;
+        font-size: 20px !important;
     }
     
     .counter-label {
-        font-size: 12px;
+        font-size: 11px;
     }
 }
 

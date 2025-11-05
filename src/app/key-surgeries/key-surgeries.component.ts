@@ -496,7 +496,7 @@ export class KeySurgeriesComponent implements OnInit {
       { Attribute: "EmailAddress", Value: formData.emailId },
       { Attribute: "mx_City", Value: formData.location },
       { Attribute: "mx_Department", Value: formData.department },
-      { Attribute: "Description", Value: formData.message },
+      { Attribute: "mx_Comments", Value: formData.message },
       { Attribute: "Source", Value: "Website - Key Surgeries" }
     ];
 

@@ -10,9 +10,15 @@
               <img [src]="selectedDepartment['img']" class="border_rad img-fluid w-100" alt="Medical Image">
 
             </div>
+
+            <!-- Mobile-only quick link to Book section (visible only on small screens) -->
+            <div class="d-block d-lg-none text-center mt-1">
+              <!-- Mobile quick link as a button element (blinking faster: 2s visible / 2s hidden). -->
+              <button type="button" class="mobile-blink-text" (click)="scrollToBook()" aria-label="Scroll down to appointment section">Scroll Down to Appointment Form</button>
+            </div>
           </div>
-          <!-- Right Enquiry Form -->
-          <div class="col-lg-5 col-md-12 d-flex flex-column align-items-center">
+          <!-- Right Enquiry Form (desktop only - hidden on mobile, mobile copy appears below content) -->
+          <div class="col-lg-5 col-md-12 d-flex flex-column align-items-center d-none d-lg-flex">
             <div class="text-center w-100 mt-5">
               <h5
                 class="text-black fw-bold text-center position-relative d-flex align-items-center justify-content-center">
@@ -20,24 +26,30 @@
               </h5>
             </div>
 
-            <!-- Form -->
-            <form class="card p-4 form-card w-100" #enquiryForm="ngForm">
+            <!-- Form (desktop only) -->
+            <form id="book-appointment-desktop" class="card p-4 form-card w-100" #enquiryForm="ngForm">
               <div class="mb-3 position-relative">
                 <input type="text" class="form-control floating-input" name="fullName" placeholder=" "
                   [(ngModel)]="enquiry.fullName" required>
-                <label class="floating-label">Full Name</label>
+                <label class="floating-label">Full Name <span class="required-star" aria-hidden="true">*</span></label>
               </div>
 
               <div class="mb-3 position-relative">
                 <input type="tel" class="form-control floating-input" name="phoneNumber" placeholder=" "
                   [(ngModel)]="enquiry.phoneNumber" required>
-                <label class="floating-label">Phone Number</label>
+                <label class="floating-label">Phone Number <span class="required-star" aria-hidden="true">*</span></label>
               </div>
 
               <div class="mb-3 position-relative">
                 <input type="email" class="form-control floating-input" name="emailId" placeholder=" "
                   [(ngModel)]="enquiry.emailId">
                 <label class="floating-label">Email ID</label>
+              </div>
+
+              <div class="mb-3 position-relative">
+                <textarea class="form-control floating-input" name="message" rows="3" placeholder=" "
+                  [(ngModel)]="enquiry.message"></textarea>
+                <label class="floating-label">Message</label>
               </div>
 
               <!-- Non-editable Department -->
@@ -92,6 +104,52 @@
             </div>
           </section>
         </ng-container>
+        <!-- Mobile-only Book Appointment (duplicate of the form, shown only on small screens and placed after content) -->
+        <div class="row d-block d-lg-none mt-4">
+          <div class="col-12">
+            <div class="text-center w-100 mt-2">
+              <h5 class="text-black fw-bold text-center position-relative d-flex align-items-center justify-content-center">
+                <span class="border-line me-2"></span> BOOK AN APPOINTMENT <span class="border-line ms-2"></span>
+              </h5>
+            </div>
+
+            <form id="book-appointment-mobile" class="card p-4 form-card w-100">
+              <div class="mb-3 position-relative">
+                <input type="text" class="form-control floating-input" name="fullNameMobile" placeholder=" "
+                  [(ngModel)]="enquiry.fullName" required>
+                <label class="floating-label">Full Name <span class="required-star" aria-hidden="true">*</span></label>
+              </div>
+
+              <div class="mb-3 position-relative">
+                <input type="tel" class="form-control floating-input" name="phoneNumberMobile" placeholder=" "
+                  [(ngModel)]="enquiry.phoneNumber" required>
+                <label class="floating-label">Phone Number <span class="required-star" aria-hidden="true">*</span></label>
+              </div>
+
+              <div class="mb-3 position-relative">
+                <input type="email" class="form-control floating-input" name="emailIdMobile" placeholder=" "
+                  [(ngModel)]="enquiry.emailId">
+                <label class="floating-label">Email ID</label>
+              </div>
+
+              <div class="mb-3 position-relative">
+                <textarea class="form-control floating-input" name="messageMobile" rows="3" placeholder=" "
+                  [(ngModel)]="enquiry.message"></textarea>
+                <label class="floating-label">Message</label>
+              </div>
+
+              <!-- Non-editable Department -->
+              <div class="mb-3 position-relative">
+                <input type="text" class="form-control floating-input" [value]="getDepartmentName()" readonly>
+              </div>
+
+              <!-- Submit Button -->
+              <div class="text-center w-100 my-4" (click)="submitEnquiry()">
+                <button type="submit" class="btn btn-outline-dark px-5 py-1 submit-btn">Submit</button>
+              </div>
+            </form>
+          </div>
+        </div>
         
                 <!-- FAQs: Render only when faqs array exists and has items -->
                 <section class="faqs-section py-5" *ngIf="selectedDepartment?.faqs && selectedDepartment?.faqs.length > 0">
@@ -134,3 +192,9 @@
 </ng-container>
 
 <app-footer></app-footer>
+
+<!-- Mobile-only blinking quick-book button (middle-left) -->
+<button class="mobile-blink-btn d-block d-lg-none" *ngIf="false" (click)="scrollToBook()" aria-label="Book an appointment">
+  <span class="icon">📅</span>
+  <span class="btn-text">Go to Booking Section</span>
+</button>

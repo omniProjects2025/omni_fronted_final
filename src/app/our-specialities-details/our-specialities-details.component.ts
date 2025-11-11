@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { NotificationService } from '../services/notification.service';
 import { HttpClient } from '@angular/common/http';
@@ -13,7 +13,7 @@ import { CanonicalService } from '../services/canonical.service';
   templateUrl: './our-specialities-details.component.html',
   styleUrls: ['./our-specialities-details.component.css']
 })
-export class OurSpecialitiesDetailsComponent implements OnInit {
+export class OurSpecialitiesDetailsComponent implements OnInit, AfterViewInit, OnDestroy {
   // selectedSubDepartment: any = {};
   selectedDepartment: any = {};
   subDepartmentData: any = {};
@@ -21,7 +21,7 @@ export class OurSpecialitiesDetailsComponent implements OnInit {
   departmentName = '';
   selectedLocation: string = 'kukatpally'; // Default location
 
-  enquiry = { fullName: '', phoneNumber: '', emailId: '' };
+  enquiry = { fullName: '', phoneNumber: '', emailId: '', message: '' };
 
   locations = [
     { id: 'kukkatpally', name: 'Kukkatpally' },
@@ -111,6 +111,94 @@ export class OurSpecialitiesDetailsComponent implements OnInit {
       // Call getAllSpecialities only after both departmentName and selectedLocation are set
       this.getAllSpecialities();
     });
+  }
+
+  private _blinkInterval: any;
+  private _scrollListener: any;
+
+  ngAfterViewInit(): void {
+    // Blink behavior: visible for 4000ms, hidden for 800ms (user requested 4 seconds visible)
+    const btn = document.querySelector('.mobile-blink-btn') as HTMLElement | null;
+    if (!btn) { return; }
+
+    const visibleDuration = 4000; // ms (user requested 4 seconds visible)
+    const hiddenDuration = 800;   // ms (short hidden interval)
+
+    // Start visible
+    let visible = true;
+    btn.classList.remove('hidden');
+    btn.style.pointerEvents = 'auto';
+
+    const scheduleToggle = () => {
+      // Clear any existing timer
+      if (this._blinkInterval) {
+        clearTimeout(this._blinkInterval);
+        this._blinkInterval = null;
+      }
+
+      const delay = visible ? visibleDuration : hiddenDuration;
+      this._blinkInterval = setTimeout(() => {
+        visible = !visible;
+        if (visible) {
+          btn.classList.remove('hidden');
+          btn.style.pointerEvents = 'auto';
+        } else {
+          btn.classList.add('hidden');
+          btn.style.pointerEvents = 'none';
+        }
+        // schedule next toggle
+        scheduleToggle();
+      }, delay);
+    };
+
+    // Kick off
+    scheduleToggle();
+
+    // Add scroll listener to hide button when user scrolls to book form area
+    this._scrollListener = () => {
+      const bookFormMobile = document.getElementById('book-appointment-mobile');
+      if (!bookFormMobile) { return; }
+
+      const formRect = bookFormMobile.getBoundingClientRect();
+      const isNearForm = formRect.top < window.innerHeight && formRect.bottom > 0;
+
+      if (isNearForm) {
+        // User is at/near the form, hide button
+        btn.classList.add('hidden');
+        btn.style.pointerEvents = 'none';
+        if (this._blinkInterval) {
+          clearTimeout(this._blinkInterval);
+          this._blinkInterval = null;
+        }
+      }
+    };
+
+    window.addEventListener('scroll', this._scrollListener);
+  }
+
+  ngOnDestroy(): void {
+    if (this._blinkInterval) {
+      clearInterval(this._blinkInterval);
+    }
+    if (this._scrollListener) {
+      window.removeEventListener('scroll', this._scrollListener);
+    }
+  }
+
+  // Scroll to the mobile book appointment section smoothly
+  scrollToBook() {
+    try {
+      // Prefer mobile target; fall back to desktop target
+      const el = document.getElementById('book-appointment-mobile') || document.getElementById('book-appointment-desktop');
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      } else {
+        // fallback to top of page if element not found
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    } catch (err) {
+      console.error('scrollToBook error', err);
+    }
   }
 
 
@@ -296,6 +384,7 @@ export class OurSpecialitiesDetailsComponent implements OnInit {
       { Attribute: 'Phone', Value: this.enquiry.phoneNumber },
       { Attribute: 'EmailAddress', Value: this.enquiry.emailId },
       { Attribute: 'mx_Department', Value: this.getDepartmentName() },
+      { Attribute: 'mx_Comments', Value: this.enquiry.message || '' },
       { Attribute: 'Source', Value: 'Website - Enquiry Form From Speciality' }
     ];
 
@@ -312,7 +401,7 @@ export class OurSpecialitiesDetailsComponent implements OnInit {
             phone: this.enquiry.phoneNumber.trim(),
             time: Date.now()
           }));
-          this.enquiry = { fullName: '', phoneNumber: '', emailId: '' };
+          this.enquiry = { fullName: '', phoneNumber: '', emailId: '', message: '' };
           this.router.navigate(['/thank-you']);
         },
         error: (err) => {

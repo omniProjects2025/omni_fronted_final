@@ -247,6 +247,76 @@ details.dept-group+details.dept-group{margin-top:6px}
   .dept-link, details.dept-group{padding:10px}
 }
 
+/* Mobile-only quick scroll link/button near image */
+.mobile-scroll-link {
+  color: #008FD5;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* Small red asterisk for required fields */
+.required-star {
+  color: #d9534f; /* bootstrap danger red */
+  margin-left: 4px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+/* Plain blinking text for mobile quick link: visible 4s, hidden 4s (8s cycle) */
+.mobile-blink-text {
+  color: #008FD5; /* match link color */
+  font-weight: 600;
+  background: transparent;
+  border: none;
+  padding: 0.25rem 0.5rem;
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 0.95rem;
+  transition: opacity 0.35s ease, transform 0.35s ease;
+  /* Faster blink: 4s total (2s visible / 2s hidden) */
+  animation: mobileTextBlink 4s infinite;
+}
+
+@keyframes mobileTextBlink {
+  /* 0% - 50% : visible (first 2s)
+     50% - 100%: hidden (next 2s) */
+  0%, 49.999% { opacity: 1; transform: scale(1); }
+  50%, 100% { opacity: 0; transform: scale(0.98); }
+}
+
+/* Blinking fixed button on middle-left (mobile only) */
+.mobile-blink-btn {
+  position: fixed;
+  left: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1100;
+  background-color: #8CC63F;
+  color: #fff;
+  border: none;
+  padding: 8px 10px;
+  border-radius: 24px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  animation: mobileBlink 1.2s infinite;
+}
+
+@keyframes mobileBlink {
+  0% { box-shadow: 0 0 0 0 rgba(140,198,63,0.8); }
+  50% { box-shadow: 0 0 8px 6px rgba(140,198,63,0.25); }
+  100% { box-shadow: 0 0 0 0 rgba(140,198,63,0); }
+}
+
+/* Hide the floating button on larger screens */
+@media (min-width: 992px) {
+  .mobile-blink-btn { display: none !important; }
+}
+
 /* Sub-department styling */
 .sub-dept-link {
   color: #008FD5;

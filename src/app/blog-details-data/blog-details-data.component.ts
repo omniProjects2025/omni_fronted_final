@@ -74,6 +74,12 @@ allCategoriesBlogs:any[] = [];
           });
           console.log('🔄 Found category by generated slug:', this.selectedCategory);
         }
+        
+        // Set meta tags if blog is found
+        if (this.selectedCategory) {
+          this.titleService.setTitle(this.selectedCategory.meta_title || this.selectedCategory.title);
+          this.metaService.updateTag({ name: 'description', content: this.selectedCategory.meta_description || this.selectedCategory.blog_description });
+        }
       }
     });
   }

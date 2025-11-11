@@ -7837,7 +7837,7 @@
           "slug": "understanding-osteoarthritis-symptoms-treatment-options",
           "img": "assets/blogs/Osteoarthritis.jpeg",
           "meta_title": "Osteoarthritis: Symptoms, Causes & Top Treatment Options | Blog",
-          "meta_description": "Understand Osteoarthritis: symptoms, causes, and all treatment options—from non-surgical therapies and medication to advanced joint replacement surgery at OMNI Hospitals.",
+          "meta_description": "Understand Osteoarthritis: symptoms, causes, and all treatment options—from non-surgical therapies and medication to advanced joint replacement surgery.",
           "medically_reviewed_by": "",
           "category": "Orthopedics & Bone Health",
           "sections": [
@@ -7848,7 +7848,7 @@
               ]
             },
             {
-              "subheading": "What Is Osteoarthritis?",
+              "heading": "What Is Osteoarthritis?",
               "paragraphs": [
                 "It is a degenerative joint disease where the smooth cartilage that cushions your bones wears down over time. Without that protective layer, the bones start rubbing directly — causing pain, swelling, and stiffness.",
                 "Osteoarthritis is one of the most common forms of arthritis, especially affecting:"
@@ -7866,7 +7866,7 @@
               ]
             },
             {
-              "subheading": "Why Does Osteoarthritis Happen?",
+              "heading": "Why Does Osteoarthritis Happen?",
               "paragraphs": [
                 "Osteoarthritis doesn’t develop overnight, it develops gradually. Some of the common causes include:"
               ],

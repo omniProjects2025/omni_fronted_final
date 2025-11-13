@@ -1,13 +1,15 @@
 import { HttpClient } from '@angular/common/http';
-import { Component } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import 'owl.carousel';
+declare var $: any;
 
 @Component({
   selector: 'app-our-branches',
   templateUrl: './our-branches.component.html',
   styleUrls: ['./our-branches.component.css']
 })
-export class OurBranchesComponent {
+export class OurBranchesComponent implements OnInit, AfterViewInit, OnDestroy {
   selectedDepartment: string | null = null;
   selectedLocation: string | null = null;
 
@@ -21,6 +23,10 @@ export class OurBranchesComponent {
   ];
   doctors: any[] = [];
 
+  @ViewChild('vizagBannerCarousel', { static: false }) vizagBannerCarousel?: ElementRef;
+
+  private bannerOwlInstance: any;
+
   constructor(private router: Router, private activated_routes: ActivatedRoute, private http: HttpClient) {}
 
   ngOnInit(): void {
@@ -32,7 +38,7 @@ export class OurBranchesComponent {
           .replace(/-/g, ' ')           // Replace hyphens with spaces
           .replace(/and/g, '&')         // Replace 'and' with &
           .replace(/\b\w/g, (l: string) => l.toUpperCase()); // Capitalize first letter of each word
-        
+
         // Handle specific case for UDAI OMNI - Nampally
         if (this.selectedLocation === 'Udai Omni Nampally') {
           this.selectedLocation = 'UDAI OMNI - Nampally';
@@ -41,12 +47,21 @@ export class OurBranchesComponent {
         if (this.selectedLocation) {
           this.getting_location = this.selectedLocation; // Set getting_location for display
           this.loadDoctors(this.selectedLocation);
+          this.refreshVizagCarousel();
         }
       } else {
         // If no path parameter, check for query parameters (backward compatibility)
         this.activatedRoutesData();
       }
     });
+  }
+
+  ngAfterViewInit(): void {
+    this.initializeVizagCarousel();
+  }
+
+  ngOnDestroy(): void {
+    this.destroyVizagCarousel();
   }
 
   BRANCH_LOCATIONS: any = [
@@ -128,7 +143,7 @@ export class OurBranchesComponent {
       console.log(params, 'params..');
       this.getting_location = params['selected_location'] || '';
       this.loadDoctors(this.getting_location);
-
+      this.refreshVizagCarousel();
     });
   }
   loadDoctors(location: string): void {
@@ -146,6 +161,50 @@ export class OurBranchesComponent {
         console.error('Error loading doctors:', err);
       }
     });
+
+    this.refreshVizagCarousel();
+  }
+
+  private initializeVizagCarousel(): void {
+    if (!this.isVizagCarouselLocation() || !this.vizagBannerCarousel) {
+      return;
+    }
+
+    const element = $(this.vizagBannerCarousel.nativeElement);
+    this.bannerOwlInstance = element.owlCarousel({
+      loop: true,
+      margin: 0,
+      nav: false,
+      dots: false,
+      autoplay: true,
+      autoplayTimeout: 4000,
+      autoplayHoverPause: true,
+      items: 1,
+      responsive: {
+        0: { items: 1 },
+        768: { items: 1 },
+        992: { items: 1 }
+      }
+    });
+  }
+
+  private refreshVizagCarousel(): void {
+    setTimeout(() => {
+      this.destroyVizagCarousel();
+      this.initializeVizagCarousel();
+    }, 0);
+  }
+
+  private destroyVizagCarousel(): void {
+    if (this.bannerOwlInstance && this.vizagBannerCarousel) {
+      $(this.vizagBannerCarousel.nativeElement).trigger('destroy.owl.carousel');
+      this.bannerOwlInstance = null;
+    }
+  }
+
+  private isVizagCarouselLocation(): boolean {
+    const location = (this.getting_location || '').trim();
+    return location === 'Vizag' || location === 'Giggles Vizag';
   }
 
   setSelected(dept: string) {

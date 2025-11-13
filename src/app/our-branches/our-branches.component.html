@@ -1,4 +1,24 @@
 <app-header></app-header>
+<div *ngIf="getting_location=='Vizag' || getting_location=='Giggles Vizag'">
+  <div #vizagBannerCarousel class="owl-carousel banner-slider owl-theme position-relative m-0">
+    <div class="banner-item position-relative">
+      <a href="specialities/kukatpally" target="_blank" rel="noopener noreferrer">
+        <img src="assets/images/pediatrics_english.jpeg" loading="eager" fetchpriority="high"
+          class="w-100 d-none d-md-block" alt="Banner 1">
+        <img src="assets/images/pediatric_mobile_english.jpeg" loading="eager" fetchpriority="high"
+          class="d-block d-md-none w-100" alt="Banner 1">
+      </a>
+    </div>
+    <div class="banner-item position-relative">
+      <a href="specialities/kukatpally" target="_blank" rel="noopener noreferrer">
+        <img src="assets/images/pediatrics_telugu.jpeg" loading="eager" fetchpriority="high"
+          class="w-100 d-none d-md-block" alt="Banner 2">
+        <img src="assets/images/pediatric_mobile_telugu.jpeg" loading="eager" fetchpriority="high"
+          class="d-block d-md-none w-100" alt="Banner 2">
+      </a>
+    </div>
+  </div>
+</div>
 <section class="bg_color">
   <div class="container-fluid mt-4">
     <!-- Hospital Info -->
@@ -56,7 +76,8 @@
                 Kukatpally continues to set new benchmarks in quality healthcare for the region.
               </p>
               <!-- Direction button and reviews for non-Vizag locations -->
-              <div class="d-flex flex-row align-items-center mt-3 flex-wrap" *ngIf="(getting_location != 'Vizag' || '')">
+              <div class="d-flex flex-row align-items-center mt-3 flex-wrap"
+                *ngIf="(getting_location != 'Vizag' || '')">
                 <div (click)="openDirections(getting_location)">
                   <button class="direction_btn">
                     <img class="" src="assets/locations/location_icon.svg" alt="">Get Direction
@@ -67,12 +88,11 @@
                     <div class="d-flex align-items-center">
                       <span class="rating-text me-2">{{ getCurrentLocationData()?.rating || 0 }}</span>
                       <div class="stars me-2">
-                        <span *ngFor="let star of [1,2,3,4,5]" 
-                              [class]="star <= (getCurrentLocationData()?.rating || 0) ? 'star-filled' : 'star-empty'">★</span>
+                        <span *ngFor="let star of [1,2,3,4,5]"
+                          [class]="star <= (getCurrentLocationData()?.rating || 0) ? 'star-filled' : 'star-empty'">★</span>
                       </div>
-                      <span class="review-count clickable-reviews" 
-                            (click)="openReviews()"
-                            title="View reviews on Google Maps">
+                      <span class="review-count clickable-reviews" (click)="openReviews()"
+                        title="View reviews on Google Maps">
                         {{ getCurrentLocationData()?.reviewCount | number }} reviews
                       </span>
                     </div>
@@ -94,19 +114,18 @@
                       <div class="d-flex align-items-center">
                         <span class="rating-text me-2">{{ getCurrentLocationData()?.rating || 0 }}</span>
                         <div class="stars me-2">
-                          <span *ngFor="let star of [1,2,3,4,5]" 
-                                [class]="star <= (getCurrentLocationData()?.rating || 0) ? 'star-filled' : 'star-empty'">★</span>
+                          <span *ngFor="let star of [1,2,3,4,5]"
+                            [class]="star <= (getCurrentLocationData()?.rating || 0) ? 'star-filled' : 'star-empty'">★</span>
                         </div>
-                        <span class="review-count clickable-reviews" 
-                              (click)="openReviews()"
-                              title="View reviews on Google Maps">
+                        <span class="review-count clickable-reviews" (click)="openReviews()"
+                          title="View reviews on Google Maps">
                           {{ getCurrentLocationData()?.reviewCount | number }} reviews
                         </span>
                       </div>
                     </div>
                   </div>
                 </div>
-                
+
                 <!-- Sub Branches -->
                 <div class="sub_branches">
                   <div class="row justify-content-start text-start align-items-end">

@@ -204,7 +204,9 @@ export class OurBranchesComponent implements OnInit, AfterViewInit, OnDestroy {
 
   private isVizagCarouselLocation(): boolean {
     const location = (this.getting_location || '').trim();
-    return location === 'Vizag' || location === 'Giggles Vizag';
+    // Allow carousel for all locations: Vizag, Giggles Vizag, Kukatpally, Kothapet, UDAI OMNI - Nampally, Kurnool
+    return location === 'Vizag' || location === 'Giggles Vizag' || location === 'Kukatpally' || 
+           location === 'Kothapet' || location === 'UDAI OMNI - Nampally' || location === 'Kurnool';
   }
 
   setSelected(dept: string) {

@@ -33,7 +33,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
       ]
     },
     {
-      key: 'doctor', label: 'Find a Doctor', route: '/our-doctors'
+      key: 'doctor', label: 'Find a Doctor', route: '/doctors'
     },
     {
       key: 'specialities', label: 'Specialities', route: '/specialities',
@@ -82,6 +82,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
     { key: 'blogs', label: 'Blogs', route: "/blogs" },
     { key: 'careers', label: 'Careers', route: "/careers" },
     { key: 'contact', label: 'Contact us', route: "/contact-us" },
+    // { key: 'whatsapp', label: 'WhatsApp', route: '/whatsapp' },
     { key: 'bookAppointment', label: 'Book an Appointment', route: '/book-an-appointment' }
   ];
 

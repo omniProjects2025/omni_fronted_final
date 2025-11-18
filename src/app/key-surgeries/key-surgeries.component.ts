@@ -531,6 +531,6 @@ export class KeySurgeriesComponent implements OnInit {
   }
 
   goToDoctors() {
-    this.router.navigate(['/our-doctors']);
+    this.router.navigate(['/doctors']);
   }
 }

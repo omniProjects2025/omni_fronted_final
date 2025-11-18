@@ -38,11 +38,11 @@ export const SEO_CONFIG: { [key: string]: SEOData } = {
     keywords: 'Vizag specialties, medical care Vizag, OMNI hospitals Vizag, Visakhapatnam hospital specialties',
     canonicalPath: '/specialities/vizag'
   },
-  'our-doctors': {
-    title: 'Our Doctors - OMNI Hospitals | Expert Medical Professionals',
-    description: 'Meet our team of expert doctors and medical professionals at OMNI Hospitals. Highly qualified specialists providing world-class healthcare services.',
+  'doctors': {
+    title: 'Find Best Doctors in Hyderabad | Expert Specialists | OMNI Hospitals',
+    description: 'Meet OMNI Hospitals\'s best doctors and specialists in Hyderabad. Find experienced doctors across departments for quality healthcare.',
     keywords: 'OMNI doctors, medical professionals, expert physicians, specialist doctors Hyderabad, healthcare team',
-    canonicalPath: '/our-doctors'
+    canonicalPath: '/doctors'
   },
   'doctor-details': {
     title: 'Doctor Profile - OMNI Hospitals | Expert Medical Specialist',

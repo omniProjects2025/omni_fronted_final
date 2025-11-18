@@ -499,7 +499,7 @@ export class HomeComponent implements OnInit, OnDestroy {
 
 
   ourDoctorsDetails() {
-    this.router.navigate(['/our-doctors']).then(success => {
+    this.router.navigate(['/doctors']).then(success => {
       if (success) {
         console.log('Navigation to OurDoctorsComponent successful');
       } else {

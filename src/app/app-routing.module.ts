@@ -34,7 +34,7 @@ import { ExtraOptions, PreloadAllModules, RouterModule, Routes } from '@angular/
 
 const routes: Routes = [
   {
-    path: 'our-doctors',
+    path: 'doctors',
     loadChildren: () => import('./our-doctors/our-doctors/our-doctors.module').then(m => m.OurDoctorsModule)
   },
   {

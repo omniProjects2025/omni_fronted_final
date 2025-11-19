@@ -49,7 +49,7 @@ export class AboutUsComponent implements OnInit {
       this.titleService.setTitle('About Us - OMNI Hospitals | Leading Healthcare Provider in Hyderabad');
       this.metaService.updateTag({ 
         name: 'description', 
-        content: 'Learn about OMNI Hospitals - our mission, vision, and commitment to providing world-class healthcare services across multiple locations in Andhra Pradesh and Telangana.' 
+        content: "Learn OMNI Hospitals' mission and vision for delivering world-class healthcare services. We operate across multiple locations in AP and Telangana."
       });
       this.metaService.updateTag({ 
         name: 'keywords', 

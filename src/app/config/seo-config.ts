@@ -9,7 +9,7 @@ export const SEO_CONFIG: { [key: string]: SEOData } = {
   },
   'about-us': {
     title: 'About Us - OMNI Hospitals | Leading Healthcare Provider in Hyderabad',
-    description: 'Learn about OMNI Hospitals - our mission, vision, and commitment to providing world-class healthcare services across multiple locations in Andhra Pradesh and Telangana.',
+    description: " Learn OMNI Hospitals' mission and vision for delivering world-class healthcare services. We operate across multiple locations in AP and Telangana.",
     keywords: 'about OMNI hospitals, healthcare provider Hyderabad, hospital mission vision, medical excellence, Andhra Pradesh Telangana healthcare',
     canonicalPath: '/about-us'
   },
@@ -39,8 +39,8 @@ export const SEO_CONFIG: { [key: string]: SEOData } = {
     canonicalPath: '/specialities/vizag'
   },
   'doctors': {
-    title: 'Find Best Doctors in Hyderabad | Expert Specialists | OMNI Hospitals',
-    description: 'Meet OMNI Hospitals\'s best doctors and specialists in Hyderabad. Find experienced doctors across departments for quality healthcare.',
+    title: 'Best Doctors in Hyderabad & Vizag | Omni Hospitals',
+    description: 'Find the best doctor at OMNI Hospitals. Search experienced specialists in Cardiology, Orthopedics, Neurology, and more across all our hospital locations.',
     keywords: 'OMNI doctors, medical professionals, expert physicians, specialist doctors Hyderabad, healthcare team',
     canonicalPath: '/doctors'
   },

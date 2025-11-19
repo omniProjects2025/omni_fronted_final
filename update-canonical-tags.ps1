@@ -19,7 +19,7 @@ $SEOConfig = @{
     }
     "about-us" = @{
         title = "About Us - OMNI Hospitals | Leading Healthcare Provider in Hyderabad"
-        description = "Learn about OMNI Hospitals - our mission, vision, and commitment to providing world-class healthcare services across multiple locations in Andhra Pradesh and Telangana."
+        description = "Learn OMNI Hospitals' mission, vision, and commitment to delivering world-class healthcare services. We operate in multiple locations across AP and Telangana."
         keywords = "about OMNI hospitals, healthcare provider Hyderabad, hospital mission vision, medical excellence, Andhra Pradesh Telangana healthcare"
         canonicalPath = "/about-us"
     }
@@ -35,11 +35,11 @@ $SEOConfig = @{
         keywords = "medical specialty details, expert doctors, specialist care, OMNI hospitals specialties"
         canonicalPath = "/our-specialities-details"
     }
-    "our-doctors" = @{
-        title = "Our Doctors - OMNI Hospitals | Expert Medical Professionals"
-        description = "Meet our team of expert doctors and medical professionals at OMNI Hospitals. Highly qualified specialists providing world-class healthcare services."
+    "doctors" = @{
+        title = "Find the best doctor at OMNI Hospitals"
+        description = "Find the best doctor at OMNI Hospitals. Search experienced specialists in Cardiology, Orthopedics, Neurology, and more across all our hospital locations."
         keywords = "OMNI doctors, medical professionals, expert physicians, specialist doctors Hyderabad, healthcare team"
-        canonicalPath = "/our-doctors"
+        canonicalPath = "/doctors"
     }
     "doctor-details" = @{
         title = "Doctor Profile - OMNI Hospitals | Expert Medical Specialist"

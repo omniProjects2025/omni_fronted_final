@@ -1,5 +1,8 @@
 import { Component, AfterViewInit, ViewChild, ElementRef, NgZone, ChangeDetectionStrategy, ChangeDetectorRef, OnDestroy, HostListener, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
+import { Title, Meta } from '@angular/platform-browser';
+import { CanonicalService } from '../services/canonical.service';
+import { SEO_CONFIG } from '../config/seo-config';
 import { DoctorDetailsService } from '../services/doctor-details.service';
 import { finalize, take, catchError, retry, shareReplay } from 'rxjs/operators';
 import { of, BehaviorSubject } from 'rxjs';
@@ -43,10 +46,25 @@ export class OurDoctorsComponent implements OnInit, AfterViewInit, OnDestroy {
     private doctorservice: DoctorDetailsService,
     private ngZone: NgZone,
     private cdr: ChangeDetectorRef
+    , private titleService: Title
+    , private metaService: Meta
+    , private canonicalService: CanonicalService
   ) { }
 
   ngOnInit() {
     console.log('OurDoctorsComponent ngOnInit() called');
+    // Ensure SEO/meta tags for doctors page are set
+    try {
+      const seo = SEO_CONFIG['doctors'];
+      if (seo) {
+        this.titleService.setTitle(seo.title);
+        this.metaService.updateTag({ name: 'description', content: seo.description });
+        this.metaService.updateTag({ name: 'keywords', content: seo.keywords });
+        this.canonicalService.setCanonicalUrl(seo.canonicalPath);
+      }
+    } catch (err) {
+      console.warn('Failed to set SEO tags for doctors page', err);
+    }
     
     // Check for filter parameters from query params to restore filter state
     // Only on initial load, not on every URL change

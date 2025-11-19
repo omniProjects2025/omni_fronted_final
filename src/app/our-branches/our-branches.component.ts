@@ -1,6 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { AfterViewInit, Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Title, Meta } from '@angular/platform-browser';
+import { CanonicalService } from '../services/canonical.service';
 import 'owl.carousel';
 declare var $: any;
 
@@ -27,7 +29,48 @@ export class OurBranchesComponent implements OnInit, AfterViewInit, OnDestroy {
 
   private bannerOwlInstance: any;
 
-  constructor(private router: Router, private activated_routes: ActivatedRoute, private http: HttpClient) {}
+  // Per-location SEO mapping
+  private BRANCH_SEO: { [key: string]: { title: string; description: string; canonical?: string } } = {
+    'kothapet': {
+      title: 'Best Multi-Specialty Hospital in Kothapet | OMNI Hospitals',
+      description: 'Looking for the Best Multi-Specialty Hospital in Kothapet? OMNI Hospitals offers compassionate care, clinical excellence, and expert medical specialists.',
+      canonical: '/our-branches/kothapet'
+    },
+    'kukatpally': {
+      title: 'Best Multi-Specialty Hospital in Kukatpally | OMNI Hospitals',
+      description: 'Find the best Multi-Specialty Hospital in Kukatpally, Hyderabad. OMNI Hospitals offers advanced care in Cardiology, Orthopedics, Gynaecology, & more.',
+      canonical: '/our-branches/kukatpally'
+    },
+    'udai omni - nampally': {
+      title: 'Best Orthopedic & Spine Hospital in Hyderabad | UDAI OMNI',
+      description: 'Get specialized care for Orthopedics, Spine Surgery, and Trauma at UDAI OMNI Nampally. This is a top multi-specialty hospital in Hyderabad.',
+      canonical: '/our-branches/udai-omni-nampally'
+    },
+    'vizag': {
+      title: 'Top Multi-Specialty Hospital in Vizag | OMNI Vizag',
+      description: 'OMNI Vizag is a top multi-specialty hospital in Vizag, delivering advanced tertiary care with expert consultants across all major specialties.',
+      canonical: '/our-branches/vizag'
+    },
+    'giggles vizag': {
+      title: 'Best Mother & Child Hospital in Vizag | Giggles Vizag',
+      description: 'Get trusted Maternity, Neonatal, and Pediatric care at the best Mother & Child Hospital in Vizag. We ensure a safe journey for mother and baby.',
+      canonical: '/our-branches/giggles-vizag'
+    },
+    'kurnool': {
+      title: 'Top Multi-Specialty Hospital in Kurnool | Omni Kurnool',
+      description: 'Get specialized care across Cardiology, Orthopedics, Urology, and more at OMNI Hospitals, the trusted multi-specialty hospital in Kurnool.',
+      canonical: '/our-branches/kurnool'
+    }
+  };
+
+  constructor(
+    private router: Router,
+    private activated_routes: ActivatedRoute,
+    private http: HttpClient,
+    private titleService: Title,
+    private metaService: Meta,
+    private canonicalService: CanonicalService
+  ) {}
 
   ngOnInit(): void {
     this.activated_routes.params.subscribe(params => {
@@ -48,6 +91,8 @@ export class OurBranchesComponent implements OnInit, AfterViewInit, OnDestroy {
           this.getting_location = this.selectedLocation; // Set getting_location for display
           this.loadDoctors(this.selectedLocation);
           this.refreshVizagCarousel();
+          // Apply SEO for the branch when route param selection changes
+          this.applyBranchSEO(this.getting_location);
         }
       } else {
         // If no path parameter, check for query parameters (backward compatibility)
@@ -144,6 +189,7 @@ export class OurBranchesComponent implements OnInit, AfterViewInit, OnDestroy {
       this.getting_location = params['selected_location'] || '';
       this.loadDoctors(this.getting_location);
       this.refreshVizagCarousel();
+      this.applyBranchSEO(this.getting_location);
     });
   }
   loadDoctors(location: string): void {
@@ -207,6 +253,24 @@ export class OurBranchesComponent implements OnInit, AfterViewInit, OnDestroy {
     // Allow carousel for all locations: Vizag, Giggles Vizag, Kukatpally, Kothapet, UDAI OMNI - Nampally, Kurnool
     return location === 'Vizag' || location === 'Giggles Vizag' || location === 'Kukatpally' || 
            location === 'Kothapet' || location === 'UDAI OMNI - Nampally' || location === 'Kurnool';
+  }
+
+  private applyBranchSEO(location: string) {
+    if (!location) { return; }
+    const key = location.trim().toLowerCase();
+    const seo = this.BRANCH_SEO[key];
+    if (seo) {
+      try {
+        this.titleService.setTitle(seo.title);
+        this.metaService.updateTag({ name: 'description', content: seo.description });
+        this.metaService.updateTag({ name: 'keywords', content: `${location}, OMNI Hospitals, multi-specialty hospital` });
+        if (seo.canonical) {
+          this.canonicalService.setCanonicalUrl(seo.canonical);
+        }
+      } catch (err) {
+        console.warn('Failed to apply branch SEO for', location, err);
+      }
+    }
   }
 
   setSelected(dept: string) {

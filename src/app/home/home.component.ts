@@ -401,10 +401,10 @@ export class HomeComponent implements OnInit, OnDestroy {
   private lastWindowWidth: number = window.innerWidth;
 
   private setSEOTags(): void {
-    this.titleService.setTitle('OMNI Hospitals - Best Multispecialty Hospital in Hyderabad | Expert Medical Care');
+    this.titleService.setTitle('Best Multispeciality Hospital in Hyderabad, Vizag | OMNI Hospitals');
     this.metaService.updateTag({
       name: 'description',
-      content: 'OMNI Hospitals - Leading multispecialty hospital in Hyderabad offering expert medical care across cardiology, orthopedics, neurology, and more. Book your appointment today.'
+      content: 'OMNI Hospitals - Leading multispecialty hospital in Hyderabad, Vizag offering expert medical care across cardiology, orthopedics, neurology, and more.'
     });
     this.metaService.updateTag({
       name: 'keywords',

@@ -21,6 +21,9 @@ export class DoctorDetailsComponent implements OnDestroy {
   isLoading = true;
   hasError = false;
   errorMessage = '';
+  private hasUpdatedSlugUrl = false;
+  private isSlugRoute = false;
+  private slugPathFromRoute = '';
   
   // Store filter state from query parameters
   filterState = {
@@ -50,17 +53,45 @@ export class DoctorDetailsComponent implements OnDestroy {
   }
 
   ngOnInit(): void {
-    this.activated_routes.params.subscribe(params => {
-      const doctorParam = params['doctor'] || '';
-      // Convert URL-friendly format back to original doctor name
-      this.doctor_name = doctorParam
-        .replace(/^dr-/, 'Dr ')        // Handle Dr prefix properly
-        .replace(/-/g, ' ')           // Replace hyphens with spaces
-        .replace(/\band\b/g, '&')    // Replace 'and' with & (only whole words)
-        .replace(/\b\w/g, (l: string) => l.toUpperCase()); // Capitalize first letter of each word
-      console.log(this.doctor_name, 'doctor_name..');
+    this.activated_routes.data.subscribe(routeData => {
+      this.isSlugRoute = !!routeData['isDoctorSlugRoute'];
+    });
 
-      this.getDoctorDetails(); // Only call this after doctor_name is set
+    this.activated_routes.params.subscribe(params => {
+      const doctorParam = params['doctor'];
+      const specialityParam = params['speciality'];
+      const slugParam = params['slug'];
+      const hasSlugParams = !!(specialityParam && slugParam);
+      this.hasUpdatedSlugUrl = false;
+
+      if (doctorParam) {
+        this.isSlugRoute = false;
+        this.slugPathFromRoute = '';
+        // Convert URL-friendly format back to original doctor name
+        this.doctor_name = (doctorParam || '')
+          .replace(/^dr-/, 'Dr ')        // Handle Dr prefix properly
+          .replace(/-/g, ' ')           // Replace hyphens with spaces
+          .replace(/\band\b/g, '&')    // Replace 'and' with & (only whole words)
+          .replace(/\b\w/g, (l: string) => l.toUpperCase()); // Capitalize first letter of each word
+        console.log(this.doctor_name, 'doctor_name..');
+
+        this.getDoctorDetails(); // Only call this after doctor_name is set
+        return;
+      }
+
+      if ((this.isSlugRoute || hasSlugParams) && specialityParam && slugParam) {
+        this.isSlugRoute = true;
+        this.doctor_name = '';
+        const currentUrlPath = (this.router.url.split('?')[0] || '').replace(/^\/*/, '');
+        const slugPath = currentUrlPath ? currentUrlPath : `${specialityParam}/${slugParam}`;
+        this.slugPathFromRoute = this.normalizeSlug(slugPath);
+        console.log(this.slugPathFromRoute, 'slug_path..');
+        this.getDoctorDetails();
+        return;
+      }
+
+      this.doctor_name = '';
+      this.slugPathFromRoute = '';
     });
 
     // Get filter state from query parameters
@@ -207,9 +238,8 @@ getDoctorDetails(): void {
   this.hasError = false;
   this.errorMessage = '';
 
-  // Check if we have cached data for this doctor
-  const cacheKey = `doctor_${this.doctor_name.toLowerCase().replace(/\s+/g, '_')}`;
-  const cachedData = localStorage.getItem(cacheKey);
+  const cacheKey = this.getCacheKey();
+  const cachedData = cacheKey ? localStorage.getItem(cacheKey) : null;
   
   if (cachedData) {
     try {
@@ -225,16 +255,22 @@ getDoctorDetails(): void {
           
           // Set meta tags for cached data
           if (this.doctors.length > 0) {
+            if (this.isSlugRoute && !this.doctor_name) {
+              this.doctor_name = this.doctors[0].name || '';
+            }
             this.setMetaTags(this.doctors[0]);
+            this.updateBrowserUrl(this.doctors[0]);
           }
           return;
-        } else {
+        } else if (cacheKey) {
         // Remove expired cache
         localStorage.removeItem(cacheKey);
       }
     } catch (e) {
       console.warn('Failed to parse cached data:', e);
-      localStorage.removeItem(cacheKey);
+      if (cacheKey) {
+        localStorage.removeItem(cacheKey);
+      }
     }
   }
 
@@ -256,85 +292,106 @@ getDoctorDetails(): void {
           .map((item: any) => item.doctors || [])
           .flat();
         
-        if (!this.doctor_name) {
-          this.doctors = [];
-          this.isLoading = false;
-          return;
-        }
-        
-        // Try exact match first
-        this.doctors = allDoctors.filter((doctor: any) =>
-          doctor.name?.trim().toLowerCase() === this.doctor_name.toLowerCase()
-        );
-        
-        // If no exact match, try partial match
-        if (this.doctors.length === 0) {
+        if (this.isSlugRoute && this.slugPathFromRoute) {
+          const targetSlug = this.slugPathFromRoute;
           this.doctors = allDoctors.filter((doctor: any) =>
-            doctor.name?.trim().toLowerCase().includes(this.doctor_name.toLowerCase()) ||
-            this.doctor_name.toLowerCase().includes(doctor.name?.trim().toLowerCase())
+            this.normalizeSlug(doctor.slug_url) === targetSlug
           );
-        }
-        
-        // If still no match, try removing common prefixes/suffixes
-        if (this.doctors.length === 0) {
-          const cleanDoctorName = this.doctor_name.toLowerCase()
-            .replace(/^dr\.?\s*/i, '') // Remove "Dr." prefix
-            .replace(/\s+/g, ' ')      // Normalize spaces
-            .trim();
-          this.doctors = allDoctors.filter((doctor: any) => {
-            const cleanDbName = doctor.name?.trim().toLowerCase()
+          if (this.doctors.length > 0 && !this.doctor_name) {
+            this.doctor_name = this.doctors[0].name || '';
+          }
+        } else {
+          if (!this.doctor_name) {
+            this.doctors = [];
+            this.isLoading = false;
+            return;
+          }
+          
+          // Try exact match first
+          this.doctors = allDoctors.filter((doctor: any) =>
+            doctor.name?.trim().toLowerCase() === this.doctor_name.toLowerCase()
+          );
+          
+          // If no exact match, try partial match
+          if (this.doctors.length === 0) {
+            this.doctors = allDoctors.filter((doctor: any) =>
+              doctor.name?.trim().toLowerCase().includes(this.doctor_name.toLowerCase()) ||
+              this.doctor_name.toLowerCase().includes(doctor.name?.trim().toLowerCase())
+            );
+          }
+          
+          // If still no match, try removing common prefixes/suffixes
+          if (this.doctors.length === 0) {
+            const cleanDoctorName = this.doctor_name.toLowerCase()
               .replace(/^dr\.?\s*/i, '') // Remove "Dr." prefix
               .replace(/\s+/g, ' ')      // Normalize spaces
               .trim();
-            return cleanDbName === cleanDoctorName ||
-                   cleanDbName.includes(cleanDoctorName) ||
-                   cleanDoctorName.includes(cleanDbName);
-          });
-        }
-        if (this.doctors.length === 0) {
-          const searchWords = this.doctor_name.toLowerCase()
-            .replace(/^dr\.?\s*/i, '')
-            .replace(/[^\w\s]/g, ' ') // Remove special characters
-            .split(/\s+/)
-            .filter((word: string) => word.length > 1); // Filter out single characters
-          const doctorsWithScores = allDoctors.map((doctor: any) => {
-            const dbWords = doctor.name?.toLowerCase()
+            this.doctors = allDoctors.filter((doctor: any) => {
+              const cleanDbName = doctor.name?.trim().toLowerCase()
+                .replace(/^dr\.?\s*/i, '') // Remove "Dr." prefix
+                .replace(/\s+/g, ' ')      // Normalize spaces
+                .trim();
+              return cleanDbName === cleanDoctorName ||
+                     cleanDbName.includes(cleanDoctorName) ||
+                     cleanDoctorName.includes(cleanDbName);
+            });
+          }
+          if (this.doctors.length === 0) {
+            const searchWords = this.doctor_name.toLowerCase()
               .replace(/^dr\.?\s*/i, '')
-              .replace(/[^\w\s]/g, ' ')
+              .replace(/[^\w\s]/g, ' ') // Remove special characters
               .split(/\s+/)
-              .filter((word: string) => word.length > 1) || [];
-            const matchingWords = searchWords.filter(searchWord => 
-              dbWords.some((dbWord: string) => dbWord.includes(searchWord) || searchWord.includes(dbWord))
-            );
-            const matchScore = matchingWords.length;
-            const totalWords = Math.max(searchWords.length, dbWords.length);
-            const matchPercentage = matchScore / totalWords;
-            return { doctor, matchScore, matchPercentage };
-          });
-          this.doctors = doctorsWithScores
-            .filter((item: any) => item.matchScore >= Math.min(searchWords.length, 2))
-            .sort((a: any, b: any) => {
-              if (b.matchPercentage !== a.matchPercentage) {
-                return b.matchPercentage - a.matchPercentage;
-              }
-              return b.matchScore - a.matchScore;
-            })
-            .map((item: any) => item.doctor);
+              .filter((word: string) => word.length > 1); // Filter out single characters
+            const doctorsWithScores = allDoctors.map((doctor: any) => {
+              const dbWords = doctor.name?.toLowerCase()
+                .replace(/^dr\.?\s*/i, '')
+                .replace(/[^\w\s]/g, ' ')
+                .split(/\s+/)
+                .filter((word: string) => word.length > 1) || [];
+              const matchingWords = searchWords.filter(searchWord => 
+                dbWords.some((dbWord: string) => dbWord.includes(searchWord) || searchWord.includes(dbWord))
+              );
+              const matchScore = matchingWords.length;
+              const totalWords = Math.max(searchWords.length, dbWords.length);
+              const matchPercentage = matchScore / totalWords;
+              return { doctor, matchScore, matchPercentage };
+            });
+            this.doctors = doctorsWithScores
+              .filter((item: any) => item.matchScore >= Math.min(searchWords.length, 2))
+              .sort((a: any, b: any) => {
+                if (b.matchPercentage !== a.matchPercentage) {
+                  return b.matchPercentage - a.matchPercentage;
+                }
+                return b.matchScore - a.matchScore;
+              })
+              .map((item: any) => item.doctor);
+          }
         }
         if (this.doctors.length > 0) {
           const cacheData = {
             data: this.doctors,
             timestamp: Date.now()
           };
-          localStorage.setItem(cacheKey, JSON.stringify(cacheData));
+          if (cacheKey) {
+            localStorage.setItem(cacheKey, JSON.stringify(cacheData));
+          }
+          if (this.doctor_name) {
+            const nameCacheKey = `doctor_${this.doctor_name.toLowerCase().replace(/\s+/g, '_')}`;
+            if (!cacheKey || cacheKey !== nameCacheKey) {
+              localStorage.setItem(nameCacheKey, JSON.stringify(cacheData));
+            }
+          }
           
           // Set meta tags for the first (best matching) doctor
           this.setMetaTags(this.doctors[0]);
+          this.updateBrowserUrl(this.doctors[0]);
         }
         this.isLoading = false;
         if (this.doctors.length === 0) {
           this.hasError = true;
-          this.errorMessage = `No doctor found with name: ${this.doctor_name}`;
+          this.errorMessage = this.isSlugRoute && this.slugPathFromRoute
+            ? 'No doctor profile is mapped to this URL.'
+            : `No doctor found with name: ${this.doctor_name}`;
           
           // Set default meta tags for error case
           this.resetMetaTags();
@@ -357,6 +414,73 @@ getDoctorDetails(): void {
     }
   });
 }
+
+  private updateBrowserUrl(doctor: any): void {
+    if (this.hasUpdatedSlugUrl || typeof window === 'undefined') {
+      return;
+    }
+    const slugUrl = doctor?.slug_url?.trim();
+    if (!slugUrl) {
+      return;
+    }
+
+    const isAbsolute = /^https?:\/\//i.test(slugUrl);
+    const formattedUrl = isAbsolute
+      ? slugUrl
+      : `${window.location.origin}${slugUrl.startsWith('/') ? '' : '/'}${slugUrl}`;
+
+    if (window.location.href === formattedUrl) {
+      this.hasUpdatedSlugUrl = true;
+      return;
+    }
+
+    try {
+      window.history.replaceState(window.history.state, '', formattedUrl);
+      this.hasUpdatedSlugUrl = true;
+    } catch (error) {
+      console.warn('Failed to update slug URL:', error);
+    }
+  }
+
+  private getCacheKey(): string | null {
+    if (this.isSlugRoute && this.slugPathFromRoute) {
+      return `doctor_slug_${this.slugPathFromRoute.replace(/[^a-z0-9]+/g, '_')}`;
+    }
+    if (this.doctor_name) {
+      return `doctor_${this.doctor_name.toLowerCase().replace(/\s+/g, '_')}`;
+    }
+    return null;
+  }
+
+  private normalizeSlug(input?: string): string {
+    if (!input) {
+      return '';
+    }
+    let working = input.trim();
+    if (!working) {
+      return '';
+    }
+
+    if (/^https?:\/\//i.test(working)) {
+      try {
+        const parsed = new URL(working);
+        working = parsed.pathname || '/';
+      } catch {
+        // Ignore parsing errors and fall back to original input
+      }
+    }
+
+    if (!working.startsWith('/')) {
+      working = `/${working}`;
+    }
+
+    working = working.replace(/\/{2,}/g, '/');
+    if (working.length > 1 && working.endsWith('/')) {
+      working = working.slice(0, -1);
+    }
+
+    return working.toLowerCase();
+  }
 
   private setMetaTags(doctor: any): void {
     if (!doctor) return;

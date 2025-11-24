@@ -34,6 +34,7 @@ import { PrivacyPolocyComponent } from './privacy-polocy/privacy-polocy.componen
 import { TermsConditionsComponent } from './terms-conditions/terms-conditions.component';
 import { KeySurgeriesComponent } from './key-surgeries/key-surgeries.component';
 import { TotalKneeReplacementComponent } from './total-knee-replacement/total-knee-replacement.component';
+// import { WhatsAppComponent } from './whatsapp/whatsapp.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -104,6 +105,7 @@ const routes: Routes = [
   { path: 'blogs/:slug', component: BlogDetailsDataComponent },
   { path: 'technologies-details', component: TechnologiesDetailsComponent },
   { path: 'locations', component: OurBranchesComponent },
+  { path: 'locations/:speciality/:slug', component: DoctorDetailsComponent, data: { isDoctorSlugRoute: true } },
   { path: 'locations/:location', component: OurBranchesComponent },
   { path: 'careers', component: CareersComponent },
   { path: 'feedback', component: FeedbackComponent },
@@ -124,6 +126,8 @@ const routes: Routes = [
   { path: 'terms-conditions', component: TermsConditionsComponent },
   { path: 'key-surgeries', component:KeySurgeriesComponent},
   { path: 'total-knee-replacement-surgery-kukatpally-hyderabad', component: TotalKneeReplacementComponent },
+  // { path: 'whatsapp', component: WhatsAppComponent },
+  { path: ':speciality/:slug', component: DoctorDetailsComponent, data: { isDoctorSlugRoute: true } },
   { path: '**', component: NotFoundComponent }, // 👈 Show 404 page here
 ];
 
@@ -135,7 +139,8 @@ const routes: Routes = [
     RouterModule.forChild(routes)
   ],
   declarations: [
-    TotalKneeReplacementComponent
+    TotalKneeReplacementComponent,
+    // WhatsAppComponent
   ],
   providers: [DatePipe]
 })

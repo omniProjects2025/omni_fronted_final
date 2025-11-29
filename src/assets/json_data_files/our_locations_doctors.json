@@ -252,6 +252,18 @@
                 "work_location": "kukatpally",
                 "experience": "22 Years",
                 "profile": "assets/kukatpally_doctors_profiles/payal_chitransi.png"
+            },
+            {
+                "name": "Dr. Pranay Kumar Mehta",
+                "qualification": [
+                    "MBBS, MS, DrNB (Vascular Surgery)"
+                ],
+                "depertment": "Consultant Vascular & Endovascular Surgeon",
+                "specialization": "General Surgery",
+                "filter_by_speciality": "General Surgery",
+                "work_location": "kukatpally",
+                "experience": "",
+                "profile": "assets/kukatpally_doctors_profiles/pranay_kumar_mehta.png"
             }
         ]
     },

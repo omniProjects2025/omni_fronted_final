@@ -173,6 +173,14 @@ export class OurSpecialitiesComponent implements OnInit {
     const specialties = this.filteredSpecialties;
     const specialtyNames = specialties.map(s => s.name).join(', ');
     
+    // If this is Vizag, use a custom title & description (SEO requirement)
+    if (location && location.toLowerCase() === 'vizag') {
+      this.titleService.setTitle('Top Specialities & Services at OMNI Hospital Vizag');
+      this.metaService.updateTag({ name: 'description', content: 'Explore super-specialty services at OMNI Hospitals Vizag. Get expert care in Cardiology, Orthopedics, Neurology, and many other medical departments.' });
+      this.metaService.updateTag({ name: 'keywords', content: `Vizag, medical specialties, Cardiology, Orthopedics, Neurology, OMNI hospitals` });
+      return;
+    }
+
     // Check if any specialty has meta_title and meta_description from API
     const specialtyWithMeta = specialties.find(s => s.meta_title && s.meta_description);
     

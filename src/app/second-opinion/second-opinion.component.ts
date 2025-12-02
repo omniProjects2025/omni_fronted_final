@@ -3,13 +3,15 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { NotificationService } from '../services/notification.service';
 import { environment } from '../../environments/environment';
+import { Meta, Title } from '@angular/platform-browser';
+import { CanonicalService } from '../services/canonical.service';
 
 @Component({
   selector: 'app-second-opinion',
   templateUrl: './second-opinion.component.html',
   styleUrls: ['./second-opinion.component.css']
 })
-export class SecondOpinionComponent{
+export class SecondOpinionComponent {
   counters = [
     { id: 1, img: 'branches_counter.svg', label: 'Hospitals', target: 6, value: 0 },
     { id: 2, img: 'beds_counter.svg', label: 'Beds', target: 800, value: 0 },
@@ -27,12 +29,14 @@ export class SecondOpinionComponent{
   showNameError = false;
   showPhoneError = false;
 
-  constructor(private http: HttpClient, private router: Router, private notification: NotificationService) { }
+  constructor(private http: HttpClient, private router: Router, private notification: NotificationService, private titleService: Title, private metaService: Meta, private canonicalService: CanonicalService) { }
 
   ngAfterViewInit(): void {
     this.observeCounters();
   }
-
+  ngOnInit(): void {
+    this.setSEOTags();
+  }
   observeCounters(): void {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
@@ -132,4 +136,17 @@ export class SecondOpinionComponent{
         }
       });
   }
+  private setSEOTags(): void {
+    this.titleService.setTitle('Get a Second Opinion & Treatment Confirmation | OMNI Hospitals');
+    this.metaService.updateTag({
+      name: 'description',
+      content: 'Get a Second Opinion from senior consultants at OMNI Hospitals. Confirm your diagnosis, explore care, and get the best treatment path today.'
+    });
+    this.metaService.updateTag({
+      name: 'keywords',
+      content: 'OMNI hospitals, multispecialty hospital Hyderabad, cardiology, orthopedics, neurology, nephrology, best hospital Hyderabad, medical care Andhra Pradesh, Telangana'
+    });
+    this.canonicalService.setCanonicalUrl('/');
+  }
+
 }

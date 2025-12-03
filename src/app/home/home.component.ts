@@ -14,6 +14,7 @@ import { toUrlFriendly } from '../utils/url-helper.util';
 import { environment } from '../../environments/environment';
 register();
 declare var $: any;
+import { getDepartmentsFor, allDepartments as SHARED_ALL } from '../config/specialties';
 
 @Component({
   selector: 'app-home',
@@ -380,6 +381,8 @@ export class HomeComponent implements OnInit, OnDestroy {
     department: '',
     message: ''
   };
+  availableDepartments: string[] = [];
+  allDepartments: string[] = [];
 
   isSubmitting = false;
   constructor(
@@ -436,6 +439,8 @@ export class HomeComponent implements OnInit, OnDestroy {
 
     this.updateSlidesPerView();
     register();
+    this.availableDepartments = [];
+    this.allDepartments = SHARED_ALL || [];
   }
 
 
@@ -544,6 +549,13 @@ export class HomeComponent implements OnInit, OnDestroy {
     } else {
       this.slidesPerView = 4;
     }
+  }
+
+  onAppointmentLocationChange(selectedLocation: string): void {
+    const found = getDepartmentsFor(selectedLocation);
+    this.availableDepartments = found.length ? found : (SHARED_ALL || []);
+    this.appointmentFormData.department = '';
+    this.cdr.markForCheck();
   }
 
   private handleResizeOrZoom(): void {

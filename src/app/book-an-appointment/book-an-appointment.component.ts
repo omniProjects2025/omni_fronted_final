@@ -4,6 +4,7 @@ import { NgForm } from '@angular/forms';
 import { NavigationEnd, Router } from '@angular/router';
 import { NotificationService } from '../services/notification.service';
 import { environment } from '../../environments/environment';
+import { getDepartmentsFor, allDepartments as SHARED_ALL } from '../config/specialties';
 
 @Component({
   selector: 'app-book-an-appointment',
@@ -54,6 +55,8 @@ export class BookAnAppointmentComponent implements OnInit {
     department: '',
     message: ''
   };
+  availableDepartments: string[] = [];
+  allDepartments: string[] = [];
 
   constructor(private router: Router, private http: HttpClient, private notification: NotificationService) {
     this.router.events.subscribe((event) => {
@@ -66,10 +69,14 @@ export class BookAnAppointmentComponent implements OnInit {
   ngOnInit(): void {
     this.initScrollAnimations();
     this.startPageLoadAnimations();
+    // initialize departments
+    this.availableDepartments = [];
+    this.allDepartments = SHARED_ALL || [];
   }
 
   @HostListener('window:scroll', ['$event'])
-  onScroll(): void {
+  onScroll(event: Event): void {
+    // event available if needed for future use
     this.checkScrollAnimations();
   }
 
@@ -290,5 +297,11 @@ export class BookAnAppointmentComponent implements OnInit {
         .replace(/^-|-$/g, ''); // Remove leading/trailing hyphens
       this.router.navigate(['/our-branches', urlFriendlyName]);
     }, 300);
+  }
+
+  onLocationChange(selectedLocation: string): void {
+    const found = getDepartmentsFor(selectedLocation);
+    this.availableDepartments = found.length ? found : (SHARED_ALL || []);
+    this.formData.department = '';
   }
 }

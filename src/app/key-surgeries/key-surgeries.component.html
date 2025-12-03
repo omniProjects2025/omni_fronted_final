@@ -126,26 +126,21 @@
             <label class="form-label">Location*</label>
             <select class="form-select" formControlName="location">
               <option disabled selected>Select Location</option>
-              <option>Hyderabad</option>
-              <option>Vizag</option>
+              <option value="Kothapet">Kothapet</option>
+              <option value="Kukatpally">Kukatpally</option>
+              <option value="Nampally">Nampally</option>
+              <option value="Vizag">Vizag</option>
+              <option value="Kurnool">Kurnool</option>
             </select>
           </div>
 
           <div class="form-group">
             <label class="form-label">Department</label>
             <select class="form-select" formControlName="department">
-              <option disabled selected>Select Department</option>
-              <option>Cardiology</option>
-              <option>Orthopedics</option>
-              <option>Plastic Surgery</option>
-              <option>Neuro Intervention</option>
-              <option>Vascular Surgery</option>
-              <option>ENT</option>
-              <option>Urology</option>
-              <option>Obstetrics and Gynaecology</option>
-              <option>General Surgery</option>
-              <option>Neuro Surgery</option>
-              <option>Gastroenterology</option>
+              <option disabled selected>Department</option>
+              <ng-container *ngFor="let dept of (availableDepartments.length ? availableDepartments : allDepartments)">
+                <option [value]="dept">{{ dept }}</option>
+              </ng-container>
             </select>
           </div>
 

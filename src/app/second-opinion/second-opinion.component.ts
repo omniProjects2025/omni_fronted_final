@@ -5,6 +5,7 @@ import { NotificationService } from '../services/notification.service';
 import { environment } from '../../environments/environment';
 import { Meta, Title } from '@angular/platform-browser';
 import { CanonicalService } from '../services/canonical.service';
+import { getDepartmentsFor, allDepartments as SHARED_ALL } from '../config/specialties';
 
 @Component({
   selector: 'app-second-opinion',
@@ -26,6 +27,9 @@ export class SecondOpinionComponent {
     department: '',
     comments: ''
   };
+  // Current available departments shown in the select
+  availableDepartments: string[] = [];
+  allDepartments: string[] = [];
   showNameError = false;
   showPhoneError = false;
 
@@ -36,6 +40,16 @@ export class SecondOpinionComponent {
   }
   ngOnInit(): void {
     this.setSEOTags();
+    // initialize using shared specialties config
+    this.availableDepartments = [];
+    this.allDepartments = SHARED_ALL || [];
+  }
+
+  onLocationChange(selectedLocation: string): void {
+    const found = getDepartmentsFor(selectedLocation);
+    this.availableDepartments = found.length ? found : [];
+    // reset selected department
+    this.secondOpinionData.department = '';
   }
   observeCounters(): void {
     const observer = new IntersectionObserver((entries) => {

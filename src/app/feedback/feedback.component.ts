@@ -4,6 +4,7 @@ import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { NotificationService } from '../services/notification.service';
 import { environment } from '../../environments/environment';
+import { getDepartmentsFor, allDepartments as SHARED_ALL } from '../config/specialties';
 
 @Component({
   selector: 'app-feedback',
@@ -19,23 +20,9 @@ export class FeedbackComponent {
   locations: string[] = ['Kukatpally', 'Kothapet', 'Vizag', 'Kurnool', 'Nampally'];
 
   // Department options (same for all locations)
-  departments: string[] = [
-    'Cardiology',
-    'Orthopedic',
-    'Neurology',
-    'Emergency Medicine & Critical Care',
-    'General Medicine',
-    'General Surgery',
-    'Gastroenterology',
-    'Obstetrics & Gynaecology',
-    'ENT',
-    'Nephrology',
-    'Pulmonology',
-    'Dermatology',
-    'Psychiatry',
-    'Plastic Surgery',
-    'Others'
-  ];
+  departments: string[] = [];
+  availableDepartments: string[] = [];
+  allDepartments: string[] = [];
 
   // Track if user is a patient
   isPatientValue: string = '';
@@ -53,6 +40,17 @@ export class FeedbackComponent {
       doctorName: [''],
       rating: [0, Validators.min(1)],
       feedback: ['']
+    });
+
+    // initialize departments
+    this.allDepartments = SHARED_ALL || [];
+    this.availableDepartments = [];
+
+    // update departments when location changes
+    this.feedbackForm.get('location')?.valueChanges.subscribe((loc: string) => {
+      const found = getDepartmentsFor(loc);
+      this.availableDepartments = found.length ? found : this.allDepartments;
+      this.feedbackForm.get('department')?.setValue('');
     });
 
     this.feedbackForm.get('isPatient')?.valueChanges.subscribe(value => {

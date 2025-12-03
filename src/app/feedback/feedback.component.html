@@ -87,7 +87,9 @@
           <label class="form-label">Department</label>
           <select class="form-select" formControlName="department">
             <option value="">Select Department</option>
-            <option *ngFor="let dept of departments" [value]="dept">{{ dept }}</option>
+            <ng-container *ngFor="let d of (availableDepartments.length ? availableDepartments : allDepartments)">
+              <option [value]="d">{{ d }}</option>
+            </ng-container>
           </select>
         </div>
 

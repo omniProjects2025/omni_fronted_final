@@ -74,9 +74,9 @@
               </div>
 
               <div class="mb-3" data-animation="fadeInUp">
-                <label class="form-label">Location <span class="text-danger">*</span></label>
-                <select class="form-select hover-glow" name="location" [(ngModel)]="formData.location" #location="ngModel" required
-                  (focus)="onFormInputFocus($event)" (blur)="onFormInputBlur($event)">
+                <label class="form-label">Location</label>
+                <select class="form-select hover-glow" name="location" [(ngModel)]="formData.location" #location="ngModel"
+                  (ngModelChange)="onLocationChange($event)" (focus)="onFormInputFocus($event)" (blur)="onFormInputBlur($event)">
                   <option value="" disabled selected>Select Location</option>
                   <option>Kukatpally</option>
                   <option>Kothapet</option>
@@ -84,9 +84,7 @@
                   <option>Vizag</option>
                   <option>Kurnool</option>
                 </select>
-                <div class="text-danger small mt-1" *ngIf="location.invalid && (location.touched || form.submitted)">
-                  <div *ngIf="location.errors?.['required']">Location is required.</div>
-                </div>
+                
               </div>
 
               <div class="mb-3" data-animation="fadeInUp">
@@ -94,20 +92,9 @@
                 <select class="form-select hover-glow" name="department" [(ngModel)]="formData.department"
                   (focus)="onFormInputFocus($event)" (blur)="onFormInputBlur($event)">
                   <option disabled selected>Select Department</option>
-                  <option>Cardiology</option>
-                  <option>Dermatology</option>
-                  <option>Emergency Medicine & Critical Care</option>
-                  <option>ENT</option>
-                  <option>General Medicine</option>
-                  <option>General Surgery</option>
-                  <option>Gastroenterology</option>
-                  <option>Gynaecology</option>
-                  <option>Neurology</option>
-                  <option>Orthopedics</option>
-                  <option>Paediatrics</option>
-                  <option>Psychiatry</option>
-                  <option>Pulmonology</option>
-                  <option>Plastic Surgery</option>
+                  <ng-container *ngFor="let dept of (availableDepartments.length ? availableDepartments : allDepartments)">
+                    <option [value]="dept">{{ dept }}</option>
+                  </ng-container>
                 </select>
               </div>
 

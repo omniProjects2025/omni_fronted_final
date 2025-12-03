@@ -495,7 +495,7 @@
               <div class="form-group">
                 <label for="location" class="form-label">Preferred Location <span class="text-danger">*</span></label>
                 <select class="form-select" id="location" name="location" [(ngModel)]="appointmentFormData.location"
-                  #location="ngModel" required>
+                  #location="ngModel" required (ngModelChange)="onAppointmentLocationChange($event)">
                   <option value="" disabled selected>Select Location</option>
                   <option value="Kothapet">Kothapet</option>
                   <option value="Kukatpally">Kukatpally</option>
@@ -517,12 +517,9 @@
                 <select class="form-select" id="department" name="department"
                   [(ngModel)]="appointmentFormData.department" #department="ngModel">
                   <option value="" disabled selected>Select Department</option>
-                  <option value="Cardiology">Cardiology</option>
-                  <option value="Neurology">Neurology</option>
-                  <option value="Orthopedics">Orthopedics</option>
-                  <option value="General Medicine">General Medicine</option>
-                  <option value="Gastroenterology">Gastroenterology</option>
-                  <option value="Pediatrics">Pediatrics</option>
+                  <ng-container *ngFor="let dept of (availableDepartments.length ? availableDepartments : allDepartments)">
+                    <option [value]="dept">{{ dept }}</option>
+                  </ng-container>
                 </select>
                 <div class="error-message text-danger small mt-1"
                   *ngIf="department.invalid && (department.touched || appointmentForm.submitted)">

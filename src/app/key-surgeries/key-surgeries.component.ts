@@ -5,6 +5,7 @@ import { Router } from '@angular/router';
 import { NotificationService } from '../services/notification.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { environment } from '../../environments/environment';
+import { getDepartmentsFor, allDepartments as SHARED_ALL } from '../config/specialties';
 
 interface Surgery {
   name: string;
@@ -30,6 +31,8 @@ export class KeySurgeriesComponent implements OnInit {
   showAppointmentModal = false;
   
   appointmentForm!: FormGroup;
+  availableDepartments: string[] = [];
+  allDepartments: string[] = [];
 
   departments: Department[] = [
     {
@@ -400,6 +403,15 @@ export class KeySurgeriesComponent implements OnInit {
       location: ['', Validators.required],
       department: [''],
       message: ['']
+    });
+    // initialize departments
+    this.allDepartments = SHARED_ALL || [];
+    this.availableDepartments = [];
+    // update departments when location changes
+    this.appointmentForm.get('location')?.valueChanges.subscribe((loc: string) => {
+      const found = getDepartmentsFor(loc);
+      this.availableDepartments = found.length ? found : this.allDepartments;
+      this.appointmentForm.get('department')?.setValue('');
     });
   }
 

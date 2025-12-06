@@ -28,7 +28,7 @@
         <span *ngFor="let l of 'EMERGENCY'.split('')" class="animate-float">{{ l }}</span>
       </button> -->
 
-      <div class="col-lg-5 mb-4 mb-lg-0 text-center">
+      <div class="col-lg-5 mb-4 mb-lg-0 text-center d-none d-lg-block">
         <img src="assets/our_doctors/book_an_appointment_image.svg" alt="Doctor"
           class="custom-appointment-image hover-scale" />
       </div>
@@ -114,6 +114,11 @@
             </form>
 
           </div>
+        </div>
+
+        <!-- Mobile-only image: shown after the form on small screens, hidden on lg+ -->
+        <div class="d-block d-lg-none text-center my-3">
+          <img src="assets/our_doctors/book_an_appointment_image.svg" alt="Doctor" class="img-fluid" />
         </div>
 
         <div class="d-flex align-items-center flex-wrap justify-content-center my-4 mx-lg-0 mx-md-0 mx-4">

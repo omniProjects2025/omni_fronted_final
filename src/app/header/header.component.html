@@ -134,7 +134,7 @@
 
 <!-- Mobile-only Home button placed after header and before page content/banner -->
 <div class="d-md-none mobile-home-wrapper">
-  <a class="mobile-home-btn" [routerLink]="['/home']" title="Go to Home">&lt;&lt;home</a>
+  <a class="mobile-home-btn" [routerLink]="['/home']" title="Go to Home">&lt;&lt; Go to Home</a>
 </div>
 
 <!-- Mobile Slide Menu -->
@@ -147,7 +147,7 @@
     <li class="nav-item" *ngFor="let item of navItems">
       <a *ngIf="item.route && item.key !== 'branches' && item.key !== 'specialities'" class="nav-link" [routerLink]="item.route" (click)="closeMobileMenu()">
         <ng-container *ngIf="item.key === 'home'">
-          &lt;&lt;home
+Home
           <!-- <img src="assets/icons/home_page_btn.svg" class="me-1" alt="" width="25px" height="25px" /> -->
         </ng-container>
         {{ item.label }}

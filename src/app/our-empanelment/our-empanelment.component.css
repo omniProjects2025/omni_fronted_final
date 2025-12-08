@@ -1,9 +1,9 @@
 .p_txt {
     text-align: justify;
-    color: rgba(130, 130, 130, 1);
+    color: black;
     font-weight: 300;
     font-family: 'Roboto';
-    font-size: 15px;
+    font-size: 16px;
 }
 .h_txt{
     color: rgba(0, 0, 0, 1);
@@ -21,21 +21,6 @@
     }
 }
 
-/* .owl-carousel .item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-} */
-
-/* .logo-card {
-    padding: 10px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100px;
-} */
 
 .insurance_border {
     border: 2px solid rgba(130, 130, 130, 1);
@@ -43,12 +28,6 @@
     overflow: hidden;
 }
 
-/* @media (max-width: 576px) {
-    .logo-card {
-        height: 80px;
-        padding: 5px;
-    }
-} */
 
 @media (min-width: 1200px) {
     .col-xl-1-5 {

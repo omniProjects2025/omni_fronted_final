@@ -5,6 +5,8 @@ import { NavigationEnd, Router } from '@angular/router';
 import { NotificationService } from '../services/notification.service';
 import { environment } from '../../environments/environment';
 import { getDepartmentsFor, allDepartments as SHARED_ALL } from '../config/specialties';
+import { CanonicalService } from '../services/canonical.service';
+import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-book-an-appointment',
@@ -58,7 +60,7 @@ export class BookAnAppointmentComponent implements OnInit {
   availableDepartments: string[] = [];
   allDepartments: string[] = [];
 
-  constructor(private router: Router, private http: HttpClient, private notification: NotificationService) {
+  constructor(private router: Router, private http: HttpClient, private notification: NotificationService, private titleService: Title, private metaService: Meta, private canonicalService: CanonicalService) {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
         window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -72,6 +74,7 @@ export class BookAnAppointmentComponent implements OnInit {
     // initialize departments
     this.availableDepartments = [];
     this.allDepartments = SHARED_ALL || [];
+    this.setSEOTags();
   }
 
   @HostListener('window:scroll', ['$event'])
@@ -304,4 +307,14 @@ export class BookAnAppointmentComponent implements OnInit {
     this.availableDepartments = found.length ? found : (SHARED_ALL || []);
     this.formData.department = '';
   }
+
+    private setSEOTags(): void {
+    this.titleService.setTitle('Book Doctor Appointment Online | OMNI Hospitals, Kukatpally');
+    this.metaService.updateTag({
+      name: 'description',
+      content: 'Book your doctor appointment online instantly at OMNI Hospitals. Schedule consultations with specialists across all Hyderabad, Vizag, & Kurnool branches.'
+    });
+    this.canonicalService.setCanonicalUrl('/');
+  }
+
 }

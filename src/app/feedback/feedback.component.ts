@@ -5,6 +5,8 @@ import { Router } from '@angular/router';
 import { NotificationService } from '../services/notification.service';
 import { environment } from '../../environments/environment';
 import { getDepartmentsFor, allDepartments as SHARED_ALL } from '../config/specialties';
+import { CanonicalService } from '../services/canonical.service';
+import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-feedback',
@@ -27,7 +29,7 @@ export class FeedbackComponent {
   // Track if user is a patient
   isPatientValue: string = '';
 
-  constructor(private fb: FormBuilder, private http: HttpClient, private router: Router, private notification: NotificationService) {
+  constructor(private fb: FormBuilder, private http: HttpClient, private router: Router, private notification: NotificationService, private titleService: Title, private metaService: Meta, private canonicalService: CanonicalService) {
     this.feedbackForm = this.fb.group({
       name: ['', Validators.required],
       isPatient: ['', Validators.required],
@@ -57,6 +59,10 @@ export class FeedbackComponent {
       this.isPatientValue = value;
       this.updatePatientIdValidation();
     });
+  }
+
+  ngOnInit(): void {
+    this.setSEOTags();
   }
 
   get f() {
@@ -119,4 +125,14 @@ export class FeedbackComponent {
         });
     }
   }
+
+    private setSEOTags(): void {
+    this.titleService.setTitle('Share Your Experience | Patient Feedback Form - OMNI Hospitals');
+    this.metaService.updateTag({
+      name: 'description',
+      content: 'Share your valuable feedback about your patient experience at OMNI Hospitals. Help us continuously improve our quality of care and services.'
+    });
+    this.canonicalService.setCanonicalUrl('/');
+  }
+
 }

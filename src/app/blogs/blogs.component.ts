@@ -1,6 +1,8 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { CanonicalService } from '../services/canonical.service';
+import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-blogs',
@@ -18,9 +20,10 @@ export class BlogsComponent {
   filteredCategories: any[] = [];
   q = '';
 
-  constructor(private router: Router, private http: HttpClient,) {}
+  constructor(private router: Router, private http: HttpClient, private titleService: Title, private metaService: Meta, private canonicalService: CanonicalService) {}
   ngOnInit(): void {
     this.getBlogsDetails();
+    this.setSEOTags();
   }
 
   goToBlogDetails(blog_name: any) {
@@ -69,6 +72,16 @@ export class BlogsComponent {
     console.log('this.selectedCategory',this.selectedCategory);
     this.currentPage = 1;
     this.updateDisplayedBlogs();
+  }
+
+
+  private setSEOTags(): void {
+    this.titleService.setTitle('OMNI Hospitals Blog | Health News & Expert Medical Advice');
+    this.metaService.updateTag({
+      name: 'description',
+      content: 'Read the OMNI Hospitals Blog for expert articles on health, wellness, and medical conditions. Get reliable advice from our top doctors and specialists.'
+    });
+    this.canonicalService.setCanonicalUrl('/');
   }
 
 }

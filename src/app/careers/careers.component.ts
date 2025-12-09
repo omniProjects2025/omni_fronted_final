@@ -5,6 +5,8 @@ import { ActivatedRoute } from '@angular/router';
 import { DatePipe } from '@angular/common';
 import { environment } from '../../environments/environment';
 import { NotificationService } from '../services/notification.service';
+import { Meta, Title } from '@angular/platform-browser';
+import { CanonicalService } from '../services/canonical.service';
 
 @Component({
   selector: 'app-careers',
@@ -19,20 +21,20 @@ export class CareersComponent {
   selectedFile: File | null = null;
   selectedFileName: string = '';
   emil: string = 'doctors@omnihospitals.in';
-  
+
   // Search and filter properties
   searchTerm: string = '';
   selectedDepartment: string = '';
   selectedLocation: string = '';
-  
+
   // Pagination properties
   currentPage: number = 1;
   itemsPerPage: number = 8;
-  
+
   // Job details modal
   selectedJob: any = null;
   showJobDetailsModal: boolean = false;
-  
+
   // Success/Error messages
   successMessage: string = '';
   errorMessage: string = '';
@@ -44,19 +46,19 @@ export class CareersComponent {
   ];
 
   jobList = [
-    {id:1, title: 'IP Operations', location: 'Hyderabad', department: 'Operations', postedDate: '2025-09-01', lastDate: '2025-10-10' },
-    {id:2, title: 'Billing Executive', location: 'Vijayawada', department: 'Billing', postedDate: '2025-09-01', lastDate: '2025-10-12' },
-    {id:3, title: 'Pharmacist', location: 'Chennai', department: 'Pharmacy', postedDate: '2025-09-03', lastDate: '2025-09-08' },
-    {id:4, title: 'Nursing Supervisor', location: 'Vizag', department: 'Nursing', postedDate: '2025-09-01', lastDate: '2025-10-20' },
-    {id:5, title: 'Front Office Executive', location: 'Hyderabad', department: 'FO', postedDate: '2025-09-25', lastDate: '2025-11-05' },
-    {id:6, title: 'Radiologist', location: 'Vijayawada', department: 'Radiology', postedDate: '2025-09-02', lastDate: '2025-10-18' },
-    {id:7, title: 'HR Executive', location: 'Vizag', department: 'HR', postedDate: '2025-09-01', lastDate: '2025-10-11' },
-    {id:8, title: 'Lab Technician', location: 'Hyderabad', department: 'Lab', postedDate: '2025-09-05', lastDate: '2025-09-09' },
-    {id:9, title: 'Marketing Officer', location: 'Chennai', department: 'Marketing', postedDate: '2025-09-06', lastDate: '2025-11-30' },
-    {id:10, title: 'Housekeeping Staff', location: 'Vizag', department: 'Housekeeping', postedDate: '2025-09-20', lastDate: '2025-10-01' },
+    { id: 1, title: 'IP Operations', location: 'Hyderabad', department: 'Operations', postedDate: '2025-09-01', lastDate: '2025-10-10' },
+    { id: 2, title: 'Billing Executive', location: 'Vijayawada', department: 'Billing', postedDate: '2025-09-01', lastDate: '2025-10-12' },
+    { id: 3, title: 'Pharmacist', location: 'Chennai', department: 'Pharmacy', postedDate: '2025-09-03', lastDate: '2025-09-08' },
+    { id: 4, title: 'Nursing Supervisor', location: 'Vizag', department: 'Nursing', postedDate: '2025-09-01', lastDate: '2025-10-20' },
+    { id: 5, title: 'Front Office Executive', location: 'Hyderabad', department: 'FO', postedDate: '2025-09-25', lastDate: '2025-11-05' },
+    { id: 6, title: 'Radiologist', location: 'Vijayawada', department: 'Radiology', postedDate: '2025-09-02', lastDate: '2025-10-18' },
+    { id: 7, title: 'HR Executive', location: 'Vizag', department: 'HR', postedDate: '2025-09-01', lastDate: '2025-10-11' },
+    { id: 8, title: 'Lab Technician', location: 'Hyderabad', department: 'Lab', postedDate: '2025-09-05', lastDate: '2025-09-09' },
+    { id: 9, title: 'Marketing Officer', location: 'Chennai', department: 'Marketing', postedDate: '2025-09-06', lastDate: '2025-11-30' },
+    { id: 10, title: 'Housekeeping Staff', location: 'Vizag', department: 'Housekeeping', postedDate: '2025-09-20', lastDate: '2025-10-01' },
   ];
 
-  constructor(private fb: FormBuilder, private http: HttpClient, private route: ActivatedRoute, private datePipe: DatePipe, private notification: NotificationService) {
+  constructor(private fb: FormBuilder, private http: HttpClient, private route: ActivatedRoute, private datePipe: DatePipe, private notification: NotificationService, private titleService: Title, private metaService: Meta, private canonicalService: CanonicalService) {
     this.applyForm = this.fb.group({
       firstName: ['', Validators.required],
       lastName: [''],
@@ -65,9 +67,10 @@ export class CareersComponent {
       position: ['', Validators.required]
     });
   }
-ngOnInit(){
-this.socialShare();
-}
+  ngOnInit() {
+    this.socialShare();
+    this.setSEOTags();
+  }
   switchTab(tab: 'openings' | 'joiners' | 'apply') {
     this.currentTab = tab;
   }
@@ -96,16 +99,16 @@ this.socialShare();
       }
     }
   }
-socialShare(){
-  this.route.fragment.subscribe((fragment: string | null) => {
-    if (fragment) {
-      setTimeout(() => {
-        const el = document.getElementById(fragment);
-        if (el) el.scrollIntoView({ behavior: 'smooth' });
-      }, 100);
-    }
-  });
-}
+  socialShare() {
+    this.route.fragment.subscribe((fragment: string | null) => {
+      if (fragment) {
+        setTimeout(() => {
+          const el = document.getElementById(fragment);
+          if (el) el.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+      }
+    });
+  }
   // onSubmit() {
   //   if (this.applyForm.valid) {
   //     const formData = new FormData();
@@ -185,35 +188,35 @@ socialShare(){
   // Get filtered and paginated jobs
   get filteredJobs() {
     let filtered = this.jobList.filter(job => {
-      const matchesSearch = !this.searchTerm || 
+      const matchesSearch = !this.searchTerm ||
         job.title.toLowerCase().includes(this.searchTerm.toLowerCase()) ||
         job.department.toLowerCase().includes(this.searchTerm.toLowerCase());
-      
+
       const matchesDepartment = !this.selectedDepartment || job.department === this.selectedDepartment;
       const matchesLocation = !this.selectedLocation || job.location === this.selectedLocation;
-      
+
       return matchesSearch && matchesDepartment && matchesLocation;
     });
 
     const startIndex = (this.currentPage - 1) * this.itemsPerPage;
     const endIndex = startIndex + this.itemsPerPage;
-    
+
     return filtered.slice(startIndex, endIndex);
   }
 
   // Get total pages for pagination
   get totalPages() {
     const filtered = this.jobList.filter(job => {
-      const matchesSearch = !this.searchTerm || 
+      const matchesSearch = !this.searchTerm ||
         job.title.toLowerCase().includes(this.searchTerm.toLowerCase()) ||
         job.department.toLowerCase().includes(this.searchTerm.toLowerCase());
-      
+
       const matchesDepartment = !this.selectedDepartment || job.department === this.selectedDepartment;
       const matchesLocation = !this.selectedLocation || job.location === this.selectedLocation;
-      
+
       return matchesSearch && matchesDepartment && matchesLocation;
     });
-    
+
     return Math.ceil(filtered.length / this.itemsPerPage);
   }
 
@@ -278,6 +281,19 @@ socialShare(){
     } else {
       this.applyForm.markAllAsTouched();
     }
+  }
+
+  private setSEOTags(): void {
+    this.titleService.setTitle('Careers at OMNI Hospitals | Jobs for Doctors & Staff');
+    this.metaService.updateTag({
+      name: 'description',
+      content: 'Join the team at OMNI Hospitals! Explore current job openings for doctors, nurses, and staff across Hyderabad and other locations and grow your career.'
+    });
+    // this.metaService.updateTag({
+    //   name: 'keywords',
+    //   content: 'OMNI hospitals, multispecialty hospital Hyderabad, cardiology, orthopedics, neurology, nephrology, best hospital Hyderabad, medical care Andhra Pradesh, Telangana'
+    // });
+    this.canonicalService.setCanonicalUrl('/');
   }
 
 }

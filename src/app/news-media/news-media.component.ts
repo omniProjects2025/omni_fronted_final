@@ -1,11 +1,12 @@
 // Imports and component definition below (keep only one set)
 import { Component, OnInit, OnDestroy, ChangeDetectorRef } from '@angular/core';
-import { DomSanitizer } from '@angular/platform-browser';
+import { DomSanitizer, Meta, Title } from '@angular/platform-browser';
 import { ActivatedRoute, Router } from '@angular/router';
 import { NewsService } from '../services/news.service';
 import { HttpBackend, HttpClient } from '@angular/common/http';
 import { VideoStateService } from '../services/video-state.service';
 import { Subscription } from 'rxjs';
+import { CanonicalService } from '../services/canonical.service';
 
 @Component({
   selector: 'app-news-media',
@@ -28,10 +29,10 @@ export class NewsMediaComponent implements OnInit, OnDestroy {
   }
   media_type = 1;
   allNews: any[] = [];
-  
+
   public testimonials = [
     // <iframe width="560" height="315" src="https://www.youtube.com/embed/cU69sod1Cxw?si=BUSiADVxNlWPhtVW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-     {
+    {
       name: "",
       profession: "",
       text: "Omni Hospitals, Kukatpally | Trusted Multispeciality Hospital for Every Generation",
@@ -40,7 +41,7 @@ export class NewsMediaComponent implements OnInit, OnDestroy {
       thumbnailUrl: 'ab1njKIEnfQ',
       videoUrl: "https://www.youtube.com/embed/ab1njKIEnfQ"
     },
-{
+    {
       name: "Mr. Diva Prasad ",
       profession: "",
       text: "From Near Death to Recovery | A Story of Hope and Healing",
@@ -49,7 +50,7 @@ export class NewsMediaComponent implements OnInit, OnDestroy {
       thumbnailUrl: 'CM_y3X06Nkc',
       videoUrl: "https://www.youtube.com/embed/CM_y3X06Nkc"
     },
-{
+    {
       name: "",
       profession: "",
       text: "Miraculous Recovery After Total Knee Replacement Surgery || Omni Hospitals, Kukatpally",
@@ -58,7 +59,7 @@ export class NewsMediaComponent implements OnInit, OnDestroy {
       thumbnailUrl: 'bxB3DoF2oYM',
       videoUrl: "https://www.youtube.com/embed/bxB3DoF2oYM"
     },
-{
+    {
       name: "",
       profession: "",
       text: "Successful Knee Pain Surgery | Koteshwar Rao's Recovery Story",
@@ -85,7 +86,7 @@ export class NewsMediaComponent implements OnInit, OnDestroy {
       thumbnailUrl: 'o2B35_wBzRs',
       videoUrl: "https://www.youtube.com/embed/o2B35_wBzRs"
     },
- {
+    {
       name: "Dr. Ranjith",
       profession: "Pediatric Orthopedic Specialist",
       text: "What is Clubfoot and How is it Treated? | Dr. Ranjith Nellore Mahesh Explains",
@@ -94,7 +95,7 @@ export class NewsMediaComponent implements OnInit, OnDestroy {
       thumbnailUrl: 'zWpwfj3dUZg',
       videoUrl: "https://www.youtube.com/embed/zWpwfj3dUZg"
     },
- {
+    {
       name: "Dr. Sandeep Perima",
       profession: "Nephrologist",
       text: "Protect Your Kidneys Before It's Too Late!",
@@ -103,16 +104,16 @@ export class NewsMediaComponent implements OnInit, OnDestroy {
       thumbnailUrl: '7K1n2aJBvTg',
       videoUrl: "https://www.youtube.com/embed/7K1n2aJBvTg"
     },
- {
+    {
       name: "Dr. Rajendar Byshetty",
       profession: "Consultant",
       text: "International Childhood Cancer Day",
       date: "Feb 15, 2024",
       videoPlayed: false,
       thumbnailUrl: 'HX2yOEx7h1A',
-      videoUrl: "https://www.youtube.com/embed/HX2yOEx7h1A" 
+      videoUrl: "https://www.youtube.com/embed/HX2yOEx7h1A"
     },
-     {
+    {
       name: "Dr. Vijay Kumar Loya",
       profession: "Orthospine Surgeon",
       text: "Why Do Adults Suffer from Back Pain? ",
@@ -175,7 +176,7 @@ export class NewsMediaComponent implements OnInit, OnDestroy {
       thumbnailUrl: 'wuR_fkYqn2o',
       videoUrl: "https://www.youtube.com/embed/wuR_fkYqn2o"
     },
-      {
+    {
       name: "",
       profession: "",
       text: "A Successful Anterior Cervical Discectomy and Fusion #OmniSuccessStories",
@@ -184,7 +185,7 @@ export class NewsMediaComponent implements OnInit, OnDestroy {
       thumbnailUrl: '9JaQSyLqIjw',
       videoUrl: "https://www.youtube.com/embed/9JaQSyLqIjw"
     },
-      {
+    {
       name: "",
       profession: "",
       text: "Say Goodbye to Knee Pain: Discover the Power of Minimally Invasive Knee Injections",
@@ -193,7 +194,7 @@ export class NewsMediaComponent implements OnInit, OnDestroy {
       thumbnailUrl: '1kyh9eLBBI8',
       videoUrl: "https://www.youtube.com/embed/1kyh9eLBBI8"
     },
-      {
+    {
       name: "Dr. Payal Chitransi",
       profession: "Sr. Consultant - Department of ENT",
       text: "Let's Understand About Allergic Rhinitis",
@@ -211,7 +212,7 @@ export class NewsMediaComponent implements OnInit, OnDestroy {
       thumbnailUrl: 'q86AX-CPJbo',
       videoUrl: "https://www.youtube.com/embed/q86AX-CPJbo"
     },
-     {
+    {
       name: "",
       profession: "",
       text: "Let's Understand About Gangrene With A Patient Success Story #OmniSuccessStories",
@@ -223,21 +224,24 @@ export class NewsMediaComponent implements OnInit, OnDestroy {
   ];
 
   constructor(
-    private http: HttpClient, 
+    private http: HttpClient,
     private activated_route: ActivatedRoute,
-    private router: Router, 
-    public sanitizer: DomSanitizer, 
+    private router: Router,
+    public sanitizer: DomSanitizer,
     private newsservice: NewsService,
     private videoStateService: VideoStateService,
-    private cdr: ChangeDetectorRef
-  ) {}
+    private cdr: ChangeDetectorRef,
+    private titleService: Title, 
+    private metaService: Meta, 
+    private canonicalService: CanonicalService
+  ) { }
 
   ngOnInit() {
     // Stop any videos from other components when entering this component
     this.videoStateService.stopAllVideos();
-    
+
     // Video states are managed by videoStateService, no local cleanup needed
-    
+
     this.resizeListener = () => {
       this.handleResizeOrZoom();
     };
@@ -253,6 +257,7 @@ export class NewsMediaComponent implements OnInit, OnDestroy {
     });
     window.scrollTo(0, 0)
     this.onLoadNews();
+    this.setSEOTags();
   }
 
   showMedia(index: number) {
@@ -276,7 +281,7 @@ export class NewsMediaComponent implements OnInit, OnDestroy {
 
     // Ensure no other videos are playing before starting this one
     this.videoStateService.stopAllVideos();
-    
+
     const videoId = this.extractVideoId(testimonial.videoUrl);
     this.videoStateService.setCurrentlyPlayingVideo(videoId);
   }
@@ -295,7 +300,7 @@ export class NewsMediaComponent implements OnInit, OnDestroy {
   isVideoPlaying(idx: number): boolean {
     const testimonial = this.testimonials[idx];
     if (!testimonial) return false;
-    
+
     const videoId = this.extractVideoId(testimonial.videoUrl);
     return this.videoStateService.getCurrentlyPlayingVideo() === videoId;
   }
@@ -303,7 +308,7 @@ export class NewsMediaComponent implements OnInit, OnDestroy {
   private handleResizeOrZoom(): void {
     const currentZoom = window.devicePixelRatio;
     const currentWidth = window.innerWidth;
-    
+
     // Check if it's a zoom change (devicePixelRatio changed) or actual resize
     if (Math.abs(currentZoom - this.lastZoom) > 0.1) {
       // Zoom change detected - don't stop videos unnecessarily
@@ -318,11 +323,22 @@ export class NewsMediaComponent implements OnInit, OnDestroy {
 
 
 
-  onLoadNews(){
-    this.http.get<any>('assets/json_data_files/news.json').subscribe((news_json:any)=>{
-this.allNews = news_json.news;
-console.log(this.allNews,'testing...');
+  onLoadNews() {
+    this.http.get<any>('assets/json_data_files/news.json').subscribe((news_json: any) => {
+      this.allNews = news_json.news;
+      console.log(this.allNews, 'testing...');
 
     })
   }
+
+  private setSEOTags(): void {
+    this.titleService.setTitle('OMNI Hospitals News & Media | Achievements, Awards & Updates');
+    this.metaService.updateTag({
+      name: 'description',
+      content: "Stay informed with OMNI Hospitals' latest news, media coverage, and clinical achievements. Read about our doctor awards and hospital updates."
+    });
+    this.canonicalService.setCanonicalUrl('/');
+  }
+
+
 }

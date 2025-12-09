@@ -1,8 +1,9 @@
 import { HttpClient } from '@angular/common/http';
 import { ChangeDetectorRef, Component, Renderer2 } from '@angular/core';
-import { DomSanitizer } from '@angular/platform-browser';
+import { DomSanitizer, Meta, Title } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 import { FixedPackagesService } from '../services/fixed-packages.service';
+import { CanonicalService } from '../services/canonical.service';
 
 @Component({
   selector: 'app-fixed-surgical-packages',
@@ -21,11 +22,15 @@ export class FixedSurgicalPackagesComponent {
     private router: Router,
     private renderer: Renderer2,
     private cdr: ChangeDetectorRef,
-    private fixedPackagesService: FixedPackagesService
+    private fixedPackagesService: FixedPackagesService,
+    private titleService: Title, 
+    private metaService: Meta, 
+    private canonicalService: CanonicalService
   ) { }
 
   ngOnInit(): void {
     this.getFixedSurgicalJsonData();
+    this.setSEOTags();
   }
 
   getFixedSurgicalJsonData() {
@@ -73,6 +78,15 @@ export class FixedSurgicalPackagesComponent {
         selected_package: JSON.stringify(obj) // ✅ Serialize object
       }
     });
+  }
+
+  private setSEOTags(): void {
+    this.titleService.setTitle('Fixed Price Surgery Packages in Hyderabad | OMNI Hospitals');
+    this.metaService.updateTag({
+      name: 'description',
+      content: 'Get transparent, fixed-cost surgery packages for TKR, Arthroscopy, and General Surgery at OMNI Hospitals. No hidden charges. Book today!'
+    });
+    this.canonicalService.setCanonicalUrl('/');
   }
 
 }

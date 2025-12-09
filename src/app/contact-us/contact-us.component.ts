@@ -5,6 +5,8 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { NotificationService } from '../services/notification.service';
 import * as L from 'leaflet';
 import { environment } from '../../environments/environment';
+import { Meta, Title } from '@angular/platform-browser';
+import { CanonicalService } from '../services/canonical.service';
 @Component({
   selector: 'app-contact-us',
   templateUrl: './contact-us.component.html',
@@ -106,13 +108,14 @@ export class ContactUsComponent {
     }
   ]
 
-  constructor(private sanitizer: DomSanitizer, private acive_route: ActivatedRoute, private http: HttpClient, private router: Router, private notification: NotificationService) { }
+  constructor(private sanitizer: DomSanitizer, private acive_route: ActivatedRoute, private http: HttpClient, private router: Router, private notification: NotificationService,private titleService: Title, private metaService: Meta, private canonicalService: CanonicalService) { }
 
   ngOnInit() {
     this.filteredBranches = [...this.BRANCH_LOCATIONS]; // show all by default
     this.locations = [];
     this.states = [...new Set(this.BRANCH_LOCATIONS.map((branch: any) => this.getStateFromAddress(branch.address)))] as string[];
     this.onNearestBranch()
+    this.setSEOTags();
   }
 
   onNearestBranch() {
@@ -316,4 +319,14 @@ export class ContactUsComponent {
         }
       });
   }
+
+  private setSEOTags(): void {
+    this.titleService.setTitle('Contact OMNI Hospitals | Locations & Appointment Booking');
+    this.metaService.updateTag({
+      name: 'description',
+      content: "Need to reach us? Find all OMNI Hospitals' locations, phone numbers, and contact details for Kukatpally, Vizag, Kothapet, Kurnool, and more."
+    });
+    this.canonicalService.setCanonicalUrl('/');
+  }
+
 }

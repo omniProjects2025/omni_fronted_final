@@ -38,16 +38,21 @@
       </a>
     </div>
     <div class="banner-item position-relative">
-        <img src="assets/images/new_year_health_package.jpeg" loading="lazy" class="img-fluid d-none d-md-block"
-          alt="Banner Desktop" />
-        <img src="assets/images/new_year_health_package_mobile.jpg" loading="lazy" class="d-block d-md-none" alt="Banner Mobile" />
+      <img src="assets/images/new_year_health_package.jpeg" loading="lazy" class="img-fluid d-none d-md-block"
+        alt="Banner Desktop" />
+      <img src="assets/images/new_year_health_package_mobile.jpg" loading="lazy" class="d-block d-md-none"
+        alt="Banner Mobile" />
     </div>
   </div>
 </header>
-
+<div class="px-2 py-2">
+  <span class="txt_justify">Trusted by patients since 2010, Omni Hospitals is a leading chain of multi-specialty hospitals in
+    Hyderabad, Telangana and AP. With 1000+ beds and 500+ doctors across 6 centres, we rank among top 10 multi-specialty
+    hospitals for Cardiology, Orthopaedics, Neurology, Emergency Medicine & Trauma Care, and Women & Child Care.</span>
+</div>
 
 <!-- section two strips code starts from here -->
-<section class="text-center pt-4 bg-white">
+<section class="text-center pt-1 bg-white">
   <ng-container>
     <div class="container">
       <div class="row g-3 justify-content-center">
@@ -517,7 +522,8 @@
                 <select class="form-select" id="department" name="department"
                   [(ngModel)]="appointmentFormData.department" #department="ngModel">
                   <option value="" disabled selected>Select Department</option>
-                  <ng-container *ngFor="let dept of (availableDepartments.length ? availableDepartments : allDepartments)">
+                  <ng-container
+                    *ngFor="let dept of (availableDepartments.length ? availableDepartments : allDepartments)">
                     <option [value]="dept">{{ dept }}</option>
                   </ng-container>
                 </select>

@@ -686,7 +686,7 @@ main, .main-content, app-home {
   .mobile-home-wrapper {
     display: flex;
     justify-content: flex-start;
-    padding: 8px 12px;
+    padding: 0px 12px;
     background: transparent;
   }
 

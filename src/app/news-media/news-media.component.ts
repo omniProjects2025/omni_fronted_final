@@ -105,24 +105,6 @@ export class NewsMediaComponent implements OnInit, OnDestroy {
       videoUrl: "https://www.youtube.com/embed/7K1n2aJBvTg"
     },
     {
-      name: "Dr. Rajendar Byshetty",
-      profession: "Consultant",
-      text: "International Childhood Cancer Day",
-      date: "Feb 15, 2024",
-      videoPlayed: false,
-      thumbnailUrl: 'HX2yOEx7h1A',
-      videoUrl: "https://www.youtube.com/embed/HX2yOEx7h1A"
-    },
-    {
-      name: "Dr. Vijay Kumar Loya",
-      profession: "Orthospine Surgeon",
-      text: "Why Do Adults Suffer from Back Pain? ",
-      date: "Jan 23, 2025",
-      videoPlayed: false,
-      thumbnailUrl: 'YNd6Gl4a9bU',
-      videoUrl: "https://www.youtube.com/embed/YNd6Gl4a9bU"
-    },
-    {
       name: "Dr. Neelima",
       profession: "Plastic surgeon",
       text: "Breaking Myths About Plastic Surgery with Dr. Neelima",
@@ -130,42 +112,6 @@ export class NewsMediaComponent implements OnInit, OnDestroy {
       videoPlayed: false,
       thumbnailUrl: 'LkkpdltkSD4',
       videoUrl: "https://www.youtube.com/embed/LkkpdltkSD4"
-    },
-    {
-      name: "Dr. Vijay Kumar Loya",
-      profession: "orthopedic spine surgeon",
-      text: "Say Goodbye to Back & Neck Pain! | Expert Spine Care with Dr. Vijay Kumar Loya.",
-      date: "Dec 26, 2024",
-      videoPlayed: false,
-      thumbnailUrl: 'VFi7xqWEYdk',
-      videoUrl: "https://www.youtube.com/embed/VFi7xqWEYdk"
-    },
-    {
-      name: "Dr. Anudeep",
-      profession: "Consultant Neurologist",
-      text: "National Epilepsy Awareness Day 💜 | Take Action to Break the Stigma",
-      date: "Nov 17, 2024",
-      videoPlayed: false,
-      thumbnailUrl: 'E4nunyyFoV0',
-      videoUrl: "https://www.youtube.com/embed/E4nunyyFoV0"
-    },
-    {
-      name: "Dr. Bhanu Manjeera",
-      profession: "General and Laparoscopic Surgeon",
-      text: "Say Goodbye to Piles | Dr. Bhanu Manjeera Revised Treatment Guide at OMNI Hospitals",
-      date: "Nov 6, 2024",
-      videoPlayed: false,
-      thumbnailUrl: 'KcSBTsbjdHc',
-      videoUrl: "https://www.youtube.com/embed/KcSBTsbjdHc"
-    },
-    {
-      name: "",
-      profession: "Orthopaedic experts",
-      text: "Let's Prevent The Alarming Rise Of Arthritis India",
-      date: "Nov 1, 2024",
-      videoPlayed: false,
-      thumbnailUrl: 'xLSKOiq6gdo',
-      videoUrl: "https://www.youtube.com/embed/xLSKOiq6gdo"
     },
     {
       name: "",
@@ -184,33 +130,6 @@ export class NewsMediaComponent implements OnInit, OnDestroy {
       videoPlayed: false,
       thumbnailUrl: '9JaQSyLqIjw',
       videoUrl: "https://www.youtube.com/embed/9JaQSyLqIjw"
-    },
-    {
-      name: "",
-      profession: "",
-      text: "Say Goodbye to Knee Pain: Discover the Power of Minimally Invasive Knee Injections",
-      date: "Aug 31, 2024",
-      videoPlayed: false,
-      thumbnailUrl: '1kyh9eLBBI8',
-      videoUrl: "https://www.youtube.com/embed/1kyh9eLBBI8"
-    },
-    {
-      name: "Dr. Payal Chitransi",
-      profession: "Sr. Consultant - Department of ENT",
-      text: "Let's Understand About Allergic Rhinitis",
-      date: "Aug 20, 2024",
-      videoPlayed: false,
-      thumbnailUrl: '2oIZVtGQWuc',
-      videoUrl: "https://www.youtube.com/embed/2oIZVtGQWuc"
-    },
-    {
-      name: "Dr. Raju Kakarla",
-      profession: "Consultant Pediatrician",
-      text: "Let's Understand About The Right Use Of Paracetamol From Our Expert's Desk",
-      date: "May 30, 2024",
-      videoPlayed: false,
-      thumbnailUrl: 'q86AX-CPJbo',
-      videoUrl: "https://www.youtube.com/embed/q86AX-CPJbo"
     },
     {
       name: "",

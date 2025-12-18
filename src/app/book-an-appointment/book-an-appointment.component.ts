@@ -302,6 +302,19 @@ export class BookAnAppointmentComponent implements OnInit {
     }, 300);
   }
 
+  openPayment(event: Event): void {
+    event.preventDefault();
+    const url = 'https://payment.atomtech.in/payment/form/pay.action?mId=3E642345C05C411A075854B977420C59';
+    const newWindow = window.open(url, '_blank');
+    if (newWindow) {
+      try {
+        newWindow.opener = null;
+      } catch (e) {
+        // ignore if cross-origin assignment fails
+      }
+    }
+  }
+
   onLocationChange(selectedLocation: string): void {
     const found = getDepartmentsFor(selectedLocation);
     this.availableDepartments = found.length ? found : (SHARED_ALL || []);

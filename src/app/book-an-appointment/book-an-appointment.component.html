@@ -46,7 +46,8 @@
               <div class="mb-3" data-animation="fadeInUp">
                 <label class="form-label">Full Name <span class="text-danger">*</span></label>
                 <input type="text" class="form-control hover-glow" name="fullName" [(ngModel)]="formData.fullName"
-                  #fullName="ngModel" required minlength="2" (focus)="onFormInputFocus($event)" (blur)="onFormInputBlur($event)" />
+                  #fullName="ngModel" required minlength="2" (focus)="onFormInputFocus($event)"
+                  (blur)="onFormInputBlur($event)" />
                 <div class="text-danger small mt-1" *ngIf="fullName.invalid && (fullName.touched || form.submitted)">
                   <div *ngIf="fullName.errors?.['required']">Full Name is required.</div>
                   <div *ngIf="fullName.errors?.['minlength']">Full Name must be at least 2 characters.</div>
@@ -57,13 +58,16 @@
                 <label class="form-label">Phone Number <span class="text-danger">*</span></label>
                 <div class="input-group">
                   <span class="input-group-text">+91</span>
-                  <input type="tel" inputmode="numeric" pattern="[0-9]{10}" maxlength="10" minlength="10" class="form-control hover-glow" name="phoneNumber"
-                    [(ngModel)]="formData.phoneNumber" #phoneNumber="ngModel" required (focus)="onFormInputFocus($event)"
+                  <input type="tel" inputmode="numeric" pattern="[0-9]{10}" maxlength="10" minlength="10"
+                    class="form-control hover-glow" name="phoneNumber" [(ngModel)]="formData.phoneNumber"
+                    #phoneNumber="ngModel" required (focus)="onFormInputFocus($event)"
                     (blur)="onFormInputBlur($event)" />
                 </div>
-                <div class="text-danger small mt-1" *ngIf="phoneNumber.invalid && (phoneNumber.touched || form.submitted)">
+                <div class="text-danger small mt-1"
+                  *ngIf="phoneNumber.invalid && (phoneNumber.touched || form.submitted)">
                   <div *ngIf="phoneNumber.errors?.['required']">Phone Number is required.</div>
-                  <div *ngIf="phoneNumber.errors?.['pattern'] || phoneNumber.errors?.['minlength']">Please enter a valid 10 digit mobile number.</div>
+                  <div *ngIf="phoneNumber.errors?.['pattern'] || phoneNumber.errors?.['minlength']">Please enter a valid
+                    10 digit mobile number.</div>
                 </div>
               </div>
 
@@ -75,8 +79,9 @@
 
               <div class="mb-3" data-animation="fadeInUp">
                 <label class="form-label">Location</label>
-                <select class="form-select hover-glow" name="location" [(ngModel)]="formData.location" #location="ngModel"
-                  (ngModelChange)="onLocationChange($event)" (focus)="onFormInputFocus($event)" (blur)="onFormInputBlur($event)">
+                <select class="form-select hover-glow" name="location" [(ngModel)]="formData.location"
+                  #location="ngModel" (ngModelChange)="onLocationChange($event)" (focus)="onFormInputFocus($event)"
+                  (blur)="onFormInputBlur($event)">
                   <option value="" disabled selected>Select Location</option>
                   <option>Kukatpally</option>
                   <option>Kothapet</option>
@@ -84,7 +89,7 @@
                   <option>Vizag</option>
                   <option>Kurnool</option>
                 </select>
-                
+
               </div>
 
               <div class="mb-3" data-animation="fadeInUp">
@@ -92,7 +97,8 @@
                 <select class="form-select hover-glow" name="department" [(ngModel)]="formData.department"
                   (focus)="onFormInputFocus($event)" (blur)="onFormInputBlur($event)">
                   <option disabled selected>Select Department</option>
-                  <ng-container *ngFor="let dept of (availableDepartments.length ? availableDepartments : allDepartments)">
+                  <ng-container
+                    *ngFor="let dept of (availableDepartments.length ? availableDepartments : allDepartments)">
                     <option [value]="dept">{{ dept }}</option>
                   </ng-container>
                 </select>
@@ -103,7 +109,14 @@
                 <textarea rows="3" class="form-control hover-glow" name="message" [(ngModel)]="formData.message"
                   (focus)="onFormInputFocus($event)" (blur)="onFormInputBlur($event)"></textarea>
               </div>
-
+              <div class="text-center my-3">
+                <a href="https://payment.atomtech.in/payment/form/pay.action?mId=3E642345C05C411A075854B977420C59"
+                  role="button" target="_blank" rel="noopener noreferrer"
+                  (click)="openPayment($event)"
+                  style="background-color: #28a745; color: #ffffff; border-radius: 12px; padding: 8px 16px; display: inline-block; border: none; text-decoration: none;">
+                  Pay Online
+                </a>
+              </div>
               <div class="text-center">
                 <button type="submit" class="btn hover-lift" data-button="submit"
                   style="background-color: #008cdb; color: #fff; border-radius: 12px; width: 181px;"
@@ -144,14 +157,14 @@
             {{ l }}
           </span>
         </div>
-  
+
         <div class="flex-grow-1 mt-3">
           <div class="d-flex justify-content-between align-items-center mb-2">
             <strong>Emergency Numbers</strong>
             <button type="button" class="btn-close btn-close-white btn-sm hover-scale"
               (click)="showEmergencyModal = false" data-button="close" (mousedown)="onButtonPress('close')"></button>
           </div>
-  
+
           <div *ngFor="let location of emergencyNumbers; index as i" class="d-flex justify-content-between mb-2"
             style="padding-bottom: 2px;" [class]="'stagger-' + (i + 1)">
             <div style="white-space: nowrap;">{{ location.place }}</div>
@@ -172,10 +185,12 @@
         </div>
       </div>
       <div class="col-md-4 bg_primary p-3 d-flex align-items-center justify-content-start gap-3 hover-lift"
-        (click)="goToHealthPackages()" data-button="health-packages" (mousedown)="onButtonPress('health-packages')" style="cursor: pointer;">
+        (click)="goToHealthPackages()" data-button="health-packages" (mousedown)="onButtonPress('health-packages')"
+        style="cursor: pointer;">
         <div class="d-flex align-items-center">
           <img class="ms-1 me-2 ms-4 hover-rotate" src="assets/icons/book_appointment_white_bg.svg" alt="">
-          <h6 class="mb-0 strip_book p-0">Health Check Packages<br /><small class="small_para p-0">Preventive health checks for every age group</small></h6>
+          <h6 class="mb-0 strip_book p-0">Health Check Packages<br /><small class="small_para p-0">Preventive health
+              checks for every age group</small></h6>
         </div>
       </div>
       <div class="col-md-4 bg_success p-3 d-flex align-items-center justify-content-start gap-3 hover-lift"
@@ -183,7 +198,8 @@
         (mousedown)="onButtonPress('locations')" style="cursor: pointer;">
         <div class="d-flex align-items-center">
           <img class="ms-1 me-2 ms-4 hover-rotate" src="assets/icons/book_appointment_black_bg.svg" alt="">
-          <h6 class="mb-0 strip_loc">Our Locations<br /><small class="small_loc">Find the OMNI Hospitals branch nearest to you</small></h6>
+          <h6 class="mb-0 strip_loc">Our Locations<br /><small class="small_loc">Find the OMNI Hospitals branch nearest
+              to you</small></h6>
         </div>
       </div>
     </div>

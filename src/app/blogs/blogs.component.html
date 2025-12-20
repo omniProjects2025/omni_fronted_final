@@ -1,12 +1,17 @@
 <app-header></app-header>
 <section class="bg_blue">
-  <div class="container py-5">
+  <div class="container">
+    <div class="d-flex gap-3 ps-lg-3 py-5 justify-content-center justify-content-sm-start">
+      <button class="btn_style" [ngClass]="selected_btn==1 ? 'active_bg' : ''" (click)="onSelection(1)">Blogs</button>
+      <button class="btn_style" [ngClass]="selected_btn==2 ? 'active_bg' : ''" (click)="onSelection(2)">Videos</button>
+    </div>
+  </div>
+  <div class="container pb-5" *ngIf="selected_btn==1">
     <h3 class="section_title p-0 text-center mb-4">
       <span class="decor"></span>
       BLOGS
       <span class="decor right"></span>
     </h3>
-
     <div class="row g-4">
       <div class="col-12 col-md-8 col-lg-9">
         <div class="row g-4">
@@ -75,5 +80,46 @@
     </div>
 
   </div>
+
+  <ng-container *ngIf="selected_btn==2">
+    <div class="container py-1">
+      <h3 class="section_title p-0 text-center mb-4">
+        <span class="decor"></span>
+        VIDEOS
+        <span class="decor right"></span>
+      </h3>
+      <div class="row g-4">
+        <div class="col-12 col-sm-6 col-lg-3" *ngFor="let testimonial of testimonials; let idx = index">
+          <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden position-relative">
+            <!-- Fixed-height video wrapper -->
+            <div class="video-embed-wrapper">
+              <div *ngIf="!isVideoPlaying(idx)" class="video-thumbnail" (click)="playVideo(idx)">
+                <img [src]="'https://img.youtube.com/vi/' + testimonial.thumbnailUrl + '/maxresdefault.jpg'"
+                  class="w-100 h-100 object-fit-cover" [alt]="'Video thumbnail for ' + testimonial.thumbnailUrl" />
+                <div class="play-button">&#9654;</div>
+              </div>
+              <div *ngIf="isVideoPlaying(idx)" class="video-iframe-container">
+                <iframe [src]="testimonial.videoUrl | videoUrl:true"
+                  allow="autoplay; encrypted-media; fullscreen; picture-in-picture; accelerometer; gyroscope; clipboard-write; web-share"
+                  allowfullscreen webkitallowfullscreen mozallowfullscreen frameborder="0" title="YouTube video player"
+                  referrerpolicy="strict-origin-when-cross-origin">
+                </iframe>
+              </div>
+            </div>
+            <!-- Content -->
+            <div class="card-body">
+              <h6 class="card-title mb-1">{{ testimonial.name }}</h6>
+              <small class="text-muted">{{ testimonial.profession }}</small>
+              <p class="card-text mt-2">{{ testimonial.text }}</p>
+            </div>
+            <div class="card-footer text-muted small">
+              {{ testimonial.date }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+
 </section>
 <app-footer></app-footer>

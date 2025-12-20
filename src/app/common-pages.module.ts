@@ -34,6 +34,7 @@ import { PrivacyPolocyComponent } from './privacy-polocy/privacy-polocy.componen
 import { TermsConditionsComponent } from './terms-conditions/terms-conditions.component';
 import { KeySurgeriesComponent } from './key-surgeries/key-surgeries.component';
 import { TotalKneeReplacementComponent } from './total-knee-replacement/total-knee-replacement.component';
+import { PatientTestimonialsComponent } from './patient-testimonials/patient-testimonials.component';
 // import { WhatsAppComponent } from './whatsapp/whatsapp.component';
 
 const routes: Routes = [
@@ -126,6 +127,7 @@ const routes: Routes = [
   { path: 'terms-conditions', component: TermsConditionsComponent },
   { path: 'key-surgeries', component:KeySurgeriesComponent},
   { path: 'total-knee-replacement-surgery-kukatpally-hyderabad', component: TotalKneeReplacementComponent },
+  {path: 'patient-testimonials', component: PatientTestimonialsComponent},
   // { path: 'whatsapp', component: WhatsAppComponent },
   { path: ':speciality/:slug', component: DoctorDetailsComponent, data: { isDoctorSlugRoute: true } },
   { path: '**', component: NotFoundComponent }, // 👈 Show 404 page here

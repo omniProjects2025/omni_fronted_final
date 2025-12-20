@@ -230,3 +230,15 @@ h2 {
     margin-top: 4px;
   }
 }
+
+.btn_style {
+  padding: 5px 58px;
+  border-radius: 20px;
+  background: white;
+}
+
+.active_bg {
+  background-color: #8CC63F;
+  color: white;
+  border: 1px solid #8CC63F;
+}

@@ -51,7 +51,7 @@ import { TermsConditionsComponent } from './terms-conditions/terms-conditions.co
 import { KeySurgeriesComponent } from './key-surgeries/key-surgeries.component';
 import { CardiologySubDepartmentsModule } from './cardiology-sub-departments/cardiology-sub-departments.module';
 import { OrthopedicsSubDepartmentsModule } from './orthopedics-sub-departments/orthopedics-sub-departments.module';
-
+import { PatientTestimonialsComponent } from './patient-testimonials/patient-testimonials.component';
 @NgModule({
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   declarations: [
@@ -91,7 +91,8 @@ import { OrthopedicsSubDepartmentsModule } from './orthopedics-sub-departments/o
     NewlineToBrPipe,
     PrivacyPolocyComponent,
     TermsConditionsComponent,
-    KeySurgeriesComponent
+    KeySurgeriesComponent,
+    PatientTestimonialsComponent
   ],
   imports: [
     BrowserModule,

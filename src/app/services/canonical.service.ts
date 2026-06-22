@@ -1,50 +1,48 @@
-import { Injectable } from '@angular/core';
-import { Meta } from '@angular/platform-browser';
+import { DOCUMENT } from '@angular/common';
+import { Inject, Injectable } from '@angular/core';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class CanonicalService {
-  private baseUrl = 'https://omnihospitals.in';
+  private readonly baseUrl = 'https://omnihospitals.in';
 
-  constructor(private metaService: Meta) {}
+  constructor(
+    @Inject(DOCUMENT)
+    private document: Document,
+  ) {}
 
-  /**
-   * Set canonical URL for the current page
-   * @param path - The path after the domain (e.g., '/our-specialities')
-   */
-  setCanonicalUrl(path: string = ''): void {
-    const canonicalUrl = `${this.baseUrl}${path}`;
-    
-    // Remove existing canonical tag if it exists
-    this.metaService.removeTag('rel="canonical"');
-    
-    // Add new canonical tag
-    this.metaService.addTag({
-      rel: 'canonical',
-      href: canonicalUrl
-    });
+  setCanonicalUrl(path = ''): void {
+    const normalizedPath = path.startsWith('/') ? path : `/${path}`;
+
+    this.applyLink(`${this.baseUrl}${normalizedPath}`);
   }
 
-  /**
-   * Set canonical URL with full URL
-   * @param fullUrl - Complete URL including domain
-   */
   setCanonicalUrlFull(fullUrl: string): void {
-    // Remove existing canonical tag if it exists
-    this.metaService.removeTag('rel="canonical"');
-    
-    // Add new canonical tag
-    this.metaService.addTag({
-      rel: 'canonical',
-      href: fullUrl
-    });
+    this.applyLink(fullUrl);
   }
 
-  /**
-   * Get base URL for the application
-   */
   getBaseUrl(): string {
     return this.baseUrl;
+  }
+
+  private applyLink(href: string): void {
+    if (!this.document.head) {
+      return;
+    }
+
+    let link = this.document.querySelector<HTMLLinkElement>(
+      "link[rel='canonical']",
+    );
+
+    if (!link) {
+      link = this.document.createElement('link');
+
+      link.setAttribute('rel', 'canonical');
+
+      this.document.head.appendChild(link);
+    }
+
+    link.setAttribute('href', href);
   }
 }

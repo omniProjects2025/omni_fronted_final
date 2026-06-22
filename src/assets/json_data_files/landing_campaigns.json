@@ -1,0 +1,183 @@
+{
+  "campaigns": [
+    {
+      "slug": "dr_n_srinivas",
+      "type": "doctors",
+      "campaignName": "Meet Dr N Srinivas",
+      "shortDescription": "Consult an experienced specialist and get personalized treatment at OMNI Hospitals.",
+      "cardTitle": "Doctor Campaign Details",
+      "campaignDetails": [
+        "This campaign is focused on specialist consultation bookings from WhatsApp ads.",
+        "Patients can enquire about availability, treatment plans, and branch-wise appointment slots.",
+        "Our team will follow up with quick confirmation support for all submitted enquiries."
+      ],
+      "leftPanel": {
+        "image": "assets/our_doctors/doctor_dummy_image.svg",
+        "title": "Consulting Doctor",
+        "name": "Dr N Srinivas",
+        "subtitle": "Senior Consultant | General Medicine",
+        "bullets": [
+          "15+ years clinical experience",
+          "Expert in preventive and chronic care",
+          "Available at Kukatpally and Kothapet"
+        ],
+        "footerNote": "For emergency support, please call the nearest OMNI branch directly."
+      },
+      "doctorSlugUrl": "https://localhost:3000/api/doctor/best-doctor-in-kothapet-hyderabad-4",
+      "videoUrl": "https://www.youtube.com/embed/AeDGkCohBVs",
+      "seo": {
+        "title": "Dr N Srinivas Consultation Campaign | OMNI Hospitals",
+        "description": "Book consultation with Dr N Srinivas at OMNI Hospitals. Submit enquiry and our team will assist with appointment slots.",
+        "keywords": "Dr N Srinivas, OMNI Hospitals doctor campaign, consultation booking, specialist doctor"
+      },
+      "openGraph": {
+        "type": "profile",
+        "image": "https://omnihospitals.in/assets/our_doctors/doctor_dummy_image.svg"
+      },
+      "breadcrumbs": [
+        { "label": "Home", "path": "/" },
+        { "label": "Our Doctors", "path": "/our-doctors" },
+        { "label": "Dr N Srinivas Campaign", "path": "/ld/dr_n_srinivas/doctors" }
+      ],
+      "faq": [
+        {
+          "question": "What does Dr N Srinivas specialise in?",
+          "answer": "Dr N Srinivas is a Senior Consultant in General Medicine with over 15 years of clinical experience, specialising in preventive and chronic care management."
+        },
+        {
+          "question": "Which OMNI Hospitals branches is Dr N Srinivas available at?",
+          "answer": "Dr N Srinivas is available at OMNI Hospitals Kukatpally and Kothapet. Please submit an enquiry for confirmed appointment slots."
+        },
+        {
+          "question": "How do I book an appointment through this campaign?",
+          "answer": "Fill in the enquiry form on this page. Our care team will call you within 24 hours to confirm your appointment slot."
+        }
+      ],
+      "internalLinks": [
+        { "label": "View All Doctors", "path": "/our-doctors" },
+        { "label": "Our Specialities", "path": "/our-specialities" },
+        { "label": "Book an Appointment", "path": "/book-an-appointment" },
+        { "label": "Health Checkup Packages", "path": "/health-checkup" }
+      ]
+    },
+    {
+      "slug": "health_4999",
+      "type": "package",
+      "campaignName": "Health Package 4999",
+      "shortDescription": "Comprehensive preventive health screening package with specialist review.",
+      "cardTitle": "Health Package Campaign Details",
+      "campaignDetails": [
+        "This campaign promotes a limited-time health package for early health risk detection.",
+        "The package includes core diagnostics, doctor consultation, and guided follow-up recommendations.",
+        "Patients can submit enquiry to receive package inclusions and booking assistance."
+      ],
+      "price": 4999,
+      "originalPrice": 7999,
+      "leftPanel": {
+        "image": "assets/icons/Images_Health_Checkup.svg",
+        "title": "Package Name",
+        "name": "Health Package 4999",
+        "subtitle": "Valid for selected branches",
+        "bullets": [
+          "Complete blood profile and sugar tests",
+          "Cardiac and liver screening",
+          "Doctor summary consultation"
+        ],
+        "footerNote": "Package terms may vary by location and availability."
+      },
+      "videoUrl": "https://www.youtube.com/embed/AeDGkCohBVs",
+      "seo": {
+        "title": "Health Package 4999 Campaign | OMNI Hospitals",
+        "description": "Explore Health Package 4999 at OMNI Hospitals. Raise an enquiry to receive full package details and booking support.",
+        "keywords": "health package, OMNI checkup package, preventive screening, health campaign"
+      },
+      "openGraph": {
+        "type": "website",
+        "image": "https://omnihospitals.in/assets/icons/Images_Health_Checkup.svg"
+      },
+      "breadcrumbs": [
+        { "label": "Home", "path": "/" },
+        { "label": "Health Checkup", "path": "/health-checkup" },
+        { "label": "Health Package 4999 Campaign", "path": "/ld/health_4999/package" }
+      ],
+      "faq": [
+        {
+          "question": "What tests are included in the Health Package 4999?",
+          "answer": "The package includes complete blood profile, sugar tests, cardiac screening, liver function tests, and a doctor summary consultation."
+        },
+        {
+          "question": "Is this package available at all OMNI Hospitals branches?",
+          "answer": "The Health Package 4999 is available at selected OMNI Hospitals branches. Submit an enquiry to confirm availability at your nearest branch."
+        },
+        {
+          "question": "How long does the health checkup take?",
+          "answer": "The screening typically takes 2–3 hours depending on the tests. Results and doctor consultation are usually completed the same day."
+        }
+      ],
+      "internalLinks": [
+        { "label": "View All Health Packages", "path": "/health-checkup" },
+        { "label": "Fixed Surgical Packages", "path": "/fixed-surgical-packages" },
+        { "label": "Our Specialities", "path": "/our-specialities" },
+        { "label": "Book an Appointment", "path": "/book-an-appointment" }
+      ]
+    },
+    {
+      "slug": "pr_srinivas",
+      "type": "testimonial",
+      "campaignName": "Patient Recovery Story",
+      "shortDescription": "Learn from real patient outcomes and connect with our care team for guidance.",
+      "cardTitle": "Patient Testimonial Campaign Details",
+      "campaignDetails": [
+        "This campaign showcases patient recovery and treatment experience for trust-building.",
+        "Prospective patients can enquire to understand treatment pathways and doctor options.",
+        "The enquiry form helps our team connect with users who saw this testimonial advertisement."
+      ],
+      "leftPanel": {
+        "image": "assets/technologies/women_dummy_profile.svg",
+        "title": "Featured Testimonial",
+        "name": "Patient: P R Srinivas",
+        "subtitle": "Post-treatment recovery story",
+        "bullets": [
+          "Improved mobility and daily comfort",
+          "Continuous doctor follow-up",
+          "Positive inpatient care experience"
+        ],
+        "footerNote": "Clinical outcomes vary by patient condition and treatment response."
+      },
+      "seo": {
+        "title": "Patient Testimonial Campaign | OMNI Hospitals",
+        "description": "Read patient testimonial campaign details from OMNI Hospitals and submit enquiry for treatment guidance.",
+        "keywords": "patient testimonial, recovery story, OMNI Hospitals campaign, treatment enquiry"
+      },
+      "openGraph": {
+        "type": "website",
+        "image": "https://omnihospitals.in/assets/technologies/women_dummy_profile.svg"
+      },
+      "breadcrumbs": [
+        { "label": "Home", "path": "/" },
+        { "label": "Patient Testimonials", "path": "/patient-testimonials" },
+        { "label": "Recovery Story Campaign", "path": "/ld/pr_srinivas/testimonial" }
+      ],
+      "faq": [
+        {
+          "question": "Is this a real patient story?",
+          "answer": "Yes. This campaign features a genuine patient recovery experience at OMNI Hospitals. Outcomes shared are based on the patient's personal journey and may vary."
+        },
+        {
+          "question": "Can I speak with a doctor about a similar condition?",
+          "answer": "Absolutely. Submit an enquiry on this page and our team will connect you with the relevant specialist at your preferred branch."
+        },
+        {
+          "question": "Which departments handle the treatments shown in testimonials?",
+          "answer": "OMNI Hospitals offers specialised care across Orthopaedics, Cardiology, General Medicine, and more. Our coordinators will guide you to the right team."
+        }
+      ],
+      "internalLinks": [
+        { "label": "Patient Testimonials", "path": "/patient-testimonials" },
+        { "label": "Our Specialities", "path": "/our-specialities" },
+        { "label": "Our Doctors", "path": "/our-doctors" },
+        { "label": "Book an Appointment", "path": "/book-an-appointment" }
+      ]
+    }
+  ]
+}

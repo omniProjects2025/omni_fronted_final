@@ -2,9 +2,11 @@ import { HttpClient } from '@angular/common/http';
 import { AfterViewInit, Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Title, Meta } from '@angular/platform-browser';
+import { isPlatformBrowser } from '@angular/common';
+import { Inject, PLATFORM_ID } from '@angular/core';
 import { CanonicalService } from '../services/canonical.service';
-import 'owl.carousel';
 declare var $: any;
+declare const require: any;
 
 @Component({
   selector: 'app-our-branches',
@@ -69,7 +71,8 @@ export class OurBranchesComponent implements OnInit, AfterViewInit, OnDestroy {
     private http: HttpClient,
     private titleService: Title,
     private metaService: Meta,
-    private canonicalService: CanonicalService
+    private canonicalService: CanonicalService,
+    @Inject(PLATFORM_ID) private platformId: Object,
   ) {}
 
   ngOnInit(): void {
@@ -101,12 +104,19 @@ export class OurBranchesComponent implements OnInit, AfterViewInit, OnDestroy {
     });
   }
 
-  ngAfterViewInit(): void {
+  async ngAfterViewInit(): Promise<void> {
+    if (!isPlatformBrowser(this.platformId)) {
+      return;
+    }
+
+    require('owl.carousel');
     this.initializeVizagCarousel();
   }
 
   ngOnDestroy(): void {
-    this.destroyVizagCarousel();
+    if (isPlatformBrowser(this.platformId)) {
+      this.destroyVizagCarousel();
+    }
   }
 
   BRANCH_LOCATIONS: any = [

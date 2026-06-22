@@ -35,6 +35,8 @@ import { TermsConditionsComponent } from './terms-conditions/terms-conditions.co
 import { KeySurgeriesComponent } from './key-surgeries/key-surgeries.component';
 import { TotalKneeReplacementComponent } from './total-knee-replacement/total-knee-replacement.component';
 import { PatientTestimonialsComponent } from './patient-testimonials/patient-testimonials.component';
+import { LandingCampaignComponent } from './landing-campaign/landing-campaign.component';
+import { SharedModule } from './shared.module';
 // import { WhatsAppComponent } from './whatsapp/whatsapp.component';
 
 const routes: Routes = [
@@ -128,6 +130,7 @@ const routes: Routes = [
   { path: 'key-surgeries', component:KeySurgeriesComponent},
   { path: 'total-knee-replacement-surgery-kukatpally-hyderabad', component: TotalKneeReplacementComponent },
   {path: 'patient-testimonials', component: PatientTestimonialsComponent},
+  { path: 'ld/:slug/:type', component: LandingCampaignComponent },
   // { path: 'whatsapp', component: WhatsAppComponent },
   { path: ':speciality/:slug', component: DoctorDetailsComponent, data: { isDoctorSlugRoute: true } },
   { path: '**', component: NotFoundComponent }, // 👈 Show 404 page here
@@ -138,10 +141,12 @@ const routes: Routes = [
     AngularCommonModule,
     FormsModule,
     ReactiveFormsModule,
+    SharedModule,
     RouterModule.forChild(routes)
   ],
   declarations: [
     TotalKneeReplacementComponent,
+    LandingCampaignComponent,
     // WhatsAppComponent
   ],
   providers: [DatePipe]

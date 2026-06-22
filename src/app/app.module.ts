@@ -104,10 +104,7 @@ import { PatientTestimonialsComponent } from './patient-testimonials/patient-tes
     CommonModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    YouTubePlayerModule,
     SharedModule,
-    CardiologySubDepartmentsModule,
-    OrthopedicsSubDepartmentsModule
   ],
   exports: [
     // HeaderComponent and FooterComponent are now declared in CardiologySubDepartmentsModule

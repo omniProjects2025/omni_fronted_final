@@ -7,17 +7,19 @@ import { HttpBackend, HttpClient } from '@angular/common/http';
 import { VideoStateService } from '../services/video-state.service';
 import { Subscription } from 'rxjs';
 import { CanonicalService } from '../services/canonical.service';
+import { isPlatformBrowser } from '@angular/common';
+import { Inject, PLATFORM_ID } from '@angular/core';
 
 @Component({
   selector: 'app-news-media',
   templateUrl: './news-media.component.html',
-  styleUrls: ['./news-media.component.css']
+  styleUrls: ['./news-media.component.css'],
 })
 export class NewsMediaComponent implements OnInit, OnDestroy {
   private resizeListener: (() => void) | undefined;
   private videoSubscription: Subscription = new Subscription();
-  private lastZoom: number = window.devicePixelRatio;
-  private lastWindowWidth: number = window.innerWidth;
+  private lastZoom = 1;
+  private lastWindowWidth = 0;
 
   ngOnDestroy(): void {
     if (this.resizeListener) {
@@ -33,112 +35,112 @@ export class NewsMediaComponent implements OnInit, OnDestroy {
   public testimonials = [
     // <iframe width="560" height="315" src="https://www.youtube.com/embed/cU69sod1Cxw?si=BUSiADVxNlWPhtVW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     {
-      name: "",
-      profession: "",
-      text: "Omni Hospitals, Kukatpally | Trusted Multispeciality Hospital for Every Generation",
-      date: "Jun 13, 2025",
+      name: '',
+      profession: '',
+      text: 'Omni Hospitals, Kukatpally | Trusted Multispeciality Hospital for Every Generation',
+      date: 'Jun 13, 2025',
       videoPlayed: false,
       thumbnailUrl: 'ab1njKIEnfQ',
-      videoUrl: "https://www.youtube.com/embed/ab1njKIEnfQ"
+      videoUrl: 'https://www.youtube.com/embed/ab1njKIEnfQ',
     },
     {
-      name: "Mr. Diva Prasad ",
-      profession: "",
-      text: "From Near Death to Recovery | A Story of Hope and Healing",
-      date: "Apr 12, 2025",
+      name: 'Mr. Diva Prasad ',
+      profession: '',
+      text: 'From Near Death to Recovery | A Story of Hope and Healing',
+      date: 'Apr 12, 2025',
       videoPlayed: false,
       thumbnailUrl: 'CM_y3X06Nkc',
-      videoUrl: "https://www.youtube.com/embed/CM_y3X06Nkc"
+      videoUrl: 'https://www.youtube.com/embed/CM_y3X06Nkc',
     },
     {
-      name: "",
-      profession: "",
-      text: "Miraculous Recovery After Total Knee Replacement Surgery || Omni Hospitals, Kukatpally",
-      date: "May 3, 2025",
+      name: '',
+      profession: '',
+      text: 'Miraculous Recovery After Total Knee Replacement Surgery || Omni Hospitals, Kukatpally',
+      date: 'May 3, 2025',
       videoPlayed: false,
       thumbnailUrl: 'bxB3DoF2oYM',
-      videoUrl: "https://www.youtube.com/embed/bxB3DoF2oYM"
+      videoUrl: 'https://www.youtube.com/embed/bxB3DoF2oYM',
     },
     {
-      name: "",
-      profession: "",
+      name: '',
+      profession: '',
       text: "Successful Knee Pain Surgery | Koteshwar Rao's Recovery Story",
-      date: "Apr 15, 2025",
+      date: 'Apr 15, 2025',
       videoPlayed: false,
       thumbnailUrl: 'dwNxv9xVl08',
-      videoUrl: "https://www.youtube.com/embed/dwNxv9xVl08"
+      videoUrl: 'https://www.youtube.com/embed/dwNxv9xVl08',
     },
     {
-      name: "",
-      profession: "",
+      name: '',
+      profession: '',
       text: "Successful Knee Pain Surgery | Koteshwar Rao's Recovery Story",
-      date: "Apr 15, 2025",
+      date: 'Apr 15, 2025',
       videoPlayed: false,
       thumbnailUrl: 'pSc6uKMEBo8',
-      videoUrl: "https://www.youtube.com/embed/pSc6uKMEBo8"
+      videoUrl: 'https://www.youtube.com/embed/pSc6uKMEBo8',
     },
     {
-      name: "Dr. Vinay Kumar",
-      profession: "General Physician",
-      text: "Monsoon Dengue Fever || Dr. Vinay Kumar Explained Symptoms & Prevention!",
-      date: "Jul 29, 2025 ",
+      name: 'Dr. Vinay Kumar',
+      profession: 'General Physician',
+      text: 'Monsoon Dengue Fever || Dr. Vinay Kumar Explained Symptoms & Prevention!',
+      date: 'Jul 29, 2025 ',
       videoPlayed: false,
       thumbnailUrl: 'o2B35_wBzRs',
-      videoUrl: "https://www.youtube.com/embed/o2B35_wBzRs"
+      videoUrl: 'https://www.youtube.com/embed/o2B35_wBzRs',
     },
     {
-      name: "Dr. Ranjith",
-      profession: "Pediatric Orthopedic Specialist",
-      text: "What is Clubfoot and How is it Treated? | Dr. Ranjith Nellore Mahesh Explains",
-      date: "Jun 11, 2025",
+      name: 'Dr. Ranjith',
+      profession: 'Pediatric Orthopedic Specialist',
+      text: 'What is Clubfoot and How is it Treated? | Dr. Ranjith Nellore Mahesh Explains',
+      date: 'Jun 11, 2025',
       videoPlayed: false,
       thumbnailUrl: 'zWpwfj3dUZg',
-      videoUrl: "https://www.youtube.com/embed/zWpwfj3dUZg"
+      videoUrl: 'https://www.youtube.com/embed/zWpwfj3dUZg',
     },
     {
-      name: "Dr. Sandeep Perima",
-      profession: "Nephrologist",
+      name: 'Dr. Sandeep Perima',
+      profession: 'Nephrologist',
       text: "Protect Your Kidneys Before It's Too Late!",
-      date: "Feb 22, 2025",
+      date: 'Feb 22, 2025',
       videoPlayed: false,
       thumbnailUrl: '7K1n2aJBvTg',
-      videoUrl: "https://www.youtube.com/embed/7K1n2aJBvTg"
+      videoUrl: 'https://www.youtube.com/embed/7K1n2aJBvTg',
     },
     {
-      name: "Dr. Neelima",
-      profession: "Plastic surgeon",
-      text: "Breaking Myths About Plastic Surgery with Dr. Neelima",
-      date: "Jan 2, 2025",
+      name: 'Dr. Neelima',
+      profession: 'Plastic surgeon',
+      text: 'Breaking Myths About Plastic Surgery with Dr. Neelima',
+      date: 'Jan 2, 2025',
       videoPlayed: false,
       thumbnailUrl: 'LkkpdltkSD4',
-      videoUrl: "https://www.youtube.com/embed/LkkpdltkSD4"
+      videoUrl: 'https://www.youtube.com/embed/LkkpdltkSD4',
     },
     {
-      name: "",
-      profession: "",
-      text: "A Remarkable Accident Recovery: #OmniSuccessStories",
-      date: "Oct 24, 2024",
+      name: '',
+      profession: '',
+      text: 'A Remarkable Accident Recovery: #OmniSuccessStories',
+      date: 'Oct 24, 2024',
       videoPlayed: false,
       thumbnailUrl: 'wuR_fkYqn2o',
-      videoUrl: "https://www.youtube.com/embed/wuR_fkYqn2o"
+      videoUrl: 'https://www.youtube.com/embed/wuR_fkYqn2o',
     },
     {
-      name: "",
-      profession: "",
-      text: "A Successful Anterior Cervical Discectomy and Fusion #OmniSuccessStories",
-      date: "Sep 12, 2024",
+      name: '',
+      profession: '',
+      text: 'A Successful Anterior Cervical Discectomy and Fusion #OmniSuccessStories',
+      date: 'Sep 12, 2024',
       videoPlayed: false,
       thumbnailUrl: '9JaQSyLqIjw',
-      videoUrl: "https://www.youtube.com/embed/9JaQSyLqIjw"
+      videoUrl: 'https://www.youtube.com/embed/9JaQSyLqIjw',
     },
     {
-      name: "",
-      profession: "",
+      name: '',
+      profession: '',
       text: "Let's Understand About Gangrene With A Patient Success Story #OmniSuccessStories",
-      date: "May 17, 2024",
+      date: 'May 17, 2024',
       videoPlayed: false,
       thumbnailUrl: 'VghI8dKGgb8',
-      videoUrl: "https://www.youtube.com/embed/VghI8dKGgb8"
+      videoUrl: 'https://www.youtube.com/embed/VghI8dKGgb8',
     },
   ];
 
@@ -150,12 +152,17 @@ export class NewsMediaComponent implements OnInit, OnDestroy {
     private newsservice: NewsService,
     private videoStateService: VideoStateService,
     private cdr: ChangeDetectorRef,
-    private titleService: Title, 
-    private metaService: Meta, 
-    private canonicalService: CanonicalService
-  ) { }
+    private titleService: Title,
+    private metaService: Meta,
+    private canonicalService: CanonicalService,
+    @Inject(PLATFORM_ID) private platformId: Object,
+  ) {}
 
   ngOnInit() {
+    if (isPlatformBrowser(this.platformId)) {
+      this.lastZoom = window.devicePixelRatio;
+      this.lastWindowWidth = window.innerWidth;
+    }
     // Stop any videos from other components when entering this component
     this.videoStateService.stopAllVideos();
 
@@ -167,14 +174,15 @@ export class NewsMediaComponent implements OnInit, OnDestroy {
     window.addEventListener('resize', this.resizeListener);
 
     // Subscribe to video state changes
-    this.videoSubscription = this.videoStateService.currentlyPlayingVideo$.subscribe(videoId => {
-      this.updateVideoStates(videoId);
-    });
+    this.videoSubscription =
+      this.videoStateService.currentlyPlayingVideo$.subscribe((videoId) => {
+        this.updateVideoStates(videoId);
+      });
 
-    this.activated_route.queryParams.subscribe(params => {
+    this.activated_route.queryParams.subscribe((params) => {
       console.log('Query Params:', params);
     });
-    window.scrollTo(0, 0)
+    window.scrollTo(0, 0);
     this.onLoadNews();
     this.setSEOTags();
   }
@@ -186,8 +194,8 @@ export class NewsMediaComponent implements OnInit, OnDestroy {
   goToMediaDetails(obj: any) {
     this.router.navigate(['/news-media-details'], {
       queryParams: {
-        selected_obj: JSON.stringify(obj)
-      }
+        selected_obj: JSON.stringify(obj),
+      },
     });
   }
 
@@ -240,24 +248,24 @@ export class NewsMediaComponent implements OnInit, OnDestroy {
     // Small changes are ignored to prevent unnecessary video stops
   }
 
-
-
   onLoadNews() {
-    this.http.get<any>('assets/json_data_files/news.json').subscribe((news_json: any) => {
-      this.allNews = news_json.news;
-      console.log(this.allNews, 'testing...');
-
-    })
+    this.http
+      .get<any>('assets/json_data_files/news.json')
+      .subscribe((news_json: any) => {
+        this.allNews = news_json.news;
+        console.log(this.allNews, 'testing...');
+      });
   }
 
   private setSEOTags(): void {
-    this.titleService.setTitle('OMNI Hospitals News & Media | Achievements, Awards & Updates');
+    this.titleService.setTitle(
+      'OMNI Hospitals News & Media | Achievements, Awards & Updates',
+    );
     this.metaService.updateTag({
       name: 'description',
-      content: "Stay informed with OMNI Hospitals' latest news, media coverage, and clinical achievements. Read about our doctor awards and hospital updates."
+      content:
+        "Stay informed with OMNI Hospitals' latest news, media coverage, and clinical achievements. Read about our doctor awards and hospital updates.",
     });
     this.canonicalService.setCanonicalUrl('/');
   }
-
-
 }

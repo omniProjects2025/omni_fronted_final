@@ -3,65 +3,77 @@ import { ChangeDetectorRef, Component } from '@angular/core';
 import { DomSanitizer, Meta, Title } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 import { CanonicalService } from '../canonical.service';
-
+import { isPlatformBrowser } from '@angular/common';
+import { Inject, PLATFORM_ID } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { VideoStateService } from '../services/video-state.service';
 
 @Component({
   selector: 'app-patient-testimonials',
   templateUrl: './patient-testimonials.component.html',
-  styleUrls: ['./patient-testimonials.component.css']
+  styleUrls: ['./patient-testimonials.component.css'],
 })
 export class PatientTestimonialsComponent {
-
   public testimonials = [
     {
-      name: "",
-      profession: "",
-      text: "",
-      date: "",
+      name: '',
+      profession: '',
+      text: '',
+      date: '',
       videoPlayed: false,
       thumbnailUrl: 'YdgeAoLsLjQ',
-      videoUrl: "https://www.youtube.com/embed/YdgeAoLsLjQ"
+      videoUrl: 'https://www.youtube.com/embed/YdgeAoLsLjQ',
     },
     {
-      name: "",
-      profession: "",
-      text: "",
-      date: "",
+      name: '',
+      profession: '',
+      text: '',
+      date: '',
       videoPlayed: false,
       thumbnailUrl: 'dCY4o43AI9M',
-      videoUrl: "https://www.youtube.com/embed/dCY4o43AI9M"
+      videoUrl: 'https://www.youtube.com/embed/dCY4o43AI9M',
     },
     {
-      name: "",
-      profession: "",
-      text: "",
-      date: "",
+      name: '',
+      profession: '',
+      text: '',
+      date: '',
       videoPlayed: false,
       thumbnailUrl: 'pSc6uKMEBo8',
-      videoUrl: "https://www.youtube.com/embed/pSc6uKMEBo8"
-    }
+      videoUrl: 'https://www.youtube.com/embed/pSc6uKMEBo8',
+    },
+  ];
 
-  ]
+  private resizeListener: (() => void) | undefined;
+  private videoSubscription: Subscription = new Subscription();
+  private lastZoom = 1;
+  private lastWindowWidth = 0;
 
-    private resizeListener: (() => void) | undefined;
-    private videoSubscription: Subscription = new Subscription();
-    private lastZoom: number = window.devicePixelRatio;
-    private lastWindowWidth: number = window.innerWidth;
-
-  constructor(private router: Router, private http: HttpClient, private titleService: Title, private metaService: Meta, private canonicalService: CanonicalService, public sanitizer: DomSanitizer,
+  constructor(
+    private router: Router,
+    private http: HttpClient,
+    private titleService: Title,
+    private metaService: Meta,
+    private canonicalService: CanonicalService,
+    public sanitizer: DomSanitizer,
     private videoStateService: VideoStateService,
-    private cdr: ChangeDetectorRef) { }
+    private cdr: ChangeDetectorRef,
+    @Inject(PLATFORM_ID) private platformId: Object,
+  ) {}
   ngOnInit(): void {
+    if (isPlatformBrowser(this.platformId)) {
+      this.lastZoom = window.devicePixelRatio;
+      this.lastWindowWidth = window.innerWidth;
+    }
     this.videoStateService.stopAllVideos();
     this.resizeListener = () => {
       this.handleResizeOrZoom();
     };
     window.addEventListener('resize', this.resizeListener);
-    this.videoSubscription = this.videoStateService.currentlyPlayingVideo$.subscribe(videoId => {
-      this.updateVideoStates(videoId);
-    });
+    this.videoSubscription =
+      this.videoStateService.currentlyPlayingVideo$.subscribe((videoId) => {
+        this.updateVideoStates(videoId);
+      });
   }
 
   ngOnDestroy(): void {
@@ -107,5 +119,4 @@ export class PatientTestimonialsComponent {
       this.videoStateService.stopAllVideos();
     }
   }
-
 }

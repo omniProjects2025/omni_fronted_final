@@ -1,15 +1,17 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { toUrlFriendly } from '../utils/url-helper.util';
+import { Inject, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-footer',
   templateUrl: './footer.component.html',
-  styleUrls: ['./footer.component.css']
+  styleUrls: ['./footer.component.css'],
 })
 export class FooterComponent {
   hoveredIcon: string = '';
-  email = "info@omnihospitals.in"
+  email = 'info@omnihospitals.in';
   specialties: string[] = [
     'Cardiology',
     'Emergency Medicine & Critical Care',
@@ -24,20 +26,24 @@ export class FooterComponent {
     'Plastic Surgery',
     'Psychiatry',
     'Dermatology',
-    'Pulmonology'
+    'Pulmonology',
   ];
-  constructor(private router: Router) {
-
-  }
+  constructor(
+    private router: Router,
+    @Inject(PLATFORM_ID) private platformId: Object,
+  ) {}
 
   goToBookAnAppointment() {
-    this.router.navigate(['/book-an-appointment']).then(success => {
-      if (success) {
-        console.log('Navigation to Book An Appointment successful');
-      } else {
-        console.log('Navigation failed');
-      }
-    }).catch(error => console.error('Navigation error:', error));
+    this.router
+      .navigate(['/book-an-appointment'])
+      .then((success) => {
+        if (success) {
+          console.log('Navigation to Book An Appointment successful');
+        } else {
+          console.log('Navigation failed');
+        }
+      })
+      .catch((error) => console.error('Navigation error:', error));
   }
 
   goToSPeciality(speciality: string) {
@@ -47,34 +53,51 @@ export class FooterComponent {
   }
 
   goToSecondOpinion() {
-    this.router.navigate(['/get-a-second-opinion']).then(success => {
-      if (success) {
-        console.log('Navigation to Second Opinion successful');
-      } else {
-        console.log('Navigation failed');
-      }
-    }).catch(error => console.error('Navigation error:', error));
+    this.router
+      .navigate(['/get-a-second-opinion'])
+      .then((success) => {
+        if (success) {
+          console.log('Navigation to Second Opinion successful');
+        } else {
+          console.log('Navigation failed');
+        }
+      })
+      .catch((error) => console.error('Navigation error:', error));
   }
 
   goToHealthPackages() {
-    this.router.navigate(['/health-checkup']).then(success => {
-      if (success) {
-        console.log('Navigation to Health Packages successful');
-      } else {
-        console.log('Navigation failed');
-      }
-    }).catch(error => console.error('Navigation error:', error));
+    this.router
+      .navigate(['/health-checkup'])
+      .then((success) => {
+        if (success) {
+          console.log('Navigation to Health Packages successful');
+        } else {
+          console.log('Navigation failed');
+        }
+      })
+      .catch((error) => console.error('Navigation error:', error));
   }
 
   goToWhatsApp() {
+    if (!this.isBrowser()) {
+      return;
+    }
     const phoneNumber = '8880101000';
-    const message = 'Hello, I would like to get more information about your services.';
+    const message =
+      'Hello, I would like to get more information about your services.';
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
     window.open(whatsappUrl, '_blank');
   }
 
   goToCall() {
-    // Direct call functionality
-    window.location.href = 'tel:8880101000';
+     if (!this.isBrowser()) {
+       return;
+     }
+     window.location.href = 'tel:8880101000';
+  }
+
+  private isBrowser(): boolean {
+    return isPlatformBrowser(this.platformId);
   }
 } 

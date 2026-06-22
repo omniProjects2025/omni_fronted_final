@@ -64,19 +64,6 @@
           },
           "defaultConfiguration": "production"
         },
-        "server": {
-          "builder": "@angular-devkit/build-angular:server",
-            "options": {
-              "outputPath": "dist/omni-project-frontend/server",
-              "main": "src/server.ts",
-              "tsConfig": "tsconfig.server.json"
-            },
-            "configurations": {
-              "production": {
-                "outputHashing": "media"
-              }
-            }
-          }, 
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {

@@ -1,5 +1,4 @@
-import { Inject, Pipe, PipeTransform, PLATFORM_ID } from '@angular/core';
-import { isPlatformBrowser } from '@angular/common';
+import { Pipe, PipeTransform } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 @Pipe({
@@ -8,10 +7,7 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 export class VideoUrlPipe implements PipeTransform {
   private cache = new Map<string, SafeResourceUrl>();
 
-  constructor(
-    private sanitizer: DomSanitizer,
-    @Inject(PLATFORM_ID) private platformId: Object,
-  ) {}
+  constructor(private sanitizer: DomSanitizer) {}
 
   transform(url: string, autoplay: boolean = false): SafeResourceUrl {
     if (!url) {
@@ -39,11 +35,8 @@ export class VideoUrlPipe implements PipeTransform {
       params.set('cc_load_policy', '0'); // Hide captions by default
       params.set('playsinline', '1'); // Play inline on mobile
       params.set('enablejsapi', '1'); // Enable JavaScript API for better control
-      const origin = isPlatformBrowser(this.platformId)
-        ? window.location.origin
-        : 'https://omnihospitals.in';
-      params.set('origin', origin); // Set origin for security
-      params.set('widget_referrer', origin); // Additional security
+      params.set('origin', window.location.origin); // Set origin for security
+      params.set('widget_referrer', window.location.origin); // Additional security
       
       // Set autoplay if requested
       if (autoplay) {

@@ -3,8 +3,6 @@ import { ChangeDetectorRef, Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Title, Meta } from '@angular/platform-browser';
 
-declare var $: any;
-
 @Component({
   selector: 'app-blog-details',
   templateUrl: './blog-details.component.html',

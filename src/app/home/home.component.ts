@@ -5,16 +5,15 @@ import { register } from 'swiper/element/bundle';
 import { DomSanitizer, SafeResourceUrl, Title, Meta } from '@angular/platform-browser';
 import { HttpClient } from '@angular/common/http';
 import { NotificationService } from '../services/notification.service';
+import 'owl.carousel';
 import { firstValueFrom, Observable, Subscription } from 'rxjs';
 import { UsersService } from '../services/users.service';
 import { VideoStateService } from '../services/video-state.service';
 import { CanonicalService } from '../services/canonical.service';
 import { toUrlFriendly } from '../utils/url-helper.util';
 import { environment } from '../../environments/environment';
-import { isPlatformBrowser } from '@angular/common';
-import { Inject, PLATFORM_ID } from '@angular/core';
+register();
 declare var $: any;
-declare const require: any;
 import { getDepartmentsFor, allDepartments as SHARED_ALL } from '../config/specialties';
 
 @Component({
@@ -27,7 +26,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   private videoSubscription: Subscription = new Subscription();
 
   ngOnDestroy(): void {
-    if (isPlatformBrowser(this.platformId) && this.resizeListener) {
+    if (this.resizeListener) {
       window.removeEventListener('resize', this.resizeListener);
     }
     this.videoSubscription.unsubscribe();
@@ -396,14 +395,13 @@ export class HomeComponent implements OnInit, OnDestroy {
     private videoStateService: VideoStateService,
     private titleService: Title,
     private metaService: Meta,
-    private canonicalService: CanonicalService,
-    @Inject(PLATFORM_ID) private platformId: Object,
+    private canonicalService: CanonicalService
+    ,
     private notification: NotificationService
   ) { }
 
   private resizeListener: (() => void) | undefined;
-  private lastWindowWidth= 0
-
+  private lastWindowWidth: number = window.innerWidth;
 
   private setSEOTags(): void {
     this.titleService.setTitle('Best Multispeciality Hospital in Hyderabad, Vizag | OMNI Hospitals');
@@ -419,10 +417,6 @@ export class HomeComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
-
-    if (isPlatformBrowser(this.platformId)) {
-      this.lastWindowWidth = window.innerWidth;
-    }
     // Set SEO meta tags and canonical URL
     this.setSEOTags();
 
@@ -435,9 +429,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     this.resizeListener = () => {
       this.handleResizeOrZoom();
     };
-    if (isPlatformBrowser(this.platformId)) {
-      window.addEventListener('resize', this.resizeListener);
-    }
+    window.addEventListener('resize', this.resizeListener);
 
     // Subscribe to video state changes
     this.videoSubscription = this.videoStateService.currentlyPlayingVideo$.subscribe(videoId => {
@@ -445,24 +437,14 @@ export class HomeComponent implements OnInit, OnDestroy {
       this.cdr.markForCheck();
     });
 
-    if (isPlatformBrowser(this.platformId)) {
-      this.updateSlidesPerView();
-    }
-    if (isPlatformBrowser(this.platformId)) {
-      register();
-    }
+    this.updateSlidesPerView();
+    register();
     this.availableDepartments = [];
     this.allDepartments = SHARED_ALL || [];
   }
 
 
-  async ngAfterViewInit() {
-    if (!isPlatformBrowser(this.platformId)) {
-      return;
-    }
-
-    require('owl.carousel');
-
+  ngAfterViewInit() {
     this.observeCounters();
     this.bannerImagesSlides();
     this.blogsSlide();
@@ -558,10 +540,6 @@ export class HomeComponent implements OnInit, OnDestroy {
   }
 
   updateSlidesPerView(): void {
-    if (!isPlatformBrowser(this.platformId)) {
-      return;
-    }
-
     const screenWidth = window.innerWidth;
     this.isMobile = screenWidth < 768;
     if (screenWidth < 768) {
@@ -581,10 +559,6 @@ export class HomeComponent implements OnInit, OnDestroy {
   }
 
   private handleResizeOrZoom(): void {
-    if (!isPlatformBrowser(this.platformId)) {
-      return;
-    }
-
     const currentWidth = window.innerWidth;
 
     // Check if it's a significant width change - actual resize
